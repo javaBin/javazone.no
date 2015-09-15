@@ -12,7 +12,8 @@
     "less-brunch": "^1.8.1"
   },
   "scripts": {
-    "watch": "brunch watch --server"
+    "watch": "brunch watch --server",
+    "build": "brunch build"
   },
   "repository": {
     "type": "git",
