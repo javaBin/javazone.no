@@ -1,0 +1,28 @@
+{
+  "name": "javazone.no",
+  "version": "1.0.0",
+  "description": "JavaZone web page",
+  "main": "index.js",
+  "dependencies": {
+    "brunch": "^1.8.5"
+  },
+  "devDependencies": {
+    "brunch": "^1.8.5",
+    "javascript-brunch": "^1.7.1",
+    "less-brunch": "^1.8.1"
+  },
+  "scripts": {
+    "watch": "brunch watch --server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javaBin/javazone.no.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javaBin/javazone.no/issues"
+  },
+  "homepage": "https://github.com/javaBin/javazone.no#readme",
+  "private": true
+}
