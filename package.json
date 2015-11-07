@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --progress --colors",
-    "dev": "webpack-dev-server --progress --colors",
-    "start": "npm run dev"
+    "clean": "rm -r ./dist && mkdir dist",
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors",
+    "deploy": "npm run build && node tasks/deploy.js",
+    "watch": "webpack-dev-server --progress --colors",
+    "start": "npm run watch"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
@@ -18,11 +20,14 @@
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
     "history": "^1.13.0",
+    "html-webpack-plugin": "^1.6.2",
+    "indexhtml-webpack-plugin": "^0.1.9",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0-rc4",
+    "shelljs": "^0.5.3",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
