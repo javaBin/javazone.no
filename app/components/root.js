@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-import Header from './header';
+import Nav from './nav';
 
 export default (props) => (
     <div>
-        <Header {...props} />
+        <Nav {...props} />
         {props.children}
     </div>
 );
