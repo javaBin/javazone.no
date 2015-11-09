@@ -1,0 +1,21 @@
+{
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "binaryLiterals": true,
+        "blockBindings": true,
+        "classes": false,
+        "defaultParams": true,
+        "destructuring": true,
+        "generators": false,
+        "modules": true,
+        "objectLiteralComputedProperties": false,
+        "objectLiteralDuplicateProperties": false,
+        "objectLiteralShorthandProperties": true,
+        "restParams": true,
+        "spread": true,
+        "super": false,
+        "templateString": true,
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+    }
+}
