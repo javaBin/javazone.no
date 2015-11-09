@@ -1,12 +1,10 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
+import Header from './header';
 
 export default (props) => (
     <div>
-        <ul>
-            <li><IndexLink to='/'>Home</IndexLink></li>
-            <li><Link to='/about'>About</Link></li>
-        </ul>
+        <Header {...props} />
         {props.children}
     </div>
 );
