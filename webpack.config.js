@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 var path = require('path');
 
 var exclude = /node_modules/;
@@ -23,6 +24,7 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('app.css'),
         new HtmlWebpackPlugin({
             template: './app/index.html'
@@ -30,6 +32,9 @@ module.exports = {
     ],
 
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true
     }
 };
