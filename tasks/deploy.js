@@ -6,8 +6,8 @@ var shell = require('shelljs');
 
 var distFolder = path.join(__dirname, '..', 'dist');
 var environments = {
-    prod: { server: 'javabin@2016.javazone.no', dir: '/home/javabin/web/2016/jz-frontend' },
-    test: { server: 'javabin@test.2016.javazone.no', dir: '/home/javabin/web/2016/jz-frontend' },
+    prod: { server: 'javabin@javazone.no', dir: '/home/javabin/web/2016/jz-frontend' },
+    test: { server: 'javabin@test.javazone.no', dir: '/home/javabin/web/2016/jz-frontend' },
     dev: { server: 'javabin@192.168.111.222', dir: '/home/javabin/web/2016/jz-frontend' },
     prod2: { server: 'javabin@139.162.151.95', dir: '/home/javabin/web/2016/jz-frontend' }
 };
