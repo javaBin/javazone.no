@@ -3,10 +3,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    opacity: 0;
+    transition: opacity .5s .5s ease-in-out;
     width: 100%;
 
     &__blurred {
-        transition: opacity 1s .5s ease-in-out;
+        transition: opacity 1s 1.5s ease-in-out;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -21,5 +23,9 @@
         &--visible {
             opacity: 1;
         }
+    }
+
+    &--visible {
+        opacity: 1;
     }
 }

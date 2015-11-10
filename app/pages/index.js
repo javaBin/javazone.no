@@ -63,6 +63,9 @@ const Index = React.createClass({
         const classes = className('index__blurred', {
             'index__blurred--visible': this.state.loaded
         });
+        const indexStyle = className('index', {
+            'index--visible': this.state.loaded
+        });
         const backgroundStyle = {
             backgroundImage: this.state.background
         };
@@ -70,7 +73,7 @@ const Index = React.createClass({
             backgroundImage: this.state.backgroundBlurred
         };
         return (
-            <div className="index" style={backgroundStyle}>
+            <div className={indexStyle} style={backgroundStyle}>
                 <div className={classes} style={blurredStyle}>
                     <Teaser visible={this.state.loaded} />
                 </div>
