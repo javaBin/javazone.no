@@ -1,4 +1,5 @@
 import styles from './styles/app.less';
+import someImage from './assets/some_image.png';
 import React from 'react';
 import {render} from 'react-dom';
 import Router from 'react-router';
