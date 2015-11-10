@@ -4,7 +4,7 @@ import background from '../assets/background.jpg';
 import backgroundBlurred from '../assets/background_blurred.jpg';
 import logo from '../assets/logo.svg';
 import Q from 'q';
-console.log(logo);
+
 function getImage(src) {
     const deferred = Q.defer();
     const img = document.createElement('img');
@@ -14,7 +14,6 @@ function getImage(src) {
 }
 
 const Teaser = (props) => {
-    console.log(logo);
     const blockClasses = className('teaser', {
         'teaser--visible': props.visible
     });
