@@ -19,7 +19,8 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, exclude: exclude, loader: 'babel-loader' , query: {presets: ['es2015', 'react']}},
-            { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!less-loader?sourceMap')}
+            { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!less-loader?sourceMap')},
+            { test: /\.(svg|jpg)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'}
         ]
     },
 

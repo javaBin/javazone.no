@@ -1,0 +1,25 @@
+.index {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+    &__blurred {
+        transition: opacity 1s .5s ease-in-out;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        opacity: 0;
+        width: 100%;
+
+        &--visible {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@anim: cubic-bezier(.61,.08,.41,1);
+
+.teaser {
+    transition: opacity 1s .5s ease-in, transform 1s 2.5s @anim;
+    transform: translateY(100px);
+    color: white;
+    opacity: 0;
+    text-align: center;
+
+    &__logo {
+        width: 128px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__dates {
+        opacity: 0;
+        transition: opacity 2s 2.6s @anim, transform 1s 2.6s @anim;
+        transform: translateY(50px);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__punchline {
+        opacity: 0;
+        transition: opacity 2s 2.7s @anim, transform 1s 2.7s @anim;
+        transform: translateY(50px);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &--visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

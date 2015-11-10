@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="448px" height="378px" viewBox="0 0 448 378" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>javazone.colors</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="javazone.colors" sketch:type="MSLayerGroup">
+            <path d="M13.0664,345.748 C1.4456,348.444 -3.1802,342.232 2.7324,331.875 L146.9142,79.328 L426.7939,1.391 C438.2905,-1.811 447.6103,5.272 447.6103,17.202 L447.6103,223.306 C447.6103,235.24 438.1993,247.098 426.569,249.796 L13.0664,345.748 L13.0664,345.748 Z" id="Fill-1" fill="#FF8635" sketch:type="MSShapeGroup"></path>
+            <path d="M19.6779,39.027 C8.3051,35.437 2.522,41.568 6.7595,52.717 L100.836,300.24 L231.2026,375.84 L405.7398,354.578 L410.7048,353.973 C422.5511,352.53 426.6345,343.414 419.8323,333.623 L270.0965,118.08 L19.6779,39.027 L19.6779,39.027 Z" id="Fill-3" fill="#FF4D46" sketch:type="MSShapeGroup"></path>
+            <path d="M79.9486,246.96 L109.4791,323.28 L109.4791,323.28 L182.7673,368.225 C192.9408,374.464 210.7869,378.376 222.6397,376.961 C222.6397,376.961 401.1833,355.68 409.8264,354.24 C418.4695,352.8 421.3505,349.92 422.791,345.6 L139.7299,185.76 L79.9486,246.96 L79.9486,246.96 Z" id="Fill-4" fill="#A30032" sketch:type="MSShapeGroup"></path>
+            <path d="M441.5177,3.6 C407.4853,31.331 3.6013,342.72 0.7203,342.72 C-1.4405,338.4 2.881,331.2 2.881,331.2 L146.8227,79.327 L426.3923,1.44 C426.3923,1.44 435.0354,-1.44 441.5177,3.6 L441.5177,3.6 Z" id="Fill-5" fill="#FEB000" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
