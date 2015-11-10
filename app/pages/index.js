@@ -7,7 +7,7 @@ import Q from 'q';
 
 function getImage(src) {
     const deferred = Q.defer();
-    const img = document.createElement('img');
+    const img = new Image();
     img.onload = () => (deferred.resolve(src));
     img.src = src;
     return deferred;
