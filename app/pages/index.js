@@ -3,12 +3,12 @@ import className from 'classname';
 import background from '../assets/background.jpg';
 import backgroundBlurred from '../assets/background_blurred.jpg';
 import logo from '../assets/logo.svg';
-import Q from 'q';
+import {all, defer} from 'q';
 
 function getImage(src) {
-    const deferred = Q.defer();
+    const deferred = defer();
     const img = new Image();
-    img.onload = () => (deferred.resolve(src));
+    img.onload = _ => deferred.resolve(src);
     img.src = src;
     return deferred;
 }
@@ -46,10 +46,10 @@ const Index = React.createClass({
     },
 
     componentDidMount() {
-        Q.all([
+        all([
             getImage(background),
             getImage(backgroundBlurred)
-        ]).done((result) => {
+        ]).done(result => {
             this.setState({
                 loaded: true,
                 background: `url('${background}')`,

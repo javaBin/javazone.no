@@ -10,8 +10,7 @@ import pageview from './analytics';
 const history = browserHistory();
 const config = {history, routes};
 const container = document.querySelector('#app');
-render(<Router {...config} />, container);
 
-history.listen(location => {
-    pageview(location.pathname);
-});
+window.React = React;
+render(<Router {...config} />, container);
+history.listen(location => pageview(location.pathname));

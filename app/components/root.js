@@ -1,4 +1,3 @@
-import React from 'react';
 import {Link, IndexLink} from 'react-router';
 import Nav from './nav';
 
