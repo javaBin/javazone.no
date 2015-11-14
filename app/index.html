@@ -12,7 +12,12 @@
         <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="app.css">
         <!-- BEGIN TRACKJS -->
-        <script type="text/javascript">window._trackJs = { token: '3ccb578c00074956bd6ad64062177783' };</script>
+        <script type="text/javascript">
+            window._trackJs = {
+                token: '3ccb578c00074956bd6ad64062177783',
+                enabled: !(window.location.host.indexOf('localhost') >= 0)
+            };
+        </script>
         <script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
         <!-- END TRACKJS -->
         <script>
