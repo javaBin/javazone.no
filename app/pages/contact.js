@@ -1,5 +1,5 @@
-import React from 'react';
-
 export default () => (
-    <h1>Contact</h1>
+    <div className="contact">
+        <h1 className="contact__title">Contact</h1>
+    </div>
 );

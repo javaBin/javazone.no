@@ -18,9 +18,10 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.js$/, exclude: exclude, loader: 'babel-loader' , query: {presets: ['es2015', 'react']}},
+            { test: /\.js$/, exclude: exclude, loader: 'babel-loader' , query: {presets: ['es2015', 'react'], plugins: ['transform-react-require']}},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!less-loader?sourceMap')},
-            { test: /\.(svg|jpg|png)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'}
+            { test: /\.(svg|jpg|png)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
+            { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
         ]
     },
 

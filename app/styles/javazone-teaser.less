@@ -1,44 +1,20 @@
+@import 'make-page.less';
 @anim: cubic-bezier(.61,.08,.41,1);
 
+.make-page(teaser);
 .teaser {
-    transition: opacity 1s 1s ease-in, transform 1s 3s @anim;
-    transform: translateY(100px);
-    color: white;
-    opacity: 0;
-    text-align: center;
-
-    &__logo {
-        width: 128px;
-    }
 
     &__title {
         text-transform: uppercase;
     }
 
     &__dates {
-        opacity: 0;
         transition: opacity 2s 3.1s @anim, transform 1s 3.1s @anim;
         transform: translateY(50px);
-
-        &--visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     &__punchline {
-        opacity: 0;
         transition: opacity 2s 3.2s @anim, transform 1s 3.2s @anim;
         transform: translateY(50px);
-
-        &--visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    &--visible {
-        opacity: 1;
-        transform: translateY(0);
     }
 }

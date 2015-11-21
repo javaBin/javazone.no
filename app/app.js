@@ -11,6 +11,5 @@ const history = browserHistory();
 const config = {history, routes};
 const container = document.querySelector('#app');
 
-window.React = React;
 render(<Router {...config} />, container);
 history.listen(location => pageview(location.pathname));

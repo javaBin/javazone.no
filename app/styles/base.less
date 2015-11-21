@@ -1,10 +1,18 @@
+@import 'colors.less';
+
 html {
     height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
+    background: @white;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, 'sans serif';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     height: 100%;
     margin: 0;
@@ -16,6 +24,10 @@ h1 {
 
 h2 {
     font-weight: 300;
+}
+
+a {
+    color: @black;
 }
 
 #app {

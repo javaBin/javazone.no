@@ -1,0 +1,17 @@
+@import 'colors.less';
+
+.make-page(@selector) {
+    .@{selector} {
+        flex-grow: 1;
+        margin-top: -145px;
+        padding: 40px;
+
+        &__title {
+            //color: green;
+            color: @white;
+            font-size: 4rem;
+            font-weight: 400;
+            text-shadow: 0 0 1px @white;
+        }
+    }
+}
