@@ -19,14 +19,20 @@
     &__social-item {
         display: inline-block;
         text-align: left;
-        width: 24%;
+        width: 14%;
     }
 
     &__twitter,
     &__facebook,
     &__contact {
-        color: @black;
+        color: @grey;
+        font-size: 1.2rem;
         text-decoration: none;
+        transition: color .4s ease-in-out;
+
+        &:hover {
+            color: @black;
+        }
     }
 
     &__made-by {
