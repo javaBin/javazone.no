@@ -22,15 +22,30 @@
     &__item {
         display: inline-block;
         margin-right: 20px;
-
-        &--active {
-        }
     }
 
     &__link {
         color: @black;
         font-size: 1.1rem;
+        position: relative;
         text-decoration: none;
-        text-transform: uppercase;        
+        text-transform: uppercase;
+
+        &--active {
+            color: @burgundy;
+
+            &:after {
+                border-radius: 100%;
+                border: 1px solid @burgundy;
+                bottom: -10px;
+                content: '';
+                display: block;
+                left: 50%;
+                margin-left: -2px;
+                height: 4px;
+                position: absolute;
+                width: 4px;
+            }
+        }
     }
 }
