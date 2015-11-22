@@ -27,12 +27,15 @@
     &__link {
         color: @black;
         font-size: 1.1rem;
+        outline: 0;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
         transition: color .4s ease-in-out;
 
-        &--active {
+        &--active,
+        &:focus,
+        &:hover {
             color: @burgundy;
         }
     }
