@@ -30,22 +30,10 @@
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
+        transition: color .4s ease-in-out;
 
         &--active {
             color: @burgundy;
-
-            &:after {
-                border-radius: 100%;
-                border: 1px solid @burgundy;
-                bottom: -10px;
-                content: '';
-                display: block;
-                left: 50%;
-                margin-left: -2px;
-                height: 4px;
-                position: absolute;
-                width: 4px;
-            }
         }
     }
 }
