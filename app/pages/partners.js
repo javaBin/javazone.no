@@ -1,6 +1,6 @@
 export default () => (
-    <div className='partners'>
-        <h1 className='partners__title'>Become a partner</h1>
+    <div className='page partners'>
+        <h1 className='page__title partners__title'>Become a partner</h1>
         <p className="partners__textblock">
             JavaZone is a conference organized by and for a great community of developers.
             The conference has been held in the heart of Oslo for 13 consecutive years, 
