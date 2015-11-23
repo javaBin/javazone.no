@@ -19,6 +19,8 @@ export default () => (
                 </Link>
             </li>
         </ul>
-        <div className="footer__made-by">Made by <a href="http://java.no">javaBin</a></div>
+        <div className="footer__made-by">
+            Made by <a href="http://java.no" className="footer__link">javaBin</a>
+        </div>
     </footer>
 );
