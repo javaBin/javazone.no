@@ -1,6 +1,11 @@
 import imageOne from '../assets/partners/1.jpg';
 import imageTwo from '../assets/partners/2.jpg';
 import imageThree from '../assets/partners/3.jpg';
+import header from '../assets/header_2.jpg';
+
+const headerStyle = {
+    backgroundImage: `url('${header}')`
+};
 
 const sectionOneStyles = {
     backgroundImage: `url('${imageOne}')`
@@ -16,7 +21,9 @@ const sectionThreeStyles = {
 
 export default () => (
     <div className='page partners'>
-        <h1 className='page__title partners__title'>Become a partner</h1>
+        <div className='page__header' style={headerStyle}>
+            <h1 className='page__title partners__title'>Become a partner</h1>
+        </div>
 
         <div className='textblock'>
             <div className='textblock__text'>
