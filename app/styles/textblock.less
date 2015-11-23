@@ -1,6 +1,5 @@
 .textblock {
     display: flex;
-    justify-content: center;
     padding: 40px;
 
     &--image {
@@ -21,9 +20,15 @@
         }
     }
 
-    &__text {
-        text-align: center;
-        max-width: 600px;
+    &--centered {
+        justify-content: center;
+        padding: 40px;
+
+        &__text {
+            text-align: center;
+            max-width: 600px;
+        }
+
     }
 
     &__title {
