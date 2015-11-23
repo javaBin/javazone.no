@@ -1,6 +1,6 @@
 import logo from '../assets/logo_menu.svg';
 import {Link, IndexLink} from 'react-router';
-import header from '../assets/header_3.jpg';
+import header from '../assets/header_2.jpg';
 
 const image = `url('${header}')`;
 
