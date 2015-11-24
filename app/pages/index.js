@@ -1,5 +1,5 @@
 import logo from '../assets/logo.svg';
-import header from '../assets/header_2.jpg';
+import header from '../assets/header_sal1.jpg';
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
