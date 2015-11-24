@@ -107,7 +107,8 @@ export default () => (
                 </p>
 
                 <p className='page__paragraph'>
-                    <a href='/' className='button'>Download something</a>
+                    <br />
+                    <a href='/assets/partners/partnership-prospectus-javazone2016.pdf' className='button'>Download our Partnership Prospectus</a>
                 </p>
             </div>
         </div>
