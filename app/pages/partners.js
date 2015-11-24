@@ -109,20 +109,3 @@ export default () => (
         </div>
     </div>
 );
-
-
-                // <p className='page__paragraph'>
-                //     JavaZone is a conference organized by and for a great community of developers.
-                //     Over the years it has become one of the largest and most important conferences in Norway,
-                //     hosting both participants and speakers from all over the world.
-                //     This year is a bit special – JavaZone 2016 will be the 15th time we arrange this conference.
-                // </p>
-                // <p className='page__paragraph'>
-                //     Last year, we had around 2,500 attendees at the conference, including speakers and
-                //     volunteers and around 100 representatives from our partners.
-                // </p>
-                // <p className='page__paragraph'>
-                //     We would not be able to arrange a conference of this size and quality without 
-                //     the involvement and support of every one of our partners.
-                //     Each year, more than 40 partners contribute to make JavaZone a great success.
-                // </p>
