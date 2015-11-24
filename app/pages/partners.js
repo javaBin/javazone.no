@@ -62,10 +62,10 @@ export default () => (
             <div className="textblock--image__text">
                 <h2 className='textblock__title'>Included in all partnerships</h2>
                 <ul className='partners__included'>
-                    <li>A stand in the expo area (6 square meters)</li>
-                    <li>4 flexible, nameless expo tickets for the stand crew</li>
-                    <li>Discounted participant tickets for your employees</li>
-                    <li>Branding on <a href='//2016.javazone.no' className="page__link">javazone.no</a>, at the venue, the program, and other promotional material JavaZone produces</li>
+                    <li className='partners__included-item'>A stand in the expo area (6 square meters)</li>
+                    <li className='partners__included-item'>4 flexible, nameless expo tickets for the stand crew</li>
+                    <li className='partners__included-item'>Discounted participant tickets for your employees</li>
+                    <li className='partners__included-item'>Branding on <a href='//2016.javazone.no' className="page__link">javazone.no</a>, at the venue, the program, and other promotional material JavaZone produces</li>
                 </ul>
             </div>
         </div>
