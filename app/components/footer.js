@@ -14,9 +14,9 @@ export default () => (
                 </a>
             </li>
             <li className='footer__social-item'>
-                <Link to='contact' className='footer__contact'>
+                <a href='mailto:javazone@java.no' className='footer__contact'>
                     <span className='icon-envelope'></span>
-                </Link>
+                </a>
             </li>
         </ul>
         <div className="footer__made-by">
