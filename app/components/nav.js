@@ -4,7 +4,9 @@ import {Link, IndexLink} from 'react-router';
 export default () => (
     <nav className="javazone__navigation">
         <div className="navigation">
-            <img src={logo} className="navigation__logo"/>
+            <IndexLink to='/'>
+                <img src={logo} className="navigation__logo"/>
+            </IndexLink>
             <ul className="navigation__list">
                 <li className='navigation__item'>
                     <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active'>Home</IndexLink>
