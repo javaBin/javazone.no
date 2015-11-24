@@ -2,6 +2,7 @@ import imageOne from '../assets/partners/stand.jpg';
 import imageTwo from '../assets/partners/sal1.jpg';
 import imageThree from '../assets/partners/overflow.jpg';
 import header from '../assets/header_expo.jpg';
+import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
@@ -108,7 +109,7 @@ export default () => (
 
                 <p className='page__paragraph'>
                     <br />
-                    <a href='/assets/partners/partnership-prospectus-javazone2016.pdf' className='button'>Download our Partnership Prospectus</a>
+                    <a href={partnerProspect} className='button'>Download our Partnership Prospectus</a>
                 </p>
             </div>
         </div>
