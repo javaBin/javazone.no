@@ -29,10 +29,10 @@ export default () => (
             <div className='textblock--centered__text'>
                 <h2 className='page__sub-title'>What is JavaZone?</h2>
                 <p className='page__paragraph'>
-		    JavaZone is one of the largest community driven conferences in the world.
-		    Every year, more than 2.500 developers meet up to learn and mingle in Oslo.
-		    <br /><br />
-		    JavaZone is made possible with the help of our more than 40 partners.
+		            JavaZone is one of the largest community driven conferences in the world.
+		            Every year, more than 2.500 developers meet up to learn and mingle in Oslo.
+		            <br /><br />
+		            JavaZone is made possible with the help of our more than 40 partners.
                     Read on to learn what being a partner really means, and how you can become one.
                 </p>
             </div>
@@ -42,14 +42,14 @@ export default () => (
             <div className='textblock--image__text'>
 		<h2 className='textblock__title'>A partnership at JavaZone</h2>
                 <p className='page__paragraph'>
-		    A partnership is a really good way of exposing your company to a lot of interested developers.
+		            A partnership is a really good way of exposing your company to a lot of interested developers.
                     Last year we had a total of 2800 visitors during the conference days. These are not
-		    2800 random people – they are the 2800 people you most likely would want to know your company.
+		            2800 random people – they are the 2800 people you most likely would want to know your company.
                 </p>
                 <p className='page__paragraph'>
                     All companies are given the same options when becoming a partner.
-		    There is no bronze, silver or gold sponsorships – everyone are treated as equals.
-		    There are, however, options to increase the size of the stand or choose one of
+                    There is no bronze, silver or gold sponsorships – everyone are treated as equals.
+                    There are, however, options to increase the size of the stand or choose one of
                     our restaurant stands. We are also willing to accomodate creative ideas, so please
                     let us know if you have anything special in mind.
                 </p>
@@ -74,16 +74,16 @@ export default () => (
             <div className='textblock--image__text'>
                 <h2 className='textblock__title'>Possible expansions</h2>
                 <dl>
-                    <dt className='partners__expansion-title'>Extra stand space</dt>
-                    <dd className='partners__expansion-description'>Double you stand space and get 12 square feet instead of 6.</dd>
-                    <dt className='partners__expansion-title'>Restaurand stand</dt>
+                    <dt className='partners__expansion-title'>Extra space</dt>
+                    <dd className='partners__expansion-description'>Double you stand space and get 12 square meters instead of 6.</dd>
+                    <dt className='partners__expansion-title'>Restaurant stand</dt>
                     <dd className='partners__expansion-description'>
-                        We have room for a total of 8 restaurant stands in the expo area.
-			The theme and menu is decided by you in collaboration with The Flying Culinary Circus.
+                        We have room for a total of 8 restaurant stands in the Expo Area.
+			            The theme and menu is decided by you in collaboration with The Flying Culinary Circus.
                     </dd>
                     <dt className='partners__expansion-title'>Concept stand</dt>
                     <dd className='partners__expansion-description'>
-			We also have room for 2 extra large stands. These stands are about 70 square feet big,
+                        We also have room for 2 extra large stands. These stands are about 70 square feet big,
                         and have room for a 4 meter tall wall behind it. This is your choice if you want to be
                         really creative.
                     </dd>
@@ -97,8 +97,8 @@ export default () => (
                 <h2 className='page__sub-title'>Contact us today</h2>
                 <p className='page__paragraph'>
                     JavaZone 2016 will be held in September, but please get in touch sooner rather
-		    than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
-		    will sell out early.
+		            than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
+		            will sell out early.
                 </p>
 
                 <p className='page__paragraph'>
