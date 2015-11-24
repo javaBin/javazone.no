@@ -1,23 +1,36 @@
+@import 'variables.less';
+
 .textblock {
     display: flex;
     padding: 40px;
 
     &--image {
-        display: flex;
         justify-content: center;
+
+        @media (min-width: @size-s) {
+            display: flex;
+        }
 
         &__text {
             background-color: darken(@white, 5%);
             padding: 0 40px 40px 40px;
             text-align: justify;
-            width: 50%;
+
+            @media (min-width: @size-s) {
+                width: 50%;
+            }
         }
 
         &__image {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            width: 50%;
+            height: 200px;
+
+            @media (min-width: @size-s) {
+                height: auto;
+                width: 50%;
+            }
         }
     }
 
@@ -33,6 +46,7 @@
     }
 
     &__title {
-        margin-top: 1.7rem;
+        margin-top: 0;
+        padding-top: 1.7rem;
     }
 }
