@@ -106,6 +106,9 @@ export default () => (
                     and we'll work with you to create the best possible partnership for you.
                 </p>
 
+                <p className='page__paragraph'>
+                    <a href='/' className='button'>Download something</a>
+                </p>
             </div>
         </div>
     </div>
