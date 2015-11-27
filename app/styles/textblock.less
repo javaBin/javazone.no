@@ -2,7 +2,11 @@
 
 .textblock {
     display: flex;
-    padding: 40px;
+    padding: 20px;
+
+    @media (min-width: @size-s) {
+        padding: 40px;
+    }
 
     &--image {
         justify-content: center;
@@ -13,10 +17,10 @@
 
         &__text {
             background-color: darken(@white, 5%);
-            padding: 0 40px 40px 40px;
-            text-align: justify;
+            padding: 0 20px 40px 20px;
 
             @media (min-width: @size-s) {
+                padding: 0 40px 40px 40px;
                 width: 50%;
             }
         }
@@ -37,10 +41,9 @@
     &--centered {
         display: flex;
         justify-content: center;
-        padding: 40px;
+        text-align: center;
 
         &__text {
-            text-align: center;
             max-width: 600px;
         }
     }

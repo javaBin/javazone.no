@@ -26,8 +26,8 @@ export default () => (
 	    <h1 className='page__title partners__title'>Join us as a partner</h1>
         </div>
 
-        <div className='textblock--centered partners__intro'>
-            <div className='textblock--centered__text'>
+        <div className='textblock textblock--centered partners__intro'>
+            <div className='textblock__text'>
                 <h2 className='page__sub-title'>What is JavaZone?</h2>
                 <p className='page__paragraph'>
 		            JavaZone is one of the largest community driven conferences in the world.
@@ -62,8 +62,8 @@ export default () => (
             <div className='textblock--image__image' style={sectionTwoStyles}></div>
             <div className="textblock--image__text">
                 <h2 className='textblock__title'>Included in all partnerships</h2>
-                <ul className='partners__included'>
-		    <li className='partners__included-item'>A stand in the Expo Area (6 square meters)</li>
+                <ul className='partners__included page__paragraph'>
+                    <li className='partners__included-item'>A stand in the Expo Area (6 square meters)</li>
                     <li className='partners__included-item'>4 flexible, nameless expo tickets for the stand crew</li>
                     <li className='partners__included-item'>Discounted participant tickets for your employees</li>
                     <li className='partners__included-item'>Branding on <a href='//2016.javazone.no' className="page__link">javazone.no</a>, at the venue, the program, and other promotional material JavaZone produces</li>
@@ -74,7 +74,7 @@ export default () => (
         <div className='textblock--image partners__expansions'>
             <div className='textblock--image__text'>
                 <h2 className='textblock__title'>Possible expansions</h2>
-                <dl>
+                <dl className='page__paragraph'>
                     <dt className='partners__expansion-title'>Extra space</dt>
                     <dd className='partners__expansion-description'>Double you stand space and get 12 square meters instead of 6.</dd>
                     <dt className='partners__expansion-title'>Restaurant stand</dt>
@@ -93,7 +93,7 @@ export default () => (
             <div className='textblock--image__image' style={sectionThreeStyles}></div>
         </div>
 
-        <div className='textblock--centered'>
+        <div className='textblock textblock--centered'>
             <div className='textblock--centered__text'>
                 <h2 className='page__sub-title'>Contact us today</h2>
                 <p className='page__paragraph'>
@@ -107,8 +107,7 @@ export default () => (
                     and we'll work with you to create the best possible partnership for you.
                 </p>
 
-                <p className='page__paragraph'>
-                    <br />
+                <p className='page__paragraph partners__prospect'>
                     <a href={partnerProspect} className='button'>Download our Partnership Prospectus</a>
                 </p>
             </div>
