@@ -113,11 +113,11 @@ export default () => (
                 </p>
 
                 <p>
-                    <b>A note about partner meetings</b>
+                    <span className='textblock__sub-title'>A note about partner meetings</span>
                     <br />
                     We arrange regular partner meetings for both existing and new partners,
                     where we outline the progress of the conference. See the slides from
-                    our last partner meeting in Desember for a status update.
+                    our last partner meeting in Desember for a status update. English version coming soon.
                     <br />
                     <Link to='partner-presentation' className='page__link'>Slides in Norwegian</Link>
                 </p>
