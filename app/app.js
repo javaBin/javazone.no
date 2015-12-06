@@ -5,11 +5,14 @@ import {render} from 'react-dom';
 import Router from 'react-router';
 import routes from './routes';
 import browserHistory from 'history/lib/createBrowserHistory';
+import useScroll from 'scroll-behavior/lib/useSimpleScroll';
 import pageview from './analytics';
 
-const history = browserHistory();
+const history = useScroll(browserHistory)();
 const config = {history, routes};
 const container = document.querySelector('#app');
 
 render(<Router {...config} />, container);
-history.listen(location => pageview(location.pathname));
+history.listen(location => {
+    pageview(location.pathname)
+});

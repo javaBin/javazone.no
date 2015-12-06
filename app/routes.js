@@ -14,8 +14,8 @@ export default (
         <IndexRoute component={Index} />
         <Route path='contact' component={Contact} />
         <Route path='partners' component={Partners} />
-        <Route path='partner-presentation' component={PartnerPresentation} />
-        <Route path='partner-presentation-en' component={PartnerPresentationEN} />
+        <Route path='partner-presentation' component={PartnerPresentation} ignoreScrollBehavior/>
+        <Route path='partner-presentation-en' component={PartnerPresentationEN} ignoreScrollBehavior/>
         <Route path='about' component={About} />
         <Route path='*' component={NotFound} />
     </Route>

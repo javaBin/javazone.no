@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import imageOne from '../assets/partners/stand.jpg';
 import imageTwo from '../assets/partners/sal1.jpg';
 import imageThree from '../assets/partners/overflow.jpg';
@@ -95,7 +96,7 @@ export default () => (
 
         <div className='textblock textblock--centered'>
             <div className='textblock--centered__text'>
-                <h2 className='page__sub-title'>Contact us today</h2>
+                <h2 className='textblock__title'>Contact us today</h2>
                 <p>
                     JavaZone 2016 will be held in September, but please get in touch sooner rather
 		            than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
@@ -109,6 +110,16 @@ export default () => (
 
                 <p className='partners__prospect'>
                     <a href={partnerProspect} className='button'>Download our Partnership Prospectus</a>
+                </p>
+
+                <p>
+                    <b>A note about partner meetings</b>
+                    <br />
+                    We arrange regular partner meetings for both existing and new partners,
+                    where we outline the progress of the conference. See the slides from
+                    our last partner meeting in Desember for a status update.
+                    <br />
+                    <Link to='partner-presentation' className='page__link'>Slides in Norwegian</Link>
                 </p>
             </div>
         </div>

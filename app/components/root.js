@@ -3,7 +3,7 @@ import Footer from './footer';
 import className from 'className';
 import {defer, when} from 'Q';
 import backgroundBlurred from '../assets/background_blurred.jpg';
-import RouteTransition from './RouteTransition';
+// import RouteTransition from './RouteTransition';
 
 function getImage(src) {
     const deferred = defer();
@@ -13,9 +13,9 @@ function getImage(src) {
     return deferred;
 }
 
-RouteTransition.contextTypes = {
-    location: React.PropTypes.object
-};
+// RouteTransition.contextTypes = {
+//     location: React.PropTypes.object
+// };
 
 const Root = React.createClass({
 
@@ -50,12 +50,7 @@ const Root = React.createClass({
                 <div className="javazone__container">
                     <Nav {...this.props} />
                     <div className="javazone__page">
-                        <RouteTransition
-                            component='div' transitionName='page-transition'
-                            transitionEnterTimeout={500}
-                            transitionLeaveTimeout={500}>
                             {this.props.children}
-                        </RouteTransition>
                         <div className="javazone__footer">
                             <Footer />
                         </div>
@@ -66,5 +61,11 @@ const Root = React.createClass({
     }
 
 });
+
+// <RouteTransition
+//     component='div' transitionName='page-transition'
+//     transitionEnterTimeout={500}
+//     transitionLeaveTimeout={500}>
+// </RouteTransition>
 
 export default Root;
