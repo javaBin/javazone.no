@@ -7,7 +7,7 @@
     background: @white;
     align-items: center;
     display: flex;
-    padding: 20px;
+    padding: 10px 20px;
 
     @media (min-width: @size-s) {
         padding: 20px 40px;
@@ -22,17 +22,93 @@
         }
     }
 
-    &__list {
+    &__toggle-container {
         flex-grow: 1;
-        list-style: none;
-        margin: 0;
-        padding: 0;
         text-align: right;
+
+        @media (min-width: @size-s) {
+            display: none;
+        }
+    }
+
+    &__toggle {
+        background: @white;
+        border: 0;
+        cursor: pointer;
+        height: 12px;
+        outline: 0;
+        padding: 0;
+    }
+
+    &__toggle-icon {
+        background: @black;
+        height: 2px;
+        opacity: 1;
+        transition: background .4s ease-in-out;
+        width: 20px;
+
+        &:before,
+        &:after {
+            background: @black;
+            content: '';
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: transform .4s ease-in-out;
+            width: 20px;
+        }
+
+        &:before { top: -5px; }
+        &:after { top: 3px; }
+
+        /*&--toggled {
+            background: @white;
+
+            &:before {
+                transform: rotateZ(45deg) translateY(10px);
+            }
+
+            &:after {
+                transform: rotateZ(-45deg);
+            }
+        }*/
+    }
+
+    &__items {
+        background: @white;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        position: fixed;
+        right: 0;
+        transition: opacity .4s ease-in-out;
+        top: 56px;
+        z-index: 2;
+
+        &--toggled {
+            opacity: 1;
+        }
+
+        @media (min-width: @size-s) {
+            background: transparent;
+            flex-grow: 1;
+            list-style: none;
+            opacity: 1;
+            position: static;
+            text-align: right;
+        }
     }
 
     &__item {
-        display: inline-block;
-        margin-right: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media (min-width: @size-s) {
+            display: inline-block;
+            margin: 0 20px 0 0;
+        }
     }
 
     &__link {

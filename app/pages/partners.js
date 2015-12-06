@@ -27,9 +27,9 @@ export default () => (
         </div>
 
         <div className='textblock textblock--centered partners__intro'>
-            <div className='textblock__text'>
+            <div className='textblock--centered__text'>
                 <h2 className='page__sub-title'>What is JavaZone?</h2>
-                <p className='page__paragraph'>
+                <p>
 		            JavaZone is one of the largest community driven conferences in the world.
 		            Every year, more than 2.500 developers meet up to learn and mingle in Oslo.
 		            <br /><br />
@@ -96,18 +96,18 @@ export default () => (
         <div className='textblock textblock--centered'>
             <div className='textblock--centered__text'>
                 <h2 className='page__sub-title'>Contact us today</h2>
-                <p className='page__paragraph'>
+                <p>
                     JavaZone 2016 will be held in September, but please get in touch sooner rather
 		            than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
 		            will sell out early.
                 </p>
 
-                <p className='page__paragraph'>
+                <p>
                     Contact us at <a className='page__link' href='mailto:partner@java.no'>partner@java.no</a> today,
                     and we'll work with you to create the best possible partnership for you.
                 </p>
 
-                <p className='page__paragraph partners__prospect'>
+                <p className='partners__prospect'>
                     <a href={partnerProspect} className='button'>Download our Partnership Prospectus</a>
                 </p>
             </div>
