@@ -6,17 +6,43 @@ import logo from '../assets/logo_menu.svg';
 const Nav = React.createClass({
 
     getInitialState() {
-        return {toggled: false};
+        return {
+            toggled: false,
+            invisible: true
+        };
     },
 
     toggleMenu() {
-        this.setState({toggled: !this.state.toggled});
+        if (!this.state.toggled) {
+            this.setState({
+                toggled: false,
+                invisible: false
+            });
+            setTimeout(() => {
+                this.setState({
+                    toggled: true,
+                    invisible: false
+                });
+            }, 10);
+        } else {
+            this.setState({
+                toggled: false,
+                invisible: false
+            });
+            setTimeout(() => {
+                this.setState({
+                    toggled: false,
+                    invisible: true
+                });
+            }, 400);
+        }
     },
 
     render() {
 
         const menuClass = className('navigation__items', {
-            'navigation__items--toggled': this.state.toggled
+            'navigation__items--toggled': this.state.toggled,
+            'navigation__items--invisible': this.state.invisible
         });
 
         const iconClass = className('navigation__toggle-icon', {
@@ -36,10 +62,10 @@ const Nav = React.createClass({
                     </div>
                     <ul className={menuClass}>
                         <li className='navigation__item'>
-                            <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active'>Home</IndexLink>
+                            <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
                         </li>
                         <li className='navigation__item'>
-                            <Link to='partners' className='navigation__link' activeClassName='navigation__link--active'>Partners</Link>
+                            <Link to='partners' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Partners</Link>
                         </li>
                     </ul>
                 </div>
