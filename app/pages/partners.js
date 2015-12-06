@@ -23,12 +23,12 @@ const sectionThreeStyles = {
 export default () => (
     <div className='page partners'>
         <div className='page__header page__header--centered' style={headerStyle}>
-	    <h1 className='page__title partners__title'>Join us as a partner</h1>
+	       <h1 className='page__title partners__title'>Join us as a partner</h1>
         </div>
 
         <div className='textblock textblock--centered partners__intro'>
             <div className='textblock--centered__text'>
-                <h2 className='page__sub-title'>What is JavaZone?</h2>
+                <h2 className='textblock__title'>What is JavaZone?</h2>
                 <p>
 		            JavaZone is one of the largest community driven conferences in the world.
 		            Every year, more than 2.500 developers meet up to learn and mingle in Oslo.

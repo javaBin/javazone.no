@@ -4,6 +4,8 @@ import Root from './components/root';
 import Index from './pages/index';
 import Contact from './pages/contact';
 import Partners from './pages/partners';
+import PartnerPresentation from './pages/partner-presentation';
+import PartnerPresentationEN from './pages/partner-presentation-en';
 import About from './pages/about';
 import NotFound from './pages/404.js';
 
@@ -12,6 +14,8 @@ export default (
         <IndexRoute component={Index} />
         <Route path='contact' component={Contact} />
         <Route path='partners' component={Partners} />
+        <Route path='partner-presentation' component={PartnerPresentation} />
+        <Route path='partner-presentation-en' component={PartnerPresentationEN} />
         <Route path='about' component={About} />
         <Route path='*' component={NotFound} />
     </Route>
