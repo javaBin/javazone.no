@@ -34,7 +34,7 @@ const Root = React.createClass({
             this.setState({
                 loaded: true,
                 style: {
-                    background: `url('${backgroundBlurred}')`
+                    backgroundImage: `url('${backgroundBlurred}')`
                 }
             });
         })
