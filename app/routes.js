@@ -7,6 +7,8 @@ import Partners from './pages/partners';
 import PartnerPresentation from './pages/partner-presentation';
 import PartnerPresentationEN from './pages/partner-presentation-en';
 import About from './pages/about';
+import Kids from './pages/kids';
+import Academy from './pages/academy';
 import NotFound from './pages/404.js';
 
 export default (
@@ -17,6 +19,8 @@ export default (
         <Route path='partner-presentation' component={PartnerPresentation} ignoreScrollBehavior/>
         <Route path='partner-presentation-en' component={PartnerPresentationEN} ignoreScrollBehavior/>
         <Route path='about' component={About} />
+        <Route path='kids' component={Kids} />
+        <Route path='academy' component={Academy} />
         <Route path='*' component={NotFound} />
     </Route>
 );
