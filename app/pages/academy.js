@@ -1,4 +1,4 @@
-import header from '../assets/header_expo.jpg';
+import header from '../assets/academy.jpg';
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
