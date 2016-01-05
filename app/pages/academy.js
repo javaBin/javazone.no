@@ -16,14 +16,28 @@ export default () => (
                 <p>
                     Are you a student? Interested in IT? Come join us for JavaZone Academy 2015.
                     JavaZone Academy is a free event for student in Norway, where we invite you
-                    to take part in the Javazone experience. Oslo has already had its go during
-                    JavaZone, next up is Trondheim and Bergen.
+                    to take part in the Javazone experience.
                 </p>
                 <p>
-                    Get access to great talks, food, mingling and our great partners for a whole evening
-                    – a great taste of the full JavaZone experience. See you there!
+                    We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
+                    <strong>Trondheim</strong> and <strong>Bergen</strong>. Join us for a great evening!
                 </p>
             </div>
         </div>
+
+        <ul className='academy__locations'>
+            <li className='academy__location'>
+                <h3>Oslo</h3>
+                <p>February 16th</p>
+            </li>
+            <li className='academy__location'>
+                <h3>Trondheim</h3>
+                <p>February 17th</p>
+            </li>
+            <li className='academy__location'>
+                <h3>Bergen</h3>
+                <p>February 18th</p>
+            </li>
+        </ul>
     </div>
 );
