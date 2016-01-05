@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'variables';
+
+.location {
+    background-color: darken(@white, 5%);
+    padding-bottom: 30px;
+
+    &:first-child {
+
+        .location__image {
+            background-position: right bottom;
+        }
+    }
+
+    &:last-child {
+    }
+
+    &__image {
+        background-position: center bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100px;
+
+        @media (min-width: @size-s) {
+            height: 100px;
+        }
+
+        @media (min-width: @size-m) {
+            height: 200px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__date {
+        margin: 0 0 7px;
+    }
+
+    &__location {
+        margin: 0 0 7px;
+    }
+
+    &__pax {
+        margin: 0;
+    }
+}

@@ -1,11 +1,35 @@
+@import '../variables';
+
+@padding: 30px;
+
 .academy {
     &__locations {
-        display: flex;
         list-style: none;
+        padding: 0;
+
+        @media (min-width: @size-s) {
+            display: flex;
+        }
     }
 
     &__location {
+        margin: 20px;
         text-align: center;
-        width: 33%;
+
+        @media (min-width: @size-s) {
+            width: 100/3%;
+
+            &--oslo {
+                margin: 0 0 0 @padding;
+            }
+
+            &--bergen {
+                margin: 0 @padding;
+            }
+
+            &--trondheim {
+                margin: 0 @padding 0 0;
+            }
+        }
     }
 }
