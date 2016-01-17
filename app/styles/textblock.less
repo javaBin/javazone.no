@@ -1,57 +1,58 @@
 @import 'variables.less';
 
 .textblock {
-    display: flex;
-    line-height: 140%;
-    padding: 20px;
 
     @media (min-width: @size-s) {
-        padding: 40px;
+        display: flex;
     }
 
-    &--image {
-        justify-content: center;
+    &__column {
+        position: relative;
 
         @media (min-width: @size-s) {
-            display: flex;
+
+            &:first-child:nth-last-child(1) {
+                width: 100%;
+            }
+
+            &:first-child:nth-last-child(2),
+            &:first-child:nth-last-child(2) ~ .textblock__column {
+                width: 50%;
+            }
         }
 
-        &__text {
+        &--centered {
+            margin: 0 auto;
+            max-width: 600px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        &--fill {
+            padding: 0;
+        }
+
+        &--dark {
             background-color: darken(@white, 5%);
-            padding: 0 20px 40px 20px;
-
-            @media (min-width: @size-s) {
-                padding: 0 40px 40px 40px;
-                width: 50%;
-            }
-        }
-
-        &__image {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 200px;
-
-            @media (min-width: @size-s) {
-                height: auto;
-                width: 50%;
-            }
         }
     }
 
-    &--centered {
-        display: flex;
-        justify-content: center;
-        text-align: center;
+    &__text {
+        padding: 20px;
 
-        &__text {
-            max-width: 600px;
+        @media (min-width: @size-s) {
+            padding: 40px;
+        }
+
+        &--fill {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
     &__title {
         margin-top: 0;
-        padding-top: 1.7rem;
     }
 
     &__sub-title {
