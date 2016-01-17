@@ -60,13 +60,13 @@ export default () => (
                     </p>
                 </div>
             </div>
-            <div className='textblock__column textblock__column--fill'>
+            <div className='textblock__column'>
                 <div className='background-image' style={sectionOneStyles}></div>
             </div>
         </div>
 
         <div className='textblock'>
-            <div className='textblock__column textblock__column--fill'>
+            <div className='textblock__column'>
                 <div className='background-image' style={sectionTwoStyles}></div>
             </div>
             <div className="textblock__column textblock__column--dark">
@@ -103,7 +103,7 @@ export default () => (
                     </dl>
                 </div>
             </div>
-            <div className='textblock__column textblock__column--fill'>
+            <div className='textblock__column'>
                 <div className='background-image' style={sectionThreeStyles}></div>
             </div>
         </div>
