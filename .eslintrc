@@ -17,5 +17,8 @@
         "templateString": true,
         "jsx": true,
         "experimentalObjectRestSpread": true
+    },
+    "rules": {
+        "eqeqeq": 2
     }
 }
