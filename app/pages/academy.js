@@ -14,17 +14,19 @@ export default () => (
         </div>
 
         <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-                <h2 className='textblock__title'>A free taste of JavaZone for students</h2>
-                <p>
-                    Are you a student? Interested in IT? Come join us for JavaZone Academy.
-                    JavaZone Academy is a free event for students in Norway, where we invite you
-                    to take part in the Javazone experience.
-                </p>
-                <p>
-                    We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
-                    <strong>Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
-                </p>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text textblock__text--fill'>
+                    <h2 className='textblock__title'>A free taste of JavaZone for students</h2>
+                    <p>
+                        Are you a student? Interested in IT? Come join us for JavaZone Academy.
+                        JavaZone Academy is a free event for students in Norway, where we invite you
+                        to take part in the Javazone experience.
+                    </p>
+                    <p>
+                        We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
+                        <strong>Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -51,20 +53,28 @@ export default () => (
                 <p className='location__pax'>200 students</p>
             </li>
         </ul>
+
         <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-                <p>
-                    The format will be presentations from 1200 to 1800 and mingling and networking with 
-                    food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
-                </p>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text'>
+                    <h2 className='textblock__title'>Format</h2>
+                    <p>
+                        The format will be presentations from 1200 to 1800 and mingling and networking with 
+                        food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
+                    </p>
+                </div>
+            </div>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text'>
+                    <h2 className='textblock__title'>Signup</h2>
+                    <p>
+                        <a href="https://twitter.com/JavaZone" className="page__link">Stay tuned</a> for information on how to sign up for JavaZone Academy.
+                    </p>
+                </div>
             </div>
         </div>
         <div className='textblock textblock--centered'>
             <div className='textblock--centered__text'>
-                <h2 className='textblock__title'>Signup</h2>
-                <p>
-                    <a href="https://twitter.com/JavaZone" className="page__link">Stay tuned</a> for information on how to sign up for JavaZone Academy.
-                </p>
             </div>
         </div>
 
