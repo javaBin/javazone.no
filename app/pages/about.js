@@ -1,23 +1,58 @@
+import header from '../assets/header_expo.jpg';
+import github from '../assets/about/github.png';
+import trackjs from '../assets/about/trackjs.png';
+
+const headerStyle = {
+    backgroundImage: `url('${header}')`
+};
+
 export default () => (
     <div className='page about'>
-        <h1 className='page__title about__title'>About</h1>
-        <div className="page__left-column">
-            <p>
-                JavaZone is a conference organized by and for a great community of developers.
-                The conference has been held in the heart of Oslo for 14 consecutive years, and JavaZone 2016 will be the 15th time we arrange the conference.
-            </p>
-            <p>
-                JavaZone is made by javaBin, the Norwegian Java User Group. JavaZone is completely independent, and is made and run mainly with volunteer work.
-            </p>
-            <h2 className="page__sub-title">Open Source</h2>
-            <p>
-                We make almost every piece of software used to run the conference ourselves.
-                And, as a true independent organization, we open source most of it as well.
-                You can find most of our software over at <a href="https://github.com/javabin">Github</a>
-            </p>
+        <div className='page__header page__header--centered' style={headerStyle}>
+            <h1 className='page__title about__title'>About</h1>
         </div>
-        <div className="page__right-column">
-            <h2 className="page__sub-title">Who are we?</h2>
+
+        <div className='textblock textblock--first'>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text'>
+                    <h2 className='textblock__title'>About</h2>
+                    <p>
+                        JavaZone is a conference organized by and for a great community of developers.
+                        The conference has been held in the heart of Oslo for 14 consecutive years, and JavaZone 2016 will be the 15th time we arrange the conference.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div className='textblock'>
+            <div className='textblock__column'>
+                <div className='textblock__text'>
+                    <h2 className='textblock__title'>Open Source</h2>
+                    <p>
+                        We make almost every piece of software used to run the conference ourselves.
+                        And, as a true independent organization, we open source most of it as well.
+                        You can find most of our software over at <a href="https://github.com/javabin">Github</a>
+                    </p>
+                </div>
+            </div>
+            <ul className='textblock__column textblock__column--centered about__services'>
+                <li className='about__service'>
+                    <a href='https://github.com/javabin'>
+                        <img src={github} className='about__service-icon' />
+                    </a>
+                </li>
+                <li className='about__service'>
+                    <a href='https://trackjs.com'>
+                        <img src={trackjs} className='about__service-icon' />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div className='textblock about__heroes'>
+            <div className='textblock__column'>
+                <h2 className="textblock__title">The heroes</h2>
+            </div>
         </div>
     </div>
 );

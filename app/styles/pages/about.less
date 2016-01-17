@@ -1,2 +1,28 @@
 .about {
+
+    &__services {
+        align-items: center;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__service {
+        display: inline-block;
+
+        &:nth-child(n+2) {
+            margin-left: 30px;
+        }
+    }
+
+    &__service-icon {
+        height: 64px;
+        width: 64px;
+    }
+
+    &__heroes {
+        text-align: center;
+    }
 }
