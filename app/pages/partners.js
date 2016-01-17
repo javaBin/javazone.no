@@ -108,9 +108,9 @@ export default () => (
             </div>
         </div>
 
-        <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-                <div className='textblock__text'>
+        <div className='textblock'>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text textblock__text--fill'>
                     <h2 className='textblock__title'>Contact us today</h2>
                     <p>
                         JavaZone 2016 will be held in September, but please get in touch sooner rather
