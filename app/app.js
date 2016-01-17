@@ -14,5 +14,5 @@ const container = document.querySelector('#app');
 
 render(<Router {...config} />, container);
 history.listen(location => {
-    pageview(location.pathname)
+    pageview(location.pathname);
 });
