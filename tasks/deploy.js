@@ -42,6 +42,11 @@ function run() {
     return shell.exec(cmd, {silent: true});
 }
 
+function tag(env, tagname) {
+    run(`git tag ${env}-${tagname}`);
+    run('git push --tags origin master');
+}
+
 function ssh(server) {
     var args = '\'' + toArray(arguments).slice(1).join(' ') + '\'';
     console.log(server, args);
@@ -53,28 +58,29 @@ function main(args) {
     var environment = getEnvironment(envArg);
     var server = environment.server;
     var root = environment.dir;
-    var folder = Date.now().toString();
-    var res = ssh(server, 'cd', root, '&&', 'mkdir', '-p', folder);
+    var timestamp = Date.now().toString();
+    var res = ssh(server, 'cd', root, '&&', 'mkdir', '-p', timestamp);
     if (res.code !== 0)
         abort('Failed trying to create deploy folder');
 
     res = ssh(server, 'cd', root, '&&', 'test', '-L', 'current');
     if (res.code === 0) {
-        res = ssh(server, 'cd', root, '&&', 'cp', '-pr', 'current/', folder);
+        res = ssh(server, 'cd', root, '&&', 'cp', '-pr', 'current/', timestamp);
         if (res.code !== 0)
             abort('Failed trying to copy old version to new folder');
     }
 
-    var remote = server + ':' + path.join(root, folder);
+    var remote = server + ':' + path.join(root, timestamp);
     res = run('rsync', '-a', '--delete', '--no-p', '--no-g', distFolder + '/', '--chmod=Dg+s,ug+rwx,Fug+rw,+X,o+r', '--perms', remote);
     if (res.code !== 0)
         abort('rsyncing failed');
 
-    res = ssh(server, 'cd', root, '&&', 'ln', '-sfn', folder, 'current');
+    res = ssh(server, 'cd', root, '&&', 'ln', '-sfn', timestamp, 'current');
     if (res.code !== 0)
         abort('symlinking failed');
 
     console.log('Deployment done');
+    tag(envArg, timestamp);
 }
 
 main(process.argv);
