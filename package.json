@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint app",
     "clean": "rm -r ./dist && mkdir dist",
-    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors",
+    "build": "npm run lint && npm run clean && NODE_ENV=production webpack -p --progress --colors",
     "deploy": "npm run build && node tasks/deploy.js",
     "watch": "webpack-dev-server",
     "start": "npm run watch"
