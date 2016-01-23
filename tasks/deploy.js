@@ -49,7 +49,6 @@ function tag(env, tagname) {
 
 function ssh(server) {
     var args = '\'' + toArray(arguments).slice(1).join(' ') + '\'';
-    console.log(server, args);
     return run('ssh', server, args);
 }
 
