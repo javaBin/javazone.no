@@ -39,5 +39,6 @@
     "webpack-dev-server": "^1.12.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "private": true
 }
