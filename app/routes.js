@@ -9,6 +9,7 @@ import PartnerPresentationEN from './pages/partner-presentation-en';
 import About from './pages/about';
 import Kids from './pages/kids';
 import Academy from './pages/academy';
+import Speakers from './pages/speakers';
 import NotFound from './pages/404.js';
 
 export default (
@@ -21,6 +22,7 @@ export default (
         <Route path='about' component={About} />
         <Route path='kids' component={Kids} />
         <Route path='academy' component={Academy} />
+        <Route path='speakers' component={Speakers} />
         <Route path='*' component={NotFound} />
     </Route>
 );
