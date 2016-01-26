@@ -76,13 +76,13 @@ export default () => (
                     </p>
                     <p>
                         The detailed program and speakers for each location will be revealed closer to the event, but this is a sneak peak of some of the speakers who will attend JavaZone Academy.
-                        <ul className="location__speakerlist">
-                            <li>Lotte Johansen</li>
-                            <li>Christin Gorman</li>
-                            <li>Christian Johansen</li>
-                            <li>Rafael Winterhalter</li>
-                        </ul>
                     </p>
+                    <ul className="location__speakerlist">
+                        <li>Lotte Johansen</li>
+                        <li>Christin Gorman</li>
+                        <li>Christian Johansen</li>
+                        <li>Rafael Winterhalter</li>
+                    </ul>
                 </div>
             </div>
             <div className='textblock__column textblock__column--centered'>
