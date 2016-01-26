@@ -24,7 +24,7 @@ export default () => (
                     </p>
                     <p>
                         We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
-                        <strong>Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
+                        <strong> Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
                     </p>
                 </div>
             </div>
@@ -37,6 +37,9 @@ export default () => (
                 <p className='location__date'><strong>February 16th</strong></p>
                 <p className='location__location'>@ <a href="http://www.teknologihuset.no/">Teknologihuset</a></p>
                 <p className='location__pax'>120 students</p>
+                <p className='location__register'>
+                    <a href="https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form">Register for Academy Oslo</a>
+                </p>
             </li>
             <li className='academy__location academy__location--bergen location'>
                 <div className='location__image' style={{backgroundImage: `url('${kvarteret}')`}}></div>
@@ -44,6 +47,9 @@ export default () => (
                 <p className='location__date'><strong>February 17th</strong></p>
                 <p className='location__location'>@ <a href="http://kvarteret.no/">Det Akademiske Kvarter</a></p>
                 <p className='location__pax'>120 students</p>
+                <p className='location__register'>
+                    <a href="https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form">Register for Academy Bergen</a>
+                </p>
             </li>
             <li className='academy__location academy__location--trondheim location'>
                 <div className='location__image' style={{backgroundImage: `url('${samfundet}')`}}></div>
@@ -51,24 +57,41 @@ export default () => (
                 <p className='location__date'><strong>February 18th</strong></p>
                 <p className='location__location'>@ <a href="https://www.samfundet.no/">Studentersamfundet</a></p>
                 <p className='location__pax'>200 students</p>
+                <p className='location__register'>
+                    <a href="https://abakus.no/event/1693-javazone-academy-2016/">Register @ Abakus</a>
+                </p>
+                <p className='location__register'>
+                    <a href="https://online.ntnu.no/">Register @ Online</a>
+                </p>
             </li>
         </ul>
 
         <div className='textblock textblock--centered'>
             <div className='textblock__column textblock__column--centered'>
                 <div className='textblock__text'>
-                    <h2 className='textblock__title'>Format</h2>
+                    <h2 className='textblock__title'>Program and speakers</h2>
                     <p>
                         The format will be presentations from 1200 to 1800 and mingling and networking with 
                         food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
+                    </p>
+                    <p>
+                        The detailed program and speakers for each location will be revealed closer to the event, but this is a sneak peak of some of the speakers who will attend JavaZone Academy.
+                        <ul className="location__speakerlist">
+                            <li>Speaker…</li>
+                            <li>Speaker…</li>
+                            <li>Speaker…</li>
+                        </ul>
                     </p>
                 </div>
             </div>
             <div className='textblock__column textblock__column--centered'>
                 <div className='textblock__text'>
-                    <h2 className='textblock__title'>Signup</h2>
+                    <h2 className='textblock__title'>How to register?</h2>
                     <p>
-                        <a href="https://twitter.com/JavaZone" className="page__link">Stay tuned</a> for information on how to sign up for JavaZone Academy.
+                        Use the signup links above to sign up for your prefered town. We'll contact you as soon as possible with information about whether you got a spot.
+                    </p>
+                    <p>
+                        The events are usually quite popular, so make sure to registrer as soon as possible.
                     </p>
                 </div>
             </div>
