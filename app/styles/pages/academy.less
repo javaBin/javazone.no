@@ -9,6 +9,7 @@
 
         @media (min-width: @size-s) {
             display: flex;
+            justify-content: center;
         }
     }
 
@@ -19,17 +20,27 @@
         @media (min-width: @size-s) {
             width: 100/3%;
 
-            &--oslo {
+            &:first-child {
                 margin: 0 0 0 @padding;
             }
 
-            &--bergen {
+            &:nth-child(2) {
                 margin: 0 @padding;
             }
 
-            &--trondheim {
+            &:last-child {
                 margin: 0 @padding 0 0;
             }
+        }
+    }
+
+    &__speaker-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 10px;
         }
     }
 }
