@@ -7,6 +7,61 @@ const headerStyle = {
     backgroundImage: `url('${header}')`
 };
 
+const oslo = {
+    image: teknologihuset,
+    city: 'Oslo',
+    date: 'February 16th',
+    location: 'Teknologihuset',
+    location_link: 'http://www.teknologihuset.no',
+    pax: 120,
+    registration: [
+        {text: 'Register for Academy Trondheim', link: 'https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form'}
+    ]
+};
+
+const bergen = {
+    image: kvarteret,
+    city: 'Bergen',
+    date: 'February 17th',
+    location: 'Det Akademiske Kvarter',
+    location_link: 'http://kvarteret.no/',
+    pax: 120,
+    registration: [
+        {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form'},
+    ]
+};
+
+const trondheim = {
+    image: samfundet,
+    city: 'Trondheim',
+    date: 'February 18th',
+    location: 'Studentersamfundet',
+    location_link: 'https://www.samfundet.no/',
+    pax: 200,
+    registration: [
+        {text: 'Register @ Abakus', link: 'https://abakus.no/event/1693-javazone-academy-2016/'},
+        {text: 'Register @ Online', link: 'https://online.ntnu.no/'}
+    ]
+};
+
+const Location = ({image, city, date, location, location_link, pax, registration}) => (
+    <li className='academy__location location'>
+        <div className='location__image' style={{backgroundImage: `url('${image}')`}}>
+            <h3 className='location__title'>{city}</h3>
+        </div>
+        <p className='location__date'><strong>{date}</strong></p>
+        <p className='location__location'>
+            <a href={location_link}>{location}</a>
+        </p>
+        <p className='location__pax'>{pax} students</p>
+        {registration.map((reg, key) => (
+            <p key={key}>
+                <a className="button button--red" href={reg.link}>{reg.text}</a>
+            </p>
+        ))}
+    </li>
+)
+
 export default () => (
     <div className='page academy'>
         <div className='page__header page__header-centered' style={headerStyle}>
@@ -31,39 +86,9 @@ export default () => (
         </div>
 
         <ul className='academy__locations'>
-            <li className='academy__location academy__location--oslo location'>
-                <div className='location__image' style={{backgroundImage: `url('${teknologihuset}')`}}></div>
-                <h3 className='location__title'>Oslo</h3>
-                <p className='location__date'><strong>February 16th</strong></p>
-                <p className='location__location'>@ <a href="http://www.teknologihuset.no/">Teknologihuset</a></p>
-                <p className='location__pax'>120 students</p>
-                <p>
-                    <a className="button button--red" href="https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form">Register for Academy Oslo</a>
-                </p>
-            </li>
-            <li className='academy__location academy__location--bergen location'>
-                <div className='location__image' style={{backgroundImage: `url('${kvarteret}')`}}></div>
-                <h3 className='location__title'>Bergen</h3>
-                <p className='location__date'><strong>February 17th</strong></p>
-                <p className='location__location'>@ <a href="http://kvarteret.no/">Det Akademiske Kvarter</a></p>
-                <p className='location__pax'>120 students</p>
-                <p>
-                    <a className="button button--red" href="https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form">Register for Academy Bergen</a>
-                </p>
-            </li>
-            <li className='academy__location academy__location--trondheim location'>
-                <div className='location__image' style={{backgroundImage: `url('${samfundet}')`}}></div>
-                <h3 className='location__title'>Trondheim</h3>
-                <p className='location__date'><strong>February 18th</strong></p>
-                <p className='location__location'>@ <a href="https://www.samfundet.no/">Studentersamfundet</a></p>
-                <p className='location__pax'>200 students</p>
-                <p>
-                    <a className="button button--red" href="https://abakus.no/event/1693-javazone-academy-2016/">Register @ Abakus</a>
-                </p>
-                <p>
-                    <a className="button button--red" href="https://online.ntnu.no/">Register @ Online</a>
-                </p>
-            </li>
+            <Location {...oslo} />
+            <Location {...bergen} />
+            <Location {...trondheim} />
         </ul>
 
         <div className='textblock textblock--centered'>
@@ -77,7 +102,7 @@ export default () => (
                     <p>
                         The detailed program and speakers for each location will be revealed closer to the event, but this is a sneak peak of some of the speakers who will attend JavaZone Academy.
                     </p>
-                    <ul className="location__speakerlist">
+                    <ul className="academy__speaker-list">
                         <li>Lotte Johansen</li>
                         <li>Christin Gorman</li>
                         <li>Christian Johansen</li>
