@@ -17,33 +17,35 @@ export default () => (
         <div className='page__header page__header--centered' style={headerStyle}>
             <h1 className='page__title'>JavaZone Partnerpresentasjon</h1>
         </div>
-        <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-                <p>
-                    Nedenfor finner du presentasjonen som ble holdt på Teknologihuset torsdag 3. desember.
-                    <br />
-                    Presentasjonen inneholder informasjon for partnere om JavaZone 2016.
-                </p>
-                <p>
-                    Spørsmål? Kontakt oss på <a href='mailto:partner@java.no'>partner@java.no</a>.
-                </p>
-                <ul className='partner-presentation__sections'>
-                    <li className='partner-presentation__link'>
-                        <a href='#slide-0'>JavaZone 2015</a>
-                    </li>
-                    <li className='partner-presentation__link'>
-                        <a href='#slide-13'>Programmet 2016</a>
-                    </li>
-                    <li className='partner-presentation__link'>
-                        <a href='#slide-25'>Partnerskap & Muligheter</a>
-                    </li>
-                    <li className='partner-presentation__link'>
-                        <a href='#slide-40'>JavaZone Academy</a>
-                    </li>
-                    <li className='partner-presentation__link'>
-                        <a href='#slide-48'>Kontaktinformasjon</a>
-                    </li>
-                </ul>
+        <div className='textblock'>
+            <div className='textblock__column textblock__column--centered'>
+                <div className='textblock__text'>
+                    <p>
+                        Nedenfor finner du presentasjonen som ble holdt på Teknologihuset torsdag 3. desember.
+                        <br />
+                        Presentasjonen inneholder informasjon for partnere om JavaZone 2016.
+                    </p>
+                    <p>
+                        Spørsmål? Kontakt oss på <a href='mailto:partner@java.no'>partner@java.no</a>.
+                    </p>
+                    <ul className='partner-presentation__sections'>
+                        <li className='partner-presentation__link'>
+                            <a href='#slide-0'>JavaZone 2015</a>
+                        </li>
+                        <li className='partner-presentation__link'>
+                            <a href='#slide-13'>Programmet 2016</a>
+                        </li>
+                        <li className='partner-presentation__link'>
+                            <a href='#slide-25'>Partnerskap & Muligheter</a>
+                        </li>
+                        <li className='partner-presentation__link'>
+                            <a href='#slide-40'>JavaZone Academy</a>
+                        </li>
+                        <li className='partner-presentation__link'>
+                            <a href='#slide-48'>Kontaktinformasjon</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
