@@ -2,6 +2,11 @@ import header from '../assets/academy.jpg';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import samfundet from '../assets/academy/samfundet.jpg';
+import accenture from '../assets/academy/accenture.jpg';
+import finn from '../assets/academy/finn.jpg';
+import kantega from '../assets/academy/kantega.jpg';
+
+const sponsors = [accenture, finn, kantega];
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
@@ -84,6 +89,14 @@ export default () => (
                 </div>
             </div>
         </div>
+
+        <ul className='academy__sponsors'>
+            {sponsors.map((sponsor, key) => (
+                <li key={key} className='academy__sponsor'>
+                    <img className='academy__sponsor-image' src={sponsor} />
+                </li>
+            ))}
+        </ul>
 
         <ul className='academy__locations'>
             <Location {...oslo} />
