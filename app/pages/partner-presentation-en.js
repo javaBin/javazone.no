@@ -10,7 +10,7 @@ const headerStyle = {
 
 const Image = (props) => (
     <img {...props} className='partner-presentation__slide' />
-)
+);
 
 export default () => (
     <div className='page partner-presentation'>

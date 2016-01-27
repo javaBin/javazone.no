@@ -60,7 +60,7 @@ const Location = ({image, city, date, location, location_link, pax, registration
             </p>
         ))}
     </li>
-)
+);
 
 export default () => (
     <div className='page academy'>

@@ -28,7 +28,7 @@ class RouteTransition extends React.Component {
                     {children}
                 </StaticContainer>
             </ReactCSSTransitionGroup>
-        )
+        );
     }
 
     componentDidUpdate(prevProps, prevState) {

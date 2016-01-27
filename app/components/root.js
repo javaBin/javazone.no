@@ -37,7 +37,7 @@ const Root = React.createClass({
                     backgroundImage: `url('${backgroundBlurred}')`
                 }
             });
-        })
+        });
     },
 
     render() {

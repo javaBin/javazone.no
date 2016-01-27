@@ -34,7 +34,7 @@ const Index = React.createClass({
             loaded: false,
             background: 'none',
             backgroundBlurred: 'none'
-        }
+        };
     },
 
     componentDidMount() {
