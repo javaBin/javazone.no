@@ -37,8 +37,8 @@ export default () => (
                 <p className='location__date'><strong>February 16th</strong></p>
                 <p className='location__location'>@ <a href="http://www.teknologihuset.no/">Teknologihuset</a></p>
                 <p className='location__pax'>120 students</p>
-                <p className='location__register'>
-                    <a href="https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form">Register for Academy Oslo</a>
+                <p>
+                    <a className="button button--red" href="https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form">Register for Academy Oslo</a>
                 </p>
             </li>
             <li className='academy__location academy__location--bergen location'>
@@ -47,8 +47,8 @@ export default () => (
                 <p className='location__date'><strong>February 17th</strong></p>
                 <p className='location__location'>@ <a href="http://kvarteret.no/">Det Akademiske Kvarter</a></p>
                 <p className='location__pax'>120 students</p>
-                <p className='location__register'>
-                    <a href="https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form">Register for Academy Bergen</a>
+                <p>
+                    <a className="button button--red" href="https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form">Register for Academy Bergen</a>
                 </p>
             </li>
             <li className='academy__location academy__location--trondheim location'>
@@ -57,11 +57,11 @@ export default () => (
                 <p className='location__date'><strong>February 18th</strong></p>
                 <p className='location__location'>@ <a href="https://www.samfundet.no/">Studentersamfundet</a></p>
                 <p className='location__pax'>200 students</p>
-                <p className='location__register'>
-                    <a href="https://abakus.no/event/1693-javazone-academy-2016/">Register @ Abakus</a>
+                <p>
+                    <a className="button button--red" href="https://abakus.no/event/1693-javazone-academy-2016/">Register @ Abakus</a>
                 </p>
-                <p className='location__register'>
-                    <a href="https://online.ntnu.no/">Register @ Online</a>
+                <p>
+                    <a className="button button--red" href="https://online.ntnu.no/">Register @ Online</a>
                 </p>
             </li>
         </ul>
