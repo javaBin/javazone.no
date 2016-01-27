@@ -124,7 +124,7 @@ export default () => (
                     </p>
 
                     <p className='partners__prospect'>
-                        <a href={partnerProspect} className='button'>Download our Partnership Prospectus</a>
+                        <a href={partnerProspect} className='button button--green'>Download our Partnership Prospectus</a>
                     </p>
 
                     <p>
