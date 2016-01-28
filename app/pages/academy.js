@@ -109,7 +109,7 @@ export default () => (
                 <div className='textblock__text'>
                     <h2 className='textblock__title'>Program and speakers</h2>
                     <p>
-                        The format will be presentations from 1200 to 1800 and mingling and networking with 
+                        The format will be presentations from 1200 to 1800 and mingling and networking with
                         food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
                     </p>
                     <p>

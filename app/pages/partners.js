@@ -24,7 +24,7 @@ const sectionThreeStyles = {
 export default () => (
     <div className='page partners'>
         <div className='page__header page__header--centered' style={headerStyle}>
-	       <h1 className='page__title partners__title'>Join us as a partner</h1>
+           <h1 className='page__title partners__title'>Join us as a partner</h1>
         </div>
 
         <div className='textblock'>
@@ -114,8 +114,8 @@ export default () => (
                     <h2 className='textblock__title'>Contact us today</h2>
                     <p>
                         JavaZone 2016 will be held in September, but please get in touch sooner rather
-    		            than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
-    		            will sell out early.
+                        than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
+                        will sell out early.
                     </p>
 
                     <p>

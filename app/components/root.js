@@ -23,7 +23,7 @@ const Root = React.createClass({
         return {
             loaded: false,
             style: {
-                background: 'none'  
+                background: 'none'
             }
         };
     },

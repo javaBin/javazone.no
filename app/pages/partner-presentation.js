@@ -51,7 +51,7 @@ export default () => (
 
         <div className='partner-presentation__slides'>
             {imageList.map((image, index) => (
-                <Image src={image} key={index} id={'slide-' + index}/>
+                <Image src={image} key={index} id={`slide-${index}`}/>
             ))}
         </div>
 
