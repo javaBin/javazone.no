@@ -20,7 +20,7 @@ const oslo = {
     location_link: 'http://www.teknologihuset.no',
     pax: 120,
     registration: [
-        {text: 'Register for Academy Trondheim', link: 'https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form'}
+        {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form'}
     ]
 };
 
