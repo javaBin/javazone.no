@@ -31,6 +31,7 @@
         "prefer-const": 2,
         "prefer-template": 2,
         "no-trailing-spaces": 2,
-        "no-mixed-spaces-and-tabs": 2
+        "no-mixed-spaces-and-tabs": 2,
+        "indent": 2
     }
 }

@@ -12,7 +12,7 @@ class RouteTransition extends React.Component {
     }
 
     componentWillReceiveProps(nextProps, nextContent) {
-          if (nextContent.location.patnname !== this.context.location.pathname)
+        if (nextContent.location.patnname !== this.context.location.pathname)
             this.setState({previousPathname: this.context.location.pathname});
     }
 
@@ -32,9 +32,9 @@ class RouteTransition extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-          if (this.state.previousPathname) {
+        if (this.state.previousPathname) {
             this.setState({previousPathname: null});
-          }
+        }
     }
 }
 
