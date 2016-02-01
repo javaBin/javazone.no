@@ -19,6 +19,10 @@
         height: @header-size-xs;
         position: relative;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         &--centered {
             background-position: center center;
         }
@@ -38,17 +42,33 @@
         @media (min-width: @size-xl) {
             height: @header-size-xl;
         }
+
+        &:before {
+            background: rgba(0, 0, 0, .1);
+            display: block;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
     }
 
     &__title {
         bottom: -10px;
         color: @white;
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 600;
         left: 20px;
         margin: 0;
-        position: absolute;
-        text-shadow: 0 0 1px @white;
+        // position: absolute;
+        // text-shadow: 0 0 1px @white;
+        text-shadow: 0 0 2px rgba(0, 0, 0, .5),
+                     0 0 5px rgba(0, 0, 0, .5),
+                     0 0 24px rgba(0, 0, 0, .5);
+        z-index: 2;
 
         @media (min-width: @size-s) {
             bottom: -20px;
