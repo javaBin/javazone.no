@@ -1,6 +1,11 @@
+@import '../variables';
+
 .format {
-    padding: 0 20px;
     text-align: center;
+
+    @media (min-width: @size-s) {
+        padding: 0 20px;
+    }
 
     &__title {
         font-size: 1.3rem;
