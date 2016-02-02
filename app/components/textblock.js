@@ -11,8 +11,8 @@ export const Column = (props) => {
         'textblock__column--centered': props.centered
     });
 
-    const textClass = className('textblock__test', {
-        'textblock__text textblock__text--jusfified': props.justified
+    const textClass = className('textblock__text', {
+        'textblock__text--justified': props.justified
     });
 
     return (
