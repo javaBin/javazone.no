@@ -1,5 +1,6 @@
 import header from '../assets/header_expo.jpg';
 import pdf from '../assets/partnermote/2016-partnermote1.pdf';
+import { Block, Column, ColumnHeading } from '../components/textblock';
 
 const images = require.context('../assets/partnermote', true, /\.jpeg$/);
 const imageList = images.keys().map(image => images(image));
@@ -55,17 +56,17 @@ export default () => (
             ))}
         </div>
 
-        <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
+        <Block>
+            <Column centered={true}>
                 <p>
-                    <a href={pdf} className='button'>Last ned som PDF</a>
+                    <a href={pdf} className='button button--green'>Last ned som PDF</a>
                 </p>
-            </div>
-        </div>
+            </Column>
+        </Block>
 
-        <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-                <h2 className='textblock__title'>Kontakt oss</h2>
+        <Block>
+            <Column centered={true}>
+                <ColumnHeading>Kontakt oss</ColumnHeading>
                 <p>
                     JavaZone 2016 holdes i september 2016, men ta kontakt så snart som mulig
                     om du har noen tanker og idéer allerede nå. Vi jobber hardt for at alle
@@ -75,7 +76,7 @@ export default () => (
                 <p>
                     Send oss en e-post på <a href='mailto:partner@java.no'>partner@java.no</a>, så tar vi kontakt.
                 </p>
-            </div>
-        </div>
+            </Column>
+        </Block>
     </div>
 );
