@@ -27,3 +27,7 @@ export const Column = (props) => {
 export const ColumnHeading = (props) => (
     <h2 className='textblock__title'>{props.children}</h2>
 );
+
+export const P = (props) => (
+    <p className='page__paragraph'>{props.children}</p>
+);
