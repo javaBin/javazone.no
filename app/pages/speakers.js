@@ -8,7 +8,7 @@ const headerStyle = {
 const Format = (props) => (
     <li className='presentation-formats__format format'>
         <h3 className='format__title'>{props.title}</h3>
-        <P className='format__length'>{props.length}</P>
+        <p className='format__length'>{props.length}</p>
         <P className='format__description'>{props.description}</P>
     </li>
 );
@@ -116,12 +116,25 @@ export default () => (
             </Column>
             <Column justified={true}>
                 <ColumnHeading>Get some inspiration</ColumnHeading>
-                <dl className='partners__happenings'>
-                    <dt className='partners__happening-title'>Speakers workshop</dt>
-                    <dd className='partners__happening-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at meetup.com/javaBin.</dd>
-                    <dt className='partners__happening-title'>Presentation skills workshop</dt>
-                    <dd className='partners__happening-description'>We plan to have a professional coach which will give you a lot of tips and tricks on how to hold an amazing presentation. This session will be held in August, and all accepted speakers will be invited.</dd>
+                <dl className='speakers__inspiration'>
+                    <dt className='speakers__inspiration-title'>Speakers workshop</dt>
+                    <dd className='speakers__inspiration-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at meetup.com/javaBin.</dd>
+                    <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
+                    <dd className='speakers__inspiration-description'>We plan to have a professional coach which will give you a lot of tips and tricks on how to hold an amazing presentation. This session will be held in August, and all accepted speakers will be invited.</dd>
                 </dl>
+            </Column>
+        </Block>
+
+        <Block>
+            <Column centered={true}>
+                <ColumnHeading>Dates & Deadlines</ColumnHeading>
+                <p>The good, old timeline</p>
+            </Column>
+        </Block>
+
+        <Block>
+            <Column>
+                <ColumnHeading>What’s in it for me?</ColumnHeading>
             </Column>
         </Block>
     </div>
