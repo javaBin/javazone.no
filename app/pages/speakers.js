@@ -52,7 +52,7 @@ export default () => (
                     of presentations and (more) workshops. Last year's event was
                     a great success with more than 2500 attendees enjoying 150
                     talks covering a wide range of topics.  Speakers include both
-                    internationally known names and home grown Norwegian talent. 
+                    internationally known names and home grown Norwegian talent.
                 </p>
             </Column>
             <Column justified={true}>
