@@ -135,6 +135,32 @@ export default () => (
         <Block>
             <Column>
                 <ColumnHeading>What’s in it for me?</ColumnHeading>
+                <dl className='speakers__accepted'>
+                    <dt className='speakers__accepted-title'>Accepted presentations and workshops</dt>
+                    <dd className='speakers__accepted-descriptin'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 8th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
+                    <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
+                    <dd className='speakers__accepted-descriptin'>You are invited to the speakers' dinner, held on September 8th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</dd>
+                    <dt className='speakers__accepted-title'>Monetary policy</dt>
+                    <dd className='speakers__accepted-descriptin'>Please see our monetary policy if you have any questions regarding coverage of other expenses.</dd>
+                </dl>
+            </Column>
+            <Column>
+                <ColumnHeading>Important principles</ColumnHeading>
+                <P>
+                    JavaZone is proud to be an independent and community-driven
+                    conference. It is organized by javaBin, the idealistic and
+                    non-profit Norwegian Java User Group. This means that we
+                    have three important principles for selecting talks.
+                </P>
+                <ul className='speakers__principles'>
+                    <li className='speakers__principle'>We do not sell speaker slots</li>
+                    <li className='speakers__principle'>We do not accept sales pitches masked as presentations</li>
+                    <li className='speakers__principle'>We do not differentiate between speakers from partners and independent speakers</li>
+                </ul>
+                <P>
+                    If your talk adheres to these very important principles,
+                    you are more than welcome to submit it!
+                </P>
             </Column>
         </Block>
     </div>
