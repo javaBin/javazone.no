@@ -1,5 +1,6 @@
 import header from '../assets/speakers.jpg';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
+import { Link } from 'react-router';
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
@@ -34,11 +35,11 @@ const workshops = {
 export default () => (
     <div className='page speakers'>
         <div className='page__header page__header--centered' style={headerStyle}>
-           <h1 className='page__title partners__title'>Call for Proposals</h1>
+           <h1 className='page__title'>Call for Proposals</h1>
         </div>
 
         <Block>
-            <Column justified={true}>
+            <Column justify={true}>
                 <ColumnHeading>JavaZone</ColumnHeading>
                 <P>
                     JavaZone takes place in Oslo, Norway, on September 7th-8th
@@ -55,7 +56,7 @@ export default () => (
                     internationally known names and home grown Norwegian talent.
                 </P>
             </Column>
-            <Column justified={true}>
+            <Column justify={true}>
                 <ColumnHeading>&nbsp;</ColumnHeading>
                 <P>
                     Over the last decade JavaZone has grown to become one of
@@ -76,7 +77,7 @@ export default () => (
         </Block>
 
         <Block>
-            <Column centered={true}>
+            <Column center={true}>
                 <ColumnHeading>Formats and Duration</ColumnHeading>
                 <P>
                     You should think about which format your talk will work
@@ -99,7 +100,7 @@ export default () => (
         </Block>
 
         <Block>
-            <Column justified={true}>
+            <Column justify={true}>
                 <ColumnHeading>Technical Level</ColumnHeading>
                 <P>
                     The audience at JavaZone mostly consists of software
@@ -114,7 +115,7 @@ export default () => (
                     to perform live coding, please state that as well!
                 </P>
             </Column>
-            <Column justified={true}>
+            <Column justify={true}>
                 <ColumnHeading>Get some inspiration</ColumnHeading>
                 <dl className='speakers__inspiration'>
                     <dt className='speakers__inspiration-title'>Speakers workshop</dt>
@@ -126,7 +127,7 @@ export default () => (
         </Block>
 
         <Block>
-            <Column centered={true}>
+            <Column center={true}>
                 <ColumnHeading>Dates & Deadlines</ColumnHeading>
                 <p>The good, old timeline</p>
             </Column>
@@ -141,7 +142,7 @@ export default () => (
                     <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
                     <dd className='speakers__accepted-descriptin'>You are invited to the speakers' dinner, held on September 8th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</dd>
                     <dt className='speakers__accepted-title'>Monetary policy</dt>
-                    <dd className='speakers__accepted-descriptin'>Please see our monetary policy if you have any questions regarding coverage of other expenses.</dd>
+                    <dd className='speakers__accepted-descriptin'>Please see our <Link to='monetary-policy' className='page__link'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                 </dl>
             </Column>
             <Column>
