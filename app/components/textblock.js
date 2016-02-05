@@ -8,11 +8,11 @@ export const Block = (props) => (
 
 export const Column = (props) => {
     const colClass = className('textblock__column', {
-        'textblock__column--centered': props.centered
+        'textblock__column--centered': props.center
     });
 
     const textClass = className('textblock__text', {
-        'textblock__text--justified': props.justified
+        'textblock__text--justified': props.justify
     });
 
     return (
