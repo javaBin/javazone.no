@@ -1,6 +1,7 @@
 import header from '../assets/speakers.jpg';
 import { Page, PageHeading } from '../components/page';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
+import { Dl, Dt, Dd } from '../components/definition-list';
 
 export default () => (
     <Page name='monetary-policy'>
@@ -46,34 +47,34 @@ export default () => (
         <Block>
             <Column>
                 <ColumnHeading>Frequently asked questions</ColumnHeading>
-                <dl>
-                    <dt>Refundable items</dt>
-                    <dd>
+                <Dl>
+                    <Dt>Refundable items</Dt>
+                    <Dd>
                         Speakers can apply for refunds on the hotel you live in
                         during the conference, and for travel costs. Please
                         note that under no circumstances do we pay anyone to
                         speak.
-                    </dd>
-                    <dt>Approval for refunds</dt>
-                    <dd>
+                    </Dd>
+                    <Dt>Approval for refunds</Dt>
+                    <Dd>
                         All costs must be approved by e-mail from
                         javazone@java.no. We prefer that you find reasonably
                         priced airlines and hotels.
-                    </dd>
-                    <dt>No up-front refunds</dt>
-                    <dd>
+                    </Dd>
+                    <Dt>No up-front refunds</Dt>
+                    <Dd>
                         Refunds are made after the conference, given the
                         approval. Unfortunately, we do not have the capacity
                         to provide a refund up-front.
-                    </dd>
-                    <dt>Time to refund</dt>
-                    <dd>
+                    </Dd>
+                    <Dt>Time to refund</Dt>
+                    <Dd>
                         Our goal is that all refunds are completed within two
                         weeks after the conference, given that we have received
                         the proper details. If you have any further questions,
                         please don’t hesitate to contact us on javazone@java.no.
-                    </dd>
-                </dl>
+                    </Dd>
+                </Dl>
             </Column>
         </Block>
         <Block>
