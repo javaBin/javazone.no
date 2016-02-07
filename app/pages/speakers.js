@@ -17,7 +17,7 @@ const Format = (props) => (
 const lightnings = {
     title: 'Lightning talks',
     length: '10 or 20 minutes',
-    description: 'Are you presenting a great new idea, or want to give the audience a teaser for a cool topic? Then you should strongly consider the lightning format.  Note that the 10-20 minute time limit is strictly enforced!'
+    description: 'Are you presenting a great new idea, or want to give the audience a teaser for a cool topic? Then you should strongly consider the lightning format.  Note that the 10/20 minute time limit is strictly enforced!'
 };
 
 const presentations = {
@@ -60,14 +60,15 @@ export default () => (
                 <ColumnHeading>&nbsp;</ColumnHeading>
                 <P>
                     Over the last decade JavaZone has grown to become one of
-                    the most important Java events in Europe! You can see for
+                    the most important Java events in Europe. You can see for
                     yourself – videos from previous years are available for
-                    free at Vimeo, and the full program from JavaZone 2015
-                    can be found at last year’s web page.
+                    free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and
+                    the full program from JavaZone 2015 can be found
+                    at <a href='http://2015.javazone.no/program.html'>last year’s web page</a>.
                 </P>
                 <P>
                     We can brag as much as we want, but JavaZone would be
-                    nothing without all the great speakers! And that is why
+                    nothing without all the great speakers. And that is why
                     we need your help to make sure that JavaZone 2016 will be
                     at least as awesome as the earlier events. If you think you
                     have something interesting to share, please submit your
@@ -127,7 +128,7 @@ export default () => (
                 <ColumnHeading>Get some inspiration</ColumnHeading>
                 <dl className='speakers__inspiration'>
                     <dt className='speakers__inspiration-title'>Speakers workshop</dt>
-                    <dd className='speakers__inspiration-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at meetup.com/javaBin.</dd>
+                    <dd className='speakers__inspiration-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at <a href='http://meetup.com/javaBin'>meetup.com/javaBin</a>.</dd>
                     <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
                     <dd className='speakers__inspiration-description'>We plan to have a professional coach which will give you a lot of tips and tricks on how to hold an amazing presentation. This session will be held in August, and all accepted speakers will be invited.</dd>
                 </dl>
