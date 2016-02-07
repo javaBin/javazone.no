@@ -2,6 +2,7 @@ import header from '../assets/speakers.jpg';
 import { Page, PageHeading } from '../components/page';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
+import { List, ListItem } from '../components/list';
 
 export default () => (
     <Page name='monetary-policy'>
@@ -83,19 +84,22 @@ export default () => (
                 <P>
                     Before the conference, you have to apply for reimbursements
                 </P>
-                <ul>
-                    <li>Copy the refund application</li>
-                    <li>Fill in the details</li>
-                    <li>Send in your application by email, to <a href='mailto:javazone@java.no'>javazone@java.no</a></li>
-                </ul>
+                <List>
+                    <ListItem>Copy the refund application</ListItem>
+                    <ListItem>Fill in the details</ListItem>
+                    <ListItem>Send in your application by email, to <a href='mailto:javazone@java.no'>javazone@java.no</a></ListItem>
+                </List>
+            </Column>
+            <Column>
+                <ColumnHeading>&nbsp;</ColumnHeading>
                 <P>
                     After the conference, send an invoice to javazone@java.no including the following bank information
                 </P>
-                <ul>
-                    <li>The name of your bank</li>
-                    <li>Your IBAN account number</li>
-                    <li>The BIC/Swift code</li>
-                </ul>
+                <List>
+                    <ListItem>The name of your bank</ListItem>
+                    <ListItem>Your IBAN account number</ListItem>
+                    <ListItem>The BIC/Swift code</ListItem>
+                </List>
             </Column>
         </Block>
 
