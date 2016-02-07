@@ -20,4 +20,4 @@ export const PageHeading = (props) => {
             <h1 className='page__title'>{props.children}</h1>
         </div>
     );
-}
+};

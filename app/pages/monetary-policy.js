@@ -7,7 +7,7 @@ import { List, ListItem } from '../components/list';
 export default () => (
     <Page name='monetary-policy'>
         <PageHeading background={header}>JavaZone Monetary Policy</PageHeading>
-        
+
         <Block>
             <Column justify={true}>
                 <P>
