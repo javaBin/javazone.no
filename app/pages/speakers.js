@@ -40,7 +40,7 @@ export default () => (
 
         <Block>
             <Column justify={true}>
-                <ColumnHeading>JavaZone</ColumnHeading>
+                <ColumnHeading>What is JavaZone?</ColumnHeading>
                 <P>
                     JavaZone takes place in Oslo, Norway, on September 7th-8th
                     2015. The conference offers a combination of technical talks
