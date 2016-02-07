@@ -50,7 +50,7 @@ export default () => (
                 <P>
                     JavaZone 2016 will be the 15th consecutive JavaZone conference,
                     and will consist of a day of workshops followed by two days
-                    of presentations and (more) workshops. Last year's event was
+                    of presentations and (more) workshops. Last year’s event was
                     a great success with more than 2500 attendees enjoying 150
                     talks covering a wide range of topics.  Speakers include both
                     internationally known names and home grown Norwegian talent.
@@ -63,7 +63,7 @@ export default () => (
                     the most important Java events in Europe! You can see for
                     yourself – videos from previous years are available for
                     free at Vimeo, and the full program from JavaZone 2015
-                    can be found at last year's web page.
+                    can be found at last year’s web page.
                 </P>
                 <P>
                     We can brag as much as we want, but JavaZone would be
