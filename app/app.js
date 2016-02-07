@@ -6,6 +6,7 @@ import Router from 'react-router';
 import {applyMiddleware, compose, createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {syncHistory, routeReducer} from 'react-router-redux';
+import { workshops } from './reducers';
 import routes from './routes';
 import browserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'scroll-behavior/lib/useSimpleScroll';
@@ -14,6 +15,7 @@ import pageview from './analytics';
 const history = useScroll(browserHistory)();
 const middleware = syncHistory(history);
 const reducer = combineReducers({
+    workshops: workshops,
     routing: routeReducer
 });
 const finalCreateStore = compose(
