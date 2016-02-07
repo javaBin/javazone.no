@@ -173,5 +173,13 @@ export default () => (
                 </P>
             </Column>
         </Block>
+
+        <Block>
+            <Column center={true}>
+                <P>
+                    <a href='http://javazone.no/submitit' className='button button--green'>Submit your talk today!</a>
+                </P>
+            </Column>
+        </Block>
     </div>
 );
