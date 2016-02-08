@@ -68,6 +68,9 @@ const Nav = React.createClass({
                             <Link to='partners' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Partners</Link>
                         </li>
                         <li className='navigation__item'>
+                            <Link to='speakers' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Speakers</Link>
+                        </li>
+                        <li className='navigation__item'>
                             <Link to='academy' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Academy</Link>
                         </li>
                     </ul>
