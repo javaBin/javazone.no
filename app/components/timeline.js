@@ -59,19 +59,20 @@ const data = [
     {
         month: 'Sep',
         events: [
-        {
-            title: 'Speakers dinner',
-            date: 'September 6th',
-            location: '-20px',
-            align: 'left'
-        }, {
-            title: 'JavaZone 2016!',
-            date: 'September 7th',
-            location: '-10px',
-            align: 'right'
-        }]
+            {
+                title: 'Speakers dinner',
+                date: 'September 6th',
+                location: '-20px',
+                align: 'left'
+            }, {
+                title: 'JavaZone 2016!',
+                date: 'September 7th',
+                location: '-10px',
+                align: 'right'
+            }
+        ]
     }
-]
+];
 
 export default () => (
     <ul className='timeline'>
@@ -82,7 +83,7 @@ export default () => (
             </div>
             {
                 month.events.map((event, ek) => (
-                <div className={'timeline__event timeline__event--' + event.align} key={ek} style={{top: event.location}}>
+                <div className={`timeline__event timeline__event--${event.align}`} key={ek} style={{top: event.location}}>
                     <div className='timeline__event-title'>
                         {event.title}
                     </div>
