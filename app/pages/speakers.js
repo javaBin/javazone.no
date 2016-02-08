@@ -36,7 +36,7 @@ const workshops = {
 export default () => (
     <div className='page speakers'>
         <div className='page__header page__header--centered' style={headerStyle}>
-           <h1 className='page__title'>Call for Proposals</h1>
+           <h1 className='page__title'>Call for Speakers</h1>
         </div>
 
         <Block>

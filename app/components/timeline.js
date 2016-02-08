@@ -8,7 +8,7 @@ const data = [
         events: [{
             title: 'Call for speakers',
             date: 'February 12th',
-            location: '-5px',
+            location: '0px',
             align: 'right'
         }]
     },
@@ -24,9 +24,9 @@ const data = [
     {
         month: 'Apr',
         events: [{
-            title: 'CfP closes',
+            title: 'Call for speakers closes',
             date: 'April 18th',
-            location: '40px',
+            location: '25px',
             align: 'right'
         }]
     },
