@@ -39,6 +39,13 @@ const Nav = React.createClass({
     },
 
     render() {
+        const navigationClass = className('javazone__navigation', {
+            'javazone__navigation--toggled': this.state.toggled
+        });
+
+        const navClass = className('navigation', {
+            'navigation--toggled': this.state.toggled
+        });
 
         const menuClass = className('navigation__items', {
             'navigation__items--toggled': this.state.toggled,
@@ -50,8 +57,8 @@ const Nav = React.createClass({
         });
 
         return (
-            <nav className="javazone__navigation">
-                <div className="navigation">
+            <nav className={navigationClass}>
+                <div className={navClass}>
                     <IndexLink to='/'>
                         <img src={logo} className="navigation__logo"/>
                     </IndexLink>
