@@ -1,4 +1,5 @@
 import header from '../assets/speakers.jpg';
+import Timeline from '../components/timeline';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
 import { Link } from 'react-router';
 
@@ -138,7 +139,7 @@ export default () => (
         <Block>
             <Column center={true}>
                 <ColumnHeading>Dates & Deadlines</ColumnHeading>
-                <p>The good, old timeline</p>
+                <Timeline />
             </Column>
         </Block>
 
