@@ -24,7 +24,7 @@ const lightnings = {
 const presentations = {
     title: 'Presentations',
     length: '45 or 60 minutes',
-    description: 'Presentations at JavaZone have a length of 60 minutes. This gives you room to elaborate on an idea, and preferably spend a little time at the end taking questions.'
+    description: 'Presentations at JavaZone have a length of 45 to 60 minutes, including time for questions. This gives you room to both elaborate on an idea and interact with your audience.'
 };
 
 const workshops = {
