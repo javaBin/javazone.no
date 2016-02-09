@@ -3,6 +3,12 @@ import className from 'className';
 import {Link, IndexLink} from 'react-router';
 import logo from '../assets/logo_menu.svg';
 
+const MenuItem = (props) => (
+    <li className='navigation__item'>
+        <Link to={props.to} className='navigation__link' activeClassName='navigation__link--active' onClick={props.click}>{props.title}</Link>
+    </li>
+);
+
 const Nav = React.createClass({
 
     getInitialState() {
@@ -71,18 +77,8 @@ const Nav = React.createClass({
                         <li className='navigation__item'>
                             <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
                         </li>
-                        <li className='navigation__item'>
-                            <Link to='speakers' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Speakers</Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to='tickets' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Tickets</Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to='partners' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Partners</Link>
-                        </li>
-                        <li className='navigation__item'>
-                            <Link to='academy' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Academy</Link>
-                        </li>
+                        <MenuItem to={'partners'} title='Partners' click={this.toggleMenu} />
+                        <MenuItem to={'academy'} title='Academy' click={this.toggleMenu} />
                     </ul>
                 </div>
             </nav>
