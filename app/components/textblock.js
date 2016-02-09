@@ -33,7 +33,8 @@ export const Columns = (props) => (
 
 export const Column = (props) => {
     const colClass = className('textblock__column', {
-        'textblock__column--centered': props.center
+        'textblock__column--centered': props.center,
+        'textblock__column--dark': props.dark
     });
 
     const textClass = className('textblock__text', {
