@@ -50,6 +50,10 @@ export const Column = (props) => {
     );
 };
 
+export const BackgroundImage = (props) => (
+    <div className='background-image' style={{backgroundImage: `url(${props.src})`}}></div>
+);
+
 export const ColumnHeading = (props) => (
     <h2 className='textblock__title'>{props.children}</h2>
 );
