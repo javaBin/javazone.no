@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import header from '../assets/academy.jpg';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
@@ -19,6 +20,7 @@ const oslo = {
     location: 'Teknologihuset',
     location_link: 'http://www.teknologihuset.no',
     pax: 120,
+    program: 'academy-oslo',
     registration: [
         {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form'}
     ]
@@ -31,6 +33,7 @@ const bergen = {
     location: 'Det Akademiske Kvarter',
     location_link: 'http://kvarteret.no/',
     pax: 120,
+    program: 'academy-bergen',
     registration: [
         {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form'},
     ]
@@ -43,13 +46,14 @@ const trondheim = {
     location: 'Studentersamfundet',
     location_link: 'https://www.samfundet.no/',
     pax: 200,
+    program: 'academy-trondheim',
     registration: [
         {text: 'Register @ Abakus', link: 'https://abakus.no/event/1693-javazone-academy-2016/'},
         {text: 'Register @ Online', link: 'https://online.ntnu.no/'}
     ]
 };
 
-const Location = ({image, city, date, location, location_link, pax, registration}) => (
+const Location = ({image, city, date, location, location_link, pax, program, registration}) => (
     <li className='academy__location location'>
         <div className='location__image' style={{backgroundImage: `url('${image}')`}}>
             <h3 className='location__title'>{city}</h3>
@@ -59,6 +63,7 @@ const Location = ({image, city, date, location, location_link, pax, registration
             <a href={location_link}>{location}</a>
         </p>
         <p className='location__pax'>{pax} students</p>
+        <Link to={program} className='button button--green location__program'>See the program!</Link>
         {registration.map((reg, key) => (
             <p key={key}>
                 <a className="button button--red" href={reg.link}>{reg.text}</a>
