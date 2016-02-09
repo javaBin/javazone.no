@@ -52,7 +52,7 @@ export default () => (
                             <div className='program__hours'>1530 - 1630</div>
                             <div className='program__event'>
                                 <div className='program__title'>How to make your code sustainable - what they don’t teach you</div>
-                                <div className='programm__speaker'>Christin Gorma</div>
+                                <div className='programm__speaker'>Christin Gorman</div>
                             </div>
                         </li>
                         <li className='program__slot'>
