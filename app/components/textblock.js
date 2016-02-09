@@ -2,7 +2,9 @@ import className from 'className';
 
 export const Block = (props) => {
 
-    const blockClass = className('textblock', {
+    const blockClass = className(
+        'textblock',
+        props.className, {
         'textblock--block': props.block
     });
 
