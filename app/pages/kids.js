@@ -93,7 +93,7 @@ const Kids = React.createClass({
                 <PageHeading background={header}>JavaZone Kids</PageHeading>
 
                 <Block block={true}>
-                    <BlockHeading center={true}>A tate of JavaZone for young, aspiring developers</BlockHeading>
+                    <BlockHeading center={true}>A taste of JavaZone for young, aspiring developers</BlockHeading>
                     <Columns>
                         <Column justify={true}>
                             <P>
