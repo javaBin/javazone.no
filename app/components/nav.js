@@ -72,10 +72,13 @@ const Nav = React.createClass({
                             <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
                         </li>
                         <li className='navigation__item'>
-                            <Link to='partners' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Partners</Link>
+                            <Link to='speakers' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Speakers</Link>
                         </li>
                         <li className='navigation__item'>
-                            <Link to='speakers' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Speakers</Link>
+                            <Link to='tickets' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Tickets</Link>
+                        </li>
+                        <li className='navigation__item'>
+                            <Link to='partners' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Partners</Link>
                         </li>
                         <li className='navigation__item'>
                             <Link to='academy' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Academy</Link>
