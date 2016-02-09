@@ -150,7 +150,7 @@ export default () => (
                     <dt className='speakers__accepted-title'>Accepted presentations and workshops</dt>
                     <dd className='speakers__accepted-description'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 8th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
                     <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
-                    <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 8th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</dd>
+                    <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 8th, and will also be invited to apply for a place on our JourneyZone. You have to provide your own ticket to JavaZone.</dd>
                     <dt className='speakers__accepted-title'>Monetary policy</dt>
                     <dd className='speakers__accepted-description'>Please see our <Link to='monetary-policy' className='page__link'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                 </dl>
