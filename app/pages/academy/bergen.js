@@ -1,12 +1,33 @@
 import { Page, PageHeading } from '../../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../../components/textblock';
 import header from '../../assets/kids/header.jpg';
+import accenture from '../../assets/academy/accenture.jpg';
+
+const sponsors = [accenture];
 
 export default () => (
     <Page name='bergen'>
         <PageHeading background={header}>Academy Bergen</PageHeading>
         <Block block={true}>
-            <BlockHeading center={true}>Program</BlockHeading>
+            <BlockHeading center={true}>Academy Bergen – February 17th</BlockHeading>
+            <Columns>
+                <Column center={true}>
+                    Welcome to JavaZone Academy Bergen! It will be a day packed
+                    full of great talks, food and mingling. See the final
+                    program below, and start getting excited.
+                </Column>
+            </Columns>
+        </Block>
+
+        <ul className='academy__sponsors academy__sponsors--small'>
+            {sponsors.map((sponsor, key) => (
+                <li key={key} className='academy__sponsor'>
+                    <img className='academy__sponsor-image' src={sponsor} />
+                </li>
+            ))}
+        </ul>
+
+        <Block block={true}>
             <Columns>
                 <Column>
                     <ul className='program'>
