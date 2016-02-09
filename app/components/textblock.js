@@ -1,7 +1,30 @@
 import className from 'className';
 
-export const Block = (props) => (
-    <div className='textblock'>
+export const Block = (props) => {
+
+    const blockClass = className('textblock', {
+        'textblock--block': props.block
+    });
+
+    return (
+        <div className={blockClass}>
+            {props.children}
+        </div>
+    );
+};
+
+export const BlockHeading = (props) => {
+    const headingClass = className('textblock__header',{
+        'textblock__header--centered': props.center
+    });
+
+    return (
+        <h2 className={headingClass}>{props.children}</h2>
+    );
+};
+
+export const Columns = (props) => (
+    <div className='textblock__columns'>
         {props.children}
     </div>
 );

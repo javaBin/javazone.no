@@ -2,8 +2,33 @@
 
 .textblock {
 
+    // TODO: needed for a rewrite, don't have time to fix right now
+    &--block {
+        display: block !important;
+    }
+
     @media (min-width: @size-s) {
         display: flex;
+    }
+
+    &__header {
+        font-size: 1.8rem;
+        margin-top: 0;
+        padding: 20px 20px 0 20px;
+
+        &--centered {
+            text-align: center;
+        }
+
+        @media (min-width: @size-s) {
+            padding: 40px 40px 0 40px;
+        }
+    }
+
+    &__columns {
+        @media (min-width: @size-s) {
+            display: flex;
+        }
     }
 
     &__column {
@@ -55,6 +80,11 @@
         &--justified {
             text-align: justify;
         }
+    }
+
+    // TODO: The uglies selector ever? Needs to go away..
+    &__header + .textblock__columns > .textblock__column > .textblock__text {
+        padding-top: 0;
     }
 
     &__title {
