@@ -143,7 +143,7 @@ const Kids = React.createClass({
                                     Vi har et begrenset antall plasser (totalt
                                     plass til 82 barn), derfor er det viktig at
                                     du melder dere på arrangementet.
-                                    Påmeldingen åpner fredag 7. august kl. 12.00.
+                                    Påmeldingen åpner fredag 12.februar kl. 12.00.
                                 </Dd>
                                 <Dt>Forberedelser</Dt>
                                 <Dd>
