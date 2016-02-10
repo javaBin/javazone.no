@@ -95,6 +95,9 @@ export default () => (
 
         <Block>
             <Column center={true}>
+                <div className='speakers__formats'>
+                    <span className='icon-clock'></span>
+                </div>
                 <ColumnHeading>Formats and Duration</ColumnHeading>
                 <P>
                     You should think about which format your talk will work
