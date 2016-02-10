@@ -45,7 +45,7 @@ export default () => (
                 <ColumnHeading>Special ticket types</ColumnHeading>
                 <dl className='speakers__accepted'>
                     <dt className='speakers__accepted-title'>Working for one of our partners?</dt>
-                    <dd className='speakers__accepted-description'>Partners may buy tickets at reduced prices until July 1st. <Link to='partners'>Read more about partnerships</Link> of JavaZone and contact us at partner@java.no to buy tickets.</dd>
+                    <dd className='speakers__accepted-description'>Partners may buy tickets at reduced prices until July 1st. <Link to='partners'>Read more about partnerships</Link> of JavaZone and contact us at <a href='mailto:partner@java.no'>partner@java.no</a> to buy tickets.</dd>
                     <dt className='speakers__accepted-title'>Need more than one ticket?</dt>
                     <dd className='speakers__accepted-description'>Multiple tickets might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into our webshop.</dd>
                     <dt className='speakers__accepted-title'>Need an invoice?</dt>

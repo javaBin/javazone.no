@@ -4,6 +4,7 @@ import imageTwo from '../assets/partners/sal1.jpg';
 import imageThree from '../assets/partners/overflow.jpg';
 import header from '../assets/header_expo.jpg';
 import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
+import { P } from '../components/textblock';
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
@@ -31,13 +32,13 @@ export default () => (
             <div className='textblock__column textblock__column--centered'>
                 <div className='textblock__text'>
                     <h2 className='textblock__title'>What is JavaZone?</h2>
-                    <p>
+                    <P>
                         JavaZone is one of the largest community driven conferences in the world.
                         Every year, more than 2.500 developers meet up to learn and mingle in Oslo.
                         <br /><br />
                         JavaZone is made possible with the help of our more than 40 partners.
                         Read on to learn what being a partner really means, and how you can become one.
-                    </p>
+                    </P>
                 </div>
             </div>
         </div>
@@ -112,22 +113,22 @@ export default () => (
             <div className='textblock__column textblock__column--centered'>
                 <div className='textblock__text textblock__text--fill'>
                     <h2 className='textblock__title'>Contact us today</h2>
-                    <p>
+                    <P>
                         JavaZone 2016 will be held in September, but please get in touch sooner rather
                         than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
                         will sell out early.
-                    </p>
+                    </P>
 
-                    <p>
+                    <P>
                         Contact us at <a className='page__link' href='mailto:partner@java.no'>partner@java.no</a> today,
-                        and we'll work with you to create the best possible partnership for you.
-                    </p>
+                        and we’ll work with you to create the best possible partnership for you.
+                    </P>
 
-                    <p className='partners__prospect'>
+                    <P className='partners__prospect'>
                         <a href={partnerProspect} className='button button--green'>Download our Partnership Prospectus</a>
-                    </p>
+                    </P>
 
-                    <p>
+                    <P>
                         <span className='textblock__sub-title'>A note about partner meetings</span>
                         <br />
                         We arrange regular partner meetings for both existing and new partners,
@@ -135,7 +136,7 @@ export default () => (
                         our last partner meeting in Desember for a status update. English version coming soon.
                         <br />
                         <Link to='partner-presentation' className='page__link'>Slides in Norwegian</Link>
-                    </p>
+                    </P>
                 </div>
             </div>
         </div>
