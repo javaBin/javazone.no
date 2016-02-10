@@ -118,14 +118,8 @@ export default () => (
                         food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
                     </p>
                     <p>
-                        The detailed program and speakers for each location will be revealed closer to the event, but this is a sneak peak of some of the speakers who will attend JavaZone Academy.
+                        See the exact program for your location with the links above.
                     </p>
-                    <ul className="academy__speaker-list">
-                        <li>Lotte Johansen</li>
-                        <li>Christin Gorman</li>
-                        <li>Christian Johansen</li>
-                        <li>Rafael Winterhalter</li>
-                    </ul>
                 </div>
             </div>
             <div className='textblock__column textblock__column--centered'>
