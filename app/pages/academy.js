@@ -49,7 +49,7 @@ const trondheim = {
     program: 'academy-trondheim',
     registration: [
         {text: 'Register @ Abakus', link: 'https://abakus.no/event/1693-javazone-academy-2016/'},
-        {text: 'Register @ Online', link: 'https://online.ntnu.no/'}
+        {text: 'Register @ Online', link: 'https://online.ntnu.no/events/254/javazone-academy-2016/'}
     ]
 };
 
