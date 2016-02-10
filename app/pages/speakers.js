@@ -73,7 +73,7 @@ export default () => (
                     we need your help to make sure that JavaZone 2016 will be
                     at least as awesome as the earlier events. If you think you
                     have something interesting to share, please submit your
-                    talk or workshop by the 18th of April, 2016.
+                    talk or workshop by April 18th 2016.
                 </P>
             </Column>
         </Block>
@@ -129,9 +129,9 @@ export default () => (
                 <ColumnHeading>Get some inspiration</ColumnHeading>
                 <dl className='speakers__inspiration'>
                     <dt className='speakers__inspiration-title'>Speakers workshop</dt>
-                    <dd className='speakers__inspiration-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at <a href='http://meetup.com/javaBin'>meetup.com/javaBin</a>.</dd>
+                    <dd className='speakers__inspiration-description'>We will arrange a workshop for all speakers who consider submitting a talk to JavaZone. This workshop will be held at Teknologihuset March 1st at 17.00. More info at <a href='http://www.meetup.com/javaBin/events/228728923/'>meetup.com/javaBin</a>.</dd>
                     <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
-                    <dd className='speakers__inspiration-description'>We plan to have a professional coach which will give you a lot of tips and tricks on how to hold an amazing presentation. This session will be held in August, and all accepted speakers will be invited.</dd>
+                    <dd className='speakers__inspiration-description'>We plan to have a professional coach which will give you a lot of tips and tricks on how to hold an amazing presentation. This session will be held in August, and all accepted speakers will be invited. More information coming soon.</dd>
                 </dl>
             </Column>
         </Block>
@@ -148,9 +148,9 @@ export default () => (
                 <ColumnHeading>What’s in it for me?</ColumnHeading>
                 <dl className='speakers__accepted'>
                     <dt className='speakers__accepted-title'>Accepted presentations and workshops</dt>
-                    <dd className='speakers__accepted-description'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 8th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
+                    <dd className='speakers__accepted-description'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 6th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
                     <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
-                    <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 8th, and will also be invited to apply for a place on our JourneyZone. You have to provide your own ticket to JavaZone.</dd>
+                    <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 6th, and will also be invited to apply for a place on our JourneyZone. You have to provide your own ticket to JavaZone.</dd>
                     <dt className='speakers__accepted-title'>Monetary policy</dt>
                     <dd className='speakers__accepted-description'>Please see our <Link to='monetary-policy' className='page__link'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                 </dl>
