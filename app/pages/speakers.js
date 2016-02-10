@@ -1,6 +1,6 @@
 import header from '../assets/speakers.jpg';
 import Timeline from '../components/timeline';
-import { Block, Column, ColumnHeading, P } from '../components/textblock';
+import { Block, BlockHeading, Columns, Column, ColumnHeading, P } from '../components/textblock';
 import { Link } from 'react-router';
 
 const headerStyle = {
@@ -43,49 +43,52 @@ export default () => (
            <h1 className='page__title'>Call for Speakers</h1>
         </div>
 
-        <Block>
-            <Column justify={true}>
-                <ColumnHeading>What is JavaZone?</ColumnHeading>
-                <P>
-                    JavaZone takes place in Oslo, Norway, on September 7th-8th
-                    2015. The conference offers a combination of technical talks
-                    and workshops in an informal atmosphere with an expected
-                    attendance of more than 2500 highly skilled developers.
-                </P>
-                <P>
-                    JavaZone 2016 will be the 15th consecutive JavaZone conference,
-                    and will consist of a day of workshops followed by two days
-                    of presentations and (more) workshops. Last year’s event was
-                    a great success with more than 2500 attendees enjoying 150
-                    talks covering a wide range of topics.  Speakers include both
-                    internationally known names and home grown Norwegian talent.
-                </P>
-            </Column>
-            <Column justify={true}>
-                <ColumnHeading>&nbsp;</ColumnHeading>
-                <P>
-                    Over the last decade JavaZone has grown to become one of
-                    the most important Java events in Europe. You can see for
-                    yourself – videos from previous years are available for
-                    free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and
-                    the full program from JavaZone 2015 can be found
-                    at <a href='http://2015.javazone.no/program.html'>last year’s web page</a>.
-                </P>
-                <P>
-                    We can brag as much as we want, but JavaZone would be
-                    nothing without all the great speakers. And that is why
-                    we need your help to make sure that JavaZone 2016 will be
-                    at least as awesome as the earlier events. If you think you
-                    have something interesting to share, please submit your
-                    talk or workshop by April 18th 2016.
-                </P>
-            </Column>
+        <Block block={true}>
+            <BlockHeading center={true}>What is JavaZone?</BlockHeading>
+            <Columns>
+                <Column justify={true}>
+                    <P>
+                        JavaZone takes place in Oslo, Norway, on September 7th-8th
+                        2015. The conference offers a combination of technical talks
+                        and workshops in an informal atmosphere with an expected
+                        attendance of more than 2500 highly skilled developers.
+                    </P>
+                    <P>
+                        JavaZone 2016 will be the 15th consecutive JavaZone conference,
+                        and will consist of a day of workshops followed by two days
+                        of presentations and (more) workshops. Last year’s event was
+                        a great success with more than 2500 attendees enjoying 150
+                        talks covering a wide range of topics.  Speakers include both
+                        internationally known names and home grown Norwegian talent.
+                    </P>
+                </Column>
+                <Column justify={true}>
+                    <P>
+                        Over the last decade JavaZone has grown to become one of
+                        the most important Java events in Europe. You can see for
+                        yourself – videos from previous years are available for
+                        free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and
+                        the full program from JavaZone 2015 can be found
+                        at <a href='http://2015.javazone.no/program.html'>last year’s web page</a>.
+                    </P>
+                    <P>
+                        We can brag as much as we want, but JavaZone would be
+                        nothing without all the great speakers. And that is why
+                        we need your help to make sure that JavaZone 2016 will be
+                        at least as awesome as the earlier events. If you think you
+                        have something interesting to share, please submit your
+                        talk or workshop by April 18th 2016.
+                    </P>
+                </Column>
+            </Columns>
         </Block>
 
         <Block>
             <Column center={true}>
                 <P>
-                    <a href='http://javazone.no/submitit' className='button button--green'>Submit your talk today!</a>
+                    <a href='http://javazone.no/submitit' className='button button--green'>
+                        <span className='button__icon icon-check'></span> Submit your talk today!
+                    </a>
                 </P>
             </Column>
         </Block>
@@ -116,14 +119,14 @@ export default () => (
         <Block>
             <Column justify={true}>
                 <ColumnHeading>Technical Level</ColumnHeading>
-                <P>
+                <P justify={true}>
                     The audience at JavaZone mostly consists of software
                     developers and in general talks and workshops should
                     be technical enough that they include code (although
                     that is not a requirement). Talks purely related to
                     practices (agile etc.) are less likely to be accepted.
                 </P>
-                <P>
+                <P justify={true}>
                     When you submit your talk, you should indicate whether
                     there will be code in your slides or not. If you are going
                     to perform live coding, please state that as well!
@@ -159,7 +162,7 @@ export default () => (
                     <dd className='speakers__accepted-description'>Please see our <Link to='monetary-policy' className='page__link'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                 </dl>
             </Column>
-            <Column>
+            <Column justify={true}>
                 <ColumnHeading>Important principles</ColumnHeading>
                 <P>
                     JavaZone is proud to be an independent and community-driven
@@ -182,7 +185,18 @@ export default () => (
         <Block>
             <Column center={true}>
                 <P>
-                    <a href='http://javazone.no/submitit' className='button button--green'>Submit your talk today!</a>
+                    <a href='http://javazone.no/submitit' className='button button--green'>
+                        <span className='button__icon icon-check'></span>Submit your talk today!
+                    </a>
+                </P>
+            </Column>
+        </Block>
+
+        <Block block={true}>
+            <Column center={true}>
+                <ColumnHeading>We hope to see you at JavaZone 2016 – please feel free to spread the word to your local community</ColumnHeading>
+                <P className='speakers__regards'>
+                    Best regards,<br />the JavaZone Program Committee
                 </P>
             </Column>
         </Block>
