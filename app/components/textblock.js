@@ -67,5 +67,5 @@ export const P = (props) => {
         }
     );
 
-    return <p className={paragraphClass}>{props.children}</p>
+    return <p className={paragraphClass}>{props.children}</p>;
 };
