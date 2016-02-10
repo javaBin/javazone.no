@@ -34,7 +34,7 @@ const workshops = {
     icon: 'icon-screen-desktop',
     title: 'Workshops',
     length: '2 hours +',
-    description: 'We will continue the popular workshop concept, both half-day and whole-day workshops on Tuesday September 8th and shorter 2-hour workshops during the conference. The format for the workshops is in-depth, hands-on and interactive.'
+    description: 'We will continue the popular workshop concept, both half-day and whole-day workshops on Tuesday September 6th and shorter 2-hour workshops during the conference. The format for the workshops is in-depth, hands-on and interactive.'
 };
 
 export default () => (
