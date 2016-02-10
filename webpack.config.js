@@ -5,6 +5,7 @@ var path = require('path');
 
 var exclude = /node_modules/;
 var output = path.join(__dirname, 'dist');
+var node_env = process.env.NODE_ENV || 'development';
 
 module.exports = {
     entry: './app/app.js',
@@ -26,6 +27,7 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.DefinePlugin({'process.env.NODE_ENV': `"${node_env}"`}),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('app.css'),
         new HtmlWebpackPlugin({
