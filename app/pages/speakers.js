@@ -197,7 +197,7 @@ export default () => (
 
         <Block block={true}>
             <Column center={true}>
-                <ColumnHeading>We hope to see you at JavaZone 2016 – please feel free to spread the word to your local community</ColumnHeading>
+                <ColumnHeading>We hope to see you at JavaZone 2016 – please feel free to spread the word to your local community!</ColumnHeading>
                 <P className='speakers__regards'>
                     Best regards,<br />the JavaZone Program Committee
                 </P>
