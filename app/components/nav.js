@@ -77,10 +77,11 @@ const Nav = React.createClass({
                         <li className='navigation__item'>
                             <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
                         </li>
-                        <MenuItem to={'partners'} title='Partners' click={this.toggleMenu} />
                         <MenuItem to={'tickets'} title='Tickets' click={this.toggleMenu} />
                         <MenuItem to={'speakers'} title='Speakers' click={this.toggleMenu} />
+                        <MenuItem to={'partners'} title='Partners' click={this.toggleMenu} />
                         <MenuItem to={'academy'} title='Academy' click={this.toggleMenu} />
+                        <MenuItem to={'kids'} title='Kids' click={this.toggleMenu} />
                     </ul>
                 </div>
             </nav>
