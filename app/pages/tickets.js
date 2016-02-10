@@ -17,7 +17,7 @@ export default () => (
                 <div className='textblock__text textblock__text--fill'>
                     <h2 className='textblock__title'>Join us for the 15th JavaZone, <br />buy your ticket today!</h2>
                     <p>
-                        The tickets for JavaZone 2016 are availiable to an extra special Early Bird price until April 1st 2016. Buy your ticket now and save more than 10%. What's not to like?
+                        The tickets for JavaZone 2016 are availiable to an extra special Early Bird price until April 1st 2016. Buy your ticket now and save more than 10%. What’s not to like?
                     </p>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default () => (
                     <dt className='speakers__accepted-title'>Need more than one ticket?</dt>
                     <dd className='speakers__accepted-description'>Multiple tickets might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into our webshop.</dd>
                     <dt className='speakers__accepted-title'>Need an invoice?</dt>
-                    <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if you need that, but please consider buying the tickets using the webshop if you can. You'll get a receipt which can be used for reimbursements even though you pay with your personal credit card.</dd>
+                    <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if you need that, but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though you pay with your personal credit card.</dd>
                 </dl>
             </Column>
             <Column>
