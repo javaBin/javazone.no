@@ -4,7 +4,7 @@ import { getWorkshops } from '../actions/workshops';
 import { Page, PageHeading } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
-import header from '../assets/kids/header.jpg';
+import header from '../assets/kids/kids_header.jpg';
 import cannybots from '../assets/kids/cannybots.jpg';
 import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';

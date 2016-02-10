@@ -1,6 +1,6 @@
 import { Page, PageHeading } from '../../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../../components/textblock';
-import header from '../../assets/kids/header.jpg';
+import header from '../../assets/academy/header.jpg';
 import accenture from '../../assets/academy/accenture.jpg';
 
 const sponsors = [accenture];
