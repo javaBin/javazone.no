@@ -1,5 +1,5 @@
 import header from '../assets/badges.jpg';
-
+import { Link } from 'react-router';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
 
 const headerStyle = {
@@ -7,7 +7,7 @@ const headerStyle = {
 };
 
 export default () => (
-    <div className='page academy'>
+    <div className='page tickets'>
         <div className='page__header page__header-centered' style={headerStyle}>
             <h1 className='page__title'>Early Bird Tickets</h1>
         </div>
@@ -16,27 +16,36 @@ export default () => (
             <div className='textblock__column textblock__column--centered'>
                 <div className='textblock__text textblock__text--fill'>
                     <h2 className='textblock__title'>Join us for the 15th JavaZone, <br />buy your ticket today!</h2>
-                    <p>
+                    <P>
                         The tickets for JavaZone 2016 are availiable to an extra special Early Bird price until April 1st 2016. Buy your ticket now and save more than 10%. What’s not to like?
-                    </p>
+                    </P>
                 </div>
             </div>
         </div>
 
-        <Block>
-            <Column center={true}>
-                <P>
-                    <a href='https://www.eventsystems.no/es/event/javazone2016' className='button button--green'>Buy your ticket today!</a>
-                </P>
-            </Column>
-        </Block>
+        <ul className='tickets__types'>
+            <li className='tickets__type'>
+                <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
+                    <div><span className='tickets__icon icon-tag'></span></div>
+                    <div className='tickets__title'>Early bird ticket</div>
+                    <div className='tickets__price'>xxxx NOK</div>
+                </a>
+            </li>
+            <li className='tickets__type'>
+                <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
+                    <div><span className='tickets__icon icon-tag'></span></div>
+                    <div className='tickets__title'>javaBin ticket</div>
+                    <div className='tickets__price'>xxxx NOK</div>
+                </a>
+            </li>
+        </ul>
 
         <Block>
             <Column>
                 <ColumnHeading>Special ticket types</ColumnHeading>
                 <dl className='speakers__accepted'>
                     <dt className='speakers__accepted-title'>Working for one of our partners?</dt>
-                    <dd className='speakers__accepted-description'>Partners may buy tickets at reduced prices until July 1st. Read more about partnerships of JavaZone and contact us at partner@java.no to buy tickets.</dd>
+                    <dd className='speakers__accepted-description'>Partners may buy tickets at reduced prices until July 1st. <Link to='partners'>Read more about partnerships</Link> of JavaZone and contact us at partner@java.no to buy tickets.</dd>
                     <dt className='speakers__accepted-title'>Need more than one ticket?</dt>
                     <dd className='speakers__accepted-description'>Multiple tickets might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into our webshop.</dd>
                     <dt className='speakers__accepted-title'>Need an invoice?</dt>
@@ -44,23 +53,15 @@ export default () => (
                 </dl>
             </Column>
             <Column>
-                <ColumnHeading>Special javaBin Member price</ColumnHeading>
-                <P>
+                <ColumnHeading>javaBin Member price</ColumnHeading>
+                <P justify={true}>
                     If you are a member of javaBin, you can buy your ticket to a reduced price. Both ticket types gives full access to the conference, but javaBin-tickets are discounted by NOK 1000,–
                 </P>
-                <P>
+                <P justify={true}>
                     We fully recommend that you consider a membership before buying your ticket. Anyone is welcome to join javaBin, we already have more than 2.000 members from all over the country.
                 </P>
-                <P>
+                <P justify={true}>
                     You can read more and buy your membership at <a href="http://java.no/index.html?page=medlemskap">java.no</a>.
-                </P>
-            </Column>
-        </Block>
-
-        <Block>
-            <Column center={true}>
-                <P>
-                    <a href='https://www.eventsystems.no/es/event/javazone2016' className='button button--green'>Buy your ticket today!</a>
                 </P>
             </Column>
         </Block>
