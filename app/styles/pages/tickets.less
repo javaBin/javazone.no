@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../colors';
+
+.tickets {
+    &__types {
+        list-style: none;
+        justify-content: space-around;
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 0;
+
+        @media (min-width: @size-s) {
+            display: flex;
+            padding: 40px 0;
+        }
+    }
+
+    &__type {
+        padding: 0 0 40px 0;
+        text-align: center;
+
+        @media (min-width: @size-s) {
+            padding: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__icon {
+        color: @green--dark;
+        font-size: 4rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__price {
+        color: @burgundy;
+        font-size: 1.3rem;
+    }
+}
