@@ -147,7 +147,6 @@ const Kids = React.createClass({
                                 </Dd>
                                 <Dt>Forberedelser</Dt>
                                 <Dd>
-                                    Du må ta med en laptop som barna kan bruke.
                                     Noen av kursene vil kreve litt forberedelse,
                                     det vil bli sendt ut egen informasjon om
                                     dette pr. mail.
