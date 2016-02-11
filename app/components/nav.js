@@ -65,7 +65,7 @@ const Nav = React.createClass({
         return (
             <nav className={navigationClass}>
                 <div className={navClass}>
-                    <IndexLink to='/'>
+                    <IndexLink to='/' className='navigation__logo-link'>
                         <img src={logo} className="navigation__logo"/>
                     </IndexLink>
                     <div className='navigation__toggle-container'>
