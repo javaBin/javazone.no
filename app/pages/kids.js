@@ -63,12 +63,12 @@ function workshopClass(status) {
 
 function workshopStatus(status) {
     switch (status) {
-    case 'FREE_SPOTS': return 'Ledige plasser';
-    case 'FEW_SPOTS': return 'Få plasser';
-    case 'FULL': return 'Venteliste';
+    case 'FREE_SPOTS': return 'Meld deg på nå';
+    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på nå';
+    case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
-    case 'CLOSED': return 'Stengt';
-    default: return 'Ikke åpnet';
+    case 'CLOSED': return 'Påmelding stengt';
+    default: return 'Påmelding ikke åpnet';
     }
 }
 
