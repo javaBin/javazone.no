@@ -6,6 +6,57 @@ import header from '../assets/header_expo.jpg';
 import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
 import { P } from '../components/textblock';
 
+// https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
+function shuffle(o){
+    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
+const imagesContext = require.context('../assets/partner-logos-png', false, /\.png$/);
+const images = imagesContext.keys().map(image => imagesContext(image));
+console.log(images);
+
+function getimage(images, image) {
+    for (let i = 0; i < images.length; i++) {
+        if (images[i].indexOf(image) >= 0)
+            return images[i];
+    }
+}
+
+const signedPartners = shuffle([
+    {name: 'Bouvet', logo: 'bouvet.png'},
+    {name: 'Couchbase', logo: 'couchbase.png'},
+    {name: 'Dips', logo: 'dips.png'},
+    {name: 'Itera', logo: 'itera.png'},
+    {name: 'Finn', logo: 'finn.png'},
+    {name: 'Computas', logo: 'computas.png'},
+    {name: 'Miles', logo: 'miles.png'},
+    {name: 'Kodemaker', logo: 'kodemaker.png'},
+    {name: 'Systek', logo: 'systek.png'},
+    {name: 'JetBrains', logo: 'jetbrains.png'},
+    {name: 'Conduct', logo: 'conduct.png'},
+    {name: 'Mesan', logo: 'mesan.png'},
+    {name: 'SANS Institute, EMEA', logo: 'sans-emea.png'},
+    {name: 'Decisive', logo: 'decisive.png'},
+    {name: 'Tripletex', logo: 'tripletex.png'},
+    {name: 'BEKK', logo: 'bekk.png'},
+    {name: 'Ciber', logo: 'ciber.png'},
+    {name: 'NAV IKT', logo: 'nav.png'},
+    {name: 'Capgemini', logo: 'capgemini.png'},
+    {name: 'Accenture', logo: 'accenture.png'},
+    {name: 'Skatteetaten', logo: 'skatteetaten.png'},
+    {name: 'KnowIT', logo: 'knowit.png'},
+    {name: 'Acando', logo: 'acando.png'},
+    {name: 'Sopra Steria', logo: 'soprasteria.png'},
+    {name: 'Nets', logo: 'nets.png'},
+    {name: 'Webstep', logo: 'webstep.png'},
+    {name: 'Politiet', logo: 'politiet.png'},
+    {name: 'Kantega', logo: 'kantega.png'},
+    {name: 'Visma', logo: 'visma.png'},
+]).map(partner => (
+    {name: partner.name, logo: getimage(images, partner.logo)}
+));
+
 const headerStyle = {
     backgroundImage: `url('${header}')`
 };
@@ -21,6 +72,14 @@ const sectionTwoStyles = {
 const sectionThreeStyles = {
     backgroundImage: `url('${imageThree}')`
 };
+
+const Partner = ({name, logo}) => (
+    <li className='partners__logo'>
+        <a href='#' className='partners__logo-link'>
+            <img src={logo} className='partners__logo-image' alt={name} />
+        </a>
+    </li>
+);
 
 export default () => (
     <div className='page partners'>
@@ -42,6 +101,10 @@ export default () => (
                 </div>
             </div>
         </div>
+
+        <ul className='partners__logos'>
+            {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
+        </ul>
 
         <div className='textblock partners__role'>
             <div className='textblock__column textblock__column--dark'>
