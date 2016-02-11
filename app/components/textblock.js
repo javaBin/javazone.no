@@ -17,9 +17,12 @@ export const Block = (props) => {
 };
 
 export const BlockHeading = (props) => {
-    const headingClass = className('textblock__header',{
-        'textblock__header--centered': props.center
-    });
+    const headingClass = className(
+        'textblock__header',
+        props.className, {
+            'textblock__header--centered': props.center
+        }
+    );
 
     return (
         <h2 className={headingClass}>{props.children}</h2>
@@ -55,9 +58,14 @@ export const BackgroundImage = (props) => (
     <div className='background-image' style={{backgroundImage: `url(${props.src})`}}></div>
 );
 
-export const ColumnHeading = (props) => (
-    <h2 className='textblock__title'>{props.children}</h2>
-);
+export const ColumnHeading = (props) => {
+    const columnHeadingClass = className(
+        'textblock__title',
+        props.className
+    );
+
+    return <h2 className={columnHeadingClass}>{props.children}</h2>;
+};
 
 export const P = (props) => {
     const paragraphClass = className(
