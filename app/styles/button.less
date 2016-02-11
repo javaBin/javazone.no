@@ -36,6 +36,22 @@
         }
     }
 
+    &--yellow {
+        background-color: @yellow;
+
+        &:hover {
+            background-color: darken(@yellow, 5%);
+        }
+    }
+
+    &--disabled {
+        background-color: @grey;
+
+        &:hover {
+            background-color: darken(@grey, 5%);
+        }
+    }
+
     &__icon {
         margin-right: 10px;
         position: relative;
