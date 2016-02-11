@@ -1,7 +1,7 @@
 import React from 'react';
 import className from 'className';
 import {Link, IndexLink} from 'react-router';
-import logo from '../assets/logo_menu.svg';
+import logo from '../assets/logo_horisontal.svg';
 
 const MenuItem = (props) => (
     <li className='navigation__item'>
