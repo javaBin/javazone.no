@@ -102,6 +102,15 @@ export default () => (
             </div>
         </div>
 
+        <div className='textblock'>
+            <div className='textblock__column textblock__column--centered'>
+                <span className='textblock__sub-title'>
+                    These awesome partners have already signed up for JavaZone 2016.<br/>
+                    Contact us at <a className='page__link' href='mailto:partner@java.no'>partner@java.no</a> to join in.
+                </span>
+            </div>
+        </div>
+
         <ul className='partners__logos'>
             {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
         </ul>
