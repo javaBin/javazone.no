@@ -75,9 +75,9 @@ const sectionThreeStyles = {
 
 const Partner = ({name, logo}) => (
     <li className='partners__logo'>
-        <a href='#' className='partners__logo-link'>
+        <div className='partners__logo-link'>
             <img src={logo} className='partners__logo-image' alt={name} />
-        </a>
+        </div>
     </li>
 );
 
