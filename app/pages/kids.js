@@ -16,6 +16,7 @@ const workshopData = {
             <span><a href='http://cannybots.com'>Cannybots</a> er leketøyroboter som du kan printe ut ved hjelp av en vanlig hjemme-3D-printer. Du kan styre den fra en telefon, nettbrett, PC eller til Raspberry Pi og programmere den ved hjelp av enkle programmeringsgrensesnitt. Barna skal begynne med litt grunnleggende programmering i Scratch. Kjør roboten frem, sving, kjør i ring osv.</span>,
             'Når de har gjort dette kan de få tilgang til eksisterende (og litt avanserte) programmer for autonom eller fjernstyrt kjøring. Vi går først i gjennom og forklarer hva programmet gjør. Deretter prøver vi litt og så ser vi på koden igjen for å se om barna ser sammenhengen mellom koden og hva roboten gjør.'
         ],
+        age: '8 år +',
         image: cannybots,
         left: true
     },
@@ -24,12 +25,14 @@ const workshopData = {
             'Programmering med CodeStudio sine oppgaver for de aller yngste. Her vil vi ta i bruk Code.org sine opplegg for Kodetimen. Dette vil bli en lett introduksjon som verken krever forkunnskaper i lesing eller matematikk.',
             <span>Oppgavene finnes på <a href='http://studio.code.org'>studio.code.org</a>.</span>
         ],
+        age: '4-10 år',
         image: codestudio
     },
     kidsakodervaar2016minecraft: {
         description: [
             <span>ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og roboter inne i spillet. Disse datamaskinene og robotene kan programmeres til å kontrollere dører, grave huler, bygge hus og så videre. ComputerCraft bruker programmeringsspråket Lua, som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset må deltagerne ha en Minecraft-konto. <a href='https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft'>Oppskrift for hvordan du installerer ComputerCraft</a>.</span>
         ],
+        age: '10 år +',
         image: minecraft,
         left: true
     },
@@ -38,6 +41,7 @@ const workshopData = {
             'Her ønskes ungdommene velkommen til et minikurs hvor de kan lære seg å programmere. Dette kurset er rettet mot nybegynnere og krever ingen forhåndskunnskaper. Målet for kurset er å gå gjennom noen viktige begreper innenfor programmering og at alle skal lære seg nok til å lage et visuelt program.',
             'Processing er et språk og utviklingsmiljø som gjør det enkelt å komme i gang med programmering. Det kan lastes ned via processing.org/download. Processing er basert på Java, så hvis du lærer deg Processing, så vil du indirekte lære deg litt Java.'
         ],
+        age: '14 år +',
         image: processing
     }
 };
@@ -45,7 +49,8 @@ const workshopData = {
 const LeftEvent = ({workshop}) => (
     <Block>
         <Column justify={true} dark={true}>
-            <ColumnHeading>{workshop.title}</ColumnHeading>
+            <ColumnHeading className='kids__event-title'>{workshop.title}</ColumnHeading>
+            <span className='kids__age'>{workshopData[workshop.id].age}</span>
             {workshopData[workshop.id].description.map((desc, dk) => (
                 <P key={dk}>
                     {desc}
@@ -64,7 +69,8 @@ const RightEvent = ({workshop}) => (
             <BackgroundImage src={workshopData[workshop.id].image} />
         </Column>
         <Column justify={true} dark={true}>
-            <ColumnHeading>{workshop.title}</ColumnHeading>
+            <ColumnHeading className='kids__event-title'>{workshop.title}</ColumnHeading>
+            <span className='kids__age'>{workshopData[workshop.id].age}</span>
             {workshopData[workshop.id].description.map((desc, dk) => (
                 <P key={dk}>
                     {desc}
