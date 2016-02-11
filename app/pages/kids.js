@@ -82,8 +82,8 @@ const LeftEvent = ({workshop}) => (
                     {desc}
                 </P>
             ))}
-            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.id)} kids__registrate`}>
-                {workshopStatus(workshop.id)}
+            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.status)} kids__registrate`}>
+                {workshopStatus(workshop.status)}
             </a>
         </Column>
         <Column>
@@ -105,8 +105,8 @@ const RightEvent = ({workshop}) => (
                     {desc}
                 </P>
             ))}
-            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.id)} kids__registrate`}>
-                {workshopStatus(workshop.id)}
+            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.status)} kids__registrate`}>
+                {workshopStatus(workshop.status)}
             </a>
         </Column>
     </Block>
