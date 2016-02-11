@@ -46,6 +46,32 @@ const workshopData = {
     }
 };
 
+function workshopUrl(id) {
+    return `https://javazone.no/moosehead/#/register/${id}`;
+}
+
+function workshopClass(status) {
+    switch (status) {
+    case 'FREE_SPOTS': return 'button--green';
+    case 'FEW_SPOTS': return 'button--yellow';
+    case 'FULL': return 'button--red';
+    case 'VERY_FULL': return 'button--red';
+    case 'CLOSED': return 'button--disabled';
+    default: return 'button--disabled';
+    }
+}
+
+function workshopStatus(status) {
+    switch (status) {
+    case 'FREE_SPOTS': return 'Ledige plasser';
+    case 'FEW_SPOTS': return 'Få plasser';
+    case 'FULL': return 'Venteliste';
+    case 'VERY_FULL': return 'Ingen ledige plasser';
+    case 'CLOSED': return 'Stengt';
+    default: return 'Ikke åpnet';
+    }
+}
+
 const LeftEvent = ({workshop}) => (
     <Block>
         <Column justify={true} dark={true}>
@@ -56,6 +82,9 @@ const LeftEvent = ({workshop}) => (
                     {desc}
                 </P>
             ))}
+            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.id)} kids__registrate`}>
+                {workshopStatus(workshop.id)}
+            </a>
         </Column>
         <Column>
             <BackgroundImage src={workshopData[workshop.id].image} />
@@ -76,6 +105,9 @@ const RightEvent = ({workshop}) => (
                     {desc}
                 </P>
             ))}
+            <a href={workshopUrl(workshop.id)} className={`button ${workshopClass(workshop.id)} kids__registrate`}>
+                {workshopStatus(workshop.id)}
+            </a>
         </Column>
     </Block>
 );
