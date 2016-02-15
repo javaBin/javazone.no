@@ -74,7 +74,10 @@ export default () => (
                         <li className='program__slot'>
                             <div className='program__hours'>1515 - 1540</div>
                             <div className='program__event'>
-                                <div className='program__title'>lightning talks</div>
+                                <div className='program__title'>Kom i gang med Maskinlæring!</div>
+                                <div className='program__speaker'>Dervis Mansuroglu</div>
+                                <div className='program__title'>Retrofit - mobil REST på 1-2-3</div>
+                                <div className='program__speaker'>Christian Askeland</div>
                             </div>
                         </li>
                         <li className='program__slot'>
