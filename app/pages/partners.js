@@ -16,10 +16,7 @@ const imagesContext = require.context('../assets/partner-logos', false, /\.png$/
 const images = imagesContext.keys().map(image => imagesContext(image));
 
 function getimage(images, image) {
-    for (let i = 0; i < images.length; i++) {
-        if (images[i].indexOf(image) >= 0)
-            return images[i];
-    }
+    return images.find(img => img.indexOf(image) >= 0)
 }
 
 const signedPartners = shuffle([
