@@ -21,7 +21,7 @@ export default () => (
                     </p>
                     <p>
                         The <Link to='speakers'>Call for Speakers</Link> and <Link to='tickets'>Early Bird Ticket sales</Link> are now open.
-                        In April, we'll reveal more information about the conference, and in June/July the final program will be announced.
+                        In April, we’ll reveal more information about the conference, and in June/July the final program will be announced.
                         Until then stay tuned by following <a href="https://twitter.com/JavaZone" className="page__link"> @JavaZone</a> on Twitter.
                     </p>
                 </div>
