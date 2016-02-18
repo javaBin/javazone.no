@@ -21,7 +21,7 @@ module.exports = {
         loaders: [
             { test: /\.js$/, exclude: exclude, loader: 'babel-loader' , query: {presets: ['es2015', 'react'], plugins: ['transform-react-require', 'transform-object-assign']}},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 versions!less-loader?sourceMap')},
-            { test: /\.(svg|jpg|jpeg|png|pdf)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
+            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
             { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
         ]
     },

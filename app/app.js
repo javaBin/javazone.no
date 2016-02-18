@@ -1,6 +1,7 @@
 import styles from './styles/app.less';
 import someImage from './assets/some_image.png';
 import * as polyfill from './components/polyfill';
+import * as favicons from './favicon';
 import {render} from 'react-dom';
 import Router from 'react-router';
 import {Provider} from 'react-redux';
