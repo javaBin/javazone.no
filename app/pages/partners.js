@@ -12,9 +12,8 @@ function shuffle(o){
     return o;
 }
 
-const imagesContext = require.context('../assets/partner-logos-png', false, /\.png$/);
+const imagesContext = require.context('../assets/partner-logos', false, /\.png$/);
 const images = imagesContext.keys().map(image => imagesContext(image));
-console.log(images);
 
 function getimage(images, image) {
     for (let i = 0; i < images.length; i++) {
