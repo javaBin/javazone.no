@@ -1,5 +1,6 @@
 import styles from './styles/app.less';
 import someImage from './assets/some_image.png';
+import * as polyfill from './components/polyfill';
 import {render} from 'react-dom';
 import Router from 'react-router';
 import {Provider} from 'react-redux';
