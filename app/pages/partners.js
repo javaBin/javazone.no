@@ -5,6 +5,7 @@ import imageThree from '../assets/partners/overflow.jpg';
 import header from '../assets/header_expo.jpg';
 import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
 import { P } from '../components/textblock';
+import partners from '../data/partners';
 
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
 function shuffle(o){
@@ -16,40 +17,10 @@ const imagesContext = require.context('../assets/partner-logos', false, /\.png$/
 const images = imagesContext.keys().map(image => imagesContext(image));
 
 function getimage(images, image) {
-    return images.find(img => img.indexOf(image) >= 0)
+    return images.find(img => img.indexOf(image) >= 0);
 }
 
-const signedPartners = shuffle([
-    {name: 'Bouvet', logo: 'bouvet.png'},
-    {name: 'Couchbase', logo: 'couchbase.png'},
-    {name: 'Dips', logo: 'dips.png'},
-    {name: 'Itera', logo: 'itera.png'},
-    {name: 'Finn', logo: 'finn.png'},
-    {name: 'Computas', logo: 'computas.png'},
-    {name: 'Miles', logo: 'miles.png'},
-    {name: 'Kodemaker', logo: 'kodemaker.png'},
-    {name: 'Systek', logo: 'systek.png'},
-    {name: 'JetBrains', logo: 'jetbrains.png'},
-    {name: 'Conduct', logo: 'conduct.png'},
-    {name: 'Mesan', logo: 'mesan.png'},
-    {name: 'SANS Institute, EMEA', logo: 'sans-emea.png'},
-    {name: 'Decisive', logo: 'decisive.png'},
-    {name: 'Tripletex', logo: 'tripletex.png'},
-    {name: 'BEKK', logo: 'bekk.png'},
-    {name: 'Ciber', logo: 'ciber.png'},
-    {name: 'NAV IKT', logo: 'nav.png'},
-    {name: 'Capgemini', logo: 'capgemini.png'},
-    {name: 'Accenture', logo: 'accenture.png'},
-    {name: 'Skatteetaten', logo: 'skatteetaten.png'},
-    {name: 'KnowIT', logo: 'knowit.png'},
-    {name: 'Acando', logo: 'acando.png'},
-    {name: 'Sopra Steria', logo: 'soprasteria.png'},
-    {name: 'Nets', logo: 'nets.png'},
-    {name: 'Webstep', logo: 'webstep.png'},
-    {name: 'Politiet', logo: 'politiet.png'},
-    {name: 'Kantega', logo: 'kantega.png'},
-    {name: 'Visma', logo: 'visma.png'},
-]).map(partner => (
+const signedPartners = shuffle(partners).map(partner => (
     {name: partner.name, logo: getimage(images, partner.logo)}
 ));
 
