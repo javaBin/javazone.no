@@ -29,11 +29,11 @@ export default () => (
             </Column>
             <Column justify={true}>
                 <P>
-                    As a result of this independence, we have limited resources 
-                    when it comes to covering costs for our speakers but we 
-                    attempt to cover costs for speakers that require financial 
-                    support. In the case of the conference ending in positive 
-                    figures, we assure you that the money will be pushed back 
+                    As a result of this independence, we have limited resources
+                    when it comes to covering costs for our speakers but we
+                    attempt to cover costs for speakers that require financial
+                    support. In the case of the conference ending in positive
+                    figures, we assure you that the money will be pushed back
                     to the Java community.
                 </P>
                 <P>
