@@ -21,7 +21,7 @@ function getimage(images, image) {
 }
 
 const signedPartners = shuffle(partners).map(partner => (
-    {name: partner.name, logo: getimage(images, partner.logo)}
+    {name: partner.name, logo: getimage(images, partner.logo), url: partner.url}
 ));
 
 const headerStyle = {
@@ -40,11 +40,11 @@ const sectionThreeStyles = {
     backgroundImage: `url('${imageThree}')`
 };
 
-const Partner = ({name, logo}) => (
+const Partner = ({name, logo, url}) => (
     <li className='partners__logo'>
-        <div className='partners__logo-link'>
+        <a className='partners__logo-link' href={url} target='_blank'>
             <img src={logo} className='partners__logo-image' alt={name} />
-        </div>
+        </a>
     </li>
 );
 
