@@ -28,4 +28,7 @@ export default [
     {name: 'Politiet', logo: 'politiet.png'},
     {name: 'Kantega', logo: 'kantega.png'},
     {name: 'Visma', logo: 'visma.png'},
+    {name: 'enonic', logo: 'enonic.png'},
+    {name: 'greenbird', logo: 'greenbird.png'},
+    {name: 'microsoft', logo: 'microsoft.png'}
 ];
