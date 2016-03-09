@@ -23,7 +23,6 @@ function getImage(images, imageName) {
 const shuffledHeroes = shuffle(heroes).map(hero => (
     {name: hero.name, image: getImage(images, hero.image), hasLink: (typeof hero.url === 'string'), url: hero.url}
 ));
-console.log(shuffledHeroes);
 
 const headerStyle = {
     backgroundImage: `url('${header}')`
