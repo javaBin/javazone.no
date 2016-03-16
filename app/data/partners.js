@@ -30,5 +30,6 @@ export default [
     {name: 'Visma', logo: 'visma.png', url: 'http://www.visma.no/'},
     {name: 'enonic', logo: 'enonic.png', url: 'https://enonic.com/'},
     {name: 'greenbird', logo: 'greenbird.png', url: 'http://greenbird.no/'},
-    {name: 'microsoft', logo: 'microsoft.png', url: 'http://www.microsoft.com/nb-no'}
+    {name: 'microsoft', logo: 'microsoft.png', url: 'http://www.microsoft.com/nb-no'},
+    {name: 'teleplan', logo: 'teleplan.png', url: 'http://teleplanconsulting.no/'}
 ];
