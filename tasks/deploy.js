@@ -79,7 +79,9 @@ function main(args) {
         abort('symlinking failed');
 
     console.log('Deployment done');
-    tag(envArg, timestamp);
+    
+    if (envArg !== 'dev')
+        tag(envArg, timestamp);
 }
 
 main(process.argv);
