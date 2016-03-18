@@ -28,8 +28,12 @@ export default [
     {name: 'Politiet', logo: 'politiet.png', url: 'https://www.politi.no/'},
     {name: 'Kantega', logo: 'kantega.png', url: 'http://www.kantega.no/'},
     {name: 'Visma', logo: 'visma.png', url: 'http://www.visma.no/'},
-    {name: 'enonic', logo: 'enonic.png', url: 'https://enonic.com/'},
-    {name: 'greenbird', logo: 'greenbird.png', url: 'http://greenbird.no/'},
-    {name: 'microsoft', logo: 'microsoft.png', url: 'http://www.microsoft.com/nb-no'},
-    {name: 'teleplan', logo: 'teleplan.png', url: 'http://teleplanconsulting.no/'}
+    {name: 'Enonic', logo: 'enonic.png', url: 'https://enonic.com/'},
+    {name: 'Greenbird', logo: 'greenbird.png', url: 'http://greenbird.no/'},
+    {name: 'Microsoft', logo: 'microsoft.png', url: 'http://www.microsoft.com/nb-no'},
+    {name: 'Teleplan', logo: 'teleplan.png', url: 'http://teleplanconsulting.no/'},
+    {name: 'Haulmont Technology Limited', logo: 'haulmont.png', url: 'http://www.haulmont.com/'},
+    {name: 'Sparebank 1', logo: 'sparebank1.png', url: 'https://www.sparebank1.no/bank/privat.html'},
+    {name: 'Schibsted', logo: 'schibsted.png', url: 'http://www.schibsted.com/no/'},
+    {name: 'JPro', logo: 'jpro.png', url: 'http://www.jpro.no/'}
 ];
