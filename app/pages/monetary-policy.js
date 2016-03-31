@@ -3,6 +3,7 @@ import { Page, PageHeading } from '../components/page';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
 import { List, ListItem } from '../components/list';
+import application from '../assets/refund-application.txt';
 
 export default () => (
     <Page name='monetary-policy'>
@@ -86,7 +87,7 @@ export default () => (
                     Before the conference, you have to apply for reimbursements
                 </P>
                 <List>
-                    <ListItem>Copy the refund application</ListItem>
+                    <ListItem>Copy the <a href={application}>refund application</a></ListItem>
                     <ListItem>Fill in the details</ListItem>
                     <ListItem>Send in your application by email, to <a href='mailto:javazone@java.no'>javazone@java.no</a></ListItem>
                 </List>
