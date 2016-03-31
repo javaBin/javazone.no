@@ -2,11 +2,9 @@
 @import 'variables.less';
 
 .javazone {
-    background-attachment: fixed;
     min-height: 100%;
     opacity: 0;
     transition: opacity .5s ease-in-out;
-    width: 100%;
 
     @media (min-width: @size-s) {
         padding-bottom: 100px;
@@ -14,8 +12,6 @@
     }
 
     &__container {
-        background: @white;
-        box-shadow: 0 0 30px rgba(0, 0, 0, .2);
         display: flex;
         flex-direction: column;
         height: 100%;
