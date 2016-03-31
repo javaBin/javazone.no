@@ -24,7 +24,7 @@ module.exports = {
         loaders: [
             { test: /\.js$/, exclude: exclude, loaders: ['react-hot', babelLoader]},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', styleLoader)},
-            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
+            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
             { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
         ]
     },
