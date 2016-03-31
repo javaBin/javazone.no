@@ -2,7 +2,7 @@ import Nav from './nav';
 import Footer from './footer';
 import className from 'className';
 import {defer, when} from 'Q';
-import backgroundBlurred from '../assets/background_blurred.jpg';
+import backgroundBlurred from '../assets/bg_pattern.jpg';
 // import RouteTransition from './RouteTransition';
 
 function getImage(src) {
