@@ -6,10 +6,10 @@
     border-top-right-radius: 2px;
     align-items: center;
     display: flex;
-    padding: 10px 20px;
+    padding: 10px 0;
 
     @media (min-width: @size-s) {
-        padding: 20px 40px;
+        padding: 20px 0;
     }
 
     &--toggled {
@@ -128,28 +128,35 @@
 
         @media (min-width: @size-s) {
             display: inline-block;
-            margin: 0 11px 0 0;
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin: 0 11px 0 0;
+            }
 
         }
 
         @media (min-width: @size-m) {
-            margin: 0 20px 0 0;            
+            &:not(:last-child) {
+                margin: 0 20px 0 0;
+            }
         }
     }
 
     &__link {
-        color: @black;
+        border-bottom: 1px solid transparent;
+        color: @white;
         font-size: 1.3rem;
         outline: 0;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        transition: color .4s ease-in-out;
+        transition: border-bottom-color .4s ease-in-out;
 
         &--active,
         &:focus,
         &:hover {
-            color: @burgundy;
+            border-bottom-color: @yellow--light;
         }
 
         @media (min-width: @size-s) {
