@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
 import { getWorkshops } from '../actions/workshops';
-import { Page, PageHeading } from '../components/page';
+import { Page, PageHeading, PageBody } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
 import header from '../assets/kids/kids_header.jpg';
@@ -129,99 +129,100 @@ const Kids = React.createClass({
         return (
             <Page name='kids'>
                 <PageHeading background={header}>JavaZone Kids</PageHeading>
+                <PageBody>
+                    <Block block={true}>
+                        <BlockHeading center={true}>A taste of JavaZone for young, aspiring developers</BlockHeading>
+                        <Columns>
+                            <Column justify={true}>
+                                <P>
+                                    JavaZone inviterer alle deltakere på JavaZone
+                                    til å ta med seg sine barn på Teknologihuset
+                                    søndag 13. mars for å gi dem en smakebit på
+                                    voksenlivet. Vi kjører 4 parallelle sesjoner,
+                                    slik at vi har noe for både de aller minste
+                                    barna og de største ungdommene.
+                                </P>
+                            </Column>
+                            <Column justify={true}>
+                                <P>
+                                    Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
+                                    har lang erfaring med å arrangere kodeklubber for de
+                                    minste, og <a href='https://bitraf.no/'>Bitraf</a> som
+                                    er Oslos fremste eksperter på bygging av kule ting.
+                                </P>
+                            </Column>
+                        </Columns>
+                    </Block>
 
-                <Block block={true}>
-                    <BlockHeading center={true}>A taste of JavaZone for young, aspiring developers</BlockHeading>
-                    <Columns>
-                        <Column justify={true}>
-                            <P>
-                                JavaZone inviterer alle deltakere på JavaZone
-                                til å ta med seg sine barn på Teknologihuset
-                                søndag 13. mars for å gi dem en smakebit på
-                                voksenlivet. Vi kjører 4 parallelle sesjoner,
-                                slik at vi har noe for både de aller minste
-                                barna og de største ungdommene.
-                            </P>
-                        </Column>
-                        <Column justify={true}>
-                            <P>
-                                Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
-                                har lang erfaring med å arrangere kodeklubber for de
-                                minste, og <a href='https://bitraf.no/'>Bitraf</a> som
-                                er Oslos fremste eksperter på bygging av kule ting.
-                            </P>
-                        </Column>
-                    </Columns>
-                </Block>
+                    <Block block={true}>
+                        <BlockHeading center={true}>Praktisk</BlockHeading>
+                        <Columns>
+                            <Column justify={true}>
+                                <Dl>
+                                    <Dt>Tid og sted</Dt>
+                                    <Dd>
+                                        Arrangementet finner sted på Teknologihuset
+                                        søndag 13. mars fra klokken 12.00 til
+                                        15.00. Vi serverer enkel mat underveis. Det
+                                        er viktig at du som forelder også setter av
+                                        tid til å være til stede hele perioden. Vi
+                                        lager en egen "foreldresone" med kaffe og
+                                        kjører også en liten presentasjon fra de
+                                        som står bak Lær Kidsa Koding, slik at du
+                                        får litt mer informasjon om fremtidige
+                                        muligheter.
+                                    </Dd>
+                                </Dl>
+                            </Column>
+                            <Column justify={true}>
+                                <Dl>
+                                    <Dt>Påmelding</Dt>
+                                    <Dd>
+                                        Vi har et begrenset antall plasser (totalt
+                                        plass til 82 barn), derfor er det viktig at
+                                        du melder dere på arrangementet.
+                                        Påmeldingen åpner fredag 12.februar kl. 12.00.
+                                    </Dd>
+                                    <Dt>Forberedelser</Dt>
+                                    <Dd>
+                                        Noen av kursene vil kreve litt forberedelse,
+                                        det vil bli sendt ut egen informasjon om
+                                        dette pr. mail.
+                                    </Dd>
+                                </Dl>
+                            </Column>
+                        </Columns>
+                    </Block>
 
-                <Block block={true}>
-                    <BlockHeading center={true}>Praktisk</BlockHeading>
-                    <Columns>
-                        <Column justify={true}>
-                            <Dl>
-                                <Dt>Tid og sted</Dt>
-                                <Dd>
-                                    Arrangementet finner sted på Teknologihuset
-                                    søndag 13. mars fra klokken 12.00 til
-                                    15.00. Vi serverer enkel mat underveis. Det
-                                    er viktig at du som forelder også setter av
-                                    tid til å være til stede hele perioden. Vi
-                                    lager en egen "foreldresone" med kaffe og
-                                    kjører også en liten presentasjon fra de
-                                    som står bak Lær Kidsa Koding, slik at du
-                                    får litt mer informasjon om fremtidige
-                                    muligheter.
-                                </Dd>
-                            </Dl>
-                        </Column>
-                        <Column justify={true}>
-                            <Dl>
-                                <Dt>Påmelding</Dt>
-                                <Dd>
-                                    Vi har et begrenset antall plasser (totalt
-                                    plass til 82 barn), derfor er det viktig at
-                                    du melder dere på arrangementet.
-                                    Påmeldingen åpner fredag 12.februar kl. 12.00.
-                                </Dd>
-                                <Dt>Forberedelser</Dt>
-                                <Dd>
-                                    Noen av kursene vil kreve litt forberedelse,
-                                    det vil bli sendt ut egen informasjon om
-                                    dette pr. mail.
-                                </Dd>
-                            </Dl>
-                        </Column>
-                    </Columns>
-                </Block>
+                    <Block block={true}>
+                        <BlockHeading center={true}>4 parallelle sesjoner</BlockHeading>
+                        <Columns>
+                            <Column center={true}>
+                                <P>
+                                    Vi kjører 4 parallelle sesjoner. Du kan lese mer om
+                                    de ulike sesjonene under, og melde dere på den dere
+                                    ønsker å delta på. Har du flere barn i forskjellige
+                                    aldere som ønsker å være med på ulike sesjoner, så
+                                    kan du melde deg på flere sesjoner – sørg i så fall
+                                    for å melde på riktig antall barn til hver sesjon.
+                                </P>
+                            </Column>
+                        </Columns>
+                    </Block>
 
-                <Block block={true}>
-                    <BlockHeading center={true}>4 parallelle sesjoner</BlockHeading>
-                    <Columns>
+                    {workshops.map((workshop, key) => (
+                        workshopData[workshop.id].left ? <LeftEvent workshop={workshop} key={key} /> : <RightEvent key={key} workshop={workshop} />
+                    ))}
+
+                    <Block className='kids__greeting'>
                         <Column center={true}>
+                            <ColumnHeading>Vi sees på Teknologihuset søndag 13. mars!</ColumnHeading>
                             <P>
-                                Vi kjører 4 parallelle sesjoner. Du kan lese mer om
-                                de ulike sesjonene under, og melde dere på den dere
-                                ønsker å delta på. Har du flere barn i forskjellige
-                                aldere som ønsker å være med på ulike sesjoner, så
-                                kan du melde deg på flere sesjoner – sørg i så fall
-                                for å melde på riktig antall barn til hver sesjon.
+                                Vennlig hilsen,<br />javaBin, Lær Kidsa Koding og Bitraf.
                             </P>
                         </Column>
-                    </Columns>
-                </Block>
-
-                {workshops.map((workshop, key) => (
-                    workshopData[workshop.id].left ? <LeftEvent workshop={workshop} key={key} /> : <RightEvent key={key} workshop={workshop} />
-                ))}
-
-                <Block className='kids__greeting'>
-                    <Column center={true}>
-                        <ColumnHeading>Vi sees på Teknologihuset søndag 13. mars!</ColumnHeading>
-                        <P>
-                            Vennlig hilsen,<br />javaBin, Lær Kidsa Koding og Bitraf.
-                        </P>
-                    </Column>
-                </Block>
+                    </Block>
+                </PageBody>
             </Page>
         );
     }

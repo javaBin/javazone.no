@@ -10,6 +10,7 @@
 @header-size-xl: @size-xl / @header-ratio;
 
 .page {
+    color: @white;
     flex-grow: 1;
 
     &__header {
@@ -53,6 +54,31 @@
             top: 0;
             width: 100%;
             z-index: 1;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 auto;
+        transition: width .4s ease-in-out;
+        width: 100%;
+
+        @media (min-width: @size-s) {
+            width: 678px;
+        }
+
+        @media (min-width: @size-m) {
+            width: 924px;
+        }
+
+        @media (min-width: @size-l) {
+            width: 1000px;
+        }
+
+        @media (min-width: @size-xl) {
+            width: 1200px;
         }
     }
 
@@ -109,11 +135,14 @@
     }
 
     &__link {
-        background-image: linear-gradient(to bottom, transparent 75%, @black);
+        background-image: linear-gradient(to bottom, transparent 75%, @white);
         background-repeat: repeat-x;
         background-size: 2px 5px;
         background-position: 0 13px;
-        text-shadow: 2px 0 0 #fefefe, -2px 0 0 #fefefe;
         text-decoration: none;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, transparent 75%, @yellow--light);
+        }
     }
 }

@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { Page, PageHeading, PageBody } from '../components/page';
 import header from '../assets/academy.jpg';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
@@ -73,71 +74,72 @@ const Location = ({image, city, date, location, location_link, pax, program, reg
 );
 
 export default () => (
-    <div className='page academy'>
-        <div className='page__header page__header-centered' style={headerStyle}>
-            <h1 className='page__title'>JavaZone Academy</h1>
-        </div>
+    <Page>
+        <PageHeading background={header}>
+            JavaZone Academy
+        </PageHeading>
 
-        <div className='textblock textblock--centered'>
-            <div className='textblock__column textblock__column--centered'>
-                <div className='textblock__text textblock__text--fill'>
-                    <h2 className='textblock__title'>A free taste of JavaZone for students</h2>
-                    <p>
-                        Are you a student? Interested in IT? Come join us for JavaZone Academy.
-                        JavaZone Academy is a free event for students in Norway, where we invite you
-                        to take part in the Javazone experience.
-                    </p>
-                    <p>
-                        We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
-                        <strong> Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
-                    </p>
+        <PageBody>
+            <div className='textblock textblock--centered'>
+                <div className='textblock__column textblock__column--centered'>
+                    <div className='textblock__text textblock__text--fill'>
+                        <h2 className='textblock__title'>A free taste of JavaZone for students</h2>
+                        <p>
+                            Are you a student? Interested in IT? Come join us for JavaZone Academy.
+                            JavaZone Academy is a free event for students in Norway, where we invite you
+                            to take part in the Javazone experience.
+                        </p>
+                        <p>
+                            We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
+                            <strong> Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <ul className='academy__sponsors'>
-            {sponsors.map((sponsor, key) => (
-                <li key={key} className='academy__sponsor'>
-                    <img className='academy__sponsor-image' src={sponsor} />
-                </li>
-            ))}
-        </ul>
+            <ul className='academy__sponsors'>
+                {sponsors.map((sponsor, key) => (
+                    <li key={key} className='academy__sponsor'>
+                        <img className='academy__sponsor-image' src={sponsor} />
+                    </li>
+                ))}
+            </ul>
 
-        <ul className='academy__locations'>
-            <Location {...oslo} />
-            <Location {...bergen} />
-            <Location {...trondheim} />
-        </ul>
+            <ul className='academy__locations'>
+                <Location {...oslo} />
+                <Location {...bergen} />
+                <Location {...trondheim} />
+            </ul>
 
-        <div className='textblock textblock--centered'>
-            <div className='textblock__column textblock__column--centered'>
-                <div className='textblock__text'>
-                    <h2 className='textblock__title'>Program and speakers</h2>
-                    <p>
-                        The format will be presentations from 1200 to 1800 and mingling and networking with
-                        food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
-                    </p>
-                    <p>
-                        See the exact program for your location with the links above.
-                    </p>
+            <div className='textblock textblock--centered'>
+                <div className='textblock__column textblock__column--centered'>
+                    <div className='textblock__text'>
+                        <h2 className='textblock__title'>Program and speakers</h2>
+                        <p>
+                            The format will be presentations from 1200 to 1800 and mingling and networking with
+                            food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
+                        </p>
+                        <p>
+                            See the exact program for your location with the links above.
+                        </p>
+                    </div>
+                </div>
+                <div className='textblock__column textblock__column--centered'>
+                    <div className='textblock__text'>
+                        <h2 className='textblock__title'>How to register?</h2>
+                        <p>
+                            Use the signup links above to sign up for your prefered town. We’ll contact you as soon as possible with information about whether you got a spot.
+                        </p>
+                        <p>
+                            The events are usually quite popular, so make sure to registrer as soon as possible.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div className='textblock__column textblock__column--centered'>
-                <div className='textblock__text'>
-                    <h2 className='textblock__title'>How to register?</h2>
-                    <p>
-                        Use the signup links above to sign up for your prefered town. We'll contact you as soon as possible with information about whether you got a spot.
-                    </p>
-                    <p>
-                        The events are usually quite popular, so make sure to registrer as soon as possible.
-                    </p>
+            <div className='textblock textblock--centered'>
+                <div className='textblock--centered__text'>
                 </div>
             </div>
-        </div>
-        <div className='textblock textblock--centered'>
-            <div className='textblock--centered__text'>
-            </div>
-        </div>
-
-    </div>
+        </PageBody>
+    </Page>
 );
