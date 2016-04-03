@@ -21,3 +21,9 @@ export const PageHeading = (props) => {
         </div>
     );
 };
+
+export const PageBody = (props) => (
+    <div className='page__body'>
+        {props.children}
+    </div>
+);
