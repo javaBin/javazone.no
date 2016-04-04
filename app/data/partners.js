@@ -35,5 +35,9 @@ export default [
     {name: 'Haulmont Technology Limited', logo: 'haulmont.png', url: 'http://www.haulmont.com/'},
     {name: 'Sparebank 1', logo: 'sparebank1.png', url: 'https://www.sparebank1.no/bank/privat.html'},
     {name: 'Schibsted', logo: 'schibsted.png', url: 'http://www.schibsted.com/no/'},
-    {name: 'JPro', logo: 'jpro.png', url: 'http://www.jpro.no/'}
+    {name: 'JPro', logo: 'jpro.png', url: 'http://www.jpro.no/'},
+    {name: 'ProgramUtvikling', logo: 'programutvikling.png', url: 'http://programutvikling.no/'},
+    {name: 'ITverket', logo: 'itverket.png', url: 'http://www.itverket.no/'},
+    {name: 'EVRY', logo: 'evry.png', url: 'https://www.evry.no/'},
+    {name: 'Elastic', logo: 'elastic.png', url: 'https://www.elastic.co/'}
 ];
