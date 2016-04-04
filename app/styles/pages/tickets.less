@@ -3,12 +3,15 @@
 
 .tickets {
     &__buy-link {
-        background-image: linear-gradient(to bottom, transparent 75%, @black);
+        background-image: linear-gradient(to bottom, transparent 75%, @white);
         background-repeat: repeat-x;
         background-size: 2px 5px;
         background-position: 0 27px;
-        text-shadow: 2px 0 0 #fefefe, -2px 0 0 #fefefe;
         text-decoration: none;
+
+        &:hover {
+            background-image: linear-gradient(to bottom, transparent 75%, @yellow--light);
+        }
     }
 
     &__types {
