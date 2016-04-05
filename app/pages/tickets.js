@@ -9,7 +9,7 @@ const headerStyle = {
 export default () => (
     <div className='page tickets'>
         <div className='page__header page__header-centered' style={headerStyle}>
-            <h1 className='page__title'>Early Bird Tickets</h1>
+            <h1 className='page__title'>JavaZone 2016 Tickets</h1>
         </div>
 
         <div className='textblock textblock--centered'>
