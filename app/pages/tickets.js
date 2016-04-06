@@ -6,7 +6,7 @@ import { Block, Column, ColumnHeading, P } from '../components/textblock';
 export default () => (
     <Page>
         <PageHeading background={header}>
-            Early Bird Tickets
+            JavaZone 2016 Tickets
         </PageHeading>
 
         <PageBody>
@@ -14,9 +14,6 @@ export default () => (
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text textblock__text--fill'>
                         <h2 className='textblock__title'>Join us for the 15th JavaZone, <br /><a className='tickets__buy-link' href="https://www.eventsystems.no/es/event/javazone2016">buy your ticket today</a></h2>
-                        <P>
-                            The tickets for JavaZone 2016 are availiable to an extra special Early Bird price until April&nbsp;1st&nbsp;2016. Buy your ticket now and save more than 10%. What’s not to like?
-                        </P>
                     </div>
                 </div>
             </div>
@@ -25,16 +22,16 @@ export default () => (
                 <li className='tickets__type'>
                     <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
                         <div><span className='tickets__icon icon-tag'></span></div>
-                        <div className='tickets__title'>Early Bird Ticket</div>
-                        <div className='tickets__price'>5&nbsp;990 NOK</div>
+                        <div className='tickets__title'>Regular Ticket</div>
+                        <div className='tickets__price'>6&nbsp;590 NOK</div>
                         <div className='tickets__vat'>plus VAT</div>
                     </a>
                 </li>
                 <li className='tickets__type'>
                     <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
                         <div><span className='tickets__icon icon-tag'></span></div>
-                        <div className='tickets__title'>javaBin Early Bird</div>
-                        <div className='tickets__price'>4&nbsp;990 NOK</div>
+                        <div className='tickets__title'>javaBin Member Ticket</div>
+                        <div className='tickets__price'>5&nbsp;590 NOK</div>
                         <div className='tickets__vat'>plus VAT</div>
                     </a>
                 </li>
