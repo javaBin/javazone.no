@@ -3,6 +3,7 @@ import Footer from './footer';
 import className from 'className';
 import {defer, when} from 'Q';
 import backgroundBlurred from '../assets/bg_pattern.jpg';
+import bgStripes from '../assets/bg_stripes.png';
 
 function getImage(src) {
     const deferred = defer();
@@ -29,7 +30,7 @@ const Root = React.createClass({
             this.setState({
                 loaded: true,
                 style: {
-                    backgroundImage: `url('${backgroundBlurred}')`
+                    background: `url(${bgStripes}) no-repeat top right, url('${backgroundBlurred}') repeat`
                 }
             });
         });
