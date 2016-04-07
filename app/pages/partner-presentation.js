@@ -57,7 +57,7 @@ export default () => (
         </div>
 
         <Block>
-            <Column centered={true}>
+            <Column center={true}>
                 <p>
                     <a href={pdf} className='button button--green'>Last ned som PDF</a>
                 </p>
@@ -65,7 +65,7 @@ export default () => (
         </Block>
 
         <Block>
-            <Column centered={true}>
+            <Column center={true}>
                 <ColumnHeading>Kontakt oss</ColumnHeading>
                 <p>
                     JavaZone 2016 holdes i september 2016, men ta kontakt så snart som mulig
