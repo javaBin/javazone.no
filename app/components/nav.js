@@ -77,6 +77,7 @@ const Nav = React.createClass({
                         <li className='navigation__item'>
                             <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
                         </li>
+                        <MenuItem to={'info'} title='Info' click={this.toggleMenu} />
                         <MenuItem to={'tickets'} title='Tickets' click={this.toggleMenu} />
                         <MenuItem to={'speakers'} title='Speakers' click={this.toggleMenu} />
                         <MenuItem to={'partners'} title='Partners' click={this.toggleMenu} />
@@ -90,10 +91,3 @@ const Nav = React.createClass({
 });
 
 export default Nav;
-
-// <li className='navigation__item'>
-//     <Link to='contact' className='navigation__link' activeClassName='navigation__link--active'>Contact</Link>
-// </li>
-// <li className='navigation__item'>
-//     <Link to='about' className='navigation__link' activeClassName='navigation__link--active'>About</Link>
-// </li>
