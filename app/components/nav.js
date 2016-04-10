@@ -81,8 +81,6 @@ const Nav = React.createClass({
                         <MenuItem to={'tickets'} title='Tickets' click={this.toggleMenu} />
                         <MenuItem to={'speakers'} title='Speakers' click={this.toggleMenu} />
                         <MenuItem to={'partners'} title='Partners' click={this.toggleMenu} />
-                        <MenuItem to={'academy'} title='Academy' click={this.toggleMenu} />
-                        <MenuItem to={'kids'} title='Kids' click={this.toggleMenu} />
                     </ul>
                 </div>
             </nav>
