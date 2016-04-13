@@ -27,3 +27,9 @@ export const PageBody = (props) => (
         {props.children}
     </div>
 );
+
+export const Container = (props) => (
+    <div className='page__container'>
+        {props.children}
+    </div>
+);
