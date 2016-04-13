@@ -1,6 +1,6 @@
 import header from '../assets/badges.jpg';
 import { Link } from 'react-router';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
 
 export default () => (
@@ -9,7 +9,7 @@ export default () => (
             JavaZone 2016 Tickets
         </PageHeading>
 
-        <PageBody>
+        <Container>
             <div className='textblock textblock--centered'>
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text textblock__text--fill'>
@@ -62,6 +62,6 @@ export default () => (
                     </P>
                 </Column>
             </Block>
-        </PageBody>
+        </Container>
     </Page>
 );

@@ -4,7 +4,7 @@ import imageTwo from '../assets/partners/sal1.jpg';
 import imageThree from '../assets/partners/overflow.jpg';
 import header from '../assets/header_expo.jpg';
 import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
 import { P } from '../components/textblock';
 import partners from '../data/partners';
 
@@ -55,7 +55,7 @@ export default () => (
            Join us as a partner
         </PageHeading>
 
-        <PageBody>
+        <Container>
             <div className='textblock'>
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text'>
@@ -181,6 +181,6 @@ export default () => (
                     </div>
                 </div>
             </div>
-        </PageBody>
+        </Container>
     </Page>
 );

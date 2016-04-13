@@ -3,7 +3,7 @@ import github from '../assets/about/github.png';
 import trackjs from '../assets/about/trackjs.png';
 import heroes from '../data/heroes';
 import * as array from '../util/array';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
 import {Block, Columns, Column, ColumnHeading, P} from '../components/textblock';
 
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
@@ -47,7 +47,7 @@ export default () => (
         <PageHeading background={header}>
             About JavaZone
         </PageHeading>
-        <PageBody>
+        <Container>
             <div className='textblock textblock--first'>
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text'>
@@ -99,6 +99,6 @@ export default () => (
             <ul className='about__heroes'>
                 {shuffledHeroes.map((hero, hk) => (<Hero key={hk} {...hero} />))}
             </ul>
-        </PageBody>
+        </Container>
     </Page>
 );

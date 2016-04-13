@@ -1,6 +1,6 @@
 import header from '../assets/speakers.jpg';
 import Timeline from '../components/timeline';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, ColumnHeading, P } from '../components/textblock';
 import { Link } from 'react-router';
 
@@ -44,7 +44,7 @@ export default () => (
            Call for Speakers
         </PageHeading>
 
-        <PageBody>
+        <Container>
             <Block block={true}>
                 <BlockHeading center={true}>What is JavaZone?</BlockHeading>
                 <Columns>
@@ -205,6 +205,6 @@ export default () => (
                     </P>
                 </Column>
             </Block>
-        </PageBody>
+        </Container>
     </Page>
 );
