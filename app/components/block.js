@@ -1,8 +1,14 @@
-export const Block = (props) => (
-    <div className='block'>
-        {props.children}
-    </div>
-);
+import className from 'className';
+
+export const Block = (props) => {
+    const c = className('block', props.className);
+    
+    return (
+        <div className={c}>
+            {props.children}
+        </div>
+    );
+};
 
 export const Header = (props) => (
     <h2 className='block__header'>
