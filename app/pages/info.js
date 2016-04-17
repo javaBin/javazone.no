@@ -5,6 +5,36 @@ import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/ce
 
 const header = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs';
 
+const Format = (props) => (
+    <li className='presentation-formats__format format'>
+        <span className={`format__icon ${props.icon}`}></span>
+        <h3 className='format__title'>{props.title}</h3>
+        <p className='format__length'>{props.length}</p>
+        <p justify={true} className='format__description'>{props.description}</p>
+    </li>
+);
+
+const lightnings = {
+    icon: 'icon-energy',
+    title: 'Lightning talks',
+    length: '10 or 20 minutes',
+    description: 'Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept. This is a great way to get a sneak peek at something new.'
+};
+
+const presentations = {
+    icon: 'icon-graduation',
+    title: 'Presentations',
+    length: '45 or 60 minutes',
+    description: 'Presentations at JavaZone have a length of 45 or 60 minutes, and should therefore give you a deeper understanding of a concept than lightning talks.'
+};
+
+const workshops = {
+    icon: 'icon-screen-desktop',
+    title: 'Workshops',
+    length: '2 hours +',
+    description: 'Full blown learning session. This is where you get down and dirty with code. We’ll have both full day workshops, and shorter 2-hour and 4-hour workshops.'
+};
+
 export default () => (
     <Page name='info'>
         <PageHeading background={header}>Oslo Spektrum, September 7-8th 2016</PageHeading>
@@ -88,9 +118,8 @@ export default () => (
                             As always, JavaZone takes place at Oslo Spektrum in the
                             heart of Oslo. If this doesn’t tell you anything – don’t
                             worry, finding Oslo Spektrum won’t be too hard. You can
-                            use use this Google Maps link to get directions from
-                            your current location to Oslo Spektrum, or use the travel
-                            planner with Oslo Spektrum as your destination for public
+                            use <a href='https://www.google.com/maps/dir/Current+Location/Oslo+Spektrum,+Sonja+Henies+plass+2,+0185+Oslo,+Norway/' className='page__link'>this Google Maps link</a> to get directions from
+                            your current location to Oslo Spektrum, or use the <a href='https://ruter.no/en/journey-planner' className='page__link'>travel planner</a> with Oslo Spektrum as your destination for public
                             transport. Oh, and if you’re completely lost, don’t be
                             afraid to ask! Most norwegians are quite friendly.
                         </dt>
@@ -120,6 +149,32 @@ export default () => (
                     </dl>
                 </Content>
             </Block>
+        </Container>
+
+        <div className='info__timeline'></div>
+
+        <Container>
+            <Block>
+                <Header>The Program</Header>
+                <Content>
+                    <p>
+                        Now, the program is of course not available (or made, even)
+                        just yet. The full and final program will be available
+                        sometime during July. We always strive to improve ourselves
+                        , so this year we have made a few small changes to the
+                        program: ligthning talks can now be either 10 or 20 minutes,
+                        and presentations can now be either 45 or 60 minutes.
+                    </p>
+                </Content>
+            </Block>
+
+            <CenteredBlock>
+                <ul className='presentation-formats'>
+                    <Format {...lightnings} />
+                    <Format {...presentations} />
+                    <Format {...workshops} />
+                </ul>
+            </CenteredBlock>
         </Container>
     </Page>
 );
