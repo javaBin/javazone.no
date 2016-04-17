@@ -188,28 +188,45 @@ export default () => (
 
         <div className='info__timeline'></div>
 
+        <div className='info__program'>
+            <Container>
+                <Block>
+                    <Header>The Program</Header>
+                    <Content>
+                        <p>
+                            Now, the program is not available (or made, even)
+                            just yet. The full and final program will be available
+                            sometime during July. We always strive to improve ourselves
+                            , so this year we have made a few small changes to the
+                            program: ligthning talks can now be either 10 or 20 minutes,
+                            and presentations can now be either 45 or 60 minutes.
+                        </p>
+                    </Content>
+                </Block>
+
+                <CenteredBlock>
+                    <ul className='presentation-formats'>
+                        {formats.map((format, id) => (
+                            <Format key={id} {...format} />
+                        ))}
+                    </ul>
+                </CenteredBlock>
+            </Container>
+        </div>
+
         <Container>
             <Block>
-                <Header>The Program</Header>
+                <Header>Questions?</Header>
                 <Content>
                     <p>
-                        Now, the program is of course not available (or made, even)
-                        just yet. The full and final program will be available
-                        sometime during July. We always strive to improve ourselves
-                        , so this year we have made a few small changes to the
-                        program: ligthning talks can now be either 10 or 20 minutes,
-                        and presentations can now be either 45 or 60 minutes.
+                        Not everything is clear just yet, but if there is
+                        anything specific you miss after reading this page,
+                        just contact us and we’ll try our best to give you
+                        an answer. Contact information can be found in the
+                        footer.
                     </p>
                 </Content>
             </Block>
-
-            <CenteredBlock>
-                <ul className='presentation-formats'>
-                    {formats.map((format, id) => (
-                        <Format key={id} {...format} />
-                    ))}
-                </ul>
-            </CenteredBlock>
         </Container>
     </Page>
 );

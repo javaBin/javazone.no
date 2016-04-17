@@ -1,17 +1,28 @@
+@import '../variables';
+
 .included {
 
     &__items {
         justify-content: center;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         list-style: none;
         margin: 0;
         padding: 0;
+
+        @media (min-width: @size-s) {
+            flex-direction: row;
+        }
     }
 
     &__item {
-        padding: 20px;
-        width: 33%;
+        padding: 20px 0;
+
+        @media (min-width: @size-s) {
+            padding: 20px;
+            width: 33%;
+        }
     }
 
     &__item-icon {

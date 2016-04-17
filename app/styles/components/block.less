@@ -1,6 +1,11 @@
+@import '../variables';
+
 .block {
-    display: flex;
     margin: 5em auto 0 auto;
+
+    @media (min-width: @size-s) {
+        display: flex;
+    }
 
     &--center {
         display: block;
@@ -9,22 +14,32 @@
     &__header {
         font-size: 1.8em;
         margin: 0;
-        padding-right: 40px;
-        text-align: right;
-        width: 40%;
+
+        @media (min-width: @size-s) {
+            padding-right: 40px;
+            text-align: right;
+            width: 40%;
+        }
 
         &--center {
             padding: 0;
-            text-align: center;
             width: 100%;
+
+            @media (min-width: @size-s) {
+                test-align: center;
+            }
         }
     }
 
     &__content {
-        width: 60%;
+        @media (min-width: @size-s) {
+            width: 60%;
+        }
 
         &--center {
-            text-align: center;
+            @media (min-width: @size-s) {
+                text-align: center;
+            }
             width: 100%;
         }
 
