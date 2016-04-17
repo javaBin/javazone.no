@@ -2,7 +2,7 @@ import className from 'className';
 
 export const Block = (props) => {
     const c = className('block', props.className);
-    
+
     return (
         <div className={c}>
             {props.children}

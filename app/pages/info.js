@@ -78,7 +78,7 @@ export default () => (
         <Container>
             <CenteredBlock className='info__intro'>
                 <CenteredHeader>
-                    The community-driven conference for modern Java Developers. 
+                    The community-driven conference for modern Java Developers.
                     Join us for 2 days of awesome learning in Oslo this September.
                 </CenteredHeader>
                 <CenteredContent>

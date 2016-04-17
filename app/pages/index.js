@@ -14,7 +14,7 @@ const Index = React.createClass({
         return {
             horizontal: 0,
             vertical: 0
-        }
+        };
     },
 
     mousemove(ev) {
