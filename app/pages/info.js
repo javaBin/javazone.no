@@ -1,3 +1,4 @@
+import Map from '../components/map';
 import { Page, PageHeading, Container } from '../components/page';
 // import { Block, Column, ColumnHeading, P } from '../components/textblock';
 import { Block, Header, Content, SubHeader } from '../components/block';
@@ -139,7 +140,7 @@ export default () => (
         </div>
 
         <div className='info__map'>
-
+            <Map />
         </div>
 
         <Container>
