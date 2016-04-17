@@ -5,6 +5,14 @@ import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/ce
 
 const header = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs';
 
+const Included = (props) => (
+    <li className='included__item'>
+        <div className={`included__item-icon ${props.icon}`}></div>
+        <div className='included__item-title'>{props.title}</div>
+        <div className='included__item-content'>{props.content}</div>
+    </li>
+);
+
 const Format = (props) => (
     <li className='presentation-formats__format format'>
         <span className={`format__icon ${props.icon}`}></span>
@@ -14,26 +22,54 @@ const Format = (props) => (
     </li>
 );
 
-const lightnings = {
-    icon: 'icon-energy',
-    title: 'Lightning talks',
-    length: '10 or 20 minutes',
-    description: 'Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept. This is a great way to get a sneak peek at something new.'
-};
+const formats = [
+    {
+        icon: 'icon-energy',
+        title: 'Lightning talks',
+        length: '10 or 20 minutes',
+        description: 'Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept. This is a great way to get a sneak peek at something new.'
+    },
+    {
+        icon: 'icon-graduation',
+        title: 'Presentations',
+        length: '45 or 60 minutes',
+        description: 'Presentations at JavaZone have a length of 45 or 60 minutes, and should therefore give you a deeper understanding of a concept than lightning talks.'
+    },
+    {
+        icon: 'icon-settings',
+        title: 'Workshops',
+        length: '2 hours +',
+        description: 'Full blown learning session. This is where you get down and dirty with code. We’ll have both full day workshops, and shorter 2-hour and 4-hour workshops.'
+    }
+];
 
-const presentations = {
-    icon: 'icon-graduation',
-    title: 'Presentations',
-    length: '45 or 60 minutes',
-    description: 'Presentations at JavaZone have a length of 45 or 60 minutes, and should therefore give you a deeper understanding of a concept than lightning talks.'
-};
-
-const workshops = {
-    icon: 'icon-screen-desktop',
-    title: 'Workshops',
-    length: '2 hours +',
-    description: 'Full blown learning session. This is where you get down and dirty with code. We’ll have both full day workshops, and shorter 2-hour and 4-hour workshops.'
-};
+const included = [
+    {
+        icon: 'icon-settings',
+        title: 'Workshops',
+        content: 'Are you a hands-on type of person? Take part in one of our many, great workshops – both during the conference and the day before.'
+    },
+    {
+        icon: 'icon-check',
+        title: '2 Conference Days',
+        content: '2 days packed full of talks from both Norwegian and well known international speakers, in varying formats and categories.'
+    },
+    {
+        icon: 'icon-music-tone-alt',
+        title: 'An Awesome Afterparty',
+        content: 'After a day full of learning, it feels good to relax a bit and have a few beers. Join us for great music and mingling as we transform the venue to a nice afterparty!'
+    },
+    {
+        icon: 'icon-cup',
+        title: 'Food And Drinks',
+        content: 'JavaZone is widely known for its great variety of foods. We take pride in serving food of great quality, and we promise you you won’t go home hungry!'
+    },
+    {
+        icon: 'icon-heart',
+        title: 'Good, Good Vibrations',
+        content: 'You will meet and talk to loads of interesting people at JavaZone – both old friends and new and interesting people. Mingle away!'
+    }
+];
 
 export default () => (
     <Page name='info'>
@@ -92,8 +128,14 @@ export default () => (
             </CenteredBlock>
         </Container>
 
-        <div className='info__included'>
-
+        <div className='info__included included'>
+            <Container>
+                <ul className='included__items'>
+                    {included.map((item, key) => (
+                        <Included {...item} key={key} />
+                    ))}
+                </ul>
+            </Container>
         </div>
 
         <div className='info__map'>
@@ -162,9 +204,9 @@ export default () => (
 
             <CenteredBlock>
                 <ul className='presentation-formats'>
-                    <Format {...lightnings} />
-                    <Format {...presentations} />
-                    <Format {...workshops} />
+                    {formats.map((format, id) => (
+                        <Format key={id} {...format} />
+                    ))}
                 </ul>
             </CenteredBlock>
         </Container>
