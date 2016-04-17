@@ -77,5 +77,49 @@ export default () => (
         <div className='info__map'>
 
         </div>
+
+        <Container>
+            <Block>
+                <Header>Putting the pieces together, one by one</Header>
+                <Content>
+                    <dl className='info__info-list info-list'>
+                        <dl className='info-list__header'>Location, location, location...</dl>
+                        <dt className='info-list__content'>
+                            As always, JavaZone takes place at Oslo Spektrum in the
+                            heart of Oslo. If this doesn’t tell you anything – don’t
+                            worry, finding Oslo Spektrum won’t be too hard. You can
+                            use use this Google Maps link to get directions from
+                            your current location to Oslo Spektrum, or use the travel
+                            planner with Oslo Spektrum as your destination for public
+                            transport. Oh, and if you’re completely lost, don’t be
+                            afraid to ask! Most norwegians are quite friendly.
+                        </dt>
+                        <dl className='info-list__header'>Where do I stay?</dl>
+                        <dt className='info-list__content'>
+                            There’s plenty of hotels in the area surrounding the
+                            conference center. Searching for hotels close to
+                            "Oslo Central Station" is a good tip, and should give
+                            you a few alternatives to choose from.
+                        </dt>
+                        <dl className='info-list__header'>Food and drinks</dl>
+                        <dt className='info-list__content'>
+                            Learning makes you hungry, and we are of course well
+                            aware of this. This is why we have a constant stream
+                            of food throughout the whole day, prepared by
+                            professional chefs from The Flying Culinary Circus.
+                            Believe us, if there is one thing you will not be
+                            missing at JavaZone, it is food.
+                        </dt>
+                        <dl className='info-list__header'>I don’t speak norwegian…</dl>
+                        <dt className='info-list__content'>
+                            Don’t worry! About 60% of the talks are held in
+                            english, and the spoken language is specified in the
+                            program. So even if you don’t "snakker norsk", you
+                            should still get plenty of learning out of the conference.
+                        </dt>
+                    </dl>
+                </Content>
+            </Block>
+        </Container>
     </Page>
 );
