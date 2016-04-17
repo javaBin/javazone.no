@@ -58,14 +58,6 @@ export default () => (
                 </CenteredContent>
             </CenteredBlock>
 
-            <div className='info__speaker-info'>
-                <div className='info__speaker-info-title'>Pssst!</div>
-                <div className='info__speaker-info-body'>
-                    Are you a speaker? You can find speaker-related information
-                    at the <a href='/speakers' className='page__link'>speaker info page</a>
-                </div>
-            </div>
-
             <Block>
                 <Header>First things first</Header>
                 <Content>
@@ -178,3 +170,11 @@ export default () => (
         </Container>
     </Page>
 );
+
+// <div className='info__speaker-info'>
+//     <div className='info__speaker-info-title'>Pssst!</div>
+//     <div className='info__speaker-info-body'>
+//         Are you a speaker? You can find speaker-related information
+//         at the <a href='/speakers' className='page__link'>speaker info page</a>
+//     </div>
+// </div>
