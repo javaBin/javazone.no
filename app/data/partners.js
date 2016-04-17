@@ -11,7 +11,7 @@ export default [
     {name: 'JetBrains', logo: 'jetbrains.png', url: 'https://www.jetbrains.com/'},
     {name: 'Conduct', logo: 'conduct.png', url: 'http://www.conduct.no/'},
     {name: 'Mesan', logo: 'mesan.png', url: 'http://mesan.no/'},
-    {name: 'SANS Institute, EMEA', logo: 'sans-emea.png', url: 'https://www.sans.org/'},
+    {name: 'SANS Institute, EMEA', logo: 'sans.png', url: 'https://www.sans.org/'},
     {name: 'Decisive', logo: 'decisive.png', url: 'http://www.decisive.no/'},
     {name: 'Tripletex', logo: 'tripletex.png', url: 'https://www.tripletex.no/'},
     {name: 'BEKK', logo: 'bekk.png', url: 'https://www.bekk.no'},
