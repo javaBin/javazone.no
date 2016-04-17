@@ -1,31 +1,33 @@
 .index {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    opacity: 0;
-    transition: opacity .5s .5s ease-in-out;
-    width: 100%;
-
-    &__blurred {
-        transition: opacity 1s 1.5s ease-in-out;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        opacity: 0;
-        width: 100%;
-
-        &--visible {
-            opacity: 1;
-        }
+    &__logo {
+        margin: 5em auto 0;
+        perspective: 1600px;
+        position: relative;
+        text-align: center;
+        width: 500px;
     }
 
-    &--visible {
-        opacity: 1;
+    &__logo-wireframe {
+        opacity: .5;
+        transform-style: preserve-3d;
+        transform-origin: center center; 
+        backface-visibility: visible;
+        transform: rotateX( 0deg );
+        transition: transform 50ms ease;
+        width: 400px;
+    }
+
+    &__logo-title {
+        font-size: 3em;
+        font-weight: 600;
+        left: 50%;
+        margin-left: -48%;
+        position: absolute;
+        text-shadow: 0 0 2px rgba(0, 0, 0, .5),
+                     0 0 5px rgba(0, 0, 0, .5),
+                     0 0 24px rgba(0, 0, 0, .5);
+        text-transform: uppercase;
+        top: 45%;
+        white-space: nowrap;
     }
 }
