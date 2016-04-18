@@ -30,7 +30,7 @@ const Root = React.createClass({
             this.setState({
                 loaded: true,
                 style: {
-                    background: `url(${bgStripes}) no-repeat top right, url('${backgroundBlurred}') repeat`
+                    background: `url(${bgStripes}) no-repeat top right/50%, url('${backgroundBlurred}') repeat`
                 }
             });
         });
