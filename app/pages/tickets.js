@@ -6,7 +6,7 @@ import { Block, Column, ColumnHeading, P } from '../components/textblock';
 export default () => (
     <Page>
         <PageHeading background={header}>
-            JavaZone 2016 Tickets
+            Get your JavaZone 2016 Tickets
         </PageHeading>
 
         <Container>
@@ -46,7 +46,7 @@ export default () => (
                         <dt className='speakers__accepted-title'>Need more than one ticket?</dt>
                         <dd className='speakers__accepted-description'>Multiple tickets might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into our webshop.</dd>
                         <dt className='speakers__accepted-title'>Need an invoice?</dt>
-                        <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if you need that, but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though you pay with your personal credit card.</dd>
+                        <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if you need that (contact <a href="mailto:javazone@java.no">javazone@java.no</a>), but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though you pay with your personal credit card.</dd>
                     </dl>
                 </Column>
                 <Column>
