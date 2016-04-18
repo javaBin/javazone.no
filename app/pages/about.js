@@ -1,4 +1,4 @@
-import header from '../assets/header_expo.jpg';
+import header from '../assets/javabin_header.jpg';
 import github from '../assets/about/github.png';
 import trackjs from '../assets/about/trackjs.png';
 import heroes from '../data/heroes';
@@ -52,16 +52,23 @@ const Hero = ({image, name, hasLink, url}) => {
 export default () => (
     <Page>
         <PageHeading background={header}>
-            About JavaZone
+
         </PageHeading>
         <Container>
             <div className='textblock textblock--first'>
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text'>
-                        <h2 className='textblock__title'>JavaZone</h2>
+                        <h2 className='textblock__title'>Working day and night, creating JavaZone…</h2>
                         <p>
                             JavaZone is a conference organized by and for a great community of developers.
-                            The conference has been held in the heart of Oslo for 14 consecutive years, and JavaZone 2016 will be the 15th time we arrange the conference.
+                            More than 50 community members from javaBin are working throughout the year
+                            to make the conference possible.
+                        </p>
+                        <p>
+                            The conference has been held in the heart of Oslo for 14 consecutive years,
+                            and JavaZone 2016 will be the 15th time we arrange the conference. Help us
+                            celebrate the conference, and swing by the javaBin chillout lounge to talk
+                            with us and maybe join in on the fun next year.
                         </p>
                     </div>
                 </div>
