@@ -49,12 +49,12 @@ const Index = React.createClass({
                 </div>
                 <Container>
                     <CenteredBlock>
-                        <CenteredHeader>Oslo Spektrum, September 7-8th 2016</CenteredHeader>
+                        <CenteredHeader><span>Join the anniversary of the biggest community-driven conference for modern Java Developers.<br/><br/>See you September 7-8th 2016 in Oslo, Norway</span></CenteredHeader>
                         <CenteredContent>
                             <div className='index__links'>
-                                <a className='button button--green button--big index__tickets' href='/tickets'>Tickets</a>
-                                <a className='button button--red button--big index__info' href='/info'>Information</a>
-                                <a className='button button--yellow button--big' href='/partners'>Partners</a>
+                                <a className='button button--green button--big index__tickets' href='/tickets'>Get your Tickets</a>
+                                <a className='button button--red button--big index__info' href='/info'>Need more Information?</a>
+                                <a className='button button--yellow button--big' href='/partners'>See our Partners</a>
                             </div>
                         </CenteredContent>
                     </CenteredBlock>
