@@ -47,7 +47,7 @@ export default [
     {name: 'Nicolas Nordhagen', image: 'nicolas_nordhagen.jpg'}
 ];
 
-// Mangler: 
+// Mangler:
 // Thor Henning Hetland, Khiem-Kim Ho Xuan, Stine Marie Aas Grumheden,
 // Eivind Hyldmo, Vegard Haugstvedt, Kjetil Myhre Ims
 // Jan Erik Robertsen, Stein Grimstad, Ketil Aasarud, Marvin Bredal Lillehaug,
