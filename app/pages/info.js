@@ -45,8 +45,8 @@ const formats = [
 const included = [
     {
         icon: 'icon-settings',
-        title: 'Workshops',
-        content: 'Are you a hands-on type of person? Take part in one of our many, great workshops – both during the conference and the day before.'
+        title: 'Hands-on Workshops',
+        content: 'Are you a hands-on type of person? Take part in one of our many, great workshops to get unique learning experience.'
     },
     {
         icon: 'icon-check',
@@ -55,17 +55,17 @@ const included = [
     },
     {
         icon: 'icon-music-tone-alt',
-        title: 'An Awesome Afterparty',
+        title: 'An Afterparty to Remember',
         content: 'After a day full of learning, it feels good to relax a bit and have a few beers. Join us for great music and mingling as we transform the venue to a nice afterparty!'
     },
     {
         icon: 'icon-cup',
-        title: 'Food And Drinks',
+        title: '8 Restaurants, all day long',
         content: 'JavaZone is widely known for its great variety of foods. We take pride in serving food of great quality, and we promise you you won’t go home hungry!'
     },
     {
         icon: 'icon-heart',
-        title: 'Good, Good Vibrations',
+        title: '…and a Whole Lotta Love',
         content: 'You will meet and talk to loads of interesting people at JavaZone – both old friends and new and interesting people. Mingle away!'
     }
 ];
@@ -77,24 +77,25 @@ export default () => (
         <Container>
             <CenteredBlock className='info__intro'>
                 <CenteredHeader>
-                    The community-driven conference for modern Java Developers.
-                    Join us for 2 days of awesome learning in Oslo this September.
+                    JavaZone – the community-driven conference for modern Java Developers – is 15 years old!
+                    Join us for 2 days of celebration and an unique learning experience.
                 </CenteredHeader>
                 <CenteredContent>
                     <p>
                         JavaZone is a conference for Java developers created by
                         the Norwegian Java User Group: javaBin. The conference
-                        consists of almost 200 speakers and 7 parallel sessions
+                        have existed since 2001, and nowadays
+                        consists of around 200 speakers and 7 parallel tracks
                         over 2 days, plus an additional day of workshops
                         beforehand (included in the cost of your ticket, but
-                        with limited seating). Join us, together with more than
-                        2.500 fellow developers in September.
+                        with limited seating). Join us, together with almost
+                        3.000 fellow developers in September.
                     </p>
                 </CenteredContent>
             </CenteredBlock>
 
             <Block>
-                <Header>First things first</Header>
+                <Header>First things first:<br/>your ticket</Header>
                 <Content>
                     <p>
                         The first thing you’ll need is a ticket. Since we believe
@@ -102,10 +103,10 @@ export default () => (
                         JavaZone ticket gives you full access to the whole
                         conference – including the workshops (registrations on a
                         first come, first served basis). If you are a member of
-                        javaBin, you even get a discount!
+                        javaBin, you even get a discount!<br /><br />
                     </p>
                     <p>
-                        <a href='/tickets' className='page__link'>Get your ticket today</a>
+                        <a href='/tickets' className='button button--red button--big'>Get your ticket today</a>
                     </p>
                 </Content>
             </Block>
@@ -143,10 +144,10 @@ export default () => (
 
         <Container>
             <Block>
-                <Header>Putting the pieces together, one by one</Header>
+                <Header>Tell me more,<br/>tell me more!</Header>
                 <Content>
                     <dl className='info__info-list info-list'>
-                        <dl className='info-list__header'>Location, location, location...</dl>
+                        <dl className='info-list__header'>“Well, for a starter: where is this thing?”</dl>
                         <dt className='info-list__content'>
                             As always, JavaZone takes place at Oslo Spektrum in the
                             heart of Oslo. If this doesn’t tell you anything – don’t
@@ -156,27 +157,28 @@ export default () => (
                             transport. Oh, and if you’re completely lost, don’t be
                             afraid to ask! Most norwegians are quite friendly.
                         </dt>
-                        <dl className='info-list__header'>Where do I stay?</dl>
+                        <dl className='info-list__header'>“Okay then! But where do I stay in case I need some sleep?”</dl>
                         <dt className='info-list__content'>
                             There’s plenty of hotels in the area surrounding the
                             conference center. Searching for hotels close to
                             "Oslo Central Station" is a good tip, and should give
                             you a few alternatives to choose from.
                         </dt>
-                        <dl className='info-list__header'>Food and drinks</dl>
+                        <dl className='info-list__header'>“And to be sure: what if I get hungry?”</dl>
                         <dt className='info-list__content'>
                             Learning makes you hungry, and we are of course well
                             aware of this. This is why we have a constant stream
                             of food throughout the whole day, prepared by
-                            professional chefs from The Flying Culinary Circus.
+                            professional chefs from some of Oslo's best restaurants.
+                            There will be 8 restaurants in the Expo area with 16 different food concepts.
                             Believe us, if there is one thing you will not be
                             missing at JavaZone, it is food.
                         </dt>
-                        <dl className='info-list__header'>I don’t speak norwegian…</dl>
+                        <dl className='info-list__header'>“…and about that weird «norsk» you guys are speaking?”</dl>
                         <dt className='info-list__content'>
                             Don’t worry! About 50% of the talks are held in
                             english, and the spoken language is specified in the
-                            program. So even if you don’t "snakker norsk", you
+                            program. So even if you don’t «snakker norsk», you
                             should still get plenty of learning out of the conference.
                         </dt>
                     </dl>
@@ -192,12 +194,12 @@ export default () => (
                     <Header>The Program</Header>
                     <Content>
                         <p>
-                            Now, the program is not available (or made, even)
-                            just yet. The full and final program will be available
-                            sometime during July. We always strive to improve ourselves
-                            , so this year we have made a few small changes to the
-                            program: ligthning talks can now be either 10 or 20 minutes,
+                            Well, the program is not available just yet. The full and final program will be available
+                            sometime during July. We always strive to improve the experience,
+                            so this year we have made a few small changes to the
+                            program: lightning talks can now be either 10 or 20 minutes,
                             and presentations can now be either 45 or 60 minutes.
+                            Trust us: it will all make sense when the full program is published.
                         </p>
                     </Content>
                 </Block>
@@ -217,18 +219,16 @@ export default () => (
                 <CenteredHeader>Questions?</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        Not everything is clear just yet, but if there is
-                        anything specific you miss after reading this page,
-                        just contact us and we’ll try our best to give you
-                        an answer. Contact information can be found in the
-                        footer.
+                        Not every detail is ready just yet, but if there is
+                        any specific info you miss after reading this page,
+                        just contact us at <a href="mailto:javazone@java.no">javazone@java.no</a> and
+                        we’ll try our best to give you an answer.
                     </p>
                 </CenteredContent>
             </CenteredBlock>
             <CenteredBlock className='info__regards'>
                 <CenteredHeader>
-                    We really look forward to seeing you at JavaZone 2016!<br />
-                    – The JavaZone organizers
+                    We really look forward to<br/>seeing you at JavaZone 2016!
                 </CenteredHeader>
             </CenteredBlock>
         </Container>
