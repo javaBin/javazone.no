@@ -131,14 +131,14 @@ export default () => (
                         <dl className='page__paragraph'>
                             <dt className='partners__expansion-title'>Extra space</dt>
                             <dd className='partners__expansion-description'>Double you stand space and get 12 square meters instead of 6.</dd>
-                            <dt className='partners__expansion-title'>Restaurant stand</dt>
+                            <dt className='partners__expansion-title'>Restaurant stand (sold out)</dt>
                             <dd className='partners__expansion-description'>
                                 We have room for a total of 8 restaurant stands in the Expo Area.
                                 The theme and menu is decided by you in collaboration with The Flying Culinary Circus.
                             </dd>
-                            <dt className='partners__expansion-title'>Concept stand</dt>
+                            <dt className='partners__expansion-title'>Concept stand (sold out)</dt>
                             <dd className='partners__expansion-description'>
-                                We also have room for 2 extra large stands. These stands are about 70 square feet big,
+                                We also have room for 3 extra large stands. These stands are about 70 square feet big,
                                 and have room for a 4 meter tall wall behind it. This is your choice if you want to be
                                 really creative.
                             </dd>
@@ -174,9 +174,12 @@ export default () => (
                             <br />
                             We arrange regular partner meetings for both existing and new partners,
                             where we outline the progress of the conference. See the slides from
-                            our last partner meeting in April for a status update. English version coming soon.
+                            our last partner meeting in April for a status update. Contact us for information in English.
                             <br />
-                            <Link to='partner-presentation' className='page__link'>Slides in Norwegian</Link>
+                            <Link to='partner-presentation-april' className='page__link'>Slides in Norwegian</Link>
+                        </P>
+                        <P className='partners__prospect'>
+                            <Link to='partner-presentation-april' className='button button--red'>See the slides from the last partner meeting</Link>
                         </P>
                     </div>
                 </div>
