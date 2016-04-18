@@ -176,7 +176,6 @@ export default () => (
                             where we outline the progress of the conference. See the slides from
                             our last partner meeting in April for a status update. Contact us for information in English.
                             <br />
-                            <Link to='partner-presentation-april' className='page__link'>Slides in Norwegian</Link>
                         </P>
                         <P className='partners__prospect'>
                             <Link to='partner-presentation-april' className='button button--red'>See the slides from the last partner meeting</Link>
