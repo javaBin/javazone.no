@@ -21,6 +21,10 @@ function getImage(images, imageName) {
     ));
 }
 
+function removeScheme(url) {
+    return url.replace('https://', '').replace('http://', '');
+}
+
 const shuffledHeroes = shuffle(heroes).map(hero => (
     {name: hero.name, image: getImage(images, hero.image), hasLink: (typeof hero.url === 'string'), url: hero.url}
 ));
@@ -31,12 +35,15 @@ const headerStyle = {
 
 const Hero = ({image, name, hasLink, url}) => {
     const label = hasLink
-        ? <a href={url} target='_blank' className='about__hero-name'>{name}</a>
-        : <span className='about__hero-name'>{name}</span>;
+        ? <a href={url} target='_blank' className='about__hero-url'>{removeScheme(url)}</a>
+        : '';
 
     return (
         <li className='about__hero'>
-            {label}
+            <div className='about__hero-info'>
+                <span className='about__hero-name'>{name}</span>
+                {label}
+            </div>
             <img src={image} className='about__hero-image'/>
         </li>
     );
