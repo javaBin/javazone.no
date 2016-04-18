@@ -6,7 +6,7 @@
     border-top-right-radius: 2px;
     align-items: center;
     display: flex;
-    padding: 10px 0;
+    padding: 10px 20px;
 
     @media (min-width: @size-s) {
         padding: 20px 0;
@@ -45,7 +45,7 @@
     }
 
     &__toggle {
-        background: @white;
+        background: transparent;
         border: 0;
         cursor: pointer;
         height: 28px;
@@ -54,7 +54,7 @@
     }
 
     &__toggle-icon {
-        background: @black;
+        background: @white;
         height: 2px;
         opacity: 1;
         transition: background .4s ease-in-out;
@@ -62,7 +62,7 @@
 
         &:before,
         &:after {
-            background: @black;
+            background: @white;
             content: '';
             display: block;
             height: 2px;
@@ -88,12 +88,12 @@
     }
 
     &__items {
-        background: @white;
+        background: url('/assets/bg_pattern.jpg') repeat;
         bottom: 0;
         left: 0;
         margin: 0;
         opacity: 0;
-        padding: 0;
+        padding: 2em 0 0 0;
         position: fixed;
         right: 0;
         transition: opacity .4s ease-in-out;
