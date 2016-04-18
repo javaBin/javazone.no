@@ -1,10 +1,8 @@
 import Map from '../components/map';
+import header from '../assets/header_sal1.jpg';
 import { Page, PageHeading, Container } from '../components/page';
-// import { Block, Column, ColumnHeading, P } from '../components/textblock';
 import { Block, Header, Content, SubHeader } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-
-const header = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs';
 
 const Included = (props) => (
     <li className='included__item'>
@@ -227,6 +225,12 @@ export default () => (
                     </p>
                 </Content>
             </Block>
+            <CenteredBlock className='info__regards'>
+                <CenteredHeader>
+                    We really look forward to seeing you at JavaZone 2016!<br />
+                    – The JavaZone organizers
+                </CenteredHeader>
+            </CenteredBlock>
         </Container>
     </Page>
 );
