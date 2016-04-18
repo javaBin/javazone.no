@@ -53,7 +53,7 @@ const Index = React.createClass({
                         <CenteredContent>
                             <div className='index__links'>
                                 <a className='button button--green button--big index__tickets' href='/tickets'>Tickets</a>
-                                <a className='button button--red button--big index__info' href='/information'>Information</a>
+                                <a className='button button--red button--big index__info' href='/info'>Information</a>
                                 <a className='button button--yellow button--big' href='/partners'>Partners</a>
                             </div>
                         </CenteredContent>
