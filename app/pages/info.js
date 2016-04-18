@@ -116,7 +116,7 @@ export default () => (
                 </CenteredHeader>
                 <CenteredContent>
                     <p>
-                        Great! Your are now ready to attend JavaZone 2015. If you
+                        Great! Your are now ready to attend JavaZone 2016. If you
                         have been to JavaZone before – welcome back! If you have
                         never attended JavaZone – read on to see what you will be
                         experiencing. A ticket to JavaZone gives you the chance to
@@ -174,7 +174,7 @@ export default () => (
                         </dt>
                         <dl className='info-list__header'>I don’t speak norwegian…</dl>
                         <dt className='info-list__content'>
-                            Don’t worry! About 60% of the talks are held in
+                            Don’t worry! About 50% of the talks are held in
                             english, and the spoken language is specified in the
                             program. So even if you don’t "snakker norsk", you
                             should still get plenty of learning out of the conference.
