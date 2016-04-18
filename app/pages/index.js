@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg';
 import wireframelogo from '../assets/logo_wireframe.svg';
 import {Link} from 'react-router';
 import { Page, PageHeading, Container } from '../components/page';
-import { Block, Header, Content } from '../components/block';
+import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 
 const docWidth = document.body.clientWidth;
 const docHeight = document.body.clientHeight;
@@ -48,20 +48,16 @@ const Index = React.createClass({
                     </div>
                 </div>
                 <Container>
-                    <Block>
-                        <Header>Oslo Spektrum<br />September 7-8th 2016</Header>
-                        <Content>
-                            <p>
-                                Join us in 2016 celebrating the 15th year of JavaZone. The largest community driven conference for developers.
-                                The date is now set: JavaZone 2016 will take place at <br />Oslo Spektrum, 7th and 8th of September.
-                            </p>
-                            <p>
-                                The <Link to='speakers'>Call for Speakers</Link> and <Link to='tickets'>Early Bird Ticket sales</Link> are now open.
-                                In April, we’ll reveal more information about the conference, and in June/July the final program will be announced.
-                                Until then stay tuned by following <a href="https://twitter.com/JavaZone" className="page__link"> @JavaZone</a> on Twitter.
-                            </p>
-                        </Content>
-                    </Block>
+                    <CenteredBlock>
+                        <CenteredHeader>Oslo Spektrum, September 7-8th 2016</CenteredHeader>
+                        <CenteredContent>
+                            <div className='index__links'>
+                                <a className='button button--green button--big index__tickets' href='/tickets'>Tickets</a>
+                                <a className='button button--red button--big index__info' href='/information'>Information</a>
+                                <a className='button button--yellow button--big' href='/partners'>Partners</a>
+                            </div>
+                        </CenteredContent>
+                    </CenteredBlock>
                 </Container>
             </Page>
         );
