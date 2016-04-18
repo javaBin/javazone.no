@@ -213,9 +213,9 @@ export default () => (
         </div>
 
         <Container>
-            <Block>
-                <Header>Questions?</Header>
-                <Content>
+            <CenteredBlock>
+                <CenteredHeader>Questions?</CenteredHeader>
+                <CenteredContent>
                     <p>
                         Not everything is clear just yet, but if there is
                         anything specific you miss after reading this page,
@@ -223,8 +223,8 @@ export default () => (
                         an answer. Contact information can be found in the
                         footer.
                     </p>
-                </Content>
-            </Block>
+                </CenteredContent>
+            </CenteredBlock>
             <CenteredBlock className='info__regards'>
                 <CenteredHeader>
                     We really look forward to seeing you at JavaZone 2016!<br />
