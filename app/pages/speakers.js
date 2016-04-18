@@ -2,6 +2,7 @@ import header from '../assets/speakers.jpg';
 import Timeline from '../components/timeline';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, ColumnHeading, P } from '../components/textblock';
+import * as New from '../components/centeredblock';
 import { Link } from 'react-router';
 
 const headerStyle = {
@@ -41,10 +42,13 @@ const workshops = {
 export default () => (
     <Page>
         <PageHeading background={header}>
-           Call for Speakers
+           Call for Speakers is now closed
         </PageHeading>
 
         <Container>
+            <New.CenteredBlock className='speakers__closed'>
+                <New.CenteredHeader>If you have submitted a talk, we will contact you with our decision in June/July 2016</New.CenteredHeader>
+            </New.CenteredBlock>
             <Block block={true}>
                 <BlockHeading center={true}>What is JavaZone?</BlockHeading>
                 <Columns>
@@ -88,8 +92,8 @@ export default () => (
             <Block>
                 <Column center={true}>
                     <P>
-                        <a href='http://javazone.no/submitit' className='button button--green'>
-                            <span className='button__icon icon-check'></span> Submit your talk today!
+                        <a href='http://javazone.no/submitit' className='button button--disabled'>
+                            Submissions are closed
                         </a>
                     </P>
                 </Column>
@@ -190,8 +194,8 @@ export default () => (
             <Block>
                 <Column center={true}>
                     <P>
-                        <a href='http://javazone.no/submitit' className='button button--green'>
-                            <span className='button__icon icon-check'></span>Submit your talk today!
+                        <a href='http://javazone.no/submitit' className='button button--disabled'>
+                            Submissions are closed
                         </a>
                     </P>
                 </Column>
