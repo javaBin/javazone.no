@@ -40,11 +40,23 @@
     }
 
     &__links {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         padding: 2em 0;
+
+        @media (min-width: @size-s) {
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 
     &__tickets,
     &__info {
-        margin-right: 30px;
+        margin-bottom: 30px;
+
+        @media (min-width: @size-s) {
+            margin: 0 30px 0 0;
+        }
     }
 }
