@@ -1,7 +1,7 @@
 import Nav from './nav';
 import Footer from './footer';
 import className from 'className';
-import {defer, when} from 'Q';
+import {defer, when} from 'q';
 import backgroundBlurred from '../assets/bg_pattern.jpg';
 import bgStripes from '../assets/bg_stripes.png';
 
@@ -30,7 +30,7 @@ const Root = React.createClass({
             this.setState({
                 loaded: true,
                 style: {
-                    background: `url(${bgStripes}) no-repeat top right/50%, url('${backgroundBlurred}') repeat`
+                    background: `url('${bgStripes}') no-repeat top right / 50% 50%, url('${backgroundBlurred}') repeat`
                 }
             });
         });
