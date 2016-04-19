@@ -13,8 +13,6 @@ const styleLoader = 'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 ve
 module.exports = {
     entry: './app/app.js',
 
-    devtool: 'eval',
-
     output: {
         filename: 'app.js',
         path: output
@@ -22,7 +20,7 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.js$/, exclude: exclude, loaders: ['react-hot', babelLoader]},
+            { test: /\.js$/, exclude: exclude, loader: babelLoader},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', styleLoader)},
             { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file?name=assets/[name].[ext]'},
             { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
@@ -34,7 +32,8 @@ module.exports = {
         new ExtractTextPlugin('app.css'),
         new HtmlWebpackPlugin({
             template: './app/index.html'
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     devServer: {
