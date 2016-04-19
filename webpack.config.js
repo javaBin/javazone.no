@@ -6,11 +6,12 @@ var path = require('path');
 var exclude = /node_modules/;
 var output = path.join(__dirname, 'dist');
 var node_env = process.env.NODE_ENV || 'development';
+const isDev = node_env === 'development';
 
 const babelLoader = 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-react-require,plugins[]=transform-object-assign';
 const styleLoader = 'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 versions!less-loader?sourceMap';
 
-module.exports = {
+const config = {
     entry: './app/app.js',
 
     output: {
@@ -32,8 +33,7 @@ module.exports = {
         new ExtractTextPlugin('app.css'),
         new HtmlWebpackPlugin({
             template: './app/index.html'
-        }),
-        new webpack.optimize.UglifyJsPlugin()
+        })
     ],
 
     devServer: {
@@ -41,3 +41,11 @@ module.exports = {
         progress: true
     }
 };
+
+if (isDev) {
+    config.devTool = 'eval';
+} else {
+    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+
+module.exports = config
