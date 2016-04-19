@@ -134,7 +134,7 @@ export default () => (
                             <dt className='partners__expansion-title'>Restaurant stand (sold out)</dt>
                             <dd className='partners__expansion-description'>
                                 We have room for a total of 8 restaurant stands in the Expo Area.
-                                The theme and menu is decided by you in collaboration with The Flying Culinary Circus.
+                                The theme and menu is decided by you in collaboration with our food provider.
                             </dd>
                             <dt className='partners__expansion-title'>Concept stand (sold out)</dt>
                             <dd className='partners__expansion-description'>
