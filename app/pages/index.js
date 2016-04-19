@@ -36,7 +36,7 @@ const Index = React.createClass({
 
     render() {
         const style = {
-            transform: `rotateX(${this.state.vertical}deg) rotateY(${this.state.horizontal}deg)`
+            transform: `rotateX(${this.state.vertical}deg) rotateY(${this.state.horizontal}deg) translateZ(-100px)`
         };
 
         return (
