@@ -78,7 +78,7 @@ export default () => (
             <CenteredBlock className='info__intro'>
                 <CenteredHeader>
                     JavaZone – the community-driven conference for modern Java Developers – is 15 years old!
-                    Join us for 2 days of celebration and an unique learning experience.
+                    Join us for 2 days of celebration and a unique learning experience.
                 </CenteredHeader>
                 <CenteredContent>
                     <p>
@@ -155,11 +155,11 @@ export default () => (
                             use <a href='https://www.google.com/maps/dir/Current+Location/Oslo+Spektrum,+Sonja+Henies+plass+2,+0185+Oslo,+Norway/' className='page__link'>this Google Maps link</a> to get directions from
                             your current location to Oslo Spektrum, or use the <a href='https://ruter.no/en/journey-planner' className='page__link'>travel planner</a> with Oslo Spektrum as your destination for public
                             transport. Oh, and if you’re completely lost, don’t be
-                            afraid to ask! Most norwegians are quite friendly.
+                            afraid to ask! Most Norwegians are quite friendly.
                         </dt>
                         <dl className='info-list__header'>“Okay then! But where do I stay in case I need some sleep?”</dl>
                         <dt className='info-list__content'>
-                            There’s plenty of hotels in the area surrounding the
+                            There are plenty of hotels in the area surrounding the
                             conference center. Searching for hotels close to
                             "Oslo Central Station" is a good tip, and should give
                             you a few alternatives to choose from.
@@ -177,7 +177,7 @@ export default () => (
                         <dl className='info-list__header'>“…and about that weird «norsk» you guys are speaking?”</dl>
                         <dt className='info-list__content'>
                             Don’t worry! About 50% of the talks are held in
-                            english, and the spoken language is specified in the
+                            English, and the spoken language is specified in the
                             program. So even if you don’t «snakker norsk», you
                             should still get plenty of learning out of the conference.
                         </dt>
@@ -219,8 +219,8 @@ export default () => (
                 <CenteredHeader>Questions?</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        Not every detail is ready just yet, but if there is
-                        any specific info you miss after reading this page,
+                        Not all details are ready just yet, but if there is
+                        any specific info you are missing after reading this page,
                         just contact us at <a href="mailto:javazone@java.no">javazone@java.no</a> and
                         we’ll try our best to give you an answer.
                     </p>
