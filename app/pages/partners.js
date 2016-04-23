@@ -174,7 +174,7 @@ export default () => (
                             <br />
                             We arrange regular partner meetings for both existing and new partners,
                             where we outline the progress of the conference. See the slides from
-                            our last partner meeting in April for a status update. Contact us for information in English.
+                            our last partner meeting in April for a status update.
                             <br />
                         </P>
                         <P className='partners__prospect'>
