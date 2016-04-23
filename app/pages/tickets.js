@@ -42,17 +42,17 @@ export default () => (
                     <ColumnHeading>Special ticket types</ColumnHeading>
                     <dl className='speakers__accepted'>
                         <dt className='speakers__accepted-title'>Working for one of our partners?</dt>
-                        <dd className='speakers__accepted-description'>Partners may buy tickets at reduced prices until July 1st. <Link to='partners'>Read more about partnerships</Link> of JavaZone and contact us at <a href='mailto:partner@java.no'>partner@java.no</a> to buy tickets.</dd>
+                        <dd className='speakers__accepted-description'>Partners can buy tickets at reduced prices until July 1st. <Link to='partners'>Read more about partnerships</Link> of JavaZone and contact us at <a href='mailto:partner@java.no'>partner@java.no</a> to buy tickets.</dd>
                         <dt className='speakers__accepted-title'>Need more than one ticket?</dt>
-                        <dd className='speakers__accepted-description'>Multiple tickets might be bought at the same time. You can then assign the tickets to the participants by using their email. You can manage your tickets by logging into our webshop.</dd>
+                        <dd className='speakers__accepted-description'>Multiple tickets can be bought at the same time. You can then assign the tickets to the participants via email. You can manage your tickets by logging into our webshop.</dd>
                         <dt className='speakers__accepted-title'>Need an invoice?</dt>
-                        <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if you need that (contact <a href="mailto:javazone@java.no">javazone@java.no</a>), but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though you pay with your personal credit card.</dd>
+                        <dd className='speakers__accepted-description'>Paying by invoice can be accommodated if needed (contact <a href="mailto:javazone@java.no">javazone@java.no</a>), but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though paying with credit card.</dd>
                     </dl>
                 </Column>
                 <Column>
                     <ColumnHeading>About the javaBin tickets</ColumnHeading>
                     <P justify={true}>
-                        If you are a member of javaBin, you can buy your ticket to a reduced price. Both ticket types gives full access to the conference, but javaBin-tickets are discounted by NOK 1000,–
+                        If you are a member of javaBin, you can buy your ticket at reduced price. Both ticket types gives full access to the conference, but javaBin-tickets are discounted by NOK 1000,–
                     </P>
                     <P justify={true}>
                         We fully recommend that you consider a membership before buying your ticket. Anyone is welcome to join javaBin, we have more than 2.000 members from all over the country.
