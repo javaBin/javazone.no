@@ -132,7 +132,7 @@ export default () => (
                         The audience at JavaZone mostly consists of software
                         developers and in general talks and workshops should
                         be technical enough that they include code (although
-                        that is not a requirement). Talks purely related to
+                        this is not a requirement). Talks purely related to
                         practices (agile etc.) are less likely to be accepted.
                     </P>
                     <P justify={true}>
