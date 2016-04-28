@@ -5,8 +5,10 @@ import imageThree from '../assets/partners/overflow.jpg';
 import header from '../assets/header_expo.jpg';
 import partnerProspect from '../assets/partners/partnership-prospectus-javazone2016.pdf';
 import { Page, PageHeading, Container } from '../components/page';
+import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 import { P } from '../components/textblock';
 import partners from '../data/partners';
+import Youtube from '../components/youtube';
 
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
 function shuffle(o){
@@ -83,6 +85,16 @@ export default () => (
             <ul className='partners__logos'>
                 {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
             </ul>
+
+            <CenteredBlock className='partners__video'>
+                <CenteredHeader>The Expo Area</CenteredHeader>
+                <CenteredContent>
+                    <p>
+                        Some text?
+                    </p>
+                    <Youtube id="D8GU_f03lPc" />
+                </CenteredContent>
+            </CenteredBlock>
 
             <div className='textblock partners__role'>
                 <div className='textblock__column textblock__column--dark'>
