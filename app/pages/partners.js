@@ -90,7 +90,12 @@ export default () => (
                 <CenteredHeader>The Expo Area</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        Some text?
+                        The Expo Area is where all the partner stands are located, and because we serve food continously
+                        from restaurant stands in the expo throughout the day, all participants flock to the area in each
+                        break, making this one of the livliest Expo Areas of any conference.
+                    </p>
+                    <p>
+                        See the short timelapse video below for a taste of how the area feels.
                     </p>
                     <Youtube id="D8GU_f03lPc" />
                 </CenteredContent>
