@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var path = require('path');
 
@@ -9,7 +10,7 @@ var node_env = process.env.NODE_ENV || 'development';
 const isDev = node_env === 'development';
 
 const babelLoader = 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-react-require,plugins[]=transform-object-assign';
-const styleLoader = 'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 versions!less-loader?sourceMap';
+const styleLoader = 'css-loader?sourceMap!postcss-loader!less-loader?sourceMap';
 
 const config = {
     entry: './app/app.js',
@@ -39,6 +40,10 @@ const config = {
     devServer: {
         historyApiFallback: true,
         progress: true
+    },
+
+    postcss: function() {
+        return [autoprefixer({browsers: ['last 2 versions']})];
     }
 };
 

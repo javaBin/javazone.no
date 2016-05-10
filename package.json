@@ -12,7 +12,7 @@
     "start": "npm run watch"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
     "babel-plugin-transform-object-assign": "^6.5.0",
@@ -28,6 +28,7 @@
     "indexhtml-webpack-plugin": "^0.1.9",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
+    "postcss-loader": "^0.9.1",
     "q": "^1.4.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
