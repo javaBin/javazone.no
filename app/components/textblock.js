@@ -1,4 +1,4 @@
-import className from 'className';
+import className from 'classname';
 
 export const Block = (props) => {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import className from 'className';
+import className from 'classname';
 import {Link, IndexLink} from 'react-router';
 import logo from '../assets/logo-horisontal-hvit.svg';
 
