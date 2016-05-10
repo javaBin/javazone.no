@@ -14,6 +14,7 @@ import Speakers from './pages/speakers';
 import Tickets from './pages/tickets';
 import MonetaryPolicy from './pages/monetary-policy';
 import Info from './pages/info';
+import Program from './pages/program';
 import NotFound from './pages/404.js';
 
 // Academy
@@ -39,6 +40,7 @@ export default (
         <Route path='academy-oslo' component={AcademyOslo} />
         <Route path='academy-bergen' component={AcademyBergen} />
         <Route path='academy-trondheim' component={AcademyTrondheim} />
+        <Route path='program' component={Program} />
         <Route path='*' component={NotFound} />
     </Route>
 );

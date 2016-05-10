@@ -1,3 +1,4 @@
 import { workshops } from './workshops';
+import { sessions } from './sessions';
 
-export { workshops };
+export { workshops, sessions };
