@@ -3,6 +3,7 @@ import header from '../assets/header_sal1.jpg';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content, SubHeader } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
+import Youtube from '../components/youtube';
 
 const Included = (props) => (
     <li className='included__item'>
@@ -91,6 +92,13 @@ export default () => (
                         with limited seating). Join us, together with almost
                         3.000 fellow developers in September.
                     </p>
+                </CenteredContent>
+            </CenteredBlock>
+
+
+            <CenteredBlock className='partners__video'>
+                <CenteredContent>
+                    <Youtube id="RH82hhejG3Q" />
                 </CenteredContent>
             </CenteredBlock>
 
