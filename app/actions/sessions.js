@@ -1,4 +1,5 @@
 import { get } from '../services/sessions';
+import transformSessions from '../data/sessions';
 export const REQUEST_SESSIONS = 'FETCH_SESSIONS';
 
 function fetchSessions() {
@@ -21,7 +22,7 @@ export function getSessions() {
         dispatch(fetchSessions());
 
         return get().end((err, res) => {
-            dispatch(receiveSessions(res.body));
+            dispatch(receiveSessions(transformSessions(res.body)));
         });
     };
 };
