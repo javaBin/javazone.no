@@ -155,8 +155,8 @@ export default () => (
                 <Header>Tell me more,<br/>tell me more!</Header>
                 <Content>
                     <dl className='info__info-list info-list'>
-                        <dl className='info-list__header'>“Well, for a starter: where is this thing?”</dl>
-                        <dt className='info-list__content'>
+                        <dt className='info-list__header'>“Well, for a starter: where is this thing?”</dt>
+                        <dd className='info-list__content'>
                             As always, JavaZone takes place at Oslo Spektrum in the
                             heart of Oslo. If this doesn’t tell you anything – don’t
                             worry, finding Oslo Spektrum won’t be too hard. You can
@@ -164,16 +164,16 @@ export default () => (
                             your current location to Oslo Spektrum, or use the <a href='https://ruter.no/en/journey-planner' className='page__link'>travel planner</a> with Oslo Spektrum as your destination for public
                             transport. Oh, and if you’re completely lost, don’t be
                             afraid to ask! Most Norwegians are quite friendly.
-                        </dt>
-                        <dl className='info-list__header'>“Okay then! But where do I stay in case I need some sleep?”</dl>
-                        <dt className='info-list__content'>
+                        </dd>
+                        <dt className='info-list__header'>“Okay then! But where do I stay in case I need some sleep?”</dt>
+                        <dd className='info-list__content'>
                             There are plenty of hotels in the area surrounding the
                             conference center. Searching for hotels close to
                             "Oslo Central Station" is a good tip, and should give
                             you a few alternatives to choose from.
-                        </dt>
-                        <dl className='info-list__header'>“And to be sure: what if I get hungry?”</dl>
-                        <dt className='info-list__content'>
+                        </dd>
+                        <dt className='info-list__header'>“And to be sure: what if I get hungry?”</dt>
+                        <dd className='info-list__content'>
                             Learning makes you hungry, and we are of course well
                             aware of this. This is why we have a constant stream
                             of food throughout the whole day, prepared by
@@ -181,14 +181,14 @@ export default () => (
                             There will be 8 restaurants in the Expo area with 16 different food concepts.
                             Believe us, if there is one thing you will not be
                             missing at JavaZone, it is food.
-                        </dt>
-                        <dl className='info-list__header'>“…and about that weird «norsk» you guys are speaking?”</dl>
-                        <dt className='info-list__content'>
+                        </dd>
+                        <dt className='info-list__header'>“…and about that weird «norsk» you guys are speaking?”</dt>
+                        <dd className='info-list__content'>
                             Don’t worry! About 50% of the talks are held in
                             English, and the spoken language is specified in the
                             program. So even if you don’t «snakker norsk», you
                             should still get plenty of learning out of the conference.
-                        </dt>
+                        </dd>
                     </dl>
                 </Content>
             </Block>
