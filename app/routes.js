@@ -17,6 +17,7 @@ import Info from './pages/info';
 import Program from './pages/program';
 import JourneyZone from './pages/journeyzone';
 import NotFound from './pages/404.js';
+import Frivillig from './pages/frivillig';
 
 // Academy
 import AcademyOslo from './pages/academy/oslo';
@@ -43,6 +44,7 @@ export default (
         <Route path='academy-trondheim' component={AcademyTrondheim} />
         <Route path='program' component={Program} />
         <Route path='journeyzone' component={JourneyZone} />
+        <Route path='frivillig' component={Frivillig} />
         <Route path='*' component={NotFound} />
     </Route>
 );
