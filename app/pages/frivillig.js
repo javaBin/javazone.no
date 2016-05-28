@@ -40,7 +40,7 @@ export default () => (
 
             <CenteredBlock className='frivillig__frist'>
                 <CenteredContent>
-                    Frist for å søke er 1. juni 2015. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
+                    Frist for å søke er X. juni 2016. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
                 </CenteredContent>
             </CenteredBlock>
 
@@ -74,7 +74,7 @@ export default () => (
 
             <CenteredBlock className='frivillig__frist'>
                 <CenteredContent>
-                    Frist for å søke er 1. juni 2015. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
+                    Frist for å søke er X. juni 2016. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
                 </CenteredContent>
             </CenteredBlock>
         </Container>
