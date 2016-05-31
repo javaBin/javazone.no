@@ -165,7 +165,7 @@ export default () => (
                             Today you will be sailing! The day starts with a quick sailing and safety intro, before we head out to the sea and set sail for Ylvingen. Along the way there will be practicing, and we’ll fish our own dinner as well.
                         </dd>
                         <dt className='journeyzone__day-title'>Sunday, September 11th</dt>
-                        <dd className='journeyzone__day-content'>Sunday starts slowly with hiking or kayaking, depending on what you would like. Later on, we set sail for Vega where we have a lecture on traditions specific for the Vega islands. We spend the night at Vega Havhotell where we also have a better dinner.</dd>
+                        <dd className='journeyzone__day-content'>Sunday starts slowly with hiking or kayaking, depending on what you would like. Later on, we set sail for Vega where we have a lecture on traditions specific for the Vega islands. We spend the night at Vega Havhotell where we also have a pleasant evening meal.</dd>
                         <dt className='journeyzone__day-title'>Monday, September 12th</dt>
                         <dd className='journeyzone__day-content'>The last day of our trip. You get to choose between sailing back, and traveling by ferry. If you travel by ferry you also get to visit Torghatten, a mountain famous for having a hole straight through it. We meet at Brønnøysund, where we take the plain back to Oslo.</dd>
                     </dl>
