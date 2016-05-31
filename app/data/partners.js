@@ -40,6 +40,5 @@ export default [
     {name: 'ITverket', logo: 'itverket.png', url: 'http://www.itverket.no/'},
     {name: 'EVRY', logo: 'evry.png', url: 'https://www.evry.no/'},
     {name: 'Elastic', logo: 'elastic.png', url: 'https://www.elastic.co/'},
-    {name: 'VRTKL', logo: 'vrtkl.png', url: 'http://vrtkl.no/'},
     {name: 'Arktekk', logo: 'arktekk.png', url: 'http://arktekk.no/'}
 ];
