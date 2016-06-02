@@ -32,7 +32,7 @@ export default [
     {name: 'Greenbird', logo: 'greenbird.png', url: 'http://greenbird.no/'},
     {name: 'Microsoft', logo: 'microsoft.png', url: 'http://www.microsoft.com/nb-no'},
     {name: 'Teleplan', logo: 'teleplan.png', url: 'http://www.teleplanglobe.no'},
-    {name: 'Haulmont Technology Limited', logo: 'haulmont.png', url: 'http://www.haulmont.com/'},
+    {name: 'Haulmont Technology Limited', logo: 'haulmont.png', url: 'https://www.cuba-platform.com/'},
     {name: 'Sparebank 1', logo: 'sparebank1.png', url: 'https://www.sparebank1.no/bank/privat.html'},
     {name: 'Schibsted', logo: 'schibsted.png', url: 'http://www.schibsted.com/no/'},
     {name: 'JPro', logo: 'jpro.png', url: 'http://www.jpro.no/'},
