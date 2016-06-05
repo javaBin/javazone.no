@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
 import { getSessions } from '../actions/sessions';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 
 function mapStateToProps(state) {
@@ -9,6 +9,12 @@ function mapStateToProps(state) {
         sessions: state.sessions.sessions
     };
 }
+
+const Session = ({title, speakers}, id) => (
+    <div className='program__session session' key={id}>
+        {speakers} - {title}
+    </div>
+);
 
 const Program = React.createClass({
     componentWillMount() {
@@ -20,7 +26,11 @@ const Program = React.createClass({
 
         return (
             <Page name='program'>
-                {JSON.stringify(sessions, null, 4)}
+                <Container>
+                    <ul className='program'>
+                        {sessions.map(Session)}
+                    </ul>
+                </Container>
             </Page>
         );
     }
