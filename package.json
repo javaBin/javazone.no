@@ -48,5 +48,8 @@
   },
   "author": "",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
 }
