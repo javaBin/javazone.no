@@ -78,7 +78,7 @@ const CenteredButton = ({children}) => (
     <CenteredBlock>
         <CenteredContent>
             <p>
-                <a href='#' className='button button--green button--big'>{children}</a>
+                <a href='https://docs.google.com/forms/d/1-TxXhyC9lL6zNhb02v3-Bff5tmTeTMxb85CQn3y0Ot0/viewform' className='button button--green button--big'>{children}</a>
             </p>
         </CenteredContent>
     </CenteredBlock>
@@ -109,8 +109,8 @@ export default () => (
                     <SubHeader>When?! Where?!</SubHeader>
 
                     <p>
-                        We start the trip in Oslo the day after JavaZone, and will be back again in Oslo by Monday September 12th.
-                        Everything is planned, so all you need to do is meet at <a href='https://www.google.no/maps/place/Oslo+Airport/@60.1141771,10.7268802,10z/data=!4m5!3m4!1s0x4641838b248a1cbf:0xcca0add4a7eb5b82!8m2!3d60.1975501!4d11.1004153?hl=en'>Oslo Airport, Gardermoen</a>.
+                        We start the trip in Oslo the day after JavaZone Friday September 9th, and will be back again in Oslo by Monday September 12th.
+                        Everything is planned, so all you need to do is meet up at <a href='https://www.google.no/maps/place/Oslo+Airport/@60.1141771,10.7268802,10z/data=!4m5!3m4!1s0x4641838b248a1cbf:0xcca0add4a7eb5b82!8m2!3d60.1975501!4d11.1004153?hl=en'>Oslo Airport, Gardermoen</a>.
                     </p>
 
                     <SubHeader>Who can attend?</SubHeader>
@@ -127,19 +127,18 @@ export default () => (
                 <Header>So, what is this Helgeland place?</Header>
                 <Content>
                     <p>
-                        Glad you asked! Helgeland is the southern part of Northern Norway. It might not sound that interesting,
-                        but its coastline is actually world famous because of the dramatic landscape with pointy mountains coming straight
-                        out of the ocean. Each year, a large number of tourists come here to drive along the coast and see this magnificent
-                        landscape.
+                        Glad you asked! Helgeland is the southern part of Northern Norway. The coastline is world famous for it's dramatic landscape with pointy mountains coming straight
+                        out of the ocean. Each year, a large number of tourists come here to drive along the coast and see this magnificent landscape. We won't just see the coastline, we'll
+                        actuallly sail among it!
                     </p>
 
                     <p>
-                        Helgeland is big, and it won’t be time to see everything, but we have picked quite a few nice places for you to visit.
+                        Helgeland is big, and it won’t be time to see everything, but we have picked quite a few nice places for us to visit. See the detailed program below.
                     </p>
                 </Content>
             </Block>
 
-            <CenteredButton>I want to attend!</CenteredButton>
+            <CenteredButton>Apply for a spot at JourneyZone 2016</CenteredButton>
         </Container>
 
             <div className='journeyzone__map'>
@@ -152,27 +151,27 @@ export default () => (
                 <Content>
                     <p>
                         The program is, as usual, tightly packed and packed full of interesting events. The main event is sailing,
-                        but along the way there are lots of other events as well!
+                        but along the way there are lots of other events as well! There might be small changes to the program due to the weather.
                     </p>
 
                     <dl>
                         <dt className='journeyzone__day-title'>Friday, September 9th</dt>
                         <dd className='journeyzone__day-content'>
-                            We meet up at Oslo Airport, Gardermoen, and take the plane up to Brønnøysund together. Here, we’ll go directly to the boats and stay there for the night.
+                            We meet up at Oslo Airport, Gardermoen, and fly by plane up to Brønnøysund. Here, we’ll go directly to the boats and stay there for the night.
                         </dd>
                         <dt className='journeyzone__day-title'>Saturday, September 10th</dt>
                         <dd className='journeyzone__day-content'>
                             Today you will be sailing! The day starts with a quick sailing and safety intro, before we head out to the sea and set sail for Ylvingen. Along the way there will be practicing, and we’ll fish our own dinner as well.
                         </dd>
                         <dt className='journeyzone__day-title'>Sunday, September 11th</dt>
-                        <dd className='journeyzone__day-content'>Sunday starts slowly with hiking or kayaking, depending on what you would like. Later on, we set sail for Vega where we have a lecture on traditions specific for the Vega islands. We spend the night at Vega Havhotell where we also have a pleasant evening meal.</dd>
+                        <dd className='journeyzone__day-content'>Sunday starts slowly with hiking or kayaking, depending on what you would like. Later on, we set sail for Vega where we have a guided tour on traditions specific for the Vega islands. We spend the night at Vega Havhotell where we also have a pleasant evening meal.</dd>
                         <dt className='journeyzone__day-title'>Monday, September 12th</dt>
-                        <dd className='journeyzone__day-content'>The last day of our trip. You get to choose between sailing back, and traveling by ferry. If you travel by ferry you also get to visit Torghatten, a mountain famous for having a hole straight through it. We meet at Brønnøysund, where we take the plain back to Oslo.</dd>
+                        <dd className='journeyzone__day-content'>The last day of our trip. You get to choose between sailing back, and traveling by ferry. If you travel by ferry you also get to visit Torghatten, a mountain famous for having a hole straight through it. We meet at Brønnøysund, where we take the plane back to Oslo.</dd>
                     </dl>
                 </Content>
             </Block>
 
-            <CenteredButton>I want to attend!</CenteredButton>
+            <CenteredButton>Apply for a spot at JourneyZone 2016</CenteredButton>
         </Container>
     </Page>
 );
