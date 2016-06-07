@@ -1,15 +1,30 @@
-import {map} from 'lodash';
+import {map, mapKeys, find, reduce, flowRight, get} from 'lodash/fp';
 
-const getSpeakers = (session) => map(session.foredragsholdere, 'navn').join(', ');
+const formats = {
+    'lightning-talk' : 'Lightning Talks',
+    'workshop': 'Workshops',
+    'presentation': 'Presentations'
+};
 
-function transformSession(session) {
-    return {
-        title: session.tittel,
-        speakers: getSpeakers(session)
-    };
-}
+const getSpeakers = (session) => map('navn')(session.foredragsholdere).join(', ');
+const group = reduce((acc, session) => {
+    var key = find({format: session.format}, acc);
+    if (!key) {
+        key = {format: session.format, sessions: []}
+        acc.push(key);
+    }
+
+    key.sessions.push(session);
+    return acc;
+}, []);
+
+const transformSessions = map(session => ({
+    title: session.tittel,
+    speakers: getSpeakers(session),
+    format: get(session.format)(formats),
+    icon: 'icon-energy'
+}));
 
 export default function(sessions) {
-    console.log(sessions[0]);
-    return sessions.map(transformSession);
+    return flowRight(group, transformSessions)(sessions);
 };
