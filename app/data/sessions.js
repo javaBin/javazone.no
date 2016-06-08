@@ -8,9 +8,9 @@ const formats = {
 
 const getSpeakers = (session) => map('navn')(session.foredragsholdere).join(', ');
 const group = reduce((acc, session) => {
-    var key = find({format: session.format}, acc);
+    const key = find({format: session.format}, acc);
     if (!key) {
-        key = {format: session.format, sessions: []}
+        key = {format: session.format, sessions: []};
         acc.push(key);
     }
 
