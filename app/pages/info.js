@@ -228,11 +228,33 @@ export default () => (
                     <CenteredHeader><i className='icon-like info__coc-icon'></i> A few very important principles</CenteredHeader>
                     <CenteredContent>
                         <p>
-                            JavaZone is a 100% community-organizied conference created by javaBin. The program is curated by our independent program committee, and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
+                            JavaZone is a 100% community-organized conference created by javaBin. The program is curated by our independent program committee,
+                            and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
+                            <br />See our <a href='/monetary-policy'>monetary policy</a> for details.
                         </p>
 
                         <p>
-                            We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, and we require that you treat your fellow conference participants with respect. We reserve the right to take any action necessary to make sure this principle is upheld.
+                            We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same.
+                            Everyone is welcome at JavaZone, but we do require that you treat your fellow conference participants with respect.
+                            See <a href="http://confcodeofconduct.com">confcodeofconduct.com</a> for a minimum of what we expect.
+                            We reserve the right to take any action necessary to make sure this principle is upheld.
+                        </p>
+
+                        <h3>Should any unwanted event occur, we're here to help:</h3>
+                        <p>
+                            <b>Before the conference:</b>
+                            <br />
+                            You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a>
+                            <br />
+                            (this goes to a small group of people, the core organizers)
+
+                            <br/><br />
+
+                            <b>During the conference:</b>
+                            <br />
+                            Ask at the info stand, and we'll be in touch.
+                            <br />
+                            An emergency hotline telephone number will also be made availiable.
                         </p>
                     </CenteredContent>
                 </CenteredBlock>
