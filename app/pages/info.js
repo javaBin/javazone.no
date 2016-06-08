@@ -254,7 +254,7 @@ export default () => (
                             <br />
                             Ask at the info stand, and we'll be in touch.
                             <br />
-                            An emergency hotline telephone number will also be made availiable.
+                            Emergency contact information will also be availiable at the info stand.
                         </p>
                     </CenteredContent>
                 </CenteredBlock>
