@@ -40,5 +40,7 @@ export default [
     {name: 'ITverket', logo: 'itverket.png', url: 'http://www.itverket.no/'},
     {name: 'EVRY', logo: 'evry.png', url: 'https://www.evry.no/'},
     {name: 'Elastic', logo: 'elastic.png', url: 'https://www.elastic.co/'},
-    {name: 'Arktekk', logo: 'arktekk.png', url: 'http://arktekk.no/'}
+    {name: 'Arktekk', logo: 'arktekk.png', url: 'http://arktekk.no/'},
+    {name: 'Vaadin', logo: 'vaadin.png', url: 'https://vaadin.com'},
+    {name: 'Telia', logo: 'telia.png', url: 'https://telia.no'}
 ];
