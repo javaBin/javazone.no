@@ -177,7 +177,7 @@ export default () => (
                             Learning makes you hungry, and we are of course well
                             aware of this. This is why we have a constant stream
                             of food throughout the whole day, prepared by
-                            professional chefs from some of Oslo's best restaurants.
+                            professional chefs from some of Oslo’s best restaurants.
                             There will be 8 restaurants in the Expo area with 16 different food concepts.
                             Believe us, if there is one thing you will not be
                             missing at JavaZone, it is food.
@@ -218,6 +218,23 @@ export default () => (
                             <Format key={id} {...format} />
                         ))}
                     </ul>
+                </CenteredBlock>
+            </Container>
+        </div>
+
+        <div className='info__coc'>
+            <Container>
+                <CenteredBlock>
+                    <CenteredHeader><i className='icon-like info__coc-icon'></i> A few very important principles</CenteredHeader>
+                    <CenteredContent>
+                        <p>
+                            JavaZone is a 100% community-organizied conference created by javaBin. The program is curated by our independent program committee, and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
+                        </p>
+
+                        <p>
+                            We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, and we require that you treat your fellow conference participants with respect. We reserve the right to take any action necessary to make sure this principle is upheld.
+                        </p>
+                    </CenteredContent>
                 </CenteredBlock>
             </Container>
         </div>
