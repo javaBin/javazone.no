@@ -62,8 +62,9 @@ export default () => (
                         <Dt>Approval for refunds</Dt>
                         <Dd>
                             All costs must be approved by e-mail from
-                            javazone@java.no. We prefer that you find reasonably
-                            priced airlines and hotels.
+                            javazone@java.no. We require you to book a reasonably
+                            priced economy seat. The hotel room is booked and
+                            payed for by JavaZone.
                         </Dd>
                         <Dt>No up-front refunds</Dt>
                         <Dd>
