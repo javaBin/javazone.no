@@ -138,6 +138,16 @@ export default () => (
                 </Content>
             </Block>
 
+            <Block>
+                <Header>Personal expenses</Header>
+                <Content>
+                    <p>
+                        JavaZone will cover almost all your expenses which is considered your reward for holding your talk at the conference.
+                        To ensure that we stretch the budget to accomodate as many as possible we require that all attendees <b>pay NOK 2000</b>.
+                    </p>
+                </Content>
+            </Block>
+
             <CenteredButton>Apply for a spot at JourneyZone 2016</CenteredButton>
         </Container>
 
