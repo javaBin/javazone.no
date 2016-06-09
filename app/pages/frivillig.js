@@ -9,7 +9,7 @@ const CenteredButton = ({children}) => (
     <CenteredBlock>
         <CenteredContent>
             <p>
-                <a href='#' className='button button--green button--big'>{children}</a>
+                <a href='http://bit.ly/jzf2016' className='button button--green button--big' target='_blank'>{children}</a>
             </p>
         </CenteredContent>
     </CenteredBlock>
