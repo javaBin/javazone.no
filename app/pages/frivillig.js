@@ -28,10 +28,10 @@ export default () => (
                 <Header>Hva er JavaZone?</Header>
                 <Content>
                     <p>
-                        Hvert år strømmer over 2000 utviklere til Oslo for å delta på JavaZone. I tillegg kommer over 150 foredragsholdere fra hele verden, pluss mennesker fra over 40 ulike partnere.
+                        Hvert år strømmer nesten 3000 utviklere til Oslo for å delta på JavaZone. I tillegg kommer nærmere 200 foredragsholdere fra hele verden, pluss mennesker fra 45 ulike partnere.
                     </p>
                     <p>
-                        Har du lyst til å bidra til at disse 2.500 menneskene skal få en fantastisk opplevelse, og også få ta del i dette selv? Er du student høsten 2016? Perfekt! Du er akkurat den vi leter etter! Søk som frivillig på JavaZone 2016, og bli med å hjelpe oss å lage tidenes beste JavaZone!
+                        Har du lyst til å bidra til at disse menneskene skal få en fantastisk opplevelse, og også få ta del i dette selv? Er du student høsten 2016? Perfekt! Du er akkurat den vi leter etter! Søk som frivillig på JavaZone 2016, og bli med å hjelpe oss å lage tidenes beste JavaZone!
                     </p>
                 </Content>
             </Block>
@@ -49,7 +49,7 @@ export default () => (
                 </li>
                 <li className='frivillig__question'>
                     <div className='frivillig__header'>Får jeg med meg noe faglig som frivillig?</div>
-                    <div className='frivillig__answer'>Å være frivillig på JavaZone er litt som å være frivillig på en musikkfestival, bare mer nerdete! Du får derfor ca 50% fri, og kan da gå på foredrag, spise god mat og snakke med kule folk.</div>
+                    <div className='frivillig__answer'>Å være frivillig på JavaZone er litt som å være frivillig på en musikkfestival, bare mer nerdete! Du får ca 50% fri, og kan da gå på foredrag, spise god mat og snakke med kule folk.</div>
                 </li>
                 <li className='frivillig__question'>
                     <div className='frivillig__header'>Hva med reise hvis jeg ikke bor i Oslo?</div>
@@ -57,10 +57,10 @@ export default () => (
                 </li>
                 <li className='frivillig__question'>
                     <div className='frivillig__header'>Får jeg bli med på AweZone?</div>
-                    <div className='frivillig__answer'>Selvsagt får du det! JavaZone er ikke det samme uten! Her får du se 6 band og snakke med de kuleste folka i IT-bransjen! Ingen jobbing på kvelden – bare fest og morro =)</div></li>
+                    <div className='frivillig__answer'>Selvsagt får du det! JavaZone er ikke det samme uten! Her får du se de kuleste bandene og snakke med de beste folka i IT-bransjen! Ingen jobbing på kvelden – bare fest og morro =)</div></li>
                 <li className='frivillig__question'>
                     <div className='frivillig__header'>I don’t speak norwegian… What about me?</div>
-                    <div className='frivillig__answer'>Beeing a volunteer at JavaZone requires you to be fluent in both norwegian and english. This is because you are one of the main goto-people for 2500 guests.</div>
+                    <div className='frivillig__answer'>Beeing a volunteer at JavaZone requires you to be fluent in both norwegian and english. This is because you are one of the main goto-people for 3000 guests.</div>
                 </li>
             </ul>
 
