@@ -38,12 +38,6 @@ export default () => (
 
             <CenteredButton>Meld deg som frivillig!</CenteredButton>
 
-            <CenteredBlock className='frivillig__frist'>
-                <CenteredContent>
-                    Frist for å søke er X. juni 2016. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
-                </CenteredContent>
-            </CenteredBlock>
-
             <ul className='frivillig__questions'>
                 <li className='frivillig__question'>
                     <div className='frivillig__header'>Hvem kan bli frivillig på JavaZone?</div>
@@ -71,12 +65,6 @@ export default () => (
             </ul>
 
             <CenteredButton>Meld deg som frivillig!</CenteredButton>
-
-            <CenteredBlock className='frivillig__frist'>
-                <CenteredContent>
-                    Frist for å søke er X. juni 2016. Søknader mottatt etter dette<br />blir løpende vurdert dersom vi trenger flere frivillige.
-                </CenteredContent>
-            </CenteredBlock>
         </Container>
     </Page>
 );
