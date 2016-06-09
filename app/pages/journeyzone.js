@@ -176,7 +176,7 @@ export default () => (
                         <dt className='journeyzone__day-title'>Sunday, September 11th</dt>
                         <dd className='journeyzone__day-content'>Sunday starts slowly with hiking or kayaking, depending on what you would like. Later on, we set sail for Vega where we have a guided tour on traditions specific for the Vega islands. We spend the night at Vega Havhotell where we also have a pleasant evening meal.</dd>
                         <dt className='journeyzone__day-title'>Monday, September 12th</dt>
-                        <dd className='journeyzone__day-content'>The last day of our trip. You get to choose between sailing back, and traveling by ferry. If you travel by ferry you also get to visit Torghatten, a mountain famous for having a hole straight through it. We meet at Brønnøysund, where we take the plane back to Oslo.</dd>
+                        <dd className='journeyzone__day-content'>The last day of our trip. You get to choose between sailing back, and traveling by ferry. If you travel by ferry you also get to visit Torghatten, a mountain famous for having a hole straight through it. We meet at Brønnøysund and fly back to Oslo.</dd>
                     </dl>
                 </Content>
             </Block>
