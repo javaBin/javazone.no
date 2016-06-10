@@ -1,5 +1,11 @@
 import request from 'superagent';
 
-export function get() {
-    return request.get('https://javazone.no/javazone-web-api/events/javazone_2015/sessions');
+const baseUrl = 'https://javazone.no/javazone-web-api/events/javazone_2015/sessions';
+
+export function getAllSessions() {
+    return request.get(baseUrl);
+}
+
+export function getSingleSession(id) {
+    return request.get(`${baseUrl}/${id}`);
 }
