@@ -1,4 +1,4 @@
-import {map, mapKeys, find, reduce, flowRight, get} from 'lodash/fp';
+import {map, mapKeys, find, reduce, compose, get, capitalize, kebabCase} from 'lodash/fp';
 
 const formats = {
     'lightning-talk' : 'Lightning Talks',
@@ -6,7 +6,7 @@ const formats = {
     'presentation': 'Presentations'
 };
 
-const getSpeakers = (session) => map('navn')(session.foredragsholdere).join(', ');
+const getSpeakers = session => map('navn')(session.foredragsholdere).join(', ');
 const group = reduce((acc, session) => {
     let key = find({format: session.format}, acc);
     if (!key) {
@@ -22,9 +22,9 @@ const transformSessions = map(session => ({
     title: session.tittel,
     speakers: getSpeakers(session),
     format: get(session.format)(formats),
-    icon: 'icon-energy'
+    icon: 'icon-energy',
+    language: capitalize(session.sprak),
+    id: kebabCase(session.tittel)
 }));
 
-export default function(sessions) {
-    return flowRight(group, transformSessions)(sessions);
-};
+export default compose(group, transformSessions);
