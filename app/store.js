@@ -3,9 +3,9 @@ import {syncHistory, routeReducer} from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
 import { workshops, sessions } from './reducers';
 import browserHistory from 'history/lib/createBrowserHistory';
-import useScroll from 'scroll-behavior/lib/useSimpleScroll';
+import withScroll from 'scroll-behavior';
 
-const history = useScroll(browserHistory)();
+const history = withScroll(browserHistory());
 const middleware = syncHistory(history);
 const reducer = combineReducers({
     workshops,
