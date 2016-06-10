@@ -15,6 +15,12 @@ const styleLoader = 'css-loader?sourceMap!postcss-loader!less-loader?sourceMap';
 const config = {
     entry: './app/app.js',
 
+    resolve: {
+        root: [
+            path.resolve('./app')
+        ]
+    },
+
     output: {
         filename: 'app.js',
         path: output
