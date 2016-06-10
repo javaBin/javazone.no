@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { store } from '../store';
 import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
@@ -11,12 +12,11 @@ function mapStateToProps(state) {
     };
 }
 
-const Session = ({title, speakers, icon}, id) => (
-    <li className='sessions__session session' key={id}>
+const Session = ({title, speakers, icon, language, id}, key) => (
+    <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
-        <div className='session__title'>
-            {title}
-        </div>
+        <span className='session__lang'>{language}</span>
+        <Link to={`/program/${id}`} className='session__title'>{title}</Link>
         <div className='session__speakers'>{speakers}</div>
     </li>
 );
@@ -32,12 +32,13 @@ const Format = ({format, sessions}, id) => (
 
 const Program = React.createClass({
     componentWillMount() {
-        this.props.getSessions();
+        if (this.props.sessions.length === 0) {
+            this.props.getSessions();
+        }
     },
 
     render() {
         const sessions = this.props.sessions;
-        console.log(sessions);
         return (
             <Page name='program'>
                 <Container>
