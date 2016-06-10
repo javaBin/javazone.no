@@ -6,6 +6,6 @@ export function getAllSessions() {
     return request.get(baseUrl);
 }
 
-export function getSingleSession(id) {
-    return request.get(`${baseUrl}/${id}`);
+export function getSingleSession(url) {
+    return request.get(url);
 }

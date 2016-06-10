@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
-import { getSession } from '../actions/session';
+import { getSession, removeSession } from '../actions/session';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
@@ -11,9 +11,9 @@ function mapStateToProps(state) {
     };
 }
 
-const Session = ({title}) => (
+const Session = ({tittel}) => (
     <CenteredBlock>
-        <CenteredHeader>{title}</CenteredHeader>
+        <CenteredHeader>{tittel}</CenteredHeader>
         <CenteredContent>
             <p>
                 Test
@@ -24,17 +24,22 @@ const Session = ({title}) => (
 
 const Loading = () => (
     <CenteredBlock>
-        <CenteredHeader>'Loading session...'</CenteredHeader>
+        <CenteredHeader>Loading session...</CenteredHeader>
     </CenteredBlock>
 );
 
-const Program = React.createClass({
+const Details = React.createClass({
     componentWillMount() {
         this.props.getSession(this.props.params.id);
     },
 
+    componentWillUnmount() {
+        this.props.removeSession();  
+    },
+
     render() {
         const session = this.props.session;
+        console.log(session);
         // const sessions = this.props.sessions;
         const content = session ? Session(session) : Loading();
         return (
@@ -47,4 +52,4 @@ const Program = React.createClass({
     }
 });
 
-export default connect(mapStateToProps, { getSession })(Program);
+export default connect(mapStateToProps, { getSession, removeSession })(Details);

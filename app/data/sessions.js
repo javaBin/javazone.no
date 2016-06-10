@@ -1,4 +1,4 @@
-import {map, mapKeys, find, reduce, compose, get, capitalize, kebabCase} from 'lodash/fp';
+import {join, map, mapKeys, find, reduce, compose, get, capitalize, kebabCase} from 'lodash/fp';
 
 const formats = {
     'lightning-talk' : 'Lightning Talks',
@@ -6,7 +6,8 @@ const formats = {
     'presentation': 'Presentations'
 };
 
-const getSpeakers = session => map('navn')(session.foredragsholdere).join(', ');
+const getSpeakers = compose(join(', '), map('navn'));
+const getDetails = find({rel: 'detaljer'})
 const group = reduce((acc, session) => {
     let key = find({format: session.format}, acc);
     if (!key) {
@@ -20,11 +21,16 @@ const group = reduce((acc, session) => {
 
 const transformSessions = map(session => ({
     title: session.tittel,
-    speakers: getSpeakers(session),
+    speakers: getSpeakers(session.foredragsholdere),
     format: get(session.format)(formats),
     icon: 'icon-energy',
     language: capitalize(session.sprak),
-    id: kebabCase(session.tittel)
+    id: kebabCase(session.tittel),
+    details: (function() {
+        const a = getDetails(session.links)
+        console.trace();
+        return a.href;
+    })()
 }));
 
 export default compose(group, transformSessions);
