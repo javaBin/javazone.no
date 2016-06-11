@@ -39,8 +39,6 @@ const Details = React.createClass({
 
     render() {
         const session = this.props.session;
-        console.log(session);
-        // const sessions = this.props.sessions;
         const content = session ? Session(session) : Loading();
         return (
             <Page name='program'>
