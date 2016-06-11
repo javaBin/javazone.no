@@ -11,7 +11,7 @@ const getDetails = find({rel: 'detaljer'});
 const group = reduce((acc, session) => {
     let key = find({format: session.format}, acc);
     if (!key) {
-        key = {format: session.format, sessions: []};
+        key = {format: session.format, sessions: [], className: 'sessions__format-title--' + session.className};
         acc.push(key);
     }
 
@@ -23,6 +23,7 @@ const transformSessions = map(session => ({
     title: session.tittel,
     speakers: getSpeakers(session.foredragsholdere),
     format: get(session.format)(formats),
+    className: session.format,
     icon: 'icon-energy',
     language: capitalize(session.sprak),
     id: kebabCase(session.tittel),
