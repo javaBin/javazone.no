@@ -7,7 +7,7 @@ const formats = {
 };
 
 const getSpeakers = compose(join(', '), map('navn'));
-const getDetails = find({rel: 'detaljer'})
+const getDetails = find({rel: 'detaljer'});
 const group = reduce((acc, session) => {
     let key = find({format: session.format}, acc);
     if (!key) {
@@ -27,7 +27,7 @@ const transformSessions = map(session => ({
     language: capitalize(session.sprak),
     id: kebabCase(session.tittel),
     details: (function() {
-        const a = getDetails(session.links)
+        const a = getDetails(session.links);
         console.trace();
         return a.href;
     })()

@@ -32,17 +32,17 @@ export function getSession(id) {
         const sessions = getState().sessions.sessions;
         if (sessions.length === 0) {
             return getAllSessions().end((err, res) => {
-                const transformedSessions = transformSessions(res.body)
+                const transformedSessions = transformSessions(res.body);
                 return retrieveSession(dispatch, transformedSessions, id);
             });
         } else {
             return retrieveSession(dispatch, sessions, id);
         }
-    }
+    };
 }
 
 export function removeSession() {
     return function(dispatch) {
         dispatch(receiveSession(null));
-    }
+    };
 }

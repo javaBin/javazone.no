@@ -34,7 +34,7 @@ const Details = React.createClass({
     },
 
     componentWillUnmount() {
-        this.props.removeSession();  
+        this.props.removeSession();
     },
 
     render() {
