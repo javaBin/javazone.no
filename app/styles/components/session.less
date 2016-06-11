@@ -5,6 +5,7 @@
     position: relative;
 
     &__lang {
+        color: @grey;
         font-weight: 400;
         position: absolute;
         text-transform: uppercase;
@@ -18,11 +19,17 @@
     }
 
     &__title {
+        border-bottom: 1px solid transparent;
         color: @black;
         display: inline-block;
         font-size: 1.3rem;
         margin-left: 40px;
         text-decoration: none;
+        transition: border-bottom-color .4s ease-in-out;
+
+        &:hover {
+            border-bottom-color: fade(@black, 50%);
+        }
     }
 
     &__speakers {

@@ -21,9 +21,9 @@ const Session = ({title, speakers, icon, language, id}, key) => (
     </li>
 );
 
-const Format = ({format, sessions}, id) => (
+const Format = ({format, sessions, className}, id) => (
     <li className='sessions__format' key={id}>
-        <div className='sessions__format-title'>{format}</div>
+        <div className={`sessions__format-title ${className}`}>{format}</div>
         <ul className='sessions__sessions'>
             {sessions.map(Session)}
         </ul>

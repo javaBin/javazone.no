@@ -5,20 +5,40 @@
     margin: 5rem 0 0 0;
     padding: 0;
 
+    &__format {
+        background: @white;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        margin: 5rem 0 0 0;
+        padding: 0 20px;
+    }
+
     &__format-title {
-        background: @black;
-        // border-bottom: 1px solid grey;
-        // border-top: 1px solid grey;
-        font-size: 1.2rem;
+        display: inline-block;
+        font-size: 1.5rem;
         font-weight: bold;
-        padding: 20px;
+        margin-left: 40px;
+        padding: 30px 0 10px;
+
+        &--lightning-talk {
+            border-bottom: 5px solid fade(@yellow, 50%);
+            color: fade(@yellow, 50%);
+        }
+
+        &--workshop {
+            border-bottom: 7px solid fade(@green--light, 50%);
+            color: fade(@green--light, 50%);
+        }
+
+        &--presentation {
+            border-bottom: 7px solid fade(@burgundy, 50%);
+            color: fade(@burgundy, 50%);
+        }
+
     }
 
     &__sessions {
-        background: @white;
-        color: @black;
         list-style: none;
         margin: 0;
-        padding: 20px;
+        padding: 20px 0;
     }
 }
