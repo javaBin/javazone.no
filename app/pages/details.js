@@ -18,6 +18,17 @@ const Speaker = ({navn, bildeUri}, id) => (
     </div>
 );
 
+const Bio = ({navn, bio}, id) => (
+    <Block key={id}>
+        <Header>{navn}</Header>
+        <Content>
+            <p>
+                {bio}
+            </p>
+        </Content>
+    </Block>
+);
+
 const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere}) => (
     <Container>
         <CenteredBlock>
@@ -40,6 +51,8 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere}) => (
                 </p>
             </Content>
         </Block>
+
+        {foredragsholdere.map(Bio)}
     </Container>
 );
 
