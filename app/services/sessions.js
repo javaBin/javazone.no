@@ -7,5 +7,6 @@ export function getAllSessions() {
 }
 
 export function getSingleSession(url) {
-    return request.get(url);
+    const fixedUrl = url.replace('http', 'https');
+    return request.get(fixedUrl);
 }
