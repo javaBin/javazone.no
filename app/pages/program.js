@@ -58,7 +58,7 @@ const Program = React.createClass({
                             </p>
                             <p>
                                 <b>This is not the complete program</b>, talks are still being added as more and more people accept.
-                                In June we'll publish the finished program with info about timeslots and rooms as well.
+                                We'll publish the finished program over the summer, with info about timeslots and rooms as well.
                             </p>
                             <p>
                                 Does the program entice you? Well, make sure to <a href="/tickets">get your ticket</a> sooner rather than later,
