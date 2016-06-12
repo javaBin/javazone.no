@@ -14,7 +14,7 @@ const group = reduce((acc, session) => {
         key = {
             format: session.format,
             sessions: [],
-            className: 'sessions__format-title--' + session.format,
+            className: `sessions__format-title--${session.format}`,
             sortIndex: get(session.format)(sortIndexes)
         };
         acc.push(key);
