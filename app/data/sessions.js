@@ -1,9 +1,9 @@
-import {join, map, mapKeys, find, reduce, compose, get, capitalize, kebabCase} from 'lodash/fp';
+import {join, map, find, reduce, compose, get, capitalize, kebabCase, sortBy} from 'lodash/fp';
 
-const formats = {
-    'lightning-talk' : 'Lightning Talks',
-    'workshop': 'Workshops',
-    'presentation': 'Presentations'
+const sortIndexes = {
+    'lightning-talk' : 2,
+    'workshop': 1,
+    'presentation': 0
 };
 
 const getSpeakers = compose(join(', '), map('navn'));
@@ -11,7 +11,12 @@ const getDetails = find({rel: 'detaljer'});
 const group = reduce((acc, session) => {
     let key = find({format: session.format}, acc);
     if (!key) {
-        key = {format: session.format, sessions: [], className: 'sessions__format-title--' + session.className};
+        key = {
+            format: session.format,
+            sessions: [],
+            className: 'sessions__format-title--' + session.format,
+            sortIndex: get(session.format)(sortIndexes)
+        };
         acc.push(key);
     }
 
@@ -22,16 +27,11 @@ const group = reduce((acc, session) => {
 const transformSessions = map(session => ({
     title: session.tittel,
     speakers: getSpeakers(session.foredragsholdere),
-    format: get(session.format)(formats),
-    className: session.format,
+    format: session.format,
     icon: 'icon-energy',
     language: capitalize(session.sprak),
     id: kebabCase(session.tittel),
-    details: (function() {
-        const a = getDetails(session.links);
-        console.trace();
-        return a.href;
-    })()
+    details: getDetails(session.links).href
 }));
 
-export default compose(group, transformSessions);
+export default compose(sortBy('sortIndex'), group, transformSessions);

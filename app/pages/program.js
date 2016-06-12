@@ -5,6 +5,13 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
+import { get } from 'lodash/fp';
+
+const formats = {
+    'lightning-talk' : 'Lightning Talks',
+    'workshop': 'Workshops',
+    'presentation': 'Presentations'
+};
 
 function mapStateToProps(state) {
     return {
@@ -23,7 +30,7 @@ const Session = ({title, speakers, icon, language, id}, key) => (
 
 const Format = ({format, sessions, className}, id) => (
     <li className='sessions__format' key={id}>
-        <div className={`sessions__format-title ${className}`}>{format}</div>
+        <div className={`sessions__format-title ${className}`}>{get(format)(formats)}</div>
         <ul className='sessions__sessions'>
             {sessions.map(Session)}
         </ul>
