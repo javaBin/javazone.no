@@ -1,4 +1,4 @@
-import {join, map, find, reduce, compose, get, capitalize, kebabCase, sortBy} from 'lodash/fp';
+import {join, map, find, reduce, compose, get, kebabCase, sortBy} from 'lodash/fp';
 
 const sortIndexes = {
     'lightning-talk' : 2,
@@ -29,7 +29,7 @@ const transformSessions = map(session => ({
     speakers: getSpeakers(session.foredragsholdere),
     format: session.format,
     icon: 'icon-energy',
-    language: capitalize(session.sprak),
+    language: session.sprak,
     id: kebabCase(session.tittel),
     details: getDetails(session.links).href
 }));
