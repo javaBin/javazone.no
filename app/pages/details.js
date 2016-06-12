@@ -4,6 +4,18 @@ import { getSession, removeSession } from '../actions/session';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
+import { get } from 'lodash/fp';
+
+const languages = {
+    'no': 'Norwegian',
+    'en': 'English'
+};
+
+const formats = {
+    'lightning-talk' : 'Lightning Talk',
+    'workshop': 'Workshop',
+    'presentation': 'Presentation'
+};
 
 function mapStateToProps(state) {
     return {
@@ -29,7 +41,7 @@ const Bio = ({navn, bio}, id) => (
     </Block>
 );
 
-const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere}) => (
+const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format}) => (
     <Container>
         <CenteredBlock>
             <div className='details__speakers'>
@@ -53,6 +65,24 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere}) => (
         </Block>
 
         {foredragsholdere.map(Bio)}
+
+        <Block>
+            <Header>Format</Header>
+            <Content>
+                <p>
+                    {get(format)(formats)}
+                </p>
+            </Content>
+        </Block>
+
+        <Block>
+            <Header>Language</Header>
+            <Content>
+                <p>
+                    {get(sprak)(languages)}
+                </p>
+            </Content>
+        </Block>
     </Container>
 );
 
