@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { store } from '../store';
 import { getSession, removeSession } from '../actions/session';
 import { Page, PageHeading, Container } from '../components/page';
-import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
+import { Block, Header, Content } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 
 function mapStateToProps(state) {
@@ -11,21 +11,44 @@ function mapStateToProps(state) {
     };
 }
 
-const Session = ({tittel}) => (
-    <CenteredBlock>
-        <CenteredHeader>{tittel}</CenteredHeader>
-        <CenteredContent>
-            <p>
-                Test
-            </p>
-        </CenteredContent>
-    </CenteredBlock>
+const Speaker = ({navn, bildeUri}, id) => (
+    <div className='details__speaker' key={id}>
+        <img className='details__speaker-image' src={`${bildeUri}?size=240`} />
+        <div className='details__speaker-name'>{navn}</div>
+    </div>
+);
+
+const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere}) => (
+    <Container>
+        <CenteredBlock>
+            <div className='details__speakers'>
+                {foredragsholdere.map(Speaker)}
+            </div>
+            <CenteredHeader>{tittel}</CenteredHeader>
+            <CenteredContent>
+            </CenteredContent>
+        </CenteredBlock>
+
+        <Block>
+            <Header>About</Header>
+            <Content>
+                <p className='details__summary'>
+                    {oppsummering}
+                </p>
+                <p className='details__description'>
+                    {beskrivelse}
+                </p>
+            </Content>
+        </Block>
+    </Container>
 );
 
 const Loading = () => (
-    <CenteredBlock>
-        <CenteredHeader>Loading session...</CenteredHeader>
-    </CenteredBlock>
+    <Container>
+        <CenteredBlock>
+            <CenteredHeader>Loading session...</CenteredHeader>
+        </CenteredBlock>
+    </Container>
 );
 
 const Details = React.createClass({
@@ -39,12 +62,11 @@ const Details = React.createClass({
 
     render() {
         const session = this.props.session;
+        console.log(session);
         const content = session ? Session(session) : Loading();
         return (
-            <Page name='program'>
-                <Container>
+            <Page name='details'>
                     {content}
-                </Container>
             </Page>
         );
     }
