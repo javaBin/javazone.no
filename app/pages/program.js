@@ -50,11 +50,19 @@ const Program = React.createClass({
             <Page name='program'>
                 <Container>
                     <CenteredBlock>
-                        <CenteredHeader>JavaZone 2016 – The Program</CenteredHeader>
+                        <CenteredHeader>JavaZone 2016 – Preliminary program</CenteredHeader>
                         <CenteredContent>
                             <p>
-                                The JavaZone Program Committee has been hard at work, and can now present the program for JavaZone 2016. This is not the complete program,
-                                talks are still being added as more and more people accept. @Espen eller noen i programkommiteen: Si noe om at vi nå har 2 tracks med lyntaler?
+                                The JavaZone Program Committee has been hard at work, and can now proudly present the talks planned for JavaZone 2016.
+                                We have a broad range of topics, and we'll also have lightning talks of both 10 and 20 minutes length with two rooms dedicated to lightning talks.
+                            </p>
+                            <p>
+                                <b>This is not the complete program</b>, talks are still being added as more and more people accept.
+                                In June we'll publish the finished program with info about timeslots and rooms as well.
+                            </p>
+                            <p>
+                                Does the program entice you? Well, make sure to <a href="/tickets">get your ticket</a> sooner rather than later,
+                                as we might actually be totally sold out this year – it almost happened last year.
                             </p>
                         </CenteredContent>
                     </CenteredBlock>
