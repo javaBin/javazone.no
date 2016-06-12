@@ -7,11 +7,39 @@ import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 import { get } from 'lodash/fp';
 
+const SETTINGS_KEY = 'programsettings';
+
 const formats = {
     'lightning-talk' : 'Lightning Talks',
     'workshop': 'Workshops',
     'presentation': 'Presentations'
 };
+
+const defaultSettings = {
+    en: true,
+    no: true
+};
+
+function getDefaultSettings() {
+    try {
+        const settings = localStorage.getItem(SETTINGS_KEY);
+        if (!settings) {
+            return defaultSettings;
+        }
+
+        return JSON.parse(settings);
+    } catch (e) {
+        return defaultSettings;
+    }
+}
+
+function saveSettings(settings) {
+    try {
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+    } catch (e) {
+        console.warn('Could not save program filters', e);
+    }
+}
 
 function mapStateToProps(state) {
     return {
@@ -44,10 +72,7 @@ const Format = ({format, sessions, className}, id, state) => (
 const Program = React.createClass({
 
     getInitialState() {
-        return {
-            en: true,
-            no: true  
-        };
+        return getDefaultSettings();
     },
 
     componentWillMount() {
@@ -66,7 +91,7 @@ const Program = React.createClass({
 
     render() {
         const sessions = this.props.sessions;
-        console.log(this.state);
+        saveSettings(this.state);
         return (
             <Page name='program'>
                 <Container>
