@@ -19,7 +19,11 @@ function mapStateToProps(state) {
     };
 }
 
-const Session = ({title, speakers, icon, language, id}, key) => (
+function showSession(session, state) {
+    return state[session.language];
+}
+
+const Session = ({title, speakers, icon, language, id}, key, state) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
         <span className='session__lang'>{language}</span>
@@ -28,24 +32,41 @@ const Session = ({title, speakers, icon, language, id}, key) => (
     </li>
 );
 
-const Format = ({format, sessions, className}, id) => (
+const Format = ({format, sessions, className}, id, state) => (
     <li className='sessions__format' key={id}>
         <div className={`sessions__format-title ${className}`}>{get(format)(formats)}</div>
         <ul className='sessions__sessions'>
-            {sessions.map(Session)}
+            {sessions.filter(session => showSession(session, state)).map(Session)}
         </ul>
     </li>
 );
 
 const Program = React.createClass({
+
+    getInitialState() {
+        return {
+            en: true,
+            no: true  
+        };
+    },
+
     componentWillMount() {
         if (this.props.sessions.length === 0) {
             this.props.getSessions();
         }
     },
 
+    toggleNorwegian() {
+        this.setState({no: !this.state.no});
+    },
+
+    toggleEnglish() {
+        this.setState({en: !this.state.en});
+    },
+
     render() {
         const sessions = this.props.sessions;
+        console.log(this.state);
         return (
             <Page name='program'>
                 <Container>
@@ -66,8 +87,17 @@ const Program = React.createClass({
                             </p>
                         </CenteredContent>
                     </CenteredBlock>
+
+                    <div className='filters'>
+                        <div className='filters__header'>Filters</div>
+                        <div className='filters__filters'>
+                            <button className={`filters__toggle filters__toggle--${this.state.no ? 'enabled' : 'disabled'}`} onClick={this.toggleNorwegian}>NO</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.en ? 'enabled' : 'disabled'}`} onClick={this.toggleEnglish}>EN</button>
+                        </div>
+                    </div>
+
                     <ul className='sessions'>
-                        {sessions.map(Format)}
+                        {sessions.map((session, id) => Format(session, id, this.state))}
                     </ul>
                 </Container>
             </Page>

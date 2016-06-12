@@ -1,0 +1,36 @@
+@import '../colors';
+
+.filters {
+    background: @white;
+    margin-top: 5rem;
+    padding: 0 20px 40px 20px;
+
+    &__header {
+        border-bottom: 5px solid @grey;
+        color: @grey;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 0 1rem 40px;
+        padding: 50px 0 10px;
+    }
+
+    &__filters {
+        margin-left: 40px;
+    }
+
+    &__toggle {
+        background: @green--light;
+        border: 0;
+        border-radius: 0;
+        color: @white;
+        margin-right: 20px;
+        outline: 0;
+        padding: 10px 20px;
+        transition: background .4s ease-in-out;
+
+        &--disabled {
+            background: fade(@green--light, 50%);
+        }
+    }
+}
