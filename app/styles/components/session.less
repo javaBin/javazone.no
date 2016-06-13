@@ -1,15 +1,37 @@
 @import '../colors';
+@import '../variables';
 
 .session {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     position: relative;
 
-    &__lang {
+    @media (min-width: @size-s) {
+        margin-bottom: 20px;
+    }
+
+    &__lang,
+    &__mobile-lang {
         color: @grey;
+        display: none;
         font-weight: 400;
-        position: absolute;
         text-transform: uppercase;
+    }
+
+    &__lang {
+        position: absolute;
         top: 3px;
+        @media (min-width: @size-s) {
+            display: block;
+        }
+    }
+
+    &__mobile-lang {
+        display: inline;
+        margin-right: 20px;
+
+        @media (min-width: @size-s) {
+            display: none;
+        }
     }
 
     &__icon {
@@ -22,18 +44,25 @@
         border-bottom: 1px solid transparent;
         color: @black;
         display: inline-block;
-        font-size: 1.3rem;
-        margin-left: 40px;
+        font-size: 1.1rem;
         text-decoration: none;
         transition: border-bottom-color .4s ease-in-out;
 
         &:hover {
             border-bottom-color: fade(@black, 50%);
         }
+
+        @media (min-width: @size-s) {
+            font-size: 1.3rem;
+            margin-left: 40px;
+        }
     }
 
     &__speakers {
         color: @grey;
-        margin-left: 40px;
+
+        @media (min-width: @size-s) {
+            margin-left: 40px;
+        }
     }
 }

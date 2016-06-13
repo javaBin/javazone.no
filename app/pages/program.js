@@ -56,7 +56,10 @@ const Session = ({title, speakers, icon, language, id}, key, state) => (
         <i className={`session__icon ${icon}`}></i>
         <span className='session__lang'>{language}</span>
         <Link to={`/program/${id}`} className='session__title'>{title}</Link>
-        <div className='session__speakers'>{speakers}</div>
+        <div className='session__speakers'>
+            <span className='session__mobile-lang'>{language}</span>
+            {speakers}
+        </div>
     </li>
 );
 
