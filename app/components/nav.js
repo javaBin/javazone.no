@@ -74,9 +74,7 @@ const Nav = React.createClass({
                         </button>
                     </div>
                     <ul className={menuClass}>
-                        <li className='navigation__item'>
-                            <IndexLink to='/' className='navigation__link' activeClassName='navigation__link--active' onClick={this.toggleMenu}>Home</IndexLink>
-                        </li>
+                        <MenuItem to={'/program'} title='Program' click={this.toggleMenu} />
                         <MenuItem to={'/info'} title='Info' click={this.toggleMenu} />
                         <MenuItem to={'/tickets'} title='Tickets' click={this.toggleMenu} />
                         <MenuItem to={'/speakers'} title='Speakers' click={this.toggleMenu} />
