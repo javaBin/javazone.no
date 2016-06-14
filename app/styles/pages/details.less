@@ -1,3 +1,6 @@
+@import '../colors';
+@import '../variables';
+
 .details {
 
     &__speakers {
@@ -24,5 +27,29 @@
 
     &__summary {
         font-weight: 400;
+    }
+
+    &__block {
+        background: @white;
+        color: @black;
+        margin: 0 auto;
+        max-width: none;
+        padding: 5rem 100px 0 20px;
+
+        @media (max-width: @size-s) {
+            margin: 0 -20px;
+            padding: 20px;
+        }
+
+        @media (min-width: @size-s) {
+        }
+
+        &:last-child {
+            padding-bottom: 5rem;
+        }
+
+        p {
+            text-align: justify;
+        }
     }
 }

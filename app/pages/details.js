@@ -31,7 +31,7 @@ const Speaker = ({navn, bildeUri}, id) => (
 );
 
 const Bio = ({navn, bio}, id) => (
-    <Block key={id}>
+    <Block key={id} className='details__block'>
         <Header>{navn}</Header>
         <Content>
             <p>
@@ -47,12 +47,15 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
             <div className='details__speakers'>
                 {foredragsholdere.map(Speaker)}
             </div>
+        </CenteredBlock>
+
+        <CenteredBlock className='details__block'>
             <CenteredHeader>{tittel}</CenteredHeader>
             <CenteredContent>
             </CenteredContent>
         </CenteredBlock>
 
-        <Block>
+        <Block className='details__block'>
             <Header>About</Header>
             <Content>
                 <p className='details__summary'>
@@ -66,7 +69,7 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
 
         {foredragsholdere.map(Bio)}
 
-        <Block>
+        <Block className='details__block'>
             <Header>Format</Header>
             <Content>
                 <p>
@@ -75,7 +78,7 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
             </Content>
         </Block>
 
-        <Block>
+        <Block className='details__block'>
             <Header>Language</Header>
             <Content>
                 <p>
