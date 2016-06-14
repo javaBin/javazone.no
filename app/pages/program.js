@@ -119,8 +119,8 @@ const Program = React.createClass({
                     <div className='filters'>
                         <div className='filters__header'>Filters</div>
                         <div className='filters__filters'>
-                            <button className={`filters__toggle filters__toggle--${this.state.no ? 'enabled' : 'disabled'}`} onClick={this.toggleNorwegian}>NO</button>
-                            <button className={`filters__toggle filters__toggle--${this.state.en ? 'enabled' : 'disabled'}`} onClick={this.toggleEnglish}>EN</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.no ? 'enabled' : 'disabled'}`} onClick={this.toggleNorwegian}>Norwegian</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.en ? 'enabled' : 'disabled'}`} onClick={this.toggleEnglish}>English</button>
                         </div>
                     </div>
 
