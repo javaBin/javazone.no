@@ -15,12 +15,6 @@ const styleLoader = 'css-loader?sourceMap!postcss-loader!less-loader?sourceMap';
 const config = {
     entry: './app/app.js',
 
-    resolve: {
-        root: [
-            path.resolve('./app')
-        ]
-    },
-
     output: {
         filename: 'app.js',
         path: output
@@ -30,7 +24,7 @@ const config = {
         loaders: [
             { test: /\.js$/, exclude: exclude, loader: babelLoader},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', styleLoader)},
-            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file?context=assets&name=/assets/[path][name].[ext]'},
+            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file?name=/assets/[path][name].[ext]'},
             { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
         ]
     },
