@@ -34,7 +34,7 @@ const Bio = ({navn, bio}, id) => (
     <Block key={id} className='details__block'>
         <Header>{navn}</Header>
         <Content>
-            <p>
+            <p className='preserve-newlines'>
                 {bio}
             </p>
         </Content>
@@ -58,10 +58,10 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
         <Block className='details__block'>
             <Header>About</Header>
             <Content>
-                <p className='details__summary'>
+                <p className='details__summary preserve-newlines'>
                     {oppsummering}
                 </p>
-                <p className='details__description'>
+                <p className='details__description preserve-newlines'>
                     {beskrivelse}
                 </p>
             </Content>
