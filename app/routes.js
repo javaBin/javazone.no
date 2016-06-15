@@ -7,6 +7,7 @@ import Partners from './pages/partners';
 import PartnerPresentation from './pages/partner-presentation';
 import PartnerPresentationEN from './pages/partner-presentation-en';
 import PartnerPresentationApril from './pages/partner-presentation-april';
+import PartnerPresentationJune from './pages/partner-presentation-june';
 import About from './pages/about';
 import Kids from './pages/kids';
 import Academy from './pages/academy';
@@ -33,6 +34,7 @@ export default (
         <Route path='partner-presentation' component={PartnerPresentation} ignoreScrollBehavior/>
         <Route path='partner-presentation-en' component={PartnerPresentationEN} ignoreScrollBehavior/>
         <Route path='partner-presentation-april' component={PartnerPresentationApril} ignoreScrollBehavior/>
+        <Route path='partner-presentation-june' component={PartnerPresentationJune} ignoreScrollBehavior />
         <Route path='about' component={About} />
         <Route path='kids' component={Kids} />
         <Route path='academy' component={Academy} />
