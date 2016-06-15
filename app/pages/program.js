@@ -104,6 +104,7 @@ const Program = React.createClass({
                             <p>
                                 The JavaZone Program Committee has been hard at work, and can now proudly present the talks planned for JavaZone 2016.
                                 We have a broad range of topics, and we’ll also have lightning talks of both 10 and 20 minutes length with two rooms dedicated to lightning talks.
+                                This year, all workshops will be held on Tuesday 6th, the day before the main conference.
                             </p>
                             <p>
                                 <b>This is not the complete program</b>, talks are still being added as more and more people accept.

@@ -129,7 +129,7 @@ export default () => (
                         have been to JavaZone before – welcome back! If you have
                         never attended JavaZone – read on to see what you will be
                         experiencing. A ticket to JavaZone gives you the chance to
-                        see a lot of great talks, but there is of course a whole
+                        see a lot of <a href="/program">great talks</a>, but there is of course a whole
                         lot more to experience.
                     </p>
                 </CenteredContent>
@@ -184,7 +184,7 @@ export default () => (
                         </dd>
                         <dt className='info-list__header'>“…and about that weird «norsk» you guys are speaking?”</dt>
                         <dd className='info-list__content'>
-                            Don’t worry! About 50% of the talks are held in
+                            Don’t worry! About 50% of <a href="/program">the talks</a> are held in
                             English, and the spoken language is specified in the
                             program. So even if you don’t «snakker norsk», you
                             should still get plenty of learning out of the conference.
@@ -202,12 +202,16 @@ export default () => (
                     <Header>The Program</Header>
                     <Content>
                         <p>
-                            Well, the program is not available just yet. The full and final program will be available
-                            sometime during July. We always strive to improve the experience,
+                            The prelimenary program is availiable at our <a href="/program">program page</a>.
+                            The full program with time slots and rooms will be available
+                            early August. We always strive to improve the experience,
                             so this year we have made a few small changes to the
                             program: lightning talks can now be either 10 or 20 minutes,
                             and presentations can now be either 45 or 60 minutes.
-                            Trust us: it will all make sense when the full program is published.
+                            Trust us: it will all make sense when the full program is published.<br /><br />
+                        </p>
+                        <p>
+                            <a href='/program' className='button button--yellow button--big'>See the JavaZone program</a>
                         </p>
                     </Content>
                 </Block>
