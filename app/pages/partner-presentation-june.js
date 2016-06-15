@@ -1,6 +1,7 @@
 import header from '../assets/header_expo.jpg';
 import { Page, PageHeading } from '../components/page';
 import { Block, Column, ColumnHeading, P } from '../components/textblock';
+import pdf from '../assets/partnermote-june/2016-partnermote3.pdf';
 
 const images = require.context('../assets/partnermote-june', true, /\.jpeg$/);
 const imageList = images.keys().map(image => images(image));
@@ -17,7 +18,8 @@ export default () => (
             <Column center={true}>
                 <ColumnHeading>Presentasjon fra partnermøte 15. juni 2016</ColumnHeading>
                 <P>Nedenfor finner du presentasjonen som ble holdt på JavaZone’s partnermøte på Teknologihuset 15. juni 2016.</P>
-                <P>Ta kontakt på <a href="mailto:partner@java.no">partner@java.no</a> om du ønsker å diskutere noe av dette med oss.</P>
+                <P>Ta kontakt på <a href="mailto:partner@java.no">partner@java.no</a> om du ønsker å diskutere noe av dette med oss.<br /><br /></P>
+                <P><a href={pdf} className='button button--red button--big'>Last ned partnerpresentasjon som PDF</a></P>
             </Column>
         </Block>
 
