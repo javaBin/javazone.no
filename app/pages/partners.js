@@ -195,7 +195,7 @@ export default () => (
                             <br />
                         </P>
                         <P className='partners__prospect'>
-                            <Link to='partner-presentation-april' className='button button--red'>See the slides from the last partner meeting</Link>
+                            <Link to='/partner-presentation-june' className='button button--red'>See the slides from the latest partner meeting</Link>
                         </P>
                     </div>
                 </div>
