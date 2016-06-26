@@ -23,7 +23,7 @@ export default () => (
                     </Column>
                     <Column justify={true}>
                         <P>
-                            You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday September 8th.
+                            You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday, September 8th.
                             You will be able to attend <a href="/program">all the talks</a>, mingle in the expo area, talk to <a href="/partners">our partners</a>, taste our great food,
                             and all in all have a great time learning new stuff.
                         </P>
@@ -45,7 +45,7 @@ export default () => (
                             <Dd>
                                 Well, we're happy to say that there <i>is</i> such a thing as a free lunch! JavaZone Academy is 100% free.
                                 You get the ticket, the talks, the food and everything from us for free. Should you need to travel to be able to attend,
-                                that's on you :)
+                                that's on you. :)
                             </Dd>
                         </Dl>
                     </Column>
