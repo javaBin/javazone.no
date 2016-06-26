@@ -75,7 +75,7 @@ const Kids = React.createClass({
                                     <Dd>
                                         Vi har et begrenset antall plasser derfor er det viktig at
                                         du melder dere på arrangementet.
-                                        Påmeldingen åpner fredag 5.august kl. 12.00.
+                                        Påmeldingen åpner fredag 5. august kl. 12.00.
                                     </Dd>
                                     <Dt>Forberedelser</Dt>
                                     <Dd>
@@ -101,7 +101,7 @@ const Kids = React.createClass({
                                     for å melde på riktig antall barn til hver sesjon.
                                 </P>
                                 <P>
-                                    Påmeldingen åpner fredag 5.august kl. 12.00.
+                                    Påmeldingen åpner fredag 5. august kl. 12.00.
                                 </P>
                             </Column>
                         </Columns>
@@ -118,7 +118,7 @@ const Kids = React.createClass({
                                 Oppgavene finnes på <a href="https://studio.code.org">studio.code.org</a>.
                             </P>
                             <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5.august kl. 12.00
+                                Påmeldingen åpner fredag 5. august kl. 12.00
                             </a>
                         </Column>
                         <Column>
@@ -140,7 +140,7 @@ const Kids = React.createClass({
                                 <a href="https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft">Oppskrift for hvordan du installerer ComputerCraft</a>.
                             </P>
                             <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5.august kl. 12.00
+                                Påmeldingen åpner fredag 5. august kl. 12.00
                             </a>
                         </Column>
                     </Block>
@@ -150,7 +150,7 @@ const Kids = React.createClass({
                             <ColumnHeading className='kids__event-title'>Lær å programmere roboter</ColumnHeading>
                             <span className='kids__age'>10-14 år</span>
                             <P>
-                                Bygg og styr en <a href="http://makeblock.com/mbot-stem-educational-robot-kit-for-kids/">mBot</a> både med en app og helt av seg selv. Vi får roboten til å bruke motor, sensorer, lys og lyd mens vi lærer hvordan man kan styre den.
+                                Bygg og styr en <a href="http://makeblock.com/mbot-stem-educational-robot-kit-for-kids/">mBot</a> både med en app eller la den styre seg selv. Vi får roboten til å bruke motor, sensorer, lys og lyd mens vi lærer hvordan man kan styre den.
                             </P>
                             <P>
                                 Se også <a href="https://www.youtube.com/watch?v=pmsSipper3Y">videoen som forklarer mBot</a>.
@@ -159,7 +159,7 @@ const Kids = React.createClass({
                                 Vi bruker programmet <a href="http://www.mblock.cc">mBlock</a> som er basert på Scratch. Scratch ble laget på MIT for å lære barn å programmere.
                             </P>
                             <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5.august kl. 12.00
+                                Påmeldingen åpner fredag 5. august kl. 12.00
                             </a>
                         </Column>
                         <Column>
@@ -184,7 +184,7 @@ const Kids = React.createClass({
                                 Opplegget vil være basert på Raspberry Pi sidene til <a href="https://kodegenet.no">Kodegenet.no</a>.
                             </P>
                             <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5.august kl. 12.00
+                                Påmeldingen åpner fredag 5. august kl. 12.00
                             </a>
                         </Column>
                     </Block>
