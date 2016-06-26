@@ -1,145 +1,70 @@
 import { Link } from 'react-router';
-import { Page, PageHeading, PageBody } from '../components/page';
+import { Page, PageHeading, Container } from '../components/page';
+import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
+import { Dl, Dt, Dd } from '../components/definition-list';
+
 import header from '../assets/academy.jpg';
-import teknologihuset from '../assets/academy/teknologihuset.jpg';
-import kvarteret from '../assets/academy/kvarteret.jpg';
-import samfundet from '../assets/academy/samfundet.jpg';
-import accenture from '../assets/academy/accenture.jpg';
-import finn from '../assets/academy/finn.jpg';
-import kantega from '../assets/academy/kantega.jpg';
-
-const sponsors = [accenture, finn, kantega];
-
-const headerStyle = {
-    backgroundImage: `url('${header}')`
-};
-
-const oslo = {
-    image: teknologihuset,
-    city: 'Oslo',
-    date: 'February 16th',
-    location: 'Teknologihuset',
-    location_link: 'http://www.teknologihuset.no',
-    pax: 120,
-    program: 'academy-oslo',
-    registration: [
-        {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/1JfeJsALw_6Dur0br1uVxQ7KAe0neKlTZAIVoxO7zFBE/viewform?usp=send_form'}
-    ]
-};
-
-const bergen = {
-    image: kvarteret,
-    city: 'Bergen',
-    date: 'February 17th',
-    location: 'Det Akademiske Kvarter',
-    location_link: 'http://kvarteret.no/',
-    pax: 120,
-    program: 'academy-bergen',
-    registration: [
-        {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/1XsRJ-77y0YjrhWh6QkzN8NS2qwOD7EEOY4zzaoZuP0s/viewform?usp=send_form'},
-    ]
-};
-
-const trondheim = {
-    image: samfundet,
-    city: 'Trondheim',
-    date: 'February 18th',
-    location: 'Studentersamfundet',
-    location_link: 'https://www.samfundet.no/',
-    pax: 200,
-    program: 'academy-trondheim',
-    registration: [
-        {text: 'Register @ Abakus', link: 'https://abakus.no/event/1693-javazone-academy-2016/'},
-        {text: 'Register @ Online', link: 'https://online.ntnu.no/events/254/javazone-academy-2016/'}
-    ]
-};
-
-const Location = ({image, city, date, location, location_link, pax, program, registration}) => (
-    <li className='academy__location location'>
-        <div className='location__image' style={{backgroundImage: `url('${image}')`}}>
-            <h3 className='location__title'>{city}</h3>
-        </div>
-        <p className='location__date'><strong>{date}</strong></p>
-        <p className='location__location'>
-            <a href={location_link}>{location}</a>
-        </p>
-        <p className='location__pax'>{pax} students</p>
-        <Link to={program} className='button button--green location__program'>See the program!</Link>
-        {registration.map((reg, key) => (
-            <p key={key}>
-                <a className="button button--red" href={reg.link}>{reg.text}</a>
-            </p>
-        ))}
-    </li>
-);
 
 export default () => (
     <Page>
         <PageHeading background={header}>
             JavaZone Academy
         </PageHeading>
-
-        <PageBody>
-            <div className='textblock textblock--centered'>
-                <div className='textblock__column textblock__column--centered'>
-                    <div className='textblock__text textblock__text--fill'>
-                        <h2 className='textblock__title'>A free taste of JavaZone for students</h2>
-                        <p>
+        <Container>
+            <Block block={true}>
+                <BlockHeading center={true}>A free taste of JavaZone for IT-students</BlockHeading>
+                <Columns>
+                    <Column justify={true}>
+                        <P>
                             Are you a student? Interested in IT? Come join us for JavaZone Academy.
-                            JavaZone Academy is a free event for students in Norway, where we invite you
-                            to take part in the Javazone experience.
-                        </p>
-                        <p>
-                            We will bring great talks, food, mingling and great partners to <strong>Oslo</strong>,
-                            <strong> Bergen</strong> and <strong>Trondheim</strong>. Join us for a great evening!
-                        </p>
-                    </div>
-                </div>
-            </div>
+                            JavaZone Academy is a free event for students in Norway which takes place during the second day of the conference.
+                            We invite you to take part in the JavaZone experience in Oslo Spektrum for a full day.
+                        </P>
+                    </Column>
+                    <Column justify={true}>
+                        <P>
+                            You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday September 8th.
+                            You will be able to attend <a href="/program">all the talks</a>, mingle in the expo area, talk to <a href="/partners">our partners</a>, taste our great food,
+                            and all in all have a great time learning new stuff.
+                        </P>
+                    </Column>
+                </Columns>
+            </Block>
 
-            <ul className='academy__sponsors'>
-                {sponsors.map((sponsor, key) => (
-                    <li key={key} className='academy__sponsor'>
-                        <img className='academy__sponsor-image' src={sponsor} />
-                    </li>
-                ))}
-            </ul>
-
-            <ul className='academy__locations'>
-                <Location {...oslo} />
-                <Location {...bergen} />
-                <Location {...trondheim} />
-            </ul>
-
-            <div className='textblock textblock--centered'>
-                <div className='textblock__column textblock__column--centered'>
-                    <div className='textblock__text'>
-                        <h2 className='textblock__title'>Program and speakers</h2>
-                        <p>
-                            The format will be presentations from 1200 to 1800 and mingling and networking with
-                            food and drinks after 1800. We plan to have 4 or 5 presentations at each location.
-                        </p>
-                        <p>
-                            See the exact program for your location with the links above.
-                        </p>
-                    </div>
-                </div>
-                <div className='textblock__column textblock__column--centered'>
-                    <div className='textblock__text'>
-                        <h2 className='textblock__title'>How to register?</h2>
-                        <p>
-                            Use the signup links above to sign up for your prefered town. We’ll contact you as soon as possible with information about whether you got a spot.
-                        </p>
-                        <p>
-                            The events are usually quite popular, so make sure to registrer as soon as possible.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className='textblock textblock--centered'>
-                <div className='textblock--centered__text'>
-                </div>
-            </div>
-        </PageBody>
+            <Block block={true}>
+                <BlockHeading center={true}>Practicalities</BlockHeading>
+                <Columns>
+                    <Column justify={true}>
+                        <Dl>
+                            <Dt>Program and speakers</Dt>
+                            <Dd>
+                                As you will get a full JavaZone ticket for Thursday, you can just check out our <a href="/program">regular program</a> for info about the talks.
+                                The detailed program that specify which talks will be on Thursday will be published in August.
+                            </Dd>
+                            <Dt>What does it cost?</Dt>
+                            <Dd>
+                                Well, we're happy to say that there <i>is</i> such a thing as a free lunch! JavaZone Academy is 100% free.
+                                You get the ticket, the talks, the food and everything from us for free. Should you need to travel to be able to attend,
+                                that's on you :)
+                            </Dd>
+                        </Dl>
+                    </Column>
+                    <Column justify={true}>
+                        <Dl>
+                            <Dt>How to register?</Dt>
+                            <Dd>
+                                The registration for JavaZone Academy will open in August. Sign up for our <a href="http://eepurl.com/bxvsEn">student mailing list</a> to
+                                be notified when the registration opens.
+                            </Dd>
+                            <Dt>Do you do other things for students?</Dt>
+                            <Dd>
+                                Yes, we do! We usually do the JavaZone Academy event twice a year. In September, it's at the main conference, and in the spring time
+                                we come to your town to do it. More info will come. You could also <a href="/frivillig">become a volunteer</a> at the conference.
+                            </Dd>
+                        </Dl>
+                    </Column>
+                </Columns>
+            </Block>
+        </Container>
     </Page>
 );
