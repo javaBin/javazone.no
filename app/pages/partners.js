@@ -64,9 +64,9 @@ export default () => (
                         <h2 className='textblock__title'>What is JavaZone?</h2>
                         <P>
                             JavaZone is one of the largest community driven conferences in the world.
-                            Every year, more than 2.500 developers meet up to learn and mingle in Oslo.
+                            Every year, almost 3.000 developers meet up to learn and mingle in Oslo.
                             <br /><br />
-                            JavaZone is made possible with the help of our more than 40 partners.
+                            JavaZone is made possible with the help of our 45 partners.
                             Read on to learn what being a partner really means, and how you can become one.
                         </P>
                     </div>
@@ -146,7 +146,7 @@ export default () => (
                     <div className='textblock__text'>
                         <h2 className='textblock__title'>Possible expansions</h2>
                         <dl className='page__paragraph'>
-                            <dt className='partners__expansion-title'>Extra space</dt>
+                            <dt className='partners__expansion-title'>Extra space (sold out)</dt>
                             <dd className='partners__expansion-description'>Double you stand space and get 12 square meters instead of 6.</dd>
                             <dt className='partners__expansion-title'>Restaurant stand (sold out)</dt>
                             <dd className='partners__expansion-description'>
@@ -173,7 +173,7 @@ export default () => (
                         <h2 className='textblock__title'>Contact us today</h2>
                         <P>
                             JavaZone 2016 will be held in September, but please get in touch sooner rather
-                            than later.<br />Even though all stand positions at JavaZone gives you a great opportunity,<br />some of the extra options
+                            than later. Even though all stand positions at JavaZone gives you a great opportunity, some of the extra options
                             will sell out early.
                         </P>
 
