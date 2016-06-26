@@ -85,11 +85,23 @@ const Program = React.createClass({
     },
 
     toggleNorwegian() {
-        this.setState({no: !this.state.no});
+        if (this.state.en)
+            this.setState({no: !this.state.no});
+        else
+            this.setState({
+                no: !this.state.no,
+                en: true;
+            });
     },
 
     toggleEnglish() {
-        this.setState({en: !this.state.en});
+         if (this.state.no)
+            this.setState({en: !this.state.en});
+        else
+            this.setState({
+                en: !this.state.en,
+                no: true;
+            });
     },
 
     render() {
