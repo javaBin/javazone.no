@@ -90,17 +90,17 @@ const Program = React.createClass({
         else
             this.setState({
                 no: !this.state.no,
-                en: true;
+                en: true
             });
     },
 
     toggleEnglish() {
-         if (this.state.no)
+        if (this.state.no)
             this.setState({en: !this.state.en});
         else
             this.setState({
                 en: !this.state.en,
-                no: true;
+                no: true
             });
     },
 
