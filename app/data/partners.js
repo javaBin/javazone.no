@@ -1,7 +1,6 @@
 export default [
     {name: 'Bouvet', logo: 'bouvet.png', url: 'http://www.bouvet.no/'},
     {name: 'Couchbase', logo: 'couchbase.png', url: 'http://www.couchbase.com/'},
-    {name: 'Dips', logo: 'dips.png', url: 'https://www.dips.no/'},
     {name: 'Itera', logo: 'itera.png', url: 'http://www.itera.no/'},
     {name: 'Finn', logo: 'finn.png', url: 'http://m.finn.no/'},
     {name: 'Computas', logo: 'computas.png', url: 'http://www.computas.com/'},
@@ -42,5 +41,7 @@ export default [
     {name: 'Elastic', logo: 'elastic.png', url: 'https://www.elastic.co/'},
     {name: 'Arktekk', logo: 'arktekk.png', url: 'http://arktekk.no/'},
     {name: 'Vaadin', logo: 'vaadin.png', url: 'https://vaadin.com'},
-    {name: 'Telia', logo: 'telia.png', url: 'https://telia.no'}
+    {name: 'Telia', logo: 'telia.png', url: 'https://telia.no'},
+    {name: 'RedHat', logo: 'redhat.png', url: 'https://redhat.com'},
+    {name: 'Driw', logo: 'driw.png', url: 'http://www.driw.no'}
 ];
