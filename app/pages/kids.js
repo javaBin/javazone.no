@@ -136,8 +136,8 @@ const Kids = React.createClass({
                             <P>
                                 ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og roboter inne i spillet. Disse datamaskinene og robotene kan programmeres til å kontrollere dører, grave huler, bygge hus og så videre. ComputerCraft bruker programmeringsspråket Lua, som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset må deltagerne ha en Minecraft-konto.
                             </P>
-                            <P>
-                                <a href="https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft">Oppskrift for hvordan du installerer ComputerCraft</a>.
+                            <P> 
+                                <a href="http://kodeklubben.github.io/computercraft/installasjon/installasjon.html">Oppskrift for hvordan du installerer ComputerCraft</a>.
                             </P>
                             <a className={`button button--disabled kids__registrate`}>
                                 Påmeldingen åpner fredag 5. august kl. 12.00
