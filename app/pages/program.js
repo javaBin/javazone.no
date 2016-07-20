@@ -63,9 +63,9 @@ const Session = ({title, speakers, icon, language, id}, key, state) => (
     </li>
 );
 
-const Format = ({format, sessions, className}, id, state) => (
+const Day = ({sessions, day}, id, state) => (
     <li className='sessions__format' key={id}>
-        <div className={`sessions__format-title ${className}`}>{get(format)(formats)}</div>
+        <div className={`sessions__format-title`}>{day}</div>
         <ul className='sessions__sessions'>
             {sessions.filter(session => showSession(session, state)).map(Session)}
         </ul>
@@ -99,23 +99,16 @@ const Program = React.createClass({
             <Page name='program'>
                 <Container>
                     <CenteredBlock>
-                        <CenteredHeader>JavaZone 2016 – Preliminary program</CenteredHeader>
-                        <CenteredContent>
-                            <p>
-                                The JavaZone Program Committee has been hard at work, and can now proudly present the talks planned for JavaZone 2016.
-                                We have a broad range of topics, and we’ll also have lightning talks of both 10 and 20 minutes length with two rooms dedicated to lightning talks.
-                                <br /><b>All workshops will be held on Tuesday 6th, the day before the main conference.</b>
-                            </p>
-                            <p>
-                                <b>This is not the complete program</b>, talks are still being added as more and more people accept.
-                                We’ll publish the finished program over the summer, with info about timeslots and rooms as well.
-                            </p>
-                            <p>
-                                Does the program entice you? Well, make sure to <a href="/tickets">get your ticket</a> sooner rather than later,
-                                as we might actually be totally sold out this year – it almost happened last year.
-                            </p>
-                        </CenteredContent>
+                        <CenteredHeader>JavaZone 2016 – Program</CenteredHeader>
                     </CenteredBlock>
+
+                    <div className='days'>
+                        <div className='days__header'>Days</div>
+                        <div className='days__days'>
+                            <a href='#day-one' className='days__day'>Day One</a>
+                            <a href='#day-two' className='days__day'>Day Two</a>
+                        </div>
+                    </div>
 
                     <div className='filters'>
                         <div className='filters__header'>Filters</div>
@@ -126,7 +119,7 @@ const Program = React.createClass({
                     </div>
 
                     <ul className='sessions'>
-                        {sessions.map((session, id) => Format(session, id, this.state))}
+                        {sessions.map((session, id) => Day(session, id, this.state))}
                     </ul>
                 </Container>
             </Page>

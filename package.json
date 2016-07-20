@@ -28,6 +28,7 @@
     "indexhtml-webpack-plugin": "^0.1.9",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
+    "moment": "^2.14.1",
     "postcss-loader": "^0.9.1",
     "q": "^1.4.1",
     "react": "^15.0.1",
