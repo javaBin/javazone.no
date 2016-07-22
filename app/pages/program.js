@@ -51,11 +51,11 @@ function showSession(session, state) {
     return state[session.language];
 }
 
-const Session = ({title, speakers, icon, language, id}, key, state) => (
+const Session = ({title, speakers, icon, language, start, duration, id}, key, state) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
         <span className='session__lang'>{language}</span>
-        <Link to={`/program/${id}`} className='session__title'>{title}</Link>
+        <Link to={`/program/${id}`} className='session__title'>{title} ({start}) ({duration})</Link>
         <div className='session__speakers'>
             <span className='session__mobile-lang'>{language}</span>
             {speakers}
@@ -94,6 +94,7 @@ const Program = React.createClass({
 
     render() {
         const sessions = this.props.sessions;
+        console.log(sessions);
         saveSettings(this.state);
         return (
             <Page name='program'>
