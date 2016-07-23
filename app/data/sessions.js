@@ -1,6 +1,5 @@
 import {orderBy, join, map, find, reduce, compose, get, kebabCase, sortBy, filter} from 'lodash/fp';
 import _moment from 'moment';
-window.moment = _moment;
 
 function moment(d) {
     return _moment(d).utcOffset(2);
