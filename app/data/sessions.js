@@ -24,7 +24,7 @@ const transformSessions = map(session => ({
     language: session.sprak,
     id: kebabCase(session.tittel),
     details: getDetails(session.links).href,
-    day: moment(session.starter).format('DD'),
+    day: moment(session.starter).format('dddd'),
     timestamp: unix(session.starter),
     start: moment(session.starter).format('HH:mm'),
     duration: moment(session.stopper).diff(moment(session.starter), 'minutes')
@@ -57,7 +57,7 @@ const createSlots = reduce((acc, session) => {
 });
 
 export default compose(
-    sortBy('day'),
+    orderBy(['day'], ['desc']),
     (id) => {console.log(id); return id},
     groupBySlot,
     groupByDay,

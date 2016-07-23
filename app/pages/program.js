@@ -73,7 +73,7 @@ const Slot = ({sessions, timestamp, start}, key, state) => (
 );
 
 const Day = ({slots, day}, key, state) => (
-    <li className='sessions__day' key={key}>
+    <li className='sessions__day' key={key} id={day}>
         <div className={`sessions__format-title`}>{day}</div>
         <ul className='sessions__slots'>
             {slots.map((slot, id) => Slot(slot, id))}
@@ -115,8 +115,8 @@ const Program = React.createClass({
                     <div className='days'>
                         <div className='days__header'>Days</div>
                         <div className='days__days'>
-                            <a href='#day-one' className='days__day'>Day One</a>
-                            <a href='#day-two' className='days__day'>Day Two</a>
+                            <a href='#Wednesday' className='days__day'>Wednesday</a>
+                            <a href='#Thursday' className='days__day'>Thursday</a>
                         </div>
                     </div>
 
