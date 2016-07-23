@@ -51,11 +51,11 @@ function showSession(session, state) {
     return state[session.language];
 }
 
-const Session = ({title, speakers, icon, language, start, duration, id}, key, state) => (
+const Session = ({title, speakers, icon, language, duration, id}, key, state) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
         <span className='session__lang'>{language}</span>
-        <Link to={`/program/${id}`} className='session__title'>{title} ({start}) ({duration})</Link>
+        <Link to={`/program/${id}`} className='session__title'>{title} ({duration}min)</Link>
         <div className='session__speakers'>
             <span className='session__mobile-lang'>{language}</span>
             {speakers}
@@ -63,11 +63,20 @@ const Session = ({title, speakers, icon, language, start, duration, id}, key, st
     </li>
 );
 
-const Day = ({sessions, day}, id, state) => (
-    <li className='sessions__format' key={id}>
+const Slot = ({sessions, timestamp, start}, key, state) => (
+    <li className='sessions__slot slot' key={key}>
+        <div className='slot__start'>{start}</div>
+        <ul className='slot__sessions'>
+            {sessions.map((session, id) => Session(session, id, state))}
+        </ul>
+    </li>
+);
+
+const Day = ({slots, day}, key, state) => (
+    <li className='sessions__day' key={key}>
         <div className={`sessions__format-title`}>{day}</div>
-        <ul className='sessions__sessions'>
-            {sessions.filter(session => showSession(session, state)).map(Session)}
+        <ul className='sessions__slots'>
+            {slots.map((slot, id) => Slot(slot, id))}
         </ul>
     </li>
 );

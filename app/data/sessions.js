@@ -1,4 +1,4 @@
-import {orderBy, join, map, find, reduce, compose, get, kebabCase, sortBy, filter} from 'lodash/fp';
+import {last, orderBy, join, map, find, reduce, compose, get, kebabCase, sortBy, filter} from 'lodash/fp';
 import _moment from 'moment';
 
 function moment(d) {
@@ -37,25 +37,30 @@ const groupByDay = reduce((acc, session) => {
     if (!key) {
         key = {
             day: session.day,
-            sessions: []
+            slots: []
         };
         acc.push(key);
     }
-    key.sessions.push(session);
+    key.slots.push(session);
     return acc;
-});
+}, []);
 
-const groupBySlot = map(({day, sessions}) => ({day: day, sessions: createSlots(sessions)}));
+const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([], slots)}));
 const createSlots = reduce((acc, session) => {
-    acc.push(session);
+    let slot = last(acc);
+    if (!slot || slot.timestamp !== session.timestamp) {
+        slot = {timestamp: session.timestamp, start: session.start, sessions: []};
+        acc.push(slot);
+    }
+    slot.sessions.push(session);
     return acc;
 });
 
 export default compose(
     sortBy('day'),
     (id) => {console.log(id); return id},
-    groupBySlot([]),
-    groupByDay([]),
+    groupBySlot,
+    groupByDay,
     orderBy(['format', 'timestamp'], ['desc', 'asc']),
     transformSessions,
     removeNonAssignedTalksAndWorkshops
