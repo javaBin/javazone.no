@@ -7,7 +7,7 @@ import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 import { get } from 'lodash/fp';
 
-const SETTINGS_KEY = 'programsettings';
+const SETTINGS_KEY = 'programsettings_v2';
 
 const formats = {
     'lightning-talk' : 'Lightning Talks',
@@ -16,8 +16,7 @@ const formats = {
 };
 
 const defaultSettings = {
-    en: true,
-    no: true
+    show: 'all'
 };
 
 function getDefaultSettings() {
@@ -48,7 +47,7 @@ function mapStateToProps(state) {
 }
 
 function showSession(session, state) {
-    return state[session.language];
+    return state.show === 'all' || state.show === session.language;
 }
 
 const Session = ({title, speakers, icon, language, duration, id}, key, state) => (
@@ -67,7 +66,7 @@ const Slot = ({sessions, timestamp, start}, key, state) => (
     <li className='sessions__slot slot' key={key}>
         <div className='slot__start'>{start}</div>
         <ul className='slot__sessions'>
-            {sessions.map((session, id) => Session(session, id, state))}
+            {sessions.filter(session => showSession(session, state)).map((session, id) => Session(session, id, state))}
         </ul>
     </li>
 );
@@ -76,7 +75,7 @@ const Day = ({slots, day}, key, state) => (
     <li className='sessions__day' key={key} id={day}>
         <div className={`sessions__format-title`}>{day}</div>
         <ul className='sessions__slots'>
-            {slots.map((slot, id) => Slot(slot, id))}
+            {slots.map((slot, id) => Slot(slot, id, state))}
         </ul>
     </li>
 );
@@ -93,12 +92,16 @@ const Program = React.createClass({
         }
     },
 
-    toggleNorwegian() {
-        this.setState({no: !this.state.no});
+    setAll() {
+        this.setState({show: 'all'});
     },
 
-    toggleEnglish() {
-        this.setState({en: !this.state.en});
+    setNorwegian() {
+        this.setState({show: 'no'});
+    },
+
+    setEnglish() {
+        this.setState({show: 'en'});
     },
 
     render() {
@@ -123,8 +126,9 @@ const Program = React.createClass({
                     <div className='filters'>
                         <div className='filters__header'>Filters</div>
                         <div className='filters__filters'>
-                            <button className={`filters__toggle filters__toggle--${this.state.no ? 'enabled' : 'disabled'}`} onClick={this.toggleNorwegian}>Norwegian</button>
-                            <button className={`filters__toggle filters__toggle--${this.state.en ? 'enabled' : 'disabled'}`} onClick={this.toggleEnglish}>English</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={this.setAll}>All</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={this.setNorwegian}>Norwegian</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={this.setEnglish}>English</button>
                         </div>
                     </div>
 
