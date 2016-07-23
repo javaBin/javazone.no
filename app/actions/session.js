@@ -19,7 +19,7 @@ function receiveSession(session) {
 };
 
 function retrieveSession(dispatch, sessions, id) {
-    const flattened = compose(flatten, map('sessions'))(sessions);
+    const flattened = compose(flatten, map('sessions'), flatten, map('slots'))(sessions);
     const session = find({id})(flattened);
     const url = session.details;
     return getSingleSession(url).end((err, res) => {
