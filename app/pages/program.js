@@ -5,7 +5,7 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { get } from 'lodash/fp';
+import { includes, get } from 'lodash/fp';
 
 const SETTINGS_KEY = 'programsettings_v2';
 
@@ -47,7 +47,7 @@ function mapStateToProps(state) {
 }
 
 function showSession(session, state) {
-    return state.show === 'all' || state.show === session.language;
+    return state.show === 'all' || state.show === session.language || includes(session.id, state.myprogram);
 }
 
 const Session = ({title, speakers, icon, language, duration, id}, key, state) => (
@@ -62,14 +62,27 @@ const Session = ({title, speakers, icon, language, duration, id}, key, state) =>
     </li>
 );
 
-const Slot = ({sessions, timestamp, start}, key, state) => (
-    <li className='sessions__slot slot' key={key}>
-        <div className='slot__start'>{start}</div>
-        <ul className='slot__sessions'>
-            {sessions.filter(session => showSession(session, state)).map((session, id) => Session(session, id, state))}
-        </ul>
-    </li>
+const Sessions = (sessions, state) => (
+    <ul className='slot__sessions'>
+        {sessions.map((session, id) => Session(session, id, state))}
+    </ul>
 );
+
+const NoSessions = () => (
+    <div className='slot__no-sessions'>
+        No sessions
+    </div>
+);
+
+function Slot({sessions, timestamp, start}, key, state) {
+    const filtered = sessions.filter(session => showSession(session, state));
+    return (
+        <li className='sessions__slot slot' key={key}>
+            <div className='slot__start'>{start}</div>
+            {filtered.length ? Sessions(filtered, state) : NoSessions()}
+        </li>
+    );
+};
 
 const Day = ({slots, day}, key, state) => (
     <li className='sessions__day' key={key} id={day}>
@@ -104,6 +117,10 @@ const Program = React.createClass({
         this.setState({show: 'en'});
     },
 
+    setMyProgram() {
+        this.setState({show: 'my'});
+    },
+
     render() {
         const sessions = this.props.sessions;
         console.log(sessions);
@@ -129,6 +146,7 @@ const Program = React.createClass({
                             <button className={`filters__toggle filters__toggle--${this.state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={this.setAll}>All</button>
                             <button className={`filters__toggle filters__toggle--${this.state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={this.setNorwegian}>Norwegian</button>
                             <button className={`filters__toggle filters__toggle--${this.state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={this.setEnglish}>English</button>
+                            <button className={`filters__toggle filters__toggle--${this.state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={this.setMyProgram}>My Program</button>
                         </div>
                     </div>
 
