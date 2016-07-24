@@ -5,7 +5,9 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { includes, get } from 'lodash/fp';
+import { without, includes, get } from 'lodash/fp';
+
+window.without = without;
 
 const SETTINGS_KEY = 'programsettings_v2';
 
@@ -16,7 +18,8 @@ const formats = {
 };
 
 const defaultSettings = {
-    show: 'all'
+    show: 'all',
+    myprogram: []
 };
 
 function getDefaultSettings() {
@@ -50,45 +53,51 @@ function showSession(session, state) {
     return state.show === 'all' || state.show === session.language || includes(session.id, state.myprogram);
 }
 
-const Session = ({title, speakers, icon, language, duration, id}, key, state) => (
+function isFavorite(id, state) {
+    return includes(id, state.myprogram);
+}
+
+const Session = ({title, speakers, icon, language, duration, id}, key, state, toggleFavorite) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
         <span className='session__lang'>{language}</span>
-        <Link to={`/program/${id}`} className='session__title'>{title} ({duration}min)</Link>
+        <Link to={`/program/${id}`} className='session__title'>{title}</Link>
+        <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>{isFavorite(id, state) ? '✔' : '+'}</button>
         <div className='session__speakers'>
             <span className='session__mobile-lang'>{language}</span>
+            <span className='session__duration'>{duration}</span>
             {speakers}
         </div>
     </li>
 );
 
-const Sessions = (sessions, state) => (
+const Sessions = (sessions, state, toggleFavorite) => (
     <ul className='slot__sessions'>
-        {sessions.map((session, id) => Session(session, id, state))}
+        {sessions.map((session, id) => Session(session, id, state, toggleFavorite))}
     </ul>
 );
 
 const NoSessions = () => (
     <div className='slot__no-sessions'>
-        No sessions
+        –
     </div>
 );
 
-function Slot({sessions, timestamp, start}, key, state) {
+function Slot({sessions, timestamp, start}, key, state, toggleFavorite) {
     const filtered = sessions.filter(session => showSession(session, state));
     return (
         <li className='sessions__slot slot' key={key}>
             <div className='slot__start'>{start}</div>
-            {filtered.length ? Sessions(filtered, state) : NoSessions()}
+            {filtered.length ? Sessions(filtered, state, toggleFavorite) : NoSessions()}
         </li>
     );
 };
 
-const Day = ({slots, day}, key, state) => (
+const Day = ({slots, day}, key, state, toggleFavorite) => (
     <li className='sessions__day' key={key} id={day}>
-        <div className={`sessions__format-title`}>{day}</div>
+        <div className={`sessions__format-title sessions__format-title--${day.toLowerCase()}`}>{day}</div>
         <ul className='sessions__slots'>
-            {slots.map((slot, id) => Slot(slot, id, state))}
+            {slots.map((slot, id) => Slot(slot, id, state, toggleFavorite))}
         </ul>
     </li>
 );
@@ -121,9 +130,18 @@ const Program = React.createClass({
         this.setState({show: 'my'});
     },
 
+    toggleFavorite(id) {
+        if (includes(id, this.state.myprogram)) {
+            console.log(id, this.state.myprogram, includes(id, this.state.myprogram));
+            this.setState({myprogram: without([id], this.state.myprogram)});
+        } else {
+            const prev = this.state.myprogram || [];
+            this.setState({myprogram: prev.concat(id)});
+        }
+    },
+
     render() {
         const sessions = this.props.sessions;
-        console.log(sessions);
         saveSettings(this.state);
         return (
             <Page name='program'>
@@ -151,7 +169,7 @@ const Program = React.createClass({
                     </div>
 
                     <ul className='sessions'>
-                        {sessions.map((session, id) => Day(session, id, this.state))}
+                        {sessions.map((session, id) => Day(session, id, this.state, this.toggleFavorite))}
                     </ul>
                 </Container>
             </Page>

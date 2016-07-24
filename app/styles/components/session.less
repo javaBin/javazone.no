@@ -7,6 +7,7 @@
 
     @media (min-width: @size-s) {
         margin-bottom: 20px;
+        margin-left: 40px;
     }
 
     &__lang,
@@ -18,8 +19,10 @@
     }
 
     &__lang {
+        left: -40px;
         position: absolute;
         top: 3px;
+
         @media (min-width: @size-s) {
             display: block;
         }
@@ -27,11 +30,17 @@
 
     &__mobile-lang {
         display: inline;
-        margin-right: 20px;
+        margin-right: 10px;
 
         @media (min-width: @size-s) {
             display: none;
         }
+    }
+
+    &__duration {
+        color: @grey;
+        font-weight: 600;
+        margin-right: 10px;
     }
 
     &__icon {
@@ -45,6 +54,7 @@
         color: @black;
         display: inline;
         font-size: 1.1rem;
+        margin-right: 40px;
         text-decoration: none;
         transition: border-bottom-color .4s ease-in-out;
 
@@ -54,15 +64,30 @@
 
         @media (min-width: @size-s) {
             font-size: 1.3rem;
-            margin-left: 40px;
         }
     }
 
     &__speakers {
         color: @grey;
+    }
 
-        @media (min-width: @size-s) {
-            margin-left: 40px;
+    &__favorite {
+        background: transparent;
+        border: 0;
+        color: @white;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 600;
+        outline: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-shadow: 0 0 1px @black;
+        top: -7px;
+
+        &--checked {
+            color: @green--dark;
+            text-shadow: none;
         }
     }
 }
