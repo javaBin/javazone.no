@@ -15,7 +15,7 @@ const sortIndexes = {
     'presentation': 0
 };
 
-const removeNonAssignedTalksAndWorkshops = filter(session => session.starter != null && session.format !== 'workshop');
+const removeNonAssignedTalksAndWorkshops = filter(session => session.starter !== null && session.format !== 'workshop');
 
 const transformSessions = map(session => ({
     title: session.tittel,
@@ -58,7 +58,6 @@ const createSlots = reduce((acc, session) => {
 
 export default compose(
     orderBy(['day'], ['desc']),
-    (id) => {console.log(id); return id},
     groupBySlot,
     groupByDay,
     orderBy(['format', 'timestamp'], ['desc', 'asc']),
