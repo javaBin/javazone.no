@@ -164,7 +164,7 @@ const Kids = React.createClass({
                                 Oppgavene finnes på <a href="https://studio.code.org">studio.code.org</a>.
                             </P>
                             <a className={`button ${workshopClass(wcodestudio)} kids__registrate`} href={workshopUrl(wcodestudio)}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                                {workshopStatus(wcodestudio)}
                             </a>
                         </Column>
                         <Column>
@@ -186,7 +186,7 @@ const Kids = React.createClass({
                                 <a href="http://kodeklubben.github.io/computercraft/installasjon/installasjon.html">Oppskrift for hvordan du installerer ComputerCraft</a>.
                             </P>
                             <a className={`button ${workshopClass(wminecraft)} kids__registrate`} href={workshopUrl(wminecraft)}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                                {workshopStatus(wminecraft)}
                             </a>
                         </Column>
                     </Block>
@@ -205,7 +205,7 @@ const Kids = React.createClass({
                                 Vi bruker programmet <a href="http://www.mblock.cc">mBlock</a> som er basert på Scratch. Scratch ble laget på MIT for å lære barn å programmere.
                             </P>
                             <a className={`button ${workshopClass(wrobot)} kids__registrate`} href={workshopUrl(wrobot)}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                                {workshopStatus(wrobot)}
                             </a>
                         </Column>
                         <Column>
@@ -230,7 +230,7 @@ const Kids = React.createClass({
                                 Opplegget vil være basert på Raspberry Pi sidene til <a href="https://kodegenet.no">Kodegenet.no</a>.
                             </P>
                             <a className={`button ${workshopClass(wraspberry)} kids__registrate`} href={workshopUrl(wraspberry)}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                                {workshopStatus(wraspberry)}
                             </a>
                         </Column>
                     </Block>
