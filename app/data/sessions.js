@@ -1,4 +1,12 @@
-import {join, map, find, reduce, compose, get, kebabCase, sortBy} from 'lodash/fp';
+import {join, map, find, reduce, compose, get, kebabCase, sortBy} from 'lodash/fp';import _moment from 'moment';
+
+function moment(d) {
+    return _moment(d).utcOffset(2);
+}
+
+function unix(d) {
+    return _moment(d).valueOf();
+}
 
 const sortIndexes = {
     'lightning-talk' : 2,
@@ -31,7 +39,10 @@ const transformSessions = map(session => ({
     icon: 'icon-energy',
     language: session.sprak,
     id: kebabCase(session.tittel),
-    details: getDetails(session.links).href
+    details: getDetails(session.links).href,
+    time: moment(session.starter).format('MMMM Do, HH:mm'),
+    duration: moment(session.stopper).diff(moment(session.starter), 'hours'),
+    timestamp: unix(session.starter)
 }));
 
 export default compose(sortBy('sortIndex'), group, transformSessions);
