@@ -76,7 +76,7 @@ const Workshop = (workshop, key) => (
         </div>
         <a className={`${workshopClass(workshop)} workshop__status button`} href={workshopUrl(workshop)}>{workshopStatus(workshop)}</a>
     </li>
-)
+);
 
 function mapStateToProps(state) {
     return {
