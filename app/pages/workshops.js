@@ -48,7 +48,7 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Opens at 12th august, 12.00';
+        return 'Opens at August 12th, 12.00';
     }
 
     switch (workshop.status) {
@@ -57,7 +57,7 @@ function workshopStatus(workshop) {
     case 'FULL': return 'Waiting list';
     case 'VERY_FULL': return 'No more spots';
     case 'CLOSED': return 'Registration closed';
-    default: return 'Opens at 12th august, 12.00';
+    default: return 'Opens at August 12th, 12.00';
     }
 }
 

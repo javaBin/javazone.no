@@ -75,6 +75,7 @@ const Nav = React.createClass({
                     </div>
                     <ul className={menuClass}>
                         <MenuItem to={'/program'} title='Program' click={this.toggleMenu} />
+                        <MenuItem to={'/workshops'} title='Workshops' click={this.toggleMenu} />
                         <MenuItem to={'/info'} title='Info' click={this.toggleMenu} />
                         <MenuItem to={'/tickets'} title='Tickets' click={this.toggleMenu} />
                         <MenuItem to={'/kids'} title='Kids' click={this.toggleMenu} />
