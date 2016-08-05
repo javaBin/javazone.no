@@ -5,7 +5,7 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { find, sortBy } from 'lodash/fp';
+import { find, sortBy, includes } from 'lodash/fp';
 
 const workshops = [
     "internet_of_things_for_everyone",
@@ -19,7 +19,7 @@ const workshops = [
 ];
 
 function isWorkshop(workshop) {
-    return workshops.includes(workshop.id);
+    return includes(workshop.id, workshops);
 }
 
 const mooseheadId = title => title.toLowerCase().replace(/[^a-zæøå0-9\s]/g, '').replace(/\s/g, '_').substr(0, 32);
