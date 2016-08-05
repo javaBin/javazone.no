@@ -111,10 +111,10 @@ const Kids = React.createClass({
             <Page name='workshops'>
                 <Container>
                     <CenteredBlock>
-                        <CenteredHeader>JavaZone 2016 – Workshops</CenteredHeader>
+                        <CenteredHeader>Welcome to the JavaZone 2016 Workshops!</CenteredHeader>
                         <CenteredContent>
                             <p>
-                                This year, as last year, we have a full day dedicated to workshops before JavaZone officially begins. There are a limited number of seats for the workshops, so registration is required. First come, first served. Registration opens Tuesday August 12th at 12.00.
+                                For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 12th of August, so put a reminder in your calendar!
                             </p>
                         </CenteredContent>
                     </CenteredBlock>
