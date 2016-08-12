@@ -5,7 +5,7 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { without, includes, get } from 'lodash/fp';
+import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find } from 'lodash/fp';
 
 window.without = without;
 
@@ -21,6 +21,41 @@ const defaultSettings = {
     show: 'all',
     myprogram: []
 };
+
+const removeNonAssignedTalksAndWorkshops = filter(session => session.starter !== null && session.format !== 'workshop');
+
+const groupByDay = reduce((acc, session) => {
+    let key = find({day: session.day}, acc);
+    if (!key) {
+        key = {
+            day: session.day,
+            dayIndex: session.dayIndex,
+            slots: []
+        };
+        acc.push(key);
+    }
+    key.slots.push(session);
+    return acc;
+}, []);
+
+const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([], slots)}));
+const createSlots = reduce((acc, session) => {
+    let slot = last(acc);
+    if (!slot || slot.timestamp !== session.timestamp && session.format === 'presentation') {
+        slot = {timestamp: session.timestamp, start: session.start, sessions: []};
+        acc.push(slot);
+    }
+    slot.sessions.push(session);
+    return acc;
+});
+
+const getTransformedSessions = compose(
+    groupBySlot,
+    orderBy(['dayIndex'], ['asc']),
+    groupByDay,
+    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
+    removeNonAssignedTalksAndWorkshops
+);
 
 function getDefaultSettings() {
     try {
@@ -141,7 +176,7 @@ const Program = React.createClass({
     },
 
     render() {
-        const sessions = this.props.sessions;
+        const sessions = getTransformedSessions(this.props.sessions);
         saveSettings(this.state);
         return (
             <Page name='program'>

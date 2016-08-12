@@ -1,5 +1,5 @@
 import { getAllSessions, getSingleSession } from '../services/sessions';
-import transformSessions from '../data/sessions';
+import {getTransformedSessions} from '../data/sessions';
 import { find, map, flatten, compose } from 'lodash/fp';
 export const REQUEST_SESSION = 'FETCH_SESSION';
 
@@ -32,7 +32,7 @@ export function getSession(id) {
         const sessions = getState().sessions.sessions;
         if (sessions.length === 0) {
             return getAllSessions().end((err, res) => {
-                const transformedSessions = transformSessions(res.body);
+                const transformedSessions = getTransformedSessions(res.body);
                 return retrieveSession(dispatch, transformedSessions, id);
             });
         } else {

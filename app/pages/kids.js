@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { getWorkshops } from '../actions/workshops';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
@@ -7,16 +8,61 @@ import mbot from '../assets/kids/mbot.jpg';
 import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';
 import raspberrypi from '../assets/kids/raspberrypi.jpg';
+import { find } from 'lodash/fp';
+
+function workshopUrl(workshop) {
+    if (!workshop) {
+        return '#';
+    }
+    return `https://javazone.no/moosehead/#/register/${workshop.id}`;
+}
+
+function workshopClass(workshop) {
+    if (!workshop) {
+        return 'button--disabled';
+    }
+
+    switch (workshop.status) {
+    case 'FREE_SPOTS': return 'button--green';
+    case 'FEW_SPOTS': return 'button--yellow';
+    case 'FULL': return 'button--red';
+    case 'VERY_FULL': return 'button--red';
+    case 'CLOSED': return 'button--disabled';
+    default: return 'button--disabled';
+    }
+}
+
+function workshopStatus(workshop) {
+    if (!workshop) {
+        return 'Påmeldingen åpner fredag 5. august kl. 12.00';
+    }
+
+    switch (workshop.status) {
+    case 'FREE_SPOTS': return 'Meld deg på nå';
+    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på nå';
+    case 'FULL': return 'Påmelding m/ venteliste';
+    case 'VERY_FULL': return 'Ingen ledige plasser';
+    case 'CLOSED': return 'Påmelding stengt';
+    default: return 'Påmeldingen åpner fredag 5. august kl. 12.00';
+    }
+}
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        workshops: state.workshops.workshops
+    };
 }
 
 const Kids = React.createClass({
     componentWillMount() {
+        this.props.getWorkshops();
     },
 
     render() {
+        const wcodestudio = find({id: 'kids_codestudio'}, this.props.workshops);
+        const wminecraft = find({id: 'kids_computercraft'}, this.props.workshops);
+        const wrobot = find({id: 'kids_robot'}, this.props.workshops);
+        const wraspberry = find({id: 'kids_rasberry'}, this.props.workshops);
 
         return (
             <Page name='kids'>
@@ -117,8 +163,8 @@ const Kids = React.createClass({
                             <P>
                                 Oppgavene finnes på <a href="https://studio.code.org">studio.code.org</a>.
                             </P>
-                            <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                            <a className={`button ${workshopClass(wcodestudio)} kids__registrate`} href={workshopUrl(wcodestudio)}>
+                                {workshopStatus(wcodestudio)}
                             </a>
                         </Column>
                         <Column>
@@ -139,8 +185,8 @@ const Kids = React.createClass({
                             <P>
                                 <a href="http://kodeklubben.github.io/computercraft/installasjon/installasjon.html">Oppskrift for hvordan du installerer ComputerCraft</a>.
                             </P>
-                            <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                            <a className={`button ${workshopClass(wminecraft)} kids__registrate`} href={workshopUrl(wminecraft)}>
+                                {workshopStatus(wminecraft)}
                             </a>
                         </Column>
                     </Block>
@@ -158,8 +204,8 @@ const Kids = React.createClass({
                             <P>
                                 Vi bruker programmet <a href="http://www.mblock.cc">mBlock</a> som er basert på Scratch. Scratch ble laget på MIT for å lære barn å programmere.
                             </P>
-                            <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                            <a className={`button ${workshopClass(wrobot)} kids__registrate`} href={workshopUrl(wrobot)}>
+                                {workshopStatus(wrobot)}
                             </a>
                         </Column>
                         <Column>
@@ -183,8 +229,8 @@ const Kids = React.createClass({
                             <P>
                                 Opplegget vil være basert på Raspberry Pi sidene til <a href="https://kodegenet.no">Kodegenet.no</a>.
                             </P>
-                            <a className={`button button--disabled kids__registrate`}>
-                                Påmeldingen åpner fredag 5. august kl. 12.00
+                            <a className={`button ${workshopClass(wraspberry)} kids__registrate`} href={workshopUrl(wraspberry)}>
+                                {workshopStatus(wraspberry)}
                             </a>
                         </Column>
                     </Block>
@@ -203,4 +249,4 @@ const Kids = React.createClass({
     }
 });
 
-export default connect(mapStateToProps, { })(Kids);
+export default connect(mapStateToProps, { getWorkshops })(Kids);
