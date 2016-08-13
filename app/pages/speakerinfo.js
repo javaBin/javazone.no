@@ -50,7 +50,7 @@ export default () => (
                     <SubHeader>Speakers Dinner</SubHeader>
 
                     <p>
-                        This years speakers dinner will be held at INSERT_DINNER_LOCATION Tuesday September 6th, starting at 19:00. We will provide transport from Oslo Spektrum to Smelteverket after the guided tour ends at around 18:45. If you don’t want to attend the guided tour, it is perfectly possible to show up at INSERT_DINNER_LOCATION at 19:00 or later. 
+                        This years speakers dinner will be held at INSERT_DINNER_LOCATION Tuesday September 6th, starting at 19:00. We will provide transport from Oslo Spektrum to Smelteverket after the guided tour ends at around 18:45. If you don’t want to attend the guided tour, it is perfectly possible to show up at INSERT_DINNER_LOCATION at 19:00 or later.
                     </p>
                 </Content>
             </Block>
@@ -69,11 +69,11 @@ export default () => (
                     <SubHeader>Your Presentation</SubHeader>
 
                     <p>
-                        To ensure that everything goes as smooth as possible, everyone are asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before you. Each room has a technician that will help you with connecting your laptop to the projector, and with the microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for big projector troubles during the talk. 
+                        To ensure that everything goes as smooth as possible, everyone are asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before you. Each room has a technician that will help you with connecting your laptop to the projector, and with the microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for big projector troubles during the talk.
                     </p>
 
                     <p>
-                        If you are having a workshop the day before the conference (Tuesday, September 6th), we will meet you at the entrance and guide you to the workshop rooms. You should still meet <b>20 minutes</b> before the start of your workshop to get set up. 
+                        If you are having a workshop the day before the conference (Tuesday, September 6th), we will meet you at the entrance and guide you to the workshop rooms. You should still meet <b>20 minutes</b> before the start of your workshop to get set up.
                     </p>
 
                     <SubHeader>Speakers Wall</SubHeader>
