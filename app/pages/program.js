@@ -22,7 +22,7 @@ const defaultSettings = {
     myprogram: []
 };
 
-const removeNonAssignedTalksAndWorkshops = filter(session => session.starter !== null && session.format !== 'workshop');
+const removeWorkshops = filter(session => session.format !== 'workshop');
 
 const groupByDay = (r) => reduce((acc, session) => {
     let key = find({day: session.day}, acc);
@@ -54,7 +54,7 @@ const getTransformedSessions = (r) => compose(
     orderBy(['dayIndex'], ['asc']),
     groupByDay(r),
     orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
-    removeNonAssignedTalksAndWorkshops
+    removeWorkshops
 );
 
 function getDefaultSettings() {

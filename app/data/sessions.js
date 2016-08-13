@@ -12,6 +12,7 @@ function unix(d) {
 
 const getSpeakers = compose(join(', '), map('navn'));
 const getDetails = find({rel: 'detaljer'});
+const removeNotSetSessions = filter(session => session.starter !== null);
 
 const getRoom = (room) => (room || '').replace(/Room\s/, '');
 
@@ -31,4 +32,4 @@ const transformSessions = map(session => ({
     time: moment(session.starter).format('MMMM Do, HH:mm')
 }));
 
-export default transformSessions;
+export default compose(transformSessions, removeNotSetSessions);
