@@ -21,6 +21,8 @@
     "babel-preset-react": "^6.1.2",
     "classname": "0.0.0",
     "css-loader": "^0.22.0",
+    "eslint": "^3.3.0",
+    "eslint-plugin-lodash-fp": "^2.0.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
     "history": "^1.17.0",
