@@ -5,7 +5,7 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find } from 'lodash/fp';
+import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find, groupBy } from 'lodash/fp';
 
 window.without = without;
 
@@ -42,10 +42,10 @@ const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([], slo
 const createSlots = reduce((acc, session) => {
     let slot = last(acc);
     if (!slot || slot.timestamp !== session.timestamp && session.format === 'presentation') {
-        slot = {timestamp: session.timestamp, start: session.start, sessions: []};
+        slot = {timestamp: session.timestamp, start: session.start, sessions: { 'presentation': [], 'lightning-talk': []}};
         acc.push(slot);
     }
-    slot.sessions.push(session);
+    slot.sessions[session.format].push(session);
     return acc;
 });
 
@@ -88,16 +88,24 @@ function showSession(session, state) {
     return state.show === 'all' || state.show === session.language || includes(session.id, state.myprogram);
 }
 
+function showLightning(session, timestamp, state) {
+    return state.show === 'all' || state.show === session.language || includes(session.room + timestamp, state.myprogram);
+}
+
 function isFavorite(id, state) {
     return includes(id, state.myprogram);
 }
 
-const Session = ({title, speakers, icon, language, duration, id}, key, state, toggleFavorite) => (
+const Session = ({title, speakers, icon, room, language, duration, id}, key, state, toggleFavorite) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
-        <span className='session__lang'>{language}</span>
-        <Link to={`/program/${id}`} className='session__title'>{title}</Link>
-        <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>{isFavorite(id, state) ? '✔' : '+'}</button>
+        <span className='session__room'>{room}</span>
+        <div className='session__title-wrapper'>
+            <span className='session__mobile-room'>{room}</span><Link to={`/program/${id}`} className='session__title'>{title}</Link>
+        </div>
+        <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
+            <i className={isFavorite(id, state) ? 'icon-check' : 'icon-plus'}></i>
+        </button>
         <div className='session__speakers'>
             <span className='session__mobile-lang'>{language}</span>
             <span className='session__duration'>{duration}</span>
@@ -106,11 +114,33 @@ const Session = ({title, speakers, icon, language, duration, id}, key, state, to
     </li>
 );
 
-const Sessions = (sessions, state, toggleFavorite) => (
-    <ul className='slot__sessions'>
-        {sessions.map((session, id) => Session(session, id, state, toggleFavorite))}
-    </ul>
+const Lightning = ({title, duration, id}, key) => (
+    <div key={key} className='lightning__talk'>
+        <span className='lightning__duration'>{duration}</span>
+        <Link className='lightning__title' to={`/program/${id}`}>{title}</Link>
+    </div>
 );
+
+const Sessions = (sessions, lightning, timestamp, state, toggleFavorite) => {
+    const groupedLightning = groupBy('room')(lightning);
+    return (
+        <ul className='slot__sessions'>
+            {sessions.map((session, id) => Session(session, id, state, toggleFavorite))}
+            {Object.keys(groupedLightning).map((room, id) => (
+                <li className='sessions__lightning lightning' key={id}>
+                    <button className={`lightning__favorite lightning__favorite--${isFavorite(room + timestamp, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(room + timestamp)}>
+                        <i className={isFavorite(room + timestamp, state) ? 'icon-check' : 'icon-plus'}></i>
+                    </button>
+                    <span className='lightning__room'>{room}</span>
+                    <div className='lightning__header'>
+                        <span className='lightning__mobile-room'>{room}</span>Lightning Talks
+                    </div>
+                    {groupedLightning[room].map((session, id) => Lightning(session, id))}
+                </li>
+            ))}
+        </ul>
+    );
+};
 
 const NoSessions = () => (
     <div className='slot__no-sessions'>
@@ -119,11 +149,13 @@ const NoSessions = () => (
 );
 
 function Slot({sessions, timestamp, start}, key, state, toggleFavorite) {
-    const filtered = sessions.filter(session => showSession(session, state));
+    const filteredPresentations = orderBy(['room'], ['asc'])(sessions.presentation.filter(session => showSession(session, state)));
+    const filteredLightning = orderBy(['room'], ['asc'])(sessions['lightning-talk'].filter(session => showLightning(session, timestamp, state)));
+    const empty = !filteredPresentations.length && !filteredLightning.length;
     return (
         <li className='sessions__slot slot' key={key}>
             <div className='slot__start'>{start}</div>
-            {filtered.length ? Sessions(filtered, state, toggleFavorite) : NoSessions()}
+            {empty ? NoSessions() : Sessions(filteredPresentations, filteredLightning, timestamp, state, toggleFavorite)}
         </li>
     );
 };
@@ -166,8 +198,8 @@ const Program = React.createClass({
     },
 
     toggleFavorite(id) {
+        console.log(id);
         if (includes(id, this.state.myprogram)) {
-            console.log(id, this.state.myprogram, includes(id, this.state.myprogram));
             this.setState({myprogram: without([id], this.state.myprogram)});
         } else {
             const prev = this.state.myprogram || [];
