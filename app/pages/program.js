@@ -114,12 +114,13 @@ const Session = ({title, speakers, icon, room, language, duration, id}, key, sta
     </li>
 );
 
-const Lightning = ({title, duration, language, id}, key) => (
+const Lightning = ({title, duration, language, speakers, id}, key) => (
     <div key={key} className='lightning__talk'>
         <Link className='lightning__title' to={`/program/${id}`}>{title}</Link>
         <div>
             <span className='lightning__language'>{language}</span>
             <span className='lightning__duration'>{duration} min</span>
+            <span className='lightning__speakers'>{speakers}</span>
         </div>
     </div>
 );
