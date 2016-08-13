@@ -1,5 +1,5 @@
 import { getAllSessions, getSingleSession } from '../services/sessions';
-import {getTransformedSessions} from '../data/sessions';
+import getTransformedSessions from '../data/sessions';
 import { find, map, flatten, compose } from 'lodash/fp';
 export const REQUEST_SESSION = 'FETCH_SESSION';
 
@@ -19,8 +19,7 @@ function receiveSession(session) {
 };
 
 function retrieveSession(dispatch, sessions, id) {
-    const flattened = compose(flatten, map('sessions'), flatten, map('slots'))(sessions);
-    const session = find({id})(flattened);
+    const session = find({id})(sessions);
     const url = session.details;
     return getSingleSession(url).end((err, res) => {
         dispatch(receiveSession(res.body));
