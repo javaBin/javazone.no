@@ -24,7 +24,7 @@ const defaultSettings = {
 
 const removeNonAssignedTalksAndWorkshops = filter(session => session.starter !== null && session.format !== 'workshop');
 
-const groupByDay = reduce((acc, session) => {
+const groupByDay = (r) => reduce((acc, session) => {
     let key = find({day: session.day}, acc);
     if (!key) {
         key = {
@@ -36,12 +36,12 @@ const groupByDay = reduce((acc, session) => {
     }
     key.slots.push(session);
     return acc;
-}, []);
+})(r);
 
-const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([], slots)}));
+const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([])(slots)}));
 const createSlots = reduce((acc, session) => {
     let slot = last(acc);
-    if (!slot || slot.timestamp !== session.timestamp && session.format === 'presentation') {
+    if ((!slot || slot.timestamp !== session.timestamp) && session.format === 'presentation') {
         slot = {timestamp: session.timestamp, start: session.start, sessions: { 'presentation': [], 'lightning-talk': []}};
         acc.push(slot);
     }
@@ -49,10 +49,10 @@ const createSlots = reduce((acc, session) => {
     return acc;
 });
 
-const getTransformedSessions = compose(
+const getTransformedSessions = (r) => compose(
     groupBySlot,
     orderBy(['dayIndex'], ['asc']),
-    groupByDay,
+    groupByDay(r),
     orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
     removeNonAssignedTalksAndWorkshops
 );
@@ -211,7 +211,7 @@ const Program = React.createClass({
     },
 
     render() {
-        const sessions = getTransformedSessions(this.props.sessions);
+        const sessions = getTransformedSessions([])(this.props.sessions);
         saveSettings(this.state);
         return (
             <Page name='program'>
