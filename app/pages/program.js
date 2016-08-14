@@ -80,6 +80,7 @@ function saveSettings(settings) {
 
 function mapStateToProps(state) {
     return {
+        isFetching: state.sessions.isFetching,
         sessions: state.sessions.sessions
     };
 }
@@ -173,6 +174,53 @@ const Day = ({slots, day}, key, state, toggleFavorite) => (
     </li>
 );
 
+const Loading = () => (
+    <div className='program__loading'>
+        Hold on! I’m trying to get hold of the program right as we speak. Shouln’t take too long!
+    </div>
+);
+
+function showEmptyMyProgram(state) {
+    return state.show === 'my' && state.myprogram.length === 0;
+}
+
+const EmptyMyProgram = () => (
+    <div className='program__empty'>
+        <p>
+            What’s this, you say? Well, it’s your program! Switch over to "All", "Norwegian" or "English",
+            and start adding stuff to it with the <i className='icon-plus'></i> button. Keep in mind that this
+            is saved to your browsers localStorage, so you should do it on the device you will be using during JavaZone.
+            If you want to remove something from your program, just hit the <i className='icon-check'></i> button.
+        </p>
+    </div>
+);
+
+const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEnglish, setMyProgram) => (
+    <div>
+        <div className='days'>
+            <div className='days__header'>Days</div>
+            <div className='days__days'>
+                <a href='#Wednesday' className='days__day'>Wednesday</a>
+                <a href='#Thursday' className='days__day'>Thursday</a>
+            </div>
+        </div>
+
+        <div className='filters'>
+            <div className='filters__header'>Filters</div>
+            <div className='filters__filters'>
+                <button className={`filters__toggle filters__toggle--${state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={setAll}>All</button>
+                <button className={`filters__toggle filters__toggle--${state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={setNorwegian}>Norwegian</button>
+                <button className={`filters__toggle filters__toggle--${state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={setEnglish}>English</button>
+                <button className={`filters__toggle filters__toggle--${state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={setMyProgram}>My Program</button>
+            </div>
+        </div>
+
+        <ul className='sessions'>
+            {showEmptyMyProgram(state) ? EmptyMyProgram() : sessions.map((session, id) => Day(session, id, state, toggleFavorite))}
+        </ul>
+    </div>
+);
+
 const Program = React.createClass({
 
     getInitialState() {
@@ -202,7 +250,6 @@ const Program = React.createClass({
     },
 
     toggleFavorite(id) {
-        console.log(id);
         if (includes(id, this.state.myprogram)) {
             this.setState({myprogram: without([id], this.state.myprogram)});
         } else {
@@ -212,36 +259,21 @@ const Program = React.createClass({
     },
 
     render() {
-        const sessions = getTransformedSessions([])(this.props.sessions);
+        console.log(this.props.isFetching);
+        const content = this.props.isFetching
+            ? Loading()
+            : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+
         saveSettings(this.state);
+
         return (
             <Page name='program'>
                 <Container>
                     <CenteredBlock>
-                        <CenteredHeader>JavaZone 2016 – Program</CenteredHeader>
+                        <CenteredHeader>JavaZone 2016 Program</CenteredHeader>
                     </CenteredBlock>
 
-                    <div className='days'>
-                        <div className='days__header'>Days</div>
-                        <div className='days__days'>
-                            <a href='#Wednesday' className='days__day'>Wednesday</a>
-                            <a href='#Thursday' className='days__day'>Thursday</a>
-                        </div>
-                    </div>
-
-                    <div className='filters'>
-                        <div className='filters__header'>Filters</div>
-                        <div className='filters__filters'>
-                            <button className={`filters__toggle filters__toggle--${this.state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={this.setAll}>All</button>
-                            <button className={`filters__toggle filters__toggle--${this.state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={this.setNorwegian}>Norwegian</button>
-                            <button className={`filters__toggle filters__toggle--${this.state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={this.setEnglish}>English</button>
-                            <button className={`filters__toggle filters__toggle--${this.state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={this.setMyProgram}>My Program</button>
-                        </div>
-                    </div>
-
-                    <ul className='sessions'>
-                        {sessions.map((session, id) => Day(session, id, this.state, this.toggleFavorite))}
-                    </ul>
+                    {content}
                 </Container>
             </Page>
         );
