@@ -4,7 +4,7 @@ import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content, SubHeader } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 
-const mainEntrance = 'https://www.google.com/maps/place/Oslo+Spektrum/@59.912985,10.754742,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e61cee4e1bf:0xeaab41e737da924c?hl=en|https://www.google.com/maps/place/Oslo+Spektrum/@59.912985,10.754742,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e61cee4e1bf:0xeaab41e737da924c?hl=en';
+const mainEntrance = 'https://www.google.com/maps/place/59°54\'46.3"N+10°45\'21.2"E/@59.9128594,10.7537001,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d59.912872!4d10.755896?hl=en';
 const spektrum = 'https://www.google.no/maps/place/Oslo+Spektrum/@59.912985,10.754742,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e61cee4e1bf:0xeaab41e737da924c';
 const grilleriet = 'https://www.google.nl/maps/place/Grilleriet/@59.914207,10.7501658,19z/data=!4m5!3m4!1s0x0:0xf81cca154f0c6670!8m2!3d59.9141759!4d10.7507128?hl=en';
 
@@ -38,7 +38,7 @@ export default () => (
                     <SubHeader>Your Slides</SubHeader>
 
                     <p>
-                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere else than your computer – memory stick, Dropbox or something similiar.
+                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere other than on your computer – memory stick, Dropbox or something similiar.
                     </p>
 
                     <SubHeader>Guided Tour</SubHeader>
@@ -50,7 +50,7 @@ export default () => (
                     <SubHeader>Speakers Dinner</SubHeader>
 
                     <p>
-                        This years speakers dinner will be held at <a href='http://www.grilleriet.no/english/'>Grilleriet</a> (located at <a href={grilleriet}>Folketeaterpassasjen, Storgata 21</a>) Tuesday September 6th, starting at 19:00. We will provide transport from Oslo Spektrum to Smelteverket after the guided tour ends at around 18:45. If you don’t want to attend the guided tour, it is perfectly possible to show up at Grilleriet at 19:00 or later.
+                        This years speakers dinner will be held at <a href='http://www.grilleriet.no/english/'>Grilleriet</a> (located at <a href={grilleriet}>Folketeaterpassasjen, Storgata 21</a>), on Tuesday September 6th, starting at 19:00. We will provide transport from Oslo Spektrum to Smelteverket after the guided tour ends around 18:45. If you don’t want to attend the guided tour, it is perfectly possible to show up at Grilleriet at 19:00 or later.
                     </p>
                 </Content>
             </Block>
