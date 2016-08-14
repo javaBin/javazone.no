@@ -62,11 +62,11 @@ export default () => (
                     <Header>During The Conference</Header>
                     <Content>
                         <p>
-                            The conference is, as always, located at <a href={spektrum}>Oslo Spectrum</a>. Regardless if you’re having a workshop, presentation or lightning talk, this is where you will be having it. For those of you who are new to Oslo – this is more or less in the heart of the city (well, not quite, but no more than a five minute walk from the main street!).
+                            The conference is, as always, located at <a href={spektrum}>Oslo Spectrum</a>. Whether you have a workshop, presentation or lightning talk, this is where you will be having it. For those of you who are new to Oslo – this is more or less in the heart of the city (well, not quite, but no more than a five minute walk from the main street!).
                         </p>
 
                         <p>
-                            As a speaker, you have access to the <b>Speakers Lounge</b> in addition to the rest of Oslo Spektrum. This can be a good place to relax or look over your presentation a few times before you’re up.
+                            As a speaker, you have access to the <b>Speakers Lounge</b> in addition to the rest of Oslo Spektrum. This is a good place to relax or look over your presentation a few times before you’re up.
                         </p>
 
                         <SubHeader>Your Presentation</SubHeader>
@@ -88,7 +88,7 @@ export default () => (
                         <SubHeader>Spread the Word!</SubHeader>
 
                         <p>
-                            Help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We also publish the videos of your talk pretty fast after the conference, so please share this with your network as well.
+                            Help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We will also publish the videos of your talk during or immediately after the conference, so please share this with your network as well.
                         </p>
                     </Content>
                 </Block>
@@ -122,7 +122,7 @@ export default () => (
                 <CenteredHeader>More Info?</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        If there’s anything you need answer to that is not aswered here, don’t hesitate to <a href='mailto:javazone@java.no'>contact us</a>. You’ll find our details on the contact page. More general information about the conference can be found in the <Link to='/info'>information page</Link>.
+                        If there’s anything you need answer to that is not covered here, don’t hesitate to <a href='mailto:javazone@java.no'>contact us</a>. You’ll find our details on the contact page. More general information about the conference can be found in the <Link to='/info'>information page</Link>.
                     </p>
                 </CenteredContent>
             </CenteredBlock>
