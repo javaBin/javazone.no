@@ -17,7 +17,7 @@ export default () => (
                 <CenteredHeader>It’s time to get ready.</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        With JavaZone 2016 quickly approaching, it’s time to go over a few details to ensure you are ready. If you are having a workshop, lightning talk or presentation, this is for you.
+                        With JavaZone 2016 quickly approaching, it’s time to go over a few details to ensure you are ready. If you are holding a workshop, lightning talk or presentation, this is for you.
                     </p>
                 </CenteredContent>
             </CenteredBlock>
@@ -26,31 +26,31 @@ export default () => (
                 <Header>Before The Conference</Header>
                 <Content>
                     <p>
-                        By now, you probably have all the essentials in place – traveling tickets if you come from out of town, and hotel. If not, it’s probably a good idea to get this fixed.
+                        By now, you probably have all the essentials in place – travel arrangements if you come from out of town, and hotel. If not, it’s probably a good idea to get this fixed.
                     </p>
 
                     <SubHeader>Your Talk</SubHeader>
 
                     <p>
-                        Your talk is listed in <Link to='/program'>the program</Link>. It is a good idea to find out when you are up already now. You might also want to read through the info listed to ensure that everything is correct.
+                        Your talk is listed in <Link to='/program'>the program</Link>. It is a good idea to check your timeslot already now. You might also want to read through the info about your talk to ensure that everything is correct.
                     </p>
 
                     <SubHeader>Your Slides</SubHeader>
 
                     <p>
-                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere other than on your computer – memory stick, Dropbox or something similiar.
+                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere other than on your computer – for example memory stick, Dropbox or something similiar.
                     </p>
 
                     <SubHeader>Guided Tour</SubHeader>
 
                     <p>
-                        Never been to JavaZone, or just curious to see the venue? We will have a guided tour for speakers at Tuesday September 6th, 18:00. Meet us at the <a href={mainEntrance}>main entrance</a>.
+                        Never been to JavaZone, want to check out the room you'll be speaking in, or just curious to see the venue? We will have a guided tour for speakers on Tuesday September 6th, 18:00. Meet us at the <a href={mainEntrance}>main entrance</a>.
                     </p>
 
                     <SubHeader>Speakers Dinner</SubHeader>
 
                     <p>
-                        This years speakers dinner will be held at <a href='http://www.grilleriet.no/english/'>Grilleriet</a> (located at <a href={grilleriet}>Folketeaterpassasjen, Storgata 21</a>), on Tuesday September 6th, starting at 19:00. We will provide transport from Oslo Spektrum to Smelteverket after the guided tour ends around 18:45. If you don’t want to attend the guided tour, it is perfectly possible to show up at Grilleriet at 19:00 or later.
+                        This years speakers dinner will be held at <a href='http://www.grilleriet.no/english/'>Grilleriet</a> (located at <a href={grilleriet}>Folketeaterpassasjen, Storgata 21</a>), on Tuesday September 6th, starting at 19:00. After the tour we’ll head straight for the Speakers Dinner, which is located less than 10 minutes walk from the JavaZone venue. If you don’t want to attend the guided tour, it is perfectly ok to show up at Grilleriet from 19:00 onwards. And it's no problem if you are a little late.
                     </p>
                 </Content>
             </Block>
@@ -62,7 +62,7 @@ export default () => (
                     <Header>During The Conference</Header>
                     <Content>
                         <p>
-                            The conference is, as always, located at <a href={spektrum}>Oslo Spectrum</a>. Whether you have a workshop, presentation or lightning talk, this is where you will be having it. For those of you who are new to Oslo – this is more or less in the heart of the city (well, not quite, but no more than a five minute walk from the main street!).
+                            The conference is, as always, located at <a href={spektrum}>Oslo Spektrum</a>. All sessions will take place here. For those of you who are new to Oslo – this is more or less in the heart of the city (no more than a five minute walk from the main street).
                         </p>
 
                         <p>
@@ -72,11 +72,11 @@ export default () => (
                         <SubHeader>Your Presentation</SubHeader>
 
                         <p>
-                            To ensure that everything goes as smooth as possible, everyone are asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before you. Each room has a technician that will help you with connecting your laptop to the projector, and with the microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for big projector troubles during the talk.
+                            To ensure that everything goes as smooth as possible, everyone is asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before yours. Each room has a technician who can help you with connecting your laptop to the projector, and also with your microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for projector issues during the sessions.
                         </p>
 
                         <p>
-                            If you are having a workshop the day before the conference (Tuesday, September 6th), we will meet you at the entrance and guide you to the workshop rooms. You should still meet <b>20 minutes</b> before the start of your workshop to get set up.
+                            If you are holding a workshop the day before the conference (Tuesday, September 6th), we will meet you at the entrance and guide you to the workshop rooms. You should still meet <b>20 minutes</b> before the start of your workshop to get set up.
                         </p>
 
                         <SubHeader>Speakers Wall</SubHeader>
@@ -88,7 +88,7 @@ export default () => (
                         <SubHeader>Spread the Word!</SubHeader>
 
                         <p>
-                            Help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We will also publish the videos of your talk during or immediately after the conference, so please share this with your network as well.
+                            Help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We will also publish the videos of your talk during or immediately after the conference, so please share these with your network as well.
                         </p>
                     </Content>
                 </Block>
@@ -101,7 +101,7 @@ export default () => (
                 <Content>
                     <dl className='technical-stuff'>
                         <dt className='technical-stuff__term'>Computers</dt>
-                        <dd className='technical-stuff__data'>You are encouraged to use your own computer for your presentation. Each room is configured to run presentations from both PCs and Macs. If you are planning on using anything else (tablets, phones, or anything else), <b>please notify us</b>.</dd>
+                        <dd className='technical-stuff__data'>You are encouraged to use your own computer for your presentation. Each room is configured to run presentations from both PCs and Macs. If you are planning on using anything else (for example tablets or phones), <b>please notify us</b>.</dd>
                         <dt className='technical-stuff__term'>Projectors</dt>
                         <dd className='technical-stuff__data'>The optimal screen resolution for the projectors are 1920x1080 (16/9 screen format), but other resolutions are of course supported. The video signal will be 60Hz in all auditoriums.</dd>
                         <dt className='technical-stuff__term'>Connectors</dt>
