@@ -176,7 +176,7 @@ const Day = ({slots, day}, key, state, toggleFavorite) => (
 
 const Loading = () => (
     <div className='program__loading'>
-        Hold on! I’m trying to get hold of the program right as we speak. Shouln’t take too long!
+        Hold on! I’m trying to get hold of the program right as we speak. Shouldn’t take too long!
     </div>
 );
 
