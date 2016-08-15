@@ -1,4 +1,4 @@
-import { REQUEST_SESSIONS, RECEIVE_SESSIONS } from '../actions/sessions';
+import { REQUEST_SESSIONS, RECEIVE_SESSIONS, RECEIVE_SESSION_WORKSHOPS } from '../actions/sessions';
 
 const initialState = {
     isFetching: false,

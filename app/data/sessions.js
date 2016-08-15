@@ -1,4 +1,6 @@
-import {join, map, find, reduce, compose, get, kebabCase, sortBy} from 'lodash/fp';import _moment from 'moment';
+import {last, orderBy, join, map, find, reduce, compose, get, kebabCase, sortBy, filter} from 'lodash/fp';
+import _moment from 'moment';
+
 
 function moment(d) {
     return _moment(d).utcOffset(2);
@@ -8,41 +10,26 @@ function unix(d) {
     return _moment(d).valueOf();
 }
 
-const sortIndexes = {
-    'lightning-talk' : 2,
-    'workshop': 1,
-    'presentation': 0
-};
-
 const getSpeakers = compose(join(', '), map('navn'));
 const getDetails = find({rel: 'detaljer'});
-const group = reduce((acc, session) => {
-    let key = find({format: session.format}, acc);
-    if (!key) {
-        key = {
-            format: session.format,
-            sessions: [],
-            className: `sessions__format-title--${session.format}`,
-            sortIndex: get(session.format)(sortIndexes)
-        };
-        acc.push(key);
-    }
+const removeNotSetSessions = filter(session => session.starter !== null);
 
-    key.sessions.push(session);
-    return acc;
-}, []);
+const getRoom = (room) => (room || '').replace(/Room\s/, '');
 
 const transformSessions = map(session => ({
     title: session.tittel,
     speakers: getSpeakers(session.foredragsholdere),
     format: session.format,
-    icon: 'icon-energy',
     language: session.sprak,
     id: kebabCase(session.tittel),
+    room: getRoom(session.rom),
     details: getDetails(session.links).href,
-    time: moment(session.starter).format('MMMM Do, HH:mm'),
-    duration: moment(session.stopper).diff(moment(session.starter), 'hours'),
-    timestamp: unix(session.starter)
+    day: moment(session.starter).format('dddd'),
+    dayIndex: moment(session.starter).format('D'),
+    timestamp: unix(session.starter),
+    start: moment(session.starter).format('HH:mm'),
+    duration: moment(session.stopper).diff(moment(session.starter), session.format === 'workshop' ? 'hours' : 'minutes'),
+    time: moment(session.starter).format('MMMM Do, HH:mm')
 }));
 
-export default compose(sortBy('sortIndex'), group, transformSessions);
+export default compose(transformSessions, removeNotSetSessions);

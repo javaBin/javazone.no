@@ -5,7 +5,7 @@ import { getSessions } from '../actions/sessions';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { find, sortBy, includes } from 'lodash/fp';
+import { find, sortBy, includes, reduce, compose, get } from 'lodash/fp';
 
 const workshops = [
     "internet_of_things_for_everyone",
@@ -17,6 +17,33 @@ const workshops = [
     "vr_for_alle",
     "law_and_order_in_la__to_process_"
 ];
+
+const sortIndexes = {
+    'lightning-talk' : 2,
+    'presentation': 1,
+    'workshop': 0
+};
+
+const groupByFormat = reduce((acc, session) => {
+    let key = find({format: session.format}, acc);
+    if (!key) {
+        key = {
+            format: session.format,
+            sessions: [],
+            className: `sessions__format-title--${session.format}`,
+            sortIndex: get(session.format)(sortIndexes)
+        };
+        acc.push(key);
+    }
+
+    key.sessions.push(session);
+    return acc;
+}, []);
+
+const getTransformedWorkshops = compose(
+    sortBy('sortIndex'),
+    groupByFormat
+);
 
 function isWorkshop(workshop) {
     return includes(workshop.id, workshops);
@@ -105,8 +132,8 @@ const Kids = React.createClass({
     },
 
     render() {
-        const workshops = sortBy('timestamp', merge(this.props.workshops.filter(isWorkshop), this.props.sessions[1]));
-
+        const sessions = getTransformedWorkshops(this.props.sessions)[0];
+        const workshops = sortBy('timestamp', merge(this.props.workshops.filter(isWorkshop), sessions));
         return (
             <Page name='workshops'>
                 <Container>

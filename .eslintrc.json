@@ -1,0 +1,45 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "arrowFunctions": true,
+            "binaryLiterals": false,
+            "blockBindings": true,
+            "classes": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "generators": false,
+            "modules": true,
+            "objectLiteralComputedProperties": true,
+            "objectLiteralDuplicateProperties": false,
+            "objectLiteralShorthandMethods": true,
+            "objectLiteralShorthandProperties": true,
+            "object": true,
+            "restParams": true,
+            "spread": true,
+            "super": false,
+            "templateStrings": true,
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "environment": {
+        "browser": true,
+        "es6": true
+    },
+    "rules": {
+        "eqeqeq": 2,
+        "semi": 2,
+        "no-var": 2,
+        "prefer-const": 2,
+        "prefer-template": 2,
+        "no-trailing-spaces": 2,
+        "no-mixed-spaces-and-tabs": 2,
+        "indent": 2
+    },
+    "plugins": [
+        "lodash-fp"
+    ],
+    "extends": "plugin:lodash-fp/recommended"
+}

@@ -1,48 +1,56 @@
 @import '../colors';
 @import '../variables';
 
-.session {
-    margin-bottom: 30px;
+.lightning {
     position: relative;
+    margin-bottom: 30px;
 
     @media (min-width: @size-s) {
         margin-bottom: 20px;
         margin-left: 40px;
     }
 
-    &__room,
-    &__mobile-lang,
-    &__mobile-room {
-        color: @grey;
-        display: none;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-
     &__room {
+        color: @grey;
         font-size: 1.2rem;
+        font-weight: 600;
         left: -40px;
         position: absolute;
+        text-transform: uppercase;
         top: 1px;
-
-        @media (min-width: @size-s) {
-            display: block;
-        }
-    }
-
-    &__mobile-lang {
-        display: inline;
-        margin-right: 10px;
     }
 
     &__mobile-room {
-        display: inline;
+        color: @grey;
         font-size: 1.1rem;
+        font-weight: 600;
         margin-right: 10px;
 
         @media (min-width: @size-s) {
             display: none;
         }
+    }
+
+    &__header {
+        color: @black;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+
+        @media (min-width: @size-s) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__talk {
+        margin-bottom: 8px;
+        margin-right: 36px;
+    }
+
+    &__language {
+        color: @grey;
+        font-weight: 400;
+        margin-right: 10px;
+        text-transform: uppercase;
     }
 
     &__duration {
@@ -51,40 +59,20 @@
         margin-right: 10px;
     }
 
-    &__icon {
-        display: none;
-        position: absolute;
-        top: 5px;
-    }
-
-    &__title-wrapper {
-        display: inline-block;
-        margin-right: 36px;
-    }
-
-    &__title {
-        border-bottom: 1px solid transparent;
-        color: @black;
-        display: inline;
-        font-size: 1.1rem;
-        margin-right: 40px;
-        text-decoration: none;
-        transition: border-bottom-color .4s ease-in-out;
-
-        &:hover {
-            border-bottom-color: fade(@black, 50%);
-        }
-
-        @media (min-width: @size-s) {
-            font-size: 1.3rem;
-        }
-    }
-
     &__speakers {
         color: @grey;
     }
 
-    &__favorite {
+    &__title {
+        color: @black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__favorite{
         background: transparent;
         border: 0;
         color: @grey;
