@@ -52,6 +52,18 @@ export default () => (
                     <p>
                         This years speakers dinner will be held at <a href='http://www.grilleriet.no/english/'>Grilleriet</a> (located at <a href={grilleriet}>Folketeaterpassasjen, Storgata 21</a>), on Tuesday September 6th, starting at 19:00. After the tour we’ll head straight for the Speakers Dinner, which is located less than 10 minutes walk from the JavaZone venue. If you don’t want to attend the guided tour, it is perfectly ok to show up at Grilleriet from 19:00 onwards. And it's no problem if you are a little late.
                     </p>
+                    
+                    <SubHeader>Cost coverage</SubHeader>
+
+                    <p>
+                        If you sucessfully applied for cost coverage, please send us a copy of your receipts <b>after</b> the conference to <a href="mailto:program@java.no">program@java.no</a>. If we agreed upon covering your expenses, we have reserved a room at <a href="http://www.thonhotels.com/de/hotels/lander/norwegen/oslo/thon-hotel-terminus/">Thon Hotel Terminus</a> for you. The room is prepayed and reserved on your name.
+                    </p>
+                    
+                    <SubHeader>Visa invitation</SubHeader>
+
+                    <p>
+                        If you require an invitation for your visum, please contact us at <a href="mailto:program@java.no">program@java.no</a> and provide a brief instruction on any formailities of the invitation that you require.
+                    </p>
                 </Content>
             </Block>
         </Container>
