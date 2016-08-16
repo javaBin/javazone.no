@@ -17,7 +17,7 @@ export default () => (
                 <CenteredHeader>It’s time to get ready.</CenteredHeader>
                 <CenteredContent>
                     <p>
-                        With JavaZone 2016 quickly approaching, it’s time to go over a few details to ensure you are ready. If you are holding a workshop, lightning talk or presentation, this is for you.
+                        With JavaZone 2016 quickly approaching, it’s time to go over a few details to ensure you are ready. If you are holding a workshop, lightning talk or presentation, then this information is for you.
                     </p>
                 </CenteredContent>
             </CenteredBlock>
@@ -26,7 +26,7 @@ export default () => (
                 <Header>Before The Conference</Header>
                 <Content>
                     <p>
-                        By now, you probably have all the essentials in place – travel arrangements if you come from out of town, and hotel. If not, it’s probably a good idea to get this fixed.
+                        By now, you probably have all the essentials in place – travel arrangements if you are coming from out of town, and a place to stay. If not, it’s probably a good idea to get this fixed.
                     </p>
 
                     <SubHeader>Your Talk</SubHeader>
@@ -38,7 +38,7 @@ export default () => (
                     <SubHeader>Your Slides</SubHeader>
 
                     <p>
-                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere other than on your computer – for example memory stick, Dropbox or something similiar.
+                        You never know what might happen, so it is always a good idea to keep a backup of your talk somewhere other than on your computer – for example on a memory stick, in Dropbox or somewhere similiar.
                     </p>
 
                     <SubHeader>Guided Tour</SubHeader>
@@ -56,13 +56,13 @@ export default () => (
                     <SubHeader>Cost coverage</SubHeader>
 
                     <p>
-                        If you sucessfully applied for cost coverage, please send us a copy of your receipts <b>after</b> the conference to <a href="mailto:program@java.no">program@java.no</a>. If we agreed upon covering your expenses, we have reserved a room at <a href="http://www.thonhotels.com/de/hotels/lander/norwegen/oslo/thon-hotel-terminus/">Thon Hotel Terminus</a> for you. The room is prepayed and reserved on your name.
+                        If you sucessfully applied for cost coverage, please send us a copy of your receipts <b>after</b> the conference to <a href="mailto:program@java.no">program@java.no</a>. If we agreed upon covering your expenses we will have reserved a room at <a href="http://www.thonhotels.com/de/hotels/lander/norwegen/oslo/thon-hotel-terminus/">Thon Hotel Terminus</a> for you. The room is pre-paid and reserved in your name.
                     </p>
 
                     <SubHeader>Visa invitation</SubHeader>
 
                     <p>
-                        If you require an invitation for your visum, please contact us at <a href="mailto:program@java.no">program@java.no</a> and provide a brief instruction on any formailities of the invitation that you require.
+                        If you require an invitation for your visa, please contact us at <a href="mailto:program@java.no">program@java.no</a> and provide a brief instruction on any formailities of the invitation that you require.
                     </p>
                 </Content>
             </Block>
@@ -84,7 +84,7 @@ export default () => (
                         <SubHeader>Your Presentation</SubHeader>
 
                         <p>
-                            To ensure that everything goes as smooth as possible, everyone is asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before yours. Each room has a technician who can help you with connecting your laptop to the projector, and also with your microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for projector issues during the sessions.
+                            To ensure that everything goes as smooth as possible, everyone is asked to arrive at their designated presentation room <b>20 minutes</b> before the start of the session. In practice, this means that you should show up at the end of the session just before yours. Each room has a technician who can help you with connecting your laptop to the projector, and also fit you with a microphone. Testing your laptop on the projector is especially important if you have a lightning talk – there won’t be time for projector issues during these sessions.
                         </p>
 
                         <p>
