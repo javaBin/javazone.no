@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, BlockHeading, Columns, Column, BackgroundImage, ColumnHeading, P } from '../components/textblock';
 import { Dl, Dt, Dd } from '../components/definition-list';
+import { CenteredBlock, CenteredContent } from '../components/centeredblock';
 
 import header from '../assets/academy.jpg';
 
@@ -53,8 +54,10 @@ export default () => (
                         <Dl>
                             <Dt>How to register?</Dt>
                             <Dd>
-                                The registration for JavaZone Academy will open in August. Sign up for our <a href="http://eepurl.com/bxvsEn">student mailing list</a> to
-                                be notified when the registration opens.
+                                <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZAPtSzz5-wIgtshXhv7fJjliGn1uGI22Sc2kKHQuW67Jutw/viewform'>The registration</a> for JavaZone Academy are now open.
+                                Due to popular demand, we need to limit the number of tickets we give out.
+                                You can <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZAPtSzz5-wIgtshXhv7fJjliGn1uGI22Sc2kKHQuW67Jutw/viewform'>apply for a ticket</a>, and we'll let you
+                                know if you get a spot at least a week before the conference.
                             </Dd>
                             <Dt>Do you do other things for students?</Dt>
                             <Dd>
@@ -65,6 +68,16 @@ export default () => (
                     </Column>
                 </Columns>
             </Block>
+
+            <CenteredBlock>
+                <CenteredContent>
+                    <p>
+                        <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZAPtSzz5-wIgtshXhv7fJjliGn1uGI22Sc2kKHQuW67Jutw/viewform' className='button button--red button--big'>
+                            Register for JavaZone Academy
+                        </a>
+                    </p>
+                </CenteredContent>
+            </CenteredBlock>
         </Container>
     </Page>
 );
