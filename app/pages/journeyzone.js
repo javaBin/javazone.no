@@ -78,7 +78,7 @@ const CenteredButton = ({children}) => (
     <CenteredBlock>
         <CenteredContent>
             <p>
-                <a href='https://docs.google.com/forms/d/1-TxXhyC9lL6zNhb02v3-Bff5tmTeTMxb85CQn3y0Ot0/viewform' className='button button--green button--big'>{children}</a>
+                <a href='https://docs.google.com/forms/d/1-TxXhyC9lL6zNhb02v3-Bff5tmTeTMxb85CQn3y0Ot0/viewform' className='button button--disabled button--big'>{children}</a>
             </p>
         </CenteredContent>
     </CenteredBlock>
@@ -148,7 +148,7 @@ export default () => (
                 </Content>
             </Block>
 
-            <CenteredButton>Apply for a spot at JourneyZone 2016</CenteredButton>
+            <CenteredButton>Registration is closed</CenteredButton>
         </Container>
 
             <div className='journeyzone__map'>
@@ -181,7 +181,7 @@ export default () => (
                 </Content>
             </Block>
 
-            <CenteredButton>Apply for a spot at JourneyZone 2016</CenteredButton>
+            <CenteredButton>Registration is closed</CenteredButton>
         </Container>
     </Page>
 );
