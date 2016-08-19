@@ -30,6 +30,10 @@ function formatDuration(starter, stopper) {
     return moment(stopper).diff(moment(starter), 'minutes');
 }
 
+function formatStop(time) {
+    return moment(time).format('HH:mm');
+}
+
 function mapStateToProps(state) {
     return {
         session: state.session.session
@@ -65,6 +69,7 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
         <CenteredBlock className='details__block'>
             <CenteredHeader>{tittel}</CenteredHeader>
             <CenteredContent>
+                {formatStart(starter)} - {formatStop(stopper)} @ {rom}
             </CenteredContent>
         </CenteredBlock>
 
@@ -96,33 +101,6 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
             <Content>
                 <p>
                     {get(sprak)(languages)}
-                </p>
-            </Content>
-        </Block>
-
-        <Block className='details__block'>
-            <Header>Room</Header>
-            <Content>
-                <p>
-                    {rom}
-                </p>
-            </Content>
-        </Block>
-
-        <Block className='details__block'>
-            <Header>When?</Header>
-            <Content>
-                <p>
-                    {formatStart(starter)}
-                </p>
-            </Content>
-        </Block>
-
-        <Block className='details__block'>
-            <Header>Duration</Header>
-            <Content>
-                <p>
-                    {formatDuration(starter, stopper)} minutes
                 </p>
             </Content>
         </Block>
