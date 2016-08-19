@@ -5,6 +5,11 @@ import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 import { get } from 'lodash/fp';
+import _moment from 'moment';
+
+function moment(d) {
+    return _moment(d).utcOffset(2);
+}
 
 const languages = {
     'no': 'Norwegian',
@@ -16,6 +21,14 @@ const formats = {
     'workshop': 'Workshop',
     'presentation': 'Presentation'
 };
+
+function formatStart(time) {
+    return moment(time).format('dddd, HH:mm');
+}
+
+function formatDuration(starter, stopper) {
+    return moment(stopper).diff(moment(starter), 'minutes');
+}
 
 function mapStateToProps(state) {
     return {
@@ -41,7 +54,7 @@ const Bio = ({navn, bio}, id) => (
     </Block>
 );
 
-const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format}) => (
+const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format, tiltenktPublikum, starter, stopper}) => (
     <Container>
         <CenteredBlock>
             <div className='details__speakers'>
@@ -83,6 +96,33 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
             <Content>
                 <p>
                     {get(sprak)(languages)}
+                </p>
+            </Content>
+        </Block>
+
+        <Block className='details__block'>
+            <Header>Expected Audience</Header>
+            <Content>
+                <p>
+                    {tiltenktPublikum}
+                </p>
+            </Content>
+        </Block>
+
+        <Block className='details__block'>
+            <Header>When?</Header>
+            <Content>
+                <p>
+                    {formatStart(starter)}
+                </p>
+            </Content>
+        </Block>
+
+        <Block className='details__block'>
+            <Header>Duration</Header>
+            <Content>
+                <p>
+                    {formatDuration(starter, stopper)} minutes
                 </p>
             </Content>
         </Block>
