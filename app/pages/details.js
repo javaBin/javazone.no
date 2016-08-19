@@ -54,7 +54,7 @@ const Bio = ({navn, bio}, id) => (
     </Block>
 );
 
-const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format, tiltenktPublikum, starter, stopper}) => (
+const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format, tiltenktPublikum, starter, stopper, rom}) => (
     <Container>
         <CenteredBlock>
             <div className='details__speakers'>
@@ -83,10 +83,10 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
         {foredragsholdere.map(Bio)}
 
         <Block className='details__block'>
-            <Header>Format</Header>
+            <Header>Intended Audience</Header>
             <Content>
                 <p>
-                    {get(format)(formats)}
+                    {tiltenktPublikum}
                 </p>
             </Content>
         </Block>
@@ -101,10 +101,10 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
         </Block>
 
         <Block className='details__block'>
-            <Header>Expected Audience</Header>
+            <Header>Room</Header>
             <Content>
                 <p>
-                    {tiltenktPublikum}
+                    {rom}
                 </p>
             </Content>
         </Block>
@@ -123,6 +123,15 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
             <Content>
                 <p>
                     {formatDuration(starter, stopper)} minutes
+                </p>
+            </Content>
+        </Block>
+
+        <Block className='details__block'>
+            <Header>Format</Header>
+            <Content>
+                <p>
+                    {get(format)(formats)}
                 </p>
             </Content>
         </Block>
