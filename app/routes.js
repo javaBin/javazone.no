@@ -22,6 +22,7 @@ import NotFound from './pages/404.js';
 import Frivillig from './pages/frivillig';
 import Workshops from './pages/workshops';
 import Speakerinfo from './pages/speakerinfo';
+import PrintProgram from './pages/printprogram';
 
 // Academy
 import AcademyOslo from './pages/academy/oslo';
@@ -53,6 +54,7 @@ export default (
         <Route path='frivillig' component={Frivillig} />
         <Route path='workshops' component={Workshops} />
         <Route path='speaker-info' component={Speakerinfo} />
+        <Route path='printprogram' component={PrintProgram} />
         <Route path='*' component={NotFound} />
     </Route>
 );

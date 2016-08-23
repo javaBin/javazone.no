@@ -28,6 +28,7 @@ const transformSessions = map(session => ({
     dayIndex: moment(session.starter).format('D'),
     timestamp: unix(session.starter),
     start: moment(session.starter).format('HH:mm'),
+    end: moment(session.starter).add(1, 'hour').format('HH:mm'),
     duration: moment(session.stopper).diff(moment(session.starter), session.format === 'workshop' ? 'hours' : 'minutes'),
     time: moment(session.starter).format('MMMM Do, HH:mm')
 }));
