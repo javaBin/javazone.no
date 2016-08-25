@@ -1,4 +1,4 @@
-import className from 'className';
+import className from 'classname';
 
 export const CenteredBlock = (props) => {
     const c = className('block block--center', props.className);
