@@ -6,14 +6,14 @@ import { Block, Column, ColumnHeading, P } from '../components/textblock';
 export default () => (
     <Page>
         <PageHeading background={header}>
-            Get your JavaZone 2016 Tickets
+            JavaZone tickets – all sold out!
         </PageHeading>
 
         <Container>
             <div className='textblock textblock--centered'>
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text textblock__text--fill'>
-                        <h2 className='textblock__title'>Join us for the 15th JavaZone, <br /><a className='tickets__buy-link' href="https://www.eventsystems.no/es/event/javazone2016">buy your ticket today</a></h2>
+                        <h2 className='textblock__title'>JavaZone's big 15th year anniversary is all sold out!</h2>
                     </div>
                 </div>
             </div>
@@ -23,16 +23,14 @@ export default () => (
                     <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
                         <div><span className='tickets__icon icon-tag'></span></div>
                         <div className='tickets__title'>Regular Ticket</div>
-                        <div className='tickets__price'>6&nbsp;590 NOK</div>
-                        <div className='tickets__vat'>plus VAT</div>
+                        <div className='tickets__price'>SOLD OUT</div>
                     </a>
                 </li>
                 <li className='tickets__type'>
                     <a href='https://www.eventsystems.no/es/event/javazone2016' className='tickets__link'>
                         <div><span className='tickets__icon icon-tag'></span></div>
                         <div className='tickets__title'>javaBin Member Ticket</div>
-                        <div className='tickets__price'>5&nbsp;590 NOK</div>
-                        <div className='tickets__vat'>plus VAT</div>
+                        <div className='tickets__price'>SOLD OUT</div>
                     </a>
                 </li>
             </ul>
