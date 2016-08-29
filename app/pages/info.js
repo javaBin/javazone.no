@@ -202,13 +202,11 @@ export default () => (
                     <Header>The Program</Header>
                     <Content>
                         <p>
-                            The prelimenary program is availiable at our <a href="/program">program page</a>.
-                            The full program with time slots and rooms will be available
-                            early August. We always strive to improve the experience,
+                            The full program is availiable at our <a href="/program">program page</a>.
+                            We always strive to improve the experience,
                             so this year we have made a few small changes to the
                             program: lightning talks can now be either 10 or 20 minutes,
-                            and presentations can now be either 45 or 60 minutes.
-                            Trust us: it will all make sense when the full program is published.<br /><br />
+                            and presentations can now be either 45 or 60 minutes.<br /><br />
                         </p>
                         <p>
                             <a href='/program' className='button button--yellow button--big'>See the JavaZone program</a>
