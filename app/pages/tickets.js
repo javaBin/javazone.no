@@ -14,6 +14,7 @@ export default () => (
                 <div className='textblock__column textblock__column--centered'>
                     <div className='textblock__text textblock__text--fill'>
                         <h2 className='textblock__title'>JavaZone's big 15th year anniversary is all sold out!</h2>
+                        <p>If you want to be notified if any tickets become available, <br/><a href="http://eepurl.com/cdpHSr">add your email address to our waiting list</a>.</p>
                     </div>
                 </div>
             </div>
