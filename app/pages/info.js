@@ -1,5 +1,6 @@
 import Map from '../components/map';
 import header from '../assets/header_sal1.jpg';
+import awezone from '../assets/awezone.png';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content, SubHeader } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
@@ -220,6 +221,27 @@ export default () => (
                             <Format key={id} {...format} />
                         ))}
                     </ul>
+                </CenteredBlock>
+            </Container>
+        </div>
+
+        <div className='info__awezone'>
+            <Container>
+                <CenteredBlock className='info__intro'>
+                    <CenteredHeader>
+                        AweZone: celebrate 15 years in style!
+                    </CenteredHeader>
+                    <CenteredContent>
+                        <p>
+                            On the evening of Wednesday September 7th, we will transform Oslo Spektrum into a big birthday party!
+                            We'll have live entertainment, both of the neckbreaking type and of the more musical sort!
+                            Wintergatan and Lemaitre will be playing. There will be food, beer, and cake! Oh, so much cake!
+                        </p>
+                        <p>
+                            Come join us and celebrate JavaZone's 15th birthday in style!
+                        </p>
+                        <img src={awezone} className='info__awezone-image' />
+                    </CenteredContent>
                 </CenteredBlock>
             </Container>
         </div>
