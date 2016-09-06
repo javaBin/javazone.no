@@ -97,10 +97,16 @@ function isFavorite(id, state) {
     return includes(id, state.myprogram);
 }
 
-const Session = ({title, speakers, icon, room, language, duration, id}, key, state, toggleFavorite) => (
+function hasVideo(video) {
+    return typeof video !== 'undefined';
+}
+
+const Session = ({title, speakers, icon, room, language, duration, id, video}, key, state, toggleFavorite) => (
     <li className='sessions__session session' key={key}>
         <i className={`session__icon ${icon}`}></i>
-        <span className='session__room'>{room}</span>
+        {hasVideo(video) ? 
+            <Link to={`/program/${id}`} className='session__video-title'><span className='session__video'><i className='icon-control-play'></i></span></Link> : 
+            <span className='session__room'>{room}</span>}
         <div className='session__title-wrapper'>
             <span className='session__mobile-room'>{room}</span><Link to={`/program/${id}`} className='session__title'>{title}</Link>
         </div>
@@ -115,8 +121,11 @@ const Session = ({title, speakers, icon, room, language, duration, id}, key, sta
     </li>
 );
 
-const Lightning = ({title, duration, language, speakers, id}, key) => (
+const Lightning = ({title, duration, language, speakers, id, video}, key) => (
     <div key={key} className='lightning__talk'>
+        {hasVideo(video) ? 
+            <Link className='lightning__title' to={`/program/${id}`}><span className='session__video'><i className='icon-control-play'></i></span></Link> : 
+            <span></span>}
         <Link className='lightning__title' to={`/program/${id}`}>{title}</Link>
         <div>
             <span className='lightning__language'>{language}</span>
@@ -259,7 +268,6 @@ const Program = React.createClass({
     },
 
     render() {
-        console.log(this.props.isFetching);
         const content = this.props.isFetching
             ? Loading()
             : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);

@@ -4,7 +4,7 @@ import { getSession, removeSession } from '../actions/session';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content } from '../components/block';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
-import { get } from 'lodash/fp';
+import { get, find, compose } from 'lodash/fp';
 import _moment from 'moment';
 
 function moment(d) {
@@ -40,6 +40,26 @@ function mapStateToProps(state) {
     };
 }
 
+function parseVideoId(videoUrl) {
+    if (!videoUrl) {
+        return undefined;
+    }
+    
+    const parts = videoUrl.split('/');
+    if (parts.length < 2) {
+        return undefined;
+    }
+
+    return parts[parts.length - 1];
+}
+
+const getVideo = compose(parseVideoId, get('href'), find({rel:'video'}));
+
+function hasVideo(links) {
+    const video = getVideo(links)
+    return typeof video !== 'undefined';
+}
+
 const Speaker = ({navn, bildeUri}, id) => (
     <div className='details__speaker' key={id}>
         <img className='details__speaker-image' src={`${bildeUri}?size=240`} />
@@ -58,7 +78,7 @@ const Bio = ({navn, bio}, id) => (
     </Block>
 );
 
-const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format, tiltenktPublikum, starter, stopper, rom}) => (
+const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, format, tiltenktPublikum, starter, stopper, rom, links}) => (
     <Container>
         <CenteredBlock>
             <div className='details__speakers'>
@@ -72,6 +92,13 @@ const Session = ({tittel, beskrivelse, oppsummering, foredragsholdere, sprak, fo
                 {formatStart(starter)} - {formatStop(stopper)} @ {rom}
             </CenteredContent>
         </CenteredBlock>
+
+        { hasVideo(links) ?
+            <Block className='details__video-block'>
+                <iframe className='details__video' src={`https://player.vimeo.com/video/${getVideo(links)}`} frameBorder="0" allowFullScreen></iframe>
+            </Block> :
+            <span></span>
+        }
 
         <Block className='details__block'>
             <Header>About</Header>

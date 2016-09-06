@@ -25,6 +25,37 @@
         text-align: center;
     }
 
+    &__video-block {
+        margin-top: 0;
+        @media (max-width: @size-s) {
+            background: @white;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+
+    &__video {
+        background: @white;
+        padding-top: 2rem;
+        width: 100%;
+
+        @media (min-width: @size-s) {
+            height: 414px;
+        }
+
+        @media (min-width: @size-m) {
+            height: 555px;
+        }
+
+        @media (min-width: @size-l) {
+            height: 590px;
+        }
+
+        @media (min-width: @size-xl) {
+            height: 710px;
+        }
+    }
+
     &__summary {
         font-weight: 400;
     }

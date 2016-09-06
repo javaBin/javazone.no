@@ -12,14 +12,16 @@
 
     &__room,
     &__mobile-lang,
-    &__mobile-room {
+    &__mobile-room,
+    &__video {
         color: @grey;
         display: none;
         font-weight: 400;
         text-transform: uppercase;
     }
 
-    &__room {
+    &__room,
+    &__video {
         font-size: 1.2rem;
         left: -40px;
         position: absolute;
@@ -27,6 +29,26 @@
 
         @media (min-width: @size-s) {
             display: block;
+        }
+    }
+
+    &__video {
+        border-radius: 100%;
+        border: 1px solid @green--light;
+        box-shadow: 0 0 1px @green--light;
+        color: @green--light;
+        height: 25px;
+        left: -50px;
+        line-height: 25px;
+        text-align: center;
+        top: 5px;
+        width: 25px;
+
+        i {
+            font-size: .9rem;
+            left: 2px;
+            position: relative;
+            top: -1px;
         }
     }
 
