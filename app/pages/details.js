@@ -44,7 +44,7 @@ function parseVideoId(videoUrl) {
     if (!videoUrl) {
         return undefined;
     }
-    
+
     const parts = videoUrl.split('/');
     if (parts.length < 2) {
         return undefined;
@@ -56,7 +56,7 @@ function parseVideoId(videoUrl) {
 const getVideo = compose(parseVideoId, get('href'), find({rel:'video'}));
 
 function hasVideo(links) {
-    const video = getVideo(links)
+    const video = getVideo(links);
     return typeof video !== 'undefined';
 }
 
