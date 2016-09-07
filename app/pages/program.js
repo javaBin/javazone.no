@@ -108,7 +108,10 @@ const Session = ({title, speakers, icon, room, language, duration, id, video}, k
             <Link to={`/program/${id}`} className='session__video-title'><span className='session__video'><i className='icon-control-play'></i></span></Link> :
             <span className='session__room'>{room}</span>}
         <div className='session__title-wrapper'>
-            <span className='session__mobile-room'>{room}</span><Link to={`/program/${id}`} className='session__title'>{title}</Link>
+            {hasVideo(video) ?
+                <Link to={`/program/${id}`} className='session__video-title'><span className='session__mobile-video'><i className='icon-control-play'></i></span></Link> :
+                <span className='session__mobile-room'>{room}</span>}
+                <Link to={`/program/${id}`} className='session__title'>{title}</Link>
         </div>
         <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
             <i className={isFavorite(id, state) ? 'icon-check' : 'icon-plus'}></i>
@@ -124,7 +127,7 @@ const Session = ({title, speakers, icon, room, language, duration, id, video}, k
 const Lightning = ({title, duration, language, speakers, id, video}, key) => (
     <div key={key} className='lightning__talk'>
         {hasVideo(video) ?
-            <Link className='lightning__title' to={`/program/${id}`}><span className='session__video'><i className='icon-control-play'></i></span></Link> :
+            <Link className='lightning__title' to={`/program/${id}`}><span className='session__video session__video--lightning'><i className='icon-control-play'></i></span></Link> :
             <span></span>}
         <Link className='lightning__title' to={`/program/${id}`}>{title}</Link>
         <div>
