@@ -71,7 +71,9 @@
     }
 
     &__mobile-video {
-        display: inline-block;
+        @media (max-width: @size-s) {
+            display: inline-block;
+        }
         height: 20px;
         line-height: 20px;
         width: 20px;
