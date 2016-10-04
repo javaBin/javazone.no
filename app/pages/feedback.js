@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Link } from "react-router";
 import { parseVideoId } from "../util/vimeo";
-import { find } from "lodash/fp";
+import { find, isEmpty } from "lodash/fp";
 import { getFeedback } from "../actions/feedback";
 import { Page, Container } from "../components/page";
 import { Block, Header, Content } from "../components/block";
@@ -93,6 +93,20 @@ const ShowFeedback = (props) => {
                 </Content>
             </Block>
 
+            {!isEmpty(props.feedback.comments)  &&
+                <Block className='details__block'>
+                    <Header>Comments</Header>
+                    <Content>
+                        This is the unfiltered feedbacks that our users have given trough our apps.
+
+                        <br />
+                        <ul>
+                            {props.feedback.comments.map((comment, index) => <li key={index}>{comment}</li>)}
+                        </ul>
+                    </Content>
+                </Block>
+            }
+
             <Block block={true}>
                 <Column center={true}>
                     <ColumnHeading>
@@ -128,7 +142,7 @@ const Feedback = React.createClass({
                     <CenteredBlock>
                         <CenteredHeader>JavaZone 2016 Feedback</CenteredHeader>
                     </CenteredBlock>
-                    { (this.props.session ) ?
+                    { (this.props.session && this.props.feedback ) ?
                         <ShowFeedback
                             session={this.props.session}
                             feedback={this.props.feedback}/> :
