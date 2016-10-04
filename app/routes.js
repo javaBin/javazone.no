@@ -23,6 +23,7 @@ import Frivillig from './pages/frivillig';
 import Workshops from './pages/workshops';
 import Speakerinfo from './pages/speakerinfo';
 import PrintProgram from './pages/printprogram';
+import Feedback from './pages/feedback';
 
 // Academy
 import AcademyOslo from './pages/academy/oslo';
@@ -55,6 +56,7 @@ export default (
         <Route path='workshops' component={Workshops} />
         <Route path='speaker-info' component={Speakerinfo} />
         <Route path='printprogram' component={PrintProgram} />
+        <Route path='feedback/:id' component={Feedback} />
         <Route path='*' component={NotFound} />
     </Route>
 );
