@@ -3,10 +3,11 @@ import { Link } from "react-router";
 import { parseVideoId } from "../util/vimeo";
 import { find, isEmpty } from "lodash/fp";
 import { getFeedback } from "../actions/feedback";
-import { Page, Container } from "../components/page";
+import { Page, PageHeading, Container } from "../components/page";
 import { Block, Header, Content } from "../components/block";
 import { CenteredBlock, CenteredHeader } from "../components/centeredblock";
 import { Column, ColumnHeading, P } from "../components/textblock";
+import header from "../assets/academy.jpg";
 
 const ShowFeedback = (props) => {
     const videoUrl = props.session.video;
@@ -22,7 +23,8 @@ const ShowFeedback = (props) => {
                         which hopefully will give you some input on how others saw your performance.
                     </p>
                     <p>
-                        Please <a href="mailto:program@javazone.no">let us know</a> if anything is unclear, or if you miss something. We hope you can
+                        Please <a href="mailto:program@javazone.no">let us know</a> if anything is unclear, or if you
+                        miss something. We hope you can
                         put this to good use, and that we'll see you again next year for another JavaZone. We'll
                         certainly give you a heads up before the "Call for Speakers" opens.
                     </p>
@@ -50,7 +52,11 @@ const ShowFeedback = (props) => {
                 </Content>
             </Block>
             <Block className='details__video-block'>
-                <iframe className='details__video' src={`https://player.vimeo.com/video/${parseVideoId(videoUrl)}`} frameBorder="0" allowFullScreen></iframe>
+                <iframe
+                    className='details__video'
+                    src={`https://player.vimeo.com/video/${parseVideoId(videoUrl)}`}
+                    frameBorder="0"
+                    allowFullScreen></iframe>
             </Block>
 
             <CenteredBlock>
@@ -93,7 +99,7 @@ const ShowFeedback = (props) => {
                 </Content>
             </Block>
 
-            {!isEmpty(props.feedback.comments)  &&
+            {!isEmpty(props.feedback.comments) &&
                 <Block className='details__block'>
                     <Header>Comments</Header>
                     <Content>
@@ -136,22 +142,27 @@ const Feedback = React.createClass({
     },
 
     render() {
+        const loading = !(this.props.session && this.props.feedback);
         return (
             <Page name='program'>
+                <PageHeading background={header}>
+                    { !loading && this.props.session.title }
+                </PageHeading>
                 <Container>
                     <CenteredBlock>
                         <CenteredHeader>JavaZone 2016 Feedback</CenteredHeader>
                     </CenteredBlock>
-                    { (this.props.session && this.props.feedback ) ?
+                    { loading ?
+                        <Loading /> :
                         <ShowFeedback
                             session={this.props.session}
-                            feedback={this.props.feedback}/> :
-                        <Loading />
+                            feedback={this.props.feedback}/>
                     }
                 </Container>
             </Page>
         );
-    }});
+    }
+});
 
 const toProps = (state, props) => {
     return {
