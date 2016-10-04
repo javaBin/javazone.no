@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
+import { parseVideoId } from '../util/vimeo';
 import { getSession, removeSession } from '../actions/session';
 import { Page, PageHeading, Container } from '../components/page';
 import { Block, Header, Content } from '../components/block';
@@ -38,19 +39,6 @@ function mapStateToProps(state) {
     return {
         session: state.session.session
     };
-}
-
-function parseVideoId(videoUrl) {
-    if (!videoUrl) {
-        return undefined;
-    }
-
-    const parts = videoUrl.split('/');
-    if (parts.length < 2) {
-        return undefined;
-    }
-
-    return parts[parts.length - 1];
 }
 
 const getVideo = compose(parseVideoId, get('href'), find({rel:'video'}));

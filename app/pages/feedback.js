@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import {Link} from "react-router";
+import { parseVideoId } from '../util/vimeo';
 import { getSession } from '../actions/session';
 import { Page, Container } from '../components/page';
 import { Block, Header, Content } from '../components/block';
@@ -47,6 +48,9 @@ const ShowFeedback = (props) => {
                     </P>
                 </Content>
             </Block>
+            <Block className='details__video-block'>
+                <iframe className='details__video' src={`https://player.vimeo.com/video/${parseVideoId(videoUrl)}`} frameBorder="0" allowFullScreen></iframe>
+            </Block>
 
             <CenteredBlock>
                 <CenteredHeader>Your Feedback</CenteredHeader>
@@ -90,7 +94,10 @@ const ShowFeedback = (props) => {
 
             <Block block={true}>
                 <Column center={true}>
-                    <ColumnHeading>We hope to see you at JavaZone 2016 – please feel free to spread the word to your local community!</ColumnHeading>
+                    <ColumnHeading>
+                        We hope to see you at JavaZone 2016 – please feel free to spread
+                        the word to your local community!
+                    </ColumnHeading>
                     <P className='speakers__regards'>
                         Best regards,<br />the JavaZone Program Committee
                     </P>
