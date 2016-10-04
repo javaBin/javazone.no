@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 import wireframelogo from '../assets/logo_wireframe.svg';
-import {Link} from 'react-router';
 import { Page, PageHeading, Container } from '../components/page';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 
