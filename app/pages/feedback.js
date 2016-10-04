@@ -65,11 +65,11 @@ const ShowFeedback = (props) => {
 
                     Those actually worked and here is the result:
 
-                    <p>... The result</p>
+                    <p>{JSON.stringify(props.feedback.session.paper)}</p>
 
                     On average, across all talks, the notes were spread as follows
 
-                    <p>... The result</p>
+                    <p>{JSON.stringify(props.feedback.conference.paper)}</p>
 
                     Sadly, we do not have feedback in gathered from our vote boxes for your talk. If you had a
                     lightning talk, this is the reason.
@@ -83,12 +83,12 @@ const ShowFeedback = (props) => {
                     content, quality and overall. New this year was that we added comments to the talks.
                     A total of {99} people gave you feedback online, and these are your results:
 
-                    <p>... The result</p>
+                    <p>{JSON.stringify(props.feedback.session.online)}</p>
 
                     To give you a better context for your rating, this is the average rating across all the
                     talks at this years JavaZone:
 
-                    <p>... The result</p>
+                    <p>{JSON.stringify(props.feedback.conference.online)}</p>
 
                 </Content>
             </Block>
