@@ -8,7 +8,7 @@
     "clean": "rm -r ./dist && mkdir dist",
     "build": "npm run lint && npm run clean && NODE_ENV=production webpack -p --progress --colors",
     "deploy": "npm run build && node tasks/deploy.js",
-    "watch": "NODE_ENV=development webpack-dev-server --hot --inline",
+    "watch": "NODE_ENV=development webpack-dev-server --inline",
     "start": "npm run watch"
   },
   "devDependencies": {
