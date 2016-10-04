@@ -1,14 +1,15 @@
-import {connect} from "react-redux";
-import {Link} from "react-router";
-import { parseVideoId } from '../util/vimeo';
-import { getSession } from '../actions/session';
-import { Page, Container } from '../components/page';
-import { Block, Header, Content } from '../components/block';
-import { CenteredBlock, CenteredHeader } from '../components/centeredblock';
-import { Column, ColumnHeading, P } from '../components/textblock';
+import { connect } from "react-redux";
+import { Link } from "react-router";
+import { parseVideoId } from "../util/vimeo";
+import { find } from "lodash/fp";
+import { getFeedback } from "../actions/feedback";
+import { Page, Container } from "../components/page";
+import { Block, Header, Content } from "../components/block";
+import { CenteredBlock, CenteredHeader } from "../components/centeredblock";
+import { Column, ColumnHeading, P } from "../components/textblock";
 
 const ShowFeedback = (props) => {
-    const videoUrl = props.session.links.filter( (link) => {return (link.rel === "video");})[0].href;
+    const videoUrl = props.session.video;
     return (
         <Container>
             <Block className='details__block'>
@@ -113,31 +114,37 @@ const Loading = () => (
     </div>
 );
 
-const Feedback = (props) => {
-    return (
-        <Page name='program'>
-            <Container>
-                <CenteredBlock>
-                    <CenteredHeader>JavaZone 2016 Feedback</CenteredHeader>
-                </CenteredBlock>
-                { (props.session ) ?
-                    <ShowFeedback session={props.session} /> :
-                    <Loading />
-                }
-            </Container>
-        </Page>
-    );
-};
-Feedback.displayName = "Feedbacks";
+const Feedback = React.createClass({
+    displayName: "Feedbacks",
 
-const toProps = (state) => {
+    componentWillMount() {
+        this.props.getFeedback(this.props.params.id);
+    },
+
+    render() {
+        return (
+            <Page name='program'>
+                <Container>
+                    <CenteredBlock>
+                        <CenteredHeader>JavaZone 2016 Feedback</CenteredHeader>
+                    </CenteredBlock>
+                    { (this.props.session ) ?
+                        <ShowFeedback
+                            session={this.props.session}
+                            feedback={this.props.feedback}/> :
+                        <Loading />
+                    }
+                </Container>
+            </Page>
+        );
+    }});
+
+const toProps = (state, props) => {
     return {
         isFetching: state.session.isFetching,
-        session: state.session.session
+        session: find({id: props.params.id})(state.sessions.sessions),
+        feedback: state.feedback.feedback
     };
 };
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
-    dispatchProps.getSession(ownProps.params.id);
-    return Object.assign({}, ownProps, stateProps);
-};
-export default connect(toProps, {getSession}, mergeProps)(Feedback);
+
+export default connect(toProps, {getFeedback})(Feedback);
