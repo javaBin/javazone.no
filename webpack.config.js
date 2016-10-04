@@ -1,12 +1,12 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var webpack = require('webpack');
-var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
+const path = require('path');
 
-var exclude = /node_modules/;
-var output = path.join(__dirname, 'dist');
-var node_env = process.env.NODE_ENV || 'development';
+const exclude = /node_modules/;
+const output = path.join(__dirname, 'dist');
+const node_env = process.env.NODE_ENV || 'development';
 const isDev = node_env === 'development';
 
 const babelLoader = 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-react-require,plugins[]=transform-object-assign';
@@ -39,7 +39,8 @@ const config = {
 
     devServer: {
         historyApiFallback: true,
-        progress: true
+        progress: true,
+        port: 8080
     },
 
     postcss: function() {
