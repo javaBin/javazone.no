@@ -1,5 +1,3 @@
-import {Link} from 'react-router';
-
 export default () => (
     <footer className='footer'>
         <ul className='footer__social'>

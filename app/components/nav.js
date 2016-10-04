@@ -1,11 +1,10 @@
 import React from 'react';
 import className from 'classname';
-import {Link, IndexLink} from 'react-router';
 import logo from '../assets/logo-horisontal-hvit.svg';
 
 const MenuItem = (props) => (
     <li className='navigation__item'>
-        <Link to={props.to} className='navigation__link' activeClassName='navigation__link--active' onClick={props.click}>{props.title}</Link>
+        test
     </li>
 );
 
