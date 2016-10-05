@@ -9,6 +9,20 @@ import { CenteredBlock, CenteredHeader } from "../components/centeredblock";
 import { Column, ColumnHeading, P } from "../components/textblock";
 import header from "../assets/academy.jpg";
 
+const OnlineMeter = (props) => {
+    return (
+        <div>
+            <meter
+                max="5"
+                min="0"
+                low="2"
+                value={props.value} >{props.value}</meter>
+            <div>{props.label}</div>
+        </div>
+    );
+};
+OnlineMeter.displayName = "OnlineMeter";
+
 const ShowFeedback = (props) => {
     const videoUrl = props.session.video;
     return (
@@ -87,15 +101,40 @@ const ShowFeedback = (props) => {
                 <Content>
                     People were asked to rate your talk from 1 trough 5 on four different topics: relevance,
                     content, quality and overall. New this year was that we added comments to the talks.
-                    A total of {99} people gave you feedback online, and these are your results:
+                    A total of {props.feedback.session.online.count} people gave you feedback online, and these are your results:
 
-                    <p>{JSON.stringify(props.feedback.session.online)}</p>
+                    <div className="feedback__meter">
+                        <OnlineMeter
+                            label="Overall"
+                            value={props.feedback.session.online.overall}/>
+                        <OnlineMeter
+                            label="Relevance"
+                            value={props.feedback.session.online.relevance}/>
+                        <OnlineMeter
+                            label="Content"
+                            value={props.feedback.session.online.content}/>
+                        <OnlineMeter
+                            label="Quality"
+                            value={props.feedback.session.online.quality}/>
+                    </div>
 
                     To give you a better context for your rating, this is the average rating across all the
                     talks at this years JavaZone:
 
-                    <p>{JSON.stringify(props.feedback.conference.online)}</p>
-
+                    <div className="feedback__meter">
+                        <OnlineMeter
+                            label="Overall"
+                            value={props.feedback.conference.online.overall}/>
+                        <OnlineMeter
+                            label="Relevance"
+                            value={props.feedback.conference.online.relevance}/>
+                        <OnlineMeter
+                            label="Content"
+                            value={props.feedback.conference.online.content}/>
+                        <OnlineMeter
+                            label="Quality"
+                            value={props.feedback.conference.online.quality}/>
+                    </div>
                 </Content>
             </Block>
 
