@@ -197,6 +197,8 @@ const ShowFeedback = (props) => {
                 </Block>
             }
 
+            <Block className='details__block'/>
+
             <Block block={true}>
                 <Column center={true}>
                     <ColumnHeading>
