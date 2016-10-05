@@ -23,7 +23,7 @@ const ShowFeedback = (props) => {
                         which hopefully will give you some input on how others saw your performance.
                     </p>
                     <p>
-                        Please <a href="mailto:program@javazone.no">let us know</a> if anything is unclear, or if you
+                        Please <a className="feedback__link" href="mailto:program@javazone.no">let us know</a> if anything is unclear, or if you
                         miss something. We hope you can
                         put this to good use, and that we'll see you again next year for another JavaZone. We'll
                         certainly give you a heads up before the "Call for Speakers" opens.
@@ -40,7 +40,7 @@ const ShowFeedback = (props) => {
                         after (or, during, actually) the conference, completely for free.
                     </P>
                     <P>
-                        Your talk can be seen at <a href={videoUrl}>{videoUrl}</a> – feel free to share it as
+                        Your talk can be seen at <a className="feedback__link" href={videoUrl}>{videoUrl}</a> – feel free to share it as
                         much as you'd like. You'll also find some statistics on this page: click the
 
                         <span className="stats-button">Stats</span> button just below the description, and you will
@@ -144,7 +144,7 @@ const Feedback = React.createClass({
     render() {
         const loading = !(this.props.session && this.props.feedback);
         return (
-            <Page name='program'>
+            <Page name='feedback'>
                 <PageHeading background={header}>
                     { !loading && this.props.session.title }
                 </PageHeading>
