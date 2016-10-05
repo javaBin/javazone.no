@@ -23,6 +23,20 @@ const OnlineMeter = (props) => {
 };
 OnlineMeter.displayName = "OnlineMeter";
 
+const VoteBoxMeter = (props) => {
+    return (
+        <div>
+            <meter
+                max={props.total}
+                min="0"
+                low={props.total * 0.2}
+                value={props.value} >{props.value}</meter>
+            <div>{props.label}</div>
+        </div>
+    );
+};
+VoteBoxMeter.dispalyName = "VoteBoxMeter";
+
 const ShowFeedback = (props) => {
     const videoUrl = props.session.video;
     return (
@@ -82,17 +96,48 @@ const ShowFeedback = (props) => {
                 <Content>
                     You might have noticed the wooden boxes outside the rooms.
 
+                    {(props.session.format === "presentation") &&
+                        <div>
+                            Those actually worked and here is the result:
+                            <div className="feedback__meter">
+                                <VoteBoxMeter
+                                    label="Green"
+                                    total={props.feedback.session.paper.total}
+                                    value={props.feedback.session.paper.green}/>
+                                <VoteBoxMeter
+                                    label="Yellow"
+                                    total={props.feedback.session.paper.total}
+                                    value={props.feedback.session.paper.yellow}/>
+                                <VoteBoxMeter
+                                    label="Red"
+                                    total={props.feedback.session.paper.total}
+                                    value={props.feedback.session.paper.red}/>
+                            </div>
 
-                    Those actually worked and here is the result:
+                            On average, across all talks, the notes were spread as follows
 
-                    <p>{JSON.stringify(props.feedback.session.paper)}</p>
-
-                    On average, across all talks, the notes were spread as follows
-
-                    <p>{JSON.stringify(props.feedback.conference.paper)}</p>
-
-                    Sadly, we do not have feedback in gathered from our vote boxes for your talk. If you had a
-                    lightning talk, this is the reason.
+                            <div className="feedback__meter">
+                                <VoteBoxMeter
+                                    label="Green"
+                                    total={props.feedback.conference.paper.total}
+                                    value={props.feedback.conference.paper.green}/>
+                                <VoteBoxMeter
+                                    label="Yellow"
+                                    total={props.feedback.conference.paper.total}
+                                    value={props.feedback.conference.paper.yellow}/>
+                                <VoteBoxMeter
+                                    label="Red"
+                                    total={props.feedback.conference.paper.total}
+                                    value={props.feedback.conference.paper.red}/>
+                            </div>
+                        </div>
+                    }
+                    {(props.session.format !== "presentation") &&
+                        <p>
+                            Sadly, we do not have feedback from our vote boxes for your talk. If you had a
+                            lightning talk, this is the reason.
+                        </p>
+                    }
                 </Content>
             </Block>
 
@@ -155,7 +200,7 @@ const ShowFeedback = (props) => {
             <Block block={true}>
                 <Column center={true}>
                     <ColumnHeading>
-                        We hope to see you at JavaZone 2016 – please feel free to spread
+                        We hope to see you at JavaZone 2017 – please feel free to spread
                         the word to your local community!
                     </ColumnHeading>
                     <P className='speakers__regards'>
