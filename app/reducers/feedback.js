@@ -9,14 +9,14 @@ export function feedback(state = initialState, action) {
         const fb = cloneDeep(action.feedback);
         fb.comments = (fb.comments || []).filter((i) => !isEmpty(i));
         if (fb.session) {
-            fb.session.paper.total = sum(
-                fb.session.green,
-                fb.session.yellow,
-                fb.session.red);
-            fb.conference.paper.total = sum(
-                fb.conference.green,
-                fb.conference.yellow,
-                fb.conference.red);
+            fb.session.paper.total = sum([
+                fb.session.paper.green,
+                fb.session.paper.yellow,
+                fb.session.paper.red]);
+            fb.conference.paper.total = sum([
+                fb.conference.paper.green,
+                fb.conference.paper.yellow,
+                fb.conference.paper.red]);
         }
         return Object.assign({}, state, {feedback: fb});
     default:
