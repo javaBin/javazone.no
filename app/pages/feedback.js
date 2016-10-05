@@ -46,15 +46,15 @@ const ShowFeedback = (props) => {
                 <Content>
                     <p>
                         Everybody loves feedback. And statistics. During the conference, we collected feedback both
-                        physically in form of notes after your talk, and online, in form of ratings.
+                        the awesome vote boxes after your talk, and online, in form of ratings.
                         We have compiled this feedback and tried to present it to you in a more structured manner,
                         which hopefully will give you some input on how others saw your performance.
                     </p>
                     <p>
-                        Please <a className='feedback__link' href='mailto:program@javazone.no'>let us know</a> if anything is unclear, or if you
-                        miss something. We hope you can
-                        put this to good use, and that we'll see you again next year for another JavaZone. We'll
-                        certainly give you a heads up before the 'Call for Speakers' opens.
+                        Please <a className='feedback__link' href='mailto:program@java.no'>let us know</a> if
+                        anything is unclear, or if you miss something. We hope you can put this to good use, and
+                        that we'll see you again next year for another JavaZone. We'll certainly give you a heads
+                        up before the 'Call for Speakers' opens.
                     </p>
                 </Content>
             </Block>
@@ -68,13 +68,12 @@ const ShowFeedback = (props) => {
                         after (or, during, actually) the conference, completely for free.
                     </P>
                     <P>
-                        Your talk can be seen at <a className='feedback__link' href={videoUrl}>{videoUrl}</a> – feel free to share it as
-                        much as you'd like. You'll also find some statistics on this page: click the
+                        Your talk can be seen at <a className='feedback__link' href={videoUrl}>{videoUrl}</a> – feel
+                        free to share it as much as you'd like. You'll also find some statistics on this page: click
+                        the <span className='stats-button'>Stats</span> button just below the description, and you
+                        will see freshly updated total plays, likes, and comments among others.<br />
 
-                        <span className='stats-button'>Stats</span> button just below the description, and you will
-                        see freshly updated total plays, likes, and comments among others.<br />
-
-                        Note: you need to be logged in to see statistics. Don't worry, registering
+                        <strong>Note:</strong> you need to be logged in to see statistics. Don't worry, registering
                         for a basic account is free.
                     </P>
                 </Content>
@@ -94,11 +93,11 @@ const ShowFeedback = (props) => {
             <Block className='details__block'>
                 <Header>Vote boxes</Header>
                 <Content>
-                    You might have noticed the wooden boxes outside the rooms.
+                    <P>You might have noticed the wooden boxes outside the rooms.</P>
 
                     {(props.session.format === 'presentation') &&
                         <div>
-                            Those actually worked and here is the result:
+                            <P>Those actually worked and here is the result:</P>
                             <div className='feedback__meter'>
                                 <VoteBoxMeter
                                     label='Green'
@@ -114,7 +113,7 @@ const ShowFeedback = (props) => {
                                     value={props.feedback.session.paper.red}/>
                             </div>
 
-                            On average, across all talks, the notes were spread as follows
+                            <P>On average, across all talks, the votes were spread as follows</P>
 
                             <div className='feedback__meter'>
                                 <VoteBoxMeter
@@ -133,10 +132,10 @@ const ShowFeedback = (props) => {
                         </div>
                     }
                     {(props.session.format !== 'presentation') &&
-                        <p>
+                        <P>
                             Sadly, we do not have feedback from our vote boxes for your talk. If you had a
                             lightning talk, this is the reason.
-                        </p>
+                        </P>
                     }
                 </Content>
             </Block>
@@ -144,9 +143,11 @@ const ShowFeedback = (props) => {
             <Block className='details__block'>
                 <Header>Apps</Header>
                 <Content>
+                    <P>
                     People were asked to rate your talk from 1 trough 5 on four different topics: relevance,
                     content, quality and overall. New this year was that we added comments to the talks.
-                    A total of {props.feedback.session.online.count} people gave you feedback online, and these are your results:
+                    A total of <strong>{props.feedback.session.online.count}</strong> people gave you
+                    feedback online, and these are your results: </P>
 
                     <div className='feedback__meter'>
                         <OnlineMeter
@@ -163,8 +164,8 @@ const ShowFeedback = (props) => {
                             value={props.feedback.session.online.quality}/>
                     </div>
 
-                    To give you a better context for your rating, this is the average rating across all the
-                    talks at this years JavaZone:
+                    <P>To give you a better context for your rating, this is the average rating across all the
+                    talks at this years JavaZone:</P>
 
                     <div className='feedback__meter'>
                         <OnlineMeter
@@ -187,7 +188,7 @@ const ShowFeedback = (props) => {
                 <Block className='details__block'>
                     <Header>Comments</Header>
                     <Content>
-                        This is the unfiltered feedbacks that our users have given trough our apps.
+                        <P>This is the unfiltered feedbacks that our users have given trough our apps:</P>
 
                         <br />
                         <ul>
