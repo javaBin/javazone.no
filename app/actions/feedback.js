@@ -1,8 +1,8 @@
-import { isEmpty, find } from "lodash/fp";
-import { getAllSessions } from "../services/sessions";
-import { getFeedbackApi } from "../services/devnull";
-import getTransformedSessions from "../data/sessions";
-import { RECEIVE_SESSIONS } from "./sessions";
+import { isEmpty, find } from 'lodash/fp';
+import { getAllSessions } from '../services/sessions';
+import { getFeedbackApi } from '../services/devnull';
+import getTransformedSessions from '../data/sessions';
+import { RECEIVE_SESSIONS } from './sessions';
 
 export const LOAD_FEEDBACK = 'LOAD_FEEDBACK';
 
@@ -51,6 +51,6 @@ export function getFeedback(id) {
                 dispatch({type: RECEIVE_SESSIONS, sessions: res.sessions});
                 dispatch({type: LOAD_FEEDBACK, feedback: res.feedback});
             })
-            .catch((err) => console.warn("Failed to load feedbacks", err));
+            .catch((err) => console.warn('Failed to load feedbacks', err));
     };
 };

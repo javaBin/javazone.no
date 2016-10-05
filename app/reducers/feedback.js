@@ -1,5 +1,5 @@
-import { LOAD_FEEDBACK } from "../actions/feedback";
-import { cloneDeep, isEmpty, sum} from "lodash/fp";
+import { LOAD_FEEDBACK } from '../actions/feedback';
+import { cloneDeep, isEmpty, sum} from 'lodash/fp';
 
 const initialState = {};
 
