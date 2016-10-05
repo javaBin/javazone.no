@@ -67,24 +67,34 @@ const ShowFeedback = (props) => {
                         making information available to everyone. This is why we release videos of each talk just
                         after (or, during, actually) the conference, completely for free.
                     </P>
-                    <P>
-                        Your talk can be seen at <a className='feedback__link' href={videoUrl}>{videoUrl}</a> – feel
-                        free to share it as much as you'd like. You'll also find some statistics on this page: click
-                        the <span className='stats-button'>Stats</span> button just below the description, and you
-                        will see freshly updated total plays, likes, and comments among others.<br />
+                    {videoUrl ?
+                        <P>
+                            Your talk can be seen at <a className='feedback__link' href={videoUrl}>{videoUrl}</a> – feel
+                            free to share it as much as you'd like. You'll also find some statistics on this page: click
+                            the <span className='stats-button'>Stats</span> button just below the description, and you
+                            will see freshly updated total plays, likes, and comments among others.<br />
 
-                        <strong>Note:</strong> you need to be logged in to see statistics. Don't worry, registering
-                        for a basic account is free.
-                    </P>
+                            <strong>Note:</strong> you need to be logged in to see statistics. Don't worry, registering
+                            for a basic account is free.
+                        </P> :
+                        <P>
+                            <strong>“Lost a planet Master Obi-Wan has. How embarrassing …”</strong><br />
+                            Well, we haven't lost a planet but it seems like we have had some problems recording your
+                            talk.
+                        </P>
+                    }
                 </Content>
             </Block>
-            <Block className='details__video-block'>
-                <iframe
-                    className='details__video'
-                    src={`https://player.vimeo.com/video/${parseVideoId(videoUrl)}`}
-                    frameBorder='0'
-                    allowFullScreen></iframe>
-            </Block>
+            {videoUrl ?
+                <Block className='details__video-block'>
+                    <iframe
+                        className='details__video'
+                        src={`https://player.vimeo.com/video/${parseVideoId(videoUrl)}`}
+                        frameBorder='0'
+                        allowFullScreen></iframe>
+                </Block> :
+                <Block className='details__block'/>
+            }
 
             <CenteredBlock>
                 <CenteredHeader>Your Feedback</CenteredHeader>
