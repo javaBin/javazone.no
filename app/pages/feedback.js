@@ -17,7 +17,7 @@ const OnlineMeter = (props) => {
                 min="0"
                 low="2"
                 value={props.value} >{props.value}</meter>
-            <div>{props.label} ({props.value.toFixed(2)}}</div>
+            <div>{props.label} ({props.value.toFixed(2)})</div>
         </div>
     );
 };
