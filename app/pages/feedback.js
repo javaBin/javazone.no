@@ -107,7 +107,7 @@ const ShowFeedback = (props) => {
 
                     {(props.session.format === 'presentation') &&
                         <div>
-                            <P>Those actually worked and here is the result:</P>
+                            <P>Those actually worked and here are the result:</P>
                             <div className='feedback__meter'>
                                 <VoteBoxMeter
                                     label='Green'
@@ -123,7 +123,7 @@ const ShowFeedback = (props) => {
                                     value={props.feedback.session.paper.red}/>
                             </div>
 
-                            <P>On average, across all talks, the votes were spread as follows</P>
+                            <P>As a comparison, the average scores for all talks were spread as follows:</P>
 
                             <div className='feedback__meter'>
                                 <VoteBoxMeter
@@ -154,7 +154,7 @@ const ShowFeedback = (props) => {
                 <Header>Apps</Header>
                 <Content>
                     <P>
-                    People were asked to rate your talk from 1 trough 5 on four different topics: relevance,
+                    People were asked to rate your talk from 1 through 5 on four different topics: relevance,
                     content, quality and overall. New this year was that we added comments to the talks.
                     A total of <strong>{props.feedback.session.online.count}</strong> people gave you
                     feedback online, and these are your results: </P>
