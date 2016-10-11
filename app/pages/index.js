@@ -8,7 +8,7 @@ const Index = () => (
         <div className='index__content'>
             <h1 className='index__header'>2</h1>
             <div className='index__text'>
-                test
+                What?
             </div>
         </div>
     </Page>
