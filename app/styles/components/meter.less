@@ -1,0 +1,28 @@
+@import "../colors";
+.meter {
+
+    &__container {
+        border: 1px solid @grey--light;
+        background-color: #cfcfcf;
+
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+        width: 40px;
+        margin: 0 auto;
+    }
+
+    &__pillar {
+        width: 100%;
+    }
+    &__pillar--green {
+        background-color: @green--dark;
+    }
+    &__pillar--yellow {
+        background-color: @yellow--light;
+    }
+    &__pillar--red {
+        background-color: @red--light;
+    }
+
+}
