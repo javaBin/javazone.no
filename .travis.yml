@@ -8,6 +8,8 @@ notifications:
   email: false
 script:
 - npm run build
+after_success:
+- bash ./tasks/deploy.sh
 env:
   global:
   - GH_USER: javaBin
