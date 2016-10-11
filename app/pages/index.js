@@ -5,9 +5,11 @@ import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/ce
 
 const Index = () => (
     <Page name='index'>
-        <img src={logo} className='index__logo' />
         <div className='index__content'>
             <h1 className='index__header'>2</h1>
+            <div className='index__text'>
+                test
+            </div>
         </div>
     </Page>
 );
