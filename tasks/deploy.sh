@@ -4,7 +4,7 @@ set -e
 
 if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
-    echo "Starting deploy\n"
+    echo "Starting deploy"
 
     cp -R dist $HOME/dist
 
@@ -24,7 +24,7 @@ if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
     git push -fq origin master > /dev/null
 
-    echo "Done deploying\n"
+    echo "Done deploying"
 
 else
     echo "Skipped deploying, because build is not triggered from develop branch"
