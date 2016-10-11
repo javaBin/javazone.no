@@ -24,8 +24,8 @@ const config = {
         loaders: [
             { test: /\.js$/, exclude: exclude, loader: babelLoader},
             { test: /\.less$/, exclude: exclude, loader: ExtractTextPlugin.extract('style-loader', styleLoader)},
-            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file?name=/assets/[path][name].[ext]'},
-            { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file?name=assets/fonts/[name].[ext]'}
+            { test: /\.(svg|jpg|jpeg|png|pdf|xml|ico|json|txt)$/, exclude: exclude, loader: 'file'},
+            { test: /\.(eot|ttf|woff|woff2)$/, exclude: exclude, loader: 'file'}
         ]
     },
 
@@ -54,4 +54,4 @@ if (isDev) {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
-module.exports = config
+module.exports = config;
