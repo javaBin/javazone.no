@@ -1,0 +1,30 @@
+@import '../colors.less';
+
+.feedback {
+    &__link {
+        color: @yellow--light;
+        &:hover {
+            color: @yellow--dark;
+        }
+    }
+
+    &__meter {
+        & {
+            display: flex;
+            justify-content: space-around;
+        }
+        div {
+            text-align: center;
+        }
+        meter {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: -20px;
+            margin-right: -20px;
+            width: 100px;
+            height: 40px;
+            transform: rotate(270deg);
+        }
+    }
+
+}

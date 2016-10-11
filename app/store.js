@@ -1,7 +1,7 @@
 import {applyMiddleware, compose, createStore, combineReducers} from 'redux';
 import {syncHistoryWithStore, routerReducer} from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
-import { workshops, sessions, session } from './reducers';
+import { workshops, sessions, session, feedback } from './reducers';
 import { browserHistory } from 'react-router';
 
 const configureStore = function (rootReducer) {
@@ -15,6 +15,7 @@ const reducer = combineReducers({
     workshops,
     sessions,
     session,
+    feedback,
     router: routerReducer
 });
 

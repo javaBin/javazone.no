@@ -13,6 +13,7 @@ function unix(d) {
 const getSpeakers = compose(join(', '), map('navn'));
 const getDetails = find({rel: 'detaljer'});
 const getVideo = compose(get('href'), find({rel: 'video'}));
+const getFeedback = compose(get('href'), find({rel: 'feedback'}));
 const removeNotSetSessions = filter(session => session.starter !== null);
 
 const getRoom = (room) => (room || '').replace(/Room\s/, '');
@@ -32,7 +33,9 @@ const transformSessions = map(session => ({
     end: moment(session.starter).add(1, 'hour').format('HH:mm'),
     duration: moment(session.stopper).diff(moment(session.starter), session.format === 'workshop' ? 'hours' : 'minutes'),
     time: moment(session.starter).format('MMMM Do, HH:mm'),
-    video: getVideo(session.links)
+    video: getVideo(session.links),
+    feedback: getFeedback(session.links)
+
 }));
 
 export default compose(transformSessions, removeNotSetSessions);
