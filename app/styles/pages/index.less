@@ -1,61 +1,35 @@
 @import '../variables';
 
 .index {
-    &__logo {
-        margin: 3em auto 0;
-        max-width: 500px;
-        padding: 20px;
-        perspective: 1600px;
-        position: relative;
-        text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
-        @media (min-width: @size-s) {
-            margin: 5em auto 0;
-            padding: 0;
+    &__header {
+        font-family: Quattrocento, serif;
+        font-size: 9rem;
+        margin-top: -100px;
+        position: relative;
+
+        &:after {
+            content: '4';
+            font-size: 5rem;
+            position: absolute;
+            right: -50px;
+            top: -20px;
         }
     }
 
-    &__logo-wireframe {
-        opacity: .5;
-        transform-style: preserve-3d;
-        transform-origin: center center; 
-        backface-visibility: visible;
-        transform: rotateX( 0deg ) translateZ(-100px);
-        transition: transform 50ms ease;
-        width: 100%;
-    }
-
-    &__logo-title {
-        font-size: 3em;
-        font-weight: 600;
-        left: 50%;
-        margin-left: -48%;
-        position: absolute;
-        text-shadow: 0 0 2px rgba(0, 0, 0, .5),
-                     0 0 5px rgba(0, 0, 0, .5),
-                     0 0 24px rgba(0, 0, 0, .5);
-        text-transform: uppercase;
-        top: 45%;
-    }
-
-    &__links {
+    &__content {
         align-items: center;
         display: flex;
-        flex-direction: column;
-        padding: 2em 0;
-
-        @media (min-width: @size-s) {
-            flex-direction: row;
-            justify-content: center;
-        }
+        justify-content: center;
+        flex-grow: 1;
     }
 
-    &__tickets,
-    &__info {
-        margin-bottom: 30px;
-
-        @media (min-width: @size-s) {
-            margin: 0 20px 0 0;
-        }
+    &__logo {
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 200px;
     }
 }
