@@ -3,11 +3,12 @@ import { getAllSessions } from '../services/sessions';
 import { getFeedbackApi } from '../services/devnull';
 import getTransformedSessions from '../data/sessions';
 import { RECEIVE_SESSIONS } from './sessions';
+import { promise } from 'q';
 
 export const LOAD_FEEDBACK = 'LOAD_FEEDBACK';
 
 const loadOrGetSessions = (getState) => {
-    return new Promise(
+    return promise(
         (resolve, reject) => {
             const sessions = getState().sessions.sessions;
             if (sessions.length > 0) {
@@ -25,7 +26,7 @@ const loadOrGetSessions = (getState) => {
 
 const loadOrGetFeedback = (getState, sessions, id) => {
     const feedback = getState().feedback;
-    return new Promise(
+    return promise(
         (resolve, reject) => {
             if (!isEmpty(feedback)) {
                 resolve(feedback);
