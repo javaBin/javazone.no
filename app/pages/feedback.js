@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import { parseVideoId } from '../util/vimeo';
 import { find, isEmpty } from 'lodash/fp';
 import { getFeedback } from '../actions/feedback';
 import { Page, PageHeading, Container } from '../components/page';
+import { Meter } from '../components/meter';
 import { Block, Header, Content } from '../components/block';
 import { CenteredBlock, CenteredHeader } from '../components/centeredblock';
 import { Column, ColumnHeading, P } from '../components/textblock';
@@ -12,11 +12,10 @@ import header from '../assets/academy.jpg';
 const OnlineMeter = (props) => {
     return (
         <div>
-            <meter
+            <Meter
                 max='5'
                 min='0'
-                low='2'
-                value={props.value} >{props.value}</meter>
+                value={props.value} />
             <div>{props.label} ({props.value.toFixed(2)})</div>
         </div>
     );
@@ -26,11 +25,10 @@ OnlineMeter.displayName = 'OnlineMeter';
 const VoteBoxMeter = (props) => {
     return (
         <div>
-            <meter
+            <Meter
                 max={props.total}
                 min='0'
-                low={props.total * 0.2}
-                value={props.value} >{props.value}</meter>
+                value={props.value} />
             <div>{props.label} ({props.value.toFixed(0)})</div>
         </div>
     );
