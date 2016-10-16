@@ -8,7 +8,7 @@ export const Meter = (props) => {
         "meter__pillar",
         {
             "meter__pillar--green": between(pillarHeight, 60, 101),
-            "meter__pillar--yellow": between(pillarHeight, 25, 50),
+            "meter__pillar--yellow": between(pillarHeight, 25, 60),
             "meter__pillar--red": between(pillarHeight, 0, 25)
         });
     return (
