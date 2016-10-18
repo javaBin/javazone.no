@@ -8,6 +8,7 @@
     &__header {
         font-family: Quattrocento, serif;
         font-size: 9rem;
+        margin-bottom: 50px;
         margin-top: -100px;
         position: relative;
 
@@ -22,7 +23,10 @@
 
     &__content {
         align-items: center;
+        background-size: cover;
+        background-position: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         flex-grow: 1;
     }
@@ -31,5 +35,11 @@
         margin-top: 40px;
         margin-left: 40px;
         width: 200px;
+    }
+
+    &__text {
+        font-family: Quattrocento, serif;
+        font-size: 2rem;
+        text-align: center;
     }
 }
