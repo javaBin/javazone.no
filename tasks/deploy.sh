@@ -2,8 +2,6 @@
 
 set -e
 
-branches = (develop master)
-
 if [[ $TRAVIS_PULL_REQUEST == "true" || $TRAVIS_BRANCH != "develop" && $TRAVIS_BRANCH != "master" ]];
 then
     echo "Skipped deploying, because build is not triggered from develop branch"
