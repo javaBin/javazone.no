@@ -13,5 +13,6 @@ after_success:
 env:
   global:
   - GH_USER: javaBin
-  - GH_REPO: javazone-2017-prod
+  - GH_REPO_PROD: javazone-2017-prod
+  - GH_REPO_TEST: javazone-2017-test
   - secure: MY6mKG4rpg7Ug2ZOP9WreNzCLrQ6GRwXtVjtOq9GthcOZEslXIPrlZQZp6FaolUawd2MWspYXtRK60pit+AIHkGF/5Qt18vDzRm77xb2Bq+jqMmsea9GCB2uu8KimiV+RtCbxajpe9YAXXuYqc1wLBi+GfikWUzKtz1+1fN8+Oc3vNNGr3UJfF13IIIhRr+7n8oPKnbxNkj/5dTeazErPK29HJpREjO+7G+N8dQD2JbRCfL4vXRh6kpMCO77N/Xx6v7l67nzipJ4RK4m1QKbP2+rQswfa35m7v/ZlH7dD1kRhECUq6aoO4zsoswVdK2jZ3fAFD4zRYaYPbImzEy87DSb8DtXk9mwlyHey+tFPUIQr1/QPS4jvKTE0EinEFMe4FORFd5H1WBmmeVfCpmfUTiqvM1SCBX9zyCIUfZr5JaBnhYJIb3OztUBVtdMpG9Ln+uMYlBtaLjrsVaeWUHvS1cig6mFlHrWhphdr05Koda1Lj9PWJGylBRnTLyDJ8R0DQm34vgewdaXdoNR600v+0uDZqpAM1Y/EIlRVaIXdEfnuYtAys66VfTr9WJT4/y7gtZvBlf8UeU0xiSqDjDy5Ofw0kcThVLAYepsvFCTiCiNpJ7yiw49kkh7SkQpi3eWx0asvVfOCfUGOS/N14VotOOlkwbfg7HOKgsk1BTF4qU=
