@@ -26,7 +26,6 @@ cd javazone
 cp -R $HOME/dist/* .
 
 echo "Allow files with underscore https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/" > .nojekyll
-echo "[View live](https://${GH_USER}.github.io/${GH_REPO}/)" > README.md
 
 git add -f .
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
