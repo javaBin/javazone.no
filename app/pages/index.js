@@ -20,6 +20,18 @@ const Index = () => (
                 <TransitionWord settings={textSettings}>September 13th & 14th</TransitionWord>
                 <TransitionWord settings={textSettings}>2017</TransitionWord>
             </div>
+            <ul className='index__links'>
+                <li className='index__link'>
+                    <a href='https://vimeo.com/javazone/collections' className='button button--yellow'>
+                        See the videos
+                    </a>
+                </li>
+                <li className='index__link'>
+                    <a href='https://2016.javazone.no' className='button button--yellow'>
+                        JavaZone 2016
+                    </a>
+                </li>
+            </ul>
         </div>
     </Page>
 );
