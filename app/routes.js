@@ -3,6 +3,7 @@ import root from './components/root';
 import index from './pages/index';
 import notFound from './pages/404.js';
 import { store } from './store';
+import pageview from './analytics';
 
 const routes = {
     '/': index
@@ -35,9 +36,11 @@ function navigate(ev) {
 export function getPage(requestedPage) {
     const page = routes[requestedPage];
     if (!page) {
+        pageview('/404');
         return notFound;
     }
 
+    pageview(requestedPage);
     return page;
 };
 
