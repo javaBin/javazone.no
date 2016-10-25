@@ -32,3 +32,11 @@ git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
 git push -fq origin master > /dev/null
 
 echo "Done deploying"
+
+if [[ $TRAVIS_BRANCH == "master" ]]; then
+    curl -X POST --data-urlencode 'payload={"channel": "#javazone-web", "username": "[PROD] Deploy-bot", "text": "https://2017.javazone.no ble deployet :)", "icon_emoji": ":heart:"}' ${slackuri} > /dev/null
+else
+    curl -X POST --data-urlencode 'payload={"channel": "#javazone-web", "username": "[TEST] Deploy-bot", "text": "https://test-2017.javazone.no ble deployet :)", "icon_emoji": ":yellow_heart:"}' ${slackuri} > /dev/null
+fi;
+
+echo "Done slack-notifying"
