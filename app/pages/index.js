@@ -17,18 +17,19 @@ const Index = () => (
                 <TransitionWord className='index__super' settings={fourSettings}>4</TransitionWord>
             </h1>
             <div className='index__text'>
-            <TransitionWord settings={textSettings}>September 13th & 14th, 2017</TransitionWord>
-            <TransitionWord settings={textSettings}>Oslo, Norway</TransitionWord>
+            <TransitionWord settings={textSettings}>September 13th-14th 2017</TransitionWord>
+            <TransitionWord settings={textSettings}>Oslo / Norway / World</TransitionWord>
+            <TransitionWord settings={textSettings}>Save the date</TransitionWord>
             </div>
             <ul className='index__links'>
                 <li className='index__link'>
-                    <a href='https://vimeo.com/javazone/collections' className='button button--yellow'>
+                    <a href='https://vimeo.com/javazone/collections' className='button button--transparent'>
                         1000 talks on video!
                     </a>
                 </li>
                 <li className='index__link'>
-                    <a href='https://2016.javazone.no' className='button button--yellow'>
-                        Remember JavaZone 2016
+                    <a href='https://2016.javazone.no' className='button button--transparent'>
+                        Retro? JavaZone 2016!
                     </a>
                 </li>
             </ul>
