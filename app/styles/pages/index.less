@@ -1,24 +1,32 @@
 @import '../variables';
 
+@keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
 .index {
     display: flex;
     flex-direction: column;
     height: 100%;
 
     &__header {
-        font-family: Quattrocento, serif;
+        animation: fadein 2s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+        font-family: 'Inconsolata', monospace;
         font-size: 9rem;
         margin-bottom: 50px;
         margin-top: -100px;
         position: relative;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
 
-        &:after {
-            content: '4';
-            font-size: 5rem;
-            position: absolute;
-            right: -50px;
-            top: -20px;
-        }
+    &__super {
+        font-size: 5rem;
+        position: absolute;
+        right: -50px;
+        top: -20px;
     }
 
     &__content {
@@ -38,8 +46,28 @@
     }
 
     &__text {
-        font-family: Quattrocento, serif;
+        animation: fadein 2s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+        font-family: 'Inconsolata', monospace;
         font-size: 2rem;
         text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        text-transform: uppercase;
+    }
+
+    &__links {
+        animation: fadein 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+        list-style: none;
+        margin: 100px 0 0 0;
+        padding: 0;
+    }
+
+    &__link {
+        display: inline-block;
+        margin: 0 20px;
+        text-transform: uppercase;
     }
 }
