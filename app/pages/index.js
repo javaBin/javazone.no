@@ -23,12 +23,12 @@ const Index = () => (
             <ul className='index__links'>
                 <li className='index__link'>
                     <a href='https://vimeo.com/javazone/collections' className='button button--yellow'>
-                        See the videos
+                        1000 talks on video!
                     </a>
                 </li>
                 <li className='index__link'>
                     <a href='https://2016.javazone.no' className='button button--yellow'>
-                        JavaZone 2016
+                        Remember JavaZone 2016
                     </a>
                 </li>
             </ul>
