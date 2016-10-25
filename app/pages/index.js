@@ -17,8 +17,8 @@ const Index = () => (
                 <TransitionWord className='index__super' settings={fourSettings}>4</TransitionWord>
             </h1>
             <div className='index__text'>
-                <TransitionWord settings={textSettings}>September 13th & 14th</TransitionWord>
-                <TransitionWord settings={textSettings}>2017</TransitionWord>
+            <TransitionWord settings={textSettings}>September 13th & 14th, 2017</TransitionWord>
+            <TransitionWord settings={textSettings}>Oslo, Norway</TransitionWord>
             </div>
             <ul className='index__links'>
                 <li className='index__link'>
