@@ -1,12 +1,14 @@
-const initialState = {
-    page: window.location.pathname
-};
+export function routes(location) {
+    const initialState = {
+        page: location.pathname
+    };
 
-export function routes(state = initialState, action) {
-    switch (action.type) {
-    case 'ROUTER_NAVIGATE':
-        return Object.assign({}, state, { page : action.value });
-    default:
-        return state;
-    }
-};
+    return function(state = initialState, action) {
+        switch (action.type) {
+        case 'ROUTER_NAVIGATE':
+            return Object.assign({}, state, { page : action.value });
+        default:
+            return state;
+        }
+    };
+}

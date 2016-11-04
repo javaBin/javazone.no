@@ -1,49 +1,22 @@
 import React from 'react';
 import root from './components/root';
-import index from './pages/index';
-import notFound from './pages/404.js';
 import { store } from './store';
 import pageview from './analytics';
 
-const routes = {
-    '/': index
-};
 
-function dispatchPage(pathname) {
-    store.dispatch({
-        type: 'ROUTER_NAVIGATE',
-        value: pathname
-    });
-}
+// function navigate(ev) {
+//     const url = ev.target.getAttribute('data-url');
+//     if (!url) {
+//         return true;
+//     }
 
-window.onpopstate = function(ev) {
-    const url = window.location.pathname;
-    dispatchPage(url);
-};
+//     history.pushState(null, null, url);
+//     dispatchPage(url);
+//     ev.preventDefault();
+//     return false;
+// }
 
-function navigate(ev) {
-    const url = ev.target.getAttribute('data-url');
-    if (!url) {
-        return true;
-    }
 
-    window.history.pushState(null, null, url);
-    dispatchPage(url);
-    ev.preventDefault();
-    return false;
-}
-
-export function getPage(requestedPage) {
-    const page = routes[requestedPage];
-    if (!page) {
-        pageview('/404');
-        return notFound;
-    }
-
-    pageview(requestedPage);
-    return page;
-};
-
-export function link(text, href) {
-    return React.createElement('a', {href: href, 'data-url': href, onClick: navigate}, text);
-}
+// export function link(text, href) {
+//     return React.createElement('a', {href: href, 'data-url': href, onClick: navigate}, text);
+// }

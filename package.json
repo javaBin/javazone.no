@@ -7,8 +7,9 @@
     "lint": "eslint app",
     "clean": "rm -rf ./dist && mkdir dist",
     "build": "npm run lint && npm run clean && NODE_ENV=production webpack -p --progress --colors",
-    "watch": "NODE_ENV=development webpack-dev-server --inline --host 0.0.0.0",
-    "start": "npm run watch"
+    "build-develop": "npm run lint && npm run clean && NODE_ENV=develop webpack -p --progress --colors",
+    "watch": "NODE_ENV=development webpack-dev-server --inline --display-error-details --content-base dist/ --host 0.0.0.0",
+    "start": "npm run build-develop && npm run watch"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
@@ -39,15 +40,17 @@
     "redux-thunk": "^2.1.0",
     "reset-css": "^2.2.0",
     "shelljs": "^0.7.4",
+    "static-site-generator-webpack-plugin": "^3.1.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^1.13.2"
   },
   "author": "",
   "license": "ISC",
   "private": true,
   "dependencies": {
+    "history": "^4.4.0",
     "lodash": "^4.16.4",
-    "moment": "^2.15.1"
+    "moment": "^2.15.1",
+    "react-dom-server": "0.0.5"
   }
 }

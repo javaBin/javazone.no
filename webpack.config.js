@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const path = require('path');
@@ -12,12 +13,26 @@ const isDev = node_env === 'development';
 const babelLoader = 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-react-require,plugins[]=transform-object-assign';
 const styleLoader = 'css-loader?sourceMap!postcss-loader!less-loader?sourceMap';
 
+const paths = [
+    '/',
+    '/videos'
+];
+
+const scope = {
+    window: {
+        ga: function() {}
+    }
+};
+
 const config = {
-    entry: './app/app.js',
+    entry: {
+        main: './app/app.js'
+    },
 
     output: {
         filename: 'app.js',
-        path: output
+        path: output,
+        libraryTarget: 'umd'
     },
 
     module: {
@@ -32,9 +47,10 @@ const config = {
     plugins: [
         new webpack.DefinePlugin({'process.env.NODE_ENV': `"${node_env}"`}),
         new ExtractTextPlugin('app.css'),
-        new HtmlWebpackPlugin({
-            template: './app/index.html'
-        })
+        // new HtmlWebpackPlugin({
+        //     template: './app/index.html'
+        // }),
+        new StaticSiteGeneratorPlugin('main', paths, {}, scope)
     ],
 
     devServer: {
