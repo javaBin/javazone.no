@@ -1,3 +1,6 @@
+// const images = require.context('../images/heroes', true, /\.jpeg$/);
+// const imageList = images.keys().map(image => images(map));
+
 export default [
     {name: 'Helge Jenssen', image: 'helge_jenssen.jpg', url: 'https://twitter.com/hejens'},
     {name: 'Espen Herseth Halvorsen', image: 'espen_herseth_halvorsen.jpg', url: 'https://twitter.com/espenhh'},
