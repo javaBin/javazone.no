@@ -7,7 +7,7 @@
     "lint": "eslint app",
     "clean": "rm -rf ./dist && mkdir dist",
     "build": "npm run lint && npm run clean && NODE_ENV=production webpack -p --progress --colors",
-    "watch": "NODE_ENV=development webpack-dev-server --inline",
+    "watch": "NODE_ENV=development webpack-dev-server --inline --host 0.0.0.0",
     "start": "npm run watch"
   },
   "devDependencies": {
@@ -29,6 +29,7 @@
     "indexhtml-webpack-plugin": "^0.1.9",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "normalize.css": "^5.0.0",
     "postcss-loader": "^0.13.0",
     "q": "^1.4.1",
     "react": "15.3.2",
@@ -36,6 +37,7 @@
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
+    "reset-css": "^2.2.0",
     "shelljs": "^0.7.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
