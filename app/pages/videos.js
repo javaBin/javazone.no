@@ -45,6 +45,14 @@ const Videos = () => (
                 <a href='https://vimeo.com/181905275' className='button button--big button--transparent videos__button'>Watch now!</a>
             </div>
         </Container>
+        <Container>
+            <Pitch>
+                JavaZone will return to Oslo Spektrum September 13th-14th 2017.<br/>
+                Join our big 2^4 anniversary and see all the speakers live!<br/>
+                Ticket sales & Call for Speakers opens February 2017.<br/>
+                See you soon!
+            </Pitch>
+        </Container>
 
     </Page>
 );
