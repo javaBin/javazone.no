@@ -1,17 +1,27 @@
 import className from 'classname';
 import logo from '../assets/logo-white-wireframe.svg';
+import { Link } from './link';
 
 export const Page = (props) => {
     const pageClass = `page ${props.name}`;
+    const showLogo = typeof props.showLogo !== 'undefined' ? props.showLogo : true;
 
-    return (
-        <div className={pageClass}>
-            <div className='page__logo-container'>
-                <img src={logo} className='page__logo' />
+    if (showLogo) {
+        return (
+            <div className={pageClass}>
+                <div className='page__logo-container'>
+                    <Link href='/'><img src={logo} className='page__logo' /></Link>
+                </div>
+                {props.children}
             </div>
-            {props.children}
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className={pageClass}>
+                {props.children}
+            </div>
+        );
+    }
 };
 
 export const Heading = (props) => {

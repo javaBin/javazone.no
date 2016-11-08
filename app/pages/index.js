@@ -11,7 +11,7 @@ const fourSettings = {minWrongChars: 25, maxWrongChars: 35, delay: 900};
 const textSettings = {minWrongChars: 10, maxWrongChars: 20, delay: 900};
 
 const Index = () => (
-    <Page name='index'>
+    <Page name='index' showLogo={false}>
         <div className='index__content'>
             <img className='index__logo' src={logo} />
             <div className='index__text'>
