@@ -12,4 +12,4 @@ import Root from './root';
 
 const container = document.querySelector('#app');
 
-render(<Root store={store}></Root>, container);
+render(<Provider store={store}><Root></Root></Provider>, container);
