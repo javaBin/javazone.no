@@ -10,15 +10,29 @@ export const Page = (props) => {
     );
 };
 
-export const PageHeading = (props) => {
-    const headerStyle = {
-        backgroundImage: `url(${props.background})`
-    };
-
+export const Heading = (props) => {
     return (
-        <div className='page__header page__header--centered' style={headerStyle}>
-            <h1 className='page__title'>{props.children}</h1>
+        <div className='page__header page__header--centered'>
+            {props.children}
         </div>
+    );
+};
+
+export const LargeHeading = (props) => {
+    return (
+        <h1 className='page__title'>{props.children}</h1>
+    );
+};
+
+export const SmallHeading = (props) => {
+    return (
+        <h2 className='page__sub-title'>{props.children}</h2>
+    );
+};
+
+export const Pitch = (props) => {
+    return (
+        <div className='page__pitch'>{props.children}</div>
     );
 };
 
