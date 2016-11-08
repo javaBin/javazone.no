@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="489px" height="372px" viewBox="0 0 489 372" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-vertikal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-vertikal" transform="translate(9.000000, 6.000000)" stroke-width="5" stroke="#FFFFFF">
+            <polygon id="Shape" points="166.7 73 0.4 356.4 468.9 0"></polygon>
+            <polygon id="Path-2" points="171.104004 75.0751953 23.9711914 21.9321289 149.013672 112.910156"></polygon>
+            <polygon id="Path-3" points="234.747803 184.094482 458.594727 350.692383 312.283691 125.335205"></polygon>
+            <polygon id="Path-4" points="146.549805 117.05957 15.0429688 21.3291016 97.5976563 200.468262"></polygon>
+            <polygon id="Path-5" points="130.440552 263.727417 152.583008 312.634766 264.606445 362.970703 460.963623 358.557129 230.81311 187.309937"></polygon>
+            <polygon id="Path-6" points="4.84350586 359.152832 147.39801 313.00769 126.274658 265.804199"></polygon>
+            <polygon id="Path-7" points="386.496094 247.748047 439.140625 231.191406 476.442505 0.448364258 308.676758 127.958984"></polygon>
+            <polyline id="Path-8" points="150.619385 306.822266 265.406006 358.25708 453.653809 354.029663"></polyline>
+            <path d="M16.753418,350.266113 L143.353516,309.228516 L16.753418,350.266113 Z" id="Path-9"></path>
+            <path d="M97.5241699,200.640381 L10.7185059,348.560303 L97.5241699,200.640381 Z" id="Path-10"></path>
+            <path d="M170.171875,76.8212891 L458.475098,7.01806641 L170.171875,76.8212891 Z" id="Path-11"></path>
+            <path d="M23.1767578,28.2734375 L97.3505859,188.837891 L23.1767578,28.2734375 Z" id="Path-12"></path>
+            <path d="M39.2441406,32.0771484 L163.43457,77.2802734 L39.2441406,32.0771484 Z" id="Path-13"></path>
+            <path d="M386.671875,248.183594 L447.924805,343.089844 L386.671875,248.183594 Z" id="Path-14"></path>
+            <polyline id="Path-15" points="388.692383 241.970703 435.248047 227.927734 471.123047 4.44824219"></polyline>
+        </g>
+    </g>
+</svg>
