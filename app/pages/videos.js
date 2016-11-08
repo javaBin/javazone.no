@@ -10,7 +10,10 @@ const Videos = () => (
         </Heading>
         <Container>
             <Pitch>
-                Pitch stuff
+                Hour upon hours of learning & inspiration, teasers & reveals, knowledge & fun!<br/>
+                A personal mini-conference in your own couch, all you need is a TV.<br/>
+                All for free, as a gift from your friends JavaZone.<br/>
+                Enjoy!
             </Pitch>
             <Youtube id='AUSm90PjqrM'></Youtube>
             <Youtube id='m6All1O9Iuo'></Youtube>
