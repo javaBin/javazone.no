@@ -16,7 +16,7 @@ const config = {
     entry: './app/app.js',
 
     output: {
-        filename: 'app.js',
+        filename: '[hash].js',
         path: output
     },
 
