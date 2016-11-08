@@ -34,6 +34,10 @@ const config = {
         new ExtractTextPlugin('app.css'),
         new HtmlWebpackPlugin({
             template: './app/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './app/index.html',
+            filename: '404.html'
         })
     ],
 
