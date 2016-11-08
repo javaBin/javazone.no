@@ -7,7 +7,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     color: @white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1.3rem;
     font-weight: 400;
     padding: 10px 20px;
     text-align: center;
@@ -15,6 +15,7 @@
     transition: background-color .2s ease-in-out,
                 box-shadow .2s ease-in-out;
     white-space: nowrap;
+    cursor: pointer;
 
     &--green {
         background-color: @green--light;
@@ -42,16 +43,13 @@
 
     &--transparent {
         background-color: transparent;
+        border-radius: 0;
         box-shadow: none;
-        border: 1px solid rgba(255,255,255,0.3);
+        border: 2px solid @white;
         transition: transform .2s ease-in-out;
 
         &:hover {
             transform: scale(1.05);
-        }
-
-        @media (max-width: @size-s) {
-            display: block;
         }
     }
 
