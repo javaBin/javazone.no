@@ -5,7 +5,7 @@ import Youtube from '../components/youtube';
 const Videos = () => (
     <Page name='videos'>
         <Heading>
-            <LargeHeading>1000</LargeHeading>
+            <LargeHeading>One Thousand</LargeHeading>
             <SmallHeading>Awesome Videos</SmallHeading>
         </Heading>
         <Container>
