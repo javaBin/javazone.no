@@ -19,14 +19,10 @@ const Index = () => (
                 <TransitionWord settings={textSettings}>Oslo / Norway / World</TransitionWord>
                 <TransitionWord settings={textSettings}>Save the date</TransitionWord>
             </div>
+            <p className='index__teasertext'><TransitionWord settings={textSettings}>While you wait:</TransitionWord></p>
             <ul className='index__links'>
                 <li className='index__link'>
-                    <a href='https://2016.javazone.no' className='button button--transparent'>
-                        Retro? JavaZone 2016!
-                    </a>
-                </li>
-                <li className='index__link'>
-                    <Link href='/videos' className='button button--transparent'>Boost your knowledge</Link>
+                    <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
                 </li>
             </ul>
         </div>
