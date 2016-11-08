@@ -4,6 +4,7 @@ import background from '../assets/background.jpg';
 import { Page, PageHeading, Container } from '../components/page';
 import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
 import { TransitionWord } from '../components/word-transition.js';
+import { Link } from '../components/link';
 
 const twoSettings = {minWrongChars: 20, maxWrongChars: 25, delay: 900};
 const fourSettings = {minWrongChars: 25, maxWrongChars: 35, delay: 900};
@@ -31,6 +32,11 @@ const Index = () => (
                     <a href='https://2016.javazone.no' className='button button--transparent'>
                         Retro? JavaZone 2016!
                     </a>
+                </li>
+                <li className='index__link'>
+                    <Link href='/videos' className='button button--transparent'>
+                        See dem videos
+                    </Link>
                 </li>
             </ul>
         </div>

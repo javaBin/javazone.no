@@ -6,17 +6,14 @@ import * as favicons from './favicon';
 import { render } from 'react-dom';
 import { renderToString } from 'react-dom/server';
 import {Provider} from 'react-redux';
-import { makeStore } from './store.js';
+import makeStore from './store.js';
 import pageview from './analytics';
 import Root from './root';
 import html from './html';
-import { createBrowserHistory, createMemoryHistory } from 'history';
-import { createLocation } from 'history/LocationUtils';
 
 if (typeof document !== 'undefined') {
     const container = document.querySelector('#app');
-    const history = createBrowserHistory();
-    const store = makeStore(history.location);
+    const { history, store} = makeStore();
 
     function dispatchPage(pathname) {
         store.dispatch({
@@ -26,7 +23,6 @@ if (typeof document !== 'undefined') {
     }
 
     window.onpopstate = function(ev) {
-        console.log(history.location);
         const url = history.location.pathname;
         dispatchPage(url);
     };
@@ -35,9 +31,6 @@ if (typeof document !== 'undefined') {
 }
 
 export default function (locals) {
-    console.log(locals.path);
-    // const history = createMemoryHistory();
-    const location = createLocation(locals.path);
-    const store = makeStore(location);
+    const { store } = makeStore(locals);
     return html(renderToString(<Provider store={store}><Root></Root></Provider>));
 };
