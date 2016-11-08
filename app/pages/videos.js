@@ -27,7 +27,7 @@ const Videos = () => (
         <Container>
             <Youtube id='m6All1O9Iuo'></Youtube>
             <div className="videos__info">
-                <h3 className="videos__header">Watch Christin & Eivind's full talk, and 1000 others on Vimeo</h3>
+                <h3 className="videos__header">Watch Christin & Eivind's talk, and 1000 others on Vimeo</h3>
                 <a href='https://vimeo.com/182070294' className='button button--big button--transparent videos__button'>Watch now!</a>
             </div>
         </Container>
