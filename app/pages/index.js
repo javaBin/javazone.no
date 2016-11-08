@@ -19,7 +19,7 @@ const Index = () => (
                 <TransitionWord settings={textSettings}>Oslo / Norway / World</TransitionWord>
                 <TransitionWord settings={textSettings}>Save the date</TransitionWord>
             </div>
-            <p className='index__teasertext'><TransitionWord settings={textSettings}>While you wait:</TransitionWord></p>
+            <p className='index__teasertext'>While you wait:</p>
             <ul className='index__links'>
                 <li className='index__link'>
                     <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
