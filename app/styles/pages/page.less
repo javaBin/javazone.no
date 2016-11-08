@@ -13,6 +13,23 @@
     color: @white;
     flex-grow: 1;
 
+    &__logo-container {
+        margin: 50px auto 0px auto;
+        text-align: center;
+    }
+
+    &__logo {
+        width: 100px;
+
+        @media (min-width: @size-s) {
+            width: 150px;
+        }
+
+        @media (min-width: @size-m) {
+            width: 200px;
+        }
+    }
+
     &__header {
         align-items: center;
         display: flex;

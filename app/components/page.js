@@ -1,10 +1,14 @@
 import className from 'classname';
+import logo from '../assets/logo-white-wireframe.svg';
 
 export const Page = (props) => {
     const pageClass = `page ${props.name}`;
 
     return (
         <div className={pageClass}>
+            <div className='page__logo-container'>
+                <img src={logo} className='page__logo' />
+            </div>
             {props.children}
         </div>
     );
