@@ -37,8 +37,20 @@
         font-family: 'Unica One', cursive;
         font-size: 6rem;
         justify-content: center;
-        height: 400px;
+        height: 150px;
         text-transform: uppercase;
+
+        @media (min-width: @size-s) {
+            height: 250px;
+        }
+
+        @media (min-width: @size-m) {
+            height: 300px;
+        }
+
+        @media (min-width: @size-l) {
+            height: 350px;
+        }
     }
 
     &__body {
@@ -80,13 +92,9 @@
         font-weight: 800;
         left: 20px;
         margin: 0;
-        text-shadow: 0 0 2px rgba(0, 0, 0, .5),
-                     0 0 5px rgba(0, 0, 0, .5),
-                     0 0 24px rgba(0, 0, 0, .5);
-        z-index: 2;
 
         @media (min-width: @size-s) {
-            font-size: 3rem;
+            font-size: 5rem;
         }
 
         @media (min-width: @size-l) {
@@ -101,6 +109,10 @@
         margin-top: 0.5rem;
 
         @media (min-width: @size-s) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: @size-l) {
             font-size: 4rem;
         }
 
@@ -110,10 +122,18 @@
     }
 
     &__pitch {
-        font-size: 2rem;
+        font-size: 1.2rem;
         text-align: center;
         padding-bottom: 5rem;
         line-height: 1.3;
+
+        @media (min-width: @size-s) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: @size-m) {
+            font-size: 2rem;
+        }
     }
 
     &__paragraph {
