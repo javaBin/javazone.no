@@ -52,8 +52,11 @@ const Videos = () => (
                 Ticket sales & Call for Speakers opens February 2017.<br/>
                 See you soon!
             </Pitch>
+            <div className="videos__info">
+                <h3 className="videos__header">Hungry for more? We have 1044 videos ready for you!</h3>
+                <a href='https://vimeo.com/javazone' className='button button--big button--transparent videos__button'>Watch more!</a>
+            </div>
         </Container>
-
     </Page>
 );
 
