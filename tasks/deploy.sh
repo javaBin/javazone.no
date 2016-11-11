@@ -2,7 +2,13 @@
 
 set -e
 
-if [[ $TRAVIS_PULL_REQUEST == "true" || $TRAVIS_BRANCH != "develop" && $TRAVIS_BRANCH != "master" ]];
+if [[ $TRAVIS_PULL_REQUEST = "true" ]];
+then
+    echo "Pull request, not deploying"
+    exit 0
+fi;
+
+if [[ $TRAVIS_BRANCH != "develop" && $TRAVIS_BRANCH != "master" ]];
 then
     echo "Skipped deploying, because build is not triggered from develop branch"
     exit 0

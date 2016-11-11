@@ -19,15 +19,14 @@ const Index = () => (
                 <TransitionWord settings={textSettings}>Oslo / Norway / World</TransitionWord>
                 <TransitionWord settings={textSettings}>Save the date</TransitionWord>
             </div>
+            <p className='index__teasertext'>While you wait:</p>
+            <ul className='index__links'>
+                <li className='index__link'>
+                    <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
+                </li>
+            </ul>
         </div>
     </Page>
 );
 
 export default Index;
-
-    // <p className='index__teasertext'>While you wait:</p>
-    // <ul className='index__links'>
-    // <li className='index__link'>
-    // <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
-    // </li>
-    // </ul>
