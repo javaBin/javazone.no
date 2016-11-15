@@ -2,13 +2,15 @@ import React from 'react';
 import root from './components/root';
 import index from './pages/index';
 import videos from './pages/videos';
+import partners from './pages/partners';
 import notFound from './pages/404.js';
 import { store } from './store';
 import pageview from './analytics';
 
 const routes = {
     '/': index,
-    '/videos': videos
+    '/videos': videos,
+    '/partners': partners
 };
 
 function dispatchPage(pathname) {
