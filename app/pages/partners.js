@@ -6,9 +6,12 @@ import { Link } from '../components/link';
 const Partners = () => (
     <Page name='videos'>
         <Heading>
-            <LargeHeading>Become A Partner</LargeHeading>
-            <SmallHeading>Get a stand</SmallHeading>
+            <LargeHeading>Dear JavaZone Partners!</LargeHeading>
+            <SmallHeading>Join us in 2017!</SmallHeading>
         </Heading>
+        <Container>
+            <Youtube id='cL57Ho55xpo'></Youtube>
+        </Container>
         <Container>
             <Pitch>
                 Hour upon hours of learning & inspiration, teasers & reveals, knowledge & fun!<br/>
@@ -17,13 +20,7 @@ const Partners = () => (
                 Enjoy!
             </Pitch>
         </Container>
-        <Container>
-            <Youtube id='AUSm90PjqrM'></Youtube>
-            <div className="videos__info">
-                <h3 className="videos__header">Watch Sven Peters' full talk, and 1000 others on Vimeo</h3>
-                <a href='https://vimeo.com/181781922' className='button button--big button--transparent videos__button'>Watch now!</a>
-            </div>
-        </Container>
+
         <Container>
             <Youtube id='m6All1O9Iuo'></Youtube>
             <div className="videos__info">
