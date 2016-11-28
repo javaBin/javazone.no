@@ -1,7 +1,6 @@
 import React from 'react';
 import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
 import Youtube from '../components/youtube';
-import { Link } from '../components/link';
 
 const Videos = () => (
     <Page name='videos'>
