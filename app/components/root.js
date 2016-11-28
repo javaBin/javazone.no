@@ -2,8 +2,6 @@ import Nav from './nav';
 import Footer from './footer';
 import className from 'classname';
 import {defer, when} from 'q';
-import backgroundBlurred from '../assets/bg_pattern.jpg';
-import bgStripes from '../assets/bg_stripes.png';
 
 function getImage(src) {
     const deferred = defer();

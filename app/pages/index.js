@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../assets/logo-white-wireframe.svg';
-import background from '../assets/background.jpg';
 import { Page } from '../components/page';
 import { TransitionWord } from '../components/word-transition.js';
 import { Link } from '../components/link';
