@@ -13,8 +13,11 @@
     }
 
     &__header {
-        font-size: 1.8em;
+        font-family: 'Unica One', cursive;
+        font-size: 2rem;
+        font-weight: bold;
         margin: 0;
+        text-transform: uppercase;
 
         @media (min-width: @size-s) {
             padding-right: 40px;
@@ -50,11 +53,16 @@
     }
 
     &__sub-header {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 300;
+        margin-bottom: 2rem;
 
         &:first-child {
             margin-top: -.2em;
         }
+    }
+
+    &__paragraph {
+        margin-bottom: 4rem;
     }
 }
