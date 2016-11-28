@@ -1,7 +1,9 @@
 import React from 'react';
 import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
+import { Block, Header, Content, SubHeader, P} from '../components/block';
 import Youtube from '../components/youtube';
 import { Link } from '../components/link';
+import partners1 from '../assets/partners_1.jpg';
 
 const Partners = () => (
     <Page name='videos'>
@@ -13,42 +15,48 @@ const Partners = () => (
             <Youtube id='cL57Ho55xpo'></Youtube>
         </Container>
         <Container>
-            <Pitch>
-                Hour upon hours of learning & inspiration, teasers & reveals, knowledge & fun!<br/>
-                A personal mini-conference in your own couch, all you need is a TV.<br/>
-                All for free, as a gift from your friends at JavaZone.<br/>
-                Enjoy!
-            </Pitch>
-        </Container>
+            <Block>
+                <Header>What exactly is this JavaZone?</Header>
+                <Content>
+                    <P>
+                        Now, that’s a good question. JavaZone started out as a
+                        small conference for Java enthusiasts, but has evolved
+                        to become one of the largest developer conferences in
+                        Scandinavia. Even though it is mainly centered around
+                        the JVM, we welcome quite a lot of other technologies
+                        (and soft skills!) as well.
+                    </P>
 
-        <Container>
-            <Youtube id='m6All1O9Iuo'></Youtube>
-            <div className="videos__info">
-                <h3 className="videos__header">Watch Christin & Eivind's talk, and 1000 others on Vimeo</h3>
-                <a href='https://vimeo.com/182070294' className='button button--big button--transparent videos__button'>Watch now!</a>
-            </div>
-        </Container>
-        <Container>
-            <Youtube id='0ZRuRS3m1FA'></Youtube>
-            <div className="videos__info">
-                <h3 className="videos__header">Watch Line Moseng's full talk, and 1000 others on Vimeo</h3>
-                <a href='https://vimeo.com/181918406' className='button button--big button--transparent videos__button'>Watch now!</a>
-            </div>
-        </Container>
-        <Container>
-            <Youtube id='nTFk0P5qX6E'></Youtube>
-            <div className="videos__info">
-                <h3 className="videos__header">Watch Neal Ford's full talk, and 1000 others on Vimeo</h3>
-                <a href='https://vimeo.com/181905275' className='button button--big button--transparent videos__button'>Watch now!</a>
-            </div>
-        </Container>
-        <Container>
-            <Pitch>
-                JavaZone will return to Oslo Spektrum September 13th-14th 2017.<br/>
-                Join our big 2^4 anniversary and see all the speakers live!<br/>
-                Ticket sales & Call for Speakers opens February 2017.<br/>
-                See you soon!
-            </Pitch>
+                    <SubHeader>Completely. Sold. Out.</SubHeader>
+
+                    <P>
+                        Last year, a record breaking 3000 people attended JavaZone.
+                        We also made another record: for the first time ever we
+                        were completely sold out on partner stands!
+                    </P>
+                </Content>
+            </Block>
+
+            <Block>
+                <Header>Parters, not sponsors!</Header>
+
+                <Content>
+                    <P>
+                        We want JavaZone‘s expo to be an attraction, and not
+                        an unsolicited tribute to our budget planing. In the past,
+                        our partners have done a fantastic job to help us with
+                        this and we want to keep this tradition alive! JavaZone’s
+                        expo is always a vibrant, well-visited space full of life
+                        and activity. As a partner, you are not only supporting
+                        our conference, you participate and help create it.
+                        Please challenge us with your ideas for making the most
+                        out of your partner space. Don’t be shy, there is little
+                        that is impossible.
+                    </P>
+                </Content>
+            </Block>
+
+            <img className='partners__image-one' src={partners1} />
         </Container>
 
     </Page>
