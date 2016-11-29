@@ -5,6 +5,8 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
 import { Link } from '../components/link';
 import partners1 from '../assets/partners_1.jpg';
+import partners2 from '../assets/partners_2.jpg';
+import partners3 from '../assets/partners_3.jpg';
 
 const Partners = () => (
     <Page name='videos'>
@@ -52,7 +54,7 @@ const Partners = () => (
                 </Content>
             </Block>
 
-            <img className='partners__image-one' src={partners1} />
+            <img className='partners__image' src={partners1} />
 
             <Block>
                 <Header>Partner Options</Header>
@@ -108,14 +110,15 @@ const Partners = () => (
                 </Content>
             </Block>
 
+            <img className='partners__image' src={partners2} />
 
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader>Partnership Prices</CHeader>
                 <CContent>
                     <P>
                         <div className="partners__mainprice">NOK 67.000,-</div>
-                        All partnerships have a base price for entry which gives you everything described above. <br />We also have some addons described below.
-                        <br />
+                        All partnerships have a base price for entry which gives you everything described above.<br />
+                        We also have some addons priced below.<br />
                         <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 82.000,-</em>
                     </P>
                     <div className='partners__prices'>
@@ -167,6 +170,8 @@ const Partners = () => (
                     </div>
                 </CContent>
             </CBlock>
+
+            <img className='partners__image' src={partners3} />
 
             <Block>
                 <Header>Contact Us</Header>
