@@ -1,6 +1,7 @@
 import className from 'classname';
 import logo from '../assets/logo-white-wireframe.svg';
 import { Link } from './link';
+import Footer from './footer';
 
 export const Page = (props) => {
     const pageClass = `page ${props.name}`;
@@ -13,6 +14,9 @@ export const Page = (props) => {
                     <Link href='/'><img src={logo} className='page__logo' /></Link>
                 </div>
                 {props.children}
+                <Container>
+                    <Footer></Footer>
+                </Container>
             </div>
         );
     } else {
