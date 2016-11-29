@@ -23,6 +23,7 @@ const Index = () => (
                     <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
                 </li>
             </ul>
+            <p className='index__partnerlink'>Interested in <Link href='/partners'>being a partner</Link> of JavaZone?</p>
         </div>
     </Page>
 );
