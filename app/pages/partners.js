@@ -113,48 +113,51 @@ const Partners = () => (
             </Block>
 
 
-            <CBlock>
+            <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader>Prices</CHeader>
                 <CContent>
                     <P>
-                        Price list. Write something here.
+                        Price for regular stand is xxx,-. If you’re late, it’s xxx,-.
                     </P>
-                    <table className='table'>
-                        <tbody>
-                            <tr className='table__row'>
-                                <td className='table__data'>Basic Partnership</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Late Bird Partnership</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Partner Tickets (0 - 30)</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Partner Tickets (31 - 50)</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Partner Tickets (51 - ∞)</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Extra Stand Space</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Restaurant Stand</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                            <tr className='table__row'>
-                                <td className='table__data'>Concept Stand</td>
-                                <td className='table__data'>xxx,-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className='partners__prices'>
+                        <div className='partners__stand-prices'>
+                            <table className='table'>
+                                <tbody>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Extra Stand Space</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Restaurant Stand</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Concept Stand</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className='partners__ticket-prices'>
+                            <table className='table'>
+                                <tbody>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Partner Tickets (0 - 30)</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Partner Tickets (31 - 50)</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                    <tr className='table__row'>
+                                        <td className='table__data'>Partner Tickets (51 - ∞)</td>
+                                        <td className='table__data'>xxx,-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </CContent>
             </CBlock>
 

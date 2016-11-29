@@ -12,6 +12,10 @@
         max-width: 700px;
     }
 
+    &--center-full-width {
+        display: block;
+    }
+
     &__header {
         font-family: 'Unica One', cursive;
         font-size: 2rem;
@@ -25,7 +29,8 @@
             width: 40%;
         }
 
-        &--center {
+        &--center,
+        &--center-full-width {
             padding: 0;
             width: 100%;
 
@@ -40,7 +45,8 @@
             width: 60%;
         }
 
-        &--center {
+        &--center,
+        &--center-full-width {
             @media (min-width: @size-s) {
                 text-align: center;
             }
