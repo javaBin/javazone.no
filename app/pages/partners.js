@@ -32,9 +32,9 @@ const Partners = () => (
                     <P>
                         Last year, a record breaking 3000 people attended JavaZone.
                         We were completely sold out of tickets AND partner stands.
-                        This was a first for us, but based on feedback we assume that
-                        we'll sell out this year as well. So join in early if you
-                        want to be a part of the conference.
+                        This was a first for us, but based on feedback we have a feeling that we
+                        might sell out this year as well. So join in early if you
+                        want to be part of the conference.
                     </P>
                 </Content>
             </Block>
@@ -44,17 +44,42 @@ const Partners = () => (
 
                 <Content>
                     <P>
-                        We want JavaZone‘s Expo area to be an attraction where the partners and participants can hang out and spend time together.
-                        In the previous years, our partners have done a fantastic job to help us with this and we want to keep this tradition alive!
+                        We want JavaZone‘s Expo Area to be an attraction where the partners and participants can hang out and spend time together.
+                        In the previous years, our partners have done a fantastic job to help us with this and we want to keep this tradition alive.
                         JavaZone’s Expo Area is always a vibrant, well-visited space full of life and activity.
-                        As a partner, you are not just supporting our conference economically, you participate and help create it.
+                        As a partner, you are not just supporting our conference economically, you participate during the event and help create the unique atmosphere.
                         Please challenge us with your ideas for making the most out of your partner space.
                         Don’t be shy, there is little that is impossible.
                     </P>
                 </Content>
             </Block>
 
-            <img className='partners__image' src={partners1} />
+            <img className='partners__image' src={partners2} />
+
+            <Block>
+                <Header>The Expo Area</Header>
+                <Content>
+                    <P>
+                        The Expo Area is where all the partner stands are located, and because we serve food continously from
+                        restaurant stands in the expo throughout the day, all participants flock to the area in each break,
+                        making this one of the livliest Expo Areas of any conference.
+                    </P>
+
+                    <SubHeader>People! People everywhere!</SubHeader>
+
+                    <P>
+                        Don't you belive us? Have a look for yourself! Most new partners are quite surprised about the
+                        huge attention all partner stands get in the Expo Area. We have cut together a short 15-second
+                        timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
+                        You get this many people, for a total of 20 hours!
+                    </P>
+
+                </Content>
+            </Block>
+
+            <Container>
+                <Youtube id='IVLtxmuzfl4'></Youtube>
+            </Container>
 
             <Block>
                 <Header>Partner Options</Header>
@@ -104,13 +129,13 @@ const Partners = () => (
                             Concept Stand
                         </dt>
                         <dd className='definition-list__data'>
-                            We also have room for 2 extra large stands. These stands are about 70 square feet big, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
+                            We also have room for 2 extra large stands. These stands are about 70 square meters big, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
                         </dd>
                     </dl>
                 </Content>
             </Block>
 
-            <img className='partners__image' src={partners2} />
+            <img className='partners__image' src={partners1} />
 
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader>Partnership Prices</CHeader>
@@ -118,8 +143,9 @@ const Partners = () => (
                     <P>
                         <div className="partners__mainprice">NOK 67.000,-</div>
                         All partnerships have a base price for entry which gives you everything described above.<br />
-                        We also have some addons priced below.<br />
+                        We also have some addons, as well as tickets for your employees, priced below.<br />
                         <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 82.000,-</em>
+                        <div className="partners__vat">all prices ex VAT</div>
                     </P>
                     <div className='partners__prices'>
                         <div className='partners__stand-prices'>
@@ -149,19 +175,19 @@ const Partners = () => (
                             <table className='table'>
                                 <tbody>
                                     <tr className='table__row'>
-                                        <td className='table__data'>Partner Tickets (0 - 30)</td>
+                                        <td className='table__data'>Tickets for employees (0 - 30)</td>
                                         <td className='table__data'>TBA</td>
                                     </tr>
                                     <tr className='table__row'>
-                                        <td className='table__data'>Partner Tickets (31 - 50)</td>
+                                        <td className='table__data'>Tickets for employees (31 - 50)</td>
                                         <td className='table__data'>TBA</td>
                                     </tr>
                                     <tr className='table__row'>
-                                        <td className='table__data'>Partner Tickets (51 - ∞)</td>
+                                        <td className='table__data'>Tickets for employees (51 - ∞)</td>
                                         <td className='table__data'>TBA</td>
                                     </tr>
                                     <tr className='table__row'>
-                                        <td className='table__data'>Partner Tickets (Late-Bird)</td>
+                                        <td className='table__data'>Tickets for employees (Late-Bird)</td>
                                         <td className='table__data'>TBA</td>
                                     </tr>
                                 </tbody>
@@ -181,9 +207,8 @@ const Partners = () => (
                         touch sooner rather than later. Even though all stand
                         positions at JavaZone give you great exposure,
                         the partner stands (and especially some of the extra options) will sell out early.
-                        Contact us at <a href='mailto:contact@java.no'>contact@java.no</a> today,
-                        and we’ll work with you to create the best possible
-                        partnership for you.
+                        Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> today,
+                        and we’ll work with you to create the best possible partnership for you.
                     </P>
                 </Content>
             </Block>
