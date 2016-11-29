@@ -120,38 +120,40 @@ const Partners = () => (
                         Price list. Write something here.
                     </P>
                     <table className='table'>
-                        <tr className='table__row'>
-                            <td className='table__data'>Basic Partnership</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Late Bird Partnership</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Partner Tickets (0 - 30)</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Partner Tickets (31 - 50)</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Partner Tickets (51 - ∞)</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Extra Stand Space</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Restaurant Stand</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
-                        <tr className='table__row'>
-                            <td className='table__data'>Concept Stand</td>
-                            <td className='table__data'>xxx,-</td>
-                        </tr>
+                        <tbody>
+                            <tr className='table__row'>
+                                <td className='table__data'>Basic Partnership</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Late Bird Partnership</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Partner Tickets (0 - 30)</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Partner Tickets (31 - 50)</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Partner Tickets (51 - ∞)</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Extra Stand Space</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Restaurant Stand</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                            <tr className='table__row'>
+                                <td className='table__data'>Concept Stand</td>
+                                <td className='table__data'>xxx,-</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </CContent>
             </CBlock>
