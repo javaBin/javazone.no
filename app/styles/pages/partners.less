@@ -1,3 +1,4 @@
+@import '../variables';
 @import '../colors';
 
 .partners {
@@ -11,17 +12,30 @@
     }
 
     &__prices {
-        display: flex;
+        @media (min-width: @size-s) {
+            display: flex;
+        }
     }
 
     &__stand-prices {
-        padding-right: 4rem;
         width: 50%;
+        padding-right: 2rem;
+
+        @media (min-width: @size-l) {
+            padding-right: 4rem;
+        }
     }
 
     &__ticket-prices {
-        border-left: 3px solid @white;
-        padding-left: 4rem;
         width: 50%;
+
+        @media (min-width: @size-s) {
+            border-left: 3px solid @white;
+            padding-left: 2rem;
+        }
+
+        @media (min-width: @size-l) {
+            padding-left: 4rem;
+        }
     }
 }
