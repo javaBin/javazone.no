@@ -157,6 +157,21 @@ const Partners = () => (
                     </table>
                 </CContent>
             </CBlock>
+
+            <Block>
+                <Header>Contact Us</Header>
+                <Content>
+                    <P>
+                        JavaZone 2017 will be held in September, but please get in
+                        touch sooner rather than later. Even though all stand
+                        positions at JavaZone give you a great opportunity,
+                        some of the extra options will sell out early.
+                        Contact us at <a href='mailto:contact@java.no'>contact@java.no</a>
+                        today, and we’ll work with you to create the best possible
+                        partnership for you.
+                    </P>
+                </Content>
+            </Block>
         </Container>
 
     </Page>
