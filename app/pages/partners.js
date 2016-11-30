@@ -50,7 +50,7 @@ const Partners = () => (
                 <Header>JavaZone 2017:<br />bigger and better than ever</Header>
                 <Content>
                     <P>
-                        JavaZone started out in 2001 as a small conference for Java developers, but has since then evolved
+                        JavaZone started out in 2002 as a small conference for Java developers, but has since then evolved
                         to become one of the largest developer conferences in the world. Each year thousands of people gather
                         in Oslo Spektrum for three full days of learning, mingling and fun.
                     </P>
