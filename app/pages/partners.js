@@ -32,7 +32,7 @@ const Partners = () => (
                     <P>
                         Last year, a record breaking 3000 people attended JavaZone.
                         We were completely sold out of tickets AND partner stands.
-                        This was a first for us, but based on feedback we have a feeling that we
+                        This was a first year for us, but based on feedback we have a feeling that we
                         might sell out this year as well. So join in early if you
                         want to be part of the conference.
                     </P>
@@ -45,10 +45,10 @@ const Partners = () => (
                 <Content>
                     <P>
                         We want JavaZone‘s Expo Area to be an attraction where the partners and participants can hang out and spend time together.
-                        In the previous years, our partners have done a fantastic job to help us with this and we want to keep this tradition alive.
+                        In the previous years, our partners have done a fantastic job to help us with this, and we want to keep this tradition alive.
                         JavaZone’s Expo Area is always a vibrant, well-visited space full of life and activity.
-                        As a partner, you are not just supporting our conference economically, you participate during the event and help create the unique atmosphere.
-                        Please challenge us with your ideas for making the most out of your partner space.
+                        As a partner, you are not just supporting our conference economically, you participate during the event and help creating the unique atmosphere.
+                        Please share with your ideas for making the most out of your partner space with us.
                         Don’t be shy, there is little that is impossible.
                     </P>
                 </Content>
