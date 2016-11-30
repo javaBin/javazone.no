@@ -60,9 +60,8 @@ const Partners = () => (
                 <Header>The Expo Area</Header>
                 <Content>
                     <P>
-                        The Expo Area is where all the partner stands are located, and because we serve food continously from
-                        restaurant stands in the expo throughout the day, all participants flock to the area in each break,
-                        making this one of the livliest Expo Areas of any conference.
+                        All partner stands are located in the Expo Area. All participants flock to this area in each break. This is partually because we serve food continously from
+                        restaurant stands throughout the day, and partually because you – partners – make this area one of the livliest Expo Areas of any conference.
                     </P>
 
                     <SubHeader>People! People everywhere!</SubHeader>
