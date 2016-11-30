@@ -139,12 +139,12 @@ const Partners = () => (
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader>Partnership Prices</CHeader>
                 <CContent>
+                    <div className="partners__mainprice">NOK 67.000,-</div>
                     <P>
-                        <div className="partners__mainprice">NOK 67.000,-</div>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
-                        <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 82.000,-</em>
-                        <div className="partners__vat">all prices ex VAT</div>
+                        <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 82.000,-</em><br />
+                        <span className="partners__vat">all prices ex VAT</span>
                     </P>
                     <div className='partners__prices'>
                         <div className='partners__stand-prices'>
