@@ -95,8 +95,8 @@ const Partners = () => (
                 <Header>The Expo Area</Header>
                 <Content>
                     <P>
-                        All our partner stands are located in the Expo Area, which is centrally located in the venue. During each break the Expo is full of attendees. This is partually because we serve food continously from
-                        restaurant stands throughout the day, and partually because you – partners – make this area one of the livliest Expo Areas of any conference.
+                        All our partner stands are located in the Expo Area, which is centrally located in the venue. During each break the Expo is full of attendees. This is partly because we serve food continously from
+                        restaurant stands throughout the day, and partly because you – partners – make this area one of the liveliest Expo Areas of any conference.
                     </P>
 
                     <SubHeader>People! People everywhere!</SubHeader>
@@ -242,7 +242,7 @@ const Partners = () => (
                         positions at JavaZone give you great exposure,
                         the partner stands (and especially some of the extra options) will sell out early.
                         Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> today,
-                        and we’ll work with you to create the best possible partnership for you.
+                        and we’ll work with you to create the best possible partnership for your needs.
                     </P>
                 </Content>
             </Block>
