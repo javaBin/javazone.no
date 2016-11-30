@@ -67,10 +67,10 @@ const Partners = () => (
                     <SubHeader>People! People everywhere!</SubHeader>
 
                     <P>
-                        Don't you belive us? Have a look for yourself! Most new partners are quite surprised about the
-                        huge attention all partner stands get in the Expo Area. We have cut together a short 15-second
+                        Don't you belive us? Have a look for yourself! Majority of our new partners are quite surprised by the
+                        huge attention all partner stands get in the Expo Area. We have put together a short 15-second
                         timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
-                        You get this many people, for a total of 20 hours!
+                        Yes, you get this many people, for a total of 20 hours!
                     </P>
 
                 </Content>
@@ -86,7 +86,7 @@ const Partners = () => (
                     <P>
                         Even though all partners are considered equal, there are
                         a few options to consider. There is a base package that
-                        everyone gets, and then there are a few availiable expansions with limited supply.
+                        everyone gets, and then there are a few availiable expansions, with limited supply.
                     </P>
 
                     <SubHeader>Included in all partnerships</SubHeader>
