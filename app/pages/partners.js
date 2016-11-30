@@ -55,7 +55,7 @@ const Partners = () => (
                         in Oslo Spektrum for three full days of learning, mingling and fun.
                     </P>
 
-                    <SubHeader>Completely. Sold. Out.</SubHeader>
+                    <SubHeader>Last year: Completely. Sold. Out.</SubHeader>
 
                     <P>
                         Last year, a record breaking 3000 people attended JavaZone.
@@ -245,12 +245,12 @@ const Partners = () => (
                         the partner stands (and especially some of the extra options) will sell out early.
                     </P>
 
-                    <SubHeader>The partner sale opens January 1st</SubHeader>
+                    <SubHeader>The partner sale opens January 2nd</SubHeader>
 
                     <P>
                         Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> if you want to
                         reserve a partnership for JavaZone 2017, and we’ll work with you to create the best
-                        possible partnership for your needs. Even though the sale opens January 1st,
+                        possible partnership for your needs. Even though the sale opens January 2nd,
                         feel free to contact us if you want to become a partner even before that.
                         We look forward to hearing from you!
                     </P>
