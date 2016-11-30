@@ -32,9 +32,9 @@ const Partners = () => (
                     <P>
                         Last year, a record breaking 3000 people attended JavaZone.
                         We were completely sold out of tickets AND partner stands.
-                        This was a first year for us, but based on feedback we have a feeling that we
+                        This was a first for us, but based on feedback we have a feeling that we
                         might sell out this year as well. So join in early if you
-                        want to be part of the conference.
+                        want to be part of the conference!
                     </P>
                 </Content>
             </Block>
@@ -44,12 +44,12 @@ const Partners = () => (
 
                 <Content>
                     <P>
-                        We want JavaZone‘s Expo Area to be an attraction where the partners and participants can hang out and spend time together.
-                        In the previous years, our partners have done a fantastic job to help us with this, and we want to keep this tradition alive.
-                        JavaZone’s Expo Area is always a vibrant, well-visited space full of life and activity.
-                        As a partner, you are not just supporting our conference economically, you participate during the event and help creating the unique atmosphere.
-                        Please share with your ideas for making the most out of your partner space with us.
-                        Don’t be shy, there is little that is impossible.
+                        We want JavaZone‘s Expo Area to be an attractive space where partners and participants can hang out and spend time together.
+                        In previous years our partners have done a fantastic job to help us achieve this, and we want to keep this tradition alive.
+                        JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
+                        As a partner you are not just supporting our conference economically. You participate during the event and help create the unique atmosphere.
+                        Please share with us your ideas for making the most out of your partner space.
+                        Don’t be shy, almost anything is possible!
                     </P>
                 </Content>
             </Block>
@@ -60,17 +60,17 @@ const Partners = () => (
                 <Header>The Expo Area</Header>
                 <Content>
                     <P>
-                        All partner stands are located in the Expo Area. All participants flock to this area in each break. This is partually because we serve food continously from
+                        All our partner stands are located in the Expo Area, which is centrally located in the venue. During each break the Expo is full of attendees. This is partually because we serve food continously from
                         restaurant stands throughout the day, and partually because you – partners – make this area one of the livliest Expo Areas of any conference.
                     </P>
 
                     <SubHeader>People! People everywhere!</SubHeader>
 
                     <P>
-                        Don't you belive us? Have a look for yourself! Majority of our new partners are quite surprised by the
-                        huge attention all partner stands get in the Expo Area. We have put together a short 15-second
+                        Don't you belive us? Have a look for yourself! Our new partners are always surprised by the
+                        huge attention their stands recieve in the Expo Area. We have put together a short 15-second
                         timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
-                        Yes, you get this many people, for a total of 20 hours!
+                        Yes, you get exposure to many people, for a total of 20 hours!
                     </P>
 
                 </Content>
@@ -103,7 +103,7 @@ const Partners = () => (
                         </li>
                         <li className='list__item'>
                             Branding on <a href='http://javazone.no'>javazone.no</a>,
-                            at the venue, the program, and other promotional material
+                            at the venue, the program, and in other promotional material that 
                             JavaZone produces.
                         </li>
                     </ul>
@@ -115,20 +115,20 @@ const Partners = () => (
                             Double Stand Space
                         </dt>
                         <dd className='definition-list__data'>
-                            Double you stand space and get 12 square meters instead of 6. This gives you a bigger wall for your message, and more floor space for your activities.
+                            Double your stand space and get 12 square meters instead of 6. This gives you a bigger wall for your message, and more floor space for your activities.
                         </dd>
                         <dt className='definition-list__term'>
                             Restaurant Stand
                         </dt>
                         <dd className='definition-list__data'>
-                            We have room for a total of 8 restaurant stands in the Expo Area. The theme and menu is decided by you in collaboration with our food provider.
+                            We have capacity for a total of 8 restaurant stands in the Expo Area. The theme and menu is decided by you in collaboration with our food provider.
                             If you have a restaurant stand, you can also opt in for extra food servings and exposure during the evening party.
                         </dd>
                         <dt className='definition-list__term'>
                             Concept Stand
                         </dt>
                         <dd className='definition-list__data'>
-                            We also have room for 2 extra large stands. These stands are about 70 square meters big, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
+                            We also have room for 2 extra large stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
                         </dd>
                     </dl>
                 </Content>
@@ -203,7 +203,7 @@ const Partners = () => (
                 <Content>
                     <P>
                         JavaZone 2017 will be held in September, but please get in
-                        touch sooner rather than later. Even though all stand
+                        touch to discuss your partnership as soon as possible! Even though all stand
                         positions at JavaZone give you great exposure,
                         the partner stands (and especially some of the extra options) will sell out early.
                         Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> today,
