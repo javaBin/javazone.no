@@ -68,7 +68,7 @@ const Partners = () => (
             </Block>
 
             <CBlock fullWidth={true}>
-                <CHeader>Last years partners</CHeader>
+                <CHeader>Partners of JavaZone 2016</CHeader>
                 <ul className='partners__logos'>
                     {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
                 </ul>
@@ -95,8 +95,10 @@ const Partners = () => (
                 <Header>The Expo Area</Header>
                 <Content>
                     <P>
-                        All our partner stands are located in the Expo Area, which is centrally located in the venue. During each break the Expo is full of attendees. This is partly because we serve food continously from
-                        restaurant stands throughout the day, and partly because you – partners – make this area one of the liveliest Expo Areas of any conference.
+                        All our partner stands are located in the Expo Area, which is centrally located in the venue.
+                        During each break the Expo is full of attendees. This is partly because we serve food continously from
+                        restaurant stands throughout the day, and partly because you – our partners – make this area one of
+                        the liveliest Expo Areas of any conference.
                     </P>
 
                     <SubHeader>People! People everywhere!</SubHeader>
@@ -105,7 +107,7 @@ const Partners = () => (
                         Don't you belive us? Have a look for yourself! Our new partners are always surprised by the
                         huge attention their stands recieve in the Expo Area. We have put together a short 15-second
                         timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
-                        Yes, you get exposure to many people, for a total of 20 hours!
+                        Yes, you get exposure to that many people, for a total of 20 hours!
                     </P>
 
                 </Content>
@@ -120,7 +122,7 @@ const Partners = () => (
                 <Content>
                     <P>
                         Even though all partners are considered equal, there are
-                        a few options to consider. There is a base package that
+                        a few options to choose from. There is a base package that
                         everyone gets, and then there are a few availiable expansions, with limited supply.
                     </P>
 
