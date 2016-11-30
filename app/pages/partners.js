@@ -4,9 +4,37 @@ import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
 import { Link } from '../components/link';
+import partners from '../data/partners';
 import partners1 from '../assets/partners_1.jpg';
 import partners2 from '../assets/partners_2.jpg';
 import partners3 from '../assets/partners_3.jpg';
+
+// https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
+function shuffle(o){
+    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
+const imagesContext = require.context('../assets/partner-logos', false, /\.png$/);
+const images = imagesContext.keys().map(image => (
+    {context: imagesContext(image), filename: image}
+));
+
+function getimage(images, image) {
+    return images.find(img => img.filename.indexOf(image) >= 0);
+}
+
+const signedPartners = shuffle(partners).map(partner => (
+    {name: partner.name, logo: getimage(images, partner.logo), url: partner.url}
+));
+
+const Partner = ({name, logo, url}) => (
+    <li className='partners__logo'>
+        <a className='partners__logo-link' href={url} target='_blank'>
+            <img src={logo.context} className='partners__logo-image' alt={name} />
+        </a>
+    </li>
+);
 
 const Partners = () => (
     <Page name='videos'>
@@ -38,6 +66,13 @@ const Partners = () => (
                     </P>
                 </Content>
             </Block>
+
+            <CBlock fullWidth={true}>
+                <CHeader>Last years partners</CHeader>
+                <ul className='partners__logos'>
+                    {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
+                </ul>
+            </CBlock>
 
             <Block>
                 <Header>Our philosophy:<br />partners, not sponsors</Header>
