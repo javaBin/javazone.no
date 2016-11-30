@@ -234,16 +234,25 @@ const Partners = () => (
             <img className='partners__image' src={partners3} />
 
             <Block>
-                <Header>Contact Us</Header>
+                <Header>Contact us</Header>
                 <Content>
                     <P>
                         JavaZone 2017 will be held in September, but please get in
                         touch to discuss your partnership as soon as possible! Even though all stand
                         positions at JavaZone give you great exposure,
                         the partner stands (and especially some of the extra options) will sell out early.
-                        Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> today,
-                        and we’ll work with you to create the best possible partnership for your needs.
                     </P>
+
+                    <SubHeader>The partner sale opens January 1st</SubHeader>
+
+                    <P>
+                        Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> if you want to
+                        reserve a partnership for JavaZone 2017, and we’ll work with you to create the best
+                        possible partnership for your needs. Even though the sale opens January 1st,
+                        feel free to contact us if you want to become a partner even before that.
+                        We look forward to hearing from you!
+                    </P>
+
                 </Content>
             </Block>
         </Container>
