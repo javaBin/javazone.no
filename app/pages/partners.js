@@ -103,7 +103,7 @@ const Partners = () => (
                         </li>
                         <li className='list__item'>
                             Branding on <a href='http://javazone.no'>javazone.no</a>,
-                            at the venue, the program, and in other promotional material that 
+                            at the venue, the program, and in other promotional material that
                             JavaZone produces.
                         </li>
                     </ul>
