@@ -27,3 +27,9 @@ export const SubHeader = (props) => (
         {props.children}
     </h3>
 );
+
+export const P = (props) => (
+    <p className='block__paragraph'>
+        {props.children}
+    </p>
+);

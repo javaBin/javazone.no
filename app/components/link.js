@@ -9,7 +9,7 @@ function mapDispatchToProps(dispatch) {
                 return;
             }
 
-            window.history.pushState(null, null, urls);
+            window.history.pushState(null, null, url);
             ev.preventDefault();
             dispatch({
                 type: 'ROUTER_NAVIGATE',

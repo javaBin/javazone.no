@@ -1,7 +1,11 @@
 import className from 'classname';
 
-export const CenteredBlock = (props) => {
-    const c = className('block block--center', props.className);
+export const CBlock = (props) => {
+    const fullWidth = typeof props.fullWidth !== 'undefined' ? props.fullWidth : false;
+    const c = className('block block--center', props.className, {
+        'block--center' : !fullWidth,
+        'block--center-full-width': fullWidth
+    });
 
     return (
         <div className={c}>
@@ -10,13 +14,13 @@ export const CenteredBlock = (props) => {
     );
 };
 
-export const CenteredHeader = (props) => (
+export const CHeader = (props) => (
     <h2 className='block__header block__header--center'>
         {props.children}
     </h2>
 );
 
-export const CenteredContent = (props) => (
+export const CContent = (props) => (
     <div className='block__content block__content--center'>
         {props.children}
     </div>

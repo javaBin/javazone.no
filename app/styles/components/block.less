@@ -12,9 +12,16 @@
         max-width: 700px;
     }
 
+    &--center-full-width {
+        display: block;
+    }
+
     &__header {
-        font-size: 1.8em;
+        font-family: 'Unica One', cursive;
+        font-size: 2rem;
+        font-weight: 600;
         margin: 0;
+        text-transform: uppercase;
 
         @media (min-width: @size-s) {
             padding-right: 40px;
@@ -22,7 +29,8 @@
             width: 40%;
         }
 
-        &--center {
+        &--center,
+        &--center-full-width {
             padding: 0;
             width: 100%;
 
@@ -37,7 +45,8 @@
             width: 60%;
         }
 
-        &--center {
+        &--center,
+        &--center-full-width {
             @media (min-width: @size-s) {
                 text-align: center;
             }
@@ -50,11 +59,23 @@
     }
 
     &__sub-header {
-        font-size: 1.3rem;
-        font-weight: 300;
+        font-family: 'Unica One', cursive;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
 
         &:first-child {
             margin-top: -.2em;
         }
+    }
+
+    &__paragraph {
+        margin-bottom: 4rem;
+    }
+
+    .list,
+    .definition-list {
+        margin-bottom: 4rem;
     }
 }

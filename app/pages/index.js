@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo-white-wireframe.svg';
-import background from '../assets/background.jpg';
-import { Page, PageHeading, Container } from '../components/page';
-import { CenteredBlock, CenteredHeader, CenteredContent } from '../components/centeredblock';
+import { Page } from '../components/page';
 import { TransitionWord } from '../components/word-transition.js';
 import { Link } from '../components/link';
 
@@ -25,6 +23,7 @@ const Index = () => (
                     <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
                 </li>
             </ul>
+            <p className='index__partnerlink'>Interested in <Link href='/partners'>being a partner</Link> of JavaZone?</p>
         </div>
     </Page>
 );
