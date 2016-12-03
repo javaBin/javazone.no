@@ -18,7 +18,7 @@ const Image = (props) => (
 export default () => (
     <Page name='partner-presentation'>
         <Heading>
-            <LargeHeading>JavaZone Partnerpresentasjon</LargeHeading>
+            <LargeHeading>JavaZone<br />Partnerpresentasjon</LargeHeading>
         </Heading>
         <Container>
             <CBlock>
