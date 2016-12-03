@@ -4,13 +4,15 @@ import index from './pages/index';
 import videos from './pages/videos';
 import partners from './pages/partners';
 import notFound from './pages/404.js';
+import partnermoteDesember from './pages/partnermote-desember';
 import { store } from './store';
 import pageview from './analytics';
 
 const routes = {
     '/': index,
     '/videos': videos,
-    '/partners': partners
+    '/partners': partners,
+    '/partnermote-desember': partnermoteDesember
 };
 
 function dispatchPage(pathname) {
