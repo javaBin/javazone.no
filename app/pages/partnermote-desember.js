@@ -24,7 +24,8 @@ export default () => (
             <CBlock>
                 <CContent>
                     <P>
-                        Nedenfor finner du presentasjonen som ble holdt på Teknologihuset torsdag 1. desember.
+                        Nedenfor finner du presentasjonen som ble holdt på Teknologihuset<br />
+                        torsdag 1. desember.
                         <br />
                         Presentasjonen inneholder informasjon for partnere om JavaZone 2017.
                     </P>
