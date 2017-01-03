@@ -137,11 +137,6 @@ const Konkurranse = () => (
                         offisiell reklamevideo vinner denne videoen i tillegg
                         50.000 NOK.
                     </P>
-                    <ul className='list'>
-                        <li className='list__item'>
-                            <b>Runde 1 – 15. desember til 15. februar</b>
-                        </li>
-                    </ul>
                 </Content>
             </Block>
 
