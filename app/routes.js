@@ -5,6 +5,7 @@ import videos from './pages/videos';
 import partners from './pages/partners';
 import notFound from './pages/404.js';
 import partnermoteDesember from './pages/partnermote-desember';
+import konkurranse from './pages/konkurranse';
 import { store } from './store';
 import pageview from './analytics';
 
@@ -12,7 +13,8 @@ const routes = {
     '/': index,
     '/videos': videos,
     '/partners': partners,
-    '/partnermote-desember': partnermoteDesember
+    '/partnermote-desember': partnermoteDesember,
+    '/konkurranse': konkurranse
 };
 
 function dispatchPage(pathname) {
