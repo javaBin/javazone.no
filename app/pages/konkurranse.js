@@ -95,7 +95,7 @@ const Konkurranse = () => (
                         bidragsyterne.
                     </P>
 
-                    <SubHeader>Runde 1 – 15. desember til 15. februar</SubHeader>
+                    <SubHeader>Runde 1 – 5. januar til 15. februar</SubHeader>
                     <P>
                         JavaZone ønsker innsendte forslag (manus) fra alle som
                         ønsker å delta, med et par storyboards eller lignende,
