@@ -105,7 +105,7 @@ const Konkurranse = () => (
                     </P>
 
                     <P>
-                        Maktimalt 10 stk av de innsendte forslagene vil kunne gå
+                        Maktimalt 10 av de innsendte forslagene vil kunne gå
                         videre til runde 2. Alle som går videre får 10.000 NOK i
                         delpremie. Vi ser gjerne at noen av pengene går til å
                         dekke konstnader i runde 2, men her står vinnerne fritt
