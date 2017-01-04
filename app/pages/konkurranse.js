@@ -84,7 +84,7 @@ const Konkurranse = () => (
                 </Content>
             </Block>
 
-            <Youtube id='UvyTf5xvaXM'></Youtube>
+            <Youtube id='3vI_7os2V_o'></Youtube>
 
 
             <Block>
