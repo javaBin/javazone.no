@@ -133,7 +133,7 @@ const Konkurranse = () => (
                         premie, for ikke å snakke om store mengder heder og ære.
                         En egen jury vil avgjøre om videoen også vil bli
                         benyttet som offisiell reklamevideo for JavaZone 2017.
-                        Dersom en video velges ut til å være offisiell 
+                        Dersom en video velges ut til å være offisiell
                         reklamevideo vinner denne videoen i tillegg
                         50.000 NOK.
                     </P>
