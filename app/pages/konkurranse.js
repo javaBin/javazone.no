@@ -13,10 +13,10 @@ const Konkurranse = () => (
             <CBlock>
                 <P>
                     JavaZone er en internasjonal ledende IT-konferanse som
-                    samler 3000 deltakere i Oslo Spektrum hver September.
+                    samler 3000 deltakere i Oslo Spektrum hver september.
                     Konferansen har gjennom over 15 år jobbet med en rekke
                     spennende markedsføringskanaler, og hadde en av de første
-                    store virale kampanjene fra Norge med Java forever i 2009
+                    store virale kampanjene fra Norge med Java Forever i 2009
                     , totalt vist 4 millioner ganger. Gjennom årene har det
                     vært mange internasjonalt vellykkede kampanjer, se gjerne
                     noen av disse her
@@ -59,9 +59,9 @@ const Konkurranse = () => (
                         Reklame- og filmstudenter fra institusjoner som: Westerdals,
                         Høgskolen i Hedmark, Noroff, Høgskolen i Volda, Treider 3D
                         og animasjon, Nordland kunst og filmfagskole, Høyskolen i
-                        Kristiania, Høyskolen i Oslo og Akershus. (denne listen
+                        Kristiania, Høyskolen i Oslo og Akershus. (Denne listen
                         ekskluderer ikke bidrag fra andre institusjoner og
-                        aktører, men er kun til veiledning)
+                        aktører, men er kun til veiledning.)
                     </P>
                 </Content>
             </Block>
@@ -71,7 +71,7 @@ const Konkurranse = () => (
                 <Content>
                     <P>
                         For JavaZone er tanken at dette vil gi en ny vri på
-                        reklame- stuntene vi pleier å kjøre. Vi har laget disse
+                        reklamestuntene vi pleier å kjøre. Vi har laget disse
                         videoene i flere år nå, og begynner å kjenne på at vi
                         trenger hjelp til å fortsatt holde dem relevante.
                     </P>
@@ -133,8 +133,8 @@ const Konkurranse = () => (
                         premie, for ikke å snakke om store mengder heder og ære.
                         En egen jury vil avgjøre om videoen også vil bli
                         benyttet som offisiell reklamevideo for JavaZone 2017.
-                        for JavaZone 2017. Dersom en video velges ut til å være
-                        offisiell reklamevideo vinner denne videoen i tillegg
+                        Dersom en video velges ut til å være offisiell 
+                        reklamevideo vinner denne videoen i tillegg
                         50.000 NOK.
                     </P>
                 </Content>
