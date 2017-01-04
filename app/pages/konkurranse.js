@@ -7,7 +7,7 @@ import Youtube from '../components/youtube';
 const Konkurranse = () => (
     <Page name='konkurranse'>
         <Heading>
-            <LargeHeading>Video-Konkurranse</LargeHeading>
+            <LargeHeading>Videokonkurranse</LargeHeading>
         </Heading>
         <Container>
             <CBlock>
