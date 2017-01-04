@@ -94,10 +94,6 @@ const Konkurranse = () => (
                         Kampanjen går over to runder, med innlevering fra
                         bidragsyterne.
                     </P>
-                    <P>
-                        Send forslag og eventuelle spørsmål til 
-                        <a href="mailto:javazone+video@java.no?Subject=JavaZone 2017: Videokonkurranse" target="_top">javazone+video@java.no</a>
-                    </P>
 
                     <SubHeader>Runde 1 – 15. desember til 15. februar</SubHeader>
                     <P>
@@ -140,6 +136,11 @@ const Konkurranse = () => (
                         Dersom en video velges ut til å være offisiell 
                         reklamevideo vinner denne videoen i tillegg
                         50.000 NOK.
+                    </P>
+                    
+                    <SubHeader>Hvor sender jeg forslagene?</SubHeader>
+                    <P>
+                        Send forslag og eventuelle spørsmål til <a href="mailto:javazone+video@java.no?Subject=JavaZone 2017: Videokonkurranse" target="_top">javazone+video@java.no</a>
                     </P>
                 </Content>
             </Block>
