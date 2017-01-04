@@ -44,7 +44,7 @@ const Konkurranse = () => (
                         En jury vil vurdere om kampanjen kan godkjennes som
                         offisiell markedsføringskampanje for JavaZone.
                         Godkjennes kampanjen for fullbredde markedsføring vil
-                        den bli distribuert til 9000 mottakere ikke bare i
+                        den bli distribuert til 9.000 mottakere ikke bare i
                         Norge, men også internasjonalt!
                     </P>
                 </Content>
