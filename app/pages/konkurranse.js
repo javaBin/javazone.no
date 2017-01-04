@@ -13,11 +13,11 @@ const Konkurranse = () => (
             <CBlock>
                 <P>
                     JavaZone er en internasjonal ledende IT-konferanse som
-                    samler 3000 deltakere i Oslo Spektrum hver september.
+                    samler 3.000 deltakere i Oslo Spektrum hver september.
                     Konferansen har gjennom over 15 år jobbet med en rekke
                     spennende markedsføringskanaler, og hadde en av de første
                     store virale kampanjene fra Norge med Java Forever i 2009
-                    , totalt vist 4 millioner ganger. Gjennom årene har det
+                    , totalt vist 4.000.000 ganger. Gjennom årene har det
                     vært mange internasjonalt vellykkede kampanjer, se gjerne
                     noen av disse her
                     på <a href='http://ads.javazone.no'>ads.javazone.no</a>
