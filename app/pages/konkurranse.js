@@ -137,7 +137,7 @@ const Konkurranse = () => (
                         reklamevideo vinner denne videoen i tillegg
                         50.000 NOK.
                     </P>
-                    
+
                     <SubHeader>Hvor sender jeg forslagene?</SubHeader>
                     <P>
                         Send forslag og eventuelle spørsmål til <a href="mailto:javazone+video@java.no?Subject=JavaZone 2017: Videokonkurranse" target="_top">javazone+video@java.no</a>
