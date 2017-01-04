@@ -20,7 +20,7 @@ const Konkurranse = () => (
                     , totalt vist 4 millioner ganger. Gjennom årene har det
                     vært mange internasjonalt vellykkede kampanjer, se gjerne
                     noen av disse her
-                    på <a href='http://2014.javazone.no/videos.html'>2014.javazone.no/videos.html</a>
+                    på <a href='http://ads.javazone.no'>ads.javazone.no</a>
                 </P>
                 <P>
                     Etter flere år med mange spennende kampanjer, vil vi ha
@@ -146,7 +146,7 @@ const Konkurranse = () => (
             </Block>
 
             <CBlock>
-                <CHeader>Se resten av videoene på <a href='http://2014.javazone.no/videos.html'>2014.javazone.no/videos.html</a></CHeader>
+                <CHeader>Se resten av videoene på <a href='http://ads.javazone.no'>ads.javazone.no</a></CHeader>
                 <CContent>
                     <P>
                         Og ikke nøl med å sende inn forslag! Plutselig er
