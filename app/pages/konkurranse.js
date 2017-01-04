@@ -140,7 +140,7 @@ const Konkurranse = () => (
 
                     <SubHeader>Hvor sender jeg forslagene?</SubHeader>
                     <P>
-                        Send forslag og eventuelle spørsmål til <a href="mailto:javazone+video@java.no?Subject=JavaZone 2017: Videokonkurranse" target="_top">javazone+video@java.no</a>
+                        Send forslag og eventuelle spørsmål til <a href="mailto:javazone+video@java.no?Subject=JavaZone 2017: Videokonkurranse" target="_top">javazone+video@java.no</a>.
                     </P>
                 </Content>
             </Block>
