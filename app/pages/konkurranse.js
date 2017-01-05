@@ -59,7 +59,7 @@ const Konkurranse = () => (
                         Reklame- og filmstudenter fra institusjoner som: Westerdals,
                         Høgskolen i Hedmark, Noroff, Høgskolen i Volda, Treider 3D
                         og animasjon, Nordland kunst og filmfagskole, Høyskolen i
-                        Kristiania, Høyskolen i Oslo og Akershus. 
+                        Kristiania, Høyskolen i Oslo og Akershus.
                     </P>
                     <P>
                         Denne listen ekskluderer ikke bidrag fra andre institusjoner
