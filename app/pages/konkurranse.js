@@ -53,15 +53,17 @@ const Konkurranse = () => (
             <Youtube id='kLO1djacsfg'></Youtube>
 
             <Block>
-                <Header>Målgruppe</Header>
+                <Header>Hvem kan delta?</Header>
                 <Content>
                     <P>
                         Reklame- og filmstudenter fra institusjoner som: Westerdals,
                         Høgskolen i Hedmark, Noroff, Høgskolen i Volda, Treider 3D
                         og animasjon, Nordland kunst og filmfagskole, Høyskolen i
-                        Kristiania, Høyskolen i Oslo og Akershus. Denne listen
-                        ekskluderer ikke bidrag fra andre institusjoner og
-                        aktører, men er kun til veiledning.
+                        Kristiania, Høyskolen i Oslo og Akershus. 
+                    </P>
+                    <P>
+                        Denne listen ekskluderer ikke bidrag fra andre institusjoner
+                        og aktører, men er kun til veiledning.
                     </P>
                 </Content>
             </Block>
@@ -95,7 +97,7 @@ const Konkurranse = () => (
                         bidragsyterne.
                     </P>
 
-                    <SubHeader>Runde 1: 5. januar til 15. februar</SubHeader>
+                    <SubHeader>Runde 1: 5. januar – 15. februar</SubHeader>
                     <P>
                         JavaZone ønsker innsendte forslag (manus) fra alle som
                         ønsker å delta, med et par storyboards eller lignende,
@@ -112,7 +114,7 @@ const Konkurranse = () => (
                         til å disponere.
                     </P>
 
-                    <SubHeader>Runde 2: 15. februar til 15. mai</SubHeader>
+                    <SubHeader>Runde 2: 15. februar – 15. mai</SubHeader>
                     <P>
                         Alle som er videre etter runde 1 bearbeider videre sitt
                         forslag basert på tilbakemeldinger, og leverer video
