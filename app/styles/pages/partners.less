@@ -58,8 +58,11 @@
     }
 
     &__stand-prices {
-        width: 50%;
-        padding-right: 2rem;
+
+        @media (min-width: @size-s) {
+            width: 50%;
+            padding-right: 2rem;
+        }
 
         @media (min-width: @size-l) {
             padding-right: 4rem;
@@ -67,11 +70,11 @@
     }
 
     &__ticket-prices {
-        width: 50%;
 
         @media (min-width: @size-s) {
             border-left: 3px solid @white;
             padding-left: 2rem;
+            width: 50%;
         }
 
         @media (min-width: @size-l) {
