@@ -20,7 +20,10 @@ const Index = () => (
             <p className='index__teasertext'>While you wait:</p>
             <ul className='index__links'>
                 <li className='index__link'>
-                    <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
+                    <Link href='/videos'>One thousand videos awaits you!</Link>
+                </li>
+                <li className='index__link'>
+                    <Link href='/konkurranse'>Lag neste JavaZone-video (norwegian)</Link>
                 </li>
             </ul>
             <p className='index__partnerlink'>Interested in <Link href='/partners'>being a partner</Link> of JavaZone?</p>
