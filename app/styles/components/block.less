@@ -53,7 +53,10 @@
             width: 100%;
 
             .block__paragraph {
-                text-align: center;
+
+                @media (min-width: @size-s) {
+                    text-align: center;
+                }
             }
         }
 
