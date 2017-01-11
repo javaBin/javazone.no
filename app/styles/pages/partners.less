@@ -38,8 +38,12 @@
 
     &__mainprice {
         font-size: 3rem;
-        margin: 3rem !important;
+        margin: 2rem 0 !important;
         line-height: 57%;
+
+        @media (min-width: @size-s) {
+            margin: 3rem !important;
+        }
     }
 
     &__latebirdprice {
@@ -80,5 +84,9 @@
         @media (min-width: @size-l) {
             padding-left: 4rem;
         }
+    }
+
+    &__stand-option {
+        text-decoration: line-through;
     }
 }
