@@ -30,7 +30,7 @@ export default () => (
                         These schematics show the layout for JavaZone 2017. As a partner, you get to pick from
                         the shown stands, based on your selected stand type. Each partner gets to select their
                         prefered stand based on the order in which they signed up as a partner. Partners signing
-                        up before January 2nd have been assigned a random ordering. We'll contact you when it's 
+                        up before January 2nd have been assigned a random ordering. We'll contact you when it's
                         your turn to select your stand.
                     </P>
                     <P>
