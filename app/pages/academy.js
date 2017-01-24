@@ -105,7 +105,7 @@ const Academy = () => (
                 <Header>Program and Speakers</Header>
                 <Content>
                     <P>
-                        JavaZone Academy starts at 1230 (doors open at 1200), and lasts until 1730.
+                        JavaZone Academy starts at 1200 (doors open at 1130), and lasts until 1800.
                         Afterwards, there will be food and drinks.
                         There will be 4 or 5 presentations at each location.
                         The exact program will be available once the event is approacing.
