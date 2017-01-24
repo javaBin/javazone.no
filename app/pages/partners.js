@@ -110,6 +110,10 @@ const Partners = () => (
                         Yes, you get exposure to that many people, for a total of 20 hours!
                     </P>
 
+                    <P>
+                        <Link className='button button--transparent' href='/expo'>See blueprints of the JavaZone 2017 Expo Area</Link>
+                    </P>
+
                 </Content>
             </Block>
 
