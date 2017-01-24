@@ -12,7 +12,7 @@ const oslo = {
     date: 'February 14th',
     location: 'Teknologihuset',
     location_link: 'http://www.teknologihuset.no',
-    pax: 120,
+    pax: 100,
     program: 'academy-oslo',
     registration: [
         {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/e/1FAIpQLSdCD9dm8F7771fEHHXuTRLejLLTrhbTzYCnkQYWu3G-hFqh7A/viewform?c=0&w=1'}
@@ -25,7 +25,7 @@ const bergen = {
     date: 'February 16th',
     location: 'Det Akademiske Kvarter',
     location_link: 'http://kvarteret.no/',
-    pax: 120,
+    pax: 80,
     program: 'academy-bergen',
     registration: [
         {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfK6Lwo_5fRLTbzuzZKNuUUS2bo2O_TLnQswpwQXkVndv9GYg/viewform?c=0&w=1'},
@@ -38,7 +38,7 @@ const trondheim = {
     date: 'February 15th',
     location: 'Studentersamfundet',
     location_link: 'https://www.samfundet.no/',
-    pax: 200,
+    pax: 100,
     program: 'academy-trondheim',
     registration: [
         {text: 'Register for Academy Trondheim', link: 'https://abakus.no/event/1946-javazone-academy-2017/'},
