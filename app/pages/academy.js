@@ -83,12 +83,12 @@ const Academy = () => (
                     <P>
                         Are you a student? Interested in IT? Come join us for JavaZone Academy.
                         JavaZone Academy is a free event for students in Norway, where we invite you
-                        to take part in the Javazone experience.
+                        to take part in the JavaZone experience.
                     </P>
                     <P>
-                        We will bring great talks, food, mingling and great partners to
-                        <strong>Oslo</strong>, <strong> Bergen</strong> and
-                        <strong>Trondheim</strong>. Join us for a great evening!
+                        We will bring great talks, food, mingling and great partners
+                        to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Trondheim</strong>.
+                        Join us for a great evening!
                     </P>
                 </CContent>
             </CBlock>
