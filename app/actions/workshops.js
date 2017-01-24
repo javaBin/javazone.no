@@ -20,8 +20,8 @@ export function getWorkshops() {
     return function(dispatch) {
         dispatch(fetchWorkshops());
 
-        return get().end((err, res) => {
-            dispatch(receiveWorkshops(JSON.parse(res.text)));
+        return get().then((res) => {
+            dispatch(receiveWorkshops(res.json()));
         });
     };
 };
