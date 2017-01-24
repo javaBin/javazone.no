@@ -68,7 +68,7 @@ export default () => (
                             <td className='table__data'>Red</td>
                         </tr>
                         <tr className='table__row blue'>
-                            <td className='table__data'>javaBin Area (the event organizers space)</td>
+                            <td className='table__data'>javaBin Area (the event organizer's space)</td>
                             <td className='table__data'>Blue</td>
                         </tr>
                     </tbody>
