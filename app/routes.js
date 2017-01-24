@@ -8,6 +8,7 @@ import partnermoteDesember from './pages/partnermote-desember';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
 import expo from './pages/expo';
+import kids from './pages/kids';
 import { store } from './store';
 import pageview from './analytics';
 
@@ -18,7 +19,8 @@ const routes = {
     '/partnermote-desember': partnermoteDesember,
     '/konkurranse': konkurranse,
     '/academy': academy,
-    '/expo': expo
+    '/expo': expo,
+    '/kids': kids
 };
 
 function dispatchPage(pathname) {
@@ -53,7 +55,15 @@ export function getPage(requestedPage) {
     }
 
     pageview(requestedPage);
-    return page;
+
+    if (page.component) {
+        if (page.action) {
+            store.dispatch(page.action());
+        }
+        return page.component;
+    } else {
+        return page;
+    }
 };
 
 export function link(text, href) {
