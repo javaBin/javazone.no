@@ -7,6 +7,7 @@ import notFound from './pages/404.js';
 import partnermoteDesember from './pages/partnermote-desember';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
+import expo from './pages/expo';
 import { store } from './store';
 import pageview from './analytics';
 
@@ -16,7 +17,8 @@ const routes = {
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
     '/konkurranse': konkurranse,
-    '/academy': academy
+    '/academy': academy,
+    '/expo': expo
 };
 
 function dispatchPage(pathname) {
