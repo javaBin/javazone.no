@@ -21,7 +21,9 @@ export function getWorkshops() {
         dispatch(fetchWorkshops());
 
         return get().then((res) => {
-            dispatch(receiveWorkshops(res.json()));
+            return res.json();
+        }).then((workshops) => {
+            dispatch(receiveWorkshops(workshops));
         });
     };
 };
