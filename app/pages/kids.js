@@ -8,6 +8,34 @@ import mbot from '../assets/kids/mbot.jpg';
 import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';
 import raspberrypi from '../assets/kids/raspberrypi.jpg';
+import { find } from 'lodash/fp';
+
+const kidsInfo = {
+    'kids_codestudio': {
+        background: codestudio,
+        age: '4-10 år',
+        title: 'Codestudio',
+        odd: true
+    },
+    'kids_computercraft': {
+        background: minecraft,
+        age: '11+ år',
+        title: 'ComputerCraft i Minecraft',
+        odd: false
+    },
+    'kids_robot': {
+        background: mbot,
+        age: '10-14år',
+        title: 'Lær å programmere roboter',
+        odd: true
+    },
+    'kids_rasberry': {
+        background: raspberrypi,
+        age: '12+ år',
+        title: 'Raspberry Pi og Java',
+        odd: false
+    }
+};
 
 function workshopUrl(workshop) {
     if (!workshop) {
@@ -51,6 +79,38 @@ function mapStateToProps(state) {
         workshops: state.workshops.workshops
     };
 }
+
+const Session = ({session, children}) => {
+    if (!session) {
+        return null;
+    }
+
+    const extra = kidsInfo[session.id];
+    console.log(extra.odd);
+    const image = (
+        <div className='kids__image'>
+            <div className='background-image' style={{backgroundImage: `url(${extra.background})`}}></div>
+        </div>
+    );
+    const info = (
+        <div className={`kids__info kids__info--${extra.odd ? 'right' : 'left'}`}>
+            <div className='kids__event-title'>{extra.title}</div>
+            <div className='kids__age'>{extra.age}</div>
+            {children}
+            <a className={`button ${workshopClass(session)} kids_registrate`}
+               href={workshopUrl(session)}>
+                {workshopStatus(session)}
+            </a>
+        </div>
+    );
+
+    return (
+        <div className='kids__event'>
+            {extra.odd ? image : info }
+            {!extra.odd ? image : info}
+        </div>
+    );
+};
 
 const Kids = ({workshops}) => {
     const wcodestudio = find({id: 'kids_codestudio'}, workshops);
@@ -134,6 +194,78 @@ const Kids = ({workshops}) => {
                         </P>
                     </Content>
                 </Block>
+
+                <Session session={wcodestudio}>
+                    <P>
+                        Programmering med CodeStudio sine oppgaver for de aller
+                        yngste. Her vil vi ta i bruk <a href="https://code.org">Code.org</a>
+                        sine opplegg for Kodetimen. Dette vil bli en lett
+                        introduksjon som verken krever forkunnskaper i lesing
+                        eller matematikk.
+                    </P>
+                    <P>
+                        Oppgavene finnes på <a href="https://studio.code.org">studio.code.org</a>.
+                    </P>
+                </Session>
+
+                <Session session={wminecraft}>
+                    <P>
+                        ComputerCraft er en mod til Minecraft, som lar deg
+                        bygge datamaskiner og roboter inne i spillet.
+                        Disse datamaskinene og robotene kan programmeres til
+                        å kontrollere dører, grave huler, bygge hus og så videre.
+                        ComputerCraft bruker programmeringsspråket Lua, som er
+                        et enkelt og fleksibelt tekstbasert programmeringsspråk.
+                        For å delta på dette kurset må deltagerne ha en
+                        Minecraft-konto.
+                    </P>
+                    <P>
+                        <a href="http://kodeklubben.github.io/computercraft/installasjon/installasjon.html">Oppskrift for hvordan du installerer ComputerCraft</a>.
+                    </P>
+                </Session>
+
+                <Session session={wrobot}>
+                    <P>
+                        Bygg og styr en <a href="http://makeblock.com/mbot-stem-educational-robot-kit-for-kids/">mBot</a> både med en app eller la den styre seg selv. Vi får roboten til å bruke motor, sensorer, lys og lyd mens vi lærer hvordan man kan styre den.
+                    </P>
+                    <P>
+                        Se også <a href="https://www.youtube.com/watch?v=pmsSipper3Y">videoen som forklarer mBot</a>.
+                    </P>
+                </Session>
+
+                <Session session={wraspberry}>
+                    <P>
+                        Raspberry Pi er kanskje verdens aller kuleste mini-datamaskin.
+                        Datamaskinen kjører Linux, og kan dermed programmeres med
+                        alle verdens programmeringsspråk. I løpet av dette kurset
+                        skal vi programmere Raspberry Pi maskinen ved hjelp av
+                        Java og utviklerverktøyet Eclipse.
+                    </P>
+                    <P>
+                        Vi starter med å lære det aller mest grunnleggende, hvordan
+                        vi bruker operativsystemet Raspian, og hvordan vi navigerer
+                        i filsystemet. Deretter skal vi ta frem litt elektroniske
+                        komponenter som koblingsbrett, LED lamper, knapper,
+                        motstandere og kanskje en motor og styre disse ved hjelp
+                        av Raspberry Pi maskinen.
+                    </P>
+                    <P>
+                        Opplegget vil være basert på Raspberry Pi sidene
+                        til <a href="https://kodegenet.no">Kodegenet.no</a>.
+                    </P>
+                </Session>
+
+                <CBlock>
+                    <CHeader>
+                        Vi sees på Teknologihuset søndag 4. september!
+                    </CHeader>
+                    <CContent>
+                        <P>
+                            Vennlig hilsen,<br />
+                            javaBin, Lær Kidsa Koding, Bitraf og Kodegenet
+                        </P>
+                    </CContent>
+                </CBlock>
             </Container>
         </Page>
     );
