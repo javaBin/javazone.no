@@ -36,9 +36,7 @@
         width: 200px;
 
         @media (min-width: @size-s) {
-            font-size: 1.4em;
-            height: 150px;
-            width: 150px;
+            font-size: 1.8em;
         }
 
         @media (min-width: @size-m) {
@@ -60,6 +58,13 @@
 
     &__title {
         font-family: 'Unica One', cursive;
+        font-weight: 600;
+        text-shadow: 0 0 2px rgba(0, 0, 0, .9),
+        0 0 20px rgba(0, 0, 0, .2);
+
+        @media (min-width: @size-xl) {
+            font-weight: 2rem;
+        }
     }
 
     &__date {

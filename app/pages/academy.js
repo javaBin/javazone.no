@@ -36,8 +36,8 @@ const trondheim = {
     image: samfundet,
     city: 'Trondheim',
     date: 'February 15th',
-    location: 'Studentersamfundet',
-    location_link: 'https://www.samfundet.no/',
+    location: 'Nova Konferansesenter',
+    location_link: 'http://nova-trondheim.no',
     pax: 100,
     program: 'academy-trondheim',
     registration: [
@@ -96,8 +96,8 @@ const Academy = () => (
 
         <ul className='academy__locations'>
             <Location location={oslo} />
-            <Location location={bergen} />
             <Location location={trondheim} />
+            <Location location={bergen} />
         </ul>
 
         <Container>
