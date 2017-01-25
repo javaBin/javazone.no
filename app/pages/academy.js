@@ -110,7 +110,11 @@ const Academy = () => (
                         There will be 4 or 5 presentations at each location.
                         The exact program will be available once the event is approacing.
                     </P>
-                    <SubHeader>How do I register?</SubHeader>
+                </Content>
+            </Block>
+            <Block>
+                <Header>How do I register?</Header>
+                <Content>
                     <P>
                         Use the signup links above to sign up for your prefered town.
                         We’ll contact you as soon as possible with information about
