@@ -111,6 +111,8 @@ const Academy = () => (
                         The exact program will be available once the event is approacing.
                     </P>
                 </Content>
+            </Block>
+            <Block>
                 <Header>How do I register?</Header>
                 <Content>
                     <P>
