@@ -7,10 +7,12 @@ import notFound from './pages/404.js';
 import partnermoteDesember from './pages/partnermote-desember';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
+import academyLocation from './pages/academy-program.js';
 import expo from './pages/expo';
 import kids from './pages/kids';
 import { store } from './store';
 import pageview from './analytics';
+import academyData from './data/academy';
 
 const routes = {
     '/': index,
@@ -20,7 +22,10 @@ const routes = {
     '/konkurranse': konkurranse,
     '/academy': academy,
     '/expo': expo,
-    '/kids': kids
+    '/kids': kids,
+    '/academy/oslo': academyLocation(academyData.oslo),
+    '/academy/trondheim': academyLocation(academyData.trondheim),
+    '/academy/bergen': academyLocation(academyData.bergen)
 };
 
 function dispatchPage(pathname) {

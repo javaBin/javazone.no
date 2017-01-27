@@ -4,7 +4,7 @@ import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
-import samfundet from '../assets/academy/samfundet.jpg';
+import nova from '../assets/academy/nova.jpg';
 
 const oslo = {
     image: teknologihuset,
@@ -33,7 +33,7 @@ const bergen = {
 };
 
 const trondheim = {
-    image: samfundet,
+    image: nova,
     city: 'Trondheim',
     date: 'February 15th',
     location: 'Nova Konferansesenter',

@@ -17,7 +17,8 @@ const config = {
 
     output: {
         filename: '[hash].js',
-        path: output
+        path: output,
+        publicPath: '/'
     },
 
     module: {
