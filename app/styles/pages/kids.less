@@ -1,11 +1,39 @@
 .kids {
+    &__event {
+        display: flex;
+    }
+
+    &__image {
+        position: relative;
+        width: 50%;
+    }
+
+    &__info {
+        padding: 2rem 0;
+        width: 50%;
+
+        &--right {
+            padding-left: 2rem;
+            padding-right: 1rem;
+        }
+
+        &--left {
+            padding-right: 2rem;
+            padding-left: 1rem;
+        }
+    }
+
     &__event-title {
+        font-family: 'Unica One', cursive;
+        font-size: 1.6rem;
+        font-weight: 600;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     &__age {
         display: inline-block;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-bottom: 10px;
     }
 
