@@ -18,7 +18,10 @@ const Slot = ({time, title, speaker}, key) => (
 
 const Location = ({title, date, program}) => () => (
     <Page name='academy-program'>
-        <Heading>Hello, {title}</Heading>
+        <Heading>
+            <LargeHeading>Hello, {title}</LargeHeading>
+            <SmallHeading>JavaZone Academy</SmallHeading>
+        </Heading>
 
         <Container>
             <CBlock>
