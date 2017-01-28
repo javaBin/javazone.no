@@ -6,6 +6,15 @@ export default {
             {
                 time: '1130',
                 title: 'Doors open'
+            },
+            {
+                time: '1200-1230',
+                title: 'Intro'
+            },
+            {
+                time: '1230-1330',
+                title: 'Test talk',
+                speaker: 'Test speaker'
             }
         ]
     },
@@ -16,6 +25,15 @@ export default {
             {
                 time: '1130',
                 title: 'Doors open'
+            },
+            {
+                time: '1200-1230',
+                title: 'Intro'
+            },
+            {
+                time: '1230-1330',
+                title: 'Test talk',
+                speaker: 'Test speaker'
             }
         ]
     },
@@ -26,6 +44,15 @@ export default {
             {
                 time: '1130',
                 title: 'Doors open'
+            },
+            {
+                time: '1200-1230',
+                title: 'Intro'
+            },
+            {
+                time: '1230-1330',
+                title: 'Test talk',
+                speaker: 'Test speaker'
             }
         ]
     }
