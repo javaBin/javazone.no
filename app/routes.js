@@ -11,6 +11,7 @@ import academyLocation from './pages/academy-program.js';
 import speakers from './pages/speakers';
 import expo from './pages/expo';
 import kids from './pages/kids';
+import monetaryPolicy from './pages/monetary-policy';
 import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
@@ -28,6 +29,7 @@ const routes = {
     '/academy/trondheim': academyLocation(academyData.trondheim),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers
+    '/speakers/monetary-policy': monetaryPolicy,
 };
 
 function dispatchPage(pathname) {
