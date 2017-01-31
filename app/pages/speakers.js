@@ -81,7 +81,7 @@ const Speakers = () => (
             <CBlock>
                 <CContent>
                     <P>
-                        <a href='http://javazone.no/submitit' className='button button--green'>
+                        <a href='http://submit.javazone.no' className='button button--green'>
                             <span className='button__icon icon-check'></span> Submit your talk today!
                         </a>
                     </P>
