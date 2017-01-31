@@ -19,7 +19,7 @@ const Index = () => (
                         <Link href='/speakers' className='index__link index__link--pink'>Speakers</Link>
                     </li>
                     <li className='index__links-item'>
-                        <Link href='/students' className='index__link index__link--orange'>Students</Link>
+                        <Link href='/academy' className='index__link index__link--orange'>Students</Link>
                     </li>
                     <li className='index__links-item'>
                         <Link href='/kids' className='index__link index__link--green'>Kids</Link>
