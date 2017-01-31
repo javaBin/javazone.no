@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 function mapDispatchToProps(dispatch) {
     return {
         navigate(ev) {
-            const url = ev.target.getAttribute('data-url');
+            let el = ev.target;
+            while (el.tagName !== 'A') {
+                el = el.parentElement;
+            }
+            const url = el.getAttribute('data-url');
             if (!url) {
                 return;
             }

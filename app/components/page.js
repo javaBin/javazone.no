@@ -55,7 +55,9 @@ export const Page = (props) => {
             <div className={pageClass}>
                 <Menu />
                 <div className='page__logo-container'>
-                    <Link href='/'><img src={logo} className='page__logo' /></Link>
+                    <Link href='/'>
+                        <img src={logo} className='page__logo' />
+                    </Link>
                 </div>
                 {props.children}
                 <Container>
