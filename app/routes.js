@@ -13,6 +13,7 @@ import kids from './pages/kids';
 import speakers from './pages/speakers';
 import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
+import tickets from './pages/tickets';
 import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
@@ -31,7 +32,8 @@ const routes = {
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers,
     '/speakers/monetary-policy': monetaryPolicy,
-    '/speakers/tips': tipsAndTricks
+    '/speakers/tips': tipsAndTricks,
+    '/tickets': tickets
 };
 
 function dispatchPage(pathname) {
