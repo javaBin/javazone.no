@@ -134,6 +134,20 @@ const Speakers = () => (
             <CBlock>
                 <CHeader>Dates & Deadlines</CHeader>
                 <CContent>
+                <P>
+	                Call for speakers closes April 27th. Speakers will be notified if their proposal is accepted at the latest June 26th. JavaZone will be held in Oslo September 13th-14th. Workshops will be Septhember 12th.
+                </P>
+				<P>
+					This year, we are itching to try out a new feature in our submission system: Interactive feedback in the CfP phase. In short, early submissions may be considered as they arrive, and potentially receive feedback from the program committee. This includes feedback on points we find interesting, suggestions for changes and additions etc.
+				</P>
+				<P>
+					We also have a selfish motive. At JavaZone, we receive a huge number of submissions every year, and the workload faced by the program committee at the end of the CfP phase can be overwhelming. By encouraging early submissions, we hope to get ahead of the game this year.
+				</P>
+				<P>
+					Bottom line: The earlier you submit, the more likely you are to be noticed, and to receive considered and helpful feedback. Avoid drowning in the end-of-CfP tsunami! In addition, submissions received by March 27 will be in the draw for a special treat!
+				</P>
+				</CContent>
+                <CContent>
                     <Timeline />
                 </CContent>
             </CBlock>
@@ -180,7 +194,7 @@ const Speakers = () => (
             </CBlock>
 
             <CBlock>
-                    <CHeader>We hope to see you at JavaZone 2016 – please feel free to spread the word to your local community!</CHeader>
+                    <CHeader>We hope to see you at JavaZone 2017 – please feel free to spread the word to your local community!</CHeader>
                 <CContent>
                     <P className='speakers__regards'>
                         Best regards,<br />the JavaZone Program Committee
