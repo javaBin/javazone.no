@@ -5,6 +5,13 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import nova from '../assets/academy/nova.jpg';
+import acando from '../assets/partner-logos/acando.png';
+import accenture from '../assets/partner-logos/accenture.png';
+import capgemini from '../assets/partner-logos/capgemini.png';
+import finn from '../assets/partner-logos/finn.png';
+import kantega from '../assets/partner-logos/kantega.png';
+
+const sponsors = [acando, accenture, capgemini, finn, kantega];
 
 const oslo = {
     image: teknologihuset,
@@ -93,6 +100,14 @@ const Academy = () => (
                 </CContent>
             </CBlock>
         </Container>
+
+        <ul className='academy__sponsors'>
+            {sponsors.map((sponsor, key) => (
+                 <li key={key} className='academy__sponsor'>
+                     <img className='academy__sponsor-image' src={sponsor} />
+                 </li>
+             ))}
+        </ul>
 
         <ul className='academy__locations'>
             <Location location={oslo} />

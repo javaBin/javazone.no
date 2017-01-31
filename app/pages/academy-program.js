@@ -5,6 +5,19 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import nova from '../assets/academy/nova.jpg';
+import acando from '../assets/partner-logos/acando.png';
+import accenture from '../assets/partner-logos/accenture.png';
+import capgemini from '../assets/partner-logos/capgemini.png';
+import finn from '../assets/partner-logos/finn.png';
+import kantega from '../assets/partner-logos/kantega.png';
+
+const sponsorImages = {
+    acando,
+    accenture,
+    capgemini,
+    finn,
+    kantega
+};
 
 const Slot = ({time, title, speaker}, key) => (
     <li className='program__slot' key={key}>
@@ -16,7 +29,7 @@ const Slot = ({time, title, speaker}, key) => (
     </li>
 );
 
-const Location = ({title, date, program}) => () => (
+const Location = ({title, date, sponsors, program}) => () => (
     <Page name='academy-program'>
         <Heading>
             <LargeHeading>Hello, {title}</LargeHeading>
@@ -34,6 +47,14 @@ const Location = ({title, date, program}) => () => (
                     </P>
                 </CContent>
             </CBlock>
+
+            <ul className='academy__sponsors academy__sponsors--small'>
+                {sponsors.map((sponsor, key) => (
+                     <li key={key} className='academy__sponsor'>
+                         <img className='academy__sponsor-image' src={sponsorImages[sponsor]} />
+                     </li>
+                 ))}
+            </ul>
 
             <ul className='program'>
                 {program.map((slot, key) => Slot(slot, key))}

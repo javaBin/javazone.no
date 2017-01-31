@@ -2,6 +2,7 @@ export default {
     'oslo': {
         title: 'Oslo',
         date: 'February 14th',
+        sponsors: ["acando", "accenture", "capgemini", "kantega"],
         program: [
             {
                 time: '1130',
@@ -52,6 +53,7 @@ export default {
     'trondheim': {
         title: 'Trondheim',
         date: 'February 15th',
+        sponsors: ['acando', 'accenture', 'kantega'],
         program: [
             {
                 time: '1130',
@@ -102,6 +104,7 @@ export default {
     'bergen': {
         title: 'Bergen',
         date: 'February 16th',
+        sponsors: ['acando', 'accenture', 'capgemini', 'finn'],
         program: [
             {
                 time: '1230',
