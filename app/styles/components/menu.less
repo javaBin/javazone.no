@@ -1,0 +1,72 @@
+@import '../variables';
+
+.menu {
+    &__toggle {
+        background: transparent;
+        border: 2px solid @blue;
+        cursor: pointer;
+        height: 7px;
+        outline: 0;
+        padding: 0;
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        transition: transform .2s, left .2s;
+        transform: skew(-20deg);
+        width: 40px;
+
+        &:before {
+            background: transparent;
+            border: 2px solid @blue;
+            content: '';
+            display: block;
+            height: 7px;
+            left: -7px;
+            padding: 0;
+            position: relative;
+            top: -13px;
+            transition: transform .2s, left .2s;
+            transform: skew(40deg);
+            width: 40px;
+        }
+
+        &:after {
+            background: transparent;
+            border: 2px solid @blue;
+            content: '';
+            display: block;
+            height: 7px;
+            left: 2px;
+            padding: 0;
+            position: relative;
+            top: 2px;
+            transition: transform .2s, left .2s;
+            transform: skew(40deg);
+            width: 40px;
+        }
+
+
+        &:hover {
+            transform: skew(20deg);
+
+            &:before {
+                left: 2px;
+                transform: skew(-40deg);
+            }
+
+
+            &:after {
+                left: -7px;
+                transform: skew(-40deg);
+            }
+        }
+    }
+
+    &__container {
+        display: none;
+
+        &--visible {
+            display: block;
+        }
+    }
+}

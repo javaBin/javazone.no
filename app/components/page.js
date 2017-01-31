@@ -2,6 +2,32 @@ import className from 'classname';
 import logo from '../assets/logo-white-wireframe.svg';
 import { Link } from './link';
 import Footer from './footer';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+    return {
+        visible: state.menu.visible
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        toggleMenu() {
+            dispatch({
+                type: 'MENU_TOGGLE'
+            });
+        }
+    };
+}
+
+const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}) => (
+    <div className='page__menu menu'>
+        <button className='menu__toggle' onClick={toggleMenu}></button>
+        <div className={`menu__container menu__container--${visible ? 'visible' : 'hidden'}`}>
+            Menu
+        </div>
+    </div>
+));
 
 export const Page = (props) => {
     const pageClass = `page ${props.name}`;
@@ -10,6 +36,7 @@ export const Page = (props) => {
     if (showLogo) {
         return (
             <div className={pageClass}>
+                <Menu />
                 <div className='page__logo-container'>
                     <Link href='/'><img src={logo} className='page__logo' /></Link>
                 </div>
@@ -22,6 +49,7 @@ export const Page = (props) => {
     } else {
         return (
             <div className={pageClass}>
+                <Menu />
                 {props.children}
             </div>
         );
