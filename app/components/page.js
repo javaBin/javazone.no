@@ -23,8 +23,23 @@ function mapDispatchToProps(dispatch) {
 const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}) => (
     <div className='page__menu menu'>
         <button className='menu__toggle' onClick={toggleMenu}></button>
+        <div className={`menu__top menu__top--${visible ? 'visible' : 'hidden'}`}></div>
+        <div className={`menu__bottom menu__bottom--${visible ? 'visible' : 'hidden'}`}></div>
         <div className={`menu__container menu__container--${visible ? 'visible' : 'hidden'}`}>
-            Menu
+                <ul className='menu__links'>
+                    <li className='menu__links-item'>
+                        <Link href='/partners' className='menu__link menu__link--blue'>Partners</Link>
+                    </li>
+                    <li className='menu__links-item'>
+                        <Link href='/speakers' className='menu__link menu__link--pink'>Speakers</Link>
+                    </li>
+                    <li className='menu__links-item'>
+                        <Link href='/students' className='menu__link menu__link--orange'>Students</Link>
+                    </li>
+                    <li className='menu__links-item'>
+                        <Link href='/kids' className='menu__link menu__link--green'>Kids</Link>
+                    </li>
+                </ul>
         </div>
     </div>
 ));
