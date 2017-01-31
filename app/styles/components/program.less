@@ -14,7 +14,12 @@
         color: @burgundy;
         display: inline-block;
         flex-shrink: 0;
-        width: 73px;
+        width: 100px;
+
+        @media (min-width: @size-s) {
+            font-size: 1.3rem;
+            width: 150px;
+        }
     }
 
     &__event {
@@ -23,7 +28,11 @@
 
     &__title {
         display: inline-block;
-        font-weight: 400;
+        font-weight: 600;
+
+        @media (min-width: @size-s) {
+            font-size: 1.3rem;
+        }
     }
 
     &__loading {
