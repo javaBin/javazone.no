@@ -50,7 +50,7 @@ const Location = ({title, date, sponsors, program}) => () => (
 
             <ul className='academy__sponsors academy__sponsors--small'>
                 {sponsors.map((sponsor, key) => (
-                     <li key={key} className='academy__sponsor'>
+                     <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
                          <img className='academy__sponsor-image' src={sponsorImages[sponsor]} />
                      </li>
                  ))}
