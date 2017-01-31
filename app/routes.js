@@ -61,6 +61,9 @@ function navigate(ev) {
 }
 
 export function getPage(requestedPage) {
+    if (requestedPage[requestedPage.length - 1] === '/') {
+        requestedPage = requestedPage.substring(0, requestedPage.length - 1);
+    }
     const page = routes[requestedPage];
     if (!page) {
         pageview('/404');
