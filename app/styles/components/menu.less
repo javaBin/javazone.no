@@ -2,19 +2,44 @@
 
 .menu {
     &__toggle {
-        background: transparent;
-        border: 2px solid @blue;
+        background: @black;
+        border: 0;
         cursor: pointer;
-        height: 7px;
+        height: 40px;
         outline: 0;
         padding: 0;
         position: fixed;
-        right: 25px;
+        text-align: center;
         top: 30px;
+        right: 25px;
+        width: 50px;
+        z-index: 30;
+
+        &:hover {
+            .menu__icon {
+                transform: skew(20deg);
+            }
+
+            .menu__icon:before {
+                left: 2px;
+                transform: skew(-40deg);
+            }
+
+
+            .menu__icon:after {
+                left: -7px;
+                transform: skew(-40deg);
+            }
+        }
+    }
+
+    &__icon {
+        border: 2px solid @blue;
+        display: inline-block;
+        height: 7px;
         transition: transform .2s, left .2s;
         transform: skew(-20deg);
         width: 40px;
-        z-index: 30;
 
         &:before {
             background: transparent;
@@ -45,26 +70,11 @@
             transform: skew(40deg);
             width: 40px;
         }
-
-
-        &:hover {
-            transform: skew(20deg);
-
-            &:before {
-                left: 2px;
-                transform: skew(-40deg);
-            }
-
-
-            &:after {
-                left: -7px;
-                transform: skew(-40deg);
-            }
-        }
     }
 
     &__container {
         align-items: center;
+        background: transparent;
         display: flex;
         justify-content: center;
         height: 100%;
