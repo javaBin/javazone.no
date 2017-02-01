@@ -2,6 +2,7 @@ import React from 'react';
 import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
 import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
+import { Link } from '../components/link';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import nova from '../assets/academy/nova.jpg';
@@ -108,17 +109,22 @@ const Academy = () => (
         </ul>
 
         <Container>
-            <Block>
-                <Header>Program and Speakers</Header>
-                <Content>
-                    <P>
-                        JavaZone Academy starts at 1200 (doors open at 1130), and lasts until 1800.
-                        Afterwards, there will be food and drinks.
-                        There will be 4 or 5 presentations at each location.
-                        The exact program will be available once the event is approacing.
-                    </P>
-                </Content>
-            </Block>
+            <CBlock>
+                <CHeader>Program and Speakers</CHeader>
+            </CBlock>
+            <div className='academy__program-links'>
+                <ul className='list'>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/oslo' className='button button--transparent'>Academy Oslo</Link>
+                    </li>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/trondheim' className='button button--transparent'>Academy Trondheim</Link>
+                    </li>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/bergen' className='button button--transparent'>Academy Bergen</Link>
+                    </li>
+                </ul>
+            </div>
             <Block>
                 <Header>How do I register?</Header>
                 <Content>
