@@ -19,9 +19,10 @@
     &__sponsors {
         justify-content: center;
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         margin: 0 auto 80px auto;
-        max-width: 500px;
+        max-width: 700px;
         padding: 0;
 
         @media (min-width: @size-s) {
@@ -49,6 +50,14 @@
         display: block;
         flex: 0 1 100/3%;
         text-align: center;
+
+        &--3 {
+            flex: 0 1 100/3%;
+        }
+
+        &--4 {
+            flex: 0 1 100/4%;
+        }
     }
 
     &__sponsor-image {

@@ -114,6 +114,77 @@ const TipsAndTricks = () => (
                     </Dl>
                 </Content>
             </Block>
+
+            <Block>
+                <Header>Why was my talk rejected?</Header>
+                <Content>
+                    <Dl>
+                        <Dt>Not Enough information</Dt>
+                        <Dd>
+                            The program committee was not sure what you're going
+                            to present, or there was not enough information
+                            about the technology / things you want to talk about
+                            to decide how awesome the presentation will be.
+                        </Dd>
+                        <Dt>The proposal is too thin</Dt>
+                        <Dd>
+                            The abstract doesn't convey the feeling that you have
+                            put a lot of work into it, or that you have thought
+                            through your presentation.
+                        </Dd>
+                        <Dt>You want to talk about more than we think you'll have time to cover</Dt>
+                        <Dd>
+                            0-minute lightning talk proposals that appear to
+                            require double that time will be discounted. The
+                            same applies for proposals that try to cover
+                            everything possible instead of focusing on a specific
+                            area. If you want to cover a breadth of material
+                            then be sure to convey to us that you have thought
+                            through the timeline for your talk. We must feel
+                            that you believe that it will work, something that
+                            can be achieved with a clear and detailed outline.
+                        </Dd>
+                        <Dt>The abstract was not catchy enough</Dt>
+                        <Dd>
+                            If the committee ends up with 600 or so proposals
+                            to go through, time becomes a factor. This is
+                            especially true in the first pass, and in the
+                            early stages. If your abstract catches the fancy
+                            of just one or more of the committee members, your
+                            proposal is likely to be thumbs-upped to the next
+                            phase. If not, it tends to drop out of the race
+                            early. It helps to describe accurately and
+                            concisely what you want to talk about, and why
+                            people should come and listen to you.
+                        </Dd>
+                        <Dt>The theme did not fit in with what we want to include in the program this year</Dt>
+                        <Dd>
+                            Even though JavaZone has place for many
+                            themes, there are some proposals that don't
+                            fit. Some proposals are rejected because we feel
+                            the presentation would be better served at a
+                            different conference.
+                        </Dd>
+                        <Dt>Your co-presenter had a different proposal accepted</Dt>
+                        <Dd>
+                            If you intend to present with a co-presenter, and
+                            she happens to have had a separate proposal already
+                            accepted then we may have to reject your joint
+                            proposal.
+                        </Dd>
+                        <Dt>You were unlucky</Dt>
+                        <Dd>
+                            We often receive multiple good proposals regarding
+                            the same theme. The program committee has to
+                            shortlist these, and occasionally a proposal that
+                            could be accepted will end up in the rejection
+                            pile instead. In 2016, for example, there were
+                            many good proposals in the "how we do devops in
+                            the cloud" which, unfortunately, had to be rejected.
+                        </Dd>
+                    </Dl>
+                </Content>
+            </Block>
         </Container>
     </Page>
 );
