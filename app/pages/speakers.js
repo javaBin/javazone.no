@@ -50,7 +50,7 @@ const Speakers = () => (
                         JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of technical talks and workshops in an informal atmosphere with an expected attendance of up to 3000 developers.
                     </P>
                     <P>
-                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of presentations and (more) workshops. Last year's event was a great success with more than 3000 attendees enjoying 173 talks covering a wide range of topics. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent. 
+                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of presentations and (more) workshops. Last year's event was a great success with more than 3000 attendees enjoying 173 talks covering a wide range of topics. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
                     </P>
                     <P>
                     	Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – videos from previous years are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web page</a>.
