@@ -101,14 +101,6 @@ const Academy = () => (
             </CBlock>
         </Container>
 
-        <ul className='academy__sponsors'>
-            {sponsors.map((sponsor, key) => (
-                 <li key={key} className='academy__sponsor'>
-                     <img className='academy__sponsor-image' src={sponsor} />
-                 </li>
-             ))}
-        </ul>
-
         <ul className='academy__locations'>
             <Location location={oslo} />
             <Location location={trondheim} />
@@ -139,6 +131,15 @@ const Academy = () => (
                 </Content>
             </Block>
         </Container>
+
+        <ul className='academy__sponsors'>
+            {sponsors.map((sponsor, key) => (
+                 <li key={key} className='academy__sponsor'>
+                     <img className='academy__sponsor-image' src={sponsor} />
+                 </li>
+             ))}
+        </ul>
+
     </Page>
 );
 
