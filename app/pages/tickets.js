@@ -20,7 +20,7 @@ const Tickets = () => (
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader>Early Bird JavaZone ticket</CHeader>
                 <CContent>
-                    <div className="partners__mainprice">NOK 5.890,--</div>
+                    <div className="partners__mainprice">NOK 5.890,-</div>
                     <P>
                         Get your JavaZone ticket now. It includes full access to the conference, <br />
                         including access to workshops on Tuesday (limited seating: first come, first served).<br />

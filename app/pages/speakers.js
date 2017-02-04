@@ -4,6 +4,7 @@ import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { Link } from '../components/link';
 import Timeline from '../components/timeline';
+import Youtube from '../components/youtube';
 
 const Format = (props) => (
     <li className='presentation-formats__format format'>
@@ -39,8 +40,11 @@ const Speakers = () => (
     <Page name='speakers'>
         <Heading>
             <LargeHeading>Call for Speakers</LargeHeading>
-            <SmallHeading>Yeah</SmallHeading>
+            <SmallHeading>Speak at JavaZone 2017</SmallHeading>
         </Heading>
+        <Container>
+            <Youtube id='cL57Ho55xpo'></Youtube>
+        </Container>
 
         <Container>
             <CBlock>
@@ -81,7 +85,7 @@ const Speakers = () => (
             <CBlock>
                 <CContent>
                     <P>
-                        <a href='http://submit.javazone.no' className='button button--green'>
+                        <a href='http://submit.javazone.no' className='button button--transparent'>
                             <span className='button__icon icon-check'></span> Submit your talk today!
                         </a>
                     </P>
