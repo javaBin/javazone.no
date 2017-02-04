@@ -5,6 +5,9 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { Link } from '../components/link';
 import Timeline from '../components/timeline';
 import Youtube from '../components/youtube';
+import partners1 from '../assets/partners_1.jpg';
+import partners2 from '../assets/partners_2.jpg';
+import partners3 from '../assets/partners_3.jpg';
 
 const Format = (props) => (
     <li className='presentation-formats__format format'>
@@ -51,19 +54,11 @@ const Speakers = () => (
                 <CHeader>About JavaZone</CHeader>
                 <CContent>
                     <P>
+                        <br />
                         JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of technical talks and workshops in an informal atmosphere with an expected attendance of up to 3000 developers.
                     </P>
                     <P>
                         JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of presentations and (more) workshops. Last year's event was a great success with more than 3000 attendees enjoying 173 talks covering a wide range of topics. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
-                    </P>
-                    <P>
-                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – videos from previous years are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web page</a>.
-                    </P>
-                    <P>
-                        We can brag as much as we want, but JavaZone would be nothing without all the great speakers! And that is why we need your help to make sure that JavaZone 2017 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop by the 24th of April, 2017.
-                    </P>
-                    <P>
-                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups traditionally under-represented in tech.
                     </P>
                 </CContent>
             </CBlock>
@@ -76,6 +71,26 @@ const Speakers = () => (
                     </P>
                 </CContent>
             </CBlock>
+
+            <img className='partners__image' src={partners2} />
+
+            <CBlock>
+                <CHeader>What others are saying about JavaZone</CHeader>
+                <CContent>
+                    <P>
+                        <br />
+                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – videos from previous years are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web page</a>.
+                    </P>
+                    <P>
+                        We can brag as much as we want, but JavaZone would be nothing without all the great speakers! And that is why we need your help to make sure that JavaZone 2017 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop by the 24th of April, 2017.
+                    </P>
+                    <P>
+                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups traditionally under-represented in tech.
+                    </P>
+                </CContent>
+            </CBlock>
+
+            <img className='partners__image' src={partners1} />
 
             <CBlock>
                 <div className='speakers__formats'>
@@ -134,6 +149,8 @@ const Speakers = () => (
                     </dl>
                 </Content>
             </Block>
+
+            <img className='partners__image' src={partners3} />
 
             <CBlock>
                 <CHeader>Dates & Deadlines</CHeader>
