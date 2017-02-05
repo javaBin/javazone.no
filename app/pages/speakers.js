@@ -46,7 +46,7 @@ const Speakers = () => (
             <SmallHeading>Speak at JavaZone 2017</SmallHeading>
         </Heading>
         <Container>
-            <Youtube id='cL57Ho55xpo'></Youtube>
+            <Youtube id='YsAQs9Yf4Mg'></Youtube>
         </Container>
 
         <Container>
