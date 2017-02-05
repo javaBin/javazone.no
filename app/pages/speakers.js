@@ -189,7 +189,7 @@ const Speakers = () => (
                         <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
                         <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 12th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</dd>
                         <dt className='speakers__accepted-title'>Coverage of Expenses</dt>
-                        <dd className='speakers__accepted-description'>Please see our <Link href='/speakers/monetary-policy' className='page__link'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
+                        <dd className='speakers__accepted-description'>Please see our <Link href='/speakers/monetary-policy'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                     </dl>
                 </Content>
             </Block>
