@@ -2,6 +2,15 @@
 
 .speakers {
 
+    &__lastdate {
+        font-style: italic;
+    }
+
+    &__list {
+        list-style: circle;
+        margin-left: 2em;
+    }
+
     &__closed {
         color: fade(@yellow, 80%);
     }
@@ -27,6 +36,8 @@
     &__formats {
         color: @burgundy;
         font-size: 2rem;
+        width: 36px;
+        margin: 0 auto .5em auto;
     }
 
     &__accepted {
