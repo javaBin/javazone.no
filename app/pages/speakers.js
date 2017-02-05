@@ -5,9 +5,9 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { Link } from '../components/link';
 import Timeline from '../components/timeline';
 import Youtube from '../components/youtube';
-import partners1 from '../assets/partners_1.jpg';
-import partners2 from '../assets/partners_2.jpg';
-import partners3 from '../assets/partners_3.jpg';
+import speakers1 from '../assets/speakers_1.jpg';
+import speakers2 from '../assets/speakers_2.jpg';
+import speakers3 from '../assets/speakers_3.jpg';
 
 const Format = (props) => (
     <li className='presentation-formats__format format'>
@@ -75,7 +75,7 @@ const Speakers = () => (
                 </CContent>
             </CBlock>
 
-            <img className='partners__image' src={partners2} />
+            <img className='partners__image' src={speakers1} />
 
             <CBlock>
                 <CHeader>What is it like speaking at JavaZone?</CHeader>
@@ -93,7 +93,7 @@ const Speakers = () => (
                 </CContent>
             </CBlock>
 
-            <img className='partners__image' src={partners1} />
+            <img className='partners__image' src={speakers2} />
 
             <CBlock>
                 <div className='speakers__formats'>
@@ -169,7 +169,7 @@ const Speakers = () => (
                 </Content>
             </Block>
 
-            <img className='partners__image' src={partners3} />
+            <img className='partners__image' src={speakers3} />
 
             <CBlock>
                 <CHeader>Dates & Deadlines until JavaZone 2017</CHeader>
