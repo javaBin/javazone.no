@@ -20,7 +20,7 @@ const Tickets = () => (
         <Container>
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader>Early Bird JavaZone ticket</CHeader>
+                <CHeader><span className='green'>Early Bird JavaZone ticket</span></CHeader>
                 <CContent>
                     <div className="partners__mainprice">NOK 5.890,-</div>
                     <P>
@@ -37,7 +37,7 @@ const Tickets = () => (
             </CBlock>
 
             <Block>
-                <Header>Working for one of our partners?</Header>
+                <Header><span className='blue'>Working for one of our partners?</span></Header>
                 <Content>
                     <P>
                         All partners of JavaZone get reduced prices on tickets. Partners can buy tickets at reduced prices until July 1st. Read more about <Link href='/partners'>partnerships of JavaZone</Link> and contact us at <a href="mailto:partner@java.no">partner@java.no</a> to buy tickets.
@@ -46,7 +46,7 @@ const Tickets = () => (
             </Block>
 
             <Block>
-                <Header>Need more than one ticket?</Header>
+                <Header><span className='pink'>Need more than one ticket?</span></Header>
                 <Content>
                     <P>
                         Multiple tickets can be bought at the same time. You can then assign the tickets to the participants via email. Just use our regular webshop and specify the number of tickets you need when buying.
@@ -55,7 +55,7 @@ const Tickets = () => (
             </Block>
 
             <Block>
-                <Header>Need an invoice?</Header>
+                <Header><span className='orange'>Need an invoice?</span></Header>
                 <Content>
                     <P>
                         Paying by invoice can be accommodated if needed (contact <a href="mailto:javazone@java.no">javazone@java.no</a> with your order), but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though paying with credit card.
@@ -66,7 +66,7 @@ const Tickets = () => (
             <img className='partners__image' src={tickets1} />
 
             <CBlock>
-                <CHeader><span className='tickets__news'>New this year:</span>The javaBin membership included in the ticket</CHeader>
+                <CHeader><span className='tickets__news green'>New this year:</span>The javaBin membership included in the ticket</CHeader>
                 <CContent>
                     <P>
                         <br />
@@ -81,7 +81,7 @@ const Tickets = () => (
             <img className='partners__image' src={tickets2} />
 
             <CBlock>
-                <CHeader>Need more info about JavaZone?</CHeader>
+                <CHeader><span className='blue'>Need more info about JavaZone?</span></CHeader>
                 <CContent>
                     <P>
                         <br />

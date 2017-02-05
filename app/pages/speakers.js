@@ -51,7 +51,7 @@ const Speakers = () => (
 
         <Container>
             <CBlock>
-                <CHeader>About JavaZone</CHeader>
+                <CHeader><span className='green'>About JavaZone</span></CHeader>
                 <CContent>
                     <P>
                         <br />
@@ -78,7 +78,7 @@ const Speakers = () => (
             <img className='partners__image' src={speakers1} />
 
             <CBlock>
-                <CHeader>What is it like speaking at JavaZone?</CHeader>
+                <CHeader><span className='blue'>What is it like speaking at JavaZone?</span></CHeader>
                 <CContent>
                     <P>
                         <br />
@@ -120,7 +120,7 @@ const Speakers = () => (
             </Block>
 
             <Block>
-                <Header>Audience and Topics</Header>
+                <Header><span className='pink'>Audience and Topics</span></Header>
                 <Content>
                     <P>
                         JavaZone is a conference for developers and technical architects, with an emphasis on technical talks. However, we are open to talks about other areas, including methodology, project management, and other topics related to programming.
@@ -143,7 +143,7 @@ const Speakers = () => (
             </Block>
 
             <Block>
-                <Header>Get Some Inspiration</Header>
+                <Header><span className='orange'>Get Some Inspiration</span></Header>
                 <Content>
                     <dl className='speakers__inspiration'>
                         <dt className='speakers__inspiration-title'>Speakers workshop</dt>
@@ -155,7 +155,7 @@ const Speakers = () => (
             </Block>
 
             <Block>
-                <Header>Get Feedback</Header>
+                <Header><span className='green'>Get Feedback on your proposal</span></Header>
                 <Content>
                     <P>
                         This year, we are itching to try out a new feature in our submission system: Interactive feedback in the Call for Speakers phase. In short, early submissions may be considered as they arrive, and potentially receive feedback from the program committee. This includes feedback on points we find interesting, suggestions for changes and additions etc.
@@ -181,7 +181,7 @@ const Speakers = () => (
             </CBlock>
 
             <Block>
-                <Header>What’s in it for me?</Header>
+                <Header><span className='blue'>What’s in it for me?</span></Header>
                 <Content>
                     <dl className='speakers__accepted'>
                         <dt className='speakers__accepted-title'>Accepted presentations and workshops</dt>
@@ -195,7 +195,7 @@ const Speakers = () => (
             </Block>
 
             <Block>
-                <Header>Important principles</Header>
+                <Header><span className='green'>Important principles</span></Header>
                 <Content>
                     <P>
                         JavaZone is proud to be an independent and community-driven conference. It is organized by volunteers from javaBin (the Norwegian Java User Group) and is run as a non-profit organisation. This means that we have three important principles for selecting talks:
