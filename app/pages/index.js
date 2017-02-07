@@ -5,7 +5,7 @@ import { TransitionWord } from '../components/word-transition.js';
 import { Link } from '../components/link';
 
 const Index = () => (
-    <Page name='index' showLogo={true}>
+    <Page name='index'>
         <Container>
             <div className='index__content'>
                 <div className='index__text'>

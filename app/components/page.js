@@ -30,16 +30,16 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
         <div className={`menu__container menu__container--${visible ? 'visible' : 'hidden'}`}>
                 <ul className='menu__links'>
                     <li className='menu__links-item'>
-                        <Link href='/partners' className='menu__link menu__link--blue'>Partners</Link>
+                        <Link href='/partners' className='menu__link menu__link--blue' onClick={toggleMenu}>Partners</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/speakers' className='menu__link menu__link--pink'>Speakers</Link>
+                        <Link href='/speakers' className='menu__link menu__link--pink' onClick={toggleMenu}>Speakers</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/tickets' className='menu__link menu__link--orange'>Tickets</Link>
+                        <Link href='/tickets' className='menu__link menu__link--orange' onClick={toggleMenu}>Tickets</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/kids' className='menu__link menu__link--green'>Kids</Link>
+                        <Link href='/kids' className='menu__link menu__link--green' onClick={toggleMenu}>Kids</Link>
                     </li>
                 </ul>
         </div>
@@ -48,31 +48,21 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
 
 export const Page = (props) => {
     const pageClass = `page ${props.name}`;
-    const showLogo = typeof props.showLogo !== 'undefined' ? props.showLogo : true;
 
-    if (showLogo) {
-        return (
-            <div className={pageClass}>
-                <Menu />
-                <div className='page__logo-container'>
-                    <Link href='/'>
-                        <img src={logo} className='page__logo' />
-                    </Link>
-                </div>
-                {props.children}
-                <Container>
-                    <Footer></Footer>
-                </Container>
+    return (
+        <div className={pageClass}>
+            <Menu />
+            <div className='page__logo-container'>
+                <Link href='/'>
+                    <img src={logo} className='page__logo' />
+                </Link>
             </div>
-        );
-    } else {
-        return (
-            <div className={pageClass}>
-                <Menu />
-                {props.children}
-            </div>
-        );
-    }
+            {props.children}
+            <Container>
+                <Footer></Footer>
+            </Container>
+        </div>
+    );
 };
 
 export const Heading = (props) => {
