@@ -11,22 +11,25 @@
 
 .page {
     color: @white;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 
     &__logo-container {
         margin: 50px auto 0px auto;
         text-align: center;
+        z-index: 20;
     }
 
     &__logo {
         width: 100px;
 
         @media (min-width: @size-s) {
-            width: 150px;
+            width: 200px;
         }
 
         @media (min-width: @size-m) {
-            width: 200px;
+            width: 250px;
         }
     }
 
@@ -34,8 +37,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        font-family: 'Unica One', cursive;
-        font-size: 6rem;
+        font-family: @eurostile;
         justify-content: center;
         height: 150px;
         text-transform: uppercase;
@@ -95,11 +97,11 @@
         margin: 0;
 
         @media (min-width: @size-s) {
-            font-size: 5rem;
+            font-size: 3rem;
         }
 
         @media (min-width: @size-l) {
-            font-size: 7rem;
+            font-size: 5rem;
         }
     }
 
@@ -110,11 +112,11 @@
         margin-top: 0.5rem;
 
         @media (min-width: @size-s) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         @media (min-width: @size-l) {
-            font-size: 4rem;
+            font-size: 3rem;
         }
 
         &--no-margin {

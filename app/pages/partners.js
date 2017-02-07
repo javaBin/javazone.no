@@ -47,7 +47,7 @@ const Partners = () => (
         </Container>
         <Container>
             <Block>
-                <Header>JavaZone 2017:<br />bigger and better than ever</Header>
+                <Header><span className="green">JavaZone 2017:<br />bigger and better than ever</span></Header>
                 <Content>
                     <P>
                         JavaZone started out in 2002 as a small conference for Java developers, but has since then evolved
@@ -75,7 +75,7 @@ const Partners = () => (
             </CBlock>
 
             <Block>
-                <Header>Our philosophy:<br />partners, not sponsors</Header>
+                <Header><span className="orange">Our philosophy:<br />partners, not sponsors</span></Header>
 
                 <Content>
                     <P>
@@ -92,7 +92,7 @@ const Partners = () => (
             <img className='partners__image' src={partners2} />
 
             <Block>
-                <Header>The Expo Area</Header>
+                <Header><span className="blue">The Expo Area</span></Header>
                 <Content>
                     <P>
                         All our partner stands are located in the Expo Area, which is centrally located in the venue.
@@ -122,7 +122,7 @@ const Partners = () => (
             </Container>
 
             <Block>
-                <Header>Partner Options</Header>
+                <Header><span className="pink">Partner Options</span></Header>
                 <Content>
                     <P>
                         Even though all partners are considered equal, there are
@@ -178,7 +178,7 @@ const Partners = () => (
             <img className='partners__image' src={partners1} />
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader>Partnership Prices</CHeader>
+                <CHeader><span className="green">Partnership Prices</span></CHeader>
                 <CContent>
                     <div className="partners__mainprice">NOK 67.000,-</div>
                     <P>
@@ -240,7 +240,7 @@ const Partners = () => (
             <img className='partners__image' src={partners3} />
 
             <Block>
-                <Header>Contact us</Header>
+                <Header><span className="blue">Contact us</span></Header>
                 <Content>
                     <P>
                         JavaZone 2017 will be held in September, but please get in

@@ -1,0 +1,186 @@
+@import '../variables';
+
+.menu {
+    &__toggle {
+        background: @black;
+        border: 0;
+        cursor: pointer;
+        height: 40px;
+        outline: 0;
+        padding: 0;
+        position: fixed;
+        text-align: center;
+        top: 30px;
+        right: 25px;
+        width: 50px;
+        z-index: 30;
+
+        &:hover {
+            .menu__icon {
+                transform: skew(20deg);
+            }
+
+            .menu__icon:before {
+                left: 2px;
+                transform: skew(-40deg);
+            }
+
+
+            .menu__icon:after {
+                left: -7px;
+                transform: skew(-40deg);
+            }
+        }
+    }
+
+    &__icon {
+        border: 2px solid @blue;
+        display: inline-block;
+        height: 7px;
+        transition: transform .2s, left .2s;
+        transform: skew(-20deg);
+        width: 40px;
+
+        &:before {
+            background: transparent;
+            border: 2px solid @blue;
+            content: '';
+            display: block;
+            height: 7px;
+            left: -7px;
+            padding: 0;
+            position: relative;
+            top: -13px;
+            transition: transform .2s, left .2s;
+            transform: skew(40deg);
+            width: 40px;
+        }
+
+        &:after {
+            background: transparent;
+            border: 2px solid @blue;
+            content: '';
+            display: block;
+            height: 7px;
+            left: 2px;
+            padding: 0;
+            position: relative;
+            top: 2px;
+            transition: transform .2s, left .2s;
+            transform: skew(40deg);
+            width: 40px;
+        }
+    }
+
+    &__container {
+        align-items: center;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        transition: opacity .5s cubic-bezier(1, 0, 0, 1) .5s;
+        transform: translateY(-100%);
+        width: 100%;
+        z-index: 20;
+
+        &--visible {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+
+    &__top {
+        display: block;
+        background: lighten(@black, 5%);
+        top: 0;
+        height: 50%;
+        position: fixed;
+        transition: transform .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+        transform: translateY(-100%);
+        width: 100%;
+        z-index: 10;
+
+        &--visible {
+            transform: translateY(0);
+        }
+    }
+
+    &__bottom {
+        display: block;
+        background: lighten(@black, 5%);
+        bottom: 0;
+        height: 50%;
+        position: fixed;
+        transition: transform .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+        transform: translateY(100%);
+        width: 100%;
+        z-index: 10;
+
+        &--visible {
+            transform: translateY(0);
+        }
+    }
+
+    &__links {
+        font-family: @eurostile;
+        list-style: none;
+        padding: 0;
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    &__links-item {
+        margin: 5px 30px;
+
+        @media (min-width: @size-s) {
+            margin: 10px 30px;
+        }
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @media (min-width: @size-s) {
+            font-size: 2.5rem;
+        }
+
+        &:after {
+            border: 2px solid white;
+            content: '';
+            display: block;
+            left: -25px;
+            height: 22px;
+            position: absolute;
+            top: 2px;
+            transform: skew(-20deg);
+            width: 7px;
+
+            @media (min-width: @size-s) {
+                top: 5px;
+                height: 33px;
+            }
+        }
+
+        &--blue:after {
+            border-color: @blue;
+        }
+
+        &--pink:after {
+            border-color: @pink;
+        }
+
+        &--orange:after {
+            border-color: @orange;
+        }
+
+        &--green:after {
+            border-color: @green;
+        }
+    }
+}

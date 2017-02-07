@@ -7,13 +7,13 @@ import {Dl, Dt, Dd} from '../components/definition-list';
 const TipsAndTricks = () => (
     <Page name='monetary-policy'>
         <Heading>
-            <LargeHeading>General CfS tips</LargeHeading>
-            <SmallHeading>Make that abstract shine!</SmallHeading>
+            <LargeHeading>Tips & Tricks</LargeHeading>
+            <SmallHeading>Make that abstract shine</SmallHeading>
         </Heading>
 
         <Container>
             <Block>
-                <Header>Tips</Header>
+                <Header><span className="green">Increase the chance of your talk being accepted</span></Header>
                 <Content>
                     <P>
                         There is generally a very high correlation between how much
@@ -29,7 +29,7 @@ const TipsAndTricks = () => (
             </Block>
 
             <Block>
-                <Header>General advice</Header>
+                <Header><span className="blue">Things to think about when writing your abstract</span></Header>
                 <Content>
                     <Dl>
                         <Dt>Write a good title</Dt>
@@ -76,7 +76,7 @@ const TipsAndTricks = () => (
                             or 'TBD' in the required fields. This is fine for the
                             initial submission, but please make sure the required
                             information is filled out properly by the submission
-                            deaDline.
+                            deadline.
                         </Dd>
                         <Dt>Ask someone to review your proposal</Dt>
                         <Dd>
@@ -116,8 +116,13 @@ const TipsAndTricks = () => (
             </Block>
 
             <Block>
-                <Header>Why was my talk rejected?</Header>
+                <Header><span className="pink">Why was my talk rejected?</span></Header>
                 <Content>
+                    <P>
+                        Even though we of course cross our finger for your talk to be accepted, the fact is that some talks are also rejected.
+                        Read through these tips to understand why. Even better, if you are reading this before the Call for Speakers deadline, 
+                        you can go through your proposal and make sure you do your best to awoid some of these pitfalls.
+                    </P>
                     <Dl>
                         <Dt>Not Enough information</Dt>
                         <Dd>
@@ -134,7 +139,7 @@ const TipsAndTricks = () => (
                         </Dd>
                         <Dt>You want to talk about more than we think you'll have time to cover</Dt>
                         <Dd>
-                            0-minute lightning talk proposals that appear to
+                            10-minute lightning talk proposals that appear to
                             require double that time will be discounted. The
                             same applies for proposals that try to cover
                             everything possible instead of focusing on a specific

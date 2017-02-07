@@ -56,7 +56,7 @@ const data = [
         month: 'Aug',
         events: [{
             title: 'Presentation workshop',
-            date: 'August',
+            date: 'August 22nd',
             location: '15px',
             align: 'right'
         }]

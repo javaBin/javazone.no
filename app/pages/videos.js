@@ -1,6 +1,7 @@
 import React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
+import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch, P } from '../components/page';
 import Youtube from '../components/youtube';
+import { Link } from '../components/link';
 
 const Videos = () => (
     <Page name='videos'>
@@ -48,8 +49,7 @@ const Videos = () => (
             <Pitch>
                 JavaZone will return to Oslo Spektrum September 13th-14th 2017.<br/>
                 Join our big 2^4 anniversary and see all the speakers live!<br/>
-                Ticket sales & Call for Speakers opens February 2017.<br/>
-                See you soon!
+                <Link href="/tickets">Buy your ticket now</Link>
             </Pitch>
             <div className="videos__info">
                 <h3 className="videos__header">Hungry for more? We have 1044 videos ready for you!</h3>
