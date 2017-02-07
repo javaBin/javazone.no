@@ -166,6 +166,11 @@ const Speakers = () => (
                     <P>
                         Bottom line: The earlier you submit, the more likely you are to be noticed, and to receive considered and helpful feedback. Avoid drowning in the end-of-Call for Speakers tsunami! In addition, submissions received by March 27 will be in the draw for a special treat!
                     </P>
+                    <P>
+                        <Link href='/speakers/tips' className='button button--transparent'>
+                            Some tips and tricks about your submission
+                        </Link>
+                    </P>
                 </Content>
             </Block>
 
