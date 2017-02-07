@@ -61,7 +61,7 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Påmeldingen åpner sondag 19. mars kl. 12.00';
+        return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
     }
 
     switch (workshop.status) {
@@ -70,7 +70,7 @@ function workshopStatus(workshop) {
     case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
     case 'CLOSED': return 'Påmelding stengt';
-    default: return 'Påmeldingen åpner sondag 19. mars kl. 12.00';
+    default: return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
     }
 }
 
@@ -186,7 +186,7 @@ const Kids = ({workshops}) => {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner sonday 19. mars kl. 12.00.
+                            Påmeldingen åpner sonday 19. februar kl. 12.00.
                         </P>
                     </Content>
                 </Block>
