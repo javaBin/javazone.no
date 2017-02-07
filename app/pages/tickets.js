@@ -12,7 +12,7 @@ const Tickets = () => (
     <Page name='tickets'>
         <Heading>
             <LargeHeading>JavaZone 2017</LargeHeading>
-            <SmallHeading>Get your tickets today</SmallHeading>
+            <SmallHeading>September 13-14th</SmallHeading>
         </Heading>
         <Container>
             <Youtube id='OKZcwxcw85o'></Youtube>
@@ -31,7 +31,7 @@ const Tickets = () => (
                         <span className="partners__vat">prices ex VAT</span>
                     </P>
                     <P>
-                        <Link className='button button--transparent' href='https://www.eventbrite.com/e/javazone-2017-tickets-29971845597'>Buy your JavaZone 2017 ticket now</Link>
+                        <a className='button button--transparent' href='https://www.eventbrite.com/e/javazone-2017-tickets-29971845597'>Buy your JavaZone 2017 ticket now</a>
                     </P>
                 </CContent>
             </CBlock>
