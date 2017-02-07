@@ -1,5 +1,5 @@
 import className from 'classname';
-import logo from '../assets/logo-white-wireframe.svg';
+import logo from '../assets/neon-logo.png';
 import { Link } from './link';
 import Footer from './footer';
 import { connect } from 'react-redux';
