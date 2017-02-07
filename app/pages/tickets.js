@@ -58,7 +58,20 @@ const Tickets = () => (
                 <Header><span className='orange'>Need an invoice?</span></Header>
                 <Content>
                     <P>
-                        Paying by invoice can be accommodated if needed (contact <a href="mailto:javazone@java.no">javazone@java.no</a> with your order), but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though paying with credit card.
+                        Paying by invoice can be accommodated if needed, but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even though paying with credit card.
+                        <br />
+                        Request your invoice here: <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">Invoice request form</a>.
+                    </P>
+                </Content>
+            </Block>
+
+            <Block>
+                <Header><span className='green'>Refund policy</span></Header>
+                <Content>
+                    <P>
+                        If you need a refund on your ticket, send an email with your request to <a href="mailto:javazone@java.no">javazone@java.no</a>.
+                        We'll refund the full ticket price minus a small processing fee (to cover credit card fees or invoice fees) for requests submitted before August 1st.
+                        Should you need a refund after that date, please ask us as we might be sold out and could possibly make an exception for a small number of tickets.
                     </P>
                 </Content>
             </Block>
