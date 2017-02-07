@@ -61,7 +61,7 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Påmeldingen åpner fredag 5. august kl. 12.00';
+        return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
     }
 
     switch (workshop.status) {
@@ -70,7 +70,7 @@ function workshopStatus(workshop) {
     case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
     case 'CLOSED': return 'Påmelding stengt';
-    default: return 'Påmeldingen åpner fredag 5. august kl. 12.00';
+    default: return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
     }
 }
 
@@ -130,7 +130,7 @@ const Kids = ({workshops}) => {
                         <P>
                             JavaZone inviterer alle deltakere på JavaZone
                             til å ta med seg sine barn på Teknologihuset
-                            søndag 4. september for å gi dem en smakebit på
+                            søndag 19. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 4 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
                             barna og de største ungdommene.
@@ -153,21 +153,17 @@ const Kids = ({workshops}) => {
                         <SubHeader>Tid & Sted</SubHeader>
                         <P>
                             Arrangementet finner sted på Teknologihuset
-                            søndag 4. september fra klokken 12.00 til
+                            søndag 19. mars fra klokken 12.00 til
                             15.00. Vi serverer enkel mat underveis. Det
                             er viktig at du som forelder også setter av
                             tid til å være til stede hele perioden. Vi
-                            lager en egen "foreldresone" med kaffe og
-                            kjører også en liten presentasjon fra de
-                            som står bak Lær Kidsa Koding, slik at du
-                            får litt mer informasjon om fremtidige
-                            muligheter.
+                            lager en egen "foreldresone" med kaffe.
                         </P>
                         <SubHeader>Påmelding</SubHeader>
                         <P>
                             Vi har et begrenset antall plasser derfor er det viktig at
                             du melder dere på arrangementet.
-                            Påmeldingen åpner fredag 5. august kl. 12.00.
+                            Påmeldingen åpner sonday 19. februar kl. 12.00.
                         </P>
                         <SubHeader>Forberedelser</SubHeader>
                         <P>
@@ -190,7 +186,7 @@ const Kids = ({workshops}) => {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner fredag 5. august kl. 12.00.
+                            Påmeldingen åpner sonday 19. februar kl. 12.00.
                         </P>
                     </Content>
                 </Block>
@@ -257,7 +253,7 @@ const Kids = ({workshops}) => {
 
                 <CBlock>
                     <CHeader>
-                        Vi sees på Teknologihuset søndag 4. september!
+                        Vi sees på Teknologihuset søndag 19. mars!
                     </CHeader>
                     <CContent>
                         <P>
