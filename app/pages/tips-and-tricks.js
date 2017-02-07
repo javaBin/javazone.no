@@ -120,7 +120,7 @@ const TipsAndTricks = () => (
                 <Content>
                     <P>
                         Even though we of course cross our finger for your talk to be accepted, the fact is that some talks are also rejected.
-                        Read through these tips to understand why. Even better, if you are reading this before the Call for Speakers deadline, 
+                        Read through these tips to understand why. Even better, if you are reading this before the Call for Speakers deadline,
                         you can go through your proposal and make sure you do your best to awoid some of these pitfalls.
                     </P>
                     <Dl>
