@@ -130,15 +130,14 @@ const Speakers = () => (
                     </P>
                     <P>
                         We are always interested in Java technology and its applications, current trends in programming, and experience reports. Topics we would like to hear more about this year include:
-                        <br /><br />
-                        <ul className='speakers__list'>
-                            <li>Front-end patterns and architectures.</li>
-                            <li>Practical functional programming.</li>
-                            <li>Machine learning, AI, deep learning.</li>
-                            <li>Hacking, security, cryptography, blockchains.</li>
-                            <li>...and, of course, your killer topic.</li>
-                        </ul>
                     </P>
+                    <ul className='speakers__list'>
+                        <li>Front-end patterns and architectures.</li>
+                        <li>Practical functional programming.</li>
+                        <li>Machine learning, AI, deep learning.</li>
+                        <li>Hacking, security, cryptography, blockchains.</li>
+                        <li>...and, of course, your killer topic.</li>
+                    </ul>
                 </Content>
             </Block>
 
