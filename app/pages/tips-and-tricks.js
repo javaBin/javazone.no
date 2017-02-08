@@ -185,7 +185,8 @@ const TipsAndTricks = () => (
                             could be accepted will end up in the rejection
                             pile instead. In 2016, for example, there were
                             many good proposals in the "how we do devops in
-                            the cloud" which, unfortunately, had to be rejected.
+                            the cloud" category which, unfortunately, had to
+                            be rejected.
                         </Dd>
                     </Dl>
                 </Content>
