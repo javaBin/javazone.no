@@ -14,6 +14,7 @@ function mapDispatchToProps(dispatch) {
             }
 
             window.history.pushState(null, null, url);
+            window.scroll(0, 0);
             ev.preventDefault();
             dispatch({
                 type: 'ROUTER_NAVIGATE',
