@@ -1,5 +1,5 @@
 import className from 'classname';
-import logo from '../assets/neon-logo.png';
+import logo from '../assets/neon-logo2.svg';
 import { Link } from './link';
 import Footer from './footer';
 import { connect } from 'react-redux';
