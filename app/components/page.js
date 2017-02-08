@@ -58,7 +58,7 @@ export const Page = (props) => {
                 </Link>
             </div>
             {props.children}
-            <Container>
+            <Container className='footer'>
                 <Footer></Footer>
             </Container>
         </div>
@@ -97,8 +97,11 @@ export const PageBody = (props) => (
     </div>
 );
 
-export const Container = (props) => (
-    <div className='page__container'>
-        {props.children}
-    </div>
-);
+export const Container = (props) => {
+    const c = className('page__container', props.className);
+    return (
+        <div className={c}>
+            {props.children}
+        </div>
+    );
+};
