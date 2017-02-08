@@ -107,7 +107,7 @@ export default {
         sponsors: ['acando', 'accenture', 'capgemini', 'finn'],
         program: [
             {
-                time: '1230',
+                time: '1200',
                 title: 'Doors open'
             },
             {
