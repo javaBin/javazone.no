@@ -72,7 +72,7 @@ const Tickets = () => (
                         If you need a refund on your ticket, send an email with your request to <a href="mailto:javazone@java.no">javazone@java.no</a>.
                         We'll refund the full ticket price minus a small processing fee (to cover credit card fees or invoice fees) for requests submitted before August 1st.
                         Should you need a refund after that date, please ask us as we might be sold out and could possibly make an exception for a small number of tickets. 
-                        For tickets bought in bulk with special discounts (e.g partner tickets), a maximum of 5 tickets can be refunded under this policy.
+                        For tickets bought in bulk (applies to both partner tickets and large regular orders), a maximum of 5 tickets can be refunded under this policy.
                     </P>
                 </Content>
             </Block>
