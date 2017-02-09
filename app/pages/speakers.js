@@ -55,10 +55,10 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <br />
-                        JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of technical talks and workshops in an informal atmosphere with an expected attendance of up to 3000 developers.
+                        JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of hands on workshops and talks in an informal atmosphere.  
                     </P>
                     <P>
-                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 talks covering a wide range of topics. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
+                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of lightning talks and presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 sessions. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
                     </P>
                 </CContent>
             </CBlock>
@@ -70,7 +70,7 @@ const Speakers = () => (
                         </a>
                     </P>
                     <P>
-                        <span className='speakers__lastdate'>The Call for Speakers are open until April 24th 2017</span>
+                        <span className='speakers__lastdate'>The Call for Speakers is open until April 24th 2017</span>
                     </P>
                 </CContent>
             </CBlock>
@@ -82,7 +82,7 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <br />
-                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – more than 1000 videos from previous years talks are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web page</a>.
+                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – more than 1000 videos from previous years talks are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web pages</a>.
                     </P>
                     <P>
                         We can brag as much as we want, but JavaZone would be nothing without all the great speakers! That's why we need your help to make sure that JavaZone 2017 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop by April 24th 2017.
@@ -160,7 +160,7 @@ const Speakers = () => (
                         This year, we are itching to try out a new feature in our submission system: Interactive feedback in the Call for Speakers phase. In short, early submissions may be considered as they arrive, and potentially receive feedback from the program committee. This includes feedback on points we find interesting, suggestions for changes and additions etc.
                     </P>
                     <P>
-                        We also have a selfish motive. At JavaZone, we receive a huge number of submissions every year, and the workload faced by the program committee at the end of the Call for Speakers phase can be overwhelming. By encouraging early submissions, we hope to get ahead of the game this year.
+                        We also have a selfish motive. At JavaZone, we receive a huge number of submissions every year, and the workload faced by the program committee at the end of the Call for Speakers phase can be overwhelming. By encouraging early submissions, we hope to get ahead of the game this year.  This will also give us more time to consider each and every one of your submissions!
                     </P>
                     <P>
                         Bottom line: The earlier you submit, the more likely you are to be noticed, and to receive considered and helpful feedback. Avoid drowning in the end-of-Call for Speakers tsunami! In addition, submissions received by March 27 will be in the draw for a special treat!
@@ -176,7 +176,7 @@ const Speakers = () => (
             <img className='partners__image' src={speakers3} />
 
             <CBlock>
-                <CHeader>Dates & Deadlines until JavaZone 2017</CHeader>
+                <CHeader>Dates & Deadlines for JavaZone 2017</CHeader>
                 <P>
                 </P>
                 <CContent>
