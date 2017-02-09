@@ -55,7 +55,7 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <br />
-                        JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of hands on workshops and talks in an informal atmosphere.  
+                        JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of hands on workshops and talks in an informal atmosphere.
                     </P>
                     <P>
                         JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of lightning talks and presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 sessions. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.

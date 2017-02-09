@@ -22,7 +22,7 @@ const TipsAndTricks = () => (
                         an extremely cool theme, entertaining title, and an
                         experienced speaker may be excluded if the description is
                         lacking. We have gathered some tips that should be considered
-                        when writing a JavaZone proposal, and a few reasons why 
+                        when writing a JavaZone proposal, and a few reasons why
                         proposals may be rejected.
                     </P>
                 </Content>
@@ -158,7 +158,7 @@ const TipsAndTricks = () => (
                             of just one or more of the committee members, your
                             proposal is likely to be thumbs-upped to the next
                             phase. If not, it tends to drop out of the race
-                            early. It will help your chances to describe accurately 
+                            early. It will help your chances to describe accurately
                             and concisely what you want to talk about, and why
                             people should come and listen to you.
                         </Dd>
@@ -179,11 +179,11 @@ const TipsAndTricks = () => (
                         </Dd>
                         <Dt>You were unlucky</Dt>
                         <Dd>
-                            We often receive multiple good proposals covering 
-                            exactly the same theme. The program committee then 
+                            We often receive multiple good proposals covering
+                            exactly the same theme. The program committee then
                             has to decide between these multiple excellent submissions.
-                            In 2016 we received many great proposals covering 
-                            "how we do devops in the cloud". Limited space in the 
+                            In 2016 we received many great proposals covering
+                            "how we do devops in the cloud". Limited space in the
                             program meant that many of these ended up being
                             rejected.
                         </Dd>
