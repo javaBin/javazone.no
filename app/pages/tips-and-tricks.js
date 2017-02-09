@@ -22,8 +22,8 @@ const TipsAndTricks = () => (
                         an extremely cool theme, entertaining title, and an
                         experienced speaker may be excluded if the description is
                         lacking. We have gathered some tips that should be considered
-                        when writing a JavaZone proposal, and a few reasons why your
-                        proposal may not have been accepted.
+                        when writing a JavaZone proposal, and a few reasons why 
+                        proposals may be rejected.
                     </P>
                 </Content>
             </Block>
@@ -32,7 +32,7 @@ const TipsAndTricks = () => (
                 <Header><span className="blue">Things to think about when writing your abstract</span></Header>
                 <Content>
                     <Dl>
-                        <Dt>Write a good title</Dt>
+                        <Dt>Create a good title</Dt>
                         <Dd>
                             The title is the first thing people will see. A poorly
                             worded title may be the only thing many will see of
@@ -47,11 +47,11 @@ const TipsAndTricks = () => (
                             enough to convince people to come to your presentation
                             then the proposal won't be accepted.
                         </Dd>
-                        <Dt>Write a detailed outline</Dt>
+                        <Dt>Provide a detailed outline</Dt>
                         <Dd>
                             The outline is your chance to pitch the proposal to
                             the program committee. This section will not be
-                            publicised, but if your outline is thin or just a
+                            published, but if your outline is thin or just a
                             copy of your abstract then you're not selling yourself
                             well.
                         </Dd>
@@ -62,7 +62,7 @@ const TipsAndTricks = () => (
                             proposal outline should explain how you will cover
                             everything in a clear and structured manner.
                         </Dd>
-                        <Dt>Include supporting material</Dt>
+                        <Dt>Include supporting materials</Dt>
                         <Dd>
                             If you've held the talk before then please include
                             links to any supporting material that you can show
@@ -91,7 +91,7 @@ const TipsAndTricks = () => (
                             it also increases the chances of something going
                             wrong. If the program committee doesn't get the
                             feeling that you have a solid plan for the demonstration
-                            then it will hurt your chances to be accepted.
+                            then it might hurt your chances to be accepted.
                         </Dd>
                         <Dt>Send in multiple proposals</Dt>
                         <Dd>
@@ -103,7 +103,7 @@ const TipsAndTricks = () => (
                         <Dd>
                             The program committee reviews hundrends of proposals
                             each year. A few well-written proposals are much more
-                            valuable than many half-prepared ideas.
+                            valuable than a bucket full of half-prepared ideas.
                         </Dd>
                         <Dt>Don't shout</Dt>
                         <Dd>
@@ -119,9 +119,9 @@ const TipsAndTricks = () => (
                 <Header><span className="pink">Why was my talk rejected?</span></Header>
                 <Content>
                     <P>
-                        Even though we of course cross our finger for your talk to be accepted, the fact is that some talks are also rejected.
-                        Read through these tips to understand why. Even better, if you are reading this before the Call for Speakers deadline,
-                        you can go through your proposal and make sure you do your best to awoid some of these pitfalls.
+                        Even though we are rooting for your talk to be accepted, the fact is that some talks must be rejected.
+                        Read through these tips to understand why this might happen. Even better, if you are reading this before the Call for Speakers deadline,
+                        you can go through your proposal and make sure you do your best to awoid these common pitfalls.
                     </P>
                     <Dl>
                         <Dt>Not Enough information</Dt>
@@ -158,8 +158,8 @@ const TipsAndTricks = () => (
                             of just one or more of the committee members, your
                             proposal is likely to be thumbs-upped to the next
                             phase. If not, it tends to drop out of the race
-                            early. It helps to describe accurately and
-                            concisely what you want to talk about, and why
+                            early. It will help your chances to describe accurately 
+                            and concisely what you want to talk about, and why
                             people should come and listen to you.
                         </Dd>
                         <Dt>The theme did not fit in with what we want to include in the program this year</Dt>
@@ -179,14 +179,13 @@ const TipsAndTricks = () => (
                         </Dd>
                         <Dt>You were unlucky</Dt>
                         <Dd>
-                            We often receive multiple good proposals regarding
-                            the same theme. The program committee has to
-                            shortlist these, and occasionally a proposal that
-                            could be accepted will end up in the rejection
-                            pile instead. In 2016, for example, there were
-                            many good proposals in the "how we do devops in
-                            the cloud" category which, unfortunately, had to
-                            be rejected.
+                            We often receive multiple good proposals covering 
+                            exactly the same theme. The program committee then 
+                            has to decide between these multiple excellent submissions.
+                            In 2016 we received many great proposals covering 
+                            "how we do devops in the cloud". Limited space in the 
+                            program meant that many of these ended up being
+                            rejected.
                         </Dd>
                     </Dl>
                 </Content>
