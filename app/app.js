@@ -10,6 +10,6 @@ import routes from './routes';
 import pageview from './analytics';
 import Root from './root';
 
-const container = document.querySelector('#app');
+const container = document.querySelector('#app'); 
 
 render(<Provider store={store}><Root></Root></Provider>, container);
