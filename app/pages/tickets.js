@@ -71,7 +71,7 @@ const Tickets = () => (
                     <P>
                         If you need a refund on your ticket, send an email with your request to <a href="mailto:javazone@java.no">javazone@java.no</a>.
                         We'll refund the full ticket price minus a small processing fee (to cover credit card fees or invoice fees) for requests submitted before August 1st.
-                        Refund requests after August 1st will only be provided if javaBin are able to resell the tickets. 
+                        Refund requests received after August 1st will only be accepted if javaBin are able to resell the tickets. 
                         For tickets bought in bulk (applies to both partner tickets and large regular orders), a maximum of 5 tickets can be refunded under this policy.
                     </P>
                 </Content>
