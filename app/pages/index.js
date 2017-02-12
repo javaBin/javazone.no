@@ -1,33 +1,32 @@
 import React from 'react';
 import logo from '../assets/logo-white-wireframe.svg';
-import { Page } from '../components/page';
+import { Page, Container } from '../components/page';
 import { TransitionWord } from '../components/word-transition.js';
 import { Link } from '../components/link';
 
-const twoSettings = {minWrongChars: 20, maxWrongChars: 25, delay: 900};
-const fourSettings = {minWrongChars: 25, maxWrongChars: 35, delay: 900};
-const textSettings = {minWrongChars: 10, maxWrongChars: 20, delay: 900};
-
 const Index = () => (
-    <Page name='index' showLogo={false}>
-        <div className='index__content'>
-            <img className='index__logo' src={logo} />
-            <div className='index__text'>
-                <TransitionWord settings={textSettings}>September 13th-14th 2017</TransitionWord>
-                <TransitionWord settings={textSettings}>Oslo / Norway / World</TransitionWord>
-                <TransitionWord settings={textSettings}>Save the date</TransitionWord>
+    <Page name='index'>
+        <Container>
+            <div className='index__content'>
+                <div className='index__text'>
+                    Welcome to<br />JavaZone 2017
+                </div>
+                <ul className='index__links'>
+                    <li className='index__links-item'>
+                        <Link href='/tickets' className='index__link index__link--blue'>Tickets</Link>
+                    </li>
+                    <li className='index__links-item'>
+                        <Link href='/speakers' className='index__link index__link--pink'>Speakers</Link>
+                    </li>
+                    <li className='index__links-item'>
+                        <Link href='/partners' className='index__link index__link--orange'>Partners</Link>
+                    </li>
+                    <li className='index__links-item'>
+                        <Link href='/videos' className='index__link index__link--green'>Videos</Link>
+                    </li>
+                </ul>
             </div>
-            <p className='index__teasertext'>While you wait:</p>
-            <ul className='index__links'>
-                <li className='index__link'>
-                    <Link href='/videos' className='button button--transparent'>One thousand videos awaits you!</Link>
-                </li>
-                <li className='index__link'>
-                    <Link href='/konkurranse' className='button button--transparent'>Lag neste JavaZone-video (norwegian)</Link>
-                </li>
-            </ul>
-            <p className='index__partnerlink'>Interested in <Link href='/partners'>being a partner</Link> of JavaZone?</p>
-        </div>
+        </Container>
     </Page>
 );
 

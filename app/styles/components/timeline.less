@@ -2,6 +2,7 @@
 @import '../variables';
 
 @border-color: lighten(@green--light, 7%);
+@color: @blue;
 
 .timeline {
     position: relative;
@@ -24,25 +25,25 @@
     }
 
     &__month {
-        border: 1px solid @border-color;
+        border: 1px solid @color;
         border-bottom: 0;
         color: @green--dark;
         margin: 0 auto;
-        padding: 40px 10px;
+        padding: 40px 7px;
         position: relative;
         width: 30px;
 
         &:last-child {
-            border-bottom: 1px solid @border-color;
+            border-bottom: 1px solid @color;
         }
 
         &:nth-child(odd) {
-            background: @border-color;
-            color: @white;
+            background: @color;
+            color: @black;
         }
 
         &:nth-child(even) {
-            font-weight: 600;
+            color: @color;
         }
     }
 
@@ -52,17 +53,17 @@
     }
 
     &__month-letter {
-        width: 10px;
+        width: 14px;
     }
 
     &__event {
-        border-bottom: 1px solid @border-color;
+        border-bottom: 1px solid @color;
         position: absolute;
         padding-bottom: 5px;
         width: 130px;
 
         &:after {
-            background: @border-color;
+            background: @color;
             border-radius: 100%;
             display: block;
             content: '';
@@ -99,7 +100,7 @@
         }
 
         &-title {
-            color: @burgundy;
+            color: @white;
             font-size: .8rem;
             font-weight: 400;
             text-transform: uppercase;
@@ -110,7 +111,7 @@
         }
 
         &-date {
-            color: @green--light;
+            color: @blue;
             font-size: .8rem;
 
             @media (min-width: @size-s) {

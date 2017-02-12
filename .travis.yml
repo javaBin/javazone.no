@@ -10,6 +10,8 @@ script:
 - npm run build
 after_success:
 - bash ./tasks/deploy.sh
+after_failure:
+- bash ./tasks/failed.sh
 env:
   global:
   - GH_USER: javaBin

@@ -47,7 +47,7 @@ const Partners = () => (
         </Container>
         <Container>
             <Block>
-                <Header>JavaZone 2017:<br />bigger and better than ever</Header>
+                <Header><span className="green">JavaZone 2017:<br />bigger and better than ever</span></Header>
                 <Content>
                     <P>
                         JavaZone started out in 2002 as a small conference for Java developers, but has since then evolved
@@ -75,7 +75,7 @@ const Partners = () => (
             </CBlock>
 
             <Block>
-                <Header>Our philosophy:<br />partners, not sponsors</Header>
+                <Header><span className="orange">Our philosophy:<br />partners, not sponsors</span></Header>
 
                 <Content>
                     <P>
@@ -92,7 +92,7 @@ const Partners = () => (
             <img className='partners__image' src={partners2} />
 
             <Block>
-                <Header>The Expo Area</Header>
+                <Header><span className="blue">The Expo Area</span></Header>
                 <Content>
                     <P>
                         All our partner stands are located in the Expo Area, which is centrally located in the venue.
@@ -122,7 +122,7 @@ const Partners = () => (
             </Container>
 
             <Block>
-                <Header>Partner Options</Header>
+                <Header><span className="pink">Partner Options</span></Header>
                 <Content>
                     <P>
                         Even though all partners are considered equal, there are
@@ -153,7 +153,7 @@ const Partners = () => (
 
                     <dl className='definition-list'>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option'>Double Stand Space</span> (One left!)
+                            <span className='partners__stand-option partners__stand-option--sold-out'>Double Stand Space</span> (SOLD OUT!)
                         </dt>
                         <dd className='definition-list__data'>
                             Double your stand space and get 12 square meters instead of 6. This gives you a bigger wall for your message, and more floor space for your activities.
@@ -178,9 +178,10 @@ const Partners = () => (
             <img className='partners__image' src={partners1} />
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader>Partnership Prices</CHeader>
+                <CHeader><span className="green">Partnership Prices</span></CHeader>
                 <CContent>
-                    <div className="partners__mainprice">NOK 67.000,-</div>
+                    <div className="partners__mainprice partners__stand-option--sold-out">NOK 67.000,-</div>
+                    <em className="pink">All 45 partnerships for JavaZone 2017 are sold out</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
@@ -191,7 +192,7 @@ const Partners = () => (
                         <div className='partners__stand-prices'>
                             <table className='table'>
                                 <tbody>
-                                    <tr className='table__row partners__stand-option'>
+                                    <tr className='table__row partners__stand-option partners__stand-option--sold-out'>
                                         <td className='table__data'>Extra Stand Space</td>
                                         <td className='table__data'>NOK 30.000,-</td>
                                     </tr>
@@ -216,19 +217,19 @@ const Partners = () => (
                                 <tbody>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (0 - 30)</td>
-                                        <td className='table__data'>TBA</td>
+                                        <td className='table__data'>NOK 5.490,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (31 - 50)</td>
-                                        <td className='table__data'>TBA</td>
+                                        <td className='table__data'>NOK 5.290,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (51 - ∞)</td>
-                                        <td className='table__data'>TBA</td>
+                                        <td className='table__data'>NOK 5.090,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (Late-Bird)</td>
-                                        <td className='table__data'>TBA</td>
+                                        <td className='table__data'>NOK 5.990,-</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -240,25 +241,12 @@ const Partners = () => (
             <img className='partners__image' src={partners3} />
 
             <Block>
-                <Header>Contact us</Header>
+                <Header><span className="blue">Contact us</span></Header>
                 <Content>
                     <P>
-                        JavaZone 2017 will be held in September, but please get in
-                        touch to discuss your partnership as soon as possible! Even though all stand
-                        positions at JavaZone give you great exposure,
-                        the partner stands (and especially some of the extra options) will sell out early.
+                        You can contact us about partnership details at <a href='mailto:partner@java.no'>partner@java.no</a>.
+                        Even though partnerships for 2017 are sold out, we could discuss a possible partnership for 2018.
                     </P>
-
-                    <SubHeader>The partner sale opens January 2nd</SubHeader>
-
-                    <P>
-                        Contact us at <a href='mailto:partner@java.no'>partner@java.no</a> if you want to
-                        reserve a partnership for JavaZone 2017, and we’ll work with you to create the best
-                        possible partnership for your needs. Even though the sale opens January 2nd,
-                        feel free to contact us if you want to become a partner even before that.
-                        We look forward to hearing from you!
-                    </P>
-
                 </Content>
             </Block>
 
