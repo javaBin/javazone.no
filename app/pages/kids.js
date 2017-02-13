@@ -7,7 +7,7 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import mbot from '../assets/kids/mbot.jpg';
 import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';
-import raspberrypi from '../assets/kids/raspberrypi.jpg';
+import arduino from '../assets/kids/arduino.jpg';
 import { find } from 'lodash/fp';
 
 const kidsInfo = {
@@ -29,10 +29,10 @@ const kidsInfo = {
         title: 'Lær å programmere roboter',
         odd: true
     },
-    'kids_rasberry': {
-        background: raspberrypi,
+    'kids_arduino': {
+        background: arduino,
         age: '12+ år',
-        title: 'Raspberry Pi og Java',
+        title: 'Kreativ Elektronikk med Arduino',
         odd: false
     }
 };
@@ -61,7 +61,7 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
+        return 'Påmeldingen åpner mandag 20. februar kl. 12.00';
     }
 
     switch (workshop.status) {
@@ -70,7 +70,7 @@ function workshopStatus(workshop) {
     case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
     case 'CLOSED': return 'Påmelding stengt';
-    default: return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
+    default: return 'Påmeldingen åpner mandag 20. februar kl. 12.00';
     }
 }
 
@@ -116,7 +116,7 @@ const Kids = ({workshops}) => {
     const wcodestudio = find({id: 'kids_codestudio'}, workshops);
     const wminecraft = find({id: 'kids_computercraft'}, workshops);
     const wrobot = find({id: 'kids_robot'}, workshops);
-    const wraspberry = find({id: 'kids_rasberry'}, workshops);
+    const warduino = find({id: 'kids_arduino'}, workshops);
     return (
         <Page name='kids'>
             <Heading>
@@ -163,7 +163,7 @@ const Kids = ({workshops}) => {
                         <P>
                             Vi har et begrenset antall plasser derfor er det viktig at
                             du melder dere på arrangementet.
-                            Påmeldingen åpner sonday 19. februar kl. 12.00.
+                            Påmeldingen åpner mandag 20. februar kl. 12.00.
                         </P>
                         <SubHeader>Forberedelser</SubHeader>
                         <P>
@@ -186,7 +186,7 @@ const Kids = ({workshops}) => {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner sonday 19. februar kl. 12.00.
+                            Påmeldingen åpner mandag 20. februar kl. 12.00.
                         </P>
                     </Content>
                 </Block>
@@ -229,25 +229,18 @@ const Kids = ({workshops}) => {
                     </P>
                 </Session>
 
-                <Session session={wraspberry}>
+                <Session session={warduino}>
                     <P>
-                        Raspberry Pi er kanskje verdens aller kuleste mini-datamaskin.
-                        Datamaskinen kjører Linux, og kan dermed programmeres med
-                        alle verdens programmeringsspråk. I løpet av dette kurset
-                        skal vi programmere Raspberry Pi maskinen ved hjelp av
-                        Java og utviklerverktøyet Eclipse.
+                        Ved å lære enkel programmering lærer man å bli kreativ med et
+                        av de kraftigste arbeidsverktøyene vi har i dag.
                     </P>
                     <P>
-                        Vi starter med å lære det aller mest grunnleggende, hvordan
-                        vi bruker operativsystemet Raspian, og hvordan vi navigerer
-                        i filsystemet. Deretter skal vi ta frem litt elektroniske
-                        komponenter som koblingsbrett, LED lamper, knapper,
-                        motstandere og kanskje en motor og styre disse ved hjelp
-                        av Raspberry Pi maskinen.
-                    </P>
-                    <P>
-                        Opplegget vil være basert på Raspberry Pi sidene
-                        til <a href="https://kodegenet.no">Kodegenet.no</a>.
+                        Arduino gjør det mulig å styre alt fra en LED-dimmer
+                        til en 3D-printer. I dette tretimerskurset skal vi
+                        lære mer om hva en Arduino er og hva elektronikk kan
+                        brukes til. Men aller viktigst - vi skal lære å få lamper
+                        til å blinke, vi skal måle temperaturen i rommet -
+                        og kanskje vi rekker å få en motor til å rotere!
                     </P>
                 </Session>
 
