@@ -128,7 +128,7 @@ const Kids = ({workshops}) => {
                     <CHeader>En smakebit på JavaZone for framtidens utviklere</CHeader>
                     <CContent>
                         <P>
-                            JavaZone inviterer alle deltakere på JavaZone
+                            JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
                             søndag 19. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 4 parallelle sesjoner,
