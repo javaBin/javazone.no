@@ -7,42 +7,19 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     color: @white;
     display: inline-block;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
-    padding: 10px 20px;
+    padding: 8px 22px;
     text-align: center;
     text-decoration: none;
     transition: background-color .2s ease-in-out,
                 box-shadow .2s ease-in-out;
     white-space: nowrap;
     cursor: pointer;
+    text-transform: uppercase;
 
     @media (min-width: @size-s) {
-        font-size: 1.3rem;
-    }
-
-    &--green {
-        background-color: @green--light;
-
-        &:hover {
-            background-color: darken(@green--dark, 5%)
-        }
-    }
-
-    &--red {
-        background-color: @burgundy;
-
-        &:hover {
-            background-color: darken(@burgundy, 5%);
-        }
-    }
-
-    &--yellow {
-        background-color: @yellow;
-
-        &:hover {
-            background-color: darken(@yellow, 5%);
-        }
+        font-size: 1.1rem;
     }
 
     &--transparent {
@@ -57,12 +34,24 @@
         }
     }
 
-    &--disabled {
-        background-color: @grey--light;
+    &--green {
+        border-color: @green;
+        color: @green;
+    }
 
-        &:hover {
-            background-color: darken(@grey--light, 5%);
-        }
+    &--pink {
+        border-color: @pink;
+        color: @pink;
+    }
+
+    &--orange {
+        border-color: @orange;
+        color: @orange;
+    }
+
+    &--disabled {
+        border-color: @blue;
+        color: @blue;
     }
 
     &__icon {

@@ -7,8 +7,9 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import mbot from '../assets/kids/mbot.jpg';
 import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';
-import raspberrypi from '../assets/kids/raspberrypi.jpg';
+import arduino from '../assets/kids/arduino.jpg';
 import { find } from 'lodash/fp';
+import kidsimage from '../assets/kids.png';
 
 const kidsInfo = {
     'kids_codestudio': {
@@ -29,10 +30,10 @@ const kidsInfo = {
         title: 'Lær å programmere roboter',
         odd: true
     },
-    'kids_rasberry': {
-        background: raspberrypi,
+    'kids_arduino': {
+        background: arduino,
         age: '12+ år',
-        title: 'Raspberry Pi og Java',
+        title: 'Kreativ Elektronikk med Arduino',
         odd: false
     }
 };
@@ -51,9 +52,9 @@ function workshopClass(workshop) {
 
     switch (workshop.status) {
     case 'FREE_SPOTS': return 'button--green';
-    case 'FEW_SPOTS': return 'button--yellow';
-    case 'FULL': return 'button--red';
-    case 'VERY_FULL': return 'button--red';
+    case 'FEW_SPOTS': return 'button--orange';
+    case 'FULL': return 'button--pink';
+    case 'VERY_FULL': return 'button--pink';
     case 'CLOSED': return 'button--disabled';
     default: return 'button--disabled';
     }
@@ -61,16 +62,16 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
+        return 'Påmelding 20. februar kl. 12.00';
     }
 
     switch (workshop.status) {
     case 'FREE_SPOTS': return 'Meld deg på nå';
-    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på nå';
+    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på';
     case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
     case 'CLOSED': return 'Påmelding stengt';
-    default: return 'Påmeldingen åpner sondag 19. februar kl. 12.00';
+    default: return 'Påmelding 20. februar kl. 12.00';
     }
 }
 
@@ -94,10 +95,10 @@ const Session = ({session, children}) => {
     );
     const info = (
         <div className={`kids__info kids__info--${extra.odd ? 'right' : 'left'}`}>
-            <div className='kids__event-title'>{extra.title}</div>
+            <div className='kids__event-title blue'>{extra.title}</div>
             <div className='kids__age'>{extra.age}</div>
             {children}
-            <a className={`button ${workshopClass(session)} kids_registrate`}
+            <a className={`button button--transparent ${workshopClass(session)} kids_registrate`}
                href={workshopUrl(session)}>
                 {workshopStatus(session)}
             </a>
@@ -116,19 +117,23 @@ const Kids = ({workshops}) => {
     const wcodestudio = find({id: 'kids_codestudio'}, workshops);
     const wminecraft = find({id: 'kids_computercraft'}, workshops);
     const wrobot = find({id: 'kids_robot'}, workshops);
-    const wraspberry = find({id: 'kids_rasberry'}, workshops);
+    const warduino = find({id: 'kids_arduino'}, workshops);
     return (
         <Page name='kids'>
             <Heading>
                 <LargeHeading>JavaZone Kids</LargeHeading>
+                <SmallHeading>19. mars 2017</SmallHeading>
             </Heading>
+
+            <img className='kids__largeimage' src={kidsimage} />
 
             <Container>
                 <CBlock>
-                    <CHeader>En smakebit på JavaZone for framtidens utviklere</CHeader>
+                    <CHeader><span className="green">En smakebit på JavaZone for framtidens utviklere</span></CHeader>
                     <CContent>
                         <P>
-                            JavaZone inviterer alle deltakere på JavaZone
+                            <br />
+                            JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
                             søndag 19. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 4 parallelle sesjoner,
@@ -148,7 +153,7 @@ const Kids = ({workshops}) => {
                 </CBlock>
 
                 <Block>
-                    <Header>Praktisk</Header>
+                    <Header><span className="pink">Praktisk Informasjon</span></Header>
                     <Content>
                         <SubHeader>Tid & Sted</SubHeader>
                         <P>
@@ -161,9 +166,9 @@ const Kids = ({workshops}) => {
                         </P>
                         <SubHeader>Påmelding</SubHeader>
                         <P>
-                            Vi har et begrenset antall plasser derfor er det viktig at
-                            du melder dere på arrangementet.
-                            Påmeldingen åpner sonday 19. februar kl. 12.00.
+                            Vi har et begrenset antall plasser, derfor er det viktig at
+                            du melder dine barn på arrangementet.
+                            Påmeldingen åpner mandag 20. februar kl. 12.00.
                         </P>
                         <SubHeader>Forberedelser</SubHeader>
                         <P>
@@ -175,7 +180,7 @@ const Kids = ({workshops}) => {
                 </Block>
 
                 <Block>
-                    <Header>4 Parallelle Sesjoner</Header>
+                    <Header><span className="orange">4 Parallelle Sesjoner</span></Header>
                     <Content>
                         <P>
                             Vi kjører 4 parallelle sesjoner. Du kan lese mer om
@@ -186,10 +191,12 @@ const Kids = ({workshops}) => {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner sonday 19. februar kl. 12.00.
+                            Påmeldingen åpner mandag 20. februar kl. 12.00.
                         </P>
                     </Content>
                 </Block>
+
+                <div className="kids__separator"></div>
 
                 <Session session={wcodestudio}>
                     <P>
@@ -229,25 +236,18 @@ const Kids = ({workshops}) => {
                     </P>
                 </Session>
 
-                <Session session={wraspberry}>
+                <Session session={warduino}>
                     <P>
-                        Raspberry Pi er kanskje verdens aller kuleste mini-datamaskin.
-                        Datamaskinen kjører Linux, og kan dermed programmeres med
-                        alle verdens programmeringsspråk. I løpet av dette kurset
-                        skal vi programmere Raspberry Pi maskinen ved hjelp av
-                        Java og utviklerverktøyet Eclipse.
+                        Ved å lære enkel programmering lærer man å bli kreativ med et
+                        av de kraftigste arbeidsverktøyene vi har i dag.
                     </P>
                     <P>
-                        Vi starter med å lære det aller mest grunnleggende, hvordan
-                        vi bruker operativsystemet Raspian, og hvordan vi navigerer
-                        i filsystemet. Deretter skal vi ta frem litt elektroniske
-                        komponenter som koblingsbrett, LED lamper, knapper,
-                        motstandere og kanskje en motor og styre disse ved hjelp
-                        av Raspberry Pi maskinen.
-                    </P>
-                    <P>
-                        Opplegget vil være basert på Raspberry Pi sidene
-                        til <a href="https://kodegenet.no">Kodegenet.no</a>.
+                        Arduino gjør det mulig å styre alt fra en LED-dimmer
+                        til en 3D-printer. I dette tretimerskurset skal vi
+                        lære mer om hva en Arduino er og hva elektronikk kan
+                        brukes til. Men aller viktigst - vi skal lære å få lamper
+                        til å blinke, vi skal måle temperaturen i rommet -
+                        og kanskje vi rekker å få en motor til å rotere!
                     </P>
                 </Session>
 
