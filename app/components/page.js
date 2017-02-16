@@ -30,22 +30,25 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
         <div className={`menu__container menu__container--${visible ? 'visible' : 'hidden'}`}>
                 <ul className='menu__links'>
                     <li className='menu__links-item'>
-                        <Link href='/partners' className='menu__link menu__link--blue' onClick={toggleMenu}>Partners</Link>
+                        <Link href='/tickets' className='menu__link menu__link--blue' onClick={toggleMenu}>Tickets</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/speakers' className='menu__link menu__link--pink' onClick={toggleMenu}>Speakers</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/tickets' className='menu__link menu__link--orange' onClick={toggleMenu}>Tickets</Link>
+                        <Link href='/partners' className='menu__link menu__link--orange' onClick={toggleMenu}>Partners</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/videos' className='menu__link menu__link--green' onClick={toggleMenu}>Videos</Link>
+                        <Link href='/kids' className='menu__link menu__link--green' onClick={toggleMenu}>Kids</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/academy' className='menu__link menu__link--blue' onClick={toggleMenu}>Academy</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/konkurranse' className='menu__link menu__link--pink' onClick={toggleMenu}>Competition</Link>
+                    </li>
+                    <li className='menu__links-item'>
+                        <Link href='/videos' className='menu__link menu__link--orange' onClick={toggleMenu}>Videos</Link>
                     </li>
                 </ul>
         </div>
