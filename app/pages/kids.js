@@ -9,6 +9,7 @@ import codestudio from '../assets/kids/codestudio.jpg';
 import minecraft from '../assets/kids/minecraft.jpg';
 import arduino from '../assets/kids/arduino.jpg';
 import { find } from 'lodash/fp';
+import kidsimage from '../assets/kids.png';
 
 const kidsInfo = {
     'kids_codestudio': {
@@ -51,9 +52,9 @@ function workshopClass(workshop) {
 
     switch (workshop.status) {
     case 'FREE_SPOTS': return 'button--green';
-    case 'FEW_SPOTS': return 'button--yellow';
-    case 'FULL': return 'button--red';
-    case 'VERY_FULL': return 'button--red';
+    case 'FEW_SPOTS': return 'button--orange';
+    case 'FULL': return 'button--pink';
+    case 'VERY_FULL': return 'button--pink';
     case 'CLOSED': return 'button--disabled';
     default: return 'button--disabled';
     }
@@ -61,16 +62,16 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Påmeldingen åpner mandag 20. februar kl. 12.00';
+        return 'Påmelding 20. februar kl. 12.00';
     }
 
     switch (workshop.status) {
     case 'FREE_SPOTS': return 'Meld deg på nå';
-    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på nå';
+    case 'FEW_SPOTS': return 'Få plasser igjen, meld deg på';
     case 'FULL': return 'Påmelding m/ venteliste';
     case 'VERY_FULL': return 'Ingen ledige plasser';
     case 'CLOSED': return 'Påmelding stengt';
-    default: return 'Påmeldingen åpner mandag 20. februar kl. 12.00';
+    default: return 'Påmelding 20. februar kl. 12.00';
     }
 }
 
@@ -94,10 +95,10 @@ const Session = ({session, children}) => {
     );
     const info = (
         <div className={`kids__info kids__info--${extra.odd ? 'right' : 'left'}`}>
-            <div className='kids__event-title'>{extra.title}</div>
+            <div className='kids__event-title blue'>{extra.title}</div>
             <div className='kids__age'>{extra.age}</div>
             {children}
-            <a className={`button ${workshopClass(session)} kids_registrate`}
+            <a className={`button button--transparent ${workshopClass(session)} kids_registrate`}
                href={workshopUrl(session)}>
                 {workshopStatus(session)}
             </a>
@@ -121,13 +122,17 @@ const Kids = ({workshops}) => {
         <Page name='kids'>
             <Heading>
                 <LargeHeading>JavaZone Kids</LargeHeading>
+                <SmallHeading>19. mars 2017</SmallHeading>
             </Heading>
+
+            <img className='kids__largeimage' src={kidsimage} />
 
             <Container>
                 <CBlock>
-                    <CHeader>En smakebit på JavaZone for framtidens utviklere</CHeader>
+                    <CHeader><span className="green">En smakebit på JavaZone for framtidens utviklere</span></CHeader>
                     <CContent>
                         <P>
+                            <br />
                             JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
                             søndag 19. mars for å gi dem en smakebit på
@@ -148,7 +153,7 @@ const Kids = ({workshops}) => {
                 </CBlock>
 
                 <Block>
-                    <Header>Praktisk</Header>
+                    <Header><span className="pink">Praktisk Informasjon</span></Header>
                     <Content>
                         <SubHeader>Tid & Sted</SubHeader>
                         <P>
@@ -161,8 +166,8 @@ const Kids = ({workshops}) => {
                         </P>
                         <SubHeader>Påmelding</SubHeader>
                         <P>
-                            Vi har et begrenset antall plasser derfor er det viktig at
-                            du melder dere på arrangementet.
+                            Vi har et begrenset antall plasser, derfor er det viktig at
+                            du melder dine barn på arrangementet.
                             Påmeldingen åpner mandag 20. februar kl. 12.00.
                         </P>
                         <SubHeader>Forberedelser</SubHeader>
@@ -175,7 +180,7 @@ const Kids = ({workshops}) => {
                 </Block>
 
                 <Block>
-                    <Header>4 Parallelle Sesjoner</Header>
+                    <Header><span className="orange">4 Parallelle Sesjoner</span></Header>
                     <Content>
                         <P>
                             Vi kjører 4 parallelle sesjoner. Du kan lese mer om
@@ -190,6 +195,8 @@ const Kids = ({workshops}) => {
                         </P>
                     </Content>
                 </Block>
+
+                <div className="kids__separator"></div>
 
                 <Session session={wcodestudio}>
                     <P>
