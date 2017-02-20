@@ -87,7 +87,6 @@ const Session = ({session, children}) => {
     }
 
     const extra = kidsInfo[session.id];
-    console.log(extra.odd);
     const image = (
         <div className='kids__image'>
             <div className='background-image' style={{backgroundImage: `url(${extra.background})`}}></div>

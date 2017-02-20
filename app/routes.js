@@ -1,5 +1,4 @@
 import React from 'react';
-import root from './components/root';
 import index from './pages/index';
 import videos from './pages/videos';
 import partners from './pages/partners';
