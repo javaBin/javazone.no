@@ -1,5 +1,6 @@
 import styles from './styles/app.less';
 import 'whatwg-fetch';
+import 'es6-promise/auto';
 import someImage from './assets/some_image.png';
 import * as polyfill from './components/polyfill';
 import * as favicons from './favicon';
