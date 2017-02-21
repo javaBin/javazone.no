@@ -31,12 +31,6 @@ const MonetaryPolicy = () => (
                 <Header><span className="green">How to apply</span></Header>
                 <Content>
                     <P>
-                        If your presentation or a workshop is accepted , you may
-                        apply for a refund for travel and accomodation. Read
-                        below to find out if you are eligeble.
-                    </P>
-
-                    <P>
                         The first thing to note is that you need to <em>apply</em>.
                         This is necessary for our budget planning. If you require
                         financial support, please reach out
