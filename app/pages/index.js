@@ -11,7 +11,7 @@ const Index = () => (
                     Welcome to<br />JavaZone 2017
                 </div>
                 <div className='index__info'>
-                    September 13th - 14th<br />
+                    September 13th –14th<br />
                     Oslo Spektrum
                 </div>
                 <ul className='index__links'>
