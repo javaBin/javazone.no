@@ -10,6 +10,10 @@ const Index = () => (
                 <div className='index__text'>
                     Welcome to<br />JavaZone 2017
                 </div>
+                <div className='index__info'>
+                    September 13th - 14th<br />
+                    Oslo Spektrum
+                </div>
                 <ul className='index__links'>
                     <li className='index__links-item'>
                         <Link href='/tickets' className='index__link index__link--blue'>Tickets</Link>
