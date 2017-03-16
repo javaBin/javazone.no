@@ -5,11 +5,11 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import nova from '../assets/academy/nova.jpg';
-import acando from '../assets/partner-logos/acando.png';
-import accenture from '../assets/partner-logos/accenture.png';
-import capgemini from '../assets/partner-logos/capgemini.png';
-import finn from '../assets/partner-logos/finn.png';
-import kantega from '../assets/partner-logos/kantega.png';
+import acando from '../assets/partners-17/acando.svg';
+import accenture from '../assets/partners-17/accenture.svg';
+import capgemini from '../assets/partners-17/capgemini.svg';
+import finn from '../assets/partners-17/finn.svg';
+import kantega from '../assets/partners-17/kantega.svg';
 
 const sponsorImages = {
     acando,
