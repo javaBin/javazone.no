@@ -15,7 +15,7 @@ function shuffle(o){
     return o;
 }
 
-const imagesContext = require.context('../assets/partner-logos', false, /\.png$/);
+const imagesContext = require.context('../assets/partners-17', false, /\.svg$/);
 const images = imagesContext.keys().map(image => (
     {context: imagesContext(image), filename: image}
 ));
@@ -68,7 +68,7 @@ const Partners = () => (
             </Block>
 
             <CBlock fullWidth={true}>
-                <CHeader>Partners of JavaZone 2016</CHeader>
+                <CHeader>Proud partners of JavaZone 2017</CHeader>
                 <ul className='partners__logos'>
                     {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
                 </ul>
