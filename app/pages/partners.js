@@ -181,7 +181,7 @@ const Partners = () => (
                 <CHeader><span className="green">Partnership Prices</span></CHeader>
                 <CContent>
                     <div className="partners__mainprice partners__stand-option--sold-out">NOK 67.000,-</div>
-                    <em className="pink">All 45 partnerships for JavaZone 2017 are sold out</em>
+                    <em className="pink">All 50 partnerships for JavaZone 2017 are sold out</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
