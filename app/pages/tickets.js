@@ -20,14 +20,13 @@ const Tickets = () => (
         <Container>
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader><span className='green'>Early Bird JavaZone ticket</span></CHeader>
+                <CHeader><span className='green'>Get your JavaZone tickets</span></CHeader>
                 <CContent>
-                    <div className="partners__mainprice">NOK 5.890,-</div>
+                    <div className="partners__mainprice">NOK 6.490,-</div>
                     <P>
                         Get your JavaZone ticket now. It includes full access to the conference <br />
                         and entry to workshops on Tuesday (limited seating: first come, first served).<br />
                         The price also includes a 1 year membership in javaBin, the Norwegian Java User Group<br />
-                        <em className="partners__latebirdprice">After April 1st, the Early Bird ends and the ticket price increases to 6.490,-</em><br />
                         <span className="partners__vat">prices ex VAT</span>
                     </P>
                     <P>
@@ -40,7 +39,7 @@ const Tickets = () => (
                 <Header><span className='blue'>Working for one of our partners?</span></Header>
                 <Content>
                     <P>
-			All partners of JavaZone get reduced prices on tickets. Partners can buy tickets at a reduced price until July 1st. The main partner contact person can order tickets by using this <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">invoice request form</a>. Read more about <Link href='/partners'>JavaZone partnership</Link> here.
+                         All partners of JavaZone get reduced prices on tickets. Partners can buy tickets at a reduced price until July 1st. The main partner contact person can order tickets by using this <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">invoice request form</a>. Read more about <Link href='/partners'>JavaZone partnership</Link> here.
                     </P>
                 </Content>
             </Block>
