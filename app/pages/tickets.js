@@ -39,7 +39,7 @@ const Tickets = () => (
                 <Header><span className='blue'>Working for one of our partners?</span></Header>
                 <Content>
                     <P>
-			             All partners of JavaZone get reduced prices on tickets. Partners can buy tickets at a reduced price until July 1st. The main partner contact person can order tickets by using this <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">invoice request form</a>. Read more about <Link href='/partners'>JavaZone partnership</Link> here.
+                         All partners of JavaZone get reduced prices on tickets. Partners can buy tickets at a reduced price until July 1st. The main partner contact person can order tickets by using this <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">invoice request form</a>. Read more about <Link href='/partners'>JavaZone partnership</Link> here.
                     </P>
                 </Content>
             </Block>
