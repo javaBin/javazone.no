@@ -1,6 +1,5 @@
 export default [
     {name: 'Bouvet', logo: 'bouvet.svg', url: 'http://www.bouvet.no/'},
-    {name: 'Couchbase', logo: 'couchbase.svg', url: 'http://www.couchbase.com/'},
     {name: 'Itera', logo: 'itera.svg', url: 'http://www.itera.no/'},
     {name: 'Finn', logo: 'finn.svg', url: 'http://m.finn.no/'},
     {name: 'Computas', logo: 'computas.svg', url: 'http://www.computas.com/'},
