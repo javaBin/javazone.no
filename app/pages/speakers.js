@@ -66,11 +66,11 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <a href='http://submit.javazone.no' className='button button--transparent'>
-                            <span className='button__icon icon-check'></span> Submit your talk today!
+                            <span className='button__icon icon-check'></span> Manage your submissions
                         </a>
                     </P>
                     <P>
-                        <span className='speakers__lastdate'>The Call for Speakers is open until April 24th 2017</span>
+                        <span className='speakers__lastdate pink'>Our Call for Speakers closed for new talks April 24th 2017</span>
                     </P>
                 </CContent>
             </CBlock>
@@ -219,8 +219,11 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <a href='http://submit.javazone.no' className='button button--transparent'>
-                            <span className='button__icon icon-check'></span>Submit your talk today!
+                            <span className='button__icon icon-check'></span> Manage your submissions
                         </a>
+                    </P>
+                    <P>
+                        <span className='speakers__lastdate pink'>Our Call for Speakers closed for new talks April 24th 2017</span>
                     </P>
                 </CContent>
             </CBlock>
