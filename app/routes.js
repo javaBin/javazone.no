@@ -4,6 +4,7 @@ import videos from './pages/videos';
 import partners from './pages/partners';
 import notFound from './pages/404.js';
 import partnermoteDesember from './pages/partnermote-desember';
+import partnermoteApril from './pages/partnermote-april.js';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
 import academyLocation from './pages/academy-program.js';
@@ -22,6 +23,7 @@ const routes = {
     '/videos': videos,
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
+    '/partnermote-april': partnermoteApril,
     '/konkurranse': konkurranse,
     '/academy': academy,
     '/expo': expo,
