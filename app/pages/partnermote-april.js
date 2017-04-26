@@ -25,7 +25,7 @@ export default () => (
                 <CContent>
                     <P>
                         Nedenfor finner du presentasjonen som ble holdt på Teknologihuset<br />
-                        torsdag 19. april.
+                        onsdag 19. april.
                         <br />
                         Presentasjonen inneholder informasjon for partnere om JavaZone 2017.
                     </P>
