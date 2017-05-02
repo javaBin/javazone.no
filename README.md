@@ -1,27 +1,32 @@
 # javazone.no
 
-## Get up and running
+This is the repository for javazone.no. It is a react application.
+
+## Setup
+
+You need a relatively new version of node.js. Anything above 6.0 should work.
 
     git clone git@github.com:javaBin/javazone.no.git
     cd javazone.no
     npm i
     
-*If you're having issues, try running node=>5.1.0 & node<6.0.0*
+## Technologies
+
+- Webpack for bundling
+- React w/ JSX for views
+- Babel to transpile to ES5
+- LESS (with postcss and autoprefixer) for styles
+    
 
 ## Development
 
-Run in watch mode
+Run in watch mode:
 
     npm start
+    
+## Deployment
 
-Build without deployment
-
-    npm run build
-
-Clean
-
-    npm run clean
-
-Deploy
-
-    npm run deploy [env]
+Everything is automatic. The `develop` branch is automatically deployed to https://test-2017.javazone.no
+and `master` is automatically deployed to https://2017.javazone.no. Push to `develop` (or a separate
+branch if you would rather do that) and create a pull request from `develop` to `master` when you want
+to deploy to production.
