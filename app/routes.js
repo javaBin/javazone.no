@@ -17,7 +17,7 @@ import tickets from './pages/tickets';
 import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
-import frivillig from './pages/frivillig'
+import frivillig from './pages/frivillig';
 
 const routes = {
     '/': index,
