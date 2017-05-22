@@ -24,9 +24,6 @@ const Index = () => (
                     <li className='index__links-item'>
                         <Link href='/partners' className='index__link index__link--orange'>Partners</Link>
                     </li>
-                    <li className='index__links-item'>
-                        <Link href='/kids' className='index__link index__link--green'>Kids</Link>
-                    </li>
                 </ul>
             </div>
         </Container>
