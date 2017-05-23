@@ -60,8 +60,8 @@ export default () => (
             <div className='frivillig__header blue'>Får jeg bli med på AweZone?</div>
             <div className='frivillig__answer'>Selvsagt får du det! JavaZone er ikke det samme uten! Her får du se de kuleste bandene og snakke med de beste folka i IT-bransjen! Ingen jobbing på kvelden – bare fest og morro =)</div></li>
         <li className='frivillig__question'>
-            <div className='frivillig__header blue'>I don’t speak norwegian… What about me?</div>
-            <div className='frivillig__answer'>Beeing a volunteer at JavaZone requires you to be fluent in both norwegian and english. This is because you are one of the main goto-people for 3000 guests.</div>
+            <div className='frivillig__header blue'>I don’t speak Norwegian… What about me?</div>
+            <div className='frivillig__answer'>Beeing a volunteer at JavaZone requires you to be fluent in both Norwegian and English. This is because you are one of the main goto-people for 3000 guests.</div>
         </li>
         </ul>
 

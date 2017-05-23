@@ -2,10 +2,10 @@ version: '3'
 
 services:
   javazone-react:
-    image: node:7-alpine
+    image: node:alpine
     command: "npm start"
     volumes:
-      - ".:/dev"
-    working_dir: "/dev"
+      - ".:/home:rw"
+    working_dir: "/home"
     ports:
       - "8080:8080"
