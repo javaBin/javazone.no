@@ -32,9 +32,6 @@ const Tickets = () => (
                     <P>
                         <a className='button button--transparent' href='https://www.eventbrite.com/e/javazone-2017-tickets-29971845597'>Buy your JavaZone 2017 ticket now</a>
                     </P>
-                    <div className='notice-box'>
-                        We are currently having some issues with our payment provider. <br />Please check back later, or use our <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">invoice request form</a>.
-                    </div>
                 </CContent>
             </CBlock>
 
