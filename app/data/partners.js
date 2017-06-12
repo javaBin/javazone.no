@@ -45,6 +45,5 @@ export default [
     {name: 'Tapad', logo: 'tapad.svg', url: 'https://www.tapad.com'},
     {name: 'Eika', logo: 'eika.svg', url: 'https://www2.eika.no'},
     {name: 'Basefarm', logo: 'basefarm.svg', url: 'https://www.basefarm.com/no'},
-    {name: 'Xebia Labs', logo: 'xebialabs.svg', url: 'https://xebialabs.com'},
     {name: 'Camunda services GmbH', logo: 'camunda.svg', url: 'http://camunda.com'}
 ];
