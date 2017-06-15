@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Page, Heading, LargeHeading, SmallHeading, Container } from '../components/page';
+import { Page, Heading, LargeHeading, Container } from '../components/page';
 import { P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 
-import campfire from '../assets/journeyzone/campfire.jpg'
-import canoe from '../assets/journeyzone/canoe.jpg'
-import cookingOnCampfire from '../assets/journeyzone/cooking_on_campfire.jpg'
-import fish1 from '../assets/journeyzone/fish_1.jpg'
-import fish2 from '../assets/journeyzone/fish_2.jpg'
-import fishAndMushroom from '../assets/journeyzone/fish_and_mushroom.jpg'
-import tents from '../assets/journeyzone/tents.jpg'
-
+import campfire from '../assets/journeyzone/campfire.jpg';
+import canoe from '../assets/journeyzone/canoe.jpg';
+import cookingOnCampfire from '../assets/journeyzone/cooking_on_campfire.jpg';
+import fish1 from '../assets/journeyzone/fish_1.jpg';
+import fish2 from '../assets/journeyzone/fish_2.jpg';
+import fishAndMushroom from '../assets/journeyzone/fish_and_mushroom.jpg';
+import tents from '../assets/journeyzone/tents.jpg';
 
 const SignUpButton = ({children}) => (
     <CBlock>
@@ -30,7 +28,7 @@ const Image = ({image, altText}) => (<img className="journeyzone__image" alt={al
 class ImageSwitch extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {index: 0}
+        this.state = {index: 0};
     }
 
     componentWillMount() {
@@ -40,8 +38,8 @@ class ImageSwitch extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.timer){
-            clearTimeout(this.timer)
+        if (this.timer) {
+            clearTimeout(this.timer);
         }
     }
 
@@ -58,7 +56,7 @@ class ImageSwitch extends React.Component {
                 (child, index) => (
                     <div key={index} className={index !== this.state.index && "journeyzone__image-hidden"}>{child}</div>
                 ))}
-        </div> )
+        </div> );
     }
 }
 
@@ -66,10 +64,12 @@ const JourneyZone = () => (
     <Page name='journeyzone'>
         <Heading>
             <LargeHeading>JourneyZone 2017</LargeHeading>
-            <SmallHeading>An epic journey across the forests and lakes of the Nordmarka!</SmallHeading>
+            <CHeader>An epic journey across the forests and lakes of the Nordmarka!</CHeader>
         </Heading>
 
         <Container>
+            <Image altText="canoe" image={canoe} />
+
             <CBlock>
                 <CHeader><span className='green'>What is this?</span></CHeader>
                 <CContent>
@@ -79,7 +79,6 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
-            <Image altText="canoe" image={canoe} />
             <CBlock>
                 <CHeader><span className='blue'>‘Nordmarka på langs’?  What are you talking about?</span></CHeader>
                 <CContent>
@@ -93,13 +92,6 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
-            <ImageSwitch interval={4000}>
-                <Image altText="fish" image={fish1} />
-                <Image altText="fish" image={fish2} />
-                <Image altText="cooking on campfire" image={cookingOnCampfire} />
-                <Image altText="fish and mushroom" image={fishAndMushroom} />
-                <Image altText="tents" image={tents} />
-            </ImageSwitch>
             <CBlock>
                 <CHeader><span className='orange'>I’m intrigued - give me more details!</span></CHeader>
                 <CContent>
@@ -114,6 +106,14 @@ const JourneyZone = () => (
                     </P>
                 </CContent>
             </CBlock>
+
+            <ImageSwitch interval={4000}>
+                <Image altText="fish" image={fish1} />
+                <Image altText="fish" image={fish2} />
+                <Image altText="cooking on campfire" image={cookingOnCampfire} />
+                <Image altText="fish and mushroom" image={fishAndMushroom} />
+                <Image altText="tents" image={tents} />
+            </ImageSwitch>
 
             <CBlock>
                 <CHeader><span className='pink'>Who can attend?</span></CHeader>
