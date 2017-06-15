@@ -1,9 +1,17 @@
-import header from '../assets/frivillig.jpg';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
-import { Block, Header, Content, SubHeader, P} from '../components/block';
+import { Page, Heading, LargeHeading, SmallHeading, Container } from '../components/page';
+import { P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
+
+import campfire from '../assets/journeyzone/campfire.jpg'
+import canoe from '../assets/journeyzone/canoe.jpg'
+import cookingOnCampfire from '../assets/journeyzone/cooking_on_campfire.jpg'
+import fish1 from '../assets/journeyzone/fish_1.jpg'
+import fish2 from '../assets/journeyzone/fish_2.jpg'
+import fishAndMushroom from '../assets/journeyzone/fish_and_mushroom.jpg'
+import tents from '../assets/journeyzone/tents.jpg'
+
 
 const SignUpButton = ({children}) => (
     <CBlock>
@@ -16,6 +24,43 @@ const SignUpButton = ({children}) => (
         </CContent>
     </CBlock>
 );
+
+const Image = ({image, altText}) => (<img className="journeyzone__image" alt={altText} src={image} />);
+
+class ImageSwitch extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {index: 0}
+    }
+
+    componentWillMount() {
+        if (this.props.children.length > 0) {
+            this.timer = setInterval(this.update.bind(this), this.props.interval || 1000);
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.timer){
+            clearTimeout(this.timer)
+        }
+    }
+
+    update() {
+        this.setState((prevState, props) => ({
+            index: (prevState.index + 1) >= props.children.length ? 0 : prevState.index + 1
+        }));
+    }
+
+
+    render() {
+        return (<div>
+            {this.props.children.map(
+                (child, index) => (
+                    <div key={index} className={index !== this.state.index && "journeyzone__image-hidden"}>{child}</div>
+                ))}
+        </div> )
+    }
+}
 
 const JourneyZone = () => (
     <Page name='journeyzone'>
@@ -34,6 +79,7 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
+            <Image altText="canoe" image={canoe} />
             <CBlock>
                 <CHeader><span className='blue'>‘Nordmarka på langs’?  What are you talking about?</span></CHeader>
                 <CContent>
@@ -47,6 +93,13 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
+            <ImageSwitch interval={4000}>
+                <Image altText="fish" image={fish1} />
+                <Image altText="fish" image={fish2} />
+                <Image altText="cooking on campfire" image={cookingOnCampfire} />
+                <Image altText="fish and mushroom" image={fishAndMushroom} />
+                <Image altText="tents" image={tents} />
+            </ImageSwitch>
             <CBlock>
                 <CHeader><span className='orange'>I’m intrigued - give me more details!</span></CHeader>
                 <CContent>
@@ -75,6 +128,7 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
+            <Image altText="campfire" image={campfire} />
 
             <CBlock>
                 <CHeader><span className='green'>Personal expenses and equipment list</span></CHeader>
