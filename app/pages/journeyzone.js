@@ -96,7 +96,7 @@ const JourneyZone = () => (
                 <CHeader><span className='orange'>I’m intrigued - give me more details!</span></CHeader>
                 <CContent>
                     <P>
-                        The experience will being Friday 16th September, the morning after JavaZone.  We’ll meet up at 0700 and take a short train ride to Grua, around 40 kilometers north of Oslo.
+                        The experience will begin Friday 16th September, the morning after JavaZone.  We’ll meet up at 0700 and take a short train ride to Grua, around 40 kilometers north of Oslo.
                     </P>
                     <P>
                         From here we’ll slowly make our way through the forest and across lakes back to the city.  We can expect plenty of surprises and lots of great food along the way. Attendees will also be responsible for creating their own shelter (with a little help from some people we know).
@@ -119,7 +119,7 @@ const JourneyZone = () => (
                 <CHeader><span className='pink'>Who can attend?</span></CHeader>
                 <CContent>
                     <P>
-                        All JavaZone speakers are invited to apply for a place on JourneyZone, but please be aware that spaces are limited. Those holding workshops and presentations will be prioritised, but lighting talk speakers are also encouraged to apply!
+                        All JavaZone speakers are invited to apply for a place on JourneyZone, but please be aware that space is limited. Those holding workshops and presentations will be prioritised, but lighting talk speakers are also encouraged to apply!
                     </P>
                     <P>
                         We’ll do everything to make this trip as comfortable as possible, but attendees must be prepared to undertake a moderate amount of physical activity, and not be afraid of camping in the forest for two nights.
@@ -134,10 +134,10 @@ const JourneyZone = () => (
                 <CHeader><span className='green'>Personal expenses and equipment list</span></CHeader>
                 <CContent>
                     <P>
-                        JavaZone will cover almost all your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accommodate as many as possible we require that all attendees pay NOK 1500
+                        JavaZone will cover almost all of your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accommodate as many as possible we require that all attendees pay NOK 1500.
                     </P>
                     <P>
-                        We are currently putting together an equipment list for attendees and will publish this soon.
+                        We are currently putting together an equipment list for attendees.  This will be published soon.
                     </P>
                 </CContent>
             </CBlock>
