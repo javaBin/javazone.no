@@ -122,7 +122,7 @@ const JourneyZone = () => (
                         All JavaZone speakers are invited to apply for a place on JourneyZone, but please be aware that space is limited. Those holding workshops and presentations will be prioritised, but lighting talk speakers are also encouraged to apply!
                     </P>
                     <P>
-                        We’ll do everything to make this trip as comfortable as possible, but participants should be prepared to undertake a moderate amount of physical activity, and not be afraid of camping in the forest for two nights. We'll also arrange for the transport of bags and equipment, so you won't need to carry a hugh backpack!
+                        We’ll do everything to make this trip as comfortable as possible, but participants should be prepared to undertake a moderate amount of physical activity, and not be afraid of camping in the forest for two nights. We'll also arrange for the transport of bags and equipment, so you won't need to carry a huge backpack!
                     </P>
 
                 </CContent>
