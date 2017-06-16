@@ -64,7 +64,7 @@ const JourneyZone = () => (
     <Page name='journeyzone'>
         <Heading>
             <LargeHeading>JourneyZone 2017</LargeHeading>
-            <CHeader>The most epic journey across the forests and lakes of the Nordmarka - ever!?</CHeader>
+            <CHeader>The most epic journey across the forests and lakes of the Nordmarka - ever!!</CHeader>
         </Heading>
 
         <Container>
