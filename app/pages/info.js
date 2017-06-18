@@ -4,6 +4,26 @@ import { Block, Content, Header, P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
 
+const InfoPage = () => (
+    <Page name='info'>
+        <Heading>
+            <LargeHeading>JavaZone 2017</LargeHeading>
+            <SmallHeading>September 13-14th</SmallHeading>
+        </Heading>
+        <Container>
+            <Youtube id='OKZcwxcw85o'/>
+        </Container>
+
+        <AboutSection />
+        <TicketSection />
+        <BetterExplorerSection />
+        <FaqSection />
+        <ProgramSection />
+        <ImportantPrinciplesSection />
+        <QuestionSection />
+    </Page>
+);
+
 const AboutSection = () => (
     <Container>
         <Block>
@@ -154,6 +174,7 @@ const FaqSection = () => (
      */
   <div></div>
 );
+
 const ProgramSection = () => (
     <Container>
         <CBlock>
@@ -198,6 +219,7 @@ const ProgramSection = () => (
         </Block>
     </Container>
 );
+
 const ImportantPrinciplesSection = () => (
     <Container>
         <CBlock>
@@ -244,26 +266,6 @@ const QuestionSection = () => (
             </CContent>
         </CBlock>
     </Container>
-);
-
-const InfoPage = () => (
-    <Page name='info'>
-        <Heading>
-            <LargeHeading>JavaZone 2017</LargeHeading>
-            <SmallHeading>September 13-14th</SmallHeading>
-        </Heading>
-        <Container>
-            <Youtube id='OKZcwxcw85o'/>
-        </Container>
-
-        <AboutSection />
-        <TicketSection />
-        <BetterExplorerSection />
-        <FaqSection />
-        <ProgramSection />
-        <ImportantPrinciplesSection />
-        <QuestionSection />
-    </Page>
 );
 
 export default InfoPage;
