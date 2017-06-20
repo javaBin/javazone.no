@@ -48,6 +48,7 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "moment": "^2.15.1"
   }

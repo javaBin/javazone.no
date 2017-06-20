@@ -18,6 +18,7 @@ import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
 import frivillig from './pages/frivillig';
+import journeyZone from './pages/journeyzone';
 
 const routes = {
     '/': index,
@@ -36,7 +37,8 @@ const routes = {
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,
-    '/frivillig': frivillig
+    '/frivillig': frivillig,
+    '/journeyzone': journeyZone,
 };
 
 function dispatchPage(pathname) {
