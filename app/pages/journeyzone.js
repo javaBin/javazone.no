@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { Page, Heading, LargeHeading, Container } from '../components/page';
 import { P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
@@ -23,9 +24,10 @@ const SignUpButton = ({children}) => (
     </CBlock>
 );
 
-const Image = ({image, altText}) => (<img className="journeyzone__image" alt={altText} src={image} />);
+const Image = ({image, altText, classes}) =>
+    (<img className={classnames('journeyzone__image', classes)} alt={altText} src={image} />);
 
-class ImageSwitch extends React.Component {
+class ImageCarousel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {index: 0};
@@ -51,11 +53,15 @@ class ImageSwitch extends React.Component {
 
 
     render() {
-        return (<div>
-            {this.props.children.map(
-                (child, index) => (
-                    <div key={index} className={index !== this.state.index && "journeyzone__image-hidden"}>{child}</div>
-                ))}
+        return (<div className='journeyzone__image-carousel-container'>
+            {React.Children.map(this.props.children, (child, index) => (
+                React.cloneElement(child, {
+                    classes: classnames({
+                        'journeyzone__image-carousel-img': true,
+                        'journeyzone__image-carousel-hidden': (index !== this.state.index)
+                    })
+                })
+            ))}
         </div> );
     }
 }
@@ -107,13 +113,13 @@ const JourneyZone = () => (
                 </CContent>
             </CBlock>
 
-            <ImageSwitch interval={4000}>
+            <ImageCarousel interval={4000}>
                 <Image altText="fish" image={fish1} />
                 <Image altText="fish" image={fish2} />
                 <Image altText="cooking on campfire" image={cookingOnCampfire} />
                 <Image altText="fish and mushroom" image={fishAndMushroom} />
                 <Image altText="tents" image={tents} />
-            </ImageSwitch>
+            </ImageCarousel>
 
             <CBlock>
                 <CHeader><span className='pink'>Who can attend?</span></CHeader>

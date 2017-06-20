@@ -9,8 +9,18 @@
         max-width: 100%;
     }
 
-    &__image-hidden {
-        display: none;
+    &__image-carousel-container {
+        position:relative;
+        height: calc(100vw * 0.67);
+    }
+
+    &__image-carousel-img {
+        position:absolute;
+        transition: opacity 1s ease-in-out
+    }
+
+    &__image-carousel-hidden {
+        opacity: 0;
     }
 
     &__day-title {
