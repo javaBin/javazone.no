@@ -5,6 +5,7 @@ import partners from './pages/partners';
 import notFound from './pages/404.js';
 import partnermoteDesember from './pages/partnermote-desember';
 import partnermoteApril from './pages/partnermote-april.js';
+import partnermoteJuni from './pages/partnermote-juni.js';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
 import academyLocation from './pages/academy-program.js';
@@ -26,6 +27,7 @@ const routes = {
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
     '/partnermote-april': partnermoteApril,
+    '/partnermote-juni': partnermoteJuni,
     '/konkurranse': konkurranse,
     '/academy': academy,
     '/expo': expo,
