@@ -253,7 +253,7 @@ const Partners = () => (
             <CBlock>
                 <CContent>
                     <P>
-                        <Link className='button button--transparent' href='/partnermote-april'>Slides from last partner meeting (in Norwegian)</Link>
+                        <Link className='button button--transparent' href='/partnermote-juni'>Slides from last partner meeting (in Norwegian)</Link>
                     </P>
                 </CContent>
             </CBlock>
