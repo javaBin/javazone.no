@@ -25,7 +25,7 @@ export default () => (
                 <CContent>
                     <P>
                         Nedenfor finner du presentasjonen som ble holdt på Teknologihuset<br />
-                        onsdag 15. juni.
+                        torsdag 15. juni.
                         <br />
                         Presentasjonen inneholder informasjon for partnere om JavaZone 2017.
                     </P>
@@ -34,40 +34,40 @@ export default () => (
                     </P>
                     <ul className='partner-presentation__sections'>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-4'>Faglig program</a>
+                            <a href='#slide-3'>Faglig program</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-12'>Expo-området</a>
+                            <a href='#slide-11'>Expo-området</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-21'>Den faglige arenaen</a>
+                            <a href='#slide-20'>Den faglige arenaen</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-24'>AweZone</a>
+                            <a href='#slide-23'>AweZone</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-26'>Info/markedsføring</a>
+                            <a href='#slide-25'>Info/markedsføring</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-30'>Mattilbudet</a>
+                            <a href='#slide-29'>Mattilbudet</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-32'>Partnerstands</a>
+                            <a href='#slide-31'>Partnerstands</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-34'>Konkurranse: Årets beste stand</a>
+                            <a href='#slide-33'>Konkurranse: Årets beste stand</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-36'>Veien mot JavaZone 2017</a>
+                            <a href='#slide-35'>Veien mot JavaZone 2017</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-40'>Frister</a>
+                            <a href='#slide-39'>Frister</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-42'>Billetter</a>
+                            <a href='#slide-41'>Billetter</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-45'>Oppsummering</a>
+                            <a href='#slide-44'>Oppsummering</a>
                         </li>
                     </ul>
                 </CContent>
