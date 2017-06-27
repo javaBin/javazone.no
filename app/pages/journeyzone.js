@@ -102,13 +102,13 @@ const JourneyZone = () => (
                 <CHeader><span className='orange'>I’m intrigued - give me more details!</span></CHeader>
                 <CContent>
                     <P>
-                        The experience will begin Friday 16th September, the morning after JavaZone.  We’ll meet up at 0700 and take a short train ride to Grua, around 40 kilometers north of Oslo.
+                        The experience will begin Friday 15th September, the morning after JavaZone.  We’ll meet up at 0700 and take a short train ride to Grua, around 40 kilometers north of Oslo.
                     </P>
                     <P>
                         From here we’ll slowly make our way through the forest and across lakes back to the city.  We can expect plenty of surprises and lots of great food along the way. Attendees will also be responsible for creating their own shelter (with a little help from some people we know).
                     </P>
                     <P>
-                        Finally we will end the journey back where we started on Sunday September 18th at 1800.
+                        Finally we will end the journey back where we started on Sunday September 17th at 1800.
                     </P>
                 </CContent>
             </CBlock>
