@@ -85,8 +85,8 @@ const TicketSection = () => (
                 <P>
                     <br />
                     When you have a ticket in the box, you are ready to attend JavaZone 2017! If you have attended
-                    JavaZone before then welcome back! If this is your first time, then please take a moment to 
-                    familiarize yourself with what to expect! A JavaZone ticket gives you the opportunity to attend 
+                    JavaZone before then welcome back! If this is your first time, then please take a moment to
+                    familiarize yourself with what to expect! A JavaZone ticket gives you the opportunity to attend
                     countless great talks, but there is much more to experience during the event.
                 </P>
 
@@ -127,7 +127,7 @@ const BetterExplorerSection = () => (
             <Content>
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
-                    nice to drink and some good food. Join us for mingling and evening concerts! 
+                    nice to drink and some good food. Join us for mingling and evening concerts!
                 </P>
             </Content>
         </Block>
@@ -136,7 +136,7 @@ const BetterExplorerSection = () => (
             <Header><span className='blue'>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
-                    Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to 
+                    Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to
                     Mexico! Olé! We promise that you will not leave the event hungry!
                 </P>
             </Content>
