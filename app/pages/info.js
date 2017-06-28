@@ -31,23 +31,24 @@ const AboutSection = () => (
             <Content>
                 <P>
                     JavaZone – the biggest European community-driven conference for modern developers is 2^4
-                    years old this year! Don’t miss two days of birthday celebration full of inspiring tech talks,
-                    educational workshops, mingling, and party!
+                    years old this year! Don’t miss out on two days of birthday celebrations full of inspiring tech talks,
+                    hands on sessions, mingling, and a great party!
                 </P>
                 <P>
-                    JavaZone is organized by javaBin, the Norwegian Java User Group. Our main idea was to
-                    arrange a community-driven conference for Java developers at which can learn new things,
+                    JavaZone is organized by javaBin, the Norwegian Java User Group. Our goal is to
+                    arrange a community-driven conference for Java developers where they can learn new things,
                     share knowledge and socialise.
                 </P>
                 <P>
-                    We have been arranging JavaZone since 2001 and we are excited to watch the event grow bigger
-                    and better every year. This year we are hosting 200 speakers across 7 parallel tracks over
-                    the course of two days, in addition to multiple workshops held on the day before the
-                    conference starts. Workshops are included in your ticket, but have a  limited number of seats.
-                    Therefore, hurry up! First comes, first served.
+                    We have been arranging JavaZone since 2001 and have been excited to watch the event grow bigger
+                    and better every year. This year we are hosting almost 200 speakers across 7 parallel tracks over
+                    the course of two days. In addition we offer a selection of workshops held on the day before the
+                    conference starts. The workshops are included in your ticket, but we have a limited number of seats.
+                    More information about workshops will come after the summer holidays, along with more information
+                    about how to register.
                 </P>
                 <P>
-                    We would not be what we are today without you! Thank you for your support and contributions.
+                    We would not be what we are today without YOU! Thank you for your support and contributions over the years.
                     Don’t procrastinate! Join 3000 fellow developers at JavaZone on 13th-14th September, 2017!
                 </P>
 
@@ -64,7 +65,7 @@ const TicketSection = () => (
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
                     JavaZone experience, including workshops. But as mentioned earlier, the number of workshop
-                    seats is limited, so don’t delay!book your spot today!
+                    seats are limited, so it pays to be quick when the registration opens.
                 </P>
             </Content>
         </Block>
@@ -79,14 +80,14 @@ const TicketSection = () => (
 
 
         <CBlock>
-            <CHeader><span className='blue'>You’ve got your ticket, haven’t you?</span></CHeader>
+            <CHeader><span className='blue'>You’ve got your ticket? Great!</span></CHeader>
             <CContent>
                 <P>
                     <br />
-                    When you have a ticket in the box, you are ready to attend JavaZone 2017!  If you have attended
-                    JavaZone before then welcome back! If this is your first time, then please take a moment to get
-                    to know what is awaiting you! A JavaZone ticket gives you the opportunity to attend countless
-                    great talks, but there is much more to experience during the event.
+                    When you have a ticket in the box, you are ready to attend JavaZone 2017! If you have attended
+                    JavaZone before then welcome back! If this is your first time, then please take a moment to 
+                    familiarize yourself with what to expect! A JavaZone ticket gives you the opportunity to attend 
+                    countless great talks, but there is much more to experience during the event.
                 </P>
 
             </CContent>
@@ -97,7 +98,7 @@ const TicketSection = () => (
 const BetterExplorerSection = () => (
     <Container>
         <Heading>
-            <SmallHeading>How to become a better JavaZone explorer in five easy steps?</SmallHeading>
+            <SmallHeading>How to become a better JavaZone Explorer in five easy steps?</SmallHeading>
         </Heading>
 
         <Block>
@@ -114,20 +115,19 @@ const BetterExplorerSection = () => (
             <Header><span className='blue'>Two conference days</span></Header>
             <Content>
                 <P>
-                    Two days full of talks from well-known Norwegian and international speakers, in varying formats
-                    and categories. Well, one of our guests says he can play the music and coding at the same time!
+                    Two days full of talks from reknowned Norwegian and international speakers, in varying formats
+                    and categories. One of our guests tells us that he can write code and play music at the same time!
                     Check him out this year!
                 </P>
             </Content>
         </Block>
 
         <Block>
-            <Header><span className='blue'>After-party to remember</span></Header>
+            <Header><span className='blue'>An after party to remember</span></Header>
             <Content>
                 <P>
-                    After a long day, full of unique learning experience, it feels good to chill out with a nice
-                    drink and good food. Join us for mingling and evening concerts! Too tired to relocate? We
-                    thought about it… Everything happens in the same venue!
+                    After a long day, full of unique learning experience, it feels good to chill out with something
+                    nice to drink and some good food. Join us for mingling and evening concerts! 
                 </P>
             </Content>
         </Block>
@@ -136,9 +136,8 @@ const BetterExplorerSection = () => (
             <Header><span className='blue'>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
-                    Have we mentioned a good food before? JavaZone is caressingly called “Food – JourneyZone”. Our
-                    chefs will take on a culinary trip from Japan to Mexico! Olé! We promise you will not leave the
-                    event hungry!
+                    Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to 
+                    Mexico! Olé! We promise that you will not leave the event hungry!
                 </P>
             </Content>
         </Block>
@@ -181,7 +180,7 @@ const ProgramSection = () => (
             <CHeader>The program</CHeader>
             <CContent>
                 <P>
-                The full program is available on our program page.  We always strive to improve the experience, so this year we have made a few small changes to the program: lightning talks can now be either 10 or 20 minutes, and presentations can now be either 45 or 60 minutes.
+                The full program is available on our program page. As last year we have two types of talks: lightning talks can be either 10 or 20 minutes long, and presentations can be either 45 or 60 minutes.
                 </P>
                 <P>
                     <a className='button button--transparent'
@@ -203,7 +202,7 @@ const ProgramSection = () => (
             <Header>Presentations</Header>
             <Content>
                 <P>
-                    Presentations at JavaZone have a length of 45 or 60 minutes, and should therefore give you a deeper
+                    Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
                     understanding of a concept than lightning talks.
                 </P>
             </Content>
@@ -212,8 +211,8 @@ const ProgramSection = () => (
             <Header>Workshops</Header>
             <Content>
                 <P>
-                    Full blown learning session. This is where you get down and dirty with code. We’ll have both full
-                    day workshops, and shorter 2-hour and 4-hour workshops.
+                    Full blown learning session. This is where you get down and dirty with code. We’ll have full
+                    day workshops in addition to shorter 2-hour and 4-hour workshops.
                 </P>
             </Content>
         </Block>
