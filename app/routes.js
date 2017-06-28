@@ -20,6 +20,7 @@ import pageview from './analytics';
 import academyData from './data/academy';
 import frivillig from './pages/frivillig';
 import journeyZone from './pages/journeyzone';
+import info from './pages/info'
 
 const routes = {
     '/': index,
@@ -41,6 +42,7 @@ const routes = {
     '/tickets': tickets,
     '/frivillig': frivillig,
     '/journeyzone': journeyZone,
+    '/info': info,
 };
 
 function dispatchPage(pathname) {
