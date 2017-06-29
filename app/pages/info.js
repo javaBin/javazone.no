@@ -3,12 +3,15 @@ import { Container, Heading, LargeHeading, Page, SmallHeading } from '../compone
 import { Block, Content, Header, P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
+import info1 from '../assets/info_1.jpg';
+import tickets2 from '../assets/tickets_2.jpg';
+import partners1 from '../assets/partners_1.jpg';
 
 const InfoPage = () => (
     <Page name='info'>
         <Heading>
-            <LargeHeading>JavaZone 2017</LargeHeading>
-            <SmallHeading>September 13-14th</SmallHeading>
+            <LargeHeading>Welcome to JavaZone 2017</LargeHeading>
+            <SmallHeading>September 13-14th – Oslo, Norway</SmallHeading>
         </Heading>
         <Container>
             <Youtube id='OKZcwxcw85o'/>
@@ -27,7 +30,7 @@ const InfoPage = () => (
 const AboutSection = () => (
     <Container>
         <Block>
-            <Header><span className='blue'>About</span></Header>
+            <Header><span className='green'>JavaZone 101<br />the who, what and where</span></Header>
             <Content>
                 <P>
                     JavaZone – the biggest European community-driven conference for modern developers is 2^4
@@ -43,9 +46,7 @@ const AboutSection = () => (
                     We have been arranging JavaZone since 2001 and have been excited to watch the event grow bigger
                     and better every year. This year we are hosting almost 200 speakers across 7 parallel tracks over
                     the course of two days. In addition we offer a selection of workshops held on the day before the
-                    conference starts. The workshops are included in your ticket, but we have a limited number of seats.
-                    More information about workshops will come after the summer holidays, along with more information
-                    about how to register.
+                    conference starts.
                 </P>
                 <P>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
@@ -64,8 +65,8 @@ const TicketSection = () => (
             <Content>
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
-                    JavaZone experience, including workshops. But as mentioned earlier, the number of workshop
-                    seats are limited, so it pays to be quick when the registration opens.
+                    JavaZone experience, including workshops. The number of workshop
+                    seats are limited and first-come first-served, so it pays to be quick when the registration opens.
                 </P>
             </Content>
         </Block>
@@ -73,67 +74,57 @@ const TicketSection = () => (
             <CContent>
                 <P>
                     <a className='button button--transparent'
-                       href='https://www.eventbrite.com/e/javazone-2017-tickets-29971845597'>Buy your JavaZone 2017 ticket now</a>
+                       href='/tickets'>Buy your JavaZone 2017 ticket now</a>
                 </P>
             </CContent>
         </CBlock>
 
 
         <CBlock>
-            <CHeader><span className='blue'>You’ve got your ticket? Great!</span></CHeader>
+            <CHeader><span className='orange'>You’ve got your ticket? Great!</span></CHeader>
             <CContent>
                 <P>
                     <br />
-                    When you have a ticket in the box, you are ready to attend JavaZone 2017! If you have attended
-                    JavaZone before then welcome back! If this is your first time, then please take a moment to
+                    When you have a ticket in the box, you are ready to attend JavaZone 2017! <br /><br />
+                    If you have attended JavaZone before then welcome back! <br />
+                    If this is your first time, then please take a moment to
                     familiarize yourself with what to expect! A JavaZone ticket gives you the opportunity to attend
                     countless great talks, but there is much more to experience during the event.
                 </P>
 
             </CContent>
         </CBlock>
+        <img className='partners__image' src={tickets2} />
     </Container>
 );
 
 const BetterExplorerSection = () => (
     <Container>
-        <Heading>
-            <SmallHeading>How to become a better JavaZone Explorer in five easy steps?</SmallHeading>
-        </Heading>
-
-        <Block>
-            <Header><span className='blue'>Hands-on workshops</span></Header>
-            <Content>
-                <P>
-                    Do you prefer practical tasks more than theory? Take part in one of our great workshops and
-                    boost your knowledge and skills.
-                </P>
-            </Content>
-        </Block>
 
         <Block>
             <Header><span className='blue'>Two conference days</span></Header>
             <Content>
                 <P>
-                    Two days full of talks from reknowned Norwegian and international speakers, in varying formats
-                    and categories. One of our guests tells us that he can write code and play music at the same time!
-                    Check him out this year!
+                    Two days full of talks from renowned Norwegian and international speakers, in varying formats
+                    and categories. One of our speakers even tell us that he can write code and play music at the same time!
+                    You don't want to miss our amazing lineup. The program is just about finished, and will be released shortly.
                 </P>
             </Content>
         </Block>
 
         <Block>
-            <Header><span className='blue'>An after party to remember</span></Header>
+            <Header><span className='green'>An after party to remember</span></Header>
             <Content>
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
-                    nice to drink and some good food. Join us for mingling and evening concerts!
+                    nice to drink and some good food. We have something
+                    amazing in store for our afterparty this year, and will release details after the summer break.
                 </P>
             </Content>
         </Block>
 
         <Block>
-            <Header><span className='blue'>8 restaurants, all day long</span></Header>
+            <Header><span className='orange'>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
                     Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to
@@ -143,13 +134,26 @@ const BetterExplorerSection = () => (
         </Block>
 
         <Block>
-            <Header><span className='blue'>…and a whole lotta love</span></Header>
+            <Header><span className='pink'>Hands-on workshops</span></Header>
             <Content>
                 <P>
-                    You will meet lots of interesting people at JavaZone! Grab your drink and mingle away!
+                    Do you prefer practical tasks more than theory? Take part in one of our great workshops and
+                    boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
+                    More information about workshops will come after the summer holidays, along with more information
+                    about how to register.
                 </P>
             </Content>
         </Block>
+
+        <Block>
+            <Header><span className='green'>…and a whole lotta love</span></Header>
+            <Content>
+                <P>
+                    You will meet lots of interesting people at JavaZone! Grab your coffee and mingle away!
+                </P>
+            </Content>
+        </Block>
+        <img className='partners__image' src={info1} />
     </Container>
 );
 
@@ -177,20 +181,21 @@ const FaqSection = () => (
 const ProgramSection = () => (
     <Container>
         <CBlock>
-            <CHeader>The program</CHeader>
+            <CHeader><span className='green'>The JavaZone program</span></CHeader>
             <CContent>
-                <P>
-                The full program is available on our program page. As last year we have two types of talks: lightning talks can be either 10 or 20 minutes long, and presentations can be either 45 or 60 minutes.
+                <P><br />
+                The full program will be available on our program page and in dedicated apps.<br />
+                The program will be published in July.
                 </P>
                 <P>
                     <a className='button button--transparent'
-                       href='/program'>See the JavaZone program</a>
+                       href='#'>Full program coming soon</a>
                 </P>
             </CContent>
         </CBlock>
 
         <Block>
-            <Header>Lightning talks</Header>
+            <Header><span className='pink'>Lightning talks</span></Header>
             <Content>
                 <P>
                     Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept.
@@ -199,7 +204,7 @@ const ProgramSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header>Presentations</Header>
+            <Header><span className='orange'>Presentations</span></Header>
             <Content>
                 <P>
                     Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
@@ -208,7 +213,7 @@ const ProgramSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header>Workshops</Header>
+            <Header><span className='blue'>Workshops</span></Header>
             <Content>
                 <P>
                     Full blown learning session. This is where you get down and dirty with code. We’ll have full
@@ -216,37 +221,32 @@ const ProgramSection = () => (
                 </P>
             </Content>
         </Block>
+        <img className='partners__image' src={partners1} />
     </Container>
 );
 
 const ImportantPrinciplesSection = () => (
     <Container>
         <CBlock>
-            <CHeader>A few very important principles </CHeader>
+            <CHeader><span className='green'>A few very important principles</span></CHeader>
             <CContent>
-                <P>
+                <P><br />
                     JavaZone is a 100% community-organized conference created by javaBin. The program is chosen by our independent program committee, and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
-                    See our monetary policy for details.
+                    See our monetary policy for details.<br/><br/>
                     We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that you treat your fellow conference participants with respect. See confcodeofconduct.com for a minimum of what we expect. We reserve the right to take any action necessary to make sure this principle is upheld.
-                    Should any unwanted event occur, we're here to help:
+                    
+                    <br /><br />Should any unwanted event occur, we're here to help:
+                    <br/><br/>
+                    <strong>Before the conference</strong>
+                    <br />
+                    You can contact us by email: javazone@java.no (this goes to a small group of people, the core organizers)
+                    <br/><br/>
+                    <strong>During the conference</strong>
+                    <br />
+                    Ask at the info stand, and we'll be in touch. Contact information will also be available at the info stand.
                 </P>
             </CContent>
         </CBlock>
-        <Block>
-            <Header>Before the conference</Header>
-            <Content>
-                You can contact us by email: javazone@java.no
-                (this goes to a small group of people, the core organizers)
-            </Content>
-        </Block>
-        <Block>
-            <Header>During the conference</Header>
-            <Content>
-                Ask at the info stand, and we'll be in touch.
-                Contact information will also be available at the info stand.
-            </Content>
-        </Block>
-
 
     </Container>
 );
@@ -254,9 +254,9 @@ const ImportantPrinciplesSection = () => (
 const QuestionSection = () => (
     <Container>
         <CBlock>
-            <CHeader>Questions?</CHeader>
+            <CHeader><span className='blue'>Questions?</span></CHeader>
             <CContent>
-                <P>Do not hesitate to contact us, if you have any questions!
+                <P><br />Do not hesitate to contact us, if you have any questions!
                     Contact us at javazone@java.no and we’ll try our best to give you an answer.
                 </P>
                 <P>
