@@ -233,7 +233,7 @@ const ImportantPrinciplesSection = () => (
                 <P><br />
                     JavaZone is a 100% community-organized conference created by javaBin. The program is chosen by our independent program committee, and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
                     See our monetary policy for details.<br/><br/>
-                    We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that you treat your fellow conference participants with respect. See confcodeofconduct.com for a minimum of what we expect. We reserve the right to take any action necessary to make sure this principle is upheld.
+                    We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that you treat your fellow conference participants with respect. We reserve the right to take any action necessary to make sure this principle is upheld.
 
                     <br /><br />Should any unwanted event occur, we're here to help:
                     <br/><br/>

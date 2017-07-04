@@ -16,6 +16,9 @@ const Index = () => (
                 </div>
                 <ul className='index__links'>
                     <li className='index__links-item'>
+                        <Link href='/info' className='index__link index__link--green'>Info</Link>
+                    </li>
+                    <li className='index__links-item'>
                         <Link href='/tickets' className='index__link index__link--blue'>Tickets</Link>
                     </li>
                     <li className='index__links-item'>
