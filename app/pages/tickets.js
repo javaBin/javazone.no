@@ -11,12 +11,9 @@ import tickets2 from '../assets/tickets_2.jpg';
 const Tickets = () => (
     <Page name='tickets'>
         <Heading>
-            <LargeHeading>JavaZone 2017</LargeHeading>
-            <SmallHeading>September 13-14th</SmallHeading>
+            <LargeHeading>Tickets to JavaZone 2017</LargeHeading>
+            <SmallHeading>Come join us in Oslo, September 13-14th</SmallHeading>
         </Heading>
-        <Container>
-            <Youtube id='OKZcwxcw85o'></Youtube>
-        </Container>
         <Container>
 
             <CBlock fullWidth={true} className='partners__price-container'>
@@ -34,6 +31,11 @@ const Tickets = () => (
                     </P>
                 </CContent>
             </CBlock>
+        </Container>
+        <Container>
+            <Youtube id='OKZcwxcw85o'></Youtube>
+        </Container>
+        <Container>
 
             <Block>
                 <Header><span className='blue'>Working for one of our partners?</span></Header>
