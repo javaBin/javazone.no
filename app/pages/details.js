@@ -161,7 +161,7 @@ const Loading = () => (
 });*/
 
 const Details = id => props => {
-    if (props.sessions.length == 0) {
+    if (props.sessions.length === 0) {
         props.getSessions();
         return <Page>{ Loading() }</Page>;
     } else {
@@ -178,7 +178,7 @@ const Details = id => props => {
             { content }
         </Page>
     );*/
-}
+};
 
 export default function(id) {
     return connect(
