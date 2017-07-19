@@ -1,7 +1,9 @@
-const baseUrl = 'https://javazone.no/javazone-web-api/events/javazone_2016/sessions';
+import sessions from '../sessions.json';
+//const baseUrl = 'https://sleepingpill.javazone.no/public/allSessions/javazone_2016';
+const baseUrl = `${sessions}`;
 
 export function getAllSessions() {
-    return request.get(baseUrl);
+    return fetch(baseUrl);
 }
 
 export function getSingleSession(url) {
