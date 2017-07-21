@@ -23,6 +23,8 @@ const defaultSettings = {
 function getFormat(f) {
     if (f === 'presentation') {
         return 'icon-screen-desktop';
+    } else if (f === 'workshop') {
+        return 'icon-wrench';
     } else {
         return 'icon-energy';
     }
@@ -64,8 +66,8 @@ const getTransformedSessions = (r) => compose(
     dummyGroupBySlot,
     orderBy(['dayIndex'], ['asc']),
     groupByDay(r),
-    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
-    removeWorkshops
+    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc'])
+    //removeWorkshops
 );
 
 function getDefaultSettings() {
