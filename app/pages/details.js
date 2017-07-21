@@ -52,7 +52,7 @@ const hasVideo = constant(false);
 
 const Speaker = ({name, pictureUrl}, id) => (
     <div className='details__speaker' key={id}>
-        <img className='details__speaker-image' src={`${pictureUrl}`} />
+        <div className='details__speaker-image' style={{backgroundImage: `url(${pictureUrl})`}}></div>
         <div className='details__speaker-name'>{name}</div>
     </div>
 );
