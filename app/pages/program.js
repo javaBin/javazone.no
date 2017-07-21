@@ -296,7 +296,7 @@ const Program = React.createClass({
             <Page name='program'>
                 <Container>
                     <CBlock>
-                        <CHeader>JavaZone 2016 Program</CHeader>
+                        <CHeader>JavaZone 2017 Program</CHeader>
                     </CBlock>
 
                     {content}
