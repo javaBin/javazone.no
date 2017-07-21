@@ -50,9 +50,9 @@ const getVideo = () => {};//compose(parseVideoId, get('href'), find({rel:'video'
     }*/
 const hasVideo = constant(false);
 
-const Speaker = ({name, bildeUri}, id) => (
+const Speaker = ({name, pictureUrl}, id) => (
     <div className='details__speaker' key={id}>
-        <img className='details__speaker-image' src={`${bildeUri}?size=240`} />
+        <img className='details__speaker-image' src={`${pictureUrl}`} />
         <div className='details__speaker-name'>{name}</div>
     </div>
 );
