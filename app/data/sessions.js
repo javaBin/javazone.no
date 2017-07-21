@@ -22,7 +22,7 @@ const transformSessions = map(session => ({
     speakers: session.speakers,//getSpeakers(session.speakers),
     format: session.format,
     language: session.language,
-    id: session.slug,
+    id: session.sessionId,
     day: 'Program',
     dayIndex: 0,
     intendedAudience: session.intendedAudience,
