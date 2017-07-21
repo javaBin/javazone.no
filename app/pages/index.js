@@ -22,7 +22,7 @@ const Index = () => (
                         <Link href='/tickets' className='index__link index__link--blue'>Tickets</Link>
                     </li>
                     <li className='index__links-item'>
-                        <Link href='/speakers' className='index__link index__link--pink'>Speakers</Link>
+                        <Link href='/program' className='index__link index__link--pink'>Program</Link>
                     </li>
                     <li className='index__links-item'>
                         <Link href='/partners' className='index__link index__link--orange'>Partners</Link>
