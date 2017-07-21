@@ -1,6 +1,6 @@
 import sessions from '../sessions.json';
-//const baseUrl = 'https://sleepingpill.javazone.no/public/allSessions/javazone_2016';
-const baseUrl = `${sessions}`;
+const baseUrl = 'https://sleepingpill.javazone.no/public/allSessions/javazone_2017';
+//const baseUrl = `${sessions}`;
 
 export function getAllSessions() {
     return fetch(baseUrl);
