@@ -11,7 +11,7 @@ function mapDispatchToProps(dispatch) {
             while (el.tagName !== 'A') {
                 el = el.parentElement;
             }
-            const url = el.getAttribute('data-url');
+            const url = el.getAttribute('href');
             if (!url) {
                 return;
             }
@@ -32,7 +32,7 @@ const isModifiedEvent = (event) =>
 
 function link({href, children, className, navigate, onClick}) {
     const click = (ev) => { navigate(ev); setTimeout(() => onClick(ev), 200); };
-    return <a data-url={href} href={href} className={className} onClick={click}>{children}</a>;
+    return <a href={href} className={className} onClick={click}>{children}</a>;
 };
 
 export const Link = connect((state) => state, mapDispatchToProps)(link);
