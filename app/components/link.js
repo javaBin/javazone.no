@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 const isModifiedEvent = (event) =>
-    !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
+    !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 
 function link({href, children, className, navigate, onClick}) {
     const click = (ev) => { navigate(ev); setTimeout(() => onClick(ev), 200); };
