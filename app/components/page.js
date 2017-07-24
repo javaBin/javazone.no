@@ -36,10 +36,13 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
                         <Link href='/tickets' className='menu__link menu__link--blue' onClick={toggleMenu}>Tickets</Link>
                     </li>
                     <li className='menu__links-item'>
+                        <Link href='/program' className='menu__link menu__link--orange' onClick={toggleMenu}>Program</Link>
+                    </li>
+                    <li className='menu__links-item'>
                         <Link href='/speakers' className='menu__link menu__link--pink' onClick={toggleMenu}>Speakers</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/partners' className='menu__link menu__link--orange' onClick={toggleMenu}>Partners</Link>
+                        <Link href='/partners' className='menu__link menu__link--green' onClick={toggleMenu}>Partners</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/videos' className='menu__link menu__link--pink' onClick={toggleMenu}>Videos</Link>

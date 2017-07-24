@@ -4,11 +4,14 @@ import { connect } from 'react-redux';
 function mapDispatchToProps(dispatch) {
     return {
         navigate(ev) {
+            if (isModifiedEvent(ev) || ev.props.target) {
+                return;
+            }
             let el = ev.target;
             while (el.tagName !== 'A') {
                 el = el.parentElement;
             }
-            const url = el.getAttribute('data-url');
+            const url = el.getAttribute('href');
             if (!url) {
                 return;
             }
@@ -24,13 +27,12 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
+const isModifiedEvent = (event) =>
+    !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+
 function link({href, children, className, navigate, onClick}) {
-    if (onClick) {
-        const click = (ev) => { navigate(ev); setTimeout(() => onClick(ev), 200); };
-        return <a data-url={href} href={href} className={className} onClick={click}>{children}</a>;
-    } else {
-        return <a data-url={href} href={href} className={className} onClick={navigate}>{children}</a>;
-    }
+    const click = (ev) => { navigate(ev); setTimeout(() => onClick(ev), 200); };
+    return <a href={href} className={className} onClick={click}>{children}</a>;
 };
 
 export const Link = connect((state) => state, mapDispatchToProps)(link);
