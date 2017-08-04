@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 function mapDispatchToProps(dispatch) {
     return {
         navigate(ev) {
-            if (isModifiedEvent(ev) || ev.props.target) {
+            if (isModifiedEvent(ev) || (ev.attributes && ev.attributes.target )) {
                 return;
             }
             let el = ev.target;
