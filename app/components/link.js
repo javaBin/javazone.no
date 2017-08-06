@@ -31,7 +31,12 @@ const isModifiedEvent = (event) =>
     !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 
 function link({href, children, className, navigate, onClick}) {
-    const click = (ev) => { navigate(ev); setTimeout(() => onClick(ev), 200); };
+    const click = (ev) => {
+        navigate(ev);
+        if (onClick) {
+            setTimeout(() => onClick(ev), 200);
+        }
+    };
     return <a href={href} className={className} onClick={click}>{children}</a>;
 };
 
