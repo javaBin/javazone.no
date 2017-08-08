@@ -4,9 +4,9 @@ import { getWorkshops } from '../actions/workshops';
 import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
 import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
-import sonicpi from '../assets/kids/sonicpi.jpg';
+import sonicpi from '../assets/kids/sonicpi.png';
 import scratch from '../assets/kids/scratch.jpg';
-import appinventor from '../assets/kids/appinventor.jpg';
+import appinventor from '../assets/kids/appinventor.png';
 import { find } from 'lodash/fp';
 import kidsimage from '../assets/kids.png';
 
@@ -19,13 +19,13 @@ const kidsInfo = {
     },
     'kids_scratch': {
         background: scratch,
-        age: '11+ år',
+        age: '10+ år',
         title: 'Scratch',
         odd: false
     },
     'kids_appinventor': {
         background: appinventor,
-        age: '12+ år',
+        age: '11+ år',
         title: 'App Inventor',
         odd: true
     }
@@ -191,28 +191,35 @@ const Kids = ({workshops}) => {
 
                 <Session session={wsonicpi}>
                     <P>
-                       TODO
+                       Lær å kode ved å komponere musikk! Sonic Pi er en open-source programmeringverktoy utviklet av Dr Sam Aaron,
+                       designet for å utforske og undervise programmeringskonsepter gjennom prosessen med å skape nye lyder.
                     </P>
                     <P>
-                        Sonic Pi programvære finnes på <a href="http://sonic-pi.net/">sonic-pi.net</a>.
+                       Merk: Dette vil bli presentert på engelsk! Sonic Pi programvære finnes på <a href="http://sonic-pi.net/">sonic-pi.net</a>.
                     </P>
                 </Session>
 
                 <Session session={wscratch}>
                     <P>
-                        TODO Scratch
+                        Scratch er et visuelt programmeringsspråk som er laget for at barn
+                        og unge skal lære seg grunnleggende programmering. Språket er
+                        oversatt til norsk, og en programmerer ved å dra og sette sammen blokker med kode.
                     </P>
                     <P>
-                        TODO
+                        Dette kurset tar for seg hvordan Scratch kan introduserer til nybegynnere;
+                        veiledninger, tips, gode oppgaver, utfordringer osv. Sjekk ut kodeklubbens
+                        læringsmateriell på <a href='http://kodeklubben.github.io/scratch'>kodeklubben.github.io/scratch</a>
+                        og Scratch på <a href='scratch.mit.edu'>scratch.mit.edu</a>
                     </P>
                 </Session>
 
                 <Session session={wappinventor}>
                     <P>
-                        TODO App Inventor
+                        App Inventor er et programmeringsmiljø som brukes for å lage apps til Android-telefoner og nettbrett.
                     </P>
                     <P>
-                        TODO
+                        For å lage apps med MIT App Inventor bygger man sammen klosser på samme måte som i Scratch.
+                        Det er derfor en fordel med litt erfaring fra Scratch før du begynner med dette.
                     </P>
                 </Session>
 
