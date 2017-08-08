@@ -2,7 +2,7 @@
 
 .menu {
     &__toggle {
-        background: @black;
+        background: transparent;
         border: 0;
         cursor: pointer;
         height: 40px;
@@ -21,51 +21,49 @@
             }
 
             .menu__icon:before {
-                left: 2px;
+                left: 4px;
                 transform: skew(-40deg);
             }
 
 
             .menu__icon:after {
-                left: -7px;
+                left: -3px;
                 transform: skew(-40deg);
             }
         }
     }
 
     &__icon {
-        border: 2px solid @blue;
+        background: @blue;
         display: inline-block;
-        height: 7px;
+        height: 5px;
         transition: transform .2s, left .2s;
         transform: skew(-20deg);
         width: 40px;
 
         &:before {
-            background: transparent;
-            border: 2px solid @blue;
+            background: @blue;
             content: '';
             display: block;
-            height: 7px;
-            left: -7px;
+            height: 5px;
+            left: -4px;
             padding: 0;
             position: relative;
-            top: -13px;
+            top: -10px;
             transition: transform .2s, left .2s;
             transform: skew(40deg);
             width: 40px;
         }
 
         &:after {
-            background: transparent;
-            border: 2px solid @blue;
+            background: @blue;
             content: '';
             display: block;
-            height: 7px;
-            left: 2px;
+            height: 5px;
+            left: 4px;
             padding: 0;
             position: relative;
-            top: 2px;
+            top: 5px;
             transition: transform .2s, left .2s;
             transform: skew(40deg);
             width: 40px;
@@ -83,7 +81,7 @@
         transition: opacity .5s cubic-bezier(1, 0, 0, 1) .5s;
         transform: translateY(-100%);
         width: 100%;
-        z-index: 20;
+        z-index: 22;
 
         &--visible {
             opacity: 1;
@@ -101,7 +99,7 @@
         transition: transform .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
         transform: translateY(-100%);
         width: 100%;
-        z-index: 10;
+        z-index: 21;
 
         &--visible {
             transform: translateY(0);
@@ -117,7 +115,7 @@
         transition: transform .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
         transform: translateY(100%);
         width: 100%;
-        z-index: 10;
+        z-index: 21;
 
         &--visible {
             transform: translateY(0);

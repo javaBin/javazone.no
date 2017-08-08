@@ -21,9 +21,10 @@ import academyData from './data/academy';
 import frivillig from './pages/frivillig';
 import journeyZone from './pages/journeyzone';
 import info from './pages/info';
+import program from './pages/program';
+import details from './pages/details';
 
-const routes = {
-    '/': index,
+const routes = compile({
     '/videos': videos,
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
@@ -43,7 +44,21 @@ const routes = {
     '/frivillig': frivillig,
     '/journeyzone': journeyZone,
     '/info': info,
-};
+    '/program': program,
+    '/program/([a-zA-Z0-9_]+)': details,
+    '/': index,
+});
+
+function compile(routes) {
+    const compiled = [];
+    Object.keys(routes).forEach(route => {
+        compiled.push({
+            pattern: new RegExp(`^${route.replace(/\//g, '\\/')}$`),
+            page: routes[route]
+        });
+    });
+    return compiled;
+}
 
 function dispatchPage(pathname) {
     store.dispatch({
@@ -74,7 +89,9 @@ export function getPage(requestedPage) {
         requestedPage = requestedPage.substring(0, requestedPage.length - 1);
     }
 
-    const page = routes[requestedPage];
+    const page = routes.find((routes) => {
+        return routes.pattern.test(requestedPage);
+    });
     if (!page) {
         pageview('/404');
         return notFound;
@@ -82,13 +99,18 @@ export function getPage(requestedPage) {
 
     pageview(requestedPage);
 
-    if (page.component) {
-        if (page.action) {
-            store.dispatch(page.action());
+    if (page && page.page.component) {
+        if (page.page.action) {
+            store.dispatch(page.page.action());
         }
-        return page.component;
+        return page.page.component;
     } else {
-        return page;
+        const match = requestedPage.match(page.pattern);
+        if (match.length > 1) {
+            return page.page(match[1]);
+        } else {
+            return page.page;
+        }
     }
 };
 

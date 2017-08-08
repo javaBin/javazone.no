@@ -21,8 +21,10 @@ export function getSessions() {
     return function(dispatch) {
         dispatch(fetchSessions());
 
-        return getAllSessions().end((err, res) => {
-            dispatch(receiveSessions(getTransformedSessions(res.body)));
+        return getAllSessions().then((res) => {
+            return res.json();
+        }).then((json) => {
+            dispatch(receiveSessions(getTransformedSessions(json.sessions)));
         });
     };
 };
