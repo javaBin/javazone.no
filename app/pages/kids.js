@@ -127,7 +127,7 @@ const Kids = ({workshops}) => {
                             JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
                             søndag 10. september for å gi dem en smakebit på
-                            voksenlivet. Vi kjører 4 parallelle sesjoner,
+                            voksenlivet. Vi kjører 3 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
                             barna og de største ungdommene.
                         </P>
@@ -202,7 +202,7 @@ const Kids = ({workshops}) => {
                         oversatt til norsk, og en programmerer ved å dra og sette sammen blokker med kode.
                     </P>
                     <P>
-                        Dette kurset tar for seg hvordan Scratch kan introduserer til nybegynnere;
+                        Dette kurset tar for seg hvordan Scratch kan introduseres til nybegynnere;
                         veiledninger, tips, gode oppgaver, utfordringer osv. Sjekk ut kodeklubbens
                         læringsmateriell på <a href='https://kodeklubben.github.io/scratch'>kodeklubben.github.io/scratch</a>
                         og Scratch på <a href='https://scratch.mit.edu'>scratch.mit.edu</a>
