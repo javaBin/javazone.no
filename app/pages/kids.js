@@ -134,11 +134,7 @@ const Kids = ({workshops}) => {
                         <P>
                             Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
                             har lang erfaring med å arrangere kodeklubber for de
-                            minste, <a href='https://bitraf.no/'>Bitraf</a> som
-                            er Oslos fremste eksperter på bygging av kule ting,
-                            og <a href="https://kodegenet.no">Kodegenet</a> som til
-                            daglig arrangerer spennende og
-                            engasjerende kursopplegg for barn og unge.
+                            minste.
                         </P>
                     </CContent>
                 </CBlock>
