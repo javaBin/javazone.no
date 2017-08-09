@@ -14,7 +14,7 @@ const kidsInfo = {
     'kids_sonicpi': {
         background: sonicpi,
         age: '13+ år',
-        title: 'Sonic Pi med Sam Aaron',
+        title: 'Compose with code',
         odd: true
     },
     'kids_scratch': {
@@ -26,7 +26,7 @@ const kidsInfo = {
     'kids_appinventor': {
         background: appinventor,
         age: '11+ år',
-        title: 'App Inventor',
+        title: 'Komme igang med App Inventor',
         odd: true
     }
 };
@@ -208,8 +208,8 @@ const Kids = ({workshops}) => {
                     <P>
                         Dette kurset tar for seg hvordan Scratch kan introduserer til nybegynnere;
                         veiledninger, tips, gode oppgaver, utfordringer osv. Sjekk ut kodeklubbens
-                        læringsmateriell på <a href='http://kodeklubben.github.io/scratch'>kodeklubben.github.io/scratch</a>
-                        og Scratch på <a href='scratch.mit.edu'>scratch.mit.edu</a>
+                        læringsmateriell på <a href='https://kodeklubben.github.io/scratch'>kodeklubben.github.io/scratch</a>
+                        og Scratch på <a href='https://scratch.mit.edu'>scratch.mit.edu</a>
                     </P>
                 </Session>
 
@@ -220,6 +220,7 @@ const Kids = ({workshops}) => {
                     <P>
                         For å lage apps med MIT App Inventor bygger man sammen klosser på samme måte som i Scratch.
                         Det er derfor en fordel med litt erfaring fra Scratch før du begynner med dette.
+                        Skjekk ut MIT App Inventor pa <a href='http://appinventor.mit.edu'>appinventor.mit.edu</a>.
                     </P>
                 </Session>
 
