@@ -98,7 +98,7 @@ const Session = ({session, children}) => {
     );
 
     return (
-        <div className='kids__event'>
+        <div className={ `kids__event ${!extra.odd ? 'kids__event--reverse' : ''}` }>
             {extra.odd ? image : info }
             {!extra.odd ? image : info}
         </div>
