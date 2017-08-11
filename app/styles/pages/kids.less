@@ -1,6 +1,20 @@
 .kids {
     &__event {
         display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+
+        @media (min-width: @size-s) {
+            margin-bottom: 0;
+        }
+
+        &--reverse {
+            flex-direction: column-reverse;
+            
+            @media (min-width: @size-s) {
+                flex-direction: row;
+            }
+        }
     }
 
      &__largeimage {
@@ -10,8 +24,14 @@
     }
 
     &__image {
+        padding: 20px 0;
         position: relative;
-        width: 50%;
+        width: 100%;
+
+        @media (min-width: @size-s) {
+            padding: 0;
+            width: 50%;
+        }
     }
 
     &__separator {
@@ -19,17 +39,25 @@
     }
 
     &__info {
-        padding: 2rem 0;
-        width: 50%;
+        width: 100%;
+
+        @media (min-width: @size-s) {
+            padding: 2rem 0;
+            width: 50%;
+        }
 
         &--right {
-            padding-left: 2rem;
-            padding-right: 1rem;
+            @media (min-width: @size-s) {
+                padding-left: 2rem;
+                padding-right: 1rem;
+            }
         }
 
         &--left {
-            padding-right: 2rem;
-            padding-left: 1rem;
+            @media (min-width: @size-s) {
+                padding-right: 2rem;
+                padding-left: 1rem;
+            }
         }
     }
 
