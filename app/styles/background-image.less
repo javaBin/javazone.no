@@ -2,13 +2,17 @@
 
 .background-image {
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 200px;
     position: static;
     width: 100%;
 
     @media (min-width: @size-s) {
+        height: 100%;
+    }
+
+    @media (min-width: @size-m) {
         height: 100%;
         left: 0;
         position: absolute;
