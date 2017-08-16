@@ -17,17 +17,22 @@ const Tickets = () => (
         <Container>
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader><span className='green'>Get your JavaZone tickets</span></CHeader>
+                <CHeader><span className='pink'>We are completely sold out of the JavaZone 2017 tickets</span></CHeader>
                 <CContent>
-                    <div className="partners__mainprice">NOK 6.490,-</div>
+                    <div className="partners__mainprice strikethrough">NOK 6.490,-</div>
                     <P>
-                        Get your JavaZone ticket now. It includes full access to the conference <br />
+                        The JavaZone Ticket includes full access to the conference <br />
                         and entry to workshops on Tuesday (limited seating: first come, first served).<br />
                         The price also includes a 1 year membership in javaBin, the Norwegian Java User Group<br />
                         <span className="partners__vat">prices ex VAT</span>
                     </P>
+                </CContent>
+                <CHeader><span className='green'>Waiting list</span></CHeader>
+                <CContent>
                     <P>
-                        <a className='button button--transparent' href='https://www.eventbrite.com/e/javazone-2017-tickets-29971845597'>Buy your JavaZone 2017 ticket now</a>
+                        <br />You can sign up for our ticket waiting list, <br />and we'll contact you should any tickets become available.
+                        <br /><br />
+                        <a className='button button--transparent' href="https://goo.gl/forms/kel6213ZvCozTBSr2">Enter the Ticket Waiting List</a>
                     </P>
                 </CContent>
             </CBlock>
@@ -61,7 +66,9 @@ const Tickets = () => (
                     <P>
                         Paying by invoice can be accommodated if required, but please consider buying the tickets using the webshop if you can. You’ll get a receipt which can be used for reimbursements even when paying with credit card.
                         <br />
-                        Request your invoice here: <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">Invoice request form</a>.
+                        <span className='strikethrough'>Request your invoice here: <a href="https://goo.gl/forms/1vJi5DrpBO279Gyl2">Invoice request form</a></span>.
+                        <br />
+                        Tickets are sold out...
                     </P>
                 </Content>
             </Block>
