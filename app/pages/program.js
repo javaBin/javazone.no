@@ -31,6 +31,7 @@ function getFormat(f) {
 }
 
 const removeWorkshops = filter(session => session.format !== 'workshop');
+const onlyWorkshops = filter(session => session.format === 'workshop');
 
 const groupByDay = (r) => reduce((acc, session) => {
     let key = find({day: session.day}, acc);
@@ -66,8 +67,8 @@ const getTransformedSessions = (r) => compose(
     dummyGroupBySlot,
     orderBy(['dayIndex'], ['asc']),
     groupByDay(r),
-    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc'])
-    //removeWorkshops
+    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
+    removeWorkshops
 );
 
 function getDefaultSettings() {
@@ -248,6 +249,23 @@ const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEn
     </div>
 );
 
+const Workshops = ({workshops, state, toggleFavorite}) => (
+        <div>
+            <ul className='sessions'>
+                <li className='sessions__day'>
+                    <div className={`sessions__format-title sessions__format-title--workshop`}>Workshop</div>
+                    <ul className='sessions__slots'>
+                        <li className='sessions__slot slot' >
+                            <ul className='slot__sessions'>
+                                {workshops.map((session, id) => Session(session, id, state, toggleFavorite))}
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    );
+
 const Program = React.createClass({
 
     getInitialState() {
@@ -295,6 +313,12 @@ const Program = React.createClass({
         return (
             <Page name='program'>
                 <Container>
+                    {!this.props.isFetching &&
+                        <Workshops
+                            workshops={onlyWorkshops(this.props.sessions)}
+                            state={this.state}
+                            toggleFavorite={this.toggleFavorite} />}
+
                     {content}
                 </Container>
             </Page>
