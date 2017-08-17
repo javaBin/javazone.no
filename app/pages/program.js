@@ -253,7 +253,7 @@ const Workshops = ({workshops, state, toggleFavorite}) => (
         <div>
             <ul className='sessions'>
                 <li className='sessions__day'>
-                    <div className={`sessions__format-title sessions__format-title--workshop`}>Workshop</div>
+                    <div className={`sessions__format-title sessions__format-title--workshop`}>Workshops</div>
                     <ul className='sessions__slots'>
                         <li className='sessions__slot slot' >
                             <ul className='slot__sessions'>
