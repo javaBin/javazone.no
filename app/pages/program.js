@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Link } from '../components/link';
 import { store } from '../store';
 import { getSessions } from '../actions/sessions';
-import { Page, PageHeading, Container } from '../components/page';
+import { Page, PageHeading, Container, Heading, LargeHeading, SmallHeading } from '../components/page';
 import { Block, Header, Content, P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find, groupBy } from 'lodash/fp';
@@ -313,10 +313,6 @@ const Program = React.createClass({
         return (
             <Page name='program'>
                 <Container>
-                    <CBlock>
-                        <CHeader>JavaZone 2017 Program</CHeader>
-                    </CBlock>
-
                     {!this.props.isFetching &&
                         <Workshops
                             workshops={onlyWorkshops(this.props.sessions)}
