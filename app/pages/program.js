@@ -31,7 +31,6 @@ function getFormat(f) {
 }
 
 const removeWorkshops = filter(session => session.format !== 'workshop');
-const onlyWorkshops = filter(session => session.format === 'workshop');
 
 const groupByDay = (r) => reduce((acc, session) => {
     let key = find({day: session.day}, acc);
@@ -63,8 +62,7 @@ const dummyGroupBySlot = map(({day, slots}) => {
 });
 
 const getTransformedSessions = (r) => compose(
-    //groupBySlot,
-    dummyGroupBySlot,
+    groupBySlot,
     orderBy(['dayIndex'], ['asc']),
     groupByDay(r),
     orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
@@ -133,8 +131,7 @@ const Session = ({title, speakers, icon, room, language, duration, id, video, fo
         </button>
         <div className='session__speakers'>
             <span className='session__mobile-lang'>{language}</span>
-            {/*<span className='session__duration'>{duration} min</span>*/}
-            <span className={`${getFormat(format)} session__format`}></span>
+            <span className='session__duration'>{duration} min</span>
             {speakers.map(speaker => speaker.name).join(', ')}
         </div>
     </li>
@@ -148,8 +145,8 @@ const Lightning = ({title, duration, language, speakers, id, video}, key) => (
         <Link className='lightning__title' href={`/program/${id}`}>{title}</Link>
         <div>
             <span className='lightning__language'>{language}</span>
-            { /*<span className='lightning__duration'>{duration} min</span>*/}
-            <span className='lightning__speakers'>{speakers}</span>
+            <span className='lightning__duration'>{duration} min</span>
+            <span className='lightning__speakers'>{speakers.map(s => s.name).join(', ')}</span>
         </div>
     </div>
 );
@@ -249,23 +246,6 @@ const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEn
     </div>
 );
 
-const Workshops = ({workshops, state, toggleFavorite}) => (
-        <div>
-            <ul className='sessions'>
-                <li className='sessions__day'>
-                    <div className={`sessions__format-title sessions__format-title--workshop`}>Workshops</div>
-                    <ul className='sessions__slots'>
-                        <li className='sessions__slot slot' >
-                            <ul className='slot__sessions'>
-                                {workshops.map((session, id) => Session(session, id, state, toggleFavorite))}
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    );
-
 const Program = React.createClass({
 
     getInitialState() {
@@ -304,6 +284,7 @@ const Program = React.createClass({
     },
 
     render() {
+        console.log(getTransformedSessions([])(this.props.sessions));
         const content = this.props.isFetching
             ? Loading()
             : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
@@ -313,12 +294,6 @@ const Program = React.createClass({
         return (
             <Page name='program'>
                 <Container>
-                    {!this.props.isFetching &&
-                        <Workshops
-                            workshops={onlyWorkshops(this.props.sessions)}
-                            state={this.state}
-                            toggleFavorite={this.toggleFavorite} />}
-
                     {content}
                 </Container>
             </Page>
