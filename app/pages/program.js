@@ -284,7 +284,6 @@ const Program = React.createClass({
     },
 
     render() {
-        console.log(getTransformedSessions([])(this.props.sessions));
         const content = this.props.isFetching
             ? Loading()
             : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
