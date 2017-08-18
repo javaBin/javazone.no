@@ -23,7 +23,7 @@ import journeyZone from './pages/journeyzone';
 import info from './pages/info';
 import program from './pages/program';
 import details from './pages/details';
-import workshops from './pages/workshops'
+import workshops from './pages/workshops';
 
 const routes = compile({
     '/videos': videos,
