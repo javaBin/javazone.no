@@ -32,10 +32,10 @@ const transformSessions = map(session => ({
     //day: moment(session.starter).format('dddd'),
     //dayIndex: moment(session.starter).format('D'),
     //timestamp: unix(session.starter),
-    //start: moment(session.starter).format('HH:mm'),
-    //end: moment(session.starter).add(1, 'hour').format('HH:mm'),
-    //duration: moment(session.stopper).diff(moment(session.starter), session.format === 'workshop' ? 'hours' : 'minutes'),
-    //time: moment(session.starter).format('MMMM Do, HH:mm'),
+    start: moment(session.startTime).format('HH:mm'),
+    end: moment(session.endTime),
+    duration: moment(session.endTime).diff(moment(session.startTime), session.format === 'workshop' ? 'hours' : 'minutes'),
+    time: moment(session.startTime).format('MMMM Do, HH:mm'),
     //video: getVideo(session.links)
 }));
 
