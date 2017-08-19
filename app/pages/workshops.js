@@ -137,7 +137,7 @@ const Workshops = React.createClass({
                         <CHeader>Welcome to the JavaZone 2017 Workshops!</CHeader>
                         <CContent>
                             <p>
-                                For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 12th of August, so put a reminder in your calendar!
+                                For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 1st of September, so put a reminder in your calendar!
                             </p>
                         </CContent>
                     </CBlock>
