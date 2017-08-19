@@ -51,7 +51,7 @@ function workshopUrl(workshop) {
     if (!workshop) {
         return '#';
     }
-    return `https://javazone.no/moosehead/#/register/${workshop.mooseheadId}`;
+    return `https://javazone.no/moosehead/#/register/${workshop.id}`;
 }
 
 function workshopClass(workshop) {
@@ -71,7 +71,7 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Opens at August 12th, 12.00';
+        return 'Opens at September 1st, 12.00';
     }
 
     switch (workshop.status) {
@@ -80,7 +80,7 @@ function workshopStatus(workshop) {
     case 'FULL': return 'Waiting list';
     case 'VERY_FULL': return 'No more spots';
     case 'CLOSED': return 'Registration closed';
-    default: return 'Opens at August 12th, 12.00';
+    default: return 'Opens at September 1st, 12.00';
     }
 }
 
@@ -134,7 +134,7 @@ const Workshops = React.createClass({
             <Page name='workshops'>
                 <Container>
                     <CBlock>
-                        <CHeader>Welcome to the JavaZone 2016 Workshops!</CHeader>
+                        <CHeader>Welcome to the JavaZone 2017 Workshops!</CHeader>
                         <CContent>
                             <p>
                                 For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 12th of August, so put a reminder in your calendar!
