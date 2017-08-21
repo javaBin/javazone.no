@@ -23,6 +23,7 @@ import journeyZone from './pages/journeyzone';
 import info from './pages/info';
 import program from './pages/program';
 import details from './pages/details';
+import workshops from './pages/workshops';
 
 const routes = compile({
     '/videos': videos,
@@ -46,6 +47,7 @@ const routes = compile({
     '/info': info,
     '/program': program,
     '/program/([a-zA-Z0-9_]+)': details,
+    '/workshops': workshops,
     '/': index,
 });
 
