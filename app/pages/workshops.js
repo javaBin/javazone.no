@@ -89,7 +89,7 @@ const Workshop = (workshop, key) => (
         <span className='workshop__lang workshop__lang--desktop'>{workshop.language}</span>
         <div className='workshop__info'>
             <span className='workshop__lang workshop__lang--mobile'>{workshop.language}</span>
-            <Link to={`/program/${workshop.id}`} className='workshop__title'>{workshop.title}</Link>
+            <Link href={`/program/${workshop.details}`} className='workshop__title'>{workshop.title}</Link>
             <div className='workshop__starts'>
                 {workshop.time} – {workshop.duration} hours
             </div>
@@ -115,7 +115,9 @@ function merge(workshops, sessions) {
 
     return workshops.map((workshop) => {
         const s = find((session) => session.title === workshop.title, sessions);
-        return assignInAll([{}, s, workshop]);
+        const merged = assignInAll([{}, s, workshop]);
+        merged.details = s.id;
+        return merged;
     });
 }
 
