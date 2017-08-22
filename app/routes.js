@@ -13,6 +13,7 @@ import academyLocation from './pages/academy-program.js';
 import expo from './pages/expo';
 import kids from './pages/kids';
 import speakers from './pages/speakers';
+import speakerinfo from './pages/speakerinfo';
 import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
 import tickets from './pages/tickets';
@@ -41,6 +42,7 @@ const routes = compile({
     '/academy/trondheim': academyLocation(academyData.trondheim),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers,
+    '/speakers/info': speakerinfo,
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,
