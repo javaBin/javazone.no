@@ -50,6 +50,22 @@ const Speakers = () => (
         </Container>
 
         <Container>
+
+            <CBlock>
+                <CHeader><span className='blue'>Presenting at JavaZone 2017?</span></CHeader>
+                <CContent>
+                    <P>
+                        <br />
+                        Are you presenting at JavaZone 2017? Cool! We have some more info for you here.
+                    </P>
+                    <P>
+                        <a href='/speakers/info' className='button button--transparent'>
+                            <span className='button__icon'></span> See all the info for speakers
+                        </a>
+                    </P>
+                </CContent>
+            </CBlock>
+
             <CBlock>
                 <CHeader><span className='green'>About JavaZone</span></CHeader>
                 <CContent>
@@ -66,7 +82,7 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <a href='http://submit.javazone.no' className='button button--transparent'>
-                            <span className='button__icon icon-check'></span> Manage your submissions
+                            <span className='button__icon'></span> Manage your submissions
                         </a>
                     </P>
                     <P>
