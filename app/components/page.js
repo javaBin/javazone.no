@@ -39,19 +39,19 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
                         <Link href='/program' className='menu__link menu__link--orange' onClick={toggleMenu}>Program</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/workshops' className='menu__link menu__link--blue' onClick={toggleMenu}>Workshops</Link>
+                        <Link href='/workshops' className='menu__link menu__link--pink' onClick={toggleMenu}>Workshops</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/speakers' className='menu__link menu__link--pink' onClick={toggleMenu}>Speakers</Link>
+                        <Link href='/speakers' className='menu__link menu__link--blue' onClick={toggleMenu}>Speakers</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/partners' className='menu__link menu__link--green' onClick={toggleMenu}>Partners</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/videos' className='menu__link menu__link--pink' onClick={toggleMenu}>Videos</Link>
+                        <Link href='/videos' className='menu__link menu__link--orange' onClick={toggleMenu}>Videos</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/frivillig' className='menu__link menu__link--orange' onClick={toggleMenu}>Frivillig</Link>
+                        <Link href='/frivillig' className='menu__link menu__link--pink' onClick={toggleMenu}>Frivillig</Link>
                     </li>
                     <li className='menu__links-item'>
                         <Link href='/journeyzone' className='menu__link menu__link--green' onClick={toggleMenu}>JourneyZone</Link>
@@ -60,7 +60,7 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
                         <Link href='/kids' className='menu__link menu__link--blue' onClick={toggleMenu}>Kids</Link>
                     </li>
                     <li className='menu__links-item'>
-                        <Link href='/academy-september' className='menu__link menu__link--pink' onClick={toggleMenu}>Academy</Link>
+                        <Link href='/academy-september' className='menu__link menu__link--orange' onClick={toggleMenu}>Academy</Link>
                     </li>
                 </ul>
         </div>
