@@ -115,7 +115,7 @@ export default () => (
                 <li className='frivillig__question'>
                     <div className='frivillig__header blue'>Spread the Word!</div>
                     <div className='frivillig__answer'>
-                        Help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We will also publish the videos of your talk during or immediately after the conference, so please share these with your network as well.
+                        Please help us spread the word by tweeting about your talk. Use the hashtag #JavaZone, and we’ll make sure to retweet you. We will also publish the videos of your talk during or immediately after the conference, so please share these with your network as well.
                     </div>
                 </li>
             </ul>
