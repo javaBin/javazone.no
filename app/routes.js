@@ -8,6 +8,7 @@ import partnermoteApril from './pages/partnermote-april.js';
 import partnermoteJuni from './pages/partnermote-juni.js';
 import konkurranse from './pages/konkurranse';
 import academy from './pages/academy';
+import academySeptember from './pages/academy-september.js';
 import academyLocation from './pages/academy-program.js';
 import expo from './pages/expo';
 import kids from './pages/kids';
@@ -33,6 +34,7 @@ const routes = compile({
     '/partnermote-juni': partnermoteJuni,
     '/konkurranse': konkurranse,
     '/academy': academy,
+    '/academy-september': academySeptember,
     '/expo': expo,
     '/kids': kids,
     '/academy/oslo': academyLocation(academyData.oslo),
