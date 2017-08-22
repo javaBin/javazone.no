@@ -119,7 +119,6 @@ export default () => (
                     </div>
                 </li>
             </ul>
-
             <img className='partners__image' src={speakers3} />
 
             <CBlock>
