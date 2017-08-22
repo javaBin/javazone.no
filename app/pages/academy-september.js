@@ -34,7 +34,7 @@ export default () => (
                         We invite you to take part in the JavaZone experience in Oslo Spektrum for a full day.
                     </p>
                     <p>
-                        You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday, September 8th.
+                        You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday, September 14th.
                         You will be able to attend <a href="/program">all the talks</a>, mingle in the expo area, talk to <a href="/partners">our partners</a>, taste our great food,
                         and all in all have a great time learning new stuff.
                     </p>
