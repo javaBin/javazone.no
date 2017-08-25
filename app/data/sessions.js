@@ -28,13 +28,13 @@ const transformSessions = map(session => ({
     intendedAudience: session.intendedAudience,
     abstract: session.abstract,
     room: getRoom(session.room),
-    day: moment(session.startTime).format('dddd'),
-    dayIndex: moment(session.startTime).format('D'),
-    timestamp: unix(session.startTime),
-    start: moment(session.startTime).format('HH:mm'),
-    end: moment(session.endTime),
-    duration: moment(session.endTime).diff(moment(session.startTime), session.format === 'workshop' ? 'hours' : 'minutes'),
-    time: moment(session.startTime).format('MMMM Do, HH:mm'),
+    day: moment(session.startTimeZulu).format('dddd'),
+    dayIndex: moment(session.startTimeZulu).format('D'),
+    timestamp: unix(session.startTimeZulu),
+    start: moment(session.startTimeZulu).format('HH:mm'),
+    end: moment(session.endTimeZulu),
+    duration: moment(session.endTimeZulu).diff(moment(session.startTimeZulu), session.format === 'workshop' ? 'hours' : 'minutes'),
+    time: moment(session.startTimeZulu).format('MMMM Do, HH:mm'),
     //video: getVideo(session.links)
 }));
 
