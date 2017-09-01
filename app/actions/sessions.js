@@ -9,6 +9,7 @@ function fetchSessions() {
 };
 
 export const RECEIVE_SESSIONS = 'RECEIVE_SESSIONS';
+export const RECEIVE_FAILED = 'RECEIVE_FAILED';
 
 function receiveSessions(sessions) {
     return {
@@ -16,6 +17,12 @@ function receiveSessions(sessions) {
         sessions
     };
 };
+
+function receiveFailed() {
+    return {
+        type: RECEIVE_FAILED
+    };
+}
 
 export function getSessions() {
     return function(dispatch) {
@@ -25,6 +32,8 @@ export function getSessions() {
             return res.json();
         }).then((json) => {
             dispatch(receiveSessions(getTransformedSessions(json.sessions)));
+        }).catch(() => {
+            dispatch(receiveFailed());
         });
     };
 };
