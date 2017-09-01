@@ -89,7 +89,7 @@ const Day = ({slots, day}, key) => (
 
 const Loading = () => (
     <div className='program__loading'>
-        Hold on! I’m trying to get hold of the program right as we speak. Shouldn’t take too long!
+        Loading...
     </div>
 );
 
