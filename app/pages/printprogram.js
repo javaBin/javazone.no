@@ -23,7 +23,7 @@ const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([])(slo
 const createSlots = reduce((acc, session) => {
     let slot = last(acc);
     if ((!slot || slot.timestamp !== session.timestamp) && session.format === 'presentation') {
-      slot = {timestamp: session.timestamp, start: session.start, end: session.end, sessions: { 'presentation': [], 'lightning-talk': []}};
+        slot = {timestamp: session.timestamp, start: session.start, end: session.end, sessions: { 'presentation': [], 'lightning-talk': []}};
         acc.push(slot);
     }
     slot.sessions[session.format].push(session);

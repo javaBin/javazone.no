@@ -26,7 +26,7 @@ import info from './pages/info';
 import program from './pages/program';
 import details from './pages/details';
 import workshops from './pages/workshops';
-import printprogram from './pages/printprogram'
+import printprogram from './pages/printprogram';
 
 const routes = compile({
     '/videos': videos,
