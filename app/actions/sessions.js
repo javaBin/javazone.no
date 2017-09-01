@@ -19,9 +19,9 @@ function receiveSessions(sessions) {
 };
 
 function receiveFailed() {
-  return {
-    type: RECEIVE_FAILED
-  };
+    return {
+        type: RECEIVE_FAILED
+    };
 }
 
 export function getSessions() {

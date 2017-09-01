@@ -114,7 +114,7 @@ const Failure = () => (
       <h2 className='program__loading-header'>Woooops!</h2>
       It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
   </div>
-)
+);
 
 function merge(workshops, sessions) {
     if (workshops.length === 0 || !sessions || sessions.length === 0) {
@@ -135,7 +135,7 @@ const WorkshopList = ({ workshops }) =>
         <ul className='workshop-list__workshops'>
             {workshops.map(Workshop)}
         </ul>
-    </div>
+    </div>;
 
 const Workshops = React.createClass({
     componentWillMount() {
@@ -144,14 +144,13 @@ const Workshops = React.createClass({
     },
 
     render() {
-      console.log(this.props);
         const workshops = filter(s => s.format === 'workshop')(this.props.sessions);
         const workshopTitles = map(w => w.title)(workshops);
         const jzWorkshops = filter(isJzWorkshop(workshopTitles))(this.props.workshops);
         const mergedWorkshops = merge(jzWorkshops, workshops);
         const content = this.props.failure
             ? <Failure />
-            : <WorkshopList workshops={mergedWorkshops}/>
+            : <WorkshopList workshops={mergedWorkshops}/>;
         return (
             <Page name='workshops'>
                 <Container>

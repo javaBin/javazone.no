@@ -211,7 +211,7 @@ const Failure = () => (
       <h2 className='program__loading-header'>Woooops!</h2>
       It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
   </div>
-)
+);
 
 function showEmptyMyProgram(state) {
     return state.show === 'my' && state.myprogram.length === 0;

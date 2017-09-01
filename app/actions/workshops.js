@@ -18,9 +18,9 @@ function receiveWorkshops(workshops) {
 };
 
 function receiveFailed() {
-  return {
-    type: RECEIVE_FAILED
-  }
+    return {
+        type: RECEIVE_FAILED
+    };
 }
 
 export function getWorkshops() {
@@ -33,6 +33,6 @@ export function getWorkshops() {
             dispatch(receiveWorkshops(workshops));
         }).catch(() => {
             dispatch(receiveFailed());
-        })
+        });
     };
 };
