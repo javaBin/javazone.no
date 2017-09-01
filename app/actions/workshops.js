@@ -8,6 +8,7 @@ function fetchWorkshops() {
 };
 
 export const RECEIVE_WORKSHOPS = 'RECEIVE_WORKSHOPS';
+export const RECEIVE_FAILED = 'RECEIVE_FAILED';
 
 function receiveWorkshops(workshops) {
     return {
@@ -15,6 +16,12 @@ function receiveWorkshops(workshops) {
         workshops
     };
 };
+
+function receiveFailed() {
+  return {
+    type: RECEIVE_FAILED
+  }
+}
 
 export function getWorkshops() {
     return function(dispatch) {
@@ -24,6 +31,8 @@ export function getWorkshops() {
             return res.json();
         }).then((workshops) => {
             dispatch(receiveWorkshops(workshops));
-        });
+        }).catch(() => {
+            dispatch(receiveFailed());
+        })
     };
 };

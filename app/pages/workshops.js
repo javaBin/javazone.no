@@ -104,9 +104,17 @@ const Workshop = (workshop, key) => (
 function mapStateToProps(state) {
     return {
         workshops: state.workshops.workshops,
-        sessions: state.sessions.sessions
+        sessions: state.sessions.sessions,
+        failure: state.workshops.failure
     };
 }
+
+const Failure = () => (
+  <div className='program__loading'>
+      <h2 className='program__loading-header'>Woooops!</h2>
+      It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
+  </div>
+)
 
 function merge(workshops, sessions) {
     if (workshops.length === 0 || !sessions || sessions.length === 0) {
@@ -121,6 +129,14 @@ function merge(workshops, sessions) {
     });
 }
 
+const WorkshopList = ({ workshops }) =>
+    <div className='workshop-list'>
+        <div className='workshop-list__title'>Workshops</div>
+        <ul className='workshop-list__workshops'>
+            {workshops.map(Workshop)}
+        </ul>
+    </div>
+
 const Workshops = React.createClass({
     componentWillMount() {
         this.props.getWorkshops();
@@ -128,10 +144,14 @@ const Workshops = React.createClass({
     },
 
     render() {
+      console.log(this.props);
         const workshops = filter(s => s.format === 'workshop')(this.props.sessions);
         const workshopTitles = map(w => w.title)(workshops);
         const jzWorkshops = filter(isJzWorkshop(workshopTitles))(this.props.workshops);
         const mergedWorkshops = merge(jzWorkshops, workshops);
+        const content = this.props.failure
+            ? <Failure />
+            : <WorkshopList workshops={mergedWorkshops}/>
         return (
             <Page name='workshops'>
                 <Container>
@@ -143,13 +163,8 @@ const Workshops = React.createClass({
                             </p>
                         </CContent>
                     </CBlock>
+                    {content}
 
-                    <div className='workshop-list'>
-                        <div className='workshop-list__title'>Workshops</div>
-                        <ul className='workshop-list__workshops'>
-                            {mergedWorkshops.map(Workshop)}
-                        </ul>
-                    </div>
                 </Container>
             </Page>
         );
