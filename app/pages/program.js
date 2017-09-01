@@ -93,7 +93,8 @@ function saveSettings(settings) {
 function mapStateToProps(state) {
     return {
         isFetching: state.sessions.isFetching,
-        sessions: state.sessions.sessions
+        sessions: state.sessions.sessions,
+        failure: state.sessions.failure
     };
 }
 
@@ -205,6 +206,13 @@ const Loading = () => (
     </div>
 );
 
+const Failure = () => (
+  <div className='program__loading'>
+      <h2 className='program__loading-header'>Woooops!</h2>
+      It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
+  </div>
+)
+
 function showEmptyMyProgram(state) {
     return state.show === 'my' && state.myprogram.length === 0;
 }
@@ -284,7 +292,9 @@ const Program = React.createClass({
     },
 
     render() {
-        const content = this.props.isFetching
+        const content = this.props.failure
+            ? <Failure />
+            : this.props.isFetching
             ? Loading()
             : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
 
