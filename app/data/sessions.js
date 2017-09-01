@@ -32,7 +32,7 @@ const transformSessions = map(session => ({
     dayIndex: moment(session.startTimeZulu).format('D'),
     timestamp: unix(session.startTimeZulu),
     start: moment(session.startTimeZulu).format('HH:mm'),
-    end: moment(session.endTimeZulu),
+    end: moment(session.endTimeZulu).format('HH:mm'),
     duration: moment(session.endTimeZulu).diff(moment(session.startTimeZulu), session.format === 'workshop' ? 'hours' : 'minutes'),
     time: moment(session.startTimeZulu).format('MMMM Do, HH:mm'),
     //video: getVideo(session.links)
