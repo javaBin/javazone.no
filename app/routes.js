@@ -26,6 +26,7 @@ import info from './pages/info';
 import program from './pages/program';
 import details from './pages/details';
 import workshops from './pages/workshops';
+import printprogram from './pages/printprogram'
 
 const routes = compile({
     '/videos': videos,
@@ -52,6 +53,7 @@ const routes = compile({
     '/program': program,
     '/program/([a-zA-Z0-9_]+)': details,
     '/workshops': workshops,
+    '/print': printprogram,
     '/': index,
 });
 
