@@ -11,7 +11,7 @@ export function sessions(state = initialState, action) {
     case REQUEST_SESSIONS:
         return Object.assign({}, state, {isFetching: true});
     case RECEIVE_SESSIONS:
-        return Object.assign({}, state, {isFetching: false, sessions: action.sessions});
+        return Object.assign({}, state, {isFetching: false, sessions: action.sessions, failure: false});
     case RECEIVE_FAILED:
         return Object.assign({}, state, {isFetching: false, failure: true});
     default:
