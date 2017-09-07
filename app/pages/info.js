@@ -183,8 +183,7 @@ const ProgramSection = () => (
             <CHeader><span className='green'>The JavaZone program</span></CHeader>
             <CContent>
                 <P><br />
-                The preliminary program is now available online.<br />
-                The full program will be published shortly.
+                The full program is now available online.
                 </P>
                 <P>
                     <a className='button button--transparent'
