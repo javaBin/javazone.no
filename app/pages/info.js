@@ -139,8 +139,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
                     boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
-                    More information about workshops will come after the summer holidays, along with more information
-                    about how to register.
+                    More information, along with the registration can be found on a dedicated page for <a href="/workshops">workshops</a>.
                 </P>
             </Content>
         </Block>
