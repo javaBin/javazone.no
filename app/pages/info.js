@@ -118,12 +118,12 @@ const BetterExplorerSection = () => (
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
                     nice to drink and some good food. We have something amazing in store for our afterparty this year!
-                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget, 
-                    and the best geeky super-party ever – AweZone! In case you are not sure where Youngstorget is, do 
-                    not despair – we are here to help! There will be signs and pointers along the road, so you will 
+                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget,
+                    and the best geeky super-party ever – AweZone! In case you are not sure where Youngstorget is, do
+                    not despair – we are here to help! There will be signs and pointers along the road, so you will
                     not get lost. :-)
                     <br />
-                    We will be at <a href="http://kulturhusetioslo.no/">Kulturhuset</a> 
+                    We will be at <a href="http://kulturhusetioslo.no/">Kulturhuset</a>
                     and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two truly
                     fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
                     More info about the party in a separate section a bit further down on this page. Just scroll. :-)
