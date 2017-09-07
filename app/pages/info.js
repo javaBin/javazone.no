@@ -239,7 +239,7 @@ const ImportantPrinciplesSection = () => (
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
-                    You can contact us by email: javazone@java.no (this goes to a small group of people, the core organizers)
+                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small group of people, the core organizers)
                     <br/><br/>
                     <strong>During the conference</strong>
                     <br />
@@ -257,7 +257,7 @@ const QuestionSection = () => (
             <CHeader><span className='blue'>Questions?</span></CHeader>
             <CContent>
                 <P><br />Do not hesitate to contact us, if you have any questions!
-                    Contact us at javazone@java.no and we’ll try our best to give you an answer.
+                    Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
                     We are so glad to see you at JavaZone 2017!
