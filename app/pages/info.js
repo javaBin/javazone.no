@@ -66,7 +66,7 @@ const TicketSection = () => (
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
                     JavaZone experience, including workshops. The number of workshop
-                    seats are limited and first-come first-served, so it pays to be quick when the registration opens.
+                    seats are limited and first-come first-served, so it pays to be quick when the <a href="/workshops">registration</a> opens.
                 </P>
             </Content>
         </Block>
@@ -107,7 +107,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
                     and categories. One of our speakers even tell us that he can write code and play music at the same time!
-                    You don't want to miss our amazing lineup. The program is just about finished, and will be released shortly.
+                    You don't want to miss our amazing lineup. The program is now finished, and is available online.
                 </P>
             </Content>
         </Block>
@@ -139,8 +139,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
                     boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
-                    More information about workshops will come after the summer holidays, along with more information
-                    about how to register.
+                    More information, along with the registration can be found on a dedicated page for <a href="/workshops">workshops</a>.
                 </P>
             </Content>
         </Block>
@@ -184,8 +183,7 @@ const ProgramSection = () => (
             <CHeader><span className='green'>The JavaZone program</span></CHeader>
             <CContent>
                 <P><br />
-                The preliminary program is now available online.<br />
-                The full program will be published shortly.
+                The full program is now available online.
                 </P>
                 <P>
                     <a className='button button--transparent'
@@ -239,7 +237,7 @@ const ImportantPrinciplesSection = () => (
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
-                    You can contact us by email: javazone@java.no (this goes to a small group of people, the core organizers)
+                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small group of people, the core organizers)
                     <br/><br/>
                     <strong>During the conference</strong>
                     <br />
@@ -257,7 +255,7 @@ const QuestionSection = () => (
             <CHeader><span className='blue'>Questions?</span></CHeader>
             <CContent>
                 <P><br />Do not hesitate to contact us, if you have any questions!
-                    Contact us at javazone@java.no and we’ll try our best to give you an answer.
+                    Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
                     We are so glad to see you at JavaZone 2017!

@@ -44,7 +44,7 @@ export default [
     {name: 'Kristoffer Moum', image: 'kristoffer_moum.jpg', url: 'https://twitter.com/kristoffer79'},
     {name: 'Hans Ove Ringstad', image: 'hans_ove_ringstad.jpg', url: 'https://twitter.com/HansOveRingstad'},
     {name: 'Gareth Western', image: 'gareth_western.jpg', url: 'https://twitter.com/gareth'},
-    {name: 'Nicolas Nordhagen', image: 'nicolas_nordhagen.jpg'},
+    {name: 'Nicolas Nordhagen', image: 'nicolas_n.jpg'},
     {name: 'Marvin Bredal Lillehaug', image: 'marvin_lillehaug.jpg', url: 'https://twitter.com/marvbl'},
     {name: 'Jan Erik Robertsen', image: 'jan_erik_robertsen.jpg'}
 ];
