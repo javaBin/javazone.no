@@ -107,7 +107,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
                     and categories. One of our speakers even tell us that he can write code and play music at the same time!
-                    You don't want to miss our amazing lineup. The program is just about finished, and will be released shortly.
+                    You don't want to miss our amazing lineup. The program is now finished, and is available online.
                 </P>
             </Content>
         </Block>
