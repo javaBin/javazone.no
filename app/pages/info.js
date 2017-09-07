@@ -66,7 +66,7 @@ const TicketSection = () => (
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
                     JavaZone experience, including workshops. The number of workshop
-                    seats are limited and first-come first-served, so it pays to be quick when the registration opens.
+                    seats are limited and first-come first-served, so it pays to be quick when the <a href="/workshops">registration</a> opens.
                 </P>
             </Content>
         </Block>
