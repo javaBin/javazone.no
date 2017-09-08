@@ -253,7 +253,8 @@ const AweZoneSection = () => (
                 <P>
                     AweZone offers a great chance to catch up with old friends, meet new ones,
                     and also experience a great line-up of entertainment!
-                    <br />
+                </P>
+                <P>
                     On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and
                     moving towards Youngstorget, and the best geeky super-party ever – AweZone!
                     In case you are not sure where Youngstorget is, do not despair – we are
