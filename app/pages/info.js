@@ -125,10 +125,12 @@ const BetterExplorerSection = () => (
                     and the best geeky super-party ever – AweZone!
                     <br />
                     <br />
-                    We will be partying at <a href="http://kulturhusetioslo.no/">Kulturhuset</a>
-                    and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two truly
-                    fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
-                    More info about the party in a separate section a bit further down on this page. Just scroll. :-)
+                    We will be partying at <a href="http://kulturhusetioslo.no/">Kulturhuset</a> and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two
+                    truly fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
+                    More info about the party in a separate section a bit further down on this page.
+                    <br />
+                    <br />
+                    Just scroll. :-)
                 </P>
             </Content>
         </Block>
@@ -242,8 +244,6 @@ const AweZoneSection = () => (
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
                     evening. As you might have heard already, this year’s AweZone will take place
                     at Kulturhuset and Himkok on September 13th, 20:00 - 24:00.
-                    <br />
-                    Of course we will also be serving great food!
                 </P>
             </CContent>
         </CBlock>
@@ -292,7 +292,10 @@ const AweZoneSection = () => (
             <Header><span className='blue'>Things to remember</span></Header>
             <Content>
                 <P>
+                    Of course we will also be serving great food!
+                    <br />
                     Bring yourself and your good mood! ;-)
+                    <br />
                     Also, due to the age limits at the party, remember to bring your regular IDs.
                     <br />
                     Admission is free, just show your wristband at the door.
