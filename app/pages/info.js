@@ -238,7 +238,7 @@ const ProgramSection = () => (
 const AweZoneSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='green'>Celebrating our 2^4th anniversary</span></CHeader>
+            <CHeader><span className='green'>AweZone: Celebrating our 2^4th anniversary</span></CHeader>
             <CContent>
                 <P><br />
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
