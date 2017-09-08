@@ -39,7 +39,7 @@ const AboutSection = () => (
                     hands on sessions, mingling, and a great party!
                 </P>
                 <P>
-                    JavaZone is organized by javaBin, the Norwegian Java User Group. Our goal is to
+                    JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
                     arrange a community-driven conference for Java developers where they can learn new things,
                     share knowledge and socialise.
                 </P>
@@ -314,15 +314,22 @@ const ImportantPrinciplesSection = () => (
             <CHeader><span className='green'>A few very important principles</span></CHeader>
             <CContent>
                 <P><br />
-                    JavaZone is a 100% community-organized conference created by javaBin. The program is chosen by our independent program committee, and they operate under the principle that no-one is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
-                    See our monetary policy for details.<br/><br/>
-                    We as organizers strive to create the best possible learning experience for all our speakers and participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that you treat your fellow conference participants with respect. We reserve the right to take any action necessary to make sure this principle is upheld.
-
-                    <br /><br />Should any unwanted event occur, we're here to help:
+                    JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
+                    program is chosen by our independent program committee, and they operate under the principle that no-one
+                    is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
+                    See our monetary policy for details.
+                    <br/><br/>
+                    We as organizers strive to create the best possible learning experience for all our speakers and
+                    participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that
+                    you treat your fellow conference participants with respect. We reserve the right to take any action
+                    necessary to make sure this principle is upheld.
+                    <br /><br />
+                    Should any unwanted event occur, we're here to help:
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
-                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small group of people, the core organizers)
+                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small 
+                    group of people, the core organizers)
                     <br/><br/>
                     <strong>During the conference</strong>
                     <br />
