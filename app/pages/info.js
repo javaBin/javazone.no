@@ -40,8 +40,8 @@ const AboutSection = () => (
                 </P>
                 <P>
                     JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
-                    arrange a community-driven conference for Java developers where they can learn new things,
-                    share knowledge and socialise.
+                    organize a community-driven conference for Java developers where they can learn new things,
+                    share knowledge, and socialise.
                 </P>
                 <P>
                     We have been arranging JavaZone since 2001 and have been excited to watch the event grow bigger
