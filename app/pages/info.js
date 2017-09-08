@@ -119,17 +119,17 @@ const BetterExplorerSection = () => (
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
                     nice to drink and some good food. We have something amazing in store for our afterparty this year!
-                    <br />
-                    <br />
+                </P>
+                <P>
                     On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget,
                     and the best geeky super-party ever – AweZone!
-                    <br />
-                    <br />
+                </P>
+                <P>
                     We will be partying at <a href="http://kulturhusetioslo.no/">Kulturhuset</a> and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two
                     truly fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
                     More info about the party in a separate section a bit further down on this page.
-                    <br />
-                    <br />
+                </P>
+                <P>
                     Just scroll. :-)
                 </P>
             </Content>
@@ -272,9 +272,11 @@ const AweZoneSection = () => (
                     and a cocktail containing the world's best cheese, Kraftkar. At Himkok
                     you can enjoy the mingling and good atmosphere of competent bartenders
                     in white coats.
-                    <br />
+                </P>
+                <P>
                     The age limit at Himkok will be 20 years and up.
-                    <br />
+                </P>
+                <P>
                     At <a href="http://kulturhusetioslo.no/">Kulturhuset</a>, which
                     has just recently moved into fantastic, new
                     premises 50 meters from Himkok, we have the pleasure of presenting
@@ -283,7 +285,8 @@ const AweZoneSection = () => (
                     you will be able to enjoy drinks, chill out areas, activities like
                     Shuffleboard, Ping Pong, or Foosball, as well as mingle with the
                     conference organizers, other participants, and our partners!
-                    <br />
+                </P>
+                <P>
                     The age limit at Kulturhuset will be 18 years and up.
                 </P>
             </Content>
