@@ -328,7 +328,7 @@ const ImportantPrinciplesSection = () => (
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
-                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small 
+                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
                     group of people, the core organizers)
                     <br/><br/>
                     <strong>During the conference</strong>
