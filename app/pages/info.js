@@ -238,7 +238,7 @@ const ProgramSection = () => (
 const AweZoneSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='green'>Celebrating our 2^4th anniversary</span></CHeader>
+            <CHeader><span className='green'>AweZone: Celebrating our 2^4th anniversary</span></CHeader>
             <CContent>
                 <P><br />
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
@@ -267,8 +267,7 @@ const AweZoneSection = () => (
             <Header><span className='orange'>So, where are we going to party?</span></Header>
             <Content>
                 <P>
-                    Well, did you know that Oslo houses the world's 42nd best bar,
-                    <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a>?
+                    Well, did you know that Oslo houses the world's 42nd best bar, <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a>?
                     This will be a special experience at the bar that has its own distillery
                     and a cocktail containing the world's best cheese, Kraftkar. At Himkok
                     you can enjoy the mingling and good atmosphere of competent bartenders
