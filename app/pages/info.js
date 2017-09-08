@@ -301,7 +301,7 @@ const AweZoneSection = () => (
         </Block>
     </Container>
 );
-                    
+
 const ImportantPrinciplesSection = () => (
     <Container>
         <CBlock>
