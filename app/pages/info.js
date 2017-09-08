@@ -22,6 +22,7 @@ const InfoPage = () => (
         <BetterExplorerSection />
         <FaqSection />
         <ProgramSection />
+        <AweZoneSection />
         <ImportantPrinciplesSection />
         <QuestionSection />
     </Page>
@@ -118,12 +119,13 @@ const BetterExplorerSection = () => (
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
                     nice to drink and some good food. We have something amazing in store for our afterparty this year!
-                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget,
-                    and the best geeky super-party ever – AweZone! In case you are not sure where Youngstorget is, do
-                    not despair – we are here to help! There will be signs and pointers along the road, so you will
-                    not get lost. :-)
                     <br />
-                    We will be at <a href="http://kulturhusetioslo.no/">Kulturhuset</a>
+                    <br />
+                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget,
+                    and the best geeky super-party ever – AweZone!
+                    <br />
+                    <br />
+                    We will be partying at <a href="http://kulturhusetioslo.no/">Kulturhuset</a>
                     and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two truly
                     fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
                     More info about the party in a separate section a bit further down on this page. Just scroll. :-)
@@ -231,6 +233,75 @@ const ProgramSection = () => (
     </Container>
 );
 
+const AweZoneSection = () => (
+    <Container>
+        <CBlock>
+            <CHeader><span className='green'>Celebrating our 2^4th anniversary</span></CHeader>
+            <CContent>
+                <P><br />
+                    AweZone is JavaZone’s traditional party which takes place on the Wednesday
+                    evening. As you might have heard already, this year’s AweZone will take place
+                    at Kulturhuset and Himkok on September 13th, 20:00 - 24:00.
+                    <br />
+                    Of course we will also be serving great food!
+                </P>
+            </CContent>
+        </CBlock>
+        <Block>
+            <Header><span className='pink'>Awesome AweZone is Awesome</span></Header>
+            <Content>
+                <P>
+                    AweZone offers a great chance to catch up with old friends, meet new ones,
+                    and also experience a great line-up of entertainment!
+                    <br />
+                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and
+                    moving towards Youngstorget, and the best geeky super-party ever – AweZone!
+                    In case you are not sure where Youngstorget is, do not despair – we are
+                    here to help! There will be signs and pointers along the road, so you will
+                    not get lost. :-)
+                </P>
+            </Content>
+        </Block>
+        <Block>
+            <Header><span className='orange'>So, where are we going to party?</span></Header>
+            <Content>
+                <P>
+                    Well, did you know that Oslo houses the world's 42nd best bar,
+                    <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a>?
+                    This will be a special experience at the bar that has its own distillery
+                    and a cocktail containing the world's best cheese, Kraftkar. At Himkok
+                    you can enjoy the mingling and good atmosphere of competent bartenders
+                    in white coats.
+                    <br />
+                    The age limit at Himkok will be 20 years and up.
+                    <br />
+                    At <a href="http://kulturhusetioslo.no/">Kulturhuset</a>, which
+                    has just recently moved into fantastic, new
+                    premises 50 meters from Himkok, we have the pleasure of presenting
+                    Teddy and The Love Gang and Greni
+                    at the stage on the 1st (a.k.a. ground) floor. On the other floors,
+                    you will be able to enjoy drinks, chill out areas, activities like
+                    Shuffleboard, Ping Pong, or Foosball, as well as mingle with the
+                    conference organizers, other participants, and our partners!
+                    <br />
+                    The age limit at Kulturhuset will be 18 years and up.
+                </P>
+            </Content>
+        </Block>
+        <Block>
+            <Header><span className='blue'>Things to remember</span></Header>
+            <Content>
+                <P>
+                    Bring yourself and your good mood! ;-)
+                    Also, due to the age limits at the party, remember to bring your regular IDs.
+                    <br />
+                    Admission is free, just show your wristband at the door.
+                </P>
+            </Content>
+        </Block>
+    </Container>
+);
+                    
 const ImportantPrinciplesSection = () => (
     <Container>
         <CBlock>
