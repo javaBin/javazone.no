@@ -123,8 +123,7 @@ const Session = ({title, speakers, icon, room, language, duration, id, video, fo
         <div className='session__title-wrapper'>
             {hasVideo(video) ?
                 <Link href={`/program/${id}`} className='session__video-title'><span className='session__mobile-video'><i className='icon-control-play'></i></span></Link> :
-                    <span></span>
-                /*<span className='session__mobile-room'>{room}</span>*/}
+                <span className='session__mobile-room'>{room}</span>}
                 <Link href={`/program/${id}`} className='session__title'>{title}</Link>
         </div>
         <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
