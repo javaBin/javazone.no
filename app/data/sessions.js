@@ -13,8 +13,6 @@ function unix(d) {
 //const getSpeakers = compose(join(', '), map('name'));
 //const getDetails = find({rel: 'detaljer'});
 //const getVideo = compose(get('href'), find({rel: 'video'}));
-const removeNotSetSessions = filter(session => session.starter !== null);
-
 const getRoom = (room) => (room || '').replace(/Room\s/, '');
 
 const transformSessions = map(session => ({
@@ -23,8 +21,6 @@ const transformSessions = map(session => ({
     format: session.format,
     language: session.language,
     id: session.sessionId,
-    day: 'Program',
-    dayIndex: 0,
     intendedAudience: session.intendedAudience,
     abstract: session.abstract,
     room: getRoom(session.room),
@@ -35,7 +31,8 @@ const transformSessions = map(session => ({
     end: moment(session.endTimeZulu).format('HH:mm'),
     duration: moment(session.endTimeZulu).diff(moment(session.startTimeZulu), session.format === 'workshop' ? 'hours' : 'minutes'),
     time: moment(session.startTimeZulu).format('MMMM Do, HH:mm'),
+    video: session.video
     //video: getVideo(session.links)
 }));
 
-export default compose(transformSessions, removeNotSetSessions);
+export default transformSessions;

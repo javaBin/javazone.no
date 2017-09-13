@@ -12,6 +12,18 @@ import _moment from 'moment';
 function moment(d) {
     return _moment(d).utcOffset(2);
 }
+function parseVideoId(videoUrl) {
+    if (!videoUrl) {
+        return undefined;
+    }
+
+    const parts = videoUrl.split('/');
+    if (parts.length < 2) {
+        return undefined;
+    }
+
+    return parts[parts.length - 1];
+}
 
 const languages = {
     'no': 'Norwegian',
@@ -42,13 +54,9 @@ function mapStateToProps(state) {
     };
 }
 
-const getVideo = () => {};//compose(parseVideoId, get('href'), find({rel:'video'}));
+const getVideo = parseVideoId;
 
-/*function hasVideo(links) {
-    const video = getVideo(links);
-    return typeof video !== 'undefined';
-    }*/
-const hasVideo = constant(false);
+const hasVideo = (video) => typeof video !== 'undefined';
 
 const Speaker = ({name, pictureUrl}, id) => (
     <div className='details__speaker' key={id}>
@@ -68,7 +76,7 @@ const Bio = ({name, bio}, id) => (
     </Block>
 );
 
-const Session = ({title, abstract, oppsummering, speakers, language, format, intendedAudience, starter, stopper, rom, links}) => (
+const Session = ({title, abstract, oppsummering, speakers, language, format, intendedAudience, starter, stopper, rom, video}) => (
     <Container>
         <CBlock>
             <div className='details__speakers'>
@@ -84,9 +92,9 @@ const Session = ({title, abstract, oppsummering, speakers, language, format, int
             }
         </CBlock>
 
-        { hasVideo(links) ?
+        { hasVideo(video) ?
             <Block className='details__video-block'>
-                <iframe className='details__video' src={`https://player.vimeo.com/video/${getVideo(links)}`} frameBorder="0" allowFullScreen></iframe>
+                <iframe className='details__video' src={`https://player.vimeo.com/video/${getVideo(video)}`} frameBorder="0" allowFullScreen></iframe>
             </Block> :
             <span></span>
         }
