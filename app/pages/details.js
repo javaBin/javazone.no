@@ -54,7 +54,7 @@ function mapStateToProps(state) {
     };
 }
 
-const getVideo = parseVideoId
+const getVideo = parseVideoId;
 
 const hasVideo = (video) => typeof video !== 'undefined';
 
