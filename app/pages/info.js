@@ -346,7 +346,7 @@ const QuestionSection = () => (
         <CBlock>
             <CHeader><span className='blue'>Questions?</span></CHeader>
             <CContent>
-                <P><br />Do not hesitate to contact us, if you have any questions!
+                <P><br />Do not hesitate to contact us, if you have any questions.
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
