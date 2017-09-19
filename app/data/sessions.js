@@ -31,8 +31,8 @@ const transformSessions = map(session => ({
     end: moment(session.endTimeZulu).format('HH:mm'),
     duration: moment(session.endTimeZulu).diff(moment(session.startTimeZulu), session.format === 'workshop' ? 'hours' : 'minutes'),
     time: moment(session.startTimeZulu).format('MMMM Do, HH:mm'),
-    video: session.video
-    //video: getVideo(session.links)
+    video: session.video,
+    speakernoteUrl: session.speakernoteUrl
 }));
 
 export default transformSessions;

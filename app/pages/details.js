@@ -57,6 +57,7 @@ function mapStateToProps(state) {
 const getVideo = parseVideoId;
 
 const hasVideo = (video) => typeof video !== 'undefined';
+const hasSpeakerNotes = speakernoteUrl => typeof speakernoteUrl !== 'undefined';
 
 const Speaker = ({name, pictureUrl}, id) => (
     <div className='details__speaker' key={id}>
@@ -76,7 +77,7 @@ const Bio = ({name, bio}, id) => (
     </Block>
 );
 
-const Session = ({title, abstract, oppsummering, speakers, language, format, intendedAudience, starter, stopper, rom, video}) => (
+const Session = ({title, abstract, oppsummering, speakers, language, format, intendedAudience, starter, stopper, rom, video, speakernoteUrl}) => (
     <Container>
         <CBlock>
             <div className='details__speakers'>
@@ -107,6 +108,11 @@ const Session = ({title, abstract, oppsummering, speakers, language, format, int
                 </p>
             </Content>
         </Block>
+
+        { hasSpeakerNotes(speakernoteUrl) ?
+            <CBlock className='details__notes'><CContent><img src={speakernoteUrl}/></CContent></CBlock> :
+            <span></span>
+        }
 
         {speakers.map(Bio)}
 
@@ -147,45 +153,19 @@ const Loading = () => (
     </Container>
 );
 
-/*const Details = React.createClass({
-    componentWillMount() {
-        //this.props.getSession(this.props.params.id);
-    },
-
-    componentWillUnmount() {
-        //this.props.removeSession();
-    },
-
-    render() {
-        const session = this.props.id();
-        console.log(session);
-        const content = session ? Session(session) : Loading();
-        return (
-            <Page name='details'>
-                    {content}
-            </Page>
-        );
-    }
-});*/
-
 const Details = id => props => {
     if (props.sessions.length === 0) {
         props.getSessions();
         return <Page>{ Loading() }</Page>;
     } else {
         const session = find({id: id})(props.sessions);
+        console.log(session.speakernoteUrl);
         if (session) {
             return <Page>{ Session(session) }</Page>;
         } else {
             return notFound();
         }
     }
-    /*const content = session ? Session(id) : Loading();
-    return (
-        <Page name='details'>
-            { content }
-        </Page>
-    );*/
 };
 
 export default function(id) {
