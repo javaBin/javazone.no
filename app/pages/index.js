@@ -8,11 +8,12 @@ const Index = () => (
         <Container>
             <div className='index__content'>
                 <div className='index__text'>
-                    Welcome to<br />JavaZone 2017
+                    Thank you for attending<br />JavaZone
                 </div>
                 <div className='index__info'>
-                    September 13th –14th<br />
-                    Oslo Spektrum
+                    September 13th –14th 2017<br />
+                    Oslo Spektrum<br /><br />
+                    See you in 2018!
                 </div>
                 <ul className='index__links'>
                     <li className='index__links-item'>
