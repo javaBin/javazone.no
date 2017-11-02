@@ -101,13 +101,13 @@ const HasProgram = (sessions) => (
     </div>
 );
 
-const PrintProgram = React.createClass({
+class PrintProgram extends React.Component {
 
     componentWillMount() {
         if (this.props.sessions.length === 0) {
             this.props.getSessions();
         }
-    },
+    }
 
     render() {
         const content = this.props.isFetching
@@ -122,6 +122,6 @@ const PrintProgram = React.createClass({
             </Page>
         );
     }
-});
+};
 
 export default connect(mapStateToProps, { getSessions })(PrintProgram);

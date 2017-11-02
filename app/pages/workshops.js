@@ -44,8 +44,7 @@ const groupByFormat = reduce((acc, session) => {
     return acc;
 }, []);
 
-const isJzWorkshop = workshopTitles => workshop =>
-      includes(workshop.title, workshopTitles);
+const isJzWorkshop = workshopTitles => workshop => includes(workshop.title, workshopTitles);
 
 function workshopUrl(workshop) {
     if (!workshop) {
@@ -110,10 +109,10 @@ function mapStateToProps(state) {
 }
 
 const Failure = () => (
-  <div className='program__loading'>
-      <h2 className='program__loading-header'>Woooops!</h2>
-      It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
-  </div>
+    <div className='program__loading'>
+        <h2 className='program__loading-header'>Woooops!</h2>
+        It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
+    </div>
 );
 
 function merge(workshops, sessions) {
@@ -137,11 +136,11 @@ const WorkshopList = ({ workshops }) =>
         </ul>
     </div>;
 
-const Workshops = React.createClass({
+class Workshops extends React.Component {
     componentWillMount() {
         this.props.getWorkshops();
         this.props.getSessions();
-    },
+    }
 
     render() {
         const workshops = filter(s => s.format === 'workshop')(this.props.sessions);
@@ -168,6 +167,6 @@ const Workshops = React.createClass({
             </Page>
         );
     }
-});
+};
 
 export default connect(mapStateToProps, { getWorkshops, getSessions })(Workshops);
