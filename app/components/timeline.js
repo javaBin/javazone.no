@@ -82,7 +82,7 @@ const data = [
 export default () => (
     <div className='timeline'>
         <ul className='timeline__timeline'>
-            { 
+            {
                 data.map((month, key) => (
                     <li key={key} className='timeline__month'>
                         <div className='timeline__month-name'>

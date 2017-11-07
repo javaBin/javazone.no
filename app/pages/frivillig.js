@@ -25,7 +25,7 @@ export default () => (
         <Container>
 
             <Block>
-            <Header><span className='pink'>Hva er JavaZone?</span></Header>
+                <Header><span className='pink'>Hva er JavaZone?</span></Header>
                 <Content>
                     <p>
                     Hvert år strømmer nesten 3000 utviklere til Oslo for å delta på JavaZone. I tillegg kommer nærmere 200 foredragsholdere fra hele verden, pluss mennesker fra 50 ulike partnere.
