@@ -25,8 +25,8 @@ export default () => (
                     <P>
                         Each year we try to make the Expo Area at JavaZone a lively place.
                         Due to the unique layout and varied types of stands, no parts of the Expo are boring.
-                     </P>
-                     <P>
+                    </P>
+                    <P>
                         These schematics show the layout for JavaZone 2017. As a partner, you get to pick from
                         the shown stands, based on your selected stand type. Each partner gets to select their
                         prefered stand based on the order in which they signed up as a partner. Partners signing

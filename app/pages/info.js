@@ -74,8 +74,7 @@ const TicketSection = () => (
         <CBlock>
             <CContent>
                 <P>
-                    <a className='button button--transparent'
-                       href='/tickets'>Buy your JavaZone 2017 ticket now</a>
+                    <a className='button button--transparent' href='/tickets'>Buy your JavaZone 2017 ticket now</a>
                 </P>
             </CContent>
         </CBlock>
@@ -186,7 +185,7 @@ const FaqSection = () => (
      You do not speak Norwegian? So, do not we!
      But do not worry! About 50% of the talks are held in English and the spoken language is specified in the program. Therefore, if you do not speak Norwegian, you should be able to attend many interesting talks. A tip for those who understand Norwegian, but are afraid to speak it. You can ask our speakers questions in English.
      */
-  <div></div>
+    <div></div>
 );
 
 const ProgramSection = () => (
@@ -198,8 +197,7 @@ const ProgramSection = () => (
                 The full program is now available online.
                 </P>
                 <P>
-                    <a className='button button--transparent'
-                       href='/program'>See the JavaZone program</a>
+                    <a className='button button--transparent' href='/program'>See the JavaZone program</a>
                 </P>
             </CContent>
         </CBlock>

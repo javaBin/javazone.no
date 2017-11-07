@@ -17,8 +17,8 @@ const SignUpButton = ({children}) => (
         <CContent>
             <p>
                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSdV1cVPCqJ7q2-v9Q1WNQV9MiNUPeAwtVtbV-ctVUj7X2GS4w/viewform'
-                   className='button button--transparent'
-                   target='_blank'>Sign up now!</a>
+                    className='button button--transparent'
+                    target='_blank'>Sign up now!</a>
             </p>
         </CContent>
     </CBlock>

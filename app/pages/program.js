@@ -123,8 +123,9 @@ const Session = ({title, speakers, icon, room, language, duration, id, video, fo
         <div className='session__title-wrapper'>
             {hasVideo(video) ?
                 <Link href={`/program/${id}`} className='session__video-title'><span className='session__mobile-video'><i className='icon-control-play'></i></span></Link> :
-                <span className='session__mobile-room'>{room}</span>}
-                <Link href={`/program/${id}`} className='session__title'>{title}</Link>
+                <span className='session__mobile-room'>{room}</span>
+            }
+            <Link href={`/program/${id}`} className='session__title'>{title}</Link>
         </div>
         <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
             <i className={isFavorite(id, state) ? 'icon-check' : 'icon-plus'}></i>
@@ -301,8 +302,8 @@ class Program extends React.Component {
         const content = this.props.failure
             ? <Failure />
             : this.props.isFetching
-            ? Loading()
-            : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                ? Loading()
+                : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
 
         saveSettings(this.state);
 
