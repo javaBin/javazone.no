@@ -1,8 +1,8 @@
-import className from 'classname';
+import classNames from 'classnames';
 
 export const CBlock = (props) => {
     const fullWidth = typeof props.fullWidth !== 'undefined' ? props.fullWidth : false;
-    const c = className('block block--center', props.className, {
+    const c = classNames('block block--center', props.className, {
         'block--center' : !fullWidth,
         'block--center-full-width': fullWidth
     });

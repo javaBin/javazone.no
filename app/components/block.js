@@ -1,7 +1,7 @@
-import className from 'classname';
+import classNames from 'classnames';
 
 export const Block = (props) => {
-    const c = className('block', props.className);
+    const c = classNames('block', props.className);
 
     return (
         <div className={c}>

@@ -1,4 +1,4 @@
-import className from 'classname';
+import classNames from 'classnames';
 import logo from '../assets/neon-logo2.svg';
 import { Link } from './link';
 import Footer from './footer';
@@ -119,7 +119,7 @@ export const PageBody = (props) => (
 );
 
 export const Container = (props) => {
-    const c = className('page__container', props.className);
+    const c = classNames('page__container', props.className);
     return (
         <div className={c}>
             {props.children}
