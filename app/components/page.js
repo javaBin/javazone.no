@@ -1,4 +1,4 @@
-import className from 'classname';
+import className from 'classnames';
 import logo from '../assets/neon-logo2.svg';
 import { Link } from './link';
 import Footer from './footer';
