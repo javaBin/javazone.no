@@ -28,6 +28,7 @@ import details from './pages/details';
 import workshops from './pages/workshops';
 import printprogram from './pages/printprogram';
 
+/*
 const routes = compile({
     '/videos': videos,
     '/partners': partners,
@@ -55,6 +56,13 @@ const routes = compile({
     '/workshops': workshops,
     '/print': printprogram,
     '/': index,
+});
+*/
+
+const routes = compile({
+    '/partners': partners,
+    '/info': info,
+    '/': index
 });
 
 function compile(routes) {
