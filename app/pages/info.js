@@ -10,7 +10,7 @@ import partners1 from '../assets/partners_1.jpg';
 const InfoPage = () => (
     <Page name='info'>
         <Heading>
-            <LargeHeading>Welcome to JavaZone 2017</LargeHeading>
+            <LargeHeading>Welcome to JavaZone 2018</LargeHeading>
             <SmallHeading>September 13-14th – Oslo, Norway</SmallHeading>
         </Heading>
         <Container>
