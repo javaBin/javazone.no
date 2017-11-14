@@ -29,14 +29,14 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
         <div className={`menu__top menu__top--${visible ? 'visible' : 'hidden'}`}></div>
         <div className={`menu__bottom menu__bottom--${visible ? 'visible' : 'hidden'}`}></div>
         <div className={`menu__container menu__container--${visible ? 'visible' : 'hidden'}`}>
-                <ul className='menu__links'>
-                    <li className='menu__links-item'>
-                        <Link href='/info' className='menu__link menu__link--green' onClick={toggleMenu}>Info</Link>
-                    </li>
-                    <li className='menu__links-item'>
-                        <Link href='/partners' className='menu__link menu__link--green' onClick={toggleMenu}>Partners</Link>
-                    </li>
-                    {/*
+            <ul className='menu__links'>
+                <li className='menu__links-item'>
+                    <Link href='/info' className='menu__link menu__link--green' onClick={toggleMenu}>Info</Link>
+                </li>
+                <li className='menu__links-item'>
+                    <Link href='/partners' className='menu__link menu__link--green' onClick={toggleMenu}>Partners</Link>
+                </li>
+                {/*
                     <li className='menu__links-item'>
                         <Link href='/tickets' className='menu__link menu__link--blue' onClick={toggleMenu}>Tickets</Link>
                     </li>
@@ -64,7 +64,7 @@ const Menu = connect(mapStateToProps, mapDispatchToProps)(({visible, toggleMenu}
                     <li className='menu__links-item'>
                         <Link href='/academy-september' className='menu__link menu__link--orange' onClick={toggleMenu}>Academy</Link>
                     </li>
-                    */}
+                */}
             </ul>
         </div>
     </div>
