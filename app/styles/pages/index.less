@@ -5,6 +5,12 @@
     to { opacity: 1 }
 }
 
+@keyframes blink {
+    to {
+        visibility: visible;
+    }
+}
+
 .index {
     display: flex;
     flex-direction: column;
@@ -35,18 +41,27 @@
         font-family: @press-start-2p;
         font-size: 2.2rem;
         line-height: 120%;
-        margin: 55px 0 20px 0;
+        margin: 55px 0 10px 0;
         text-align: center;
         text-transform: uppercase;
 
         @media (min-width: @size-s) {
             font-size: 3.5rem;
-            margin: 40px 0 35px 0;
+            margin: 40px 0 20px 0;
         }
 
         @media (min-width: @size-m) {
             font-size: 4.1rem;
         }
+    }
+
+    &__game-text {
+        font-family: @press-start-2p;
+        text-align: center;
+        text-transform: uppercase;
+        visibility: hidden;
+        animation: blink 1s steps(3, end) infinite;
+        animation-delay: 3s;
     }
 
     &__info {
