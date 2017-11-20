@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo-white-wireframe.svg';
-import Page from '../components/page';
-import { Container } from '../components/page';
+//import Page from '../components/page';
+import { Page, Container } from '../components/page';
 import { Link } from '../components/link';
 import keydown from 'react-keydown';
 import { connect } from 'react-redux';
@@ -17,7 +17,7 @@ class Index extends React.Component {
 
     @keydown('enter')
     initGame() {
-        this.props.toggleGame();
+        console.log("LAUNCHING GAME (NOT YET IMPLEMENTED)");
     }
 
     renderGameContainer() {
@@ -33,9 +33,11 @@ class Index extends React.Component {
                 <div className='index__text'>
                     JavaZone 2018
                 </div>
+                {/*
                 <div className='index__game-text'>
                     Press 'ENTER' to start
                 </div>
+                */}
                 <div className='index__info'>
                     September 13th –14th 2018<br />
                     Oslo Spektrum
@@ -46,15 +48,14 @@ class Index extends React.Component {
 
 
     render() {
-        const { gameVisible } = this.props;
         return (
             <Page name='index'>
                 <Container>
                     <div className='index__content'>
-                        {gameVisible ? this.renderGameContainer() : this.renderLogo()}
+                        {this.renderLogo()}
                         <ul className='index__links'>
                             <li className='index__links-item'>
-                                <Link href='/info' className='index__link index__link--green'>Info</Link>
+                                <a className='button button--transparent' href='/info'>Info</a>
                             </li>
                             {/*
                             <li className='index__links-item'>
@@ -65,7 +66,7 @@ class Index extends React.Component {
                             </li>
                             */}
                             <li className='index__links-item'>
-                                <Link href='/partners' className='index__link index__link--orange'>Partners</Link>
+                                <a className='button button--transparent' href='/partners'>Partners</a>
                             </li>
                         </ul>
                     </div>

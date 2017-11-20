@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Heading, LargeHeading, Page, SmallHeading } from '../components/page';
-import { Block, Content, Header, P } from '../components/block';
+import { Block, Content, Header, P, Pc } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
 import info1 from '../assets/info_1.jpg';
@@ -31,7 +31,7 @@ const InfoPage = () => (
 const AboutSection = () => (
     <Container>
         <Block>
-            <Header><span className='green'>JavaZone 101<br />the who, what and where</span></Header>
+            <Header><span>JavaZone 101<br />the who, what and where</span></Header>
             <Content>
                 <P>
                     JavaZone – the biggest European community-driven conference for modern developers is 2^4
@@ -62,7 +62,7 @@ const AboutSection = () => (
 const TicketSection = () => (
     <Container>
         <Block>
-            <Header><span className='blue'>First things first:<br/> your ticket!</span></Header>
+            <Header><span>First things first:<br/> your ticket!</span></Header>
             <Content>
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
@@ -73,15 +73,15 @@ const TicketSection = () => (
         </Block>
         <CBlock>
             <CContent>
-                <P>
+                <Pc>
                     <a className='button button--transparent' href='/tickets'>Buy your JavaZone 2017 ticket now</a>
-                </P>
+                </Pc>
             </CContent>
         </CBlock>
 
 
         <CBlock>
-            <CHeader><span className='orange'>You’ve got your ticket? Great!</span></CHeader>
+            <CHeader><span>You’ve got your ticket? Great!</span></CHeader>
             <CContent>
                 <P>
                     <br />
@@ -102,7 +102,7 @@ const BetterExplorerSection = () => (
     <Container>
 
         <Block>
-            <Header><span className='blue'>Two conference days</span></Header>
+            <Header><span>Two conference days</span></Header>
             <Content>
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
@@ -113,7 +113,7 @@ const BetterExplorerSection = () => (
         </Block>
 
         <Block>
-            <Header><span className='green'>An after party to remember</span></Header>
+            <Header><span>An after party to remember</span></Header>
             <Content>
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
@@ -135,7 +135,7 @@ const BetterExplorerSection = () => (
         </Block>
 
         <Block>
-            <Header><span className='orange'>8 restaurants, all day long</span></Header>
+            <Header><span>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
                     Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to
@@ -145,7 +145,7 @@ const BetterExplorerSection = () => (
         </Block>
 
         <Block>
-            <Header><span className='pink'>Hands-on workshops</span></Header>
+            <Header><span>Hands-on workshops</span></Header>
             <Content>
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
@@ -156,7 +156,7 @@ const BetterExplorerSection = () => (
         </Block>
 
         <Block>
-            <Header><span className='green'>…and a whole lotta love</span></Header>
+            <Header><span>…and a whole lotta love</span></Header>
             <Content>
                 <P>
                     You will meet lots of interesting people at JavaZone! Grab your coffee and mingle away!
@@ -191,19 +191,19 @@ const FaqSection = () => (
 const ProgramSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='green'>The JavaZone program</span></CHeader>
+            <CHeader><span>The JavaZone program</span></CHeader>
             <CContent>
                 <P><br />
                 The full program is now available online.
                 </P>
-                <P>
+                <Pc>
                     <a className='button button--transparent' href='/program'>See the JavaZone program</a>
-                </P>
+                </Pc>
             </CContent>
         </CBlock>
 
         <Block>
-            <Header><span className='pink'>Lightning talks</span></Header>
+            <Header><span>Lightning talks</span></Header>
             <Content>
                 <P>
                     Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept.
@@ -212,7 +212,7 @@ const ProgramSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header><span className='orange'>Presentations</span></Header>
+            <Header><span>Presentations</span></Header>
             <Content>
                 <P>
                     Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
@@ -221,7 +221,7 @@ const ProgramSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header><span className='blue'>Workshops</span></Header>
+            <Header><span>Workshops</span></Header>
             <Content>
                 <P>
                     Full blown learning session. This is where you get down and dirty with code. We’ll have full
@@ -236,7 +236,7 @@ const ProgramSection = () => (
 const AweZoneSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='green'>AweZone: Celebrating our 2^4th anniversary</span></CHeader>
+            <CHeader><span>AweZone: Celebrating our 2^4th anniversary</span></CHeader>
             <CContent>
                 <P><br />
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
@@ -246,7 +246,7 @@ const AweZoneSection = () => (
             </CContent>
         </CBlock>
         <Block>
-            <Header><span className='pink'>Awesome AweZone is Awesome</span></Header>
+            <Header><span>Awesome AweZone is Awesome</span></Header>
             <Content>
                 <P>
                     AweZone offers a great chance to catch up with old friends, meet new ones,
@@ -262,7 +262,7 @@ const AweZoneSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header><span className='orange'>So, where are we going to party?</span></Header>
+            <Header><span>So, where are we going to party?</span></Header>
             <Content>
                 <P>
                     Well, did you know that Oslo houses the world's 42nd best bar, <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a>?
@@ -290,7 +290,7 @@ const AweZoneSection = () => (
             </Content>
         </Block>
         <Block>
-            <Header><span className='blue'>Things to remember</span></Header>
+            <Header><span>Things to remember</span></Header>
             <Content>
                 <P>
                     Of course we will also be serving great food!
@@ -309,7 +309,7 @@ const AweZoneSection = () => (
 const ImportantPrinciplesSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='green'>A few very important principles</span></CHeader>
+            <CHeader><span>A few very important principles</span></CHeader>
             <CContent>
                 <P><br />
                     JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
@@ -342,7 +342,7 @@ const ImportantPrinciplesSection = () => (
 const QuestionSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span className='blue'>Questions?</span></CHeader>
+            <CHeader><span>Questions?</span></CHeader>
             <CContent>
                 <P><br />Do not hesitate to contact us, if you have any questions.
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
