@@ -33,3 +33,9 @@ export const P = (props) => (
         {props.children}
     </p>
 );
+
+export const Pc = (props) => (
+    <p className='block__paragraph--center'>
+        {props.children}
+    </p>
+);

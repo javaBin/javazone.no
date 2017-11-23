@@ -1,6 +1,6 @@
 import React from 'react';
 import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
-import { Block, Header, Content, SubHeader, P} from '../components/block';
+import { Block, Header, Content, SubHeader, P, Pc} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import Youtube from '../components/youtube';
 import { Link } from '../components/link';
@@ -40,14 +40,14 @@ const Partners = () => (
     <Page name='videos'>
         <Heading>
             <LargeHeading>Dear JavaZone Partners</LargeHeading>
-            <SmallHeading>Join us in 2017</SmallHeading>
+            <SmallHeading>Join us in 2018</SmallHeading>
         </Heading>
         <Container>
             <Youtube id='cL57Ho55xpo'></Youtube>
         </Container>
         <Container>
             <Block>
-                <Header><span className="green">JavaZone 2017:<br />bigger and better than ever</span></Header>
+                <Header><span>JavaZone 2018:<br />bigger and better than ever</span></Header>
                 <Content>
                     <P>
                         JavaZone started out in 2002 as a small conference for Java developers, but has since then evolved
@@ -68,14 +68,14 @@ const Partners = () => (
             </Block>
 
             <CBlock fullWidth={true}>
-                <CHeader>Proud partners of JavaZone 2017</CHeader>
+                <CHeader>Proud partners of JavaZone 2018</CHeader>
                 <ul className='partners__logos'>
                     {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
                 </ul>
             </CBlock>
 
             <Block>
-                <Header><span className="orange">Our philosophy:<br />partners, not sponsors</span></Header>
+                <Header><span>Our philosophy:<br />partners, not sponsors</span></Header>
 
                 <Content>
                     <P>
@@ -92,7 +92,7 @@ const Partners = () => (
             <img className='partners__image' src={partners2} />
 
             <Block>
-                <Header><span className="blue">The Expo Area</span></Header>
+                <Header><span>The Expo Area</span></Header>
                 <Content>
                     <P>
                         All our partner stands are located in the Expo Area, which is centrally located in the venue.
@@ -111,7 +111,6 @@ const Partners = () => (
                     </P>
 
                     <P>
-                        <Link className='button button--transparent' href='/expo'>See blueprints of the JavaZone 2017 Expo Area</Link>
                     </P>
 
                 </Content>
@@ -122,7 +121,7 @@ const Partners = () => (
             </Container>
 
             <Block>
-                <Header><span className="pink">Partner Options</span></Header>
+                <Header><span>Partner Options</span></Header>
                 <Content>
                     <P>
                         Even though all partners are considered equal, there are
@@ -178,7 +177,7 @@ const Partners = () => (
             <img className='partners__image' src={partners1} />
 
             <CBlock fullWidth={true} className='partners__price-container'>
-                <CHeader><span className="green">Partnership Prices</span></CHeader>
+                <CHeader><span>Partnership Prices</span></CHeader>
                 <CContent>
                     <div className="partners__mainprice partners__stand-option--sold-out">NOK 67.000,-</div>
                     <em className="pink">All 50 partnerships for JavaZone 2017 are sold out</em>
@@ -241,7 +240,7 @@ const Partners = () => (
             <img className='partners__image' src={partners3} />
 
             <Block>
-                <Header><span className="blue">Contact us</span></Header>
+                <Header><span>Contact us</span></Header>
                 <Content>
                     <P>
                         You can contact us about partnership details at <a href='mailto:partner@java.no'>partner@java.no</a>.
@@ -252,9 +251,9 @@ const Partners = () => (
 
             <CBlock>
                 <CContent>
-                    <P>
+                    <Pc>
                         <Link className='button button--transparent' href='/partnermote-juni'>Slides from last partner meeting (in Norwegian)</Link>
-                    </P>
+                    </Pc>
                 </CContent>
             </CBlock>
         </Container>

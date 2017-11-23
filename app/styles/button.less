@@ -2,18 +2,17 @@
 @import 'variables.less';
 
 .button {
-    border: 0;
-    border-radius: 2px;
+    border-radius: 0px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     color: @white;
     display: inline-block;
-    font-size: .8rem;
-    font-weight: 400;
+    font-family: @press-start-2p;
+    font-size: .4rem;
     padding: 8px 22px;
     text-align: center;
     text-decoration: none;
-    transition: background-color .2s ease-in-out,
-                box-shadow .2s ease-in-out;
+    transition: background-color .3s ease-in-out,
+                box-shadow .3s ease-in-out;
     white-space: nowrap;
     cursor: pointer;
     text-transform: uppercase;
@@ -24,16 +23,19 @@
 
     &--transparent {
         background-color: transparent;
-        border-radius: 0;
+        border-radius: 4px;
         box-shadow: none;
         border: 2px solid @white;
-        transition: transform .2s ease-in-out;
+        transition: .3s ease-in-out;
 
         &:hover {
-            transform: scale(1.05);
+            transition: .3s ease-in-out;
+            color: @primary-text-color;
+            border-color: @primary-text-color;
         }
     }
 
+    /*
     &--green {
         border-color: @green;
         color: @green;
@@ -58,6 +60,7 @@
         border-color: @red--light;
         color: @red--light;
     }
+    */
 
     &--disabled {
         border-color: @blue;
