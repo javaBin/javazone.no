@@ -1,5 +1,5 @@
 import header from '../assets/header_expo.jpg';
-import pdf from '../assets/partnermote_juni/JavaZone2017_partnermote3.pdf';
+//import pdf from '../assets/partnermote_juni/JavaZone2017_partnermote3.pdf'; <---
 import { Page, Heading, LargeHeading, SmallHeading, Container } from '../components/page';
 import { Block, Header, Content, P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
