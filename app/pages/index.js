@@ -15,12 +15,10 @@ class Index extends React.Component {
         this.renderGameContainer = this.renderGameContainer.bind(this);
     }
 
-    /*
-    @keydown('enter')
+    //@keydown('enter')
     initGame() {
         console.log("LAUNCHING GAME (NOT YET IMPLEMENTED)");
     }
-    */
 
     renderGameContainer() {
         return (
