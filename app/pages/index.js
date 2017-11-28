@@ -1,30 +1,14 @@
 import React from 'react';
 import logo from '../assets/logo-white-wireframe.svg';
-//import Page from '../components/page';
 import { Page, Container } from '../components/page';
 import { Link } from '../components/link';
-import keydown from 'react-keydown';
 import { connect } from 'react-redux';
 
 class Index extends React.Component {
 
     constructor(props) {
         super(props);
-        this.initGame = this.initGame.bind(this);
         this.renderLogo = this.renderLogo.bind(this);
-        this.renderGameContainer = this.renderGameContainer.bind(this);
-    }
-
-    @keydown('enter')
-    initGame() {
-        console.log("LAUNCHING GAME (NOT YET IMPLEMENTED)");
-    }
-
-    renderGameContainer() {
-        return (
-            <div className='index__game-container'>
-            </div>
-        )
     }
 
     renderLogo() {
