@@ -55,24 +55,17 @@ const Partners = () => (
                         in Oslo Spektrum for three full days of learning, mingling and fun.
                     </P>
 
-                    <SubHeader>Last year: Completely. Sold. Out.</SubHeader>
+                    <SubHeader>Last two years:<br />Completely. Sold. Out.</SubHeader>
 
                     <P>
-                        Last year, a record breaking 3000 people attended JavaZone.
-                        We were completely sold out of tickets AND partner stands.
-                        This was a first for us, but based on feedback we have a feeling that we
+                        Last year, a record breaking 3100 people attended JavaZone.
+                        This was also the second year when we were completely sold out of tickets AND partner stands.
+                        Based on feedback and previous experience we have a feeling that we
                         might sell out this year as well. So join in early if you
                         want to be part of the conference!
                     </P>
                 </Content>
             </Block>
-
-            <CBlock fullWidth={true}>
-                <CHeader>Proud partners of JavaZone 2018</CHeader>
-                <ul className='partners__logos'>
-                    {signedPartners.map((partner, kp) => (<Partner key={kp} {...partner} />))}
-                </ul>
-            </CBlock>
 
             <Block>
                 <Header><span>Our philosophy:<br />partners, not sponsors</span></Header>
@@ -82,7 +75,7 @@ const Partners = () => (
                         We want JavaZone‘s Expo Area to be an attractive space where partners and participants can hang out and spend time together.
                         In previous years our partners have done a fantastic job to help us achieve this, and we want to keep this tradition alive.
                         JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
-                        As a partner you are not just supporting our conference economically. You participate during the event and help create the unique atmosphere.
+                        As a partner you are not just supporting our conference economically – you participate during the event and help create the unique atmosphere.
                         Please share with us your ideas for making the most out of your partner space.
                         Don’t be shy, almost anything is possible!
                     </P>
@@ -95,7 +88,7 @@ const Partners = () => (
                 <Header><span>The Expo Area</span></Header>
                 <Content>
                     <P>
-                        All our partner stands are located in the Expo Area, which is centrally located in the venue.
+                        All our partner stands are traditionally located in the Expo Area, which is centrally located in the venue.
                         During each break the Expo is full of attendees. This is partly because we serve food continously from
                         restaurant stands throughout the day, and partly because you – our partners – make this area one of
                         the liveliest Expo Areas of any conference.
@@ -152,23 +145,23 @@ const Partners = () => (
 
                     <dl className='definition-list'>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand-option'>Double Stand Space</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand-option'>Double Stand Space</span>
                         </dt>
                         <dd className='definition-list__data'>
                             Double your stand space and get 12 square meters instead of 6. This gives you a bigger wall for your message, and more floor space for your activities.
                         </dd>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand-option'>Restaurant Stand</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand-option'>Restaurant Stand</span>
                         </dt>
                         <dd className='definition-list__data'>
                             We have capacity for a total of 8 restaurant stands in the Expo Area. The theme and menu is decided by you in collaboration with our food provider.
                             If you have a restaurant stand, you can also opt in for extra food servings and exposure during the evening party.
                         </dd>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand'>Concept Stand</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand'>Concept Stand</span>
                         </dt>
                         <dd className='definition-list__data'>
-                            We also have room for 2 extra large stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
+                            We also have room for 3 extra large stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
                         </dd>
                     </dl>
                 </Content>
@@ -179,12 +172,12 @@ const Partners = () => (
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader><span>Partnership Prices</span></CHeader>
                 <CContent>
-                    <div className="partners__mainprice partners__stand-option">NOK 67.000,-</div>
-                    <em>All 50 partnerships for JavaZone 2017 are sold out</em>
+                    <div className="partners__mainprice partners__stand-option">NOK 69.000,-</div>
+                    <em>Note that all 50 partnerships for JavaZone 2017 got sold out last year.</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
-                        <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 82.000,-</em><br />
+                        <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 84.000,-</em><br />
                         <span className="partners__vat">all prices ex VAT</span>
                     </P>
                     <div className='partners__prices'>
@@ -193,11 +186,11 @@ const Partners = () => (
                                 <tbody>
                                     <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Extra Stand Space</td>
-                                        <td className='table__data'>NOK 30.000,-</td>
+                                        <td className='table__data'>NOK 38.000,-</td>
                                     </tr>
                                     <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Restaurant Stand</td>
-                                        <td className='table__data'>NOK 62.000,-</td>
+                                        <td className='table__data'>NOK 63.000,-</td>
                                     </tr>
                                     <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Restaurant Stand (Evening)</td>
@@ -205,7 +198,7 @@ const Partners = () => (
                                     </tr>
                                     <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Concept Stand</td>
-                                        <td className='table__data'>NOK 47.000,-</td>
+                                        <td className='table__data'>NOK 55.000,-</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -216,19 +209,19 @@ const Partners = () => (
                                 <tbody>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (0 - 30)</td>
-                                        <td className='table__data'>NOK 5.490,-</td>
+                                        <td className='table__data'>NOK 5.590,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (31 - 50)</td>
-                                        <td className='table__data'>NOK 5.290,-</td>
+                                        <td className='table__data'>NOK 5.390,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (51 - ∞)</td>
-                                        <td className='table__data'>NOK 5.090,-</td>
+                                        <td className='table__data'>NOK 5.190,-</td>
                                     </tr>
                                     <tr className='table__row'>
                                         <td className='table__data'>Tickets for employees (Late-Bird)</td>
-                                        <td className='table__data'>NOK 5.990,-</td>
+                                        <td className='table__data'>NOK 6.190,-</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -244,18 +237,10 @@ const Partners = () => (
                 <Content>
                     <P>
                         You can contact us about partnership details at <a href='mailto:partner@java.no'>partner@java.no</a>.
-                        Even though partnerships for 2017 are sold out, we could discuss a possible partnership for 2018.
                     </P>
                 </Content>
             </Block>
 
-            <CBlock>
-                <CContent>
-                    <Pc>
-                        <Link className='button button--transparent' href='/partnermote-juni'>Slides from last partner meeting (in Norwegian)</Link>
-                    </Pc>
-                </CContent>
-            </CBlock>
         </Container>
 
     </Page>
