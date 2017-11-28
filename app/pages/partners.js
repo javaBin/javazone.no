@@ -152,20 +152,20 @@ const Partners = () => (
 
                     <dl className='definition-list'>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand-option--sold-out'>Double Stand Space</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand-option'>Double Stand Space</span> (SOLD OUT!)
                         </dt>
                         <dd className='definition-list__data'>
                             Double your stand space and get 12 square meters instead of 6. This gives you a bigger wall for your message, and more floor space for your activities.
                         </dd>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand-option--sold-out'>Restaurant Stand</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand-option'>Restaurant Stand</span> (SOLD OUT!)
                         </dt>
                         <dd className='definition-list__data'>
                             We have capacity for a total of 8 restaurant stands in the Expo Area. The theme and menu is decided by you in collaboration with our food provider.
                             If you have a restaurant stand, you can also opt in for extra food servings and exposure during the evening party.
                         </dd>
                         <dt className='definition-list__term'>
-                            <span className='partners__stand-option partners__stand-option--sold-out'>Concept Stand</span> (SOLD OUT!)
+                            <span className='partners__stand-option partners__stand'>Concept Stand</span> (SOLD OUT!)
                         </dt>
                         <dd className='definition-list__data'>
                             We also have room for 2 extra large stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
@@ -179,8 +179,8 @@ const Partners = () => (
             <CBlock fullWidth={true} className='partners__price-container'>
                 <CHeader><span>Partnership Prices</span></CHeader>
                 <CContent>
-                    <div className="partners__mainprice partners__stand-option--sold-out">NOK 67.000,-</div>
-                    <em className="pink">All 50 partnerships for JavaZone 2017 are sold out</em>
+                    <div className="partners__mainprice partners__stand-option">NOK 67.000,-</div>
+                    <em>All 50 partnerships for JavaZone 2017 are sold out</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
@@ -191,19 +191,19 @@ const Partners = () => (
                         <div className='partners__stand-prices'>
                             <table className='table'>
                                 <tbody>
-                                    <tr className='table__row partners__stand-option partners__stand-option--sold-out'>
+                                    <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Extra Stand Space</td>
                                         <td className='table__data'>NOK 30.000,-</td>
                                     </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option--sold-out'>
+                                    <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Restaurant Stand</td>
                                         <td className='table__data'>NOK 62.000,-</td>
                                     </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option--sold-out'>
+                                    <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Restaurant Stand (Evening)</td>
                                         <td className='table__data'>NOK 20.000,-</td>
                                     </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option--sold-out'>
+                                    <tr className='table__row partners__stand-option partners__stand-option'>
                                         <td className='table__data'>Concept Stand</td>
                                         <td className='table__data'>NOK 47.000,-</td>
                                     </tr>
