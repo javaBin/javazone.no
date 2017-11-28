@@ -13,7 +13,6 @@ const InfoPage = () => (
             <LargeHeading>Welcome to JavaZone 2018</LargeHeading>
             <SmallHeading>September 13-14th – Oslo, Norway</SmallHeading>
         </Heading>
-        
         <AboutSection />
         <TicketSection />
         <BetterExplorerSection />
@@ -202,7 +201,7 @@ const AweZoneSection = () => (
                     The party offers a great chance to catch up with old friends, meet new ones,
                     and also experience a great line-up of entertainment!
                     <br /><br />
-                    More deatils will be posted later. 
+                    More deatils will be posted later.
                 </P>
             </CContent>
         </CBlock>
