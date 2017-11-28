@@ -13,10 +13,7 @@ const InfoPage = () => (
             <LargeHeading>Welcome to JavaZone 2018</LargeHeading>
             <SmallHeading>September 13-14th – Oslo, Norway</SmallHeading>
         </Heading>
-        <Container>
-            <Youtube id='OKZcwxcw85o'/>
-        </Container>
-
+        
         <AboutSection />
         <TicketSection />
         <BetterExplorerSection />
@@ -34,8 +31,8 @@ const AboutSection = () => (
             <Header><span>JavaZone 101<br />the who, what and where</span></Header>
             <Content>
                 <P>
-                    JavaZone – the biggest European community-driven conference for modern developers is 2^4
-                    years old this year! Don’t miss out on two days of birthday celebrations full of inspiring tech talks,
+                    JavaZone – the biggest European community-driven conference for modern developers will be 17
+                    years old in 2018! Don’t miss out on two days of inspiring tech talks,
                     hands on sessions, mingling, and a great party!
                 </P>
                 <P>
@@ -44,14 +41,14 @@ const AboutSection = () => (
                     share knowledge, and socialise.
                 </P>
                 <P>
-                    We have been arranging JavaZone since 2001 and have been excited to watch the event grow bigger
-                    and better every year. This year we are hosting almost 200 speakers across 7 parallel tracks over
-                    the course of two days. In addition we offer a selection of workshops held on the day before the
+                    We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
+                    and better every year. In 2017 we were hosting almost 200 speakers across 7 parallel tracks over
+                    the course of two days. In addition we offered a selection of workshops held on the day before the
                     conference starts.
                 </P>
                 <P>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                    Don’t procrastinate! Join 3000 fellow developers at JavaZone on 13th-14th September, 2017!
+                    Don’t procrastinate! Join 3100 fellow developers at JavaZone on 13th-14th September, 2018!
                 </P>
 
             </Content>
@@ -66,34 +63,10 @@ const TicketSection = () => (
             <Content>
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
-                    JavaZone experience, including workshops. The number of workshop
-                    seats are limited and first-come first-served, so it pays to be quick when the <a href="/workshops">registration</a> opens.
+                    JavaZone experience, including workshops. The ticket sales will be opening in February 2018.
                 </P>
             </Content>
         </Block>
-        <CBlock>
-            <CContent>
-                <Pc>
-                    <a className='button button--transparent' href='/tickets'>Buy your JavaZone 2017 ticket now</a>
-                </Pc>
-            </CContent>
-        </CBlock>
-
-
-        <CBlock>
-            <CHeader><span>You’ve got your ticket? Great!</span></CHeader>
-            <CContent>
-                <P>
-                    <br />
-                    When you have a ticket in the box, you are ready to attend JavaZone 2017! <br /><br />
-                    If you have attended JavaZone before then welcome back! <br />
-                    If this is your first time, then please take a moment to
-                    familiarize yourself with what to expect! A JavaZone ticket gives you the opportunity to attend
-                    countless great talks, but there is much more to experience during the event.
-                </P>
-
-            </CContent>
-        </CBlock>
         <img className='partners__image' src={tickets2} />
     </Container>
 );
@@ -106,8 +79,7 @@ const BetterExplorerSection = () => (
             <Content>
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
-                    and categories. One of our speakers even tell us that he can write code and play music at the same time!
-                    You don't want to miss our amazing lineup. The program is now finished, and is available online.
+                    and categories. You don't want to miss our amazing lineup. The program will be made available online around summer 2018.
                 </P>
             </Content>
         </Block>
@@ -117,19 +89,7 @@ const BetterExplorerSection = () => (
             <Content>
                 <P>
                     After a long day, full of unique learning experience, it feels good to chill out with something
-                    nice to drink and some good food. We have something amazing in store for our afterparty this year!
-                </P>
-                <P>
-                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving towards Youngstorget,
-                    and the best geeky super-party ever – AweZone!
-                </P>
-                <P>
-                    We will be partying at <a href="http://kulturhusetioslo.no/">Kulturhuset</a> and <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a> – two
-                    truly fantastic places, just a few meters apart from each other, and a few minutes walk from the venue.
-                    More info about the party in a separate section a bit further down on this page.
-                </P>
-                <P>
-                    Just scroll. :-)
+                    nice to drink and some good food. We will be having something amazing in store for our afterparty this year as well!
                 </P>
             </Content>
         </Block>
@@ -138,7 +98,7 @@ const BetterExplorerSection = () => (
             <Header><span>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
-                    Have we mentioned good food before? Our chefs will take you on a culinary trip from Japan to
+                    Have we mentioned good food before? Continuous delivery? Our chefs take you on a culinary trip from Japan to
                     Mexico! Olé! We promise that you will not leave the event hungry!
                 </P>
             </Content>
@@ -150,7 +110,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
                     boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
-                    More information, along with the registration can be found on a dedicated page for <a href="/workshops">workshops</a>.
+                    More information, along with the registration can be found on a dedicated page in August.
                 </P>
             </Content>
         </Block>
@@ -194,11 +154,8 @@ const ProgramSection = () => (
             <CHeader><span>The JavaZone program</span></CHeader>
             <CContent>
                 <P><br />
-                The full program is now available online.
+                The full program will be made available online around summertime 2018.
                 </P>
-                <Pc>
-                    <a className='button button--transparent' href='/program'>See the JavaZone program</a>
-                </Pc>
             </CContent>
         </CBlock>
 
@@ -236,73 +193,19 @@ const ProgramSection = () => (
 const AweZoneSection = () => (
     <Container>
         <CBlock>
-            <CHeader><span>AweZone: Celebrating our 2^4th anniversary</span></CHeader>
+            <CHeader><span>AweZone: Celebrating the community</span></CHeader>
             <CContent>
                 <P><br />
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
-                    evening. As you might have heard already, this year’s AweZone will take place
-                    at Kulturhuset and Himkok on September 13th, 20:00 - 24:00.
+                    evening.
+                    <br /><br />
+                    The party offers a great chance to catch up with old friends, meet new ones,
+                    and also experience a great line-up of entertainment!
+                    <br /><br />
+                    More deatils will be posted later. 
                 </P>
             </CContent>
         </CBlock>
-        <Block>
-            <Header><span>Awesome AweZone is Awesome</span></Header>
-            <Content>
-                <P>
-                    AweZone offers a great chance to catch up with old friends, meet new ones,
-                    and also experience a great line-up of entertainment!
-                </P>
-                <P>
-                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and
-                    moving towards Youngstorget, and the best geeky super-party ever – AweZone!
-                    In case you are not sure where Youngstorget is, do not despair – we are
-                    here to help! There will be signs and pointers along the road, so you will
-                    not get lost. :-)
-                </P>
-            </Content>
-        </Block>
-        <Block>
-            <Header><span>So, where are we going to party?</span></Header>
-            <Content>
-                <P>
-                    Well, did you know that Oslo houses the world's 42nd best bar, <a href="https://www.worldsbestbars.com/bar/oslo/city-center/himkok">Himkok</a>?
-                    This will be a special experience at the bar that has its own distillery
-                    and a cocktail containing the world's best cheese, Kraftkar. At Himkok
-                    you can enjoy the mingling and good atmosphere of competent bartenders
-                    in white coats.
-                </P>
-                <P>
-                    The age limit at Himkok will be 20 years and up.
-                </P>
-                <P>
-                    At <a href="http://kulturhusetioslo.no/">Kulturhuset</a>, which
-                    has just recently moved into fantastic, new
-                    premises 50 meters from Himkok, we have the pleasure of presenting
-                    Teddy and The Love Gang and Greni
-                    at the stage on the 1st (a.k.a. ground) floor. On the other floors,
-                    you will be able to enjoy drinks, chill out areas, activities like
-                    Shuffleboard, Ping Pong, or Foosball, as well as mingle with the
-                    conference organizers, other participants, and our partners!
-                </P>
-                <P>
-                    The age limit at Kulturhuset will be 18 years and up.
-                </P>
-            </Content>
-        </Block>
-        <Block>
-            <Header><span>Things to remember</span></Header>
-            <Content>
-                <P>
-                    Of course we will also be serving great food!
-                    <br />
-                    Bring yourself and your good mood! ;-)
-                    <br />
-                    Also, due to the age limits at the party, remember to bring your regular IDs.
-                    <br />
-                    Admission is free, just show your wristband at the door.
-                </P>
-            </Content>
-        </Block>
     </Container>
 );
 
@@ -348,7 +251,7 @@ const QuestionSection = () => (
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
-                    We are so glad to see you at JavaZone 2017!
+                    We are so glad to see you at JavaZone 2018!
                 </P>
             </CContent>
         </CBlock>
