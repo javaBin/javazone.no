@@ -32,7 +32,7 @@ const AboutSection = () => (
                 <P>
                     JavaZone – the biggest European community-driven conference for modern developers will be 17
                     years old in 2018! Don’t miss out on two days of inspiring tech talks,
-                    hands on sessions, mingling, and a great party!
+                    a day of hands-on sessions, mingling, and a great party!
                 </P>
                 <P>
                     JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
@@ -41,13 +41,13 @@ const AboutSection = () => (
                 </P>
                 <P>
                     We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
-                    and better every year. In 2017 we were hosting almost 200 speakers across 7 parallel tracks over
-                    the course of two days. In addition we offered a selection of workshops held on the day before the
-                    conference starts.
+                    and better every year. In 2017 we hosted almost 200 speakers across 7 parallel tracks over
+                    the course of two days. In addition we also offered a selection of 9 workshops held on the day before the
+                    conference started.
                 </P>
                 <P>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                    Don’t procrastinate! Join 3100 fellow developers at JavaZone on 13th-14th September, 2018!
+                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 13th-14th September, 2018!
                 </P>
 
             </Content>
@@ -78,7 +78,7 @@ const BetterExplorerSection = () => (
             <Content>
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
-                    and categories. You don't want to miss our amazing lineup. The program will be made available online around summer 2018.
+                    and categories. You don‘t want to miss our amazing lineup. The program will be made available online around summer 2018.
                 </P>
             </Content>
         </Block>
@@ -87,8 +87,8 @@ const BetterExplorerSection = () => (
             <Header><span>An after party to remember</span></Header>
             <Content>
                 <P>
-                    After a long day, full of unique learning experience, it feels good to chill out with something
-                    nice to drink and some good food. We will be having something amazing in store for our afterparty this year as well!
+                    After a long day of unique learning experiences, it feels good to chill out with some good food and drink.
+                    JavaZone parties are legendary - and we can promise something amazing for our afterparty this year as well!
                 </P>
             </Content>
         </Block>
@@ -97,8 +97,8 @@ const BetterExplorerSection = () => (
             <Header><span>8 restaurants, all day long</span></Header>
             <Content>
                 <P>
-                    Have we mentioned good food before? Continuous delivery? Our chefs take you on a culinary trip from Japan to
-                    Mexico! Olé! We promise that you will not leave the event hungry!
+                    Have we mentioned our great selection of food? And that it is continuously delivered?
+                    Our chefs will take you on a culinary trip around the globe. With food served all day we promise that you will not leave the event hungry!
                 </P>
             </Content>
         </Block>
@@ -109,7 +109,7 @@ const BetterExplorerSection = () => (
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
                     boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
-                    More information, along with the registration can be found on a dedicated page in August.
+                    More information, along with registration details will be made available in August.
                 </P>
             </Content>
         </Block>
@@ -201,7 +201,7 @@ const AweZoneSection = () => (
                     The party offers a great chance to catch up with old friends, meet new ones,
                     and also experience a great line-up of entertainment!
                     <br /><br />
-                    More deatils will be posted later.
+                    More details will be posted later.
                 </P>
             </CContent>
         </CBlock>
@@ -224,16 +224,16 @@ const ImportantPrinciplesSection = () => (
                     you treat your fellow conference participants with respect. We reserve the right to take any action
                     necessary to make sure this principle is upheld.
                     <br /><br />
-                    Should any unwanted event occur, we're here to help:
+                    Should any unwanted event occur, we‘re here to help:
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
                     You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
-                    group of people, the core organizers)
+                    group of people, the core organizers og JavaZone)
                     <br/><br/>
                     <strong>During the conference</strong>
                     <br />
-                    Ask at the info stand, and we'll be in touch. Contact information will also be available at the info stand.
+                    Ask at the info stand, and we‘ll be in touch. Contact information will also be available at the info stand.
                 </P>
             </CContent>
         </CBlock>
@@ -250,7 +250,7 @@ const QuestionSection = () => (
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
-                    We are so glad to see you at JavaZone 2018!
+                    We are looking forwards to seeing you at JavaZone 2018!
                 </P>
             </CContent>
         </CBlock>
