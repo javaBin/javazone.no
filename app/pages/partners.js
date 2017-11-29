@@ -62,8 +62,8 @@ const Partners = () => (
                 <Content>
                     <P>
                         Last year, a record breaking 3100 people attended JavaZone.
-                        This was also the second year when we were completely sold out of both tickets AND partner stands.
-                        Based on this and feedback from last years partners we‘ve a feeling that we
+                        This was also the second year where we were completely sold out of both tickets AND partner stands.
+                        Based on this and feedback from last years partners we‘ve got a feeling that we
                         might sell out this year as well. So don‘t wait around if you
                         want to be part of JavaZone 2018!
                     </P>
@@ -74,12 +74,12 @@ const Partners = () => (
                 <Header><span>Our philosophy:<br />partners, not sponsors</span></Header>
                 <Content>
                     <P>
-                        We want JavaZone‘s Expo Area to be an attractive space where Partners and participants can hang out and spend time together.
+                        We want JavaZone‘s Expo Area to be an attractive space where our Partners and participants can hang out and spend time together.
                         In previous years our Partners have done a great job to help us achieve this goal, and we look forward to seeing what they bring to JavaZone 2018!
                         JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
-                        As a partner you are not just supporting our conference economically – you participate during the event and help create a unique atmosphere.
-                        We work closely with our Partners to help them realise their ideas for making the most out of their stands.
-                        Don’t be shy, almost anything is possible!
+                        As a Partner you are not just supporting our conference economically – you participate during the event and help create a unique atmosphere.
+                        We work closely with our Partners to help them realise their ideas and make the most out of their stands.
+                        Have you got a great concept for your JavaZone stand and need help to realise it? Don’t be shy - just ask us. Almost anything is possible!
                     </P>
                 </Content>
             </Block>
@@ -92,16 +92,16 @@ const Partners = () => (
                     <P>
                         All our partner stands are traditionally located in the Expo Area, which is centrally located in the venue.
                         During each break the Expo is full of attendees. This is partly because we serve food continously from
-                        restaurant stands throughout the day, and partly because you – our partners – make this area one of
+                        restaurant stands throughout the day, and partly because you – our Partners – make this area one of
                         the liveliest Expo Areas of any conference.
                     </P>
 
                     <SubHeader>People! People everywhere!</SubHeader>
 
                     <P>
-                        Don‘t you belive us? Have a look for yourself! Our new partners are always surprised by the
-                        huge attention their stands recieve in the Expo Area. We have put together a short 15-second
-                        timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
+                        Don‘t you belive us? Have a look for yourself! Our new Partners are always surprised by the
+                        huge attention their stands receive in the Expo Area. We have put together a short 15-second
+                        timelapse from 2 hours of Expo time, showing both the flow of people during talks and in the breaks between talks.
                         Yes, you get exposure to that many people, for a total of 20 hours!
                     </P>
 
@@ -119,7 +119,7 @@ const Partners = () => (
                 <Header><span>Partner Options</span></Header>
                 <Content>
                     <P>
-                        Even though all partners are considered equal, there are
+                        Even though all Partners are considered equal, there are
                         a few options to choose from. There is a base package that
                         everyone gets, and then there are a few availiable expansions. Notice that these expansions have a limited availability.
                     </P>
@@ -178,7 +178,7 @@ const Partners = () => (
                     <em>Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
-                        We also have some addons, as well as tickets for your employees, priced below.<br />
+                        We also have some add ons, as well as tickets for your employees, priced below.<br />
                         <em className="partners__latebirdprice">After March 1st, the base price increases to NOK 84.000,-</em><br />
                         <span className="partners__vat">all prices ex VAT</span>
                     </P>
