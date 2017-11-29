@@ -52,31 +52,33 @@ const Partners = () => (
                     <P>
                         JavaZone started out in 2002 as a small conference for Java developers, but has since then evolved
                         to become one of the largest developer conferences in the world. Each year thousands of people gather
-                        in Oslo Spektrum for three full days of learning, mingling and fun.
+                        in Oslo Spektrum for three full days of learning, mingling and fun!
                     </P>
+                </Content>
+            </Block>
 
-                    <SubHeader>Last two years:<br />Completely. Sold. Out.</SubHeader>
-
+            <Block>
+                <Header><span>Last two years:<br />Completely. Sold. Out.</span></Header>
+                <Content>
                     <P>
                         Last year, a record breaking 3100 people attended JavaZone.
-                        This was also the second year when we were completely sold out of tickets AND partner stands.
-                        Based on feedback and previous experience we have a feeling that we
-                        might sell out this year as well. So join in early if you
-                        want to be part of the conference!
+                        This was also the second year when we were completely sold out of both tickets AND partner stands.
+                        Based on this and feedback from last years partners we‘ve a feeling that we
+                        might sell out this year as well. So don‘t wait around if you
+                        want to be part of JavaZone 2018!
                     </P>
                 </Content>
             </Block>
 
             <Block>
                 <Header><span>Our philosophy:<br />partners, not sponsors</span></Header>
-
                 <Content>
                     <P>
-                        We want JavaZone‘s Expo Area to be an attractive space where partners and participants can hang out and spend time together.
-                        In previous years our partners have done a fantastic job to help us achieve this, and we want to keep this tradition alive.
+                        We want JavaZone‘s Expo Area to be an attractive space where Partners and participants can hang out and spend time together.
+                        In previous years our Partners have done a great job to help us achieve this goal, and we look forward to seeing what they bring to JavaZone 2018!
                         JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
-                        As a partner you are not just supporting our conference economically – you participate during the event and help create the unique atmosphere.
-                        Please share with us your ideas for making the most out of your partner space.
+                        As a partner you are not just supporting our conference economically – you participate during the event and help create a unique atmosphere.
+                        We work closely with our Partners to help them realise their ideas for making the most out of their stands.
                         Don’t be shy, almost anything is possible!
                     </P>
                 </Content>
@@ -97,7 +99,7 @@ const Partners = () => (
                     <SubHeader>People! People everywhere!</SubHeader>
 
                     <P>
-                        Don't you belive us? Have a look for yourself! Our new partners are always surprised by the
+                        Don‘t you belive us? Have a look for yourself! Our new partners are always surprised by the
                         huge attention their stands recieve in the Expo Area. We have put together a short 15-second
                         timelapse from 2 hours of Expo time, showing both the crowd in the breaks between talks and during talks.
                         Yes, you get exposure to that many people, for a total of 20 hours!
@@ -119,7 +121,7 @@ const Partners = () => (
                     <P>
                         Even though all partners are considered equal, there are
                         a few options to choose from. There is a base package that
-                        everyone gets, and then there are a few availiable expansions, with limited supply.
+                        everyone gets, and then there are a few availiable expansions. Notice that these expansions have a limited availability.
                     </P>
 
                     <SubHeader>Included in all partnerships</SubHeader>
@@ -161,7 +163,7 @@ const Partners = () => (
                             <span className='partners__stand-option partners__stand'>Concept Stand</span>
                         </dt>
                         <dd className='definition-list__data'>
-                            We also have room for 3 extra large stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
+                            We also have room for 3 extra large ‘Concept‘ stands. These stands have about 70 square meters floor space, and have room for a 4 meter tall wall behind it. This is your choice if you want to be really creative.
                         </dd>
                     </dl>
                 </Content>
@@ -173,7 +175,7 @@ const Partners = () => (
                 <CHeader><span>Partnership Prices</span></CHeader>
                 <CContent>
                     <div className="partners__mainprice partners__stand-option">NOK 69.000,-</div>
-                    <em>Note that all 50 partnerships for JavaZone 2017 got sold out last year.</em>
+                    <em>Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.</em>
                     <P>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some addons, as well as tickets for your employees, priced below.<br />
