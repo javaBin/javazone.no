@@ -37,17 +37,17 @@ const AboutSection = () => (
                 <P>
                     JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
                     organize a community-driven conference for Java developers where they can learn new things,
-                    share knowledge, and socialise.
+                    share knowledge, and socialize.
                 </P>
                 <P>
                     We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
                     and better every year. In 2017 we hosted almost 200 speakers across 7 parallel tracks over
-                    the course of two days. In addition we also offered a selection of 9 workshops held on the day before the
+                    the course of two days. In addition, we also offered a selection of 9 workshops held on the day before the
                     conference started.
                 </P>
                 <P>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 13th-14th September, 2018!
+                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 13th-14th September 2018!
                 </P>
 
             </Content>
@@ -130,12 +130,12 @@ const FaqSection = () => (
     /*
      “Where is JavaZone happening?”
      JavaZone takes place at Oslo Spectrum in the heart of Norwegian capital city – picturesque Oslo.
-     If you are local person, you know the way.
+     If you are a local person, you know the way.
      If you have never been in Oslo, do not worry and check the map /HERE/
      If you are completely lost, do not be afraid to ask! Norwegians are quite friendly people.
 
      “I am an engineer; I need a sleep. Let me sleep please”
-     Booking the hotel, uh? There are plenty of hotels and hostels around the conference centre. Searching for places close to Oslo Central Station is a good idea. You should be given few alternatives to choose from.
+     Booking the hotel, uh? There are plenty of hotels and hostels around the conference center. Searching for places close to Oslo Central Station is a good idea. You should be given few alternatives to choose from.
 
      “What if I get hungry?”
      Your brain needs food, we know that! That is why we bring Oslo’s best chefs who prepare great meals all day long for you. There will be 2^3 restaurants in the Expo area with 2^4 different food concepts. Believe us, if there is one thing you will not lack at JavaZone, it is food.
@@ -162,7 +162,7 @@ const ProgramSection = () => (
             <Header><span>Lightning talks</span></Header>
             <Content>
                 <P>
-                    Lightning talks are either 10 or 20 minutes long, and often gives a quick introduction to a concept.
+                    Lightning talks are either 10 or 20 minutes long and often gives a quick introduction to a concept.
                     This is a great way to get a sneak peek at something new.
                 </P>
             </Content>
@@ -216,7 +216,7 @@ const ImportantPrinciplesSection = () => (
                 <P><br />
                     JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
                     program is chosen by our independent program committee, and they operate under the principle that no-one
-                    is paid to hold a presentation, and likewise that no-one can pay us to get their presentation accepted.
+                    is paid to hold a presentation, and likewise, that no-one can pay us to get their presentation accepted.
                     See our monetary policy for details.
                     <br/><br/>
                     We as organizers strive to create the best possible learning experience for all our speakers and
@@ -246,7 +246,7 @@ const QuestionSection = () => (
         <CBlock>
             <CHeader><span>Questions?</span></CHeader>
             <CContent>
-                <P><br />Do not hesitate to contact us, if you have any questions.
+                <P><br />Do not hesitate to contact us if you have any questions.
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
                 </P>
                 <P>
