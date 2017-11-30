@@ -70,11 +70,11 @@ const Location = ({location}) => (
             {location.pax} students
         </p>
         {location.registration.map((reg, key) => (
-             <p key={key}>
-                 <a className='button button--transparent' href={reg.link}>
+            <p key={key}>
+                <a className='button button--transparent' href={reg.link}>
                     {reg.text}
-                 </a>
-             </p>
+                </a>
+            </p>
         ))}
     </div>
 );
@@ -140,10 +140,10 @@ const Academy = () => (
 
         <ul className='academy__sponsors'>
             {sponsors.map((sponsor, key) => (
-                 <li key={key} className='academy__sponsor'>
-                     <img className='academy__sponsor-image' src={sponsor} />
-                 </li>
-             ))}
+                <li key={key} className='academy__sponsor'>
+                    <img className='academy__sponsor-image' src={sponsor} />
+                </li>
+            ))}
         </ul>
 
     </Page>

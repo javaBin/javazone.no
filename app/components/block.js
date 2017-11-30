@@ -1,7 +1,7 @@
-import className from 'classname';
+import classNames from 'classnames';
 
 export const Block = (props) => {
-    const c = className('block', props.className);
+    const c = classNames('block', props.className);
 
     return (
         <div className={c}>
@@ -30,6 +30,12 @@ export const SubHeader = (props) => (
 
 export const P = (props) => (
     <p className='block__paragraph'>
+        {props.children}
+    </p>
+);
+
+export const Pc = (props) => (
+    <p className='block__paragraph--center'>
         {props.children}
     </p>
 );

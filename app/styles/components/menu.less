@@ -9,11 +9,25 @@
         outline: 0;
         padding: 0;
         position: fixed;
+        color: @white;
+        font-size: 1.7rem;
         text-align: center;
-        top: 30px;
-        right: 25px;
+        top: 20px;
+        right: 20px;
         width: 50px;
         z-index: 30;
+
+        @media (min-width: @size-s) {
+            font-family: 1.7rem;
+        }
+
+        @media (min-width: @size-m) {
+            font-family: 2rem;
+        }
+
+        @media (min-width: @size-l) {
+            font-family: 2.4rem;
+        }
 
         &:hover {
             .menu__icon {
@@ -123,7 +137,6 @@
     }
 
     &__links {
-        font-family: @eurostile;
         list-style: none;
         padding: 0;
         margin-top: 22px;
@@ -138,6 +151,16 @@
         }
     }
 
+    &__decorator {
+        border-radius: 2px;
+        margin-top: 5px;
+        margin-right: 20px;
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: @primary-text-color;
+    }
+
     &__link {
         font-size: 1.5rem;
         position: relative;
@@ -147,7 +170,7 @@
         @media (min-width: @size-s) {
             font-size: 2.5rem;
         }
-
+        /*
         &:after {
             background: transparent;
             border: 2px solid white;
@@ -181,5 +204,6 @@
         &--green:after {
             border-color: @green;
         }
+        */
     }
 }

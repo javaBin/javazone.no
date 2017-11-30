@@ -91,7 +91,7 @@ const Session = ({session, children}) => {
             <div className='kids__age'>{extra.age}</div>
             {children}
             <a className={`button button--transparent ${workshopClass(session)} kids_registrate`}
-               href={workshopUrl(session)}>
+                href={workshopUrl(session)}>
                 {workshopStatus(session)}
             </a>
         </div>

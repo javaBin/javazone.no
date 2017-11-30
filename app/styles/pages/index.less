@@ -5,6 +5,12 @@
     to { opacity: 1 }
 }
 
+@keyframes blink {
+    to {
+        visibility: visible;
+    }
+}
+
 .index {
     display: flex;
     flex-direction: column;
@@ -32,39 +38,51 @@
         animation: fadein 1s;
         animation-delay: 1s;
         animation-fill-mode: both;
-        font-family: @tron;
-        font-size: 2.2rem;
+        font-family: @source-sans-pro;
+        font-size: 2rem;
+        font-weight: bold;
         line-height: 120%;
-        margin: 55px 0 20px 0;
+        margin: 15px 0 15px 0;
         text-align: center;
-        text-transform: uppercase;
 
         @media (min-width: @size-s) {
             font-size: 3.5rem;
-            margin: 75px 0 30px 0;
+            margin: 100px 0 20px 0;
         }
 
         @media (min-width: @size-m) {
-            font-size: 4.1rem;
+            font-size: 6rem;
+            margin: 40px 0 20px 0;
         }
+    }
+
+    &__game-text {
+        text-align: center;
+        text-transform: uppercase;
+        visibility: hidden;
+        animation: blink 1s steps(3, end) infinite;
+        animation-delay: 3s;
     }
 
     &__info {
         animation: fadein 1s;
         animation-delay: 1s;
         animation-fill-mode: both;
-        color: @blue;
-        font-family: @eurostile;
+        color: @primary-button-hover-color;
+        font-family: @source-sans-pro;
         font-size: 1.5rem;
-        margin-bottom: 75px;
+        font-weight: 500;
+        margin: 25px 0 55px 0;
         text-align: center;
 
         @media (min-width: @size-s) {
             font-size: 2rem;
+            margin: 55px 0 55px 0;
         }
 
         @media (min-width: @size-m) {
             font-size: 2.5rem;
+            margin: 75px 0 75px 0;
         }
     }
 
@@ -72,13 +90,11 @@
         animation: fadein 1s;
         animation-delay: 1s;
         animation-fill-mode: both;
+        font-family: @source-sans-pro;
         flex-wrap: wrap;
-        font-family: @eurostile;
         justify-content: center;
         list-style: none;
         padding: 0;
-        margin: 22px auto 0;
-        width: 167px;
 
         @media (min-width: @size-s) {
             display: flex;
@@ -88,7 +104,8 @@
     }
 
     &__links-item {
-        margin: 5px 30px;
+        text-align: center;
+        margin: 10px 30px;
 
         @media (min-width: @size-s) {
             margin: 10px 30px;
@@ -96,15 +113,15 @@
     }
 
     &__link {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         position: relative;
         text-transform: uppercase;
         text-decoration: none;
 
         @media (min-width: @size-s) {
-            font-size: 2.5rem;
+            font-size: 1.2rem;
         }
-
+        /*
         &:after {
             border: 2px solid white;
             content: '';
@@ -137,5 +154,6 @@
         &--green:after {
             border-color: @green;
         }
+        */
     }
 }

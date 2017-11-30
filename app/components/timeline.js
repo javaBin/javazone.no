@@ -82,25 +82,27 @@ const data = [
 export default () => (
     <div className='timeline'>
         <ul className='timeline__timeline'>
-        { data.map((month, key) => (
-            <li key={key} className='timeline__month'>
-                <div className='timeline__month-name'>
-                    {month.month.split('').map((letter, lk) => <div key={lk} className='timeline__month-letter'>{letter}</div>)}
-                </div>
-                {
-                    month.events.map((event, ek) => (
-                    <div className={`timeline__event timeline__event--${event.align}`} key={ek} style={{top: event.location}}>
-                        <div className='timeline__event-title'>
-                            {event.title}
+            {
+                data.map((month, key) => (
+                    <li key={key} className='timeline__month'>
+                        <div className='timeline__month-name'>
+                            {month.month.split('').map((letter, lk) => <div key={lk} className='timeline__month-letter'>{letter}</div>)}
                         </div>
-                        <div className='timeline__event-date'>
-                            {event.date}
-                        </div>
-                    </div>
-                ))}
-            </li>
-            ))
-        }
+                        {
+                            month.events.map((event, ek) => (
+                                <div className={`timeline__event timeline__event--${event.align}`} key={ek} style={{top: event.location}}>
+                                    <div className='timeline__event-title'>
+                                        {event.title}
+                                    </div>
+                                    <div className='timeline__event-date'>
+                                        {event.date}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </li>
+                ))
+            }
         </ul>
     </div>
 );

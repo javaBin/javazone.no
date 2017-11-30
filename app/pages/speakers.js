@@ -245,7 +245,7 @@ const Speakers = () => (
             </CBlock>
 
             <CBlock>
-                    <CHeader>We hope to see you at JavaZone 2017 – please feel free to spread the word to your local community!</CHeader>
+                <CHeader>We hope to see you at JavaZone 2017 – please feel free to spread the word to your local community!</CHeader>
                 <CContent>
                     <P className='speakers__regards'>
                         <br />

@@ -24,6 +24,5 @@ export default () => (
                 Made by <a href="http://java.no" className="page__link">javaBin</a>
             </div>
         </div>
-        <img src={grid} className='footer__grid'/>
     </div>
 );

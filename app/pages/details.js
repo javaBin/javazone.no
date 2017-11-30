@@ -89,7 +89,7 @@ const Session = ({title, abstract, oppsummering, speakers, language, format, int
             <CHeader>{title}</CHeader>
             {// <CContent>
             //     {formatStart(starter)} - {formatStop(stopper)} @ {rom}
-                    // </CContent>
+            // </CContent>
             }
         </CBlock>
 

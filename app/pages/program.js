@@ -123,8 +123,9 @@ const Session = ({title, speakers, icon, room, language, duration, id, video, fo
         <div className='session__title-wrapper'>
             {hasVideo(video) ?
                 <Link href={`/program/${id}`} className='session__video-title'><span className='session__mobile-video'><i className='icon-control-play'></i></span></Link> :
-                <span className='session__mobile-room'>{room}</span>}
-                <Link href={`/program/${id}`} className='session__title'>{title}</Link>
+                <span className='session__mobile-room'>{room}</span>
+            }
+            <Link href={`/program/${id}`} className='session__title'>{title}</Link>
         </div>
         <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
             <i className={isFavorite(id, state) ? 'icon-check' : 'icon-plus'}></i>
@@ -206,10 +207,10 @@ const Loading = () => (
 );
 
 const Failure = () => (
-  <div className='program__loading'>
-      <h2 className='program__loading-header'>Woooops!</h2>
-      It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
-  </div>
+    <div className='program__loading'>
+        <h2 className='program__loading-header'>Woooops!</h2>
+        It seems something is seriously wrong here. We are most likely informed and working on it, so just try again in a while.
+    </div>
 );
 
 function showEmptyMyProgram(state) {
@@ -253,33 +254,40 @@ const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEn
     </div>
 );
 
-const Program = React.createClass({
+class Program extends React.Component {
 
-    getInitialState() {
-        return getDefaultSettings();
-    },
+    constructor(props) {
+        super(props);
+        this.state = getDefaultSettings();
+        this.setAll = this.setAll.bind(this);
+        this.setNorwegian = this.setNorwegian.bind(this);
+        this.setEnglish = this.setEnglish.bind(this);
+        this.setMyProgram = this.setMyProgram.bind(this);
+        this.toggleFavorite = this.toggleFavorite.bind(this);
+    }
 
     componentWillMount() {
         if (this.props.sessions.length === 0) {
             this.props.getSessions();
         }
-    },
+    }
 
     setAll() {
         this.setState({show: 'all'});
-    },
+    }
 
     setNorwegian() {
+        console.log(this.state);
         this.setState({show: 'no'});
-    },
+    }
 
     setEnglish() {
         this.setState({show: 'en'});
-    },
+    }
 
     setMyProgram() {
         this.setState({show: 'my'});
-    },
+    }
 
     toggleFavorite(id) {
         if (includes(id, this.state.myprogram)) {
@@ -288,14 +296,14 @@ const Program = React.createClass({
             const prev = this.state.myprogram || [];
             this.setState({myprogram: prev.concat(id)});
         }
-    },
+    }
 
     render() {
         const content = this.props.failure
             ? <Failure />
             : this.props.isFetching
-            ? Loading()
-            : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                ? Loading()
+                : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
 
         saveSettings(this.state);
 
@@ -307,6 +315,6 @@ const Program = React.createClass({
             </Page>
         );
     }
-});
+};
 
 export default connect(mapStateToProps, { getSessions })(Program);

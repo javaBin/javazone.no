@@ -16,16 +16,16 @@
     flex-grow: 1;
 
     &__logo-container {
-        margin: 50px auto 0px auto;
+        margin: 60px auto 0px auto;
         text-align: center;
         z-index: 20;
     }
 
     &__logo {
-        width: 100px;
+        width: 175px;
 
         @media (min-width: @size-s) {
-            width: 200px;
+            width: 175px;
         }
 
         @media (min-width: @size-m) {
@@ -37,9 +37,9 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        font-family: @eurostile;
         justify-content: center;
         height: 150px;
+        font-family: @source-sans-pro;
         text-transform: uppercase;
         text-align: center;
 
@@ -48,11 +48,11 @@
         }
 
         @media (min-width: @size-m) {
-            height: 300px;
+            height: 250px;
         }
 
         @media (min-width: @size-l) {
-            height: 350px;
+            height: 300px;
         }
     }
 
@@ -91,25 +91,11 @@
 
     &__title {
         color: @white;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 800;
         left: 20px;
-        margin: 0;
-
-        @media (min-width: @size-s) {
-            font-size: 3rem;
-        }
-
-        @media (min-width: @size-l) {
-            font-size: 5rem;
-        }
-    }
-
-    &__sub-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1.2rem;
-        margin-top: 0.5rem;
+        line-height: 120%;
+        margin: 15px 15px 0 15px;
 
         @media (min-width: @size-s) {
             font-size: 2rem;
@@ -117,6 +103,22 @@
 
         @media (min-width: @size-l) {
             font-size: 3rem;
+        }
+    }
+
+    &__sub-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: @source-sans-pro;
+        margin-bottom: 1.2rem;
+        margin-top: 1.2rem;
+
+        @media (min-width: @size-s) {
+            font-size: 2rem;
+        }
+
+        @media (min-width: @size-l) {
+            font-size: 2.5rem;
         }
 
         &--no-margin {
@@ -156,13 +158,12 @@
     &__link {
         background-image: linear-gradient(to bottom, transparent 75%, @white);
         background-repeat: repeat-x;
-        background-size: 2px 5px;
         background-position: 0 13px;
         text-decoration: none;
 
         &:hover {
-            background-image: linear-gradient(to bottom, transparent 75%, @yellow--light);
-            color: @yellow--light;
+            background-image: linear-gradient(to bottom, transparent 75%, @primary-text-color);
+            color: @primary-text-color;
         }
     }
 }
