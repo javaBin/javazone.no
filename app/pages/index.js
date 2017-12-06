@@ -23,7 +23,7 @@ class Index extends React.Component {
                 </div>
                 */}
                 <div className='index__info'>
-                    September 12th –13th 2018<br />
+                    September 12th – 13th 2018<br />
                     Oslo Spektrum
                 </div>
             </div>
