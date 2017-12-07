@@ -11,7 +11,7 @@ const InfoPage = () => (
     <Page name='info'>
         <Heading>
             <LargeHeading>Welcome to JavaZone 2018</LargeHeading>
-            <SmallHeading>September 13-14th – Oslo, Norway</SmallHeading>
+            <SmallHeading>September 12–13th 2018 – Oslo, Norway</SmallHeading>
         </Heading>
         <AboutSection />
         <TicketSection />
@@ -47,7 +47,7 @@ const AboutSection = () => (
                 </P>
                 <P>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 13th-14th September 2018!
+                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
                 </P>
 
             </Content>

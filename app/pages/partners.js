@@ -240,6 +240,13 @@ const Partners = () => (
                 </Content>
             </Block>
 
+            <CBlock>
+                <CContent>
+                    <P>
+                        <Link className='button button--transparent' href='/partnermote-desember'>Slides from last partner meeting (in Norwegian)</Link>
+                    </P>
+                </CContent>
+            </CBlock>
         </Container>
 
     </Page>

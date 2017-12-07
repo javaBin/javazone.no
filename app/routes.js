@@ -61,6 +61,7 @@ const routes = compile({
 
 const routes = compile({
     '/partners': partners,
+    '/partnermote-desember': partnermoteDesember,
     '/info': info,
     '/': index
 });

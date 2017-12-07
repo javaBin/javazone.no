@@ -1,10 +1,10 @@
 import header from '../assets/header_expo.jpg';
-//import pdf from '../assets/partnermote_desember/partnermote.pdf'; <---
+import pdf from '../assets/partnermote_desember/partnermote.pdf';
 import { Page, Heading, LargeHeading, SmallHeading, Container } from '../components/page';
 import { Block, Header, Content, P } from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 
-const images = require.context('../assets/partnermote_desember', true, /\.jpg$/);
+const images = require.context('../assets/partnermote_desember', true, /\.png$/);
 const imageList = images.keys().map(image => images(image));
 
 const headerStyle = {
@@ -34,10 +34,10 @@ export default () => (
                     </P>
                     <ul className='partner-presentation__sections'>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-2'>JavaZone 2016</a>
+                            <a href='#slide-2'>JavaZone 2017</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-10'>Programmet 2017</a>
+                            <a href='#slide-10'>Programmet 2018</a>
                         </li>
                         <li className='partner-presentation__link'>
                             <a href='#slide-22'>Partnerskap & Muligheter</a>
@@ -46,7 +46,7 @@ export default () => (
                             <a href='#slide-37'>JavaZone Academy</a>
                         </li>
                         <li className='partner-presentation__link'>
-                            <a href='#slide-44'>Kontaktinformasjon</a>
+                            <a href='#slide-45'>Kontaktinformasjon</a>
                         </li>
                     </ul>
                 </CContent>
@@ -67,7 +67,7 @@ export default () => (
                 <CContent>
                     <CHeader>Kontakt oss</CHeader>
                     <P>
-                        JavaZone 2017 holdes i september 2017, men ta kontakt så snart som mulig
+                        JavaZone 2018 holdes i september 2018, men ta kontakt så snart som mulig
                         om du har noen tanker og idéer allerede nå. Vi jobber hardt for at alle
                         standplasseringene i Expo-området skal være godt plassert og ha en god dynamikk,
                         så om du har spesielle ønsker lønner det seg å være tidlig ute.
