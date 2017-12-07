@@ -25,9 +25,9 @@ export default () => (
                 <CContent>
                     <P>
                         Nedenfor finner du presentasjonen som ble holdt på Teknologihuset<br />
-                        torsdag 1. desember.
+                        onsdag 6. desember.
                         <br />
-                        Presentasjonen inneholder informasjon for partnere om JavaZone 2017.
+                        Presentasjonen inneholder informasjon for partnere om JavaZone 2018.
                     </P>
                     <P>
                         Spørsmål? Kontakt oss på <a href='mailto:partner@java.no'>partner@java.no</a>.
