@@ -1,0 +1,24 @@
+@import '../../Styles/Variables.scss';
+
+.nav-container {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: background 0.3s;
+
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        background: white;
+        & * {
+            color: black;
+        }
+    }
+}
+
