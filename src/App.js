@@ -11,8 +11,9 @@ class App extends React.Component {
     return (
       <div>
         <NavigationBar links={links} />
-        <Promo />
-        <div className="test"></div>
+        <Promo>
+          <div className="test"></div>
+        </Promo>
       </div>
     );
   }
