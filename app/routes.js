@@ -62,6 +62,10 @@ const routes = compile({
 const routes = compile({
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
+    '/academy': academy,
+    '/academy/oslo': academyLocation(academyData.oslo),
+    '/academy/trondheim': academyLocation(academyData.trondheim),
+    '/academy/bergen': academyLocation(academyData.bergen),
     '/info': info,
     '/': index
 });

@@ -52,6 +52,9 @@ class Index extends React.Component {
                             <li className='index__links-item'>
                                 <a className='button button--transparent' href='/partners'>Partners</a>
                             </li>
+                            <li className='index__links-item'>
+                                <a className='button button--transparent' href='/academy'>Academy</a>
+                            </li>
                         </ul>
                     </div>
                 </Container>

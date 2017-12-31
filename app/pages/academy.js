@@ -5,7 +5,7 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { Link } from '../components/link';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
-import nova from '../assets/academy/nova.jpg';
+import nova from '../assets/academy/augustin.jpg';
 import acando from '../assets/partners-17/acando.svg';
 import accenture from '../assets/partners-17/accenture.svg';
 import capgemini from '../assets/partners-17/capgemini.svg';
@@ -17,39 +17,39 @@ const sponsors = [acando, accenture, capgemini, finn, kantega];
 const oslo = {
     image: teknologihuset,
     city: 'Oslo',
-    date: 'February 14th',
+    date: 'February 7th',
     location: 'Teknologihuset',
     location_link: 'http://www.teknologihuset.no',
     pax: 100,
     program: 'academy-oslo',
     registration: [
-        {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/e/1FAIpQLSdCD9dm8F7771fEHHXuTRLejLLTrhbTzYCnkQYWu3G-hFqh7A/viewform?c=0&w=1'}
+        {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/e/1FAIpQLSeFEhvSathx259fwJKGTevlUPIWv7BpkLuQZPiR8DWBcgR-GQ/viewform?c=0&w=1'}
     ]
 };
 
 const bergen = {
     image: kvarteret,
     city: 'Bergen',
-    date: 'February 16th',
+    date: 'February 5th',
     location: 'Det Akademiske Kvarter',
     location_link: 'http://kvarteret.no/',
     pax: 80,
     program: 'academy-bergen',
     registration: [
-        {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfK6Lwo_5fRLTbzuzZKNuUUS2bo2O_TLnQswpwQXkVndv9GYg/viewform?c=0&w=1'},
+        {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/e/1FAIpQLSdJLNRKU9aP_rqSf0qYfs6zEyvMqRvulU1P2PbdRf4sLyzo5A/viewform?c=0&w=1'},
     ]
 };
 
 const trondheim = {
     image: nova,
     city: 'Trondheim',
-    date: 'February 15th',
-    location: 'Nova Konferansesenter',
-    location_link: 'http://nova-trondheim.no',
-    pax: 100,
+    date: 'February 6th',
+    location: 'Quality Hotel Augustin – Kongensgate 26',
+    location_link: 'https://www.nordicchoicehotels.com/conferences-meetings/norway/trondheim/quality-hotel-augustin/',
+    pax: 140,
     program: 'academy-trondheim',
     registration: [
-        {text: 'Register for Academy Trondheim', link: 'https://abakus.no/event/1946-javazone-academy-2017/'},
+        {text: 'Register for Academy Trondheim', link: 'https://docs.google.com/forms/d/e/1FAIpQLScq-l7uVy5OM7QmVqOP7ft1_C1wI9vRomqzD4xSqJYgR9Z51Q/viewform?c=0&w=1'},
     ]
 };
 
@@ -83,6 +83,7 @@ const Academy = () => (
     <Page name='academy'>
         <Heading>
             <LargeHeading>JavaZone Academy</LargeHeading>
+            <SmallHeading>Come join us in February 2018</SmallHeading>
         </Heading>
 
         <Container>
@@ -98,16 +99,20 @@ const Academy = () => (
                         to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Trondheim</strong>.
                         Join us for a great evening!
                     </P>
+                    <P>
+                        A detailed program and more information will be soon posted here. Watch this space!
+                    </P>
                 </CContent>
             </CBlock>
         </Container>
 
         <ul className='academy__locations'>
-            <Location location={oslo} />
-            <Location location={trondheim} />
             <Location location={bergen} />
+            <Location location={trondheim} />
+            <Location location={oslo} />
         </ul>
 
+        {/*
         <Container>
             <CBlock>
                 <CHeader>Program and Speakers</CHeader>
@@ -145,7 +150,8 @@ const Academy = () => (
                 </li>
             ))}
         </ul>
-
+        */
+        }
     </Page>
 );
 
