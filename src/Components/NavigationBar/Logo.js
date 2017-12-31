@@ -1,3 +1,4 @@
+//@flow
 import * as React from 'react';
 import styles from './Logo.scss';
 import logo from './logo.svg';
@@ -15,7 +16,12 @@ function Logo(props: Props) {
         'slide-in': props.sticky,
         'slide-out': !props.sticky
     })
-    return <img className={logoClass} src={logo} alt="JavaZone" />
+    return (
+        <div className={logoClass}>
+            <img src={logo} alt="JavaZone" />
+            <h1>JZ2018</h1>
+        </div>
+    );
 }
 
 export default Logo;

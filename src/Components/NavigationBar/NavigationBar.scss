@@ -1,11 +1,15 @@
 @import '../../Styles/Variables.scss';
 
 .nav-container {
-    z-index: 2;
+    z-index: 11;
     position: absolute;
     width: 100%;
     height: auto;
     transition: background 0.3s;
+
+    @media ($screen-mobile) {
+        height: 7rem;
+    }
 
     .container {
         justify-content: center;

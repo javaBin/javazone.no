@@ -151,6 +151,7 @@ module.exports = {
               cacheDirectory: true,
             },
           },
+
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -166,7 +167,9 @@ module.exports = {
                   importLoaders: 1,
                 },
               },
-              require.resolve('sass-loader'),
+              {
+                loader: require.resolve('resolve-url-loader')
+              },
               {
                 loader: require.resolve('postcss-loader'),
                 options: {
@@ -187,7 +190,16 @@ module.exports = {
                   ],
                 },
               },
+              require.resolve('sass-loader')
             ],
+          },
+          {
+            test: /\.(eot|ttf|woff|woff2)$/,
+            loader: require.resolve('file-loader'),
+            options: {
+              limit: 10000,
+              name: 'static/fonts/[name].[ext]',
+            }
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
@@ -199,7 +211,7 @@ module.exports = {
             // it's runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.js$/, /\.html$/, /\.json$/],
+            exclude: [/\.js$/, /\.html$/, /\.json$/, /\.(eot|ttf|woff|woff2)$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',

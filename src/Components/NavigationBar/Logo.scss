@@ -1,12 +1,24 @@
+
 .logo {
-    overflow-y: hidden;
-    width: 4rem;
     position: relative;
     top: -300px;
-    margin: 1rem 1rem 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem 1rem 0;
     transition-property: "slide-in";
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    img {
+        height: auto;
+        width: 4rem;
+        margin-right: 1rem;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-family: 'Upheaval'
+    }
 }
 
 .slide-in {

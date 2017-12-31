@@ -1,16 +1,7 @@
 @import '../../Styles/Variables.scss';
 
 .container {
-    margin: 0 18rem 0 18rem;
-    padding: 0 1rem 0 1rem;
     display: flex;
     flex-direction: row;
-
-    @media ($screen-mobile) {
-        margin: 0 1rem 0 1rem;
-    }
-
-    @media ($screen-tablet) {
-        margin: 0 2rem 0 2rem;
-    }
+    margin: 0 10rem 0 10rem;
 }
