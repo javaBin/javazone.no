@@ -5,7 +5,7 @@ import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import { Link } from '../components/link';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
-import nova from '../assets/academy/augustin.jpg';
+import uit from '../assets/academy/tromso.jpg';
 import acando from '../assets/partners-17/acando.svg';
 import accenture from '../assets/partners-17/accenture.svg';
 import capgemini from '../assets/partners-17/capgemini.svg';
@@ -40,16 +40,16 @@ const bergen = {
     ]
 };
 
-const trondheim = {
-    image: nova,
-    city: 'Trondheim',
+const tromso = {
+    image: uit,
+    city: 'Tromsø',
     date: 'February 6th',
-    location: 'Quality Hotel Augustin – Kongensgate 26',
-    location_link: 'https://www.nordicchoicehotels.com/conferences-meetings/norway/trondheim/quality-hotel-augustin/',
-    pax: 140,
-    program: 'academy-trondheim',
+    location: 'TBA',
+    location_link: 'https://www.uit.no',
+    pax: 60,
+    program: 'academy-tromso',
     registration: [
-        {text: 'Register for Academy Trondheim', link: 'https://docs.google.com/forms/d/e/1FAIpQLScq-l7uVy5OM7QmVqOP7ft1_C1wI9vRomqzD4xSqJYgR9Z51Q/viewform?c=0&w=1'},
+        {text: 'Register for Academy Tromsø', link: 'https://docs.google.com/forms/d/e/1FAIpQLSc4UVInVgFIiPDExRfYCr0p3BwT7h9Hhhk5546Tp6sxiYcVfA/viewform?c=0&w=1'},
     ]
 };
 
@@ -96,7 +96,7 @@ const Academy = () => (
                     </P>
                     <P>
                         We will bring great talks, food, mingling and great partners
-                        to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Trondheim</strong>.
+                        to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
                         Join us for a great evening!
                     </P>
                     <P>
@@ -108,7 +108,7 @@ const Academy = () => (
 
         <ul className='academy__locations'>
             <Location location={bergen} />
-            <Location location={trondheim} />
+            <Location location={tromso} />
             <Location location={oslo} />
         </ul>
 
@@ -123,7 +123,7 @@ const Academy = () => (
                         <Link href='/academy/oslo' className='button button--transparent'>Academy Oslo</Link>
                     </li>
                     <li className='list__item academy__program-link'>
-                        <Link href='/academy/trondheim' className='button button--transparent'>Academy Trondheim</Link>
+                        <Link href='/academy/tromso' className='button button--transparent'>Academy Tromsø</Link>
                     </li>
                     <li className='list__item academy__program-link'>
                         <Link href='/academy/bergen' className='button button--transparent'>Academy Bergen</Link>
