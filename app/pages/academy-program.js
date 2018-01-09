@@ -4,7 +4,7 @@ import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
-import nova from '../assets/academy/augustin.jpg';
+import uit from '../assets/academy/tromso.jpg';
 import acando from '../assets/partners-17/acando.svg';
 import accenture from '../assets/partners-17/accenture.svg';
 import capgemini from '../assets/partners-17/capgemini.svg';
