@@ -8,7 +8,8 @@
     "clean": "rm -rf ./dist && mkdir dist",
     "build": "npm run lint && npm run clean && NODE_ENV=production webpack --env=prod -p --progress --colors",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --env=dev --inline --host 0.0.0.0",
-    "start": "npm run watch"
+    "start": "npm run watch",
+    "flow": "flow"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -25,6 +26,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "fetch": "^1.1.0",
     "file-loader": "^1.1.5",
+    "flow-bin": "^0.63.1",
     "html-webpack-plugin": "^2.30.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
@@ -53,7 +55,6 @@
     "classnames": "^2.2.5",
     "cross-env": "^5.1.1",
     "lodash": "^4.17.4",
-    "moment": "^2.19.1",
-    "react-keydown": "^1.9.5"
+    "moment": "^2.19.1"
   }
 }

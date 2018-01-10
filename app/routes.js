@@ -1,5 +1,5 @@
 import React from 'react';
-import index from './pages/index';
+import index from './pages/Index';
 import videos from './pages/videos';
 import partners from './pages/partners';
 import notFound from './pages/404.js';
@@ -22,7 +22,7 @@ import pageview from './analytics';
 import academyData from './data/academy';
 import frivillig from './pages/frivillig';
 import journeyZone from './pages/journeyzone';
-import info from './pages/info';
+import info from './pages/Info/';
 import program from './pages/program';
 import details from './pages/details';
 import workshops from './pages/workshops';
