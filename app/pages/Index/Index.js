@@ -5,6 +5,7 @@ import { Link } from '../../components/link';
 import './Index.less';
 
 type Props = {
+
 }
 
 function Index(props: Props) {

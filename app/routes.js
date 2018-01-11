@@ -1,5 +1,5 @@
 import React from 'react';
-import index from './pages/Index';
+import index from './pages/Index/Index.js';
 import videos from './pages/videos';
 import partners from './pages/partners';
 import notFound from './pages/404.js';
