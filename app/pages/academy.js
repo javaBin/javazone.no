@@ -44,7 +44,7 @@ const tromso = {
     image: uit,
     city: 'Tromsø',
     date: 'February 6th',
-    location: 'TBA',
+    location: 'Universitetet i Tromsø',
     location_link: 'https://www.uit.no',
     pax: 60,
     program: 'academy-tromso',
