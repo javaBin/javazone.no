@@ -1,14 +1,9 @@
-@import '../../styles/variables';
+@import '../../styles/Variables.less';
 
-@keyframes fadein {
-    from { opacity: 0 }
-    to { opacity: 1 }
-}
-
-@keyframes blink {
-    to {
-        visibility: visible;
-    }
+.logo {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    width: 20rem;
 }
 
 .index {
@@ -16,32 +11,11 @@
     flex-direction: column;
     min-height: 100%;
 
-    .page__logo-container {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-    }
-
-    .menu__toggle {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-    }
-
-    .footer {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-    }
-
     &__text {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-        font-family: @source-sans-pro;
-        font-size: 2rem;
+        font-family: @upheaval;
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
         font-weight: bold;
-        line-height: 120%;
         margin: 15px 0 15px 0;
         text-align: center;
 
@@ -51,15 +25,12 @@
         }
 
         @media (min-width: @size-m) {
-            font-size: 6rem;
-            margin: 40px 0 20px 0;
+            font-size: 7rem;
+            margin: 0 0 100px 0;
         }
     }
 
     &__info {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
         font-family: @source-sans-pro;
         font-size: 1.5rem;
         font-weight: 500;
@@ -78,9 +49,6 @@
     }
 
     &__links {
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: both;
         font-family: @source-sans-pro;
         flex-wrap: wrap;
         justify-content: center;

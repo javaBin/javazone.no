@@ -1,7 +1,4 @@
-@import "../../node_modules/reset-css/reset.css";
-@import "../../node_modules/normalize.css/normalize.css";
-@import 'base.less';
-@import 'framework.less';
+//@import 'base.less';
 @import 'navigation.less';
 @import 'footer.less';
 @import 'textblock.less';
@@ -32,16 +29,12 @@
 @import 'location';
 
 // Pages
-@import 'pages/page.less';
 @import 'pages/about.less';
-@import 'pages/partners.less';
 @import 'pages/contact.less';
 @import 'pages/partner-presentation';
 @import 'pages/academy';
 @import 'pages/speakers';
 @import 'pages/kids';
-@import 'pages/tickets';
-@import 'pages/info.less';
 @import 'pages/journeyzone.less';
 @import 'pages/frivillig';
 @import 'pages/details';
@@ -50,10 +43,28 @@
 @import 'pages/expo';
 @import 'pages/print-program';
 
-// Utility stuff
-@import 'button.less';
-@import 'page-transition.less';
+@import 'Fonts.less';
 
-// Fonts
-@import 'simple-line-icons.less';
-@import 'fonts.less';
+// Colors
+@import 'Variables.less';
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 18px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background: @page-bg-color;
+    font-weight: 400;
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    margin-left: 0;
+}

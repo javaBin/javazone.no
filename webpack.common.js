@@ -19,7 +19,7 @@ module.exports = {
                 use: 'babel-loader'
             },
             {
-                test: /\.less$/,
+                test: /\.(css|less)$/,
                 exclude: exclude,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',

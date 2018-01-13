@@ -8,7 +8,7 @@ import info1 from '../../assets/info_1.jpg';
 import tickets2 from '../../assets/tickets_2.jpg';
 import partners1 from '../../assets/partners_1.jpg';
 
-type Props = {
+type InfoProps = {
 }
 
 function AboutSection() {
@@ -257,7 +257,7 @@ function QuestionSection() {
 }
 
 
-function Info(props: Props) {
+function Info(props: InfoProps) {
     return (
         <Page name='info'>
             <Heading>

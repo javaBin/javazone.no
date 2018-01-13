@@ -1,3 +1,4 @@
+import flexboxgrid from 'flexboxgrid';
 import styles from './styles/app.less';
 import 'whatwg-fetch';
 import 'es6-promise/auto';
