@@ -1,0 +1,54 @@
+
+@import '../../styles/Variables.less';
+
+.footer {
+    background: @section-pixel-bg-color;
+    color: @secondary-text-color;
+    padding: 2rem 0 1.5rem 0;
+}
+
+.footer a {
+    color: @secondary-text-color;
+}
+
+.javabin {
+    font-family: @source-sans-pro;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    &::before,
+    &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.javabin.draw.meet {
+    color: @secondary-text-color;        
+    &:hover {
+        color: @secondary-text-color;        
+    }
+    &:hover::before {
+        border-top-color: @secondary-text-color;
+        border-right-color: @secondary-text-color;
+    }
+    &:hover::after {
+        border-bottom-color: @secondary-text-color;
+        border-left-color: @secondary-text-color;
+    }
+}
+
+.social-icon {
+    margin: 0 3rem 1.5rem 3rem;
+    cursor: pointer;
+}

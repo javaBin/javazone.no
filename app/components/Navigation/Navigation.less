@@ -38,6 +38,7 @@
 }
 
 .navigation {
+    z-index: 10;
     display: flex;
     top: 0;
     justify-content: center;
@@ -51,6 +52,7 @@
 
 .sticky {
     background: @section-pixel-bg-color;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
     .nav-item, .draw, .meet {
         color: @secondary-text-color;        
         &:hover {

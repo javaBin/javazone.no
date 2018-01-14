@@ -1,7 +1,7 @@
 //@flow
 import * as React from 'react';
 import Button from '../Button/Button';
-import { MapPin, Calendar, MessageCircle, Grid } from 'react-feather';
+import { MapPin, Calendar, Mic, Grid } from 'react-feather';
 import Container from '../Container/Container';
 import './Stats.less';
 
@@ -31,7 +31,7 @@ function Stats(props: StatsProps) {
                     <div className="col-xs col-sm col-md col-lg-3">
                         <div className="box">
                             <h2>Speakers</h2>
-                            <MessageCircle size="110" />
+                            <Mic size="110" />
                             <h2>24</h2>
                         </div>
                     </div>

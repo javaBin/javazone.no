@@ -2,7 +2,8 @@
 import * as React from 'react';
 import Container from '../Container/Container';
 import classnames from 'classnames';
-import JavazoneLogo from '../../assets/2018/logo_2018_concept.svg';
+//import JavazoneLogo from '../../assets/2018/logo_2018_concept.svg';
+import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey.svg';
 import './Navigation.less';
 
 type NavigationProps = {
