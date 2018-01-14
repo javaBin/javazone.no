@@ -1,4 +1,4 @@
 {
-    "presets": ["env", "react", "es2015"],
+    "presets": ["env", "react", "es2015", "flow", "react-app"],
     "plugins": ["transform-react-require", "transform-object-assign"]
 }

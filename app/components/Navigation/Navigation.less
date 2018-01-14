@@ -1,5 +1,174 @@
-.navigation {
-    width: 100%;
-    height: 5rem;
-    background: transparent;
+@import '../../styles/Variables';
+
+.logo-nav {
+    display: flex;
+    font-family: @upheaval;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    transition: ease-in-out left 0.25s;
+    left: -200px;
+    margin-left: 1rem;
+
+    h2 {
+        margin-left: 0.5rem;
+        color: @secondary-text-color;
+    }
+
+    img {
+        width: 2.7rem;
+    }
 }
+
+.logo-nav-sticky {
+    left: 0;
+}
+
+.logo-container {
+
+    h3 {
+        font-family: @upheaval;
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.navigation {
+    display: flex;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+    transition: ease-in-out background 0.25s;
+    align-items: center;
+    height: 4rem;
+    flex-direction: row;
+    position: fixed;
+}
+
+.sticky {
+    background: @section-pixel-bg-color;
+    .nav-item, .draw, .meet {
+        color: @secondary-text-color;        
+        &:hover {
+            color: @secondary-text-color;        
+        }
+        &:hover::before {
+            border-top-color: @secondary-text-color;
+            border-right-color: @secondary-text-color;
+        }
+        &:hover::after {
+            border-bottom-color: @secondary-text-color;
+            border-left-color: @secondary-text-color;
+        }
+    }
+}
+
+.nav-item {
+    margin: 0 0.3rem 0 0.3rem;
+    font-family: @source-sans-pro;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-weight: 700;
+  
+    // Required, since we're setting absolute on pseudo-elements
+    position: relative;
+    vertical-align: middle;
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.draw {
+    transition: color 0.25s;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    color: white;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: white; // Make borders visible
+    border-right-color: white;
+    transition:
+      width 0.125s ease-out, // Width expands first
+      height 0.125s ease-out 0.125s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: white; // Make borders visible
+    border-left-color: white;
+    transition:
+      border-color 0s ease-out 0.25s, // Wait for ::before to finish before showing border
+      width 0.125s ease-out 0.375s, // And then exanding width
+      height 0.125s ease-out 0.5s; // And finally height
+  }
+}
+
+.meet {
+  
+    &:hover {
+      color: white;
+    }
+  
+    // Start ::after in same position as ::before
+    &::after {
+      top: 0;
+      left: 0;
+    }
+  
+    // Change colors
+    &:hover::before {
+      border-top-color: white;
+      border-right-color: white;
+    }
+  
+    &:hover::after {
+      border-bottom-color: white;
+      border-left-color: white;
+      transition: // Animate height first, then width
+        height 0.125s ease-out,
+        width 0.125s ease-out 0.125s;
+    }
+  
+  }
