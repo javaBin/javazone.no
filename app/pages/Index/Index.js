@@ -1,10 +1,8 @@
 //@flow
 import * as React from 'react';
-//import { Container } from '../../components/page';
 import Container from '../../components/Container/Container';
 import Section from '../../components/Section/Section';
 import Stats from '../../components/Stats/Stats';
-import Footer from '../../components/Footer/Footer';
 import { Block, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
 import Page from '../../components/Page/Page.js';
@@ -53,7 +51,6 @@ function Index(props: IndexProps) {
             <Section fullWidth>
                 <ImageBlock image={Javazone1} alt="JavaZone Expo" />
             </Section>
-            <Footer />
         </Page> 
     )
 }

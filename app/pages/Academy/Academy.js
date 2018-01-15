@@ -1,9 +1,11 @@
 //@flow
 import * as React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
+import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
 import { Block, Header, Content, SubHeader, P} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { Link } from '../../components/link';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import teknologihuset from '../../assets/academy/teknologihuset.jpg';
 import kvarteret from '../../assets/academy/kvarteret.jpg';
 import uit from '../../assets/academy/tromso.jpg';
@@ -93,11 +95,7 @@ function Location(props: LocationProps) {
 function Academy(props: AcademyProps) {
     return (
         <Page name='academy'>
-            <Heading>
-                <LargeHeading>JavaZone Academy</LargeHeading>
-                <SmallHeading>Come join us in February 2018</SmallHeading>
-            </Heading>
-
+            <PageHeader subHeader="Come join us in February 2018">JavaZone Academy</PageHeader>
             <Container>
                 <CBlock>
                     <CContent>

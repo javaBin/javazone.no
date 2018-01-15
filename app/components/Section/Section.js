@@ -7,18 +7,21 @@ import './Section.less';
 type SectionProps = {
     fullWidth?: bool,
     pixel?: bool,
+    secondary?: bool,
     children: React.Node 
 }
 
 Section.defaultProps = {
     fullWidth: false,
-    pixel: false
+    pixel: false,
+    secondary: false
 }
 
 function Section(props: SectionProps) {
 
     let sectionClass = classnames({
-        'pixel': props.pixel
+        'pixel': props.pixel,
+        'secondary-bg': props.secondary 
     })
 
     return (

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import './Page.less';
 import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
 
 type PageProps = {
     name: string,
@@ -13,30 +14,9 @@ function Page(props: PageProps) {
         <div className="page">
             <Navigation />
             {props.children}
+            <Footer />
         </div>
     )
 }
 
 export default Page;
-
-/*
-export const Page = (props) => {
-    const pageClass = `page ${props.name}`;
-
-    return (
-        <div className={pageClass}>
-            <Menu />
-            <div className='page__logo-container'>
-                <Link href='/'>
-                    <img src={logo} className='page__logo' />
-                </Link>
-            </div>
-            {props.children}
-            <Container className='footer'>
-                <Footer></Footer>
-            </Container>
-        </div>
-    );
-};
-*/
-

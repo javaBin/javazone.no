@@ -1,6 +1,8 @@
 //@flow
 import * as React from 'react';
-import { Container, Heading, LargeHeading, Page, SmallHeading } from '../../components/page';
+import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import { Block, Content, Header, P, Pc } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
@@ -260,10 +262,7 @@ function QuestionSection() {
 function Info(props: InfoProps) {
     return (
         <Page name='info'>
-            <Heading>
-                <LargeHeading>Welcome to JavaZone 2018</LargeHeading>
-                <SmallHeading>September 12–13th 2018 – Oslo, Norway</SmallHeading>
-            </Heading>
+            <PageHeader subHeader="September 12th - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
             <AboutSection />
             <TicketSection />
             <BetterExplorerSection />

@@ -1,9 +1,9 @@
 //@flow
 import * as React from 'react';
 import Container from '../Container/Container';
+import Link from '../Link/Link';
 import classnames from 'classnames';
-//import JavazoneLogo from '../../assets/2018/logo_2018_concept.svg';
-import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey.svg';
+import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey_small.svg';
 import './Navigation.less';
 
 type NavigationProps = {
@@ -34,15 +34,15 @@ function Logo(props: LogoProps) {
     return (
         <div className={logoClass}>
             <img src={JavazoneLogo} alt="JavaZone" />
-            <h2>JZ2018</h2>
+            <Link href="/">
+                <h2>JZ2018</h2>
+            </Link>
         </div>
     )
 }
 
 function NavItem(props: NavItemProps) {
-    return (
-        <a className="nav-item draw meet" href={props.link}>{props.children}</a>
-    )
+    return <Link href={props.link} className="nav-item draw meet">{props.children}</Link>
 }
 
 class Navigation extends React.Component<NavigationProps, NavigationState> {

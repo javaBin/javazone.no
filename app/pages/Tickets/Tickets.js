@@ -1,6 +1,8 @@
 //@flow
 import * as React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
+import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import { Block, Header, Content, SubHeader, P} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { Link } from '../../components/link';
@@ -16,10 +18,7 @@ type TicketsProps = {
 function Tickets(props: TicketsProps) {
     return (
         <Page name='tickets'>
-            <Heading>
-                <LargeHeading>Tickets to JavaZone 2017</LargeHeading>
-                <SmallHeading>Come join us in Oslo, September 13-14th</SmallHeading>
-            </Heading>
+            <PageHeader subHeader="Come join us in Oslo, September 12th - 13th">Dear Javazone Partners</PageHeader>
             <Container>
 
                 <CBlock fullWidth={true} className='partners__price-container'>

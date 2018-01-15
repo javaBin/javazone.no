@@ -66,6 +66,9 @@ const routes = compile({
     '/academy/oslo': academyLocation(academyData.oslo),
     '/academy/trondheim': academyLocation(academyData.trondheim),
     '/academy/bergen': academyLocation(academyData.bergen),
+    '/speakers': speakers,
+    '/frivillig': frivillig,
+    '/tickets': tickets,
     '/info': info,
     '/': index
 });
@@ -106,13 +109,19 @@ function navigate(ev) {
 }
 
 export function getPage(requestedPage) {
+    console.log("Getpage");
+    console.log(requestedPage);
     if (requestedPage[requestedPage.length - 1] === '/' && requestedPage.length > 1) {
         requestedPage = requestedPage.substring(0, requestedPage.length - 1);
     }
+    console.log(requestedPage);
 
     const page = routes.find((routes) => {
         return routes.pattern.test(requestedPage);
     });
+    console.log(page);
+    console.log(!page);
+
     if (!page) {
         pageview('/404');
         return notFound;

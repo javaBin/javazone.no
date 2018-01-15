@@ -1,6 +1,8 @@
 //@flow
 import * as React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
+import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import { Block, Header, Content, SubHeader, P, Pc} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
@@ -55,10 +57,7 @@ function Partner(props: PartnerProps) {
 function Partners(props: PartnersProps) {
     return (
         <Page name='partners'>
-            <Heading>
-                <LargeHeading>Dear JavaZone Partners</LargeHeading>
-                <SmallHeading>Join us in 2018</SmallHeading>
-            </Heading>
+            <PageHeader subHeader="Join us in 2018">Dear Javazone Partners</PageHeader>
             <Container>
                 <Block>
                     <Header><span>JavaZone 2018:<br />bigger and better than ever</span></Header>
