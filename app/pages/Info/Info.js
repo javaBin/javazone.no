@@ -3,7 +3,9 @@ import * as React from 'react';
 import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import { Block, Content, Header, P, Pc } from '../../components/block';
+import Section from '../../components/Section/Section';
+import { Block, ImageBlock } from '../../components/Block/Block';
+import { Content, Header, P, Pc } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
 import info1 from '../../assets/info_1.jpg';
@@ -15,109 +17,80 @@ type InfoProps = {
 
 function AboutSection() {
     return (
-        <Container>
-            <Block>
-                <Header><span>JavaZone 101<br />the who, what and where</span></Header>
-                <Content>
-                    <P>
-                        JavaZone – the biggest European community-driven conference for modern developers will be 17
-                        years old in 2018! Don’t miss out on two days of inspiring tech talks,
-                        a day of hands-on sessions, mingling, and a great party!
-                    </P>
-                    <P>
-                        JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
-                        organize a community-driven conference for Java developers where they can learn new things,
-                        share knowledge, and socialize.
-                    </P>
-                    <P>
-                        We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
-                        and better every year. In 2017 we hosted almost 200 speakers across 7 parallel tracks over
-                        the course of two days. In addition, we also offered a selection of 9 workshops held on the day before the
-                        conference started.
-                    </P>
-                    <P>
-                        We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                        Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
-                    </P>
-
-                </Content>
+        <Section>
+            <Block header="JavaZone 101 the who, what and where"> 
+                <P>
+                    JavaZone – the biggest European community-driven conference for modern developers will be 17
+                    years old in 2018! Don’t miss out on two days of inspiring tech talks,
+                    a day of hands-on sessions, mingling, and a great party!
+                </P>
+                <P>
+                    JavaZone is organized by <a href="https://java.no">javaBin</a>, the Norwegian Java User Group. Our goal is to
+                    organize a community-driven conference for Java developers where they can learn new things,
+                    share knowledge, and socialize.
+                </P>
+                <P>
+                    We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
+                    and better every year. In 2017 we hosted almost 200 speakers across 7 parallel tracks over
+                    the course of two days. In addition, we also offered a selection of 9 workshops held on the day before the
+                    conference started.
+                </P>
+                <P>
+                    We would not be what we are today without YOU! Thank you for your support and contributions over the years.
+                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
+                </P>
             </Block>
-        </Container>
+        </Section>
     )
 }
 
 function TicketSection() {
     return (
-        <Container>
-            <Block>
-                <Header><span>First things first:<br/> your ticket!</span></Header>
-                <Content>
-                    <P>
-                        To attend JavaZone you will need a ticket. The ticket grants you access to the full
-                        JavaZone experience, including workshops. The ticket sales will be opening in February 2018.
-                    </P>
-                </Content>
+        <Section>
+            <Block header="First thing first: your ticket!">
+                <P>
+                    To attend JavaZone you will need a ticket. The ticket grants you access to the full
+                    JavaZone experience, including workshops. The ticket sales will be opening in February 2018.
+                </P>
             </Block>
-            <img className='partners__image' src={tickets2} />
-        </Container>
+        </Section>
     )
 }
 
 function BetterExplorerSection() {
     return (
-        <Container>
-
-            <Block>
-                <Header><span>Two conference days</span></Header>
-                <Content>
-                    <P>
-                        Two days full of talks from renowned Norwegian and international speakers, in varying formats
-                        and categories. You don‘t want to miss our amazing lineup. The program will be made available online around summer 2018.
-                    </P>
-                </Content>
+        <Section>
+            <Block header="Two conference days">
+                <P>
+                    Two days full of talks from renowned Norwegian and international speakers, in varying formats
+                    and categories. You don‘t want to miss our amazing lineup. The program will be made available online around summer 2018.
+                </P>
             </Block>
-
-            <Block>
-                <Header><span>An after party to remember</span></Header>
-                <Content>
-                    <P>
-                        After a long day of unique learning experiences, it feels good to chill out with some good food and drink.
-                        JavaZone parties are legendary - and we can promise something amazing for our afterparty this year as well!
-                    </P>
-                </Content>
+            <Block header="An after party to remember">
+                <P>
+                    After a long day of unique learning experiences, it feels good to chill out with some good food and drink.
+                    JavaZone parties are legendary - and we can promise something amazing for our afterparty this year as well!
+                </P>
             </Block>
-
-            <Block>
-                <Header><span>8 restaurants, all day long</span></Header>
-                <Content>
-                    <P>
-                        Have we mentioned our great selection of food? And that it is continuously delivered?
-                        Our chefs will take you on a culinary trip around the globe. With food served all day we promise that you will not leave the event hungry!
-                    </P>
-                </Content>
+            <Block header="8 restaurants, all day long">
+                <P>
+                    Have we mentioned our great selection of food? And that it is continuously delivered?
+                    Our chefs will take you on a culinary trip around the globe. With food served all day we promise that you will not leave the event hungry!
+                </P>
             </Block>
-
-            <Block>
-                <Header><span>Hands-on workshops</span></Header>
-                <Content>
-                    <P>
-                        Do you prefer practical tasks more than theory? Take part in one of our great workshops and
-                        boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
-                        More information, along with registration details will be made available in August.
-                    </P>
-                </Content>
+            <Block header="Hands-on workshops">
+                <P>
+                    Do you prefer practical tasks more than theory? Take part in one of our great workshops and
+                    boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
+                    More information, along with registration details will be made available in August.
+                </P>
             </Block>
-
-            <Block>
-                <Header><span>…and a whole lotta love</span></Header>
-                <Content>
-                    <P>
-                        You will meet lots of interesting people at JavaZone! Grab your coffee and mingle away!
-                    </P>
-                </Content>
+            <Block header="... and a whole lotta love">
+                <P>
+                    You will meet lots of interesting people at JavaZone! Grab your coffee and mingle away!
+                </P>
             </Block>
-            <img className='partners__image' src={info1} />
-        </Container>
+        </Section>
     )
 }
 
@@ -144,15 +117,14 @@ function FaqSection() {
 function ProgramSection() {
     return (
         <Container>
-            <CBlock>
+            <Block header="The JavaZone program">
                 <CHeader><span>The JavaZone program</span></CHeader>
                 <CContent>
                     <P><br />
                     The full program will be made available online around summertime 2018.
                     </P>
                 </CContent>
-            </CBlock>
-
+            </Block>
             <Block>
                 <Header><span>Lightning talks</span></Header>
                 <Content>
@@ -265,8 +237,11 @@ function Info(props: InfoProps) {
             <PageHeader subHeader="September 12th - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
             <AboutSection />
             <TicketSection />
+            <ImageBlock image={tickets2} alt="Tickets" />
             <BetterExplorerSection />
+            <ImageBlock image={info1} alt="Info" />
             <ProgramSection />
+            <ImageBlock image={partners1} alt="Partners" />
             <AweZoneSection />
             <ImportantPrinciplesSection />
             <QuestionSection />

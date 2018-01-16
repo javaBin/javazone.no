@@ -3,6 +3,7 @@ import * as React from 'react';
 import Container from '../Container/Container';
 import Link from '../Link/Link';
 import classnames from 'classnames';
+import { Menu } from 'react-feather'; 
 import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey_small.svg';
 import './Navigation.less';
 
@@ -20,8 +21,12 @@ type NavItemProps = {
     link: string
 }
 
+type MenuButtonProps = {
+}
+
 type NavigationState = {
-    hasScrolledPassedTop: bool
+    hasScrolledPassedTop: bool,
+    showMenuButton: bool
 }
 
 function Logo(props: LogoProps) {
@@ -41,6 +46,10 @@ function Logo(props: LogoProps) {
     )
 }
 
+function MenuButton(props: MenuButtonProps) {
+    return <Menu size={40} />
+}
+
 function NavItem(props: NavItemProps) {
     return <Link href={props.link} className="nav-item draw meet">{props.children}</Link>
 }
@@ -48,24 +57,40 @@ function NavItem(props: NavItemProps) {
 class Navigation extends React.Component<NavigationProps, NavigationState> {
 
     setScrolledPassedTop: Function
+    onMenuClick: Function
+    setMenuButtonVisible: Function
 
     constructor(props: NavigationProps) {
         super(props);
         this.setScrolledPassedTop = this.setScrolledPassedTop.bind(this);
+        this.onMenuClick = this.onMenuClick.bind(this);
+        this.setMenuButtonVisible = this.setMenuButtonVisible.bind(this);
     }
 
     state = {
         hasScrolledPassedTop: false,
+        showMenuButton: false
     };
 
     componentWillMount() {
-        document.addEventListener('scroll', this.setScrolledPassedTop);
+        this.setMenuButtonVisible();
+        window.addEventListener('scroll', this.setScrolledPassedTop, false);
+        window.addEventListener('resize', this.setMenuButtonVisible, false);
+    }
+
+    setMenuButtonVisible(): void {
+        this.setState({
+            showMenuButton: window.innerWidth < 1500 ? true : false 
+        })
     }
 
     setScrolledPassedTop(): void {
         this.setState({
             hasScrolledPassedTop: window.scrollY > 0 ? true : false
         })
+    }
+
+    onMenuClick(): void {
     }
 
     render() {
@@ -75,21 +100,28 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
             'sticky': this.state.hasScrolledPassedTop
         })
 
+
         return (
             <Container fullWidth>
                 <div className={navClass}>
                     <Logo sticky={this.state.hasScrolledPassedTop} />
-                    <NavItem link="/info">INFO</NavItem>
-                    <NavItem link="/tickets">TICKETS</NavItem>
-                    <NavItem link="/program">PROGRAM</NavItem>
-                    <NavItem link="/workshops">WORKSHOPS</NavItem>
-                    <NavItem link="/speakers">SPEAKERS</NavItem>
-                    <NavItem link="/partners">PARTNERS</NavItem>
-                    <NavItem link="/videos">VIDEOS</NavItem>
-                    <NavItem link="/frivillig">FRIVILLIG</NavItem>
-                    <NavItem link="/kids">KIDS</NavItem>
-                    <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
-                    <NavItem link="/academy">ACADEMY</NavItem>
+                    {!this.state.showMenuButton ? 
+                    <div>
+                        <NavItem link="/info">INFO</NavItem>
+                        <NavItem link="/tickets">TICKETS</NavItem>
+                        <NavItem link="/program">PROGRAM</NavItem>
+                        <NavItem link="/workshops">WORKSHOPS</NavItem>
+                        <NavItem link="/speakers">SPEAKERS</NavItem>
+                        <NavItem link="/partners">PARTNERS</NavItem>
+                        <NavItem link="/videos">VIDEOS</NavItem>
+                        <NavItem link="/frivillig">FRIVILLIG</NavItem>
+                        <NavItem link="/kids">KIDS</NavItem>
+                        <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
+                        <NavItem link="/academy">ACADEMY</NavItem>
+                    </div> : <MenuCompact />}
+                    {this.state.showMenuButton ? <div className="nav-menu-button">
+                        <MenuButton onClick={this.onMenuClick}/>
+                    </div> : null}
                 </div>
             </Container>
         )

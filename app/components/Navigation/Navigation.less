@@ -11,7 +11,7 @@
     overflow: hidden;
     position: fixed;
     transition: ease-in-out left 0.25s;
-    left: -200px;
+    left: -400px;
     margin-left: 1rem;
 
     h2 {
@@ -33,6 +33,12 @@
     top: 0;
 }
 
+.nav-menu-button {
+    right: 0;
+    margin-right: 1.3rem;
+    position: fixed;
+}
+
 .navigation {
     z-index: 10;
     display: flex;
@@ -49,6 +55,11 @@
 .sticky {
     background: @section-pixel-bg-color;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+    .nav-menu-button {
+        color: @secondary-text-color;
+    }
+
     .nav-item, .draw, .meet {
         color: @secondary-text-color;        
         &:hover {
