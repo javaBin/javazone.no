@@ -144,15 +144,15 @@ const Academy = () => (
                     </P>
                 </Content>
             </Block>
+            <ul className='academy__sponsors academy__sponsors--small'>
+                {sponsors.map((sponsor, key) => (
+                    <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
+                        <img className='academy__sponsor-image' src={sponsor} />
+                    </li>
+                ))}
+            </ul>
         </Container>
 
-        <ul className='academy__sponsors'>
-            {sponsors.map((sponsor, key) => (
-                <li key={key} className='academy__sponsor'>
-                    <img className='academy__sponsor-image' src={sponsor} />
-                </li>
-            ))}
-        </ul>
     </Page>
 );
 
