@@ -1,8 +1,8 @@
 export default {
     'oslo': {
         title: 'Oslo',
-        date: 'February 14th',
-        sponsors: ["acando", "accenture", "capgemini", "kantega"],
+        date: 'February 7th',
+        sponsors: ["acando", "accenture", "capra", "kantega", "miles", "tripletex"],
         program: [
             {
                 time: '1130',
@@ -14,8 +14,8 @@ export default {
             },
             {
                 time: '1245-1345',
-                title: 'Personal security',
-                speaker: 'Michael Johansen'
+                title: 'Datakatalog - en oversikt over alle offentlige datasett i Norge',
+                speaker: 'David Skogan'
             },
             {
                 time: '1345-1415',
@@ -23,8 +23,8 @@ export default {
             },
             {
                 time: '1415-1515',
-                title: 'How We Built an Indoor Map For the JavaZone App. You Can Do That Too!',
-                speaker: 'Khiem-Kim Ho Xuan, Rustam Mehmandarov'
+                title: 'Build the right system / It\'s not enough to build the system right',
+                speaker: 'Cecilie Haugstvedt'
             },
             {
                 time: '1515-1545',
@@ -32,8 +32,8 @@ export default {
             },
             {
                 time: '1545-1630',
-                title: 'Machine learning at NRK: From prototype to production',
-                speaker: 'Øyvind Holmstad, Thomas Oldervoll'
+                title: 'En reise i systemene bak verdens beste velferdsstat',
+                speaker: 'Terje Heen, Truls Jørgensen'
             },
             {
                 time: '1630-1700',
@@ -41,8 +41,8 @@ export default {
             },
             {
                 time: '1700-1800',
-                title: 'The Secret Sauce of Successful Teams',
-                speaker: 'Sven Peters'
+                title: 'Innovative jUnit tester!',
+                speaker: 'Trond Pedersen'
             },
             {
                 time: '1800-late',
@@ -50,10 +50,10 @@ export default {
             }
         ]
     },
-    'trondheim': {
-        title: 'Trondheim',
-        date: 'February 15th',
-        sponsors: ['acando', 'accenture', 'kantega'],
+    'tromso': {
+        title: 'Tromsø',
+        date: 'February 6th',
+        sponsors: ['acando'],
         program: [
             {
                 time: '1130',
@@ -65,8 +65,8 @@ export default {
             },
             {
                 time: '1245-1330',
-                title: 'Machine learning at NRK: From prototype to production',
-                speaker: 'Thomas Oldervoll'
+                title: 'Kan neo4j og en algoritme fra 1996 avdekke svindel?',
+                speaker: 'Rune Sørensen'
             },
             {
                 time: '1330-1400',
@@ -74,8 +74,8 @@ export default {
             },
             {
                 time: '1400-1500',
-                title: 'The Secret Sauce of Successful Teams',
-                speaker: 'Sven Peters'
+                title: 'En reise i systemene bak verdens beste velferdsstat',
+                speaker: 'Terje Heen, Truls Jørgensen'
             },
             {
                 time: '1500-1530',
@@ -83,8 +83,8 @@ export default {
             },
             {
                 time: '1530-1630',
-                title: 'Personal security',
-                speaker: 'Michael Johansen'
+                title: 'Innovative jUnit tester!',
+                speaker: 'Trond Pedersen'
             },
             {
                 time: '1630-1700',
@@ -92,8 +92,8 @@ export default {
             },
             {
                 time: '1700-1800',
-                title: 'How We Built an Indoor Map For the JavaZone App. You Can Do That Too!',
-                speaker: 'Khiem-Kim Ho Xuan, Rustam Mehmandarov'
+                title: 'C++ for Java Developers, Android Edition',
+                speaker: 'Patricia Aas'
             },
             {
                 time: '1800-late',
@@ -103,8 +103,8 @@ export default {
     },
     'bergen': {
         title: 'Bergen',
-        date: 'February 16th',
-        sponsors: ['acando', 'accenture', 'capgemini', 'finn'],
+        date: 'February 5th',
+        sponsors: ['acando', 'ambita', 'kantega', 'finn', 'miles'],
         program: [
             {
                 time: '1200',
@@ -116,8 +116,8 @@ export default {
             },
             {
                 time: '1315-1415',
-                title: 'The Secret Sauce of Successful Teams',
-                speaker: 'Sven Peters'
+                title: 'Datakatalog - en oversikt over alle offentlige datasett i Norge',
+                speaker: 'David Skogan'
             },
             {
                 time: '1415-1445',
@@ -125,8 +125,8 @@ export default {
             },
             {
                 time: '1445-1545',
-                title: 'Personal security',
-                speaker: 'Michael Johansen'
+                title: 'En reise i systemene bak verdens beste velferdsstat',
+                speaker: 'Terje Heen, Truls Jørgensen'
             },
             {
                 time: '1545-1600',
@@ -134,8 +134,8 @@ export default {
             },
             {
                 time: '1600-1700',
-                title: 'How We Built an Indoor Map For the JavaZone App. You Can Do That Too!',
-                speaker: 'Khiem-Kim Ho Xuan, Rustam Mehmandarov'
+                title: 'Kan neo4j og en algoritme fra 1996 avdekke svindel?',
+                speaker: 'Rune Sørensen'
             },
             {
                 time: '1700-1715',
@@ -143,8 +143,8 @@ export default {
             },
             {
                 time: '1715-1800',
-                title: 'Machine learning at NRK: From prototype to production',
-                speaker: 'Øyvind Holmstad'
+                title: 'Innovative jUnit tester!',
+                speaker: 'Trond Pedersen'
             },
             {
                 time: '1800-late',
