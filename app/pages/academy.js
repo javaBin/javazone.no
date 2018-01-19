@@ -116,7 +116,6 @@ const Academy = () => (
             <Location location={oslo} />
         </ul>
 
-        
         <Container>
             <CBlock>
                 <CHeader>Program and Speakers</CHeader>
