@@ -100,7 +100,7 @@ const Speakers = () => (
                 <CHeader>Formats and Durations</CHeader>
                 <CContent>
                     <P>
-                    <br/>
+                        <br/>
                         You should think about which format your talk will work
                         best in. Are you presenting a new idea, or do you require
                         more time to elaborate on your subject? How hands-on do
