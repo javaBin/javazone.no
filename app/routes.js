@@ -67,6 +67,9 @@ const routes = compile({
     '/academy/tromso': academyLocation(academyData.tromso),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/info': info,
+    '/speakers': speakers,
+    '/speakers/monetary-policy': monetaryPolicy,
+    '/speakers/tips': tipsAndTricks,
     '/': index
 });
 
