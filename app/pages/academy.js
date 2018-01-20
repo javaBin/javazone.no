@@ -103,9 +103,6 @@ const Academy = () => (
                         to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
                         Join us for a great evening!
                     </P>
-                    <P>
-                        A detailed program and more information will be soon posted here. Watch this space!
-                    </P>
                 </CContent>
             </CBlock>
         </Container>
