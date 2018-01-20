@@ -12,7 +12,7 @@ import partners3 from '../assets/partners_3.jpg';
 const MonetaryPolicy = () => (
     <Page name='monetary-policy'>
         <Heading>
-            <LargeHeading>Reimbursement Policy</LargeHeading>
+            <LargeHeading>Monetary Policy</LargeHeading>
             <SmallHeading>Refunds for speakers</SmallHeading>
         </Heading>
 
@@ -21,7 +21,7 @@ const MonetaryPolicy = () => (
                 <Header><span className="blue">What & How</span></Header>
                 <Content>
                     <P>
-                        If your presentation or a workshop is accepted, you may
+                        If your presentation or a workshop is accepted , you may
                         apply for a refund for travel and accomodation. Read
                         below to find out if you are eligeble.
                     </P>
@@ -31,20 +31,19 @@ const MonetaryPolicy = () => (
                 <Header><span className="green">How to apply</span></Header>
                 <Content>
                     <P>
-                        The first thing to note is that you need to <em>apply </em>
-                        for reminbursement of costs. This is necessary for our budget planning. If you require
+                        The first thing to note is that you need to <em>apply</em>.
+                        This is necessary for our budget planning. If you require
                         financial support, please reach out
                         to <a href='mailto:refund@java.no'>refund@java.no</a> after
                         your session or workshop was accepted.
                     </P>
                     <P>
-                        In this mail, provide an estimate of your travel expenses
-                        and the days you will be visiting Oslo during the conference.
-                    </P>
-                    <P>
-                        Note that we refund a maximum of 1500 NOK a night for accomodation
-                        costs during the conference. We also do not refund travel costs
-                        above a reasonably priced economy ticket.
+                        In this mail, provide
+                        information on your home airport, an estimate of your
+                        travel expenses and which days you will be visiting Oslo
+                        during the conference. Note that we <strong>never refund private hotel bookings</strong>.
+                        Neither do we refund anything above a reasonably priced
+                        economy ticket.
                     </P>
                 </Content>
             </Block>

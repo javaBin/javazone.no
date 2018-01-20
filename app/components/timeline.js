@@ -7,7 +7,7 @@ const data = [
         month: 'Feb',
         events: [{
             title: 'Call for speakers',
-            date: 'February 12th',
+            date: 'February 13th',
             location: '0px',
             align: 'right'
         }]
@@ -16,16 +16,21 @@ const data = [
         month: 'Mar',
         events: [{
             title: 'Speakers workshop',
-            date: 'TBD',
+            date: 'March 7th',
             location: '-40px',
             align: 'left'
-        },]
+        }, {
+            title: 'CfS early bird deadline',
+            date: 'March 27th',
+            location: '30px',
+            align: 'right'
+        }]
     },
     {
         month: 'Apr',
         events: [{
             title: 'Call for speakers closes',
-            date: 'April 8th',
+            date: 'April 24th',
             location: '25px',
             align: 'right'
         }]
@@ -38,6 +43,7 @@ const data = [
         month: 'Jun',
         events: [{
             title: 'Accepted speakers notified',
+            date: 'June 26th',
             location: '60px',
             align: 'left'
         }]
@@ -50,7 +56,7 @@ const data = [
         month: 'Aug',
         events: [{
             title: 'Presentation workshop',
-            date: 'TBD',
+            date: 'August 22nd',
             location: '15px',
             align: 'right'
         }]
@@ -60,12 +66,12 @@ const data = [
         events: [
             {
                 title: 'Speakers dinner',
-                date: 'September 11th',
+                date: 'September 12th',
                 location: '-20px',
                 align: 'left'
             }, {
                 title: 'JavaZone 2017!',
-                date: 'September 12th',
+                date: 'September 13th',
                 location: '-10px',
                 align: 'right'
             }
