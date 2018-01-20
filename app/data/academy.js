@@ -13,25 +13,25 @@ export default {
                 title: 'Intro'
             },
             {
-                time: '1245-1345',
+                time: '1245-1330',
                 title: 'Datakatalog - en oversikt over alle offentlige datasett i Norge',
                 speaker: 'David Skogan'
             },
             {
-                time: '1345-1415',
+                time: '1330-1400',
                 title: 'Break'
             },
             {
-                time: '1415-1515',
-                title: 'Build the right system / It\'s not enough to build the system right',
-                speaker: 'Cecilie Haugstvedt'
+                time: '1400-1445',
+                title: 'Innovative jUnit tester!',
+                speaker: 'Trond Pedersen'
             },
             {
-                time: '1515-1545',
+                time: '1445-1530',
                 title: 'Break'
             },
             {
-                time: '1545-1630',
+                time: '1530-1630',
                 title: 'En reise i systemene bak verdens beste velferdsstat',
                 speaker: 'Terje Heen, Truls Jørgensen'
             },
@@ -41,8 +41,8 @@ export default {
             },
             {
                 time: '1700-1800',
-                title: 'Innovative jUnit tester!',
-                speaker: 'Trond Pedersen'
+                title: 'Build the right system / It\'s not enough to build the system right',
+                speaker: 'Cecilie Haugstvedt'
             },
             {
                 time: '1800-late',
@@ -64,36 +64,36 @@ export default {
                 title: 'Intro'
             },
             {
-                time: '1245-1330',
+                time: '1245-1345',
                 title: 'Kan neo4j og en algoritme fra 1996 avdekke svindel?',
                 speaker: 'Rune Sørensen'
             },
             {
-                time: '1330-1400',
+                time: '1345-1415',
                 title: 'Break'
             },
             {
-                time: '1400-1500',
+                time: '1415-1515',
                 title: 'En reise i systemene bak verdens beste velferdsstat',
                 speaker: 'Terje Heen, Truls Jørgensen'
             },
             {
-                time: '1500-1530',
+                time: '1515-1545',
                 title: 'Break'
             },
             {
-                time: '1530-1630',
+                time: '1545-1645',
+                title: 'C++ for Java Developers, Android Edition',
+                speaker: 'Patricia Sigrid Monica Rincon Gallardo Aas'
+            },
+            {
+                time: '1645-1715',
+                title: 'Break'
+            },
+            {
+                time: '1715-1800',
                 title: 'Innovative jUnit tester!',
                 speaker: 'Trond Pedersen'
-            },
-            {
-                time: '1630-1700',
-                title: 'Break'
-            },
-            {
-                time: '1700-1800',
-                title: 'C++ for Java Developers, Android Edition',
-                speaker: 'Patricia Aas'
             },
             {
                 time: '1800-late',
@@ -107,47 +107,47 @@ export default {
         sponsors: ['acando', 'ambita', 'kantega', 'finn', 'miles'],
         program: [
             {
-                time: '1200',
+                time: '1130',
                 title: 'Doors open'
             },
             {
-                time: '1230-1315',
+                time: '1200-1245',
                 title: 'Intro'
             },
             {
-                time: '1315-1415',
-                title: 'Datakatalog - en oversikt over alle offentlige datasett i Norge',
-                speaker: 'David Skogan'
-            },
-            {
-                time: '1415-1445',
-                title: 'Break'
-            },
-            {
-                time: '1445-1545',
+                time: '1245-1345',
                 title: 'En reise i systemene bak verdens beste velferdsstat',
                 speaker: 'Terje Heen, Truls Jørgensen'
             },
             {
-                time: '1545-1600',
+                time: '1345-1415',
                 title: 'Break'
             },
             {
-                time: '1600-1700',
+                time: '1415-1515',
                 title: 'Kan neo4j og en algoritme fra 1996 avdekke svindel?',
                 speaker: 'Rune Sørensen'
             },
             {
-                time: '1700-1715',
+                time: '1515-1545',
                 title: 'Break'
             },
             {
-                time: '1715-1800',
+                time: '1545-1630',
                 title: 'Innovative jUnit tester!',
                 speaker: 'Trond Pedersen'
             },
             {
-                time: '1800-late',
+                time: '1630-1700',
+                title: 'Break'
+            },
+            {
+                time: '1700-1745',
+                title: 'Datakatalog - en oversikt over alle offentlige datasett i Norge',
+                speaker: 'David Skogan'
+            },
+            {
+                time: '1745-late',
                 title: 'AweZone Party!'
             }
         ]
