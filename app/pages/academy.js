@@ -6,13 +6,17 @@ import { Link } from '../components/link';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import uit from '../assets/academy/tromso.jpg';
-import acando from '../assets/partners-17/acando.svg';
-import accenture from '../assets/partners-17/accenture.svg';
-import capgemini from '../assets/partners-17/capgemini.svg';
-import finn from '../assets/partners-17/finn.svg';
-import kantega from '../assets/partners-17/kantega.svg';
+import acando from '../assets/partners-18/acando.svg';
+import accenture from '../assets/partners-18/accenture.svg';
+import capra from '../assets/partners-18/capra.svg';
+import finn from '../assets/partners-18/finn.svg';
+import kantega from '../assets/partners-18/kantega.svg';
+import miles from '../assets/partners-18/miles.svg';
+import tripletex from '../assets/partners-18/tripletex.svg';
+import ambita from '../assets/partners-18/ambita.svg';
 
-const sponsors = [acando, accenture, capgemini, finn, kantega];
+
+const sponsors = [acando, accenture, ambita, finn, capra, kantega, miles, tripletex];
 
 const oslo = {
     image: teknologihuset,
@@ -99,9 +103,6 @@ const Academy = () => (
                         to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
                         Join us for a great evening!
                     </P>
-                    <P>
-                        A detailed program and more information will be soon posted here. Watch this space!
-                    </P>
                 </CContent>
             </CBlock>
         </Container>
@@ -112,7 +113,6 @@ const Academy = () => (
             <Location location={oslo} />
         </ul>
 
-        {/*
         <Container>
             <CBlock>
                 <CHeader>Program and Speakers</CHeader>
@@ -141,17 +141,15 @@ const Academy = () => (
                     </P>
                 </Content>
             </Block>
+            <ul className='academy__sponsors academy__sponsors--small'>
+                {sponsors.map((sponsor, key) => (
+                    <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
+                        <img className='academy__sponsor-image' src={sponsor} />
+                    </li>
+                ))}
+            </ul>
         </Container>
 
-        <ul className='academy__sponsors'>
-            {sponsors.map((sponsor, key) => (
-                <li key={key} className='academy__sponsor'>
-                    <img className='academy__sponsor-image' src={sponsor} />
-                </li>
-            ))}
-        </ul>
-        */
-        }
     </Page>
 );
 
