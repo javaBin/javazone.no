@@ -43,8 +43,8 @@ const MonetaryPolicy = () => (
                     </P>
                     <P>
                         Note that we refund a maximum of 1500 NOK a night for accomodation
-                        costs during the conference. We also do not refund travel costs
-                        above a reasonably priced economy ticket.
+                        costs <strong>during</strong> the conference. We do not refund travel costs
+                        above the cost of a reasonably priced economy ticket.
                     </P>
                 </Content>
             </Block>
