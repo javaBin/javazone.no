@@ -53,7 +53,10 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <br/>
-                        JavaZone 2018 will be the 17th consecutive JavaZone conference, and will consist of a day of pre-conference workshops on September 11th, followed by two days of lightning talks and presentations on September 12th and 13th. Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
+                        JavaZone 2018 will be the 17th consecutive JavaZone conference, and will consist of a day of pre-conference workshops on September 11th, followed by two days of lightning talks and presentations on September 12th and 13th.
+                    </P>
+                    <P>
+                        Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
                     </P>
                     <P>
                         JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent. We'd love to have you join us in 2018!
@@ -97,6 +100,7 @@ const Speakers = () => (
                 <CHeader>Formats and Durations</CHeader>
                 <CContent>
                     <P>
+                    <br/>
                         You should think about which format your talk will work
                         best in. Are you presenting a new idea, or do you require
                         more time to elaborate on your subject? How hands-on do

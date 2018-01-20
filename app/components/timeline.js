@@ -38,6 +38,7 @@ const data = [
         month: 'Jun',
         events: [{
             title: 'Accepted speakers notified',
+            date: 'By The End of June',
             location: '60px',
             align: 'left'
         }]
