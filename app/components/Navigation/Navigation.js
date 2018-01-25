@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Container from '../Container/Container';
 import Link from '../Link/Link';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import classnames from 'classnames';
 import { Menu } from 'react-feather'; 
 import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey_small.svg';
@@ -100,7 +101,25 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
             'sticky': this.state.hasScrolledPassedTop
         })
 
+        return (
+            <Grid className="navigation" fluid>
+                <Row>
+                    {this.state.hasScrolledPassedTop ? 
+                    <Col lg={1}>
+                        <h1>Hello</h1>
+                    </Col>
+                    : null}
+                    <Col lg={10}>
+                        <h1>Hello</h1>
+                    </Col>
+                    <Col lg={1}>
+                        <h1>Hello</h1>
+                    </Col>
+                </Row>
+            </Grid>
+        )
 
+        /*
         return (
             <Container fullWidth>
                 <div className={navClass}>
@@ -125,6 +144,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
                 </div>
             </Container>
         )
+        */
     }
 }
 

@@ -1,4 +1,5 @@
-import flexboxgrid from 'flexboxgrid';
+//import flexboxgrid from 'flexboxgrid';
+import reactFlexboxGrid from 'react-flexbox-grid';
 import styles from './styles/app.less';
 import 'whatwg-fetch';
 import 'es6-promise/auto';
