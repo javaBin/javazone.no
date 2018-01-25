@@ -1,24 +1,111 @@
 @import '../../styles/Variables';
 
 .navigation {
-    background: red;
+    position: fixed;
+    z-index: 10;
+    leftt: 0;
+    top: 0;
+    width: 100%;
+    height: 4.5rem;
+    transition: background 0.25s ease-in-out;
+    -moz-transition: background 0.25s ease-in-out;
+    div {
+        height: inherit;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.nav-item {
+    margin: 0 0.3rem 0 0.3rem;
+    font-family: @source-sans-pro;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.draw {
+    transition: color 0.25s;
+    &::before,
+    &::after {
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+    &:hover {
+        color: white;
+    }
+    &:hover::before,
+    &:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover::before {
+        border-top-color: white; // Make borders visible
+        border-right-color: white;
+        transition:
+        width 0.125s ease-out, // Width expands first
+        height 0.125s ease-out 0.125s; // And then height
+    }
+    &:hover::after {
+        border-bottom-color: white; // Make borders visible
+        border-left-color: white;
+        transition:
+        border-color 0s ease-out 0.25s, // Wait for ::before to finish before showing border
+        width 0.125s ease-out 0.375s, // And then exanding width
+        height 0.125s ease-out 0.5s; // And finally height
+    }
+}
+
+.meet {
+    &:hover {
+        color: white;
+    }
+    &::after {
+    top: 0;
+    left: 0;
+    }
+    &:hover::before {
+    border-top-color: white;
+    border-right-color: white;
+    }
+    &:hover::after {
+    border-bottom-color: white;
+    border-left-color: white;
+    transition: // Animate height first, then width
+        height 0.125s ease-out,
+        width 0.125s ease-out 0.125s;
+    }
 }
 
 .sticky {
-
+    background: @secondary-color;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-
-
-.test-nav-container {
-    background: red;
-}
-
-
-
-
-
-
 
 /*
 .logo-nav {

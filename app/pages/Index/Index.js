@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Container from '../../components/Container/Container';
 import Section from '../../components/Section/Section';
+import Banner from '../../components/Banner/Banner';
 import Stats from '../../components/Stats/Stats';
 import { Block, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
@@ -17,15 +18,8 @@ type IndexProps = {
 function Index(props: IndexProps) {
     return (
         <Page name='index'>
-            <Container>
-                <div className='index__content'>
-                    <div>
-                        <img className="logo floating" src={JavazoneLogo} alt="JavaZone" />
-                    </div>
-                    <div className='index__text'>
-                        JavaZone 2018
-                    </div>
-                </div>
+            <Container fullWidth>
+                <Banner />
             </Container>
             <Section pixel fullWidth>
                 <Stats>

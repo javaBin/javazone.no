@@ -33,13 +33,12 @@ type NavigationState = {
 function Logo(props: LogoProps) {
 
     let logoClass = classnames({
-        'logo-nav': true,
-        'logo-nav-sticky': props.sticky
+        'logo': true,
+        'sticky': props.sticky
     })
 
     return (
         <div className={logoClass}>
-            <img src={JavazoneLogo} alt="JavaZone" />
             <Link href="/">
                 <h2>JZ2018</h2>
             </Link>
@@ -102,18 +101,28 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
         })
 
         return (
-            <Grid className="navigation" fluid>
+            <Grid className={navClass} fluid>
                 <Row>
-                    {this.state.hasScrolledPassedTop ? 
                     <Col lg={1}>
-                        <h1>Hello</h1>
+                        {/*<Logo />*/}
                     </Col>
-                    : null}
-                    <Col lg={10}>
-                        <h1>Hello</h1>
+                    <Col lg>
+                        <Row center="lg">
+                            <NavItem link="/info">INFO</NavItem>
+                            <NavItem link="/tickets">TICKETS</NavItem>
+                            <NavItem link="/program">PROGRAM</NavItem>
+                            <NavItem link="/workshops">WORKSHOPS</NavItem>
+                            <NavItem link="/speakers">SPEAKERS</NavItem>
+                            <NavItem link="/partners">PARTNERS</NavItem>
+                            <NavItem link="/videos">VIDEOS</NavItem>
+                            <NavItem link="/frivillig">FRIVILLIG</NavItem>
+                            <NavItem link="/kids">KIDS</NavItem>
+                            <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
+                            <NavItem link="/academy">ACADEMY</NavItem>
+                        </Row>
                     </Col>
                     <Col lg={1}>
-                        <h1>Hello</h1>
+                        {/*<h1>Hello</h1>*/}
                     </Col>
                 </Row>
             </Grid>
