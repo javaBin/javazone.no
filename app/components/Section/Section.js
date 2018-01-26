@@ -26,11 +26,11 @@ function Section(props: SectionProps) {
 
     return (
         <Container fullWidth={props.fullWidth}>
-            {props.pixel ? <div className="pixel-border-top"></div> : null}
+            {props.pixel ? <div className="border"></div> : null}
             <div className={sectionClass}>
                 {props.children}
             </div>
-            {props.pixel ? <div className="pixel-border-bottom"></div> : null}
+            {props.pixel ? <div className="border-bottom"></div> : null}
         </Container>
     )
 }

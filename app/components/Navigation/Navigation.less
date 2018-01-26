@@ -2,8 +2,8 @@
 
 .navigation {
     position: fixed;
-    z-index: 10;
-    leftt: 0;
+    z-index: 100;
+    left: 0;
     top: 0;
     width: 100%;
     height: 4.5rem;
@@ -103,8 +103,22 @@
 }
 
 .sticky {
-    background: @secondary-color;
+    background: @logo-red;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    .nav-item, .draw, .meet {
+        color: white;        
+        &:hover {
+            color: white;        
+        }
+        &:hover::before {
+            border-top-color: white;
+            border-right-color: white;
+        }
+        &:hover::after {
+            border-bottom-color: white;
+            border-left-color: white;
+        }
+    }
 }
 
 /*

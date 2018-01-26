@@ -4,6 +4,7 @@ import Container from '../Container/Container';
 import { Facebook, Mail, Twitter, Github } from 'react-feather';
 import Button from '../Button/Button';
 import './Footer.less';
+import border from '../../assets/2018/pixelborder.svg';
 
 type FooterProps = {
     javabin: string,
@@ -24,12 +25,7 @@ Footer.defaultProps = {
 function Footer(props: FooterProps) {
     return (
         <Container fullWidth>
-            <div className="row">
-                <div className="col-xs col-sm col-md col-lg">
-                    <div className="box">
-                        <div className="pixel-border-top"></div>
-                    </div>
-                </div>
+            <div className="border">
             </div>
             <div className="row footer">
                 <div className="col-xs col-sm col-md col-lg">

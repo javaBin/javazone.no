@@ -1,37 +1,121 @@
+@import '../../styles/Animations.less';
+@import '../../styles/Variables.less';
 
-.layer1 {
+.background {
     width: 100vw;
     top: 0;
     left: 0;
 }
 
-.layer2 {
+.fog-layer {
     width: 100vw;
     top: 0;
     left: 0;
 }
 
-.layer3 {
+.city-layer {
     width: 100vw;
     top: 0;
     left: 0;
 }
 
-.layer4 {
-    width: 35%;
+.logo-layer {
+    width: 20rem;
     top: 6rem;
+    left: 50%;
+    margin-left: -10rem;
+    animation: floating 3s infinite ease-in-out;
 }
 
-.layer5 {
+.logo-text {
+    position: absolute;
+    top: 20rem;
+    width: 100%;
+    h1 {
+        font-family: @upheaval;
+        font-size: 7rem;
+        letter-spacing: 0.5rem;
+        text-shadow: -0.4rem 0 black, 0 0.4rem black, 0.4rem 0 black, 0 -0.4rem black;
+    }
+}
+
+.cloud-layer {
     width: 100vw;
     top: -7rem;
     left: 0;
 }
 
+.cloud1-layer {
+    width: 10rem;
+    top: 13rem;
+    left: -10rem;
+    animation: slide 25s infinite linear;
+}
+
+.cloud2-layer {
+    width: 10rem;
+    top: 11rem;
+    left: -10rem;
+    animation: slide 25s infinite linear;
+    animation-delay: 5s;
+}
+
+.cloud3-layer {
+    width: 10rem;
+    top: 16rem;
+    left: -10rem;
+    animation: slide 25s infinite linear;
+    animation-delay: 13s;
+}
+
+.cloud4-layer {
+    width: 10rem;
+    top: 14rem;
+    left: -10rem;
+    animation: slide 25s infinite linear;
+    animation-delay: 9s;
+    z-index: 20;
+}
+
+.cloud5-layer {
+    width: 10rem;
+    top: 12rem;
+    left: -10rem;
+    animation: slide 25s infinite linear;
+    animation-delay: 18s;
+}
+
+.cloud6-layer {
+    width: 14rem;
+    top: 7rem;
+    left: -14rem;
+    transform: rotate(180deg);
+    animation: slide 25s infinite linear;
+    animation-delay: 20s;
+}
+
+.cloud7-layer {
+    width: 12rem;
+    top: 18rem;
+    transform: rotate(180deg);
+    left: -12rem;
+    animation: slide 25s infinite linear;
+    animation-delay: 3s;
+}
+
+.cloud8-layer {
+    width: 14rem;
+    top: 10rem;
+    left: -14rem;
+    transform: rotate(180deg);
+    animation: slide 25s infinite linear;
+    animation-delay: 7.5s;
+}
+
+
 .banner {
     position: relative;
-    img {
+    [class$="-layer"] {
         position: absolute;
-        height: auto; 
     }
 }

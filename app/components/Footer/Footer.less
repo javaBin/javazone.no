@@ -2,14 +2,31 @@
 @import '../../styles/Variables.less';
 
 .footer {
-    background: @section-pixel-bg-color;
-    color: @secondary-text-color;
+    background: @primary-color;
+    color: @secondary-color;
     padding: 2rem 0 1.5rem 0;
 }
 
 .footer a {
-    color: @secondary-text-color;
+    color: @secondary-color;
 }
+
+.border {
+    width: 100%;
+    height: 2rem;
+    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
+    background-size: 2rem; 
+}
+
+.border-bottom {
+    width: 100%;
+    height: 2rem;
+    transform: rotate(180deg);
+    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
+    background-size: 2rem; 
+}
+
+
 
 .javabin {
     font-family: @source-sans-pro;

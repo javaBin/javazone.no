@@ -1,7 +1,7 @@
 @import '../../styles/Variables.less';
 
 .pixel {
-    background: @section-pixel-bg-color;
+    background: @primary-color;
 
     h1 {
         margin: 0;
@@ -15,9 +15,9 @@
 .pixel-border-top {
     transform: rotate(180deg);
     height: 25px;
-    background: linear-gradient(@section-pixel-bg-color, transparent 50%),
-                linear-gradient(-45deg, @page-bg-color 33%, transparent 33%) 0 50%, 
-                @page-bg-color linear-gradient(45deg, @page-bg-color 33%, @section-pixel-bg-color 33%) 0 50%;
+    background: linear-gradient(@primary-color, transparent 50%),
+                linear-gradient(-45deg, @secondary-color 33%, transparent 33%) 0 50%, 
+                @secondary-color linear-gradient(45deg, @secondary-color 33%, @primary-color 33%) 0 50%;
     background-repeat: repeat-x;
     background-size: 100%, 25px 25px, 25px 25px;
     min-height: 100%;
@@ -25,9 +25,9 @@
 
 .pixel-border-bottom {
     height: 25px;
-    background: linear-gradient(@section-pixel-bg-color, transparent 50%),
-                linear-gradient(-45deg, @page-bg-color 33%, transparent 33%) 0 50%, 
-                @page-bg-color linear-gradient(45deg, @page-bg-color 33%, @section-pixel-bg-color 33%) 0 50%;
+    background: linear-gradient(@primary-color, transparent 50%),
+                linear-gradient(-45deg, @secondary-color 33%, transparent 33%) 0 50%, 
+                @secondary-color linear-gradient(45deg, @secondary-color 33%, @primary-color 33%) 0 50%;
     background-repeat: repeat-x;
     background-size: 100%, 25px 25px, 25px 25px;
     min-height: 100%;
