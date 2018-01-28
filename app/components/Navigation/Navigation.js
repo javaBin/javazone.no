@@ -3,9 +3,10 @@ import * as React from 'react';
 import Container from '../Container/Container';
 import Link from '../Link/Link';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Button from '../../components/Button/Button';
 import classnames from 'classnames';
 import { Menu } from 'react-feather'; 
-import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_grey_small.svg';
+import JavazoneLogo from '../../assets/2018/pixelOslo_logo_no_text_white_border_l4.svg';
 import './Navigation.less';
 
 type NavigationProps = {
@@ -13,8 +14,7 @@ type NavigationProps = {
 }
 
 type LogoProps = {
-    text?: string,
-    sticky?: bool
+    text?: string
 }
 
 type NavItemProps = {
@@ -23,6 +23,8 @@ type NavItemProps = {
 }
 
 type MenuButtonProps = {
+    children?: React.Node,
+    onClick: Function
 }
 
 type NavigationState = {
@@ -33,21 +35,24 @@ type NavigationState = {
 function Logo(props: LogoProps) {
 
     let logoClass = classnames({
-        'logo': true,
-        'sticky': props.sticky
+        'logo-nav': true
     })
 
     return (
-        <div className={logoClass}>
-            <Link href="/">
-                <h2>JZ2018</h2>
-            </Link>
-        </div>
+        <Link href="/" className={logoClass}>
+            <img src={JavazoneLogo} alt="Logo" />
+            <h2>JZ2018</h2>
+        </Link>
     )
 }
 
 function MenuButton(props: MenuButtonProps) {
-    return <Menu size={40} />
+    return (
+        <button onClick={props.onClick} className="nav-item menu-button draw meet">
+            <Menu size={32} />
+            {props.children}
+        </button>
+    )
 }
 
 function NavItem(props: NavItemProps) {
@@ -65,6 +70,8 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
         this.setScrolledPassedTop = this.setScrolledPassedTop.bind(this);
         this.onMenuClick = this.onMenuClick.bind(this);
         this.setMenuButtonVisible = this.setMenuButtonVisible.bind(this);
+        this.renderNavItems = this.renderNavItems.bind(this);
+        this.renderMenuButton = this.renderMenuButton.bind(this);
     }
 
     state = {
@@ -80,7 +87,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
 
     setMenuButtonVisible(): void {
         this.setState({
-            showMenuButton: window.innerWidth < 1500 ? true : false 
+            showMenuButton: window.innerWidth < 1520 ? true : false 
         })
     }
 
@@ -91,69 +98,58 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     }
 
     onMenuClick(): void {
+        console.log("Clicked menu");
+    }
+
+    renderNavItems() {
+        return (
+            <Col>
+                <Row middle="xs sm md lg" center="lg">
+                    <NavItem link="/info">INFO</NavItem>
+                    <NavItem link="/tickets">TICKETS</NavItem>
+                    <NavItem link="/program">PROGRAM</NavItem>
+                    <NavItem link="/workshops">WORKSHOPS</NavItem>
+                    <NavItem link="/speakers">SPEAKERS</NavItem>
+                    <NavItem link="/partners">PARTNERS</NavItem>
+                    <NavItem link="/videos">VIDEOS</NavItem>
+                    <NavItem link="/frivillig">FRIVILLIG</NavItem>
+                    <NavItem link="/kids">KIDS</NavItem>
+                    <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
+                    <NavItem link="/academy">ACADEMY</NavItem>
+                </Row>
+            </Col>
+        )
+    }
+
+    renderMenuButton() {
+        return (
+            <Col>
+                <Row middle="xs sm md lg">
+                    <MenuButton onClick={this.onMenuClick}>MENU</MenuButton>
+                </Row>
+            </Col>
+        )
     }
 
     render() {
 
         let navClass = classnames({
             'navigation': true,
-            'sticky': this.state.hasScrolledPassedTop
+            'sticky': this.state.hasScrolledPassedTop,
         })
 
         return (
             <Grid className={navClass} fluid>
-                <Row>
-                    <Col lg={1}>
-                        {/*<Logo />*/}
-                    </Col>
-                    <Col lg>
-                        <Row center="lg">
-                            <NavItem link="/info">INFO</NavItem>
-                            <NavItem link="/tickets">TICKETS</NavItem>
-                            <NavItem link="/program">PROGRAM</NavItem>
-                            <NavItem link="/workshops">WORKSHOPS</NavItem>
-                            <NavItem link="/speakers">SPEAKERS</NavItem>
-                            <NavItem link="/partners">PARTNERS</NavItem>
-                            <NavItem link="/videos">VIDEOS</NavItem>
-                            <NavItem link="/frivillig">FRIVILLIG</NavItem>
-                            <NavItem link="/kids">KIDS</NavItem>
-                            <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
-                            <NavItem link="/academy">ACADEMY</NavItem>
+                <Row between={this.state.showMenuButton ? "xs sm md lg" : null} center={this.state.showMenuButton ? null : "lg"}>
+                    <Col>
+                        <Row middle="xs sm md lg">
+                            <Logo sticky={this.state.hasScrolledPassedTop} />
                         </Row>
                     </Col>
-                    <Col lg={1}>
-                        {/*<h1>Hello</h1>*/}
-                    </Col>
+                    {this.state.showMenuButton ? this.renderMenuButton() : this.renderNavItems()}
                 </Row>
             </Grid>
         )
-
-        /*
-        return (
-            <Container fullWidth>
-                <div className={navClass}>
-                    <Logo sticky={this.state.hasScrolledPassedTop} />
-                    {!this.state.showMenuButton ? 
-                    <div>
-                        <NavItem link="/info">INFO</NavItem>
-                        <NavItem link="/tickets">TICKETS</NavItem>
-                        <NavItem link="/program">PROGRAM</NavItem>
-                        <NavItem link="/workshops">WORKSHOPS</NavItem>
-                        <NavItem link="/speakers">SPEAKERS</NavItem>
-                        <NavItem link="/partners">PARTNERS</NavItem>
-                        <NavItem link="/videos">VIDEOS</NavItem>
-                        <NavItem link="/frivillig">FRIVILLIG</NavItem>
-                        <NavItem link="/kids">KIDS</NavItem>
-                        <NavItem link="/journeyzone">JOURNEYZONE</NavItem>
-                        <NavItem link="/academy">ACADEMY</NavItem>
-                    </div> : <MenuCompact />}
-                    {this.state.showMenuButton ? <div className="nav-menu-button">
-                        <MenuButton onClick={this.onMenuClick}/>
-                    </div> : null}
-                </div>
-            </Container>
-        )
-        */
     }
 }
 

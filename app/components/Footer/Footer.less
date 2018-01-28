@@ -13,25 +13,26 @@
 
 .border {
     width: 100%;
-    height: 2rem;
+    height: 4rem;
     background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
-    background-size: 2rem; 
+    background-size: 4rem; 
 }
 
 .border-bottom {
     width: 100%;
-    height: 2rem;
+    height: 4rem;
     transform: rotate(180deg);
     background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
-    background-size: 2rem; 
+    background-size: 4rem; 
 }
 
-
-
+/*
 .javabin {
+    margin: 0 0.3rem 0 0.3rem;
     font-family: @source-sans-pro;
     font-size: 1.2rem;
     text-decoration: none;
+    color: white;
     background: none;
     border: 0;
     box-sizing: border-box;
@@ -42,26 +43,26 @@
     vertical-align: middle;
     &::before,
     &::after {
-        box-sizing: inherit;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
-}
 
-.javabin.draw.meet {
-    color: @secondary-text-color;        
+*/
+.javabin.nav-item.draw.meet {
+    color: @secondary-color;        
     &:hover {
-        color: @secondary-text-color;        
+        color: @secondary-color;        
     }
     &:hover::before {
-        border-top-color: @secondary-text-color;
-        border-right-color: @secondary-text-color;
+        border-top-color: @secondary-color;
+        border-right-color: @secondary-color;
     }
     &:hover::after {
-        border-bottom-color: @secondary-text-color;
-        border-left-color: @secondary-text-color;
+        border-bottom-color: @secondary-color;
+        border-left-color: @secondary-color;
     }
 }
 

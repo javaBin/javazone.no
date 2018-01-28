@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Container from '../Container/Container';
 import { Facebook, Mail, Twitter, Github } from 'react-feather';
+import Link from '../Link/Link';
 import Button from '../Button/Button';
 import './Footer.less';
 import border from '../../assets/2018/pixelborder.svg';
@@ -39,7 +40,7 @@ function Footer(props: FooterProps) {
                     </div>
                     <div className="box">
                         <Container>
-                            <a className="javabin draw meet" href={props.javabin}>Made by javaBin</a>
+                            <Link href={props.javabin} className="javabin nav-item draw meet">Made by javaBin</Link>
                         </Container>
                     </div>
                 </div>
