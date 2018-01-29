@@ -4,14 +4,19 @@
 @cloud-width: 10rem;
 @cloud-width-lg: 14rem;
 @cloud1-top: 13rem;
-@cloud2-top: 11rem;
+@cloud2-top: 9rem;
 @cloud3-top: 16rem;
 @cloud4-top: 14rem;
 @cloud5-top: 12rem;
-@cloud6-top: 7rem;
-@cloud7-top: 18rem;
+@cloud6-top: 9rem;
+@cloud7-top: 16rem;
 @cloud8-top: 11rem;
-@cloud-adjust-md: 3rem;
+
+@cloud-adjust-lg: 3rem;
+@cloud-adjust-md: 4rem;
+@cloud-adjust-sm: 1rem;
+@cloud-adjust-xs: 3rem;
+@cloud-adjust-xxs: 3rem;
 
 .background {
     width: 100vw;
@@ -78,6 +83,16 @@
         width: 10rem;
         margin-left: -5rem;
     }
+    @media only screen and (max-width: @screen-xs) {
+        top: 5rem;
+        width: 8rem;
+        margin-left: -4rem;
+    }
+    @media only screen and (max-width: @screen-xs) {
+        top: 4.5rem;
+        width: 6.5rem;
+        margin-left: -3.25rem;
+    }
 }
 
 .logo-text {
@@ -106,6 +121,11 @@
             font-size: 4rem;
             text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
         }
+        @media only screen and (max-width: @screen-xxs) {
+            font-size: 3rem;
+            text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
+        }
+
     }
     @media only screen and (max-width: @screen-lg) {
         top: 15rem;
@@ -119,6 +139,9 @@
     @media only screen and (max-width: @screen-xs) {
         top: 12rem;
     }
+    @media only screen and (max-width: @screen-xs) {
+        top: 8.5rem;
+    }
 }
 
 .cloud1-layer {
@@ -127,22 +150,41 @@
     left: -(@cloud-width);
     animation: slide 25s infinite linear;
     @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud1-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud1-top - @cloud-adjust-md);
         left: calc(-(@cloud-width) + @cloud-adjust-md);
     }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud1-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
 }
-
 .cloud2-layer {
     width: @cloud-width;
     top: @cloud2-top;
     left: -(@cloud-width);
     animation: slide 25s infinite linear;
-    animation-delay: 5s;
+    animation-delay: 12s;
     @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud2-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud2-top - @cloud-adjust-md);
         left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud2-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -153,9 +195,19 @@
     animation: slide 25s infinite linear;
     animation-delay: 13s;
     @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud3-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud3-top - @cloud-adjust-md);
         left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud3-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -167,9 +219,19 @@
     animation-delay: 9s;
     z-index: 20;
     @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud4-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud4-top - @cloud-adjust-md);
         left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud4-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -180,9 +242,19 @@
     animation: slide 25s infinite linear;
     animation-delay: 18s;
     @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud5-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud5-top - @cloud-adjust-md);
         left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud5-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -194,9 +266,19 @@
     animation: slide 25s infinite linear;
     animation-delay: 20s;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-md);
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud6-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud6-top - @cloud-adjust-md);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud6-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -208,9 +290,19 @@
     animation: slide 25s infinite linear;
     animation-delay: 3s;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-md);
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud7-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud7-top - @cloud-adjust-md);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud7-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 
@@ -222,9 +314,19 @@
     animation: slide 25s infinite linear;
     animation-delay: 7.5s;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-md);
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud8-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
         top: calc(@cloud8-top - @cloud-adjust-md);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud8-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
 }
 

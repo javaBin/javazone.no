@@ -7,8 +7,23 @@
     top: 0;
     width: 100%;
     height: 4.5rem;
-    transition: background 0.25s ease-in-out;
-    -moz-transition: background 0.25s ease-in-out;
+    transition: all 0.25s;
+    &.mobile-nav {
+        transition: all 0.25s;
+        background: @logo-red;
+        overflow-x: hidden;
+        height: 100vh; 
+    }
+}
+
+.mobile-menu {
+    font-family: @source-sans-pro;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 100%;
+    div {
+        flex-flow: column;
+    }
 }
 
 .navigation .row {
@@ -104,6 +119,7 @@
 .sticky {
     background: @logo-red;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
     .nav-item, .draw, .meet {
         color: white;        
         &:hover {
@@ -126,7 +142,6 @@
     letter-spacing: 0.2rem;
     font-size: 1.3rem;
     flex-direction: row;
-    transition: ease-in-out left 0.25s;
     margin-right: 1rem;
 
     h2 {
@@ -148,8 +163,12 @@
     justify-content: center;
     align-items: center;
     font-family: @source-sans-pro;
+    cursor: pointer;
+}
+
+.menu-button-text {
     svg {
         margin-right: 0.5rem;
     }
-    cursor: pointer;
 }
+

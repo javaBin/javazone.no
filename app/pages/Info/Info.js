@@ -152,7 +152,6 @@ function ProgramSection() {
                     </P>
                 </Content>
             </Block>
-            <img className='partners__image' src={partners1} />
         </Container>
     )
 }
