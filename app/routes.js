@@ -67,7 +67,6 @@ const routes = compile({
     '/academy/trondheim': academyLocation(academyData.trondheim),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers,
-    '/frivillig': frivillig,
     '/tickets': tickets,
     '/info': info,
     '/': index

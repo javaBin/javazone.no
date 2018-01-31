@@ -116,116 +116,96 @@ function FaqSection() {
 
 function ProgramSection() {
     return (
-        <Container>
+        <Section>
             <Block header="The JavaZone program">
-                <CHeader><span>The JavaZone program</span></CHeader>
-                <CContent>
-                    <P><br />
+                <P>
                     The full program will be made available online around summertime 2018.
-                    </P>
-                </CContent>
+                </P>
             </Block>
-            <Block>
-                <Header><span>Lightning talks</span></Header>
-                <Content>
-                    <P>
-                        Lightning talks are either 10 or 20 minutes long and often gives a quick introduction to a concept.
-                        This is a great way to get a sneak peek at something new.
-                    </P>
-                </Content>
+            <Block header="Lightning talks">
+                <P>
+                    Lightning talks are either 10 or 20 minutes long and often gives a quick introduction to a concept.
+                    This is a great way to get a sneak peek at something new.
+                </P>
             </Block>
-            <Block>
-                <Header><span>Presentations</span></Header>
-                <Content>
-                    <P>
-                        Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
-                        understanding of a concept than lightning talks.
-                    </P>
-                </Content>
+            <Block header="Presentations">
+                <P>
+                    Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
+                    understanding of a concept than lightning talks.
+                </P>
             </Block>
-            <Block>
-                <Header><span>Workshops</span></Header>
-                <Content>
-                    <P>
-                        Full blown learning session. This is where you get down and dirty with code. We’ll have full
-                        day workshops in addition to shorter 2-hour and 4-hour workshops.
-                    </P>
-                </Content>
+            <Block header="Workshops">
+                <P>
+                    Full blown learning session. This is where you get down and dirty with code. We’ll have full
+                    day workshops in addition to shorter 2-hour and 4-hour workshops.
+                </P>
             </Block>
-        </Container>
+        </Section>
     )
 }
 
 function AweZoneSection() {
     return (
-        <Container>
-            <CBlock>
-                <CHeader><span>AweZone: Celebrating the community</span></CHeader>
-                <CContent>
-                    <P><br />
-                        AweZone is JavaZone’s traditional party which takes place on the Wednesday
-                        evening.
-                        <br /><br />
-                        The party offers a great chance to catch up with old friends, meet new ones,
-                        and also experience a great line-up of entertainment!
-                        <br /><br />
-                        More details will be posted later.
-                    </P>
-                </CContent>
-            </CBlock>
-        </Container>
+        <Section>
+            <Block header="AweZone: Celebrating the community">
+                <P>
+                    AweZone is JavaZone’s traditional party which takes place on the Wednesday
+                    evening.
+                    <br /><br />
+                    The party offers a great chance to catch up with old friends, meet new ones,
+                    and also experience a great line-up of entertainment!
+                    <br /><br />
+                    More details will be posted later.
+                </P>
+            </Block>
+        </Section>
     )
 }
 
 function ImportantPrinciplesSection() {
     return (
-        <Container>
-            <CBlock>
-                <CHeader><span>A few very important principles</span></CHeader>
-                <CContent>
-                    <P><br />
-                        JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
-                        program is chosen by our independent program committee, and they operate under the principle that no-one
-                        is paid to hold a presentation, and likewise, that no-one can pay us to get their presentation accepted.
-                        See our monetary policy for details.
-                        <br/><br/>
-                        We as organizers strive to create the best possible learning experience for all our speakers and
-                        participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that
-                        you treat your fellow conference participants with respect. We reserve the right to take any action
-                        necessary to make sure this principle is upheld.
-                        <br /><br />
-                        Should any unwanted event occur, we‘re here to help:
-                        <br/><br/>
-                        <strong>Before the conference</strong>
-                        <br />
-                        You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
-                        group of people, the core organizers og JavaZone)
-                        <br/><br/>
-                        <strong>During the conference</strong>
-                        <br />
-                        Ask at the info stand, and we‘ll be in touch. Contact information will also be available at the info stand.
-                    </P>
-                </CContent>
-            </CBlock>
-        </Container>
+        <Section>
+            <Block header="A few very important principles">
+                <P>
+                    JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
+                    program is chosen by our independent program committee, and they operate under the principle that no-one
+                    is paid to hold a presentation, and likewise, that no-one can pay us to get their presentation accepted.
+                    See our monetary policy for details.
+                    <br/><br/>
+                    We as organizers strive to create the best possible learning experience for all our speakers and
+                    participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that
+                    you treat your fellow conference participants with respect. We reserve the right to take any action
+                    necessary to make sure this principle is upheld.
+                    <br /><br />
+                    Should any unwanted event occur, we‘re here to help:
+                    <br/><br/>
+                    <strong>Before the conference</strong>
+                    <br />
+                    You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
+                    group of people, the core organizers og JavaZone)
+                    <br/><br/>
+                    <strong>During the conference</strong>
+                    <br />
+                    Ask at the info stand, and we‘ll be in touch. Contact information will also be available at the info stand.
+                </P>
+            </Block>
+        </Section>
     )
 }
 
 function QuestionSection() {
     return (
-        <Container>
-            <CBlock>
-                <CHeader><span>Questions?</span></CHeader>
-                <CContent>
-                    <P><br />Do not hesitate to contact us if you have any questions.
-                        Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
-                    </P>
-                    <P>
-                        We are looking forwards to seeing you at JavaZone 2018!
-                    </P>
-                </CContent>
-            </CBlock>
-        </Container>
+        <Section>
+            <Block header="Questions?">
+                <P>
+                    Do not hesitate to contact us if you have any questions.
+                    Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
+                </P>
+                <P>
+                    We are looking forwards to seeing you at JavaZone 2018!
+                </P>
+            </Block>
+        </Section>
     )
 }
 
