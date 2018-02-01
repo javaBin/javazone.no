@@ -1,7 +1,7 @@
 //@flow
 import * as React from 'react';
 import Container from '../../components/Container/Container';
-import Section from '../../components/Section/Section';
+import { Section } from '../../components/Section/Section';
 import Banner from '../../components/Banner/Banner';
 import Stats from '../../components/Stats/Stats';
 import { Block, ImageBlock } from '../../components/Block/Block';

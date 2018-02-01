@@ -2,56 +2,20 @@
 @import '../../styles/Variables.less';
 
 .footer {
-    background: @primary-color;
-    color: @secondary-color;
-    padding: 2rem 0 1.5rem 0;
+    width: 100%;
 }
 
 .footer a {
     color: @secondary-color;
 }
 
-.border {
-    width: 100%;
-    height: 4rem;
-    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
-    background-size: 4rem; 
+.footer-content {
+    padding: 2rem 0 1.5rem 0;
+    background: @primary-color;
 }
 
-.border-bottom {
-    width: 100%;
-    height: 4rem;
-    transform: rotate(180deg);
-    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
-    background-size: 4rem; 
-}
-
-/*
-.javabin {
-    margin: 0 0.3rem 0 0.3rem;
-    font-family: @source-sans-pro;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: white;
-    background: none;
-    border: 0;
-    box-sizing: border-box;
-    font-size: inherit;
-    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
-    font-weight: 700;
-    position: relative;
-    vertical-align: middle;
-    &::before,
-    &::after {
-      box-sizing: inherit;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-*/
 .javabin.nav-item.draw.meet {
+    margin-top: 1rem;
     color: @secondary-color;        
     &:hover {
         color: @secondary-color;        
@@ -67,6 +31,5 @@
 }
 
 .social-icon {
-    margin: 0 3rem 1.5rem 3rem;
     cursor: pointer;
 }

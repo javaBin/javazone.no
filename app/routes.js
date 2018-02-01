@@ -12,7 +12,7 @@ import academySeptember from './pages/academy-september.js';
 import academyLocation from './pages/academy-program.js';
 import expo from './pages/expo';
 import kids from './pages/kids';
-import speakers from './pages/speakers';
+import speakers from './pages/Speakers/Speakers.js';
 import speakerinfo from './pages/speakerinfo';
 import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
@@ -108,18 +108,13 @@ function navigate(ev) {
 }
 
 export function getPage(requestedPage) {
-    console.log("Getpage");
-    console.log(requestedPage);
     if (requestedPage[requestedPage.length - 1] === '/' && requestedPage.length > 1) {
         requestedPage = requestedPage.substring(0, requestedPage.length - 1);
     }
-    console.log(requestedPage);
 
     const page = routes.find((routes) => {
         return routes.pattern.test(requestedPage);
     });
-    console.log(page);
-    console.log(!page);
 
     if (!page) {
         pageview('/404');

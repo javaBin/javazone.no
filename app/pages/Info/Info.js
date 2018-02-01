@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import Section from '../../components/Section/Section';
+import { Section } from '../../components/Section/Section';
 import { Block, ImageBlock } from '../../components/Block/Block';
 import { Content, Header, P, Pc } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
@@ -213,7 +213,7 @@ function QuestionSection() {
 function Info(props: InfoProps) {
     return (
         <Page name='info'>
-            <PageHeader subHeader="September 12th - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
+            <PageHeader subHeader="September 12 - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
             <AboutSection />
             <TicketSection />
             <ImageBlock image={tickets2} alt="Tickets" />

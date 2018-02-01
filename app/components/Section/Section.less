@@ -1,34 +1,28 @@
 @import '../../styles/Variables.less';
 
-.pixel {
-    background: @primary-color;
-
-    h1 {
-        margin: 0;
-    }
-}
-
-.secondary-bg {
-    background: rgba(0, 0, 0, 0.3);
-}
-
 .pixel-border-top {
-    transform: rotate(180deg);
-    height: 25px;
-    background: linear-gradient(@primary-color, transparent 50%),
-                linear-gradient(-45deg, @secondary-color 33%, transparent 33%) 0 50%, 
-                @secondary-color linear-gradient(45deg, @secondary-color 33%, @primary-color 33%) 0 50%;
-    background-repeat: repeat-x;
-    background-size: 100%, 25px 25px, 25px 25px;
-    min-height: 100%;
+    height: @pixel-border-size; 
+    width: 100%;
+    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
+    background-size: @pixel-border-size;
 }
 
 .pixel-border-bottom {
-    height: 25px;
-    background: linear-gradient(@primary-color, transparent 50%),
-                linear-gradient(-45deg, @secondary-color 33%, transparent 33%) 0 50%, 
-                @secondary-color linear-gradient(45deg, @secondary-color 33%, @primary-color 33%) 0 50%;
-    background-repeat: repeat-x;
-    background-size: 100%, 25px 25px, 25px 25px;
-    min-height: 100%;
+    transform: rotate(180deg);
+    width: 100%; 
+    height: @pixel-border-size; 
+    background: url('../../assets/2018/pixelborder.svg') bottom left repeat-x;
+    background-size: @pixel-border-size;
+}
+
+.section {
+    margin: @section-margin;
+}
+
+.section-alternate {
+    background: @primary-color;
+}
+
+.section-dark {
+    background: rgba(0, 0, 0, 0.25)
 }
