@@ -1,8 +1,7 @@
-@import '../colors';
 @import '../variables';
 
 .workshop-list {   
-    background: @white;
+    background: white;
     list-style: none;
     margin: 5rem 0 0 0;
     padding: 70px 20px 50px 20px;
@@ -12,8 +11,8 @@
     }
 
     &__title {
-        border-bottom: 7px solid fade(@green--light, 50%);
-        color: fade(@green--light, 50%);
+        border-bottom: 7px solid fade(green, 50%);
+        color: fade(green, 50%);
         display: inline-block;
         font-size: 1.5rem;
         font-weight: bold;
@@ -42,7 +41,7 @@
     }
 
     &__lang {
-        color: @grey;
+        color: grey;
         font-weight: 400;
         text-transform: uppercase;
 
@@ -75,14 +74,14 @@
 
     &__title {
         border-bottom: 1px solid transparent;
-        color: @black;
+        color: black;
         display: inline;
         font-size: 1.3rem;
         text-decoration: none;
         transition: border-bottom-color .4s ease-in-out;
 
         &:hover {
-            border-bottom-color: fade(@black, 50%);
+            border-bottom-color: fade(black, 50%);
         }
 
         @media (min-width: @size-s) {
@@ -91,13 +90,13 @@
     }
 
     &__starts {
-        color: @green--light;
+        color: green;
         font-size: 1.1rem;
         margin: 5px 0 0 0;
     }
 
     &__speakers {
-        color: @grey;
+        color: grey;
         margin: 5px 0 0 0;
 
         @media (max-width: @size-s) {

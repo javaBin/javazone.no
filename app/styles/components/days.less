@@ -1,8 +1,7 @@
-@import '../colors';
 @import '../variables';
 
 .days {
-    background: @white;
+    background: white;
     margin: 5rem -20px 0 -20px;
     padding: 0 20px 30px 20px;
 
@@ -12,8 +11,8 @@
     }
 
     &__header {
-        border-bottom: 5px solid @grey;
-        color: @grey;
+        border-bottom: 5px solid grey;
+        color: grey;
         display: inline-block;
         font-size: 1.5rem;
         font-weight: bold;
@@ -36,7 +35,7 @@
     &__day {
         border: 0;
         border-radius: 0;
-        color: @black;
+        color: black;
         font-size: 1.5rem;
         font-weight: 600;
         margin-right: 20px;
@@ -45,7 +44,7 @@
         transition: background .4s ease-in-out;
 
         &--disabled {
-            background: fade(@green--light, 50%);
+            background: fade(green, 50%);
         }
     }
 }

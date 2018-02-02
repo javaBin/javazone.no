@@ -1,4 +1,3 @@
-@import '../colors';
 @import '../variables';
 
 .session {
@@ -15,7 +14,7 @@
     &__mobile-room,
     &__video,
     &__mobile-video {
-        color: @grey;
+        color: grey;
         display: none;
         font-weight: 400;
         text-transform: uppercase;
@@ -36,8 +35,8 @@
     &__video,
     &__mobile-video {
         border-radius: 100%;
-        border: 1px solid @green--light;
-        color: @green--light;
+        border: 1px solid green;
+        color: green;
         height: 25px;
         left: -50px;
         line-height: 25px;
@@ -103,7 +102,7 @@
     }
 
     &__duration {
-        color: @grey;
+        color: grey;
         font-weight: 400;
         margin-right: 10px;
     }
@@ -121,7 +120,7 @@
 
     &__title {
         border-bottom: 1px solid transparent;
-        color: @black;
+        color: black;
         display: inline;
         font-size: 1.1rem;
         margin-right: 40px;
@@ -129,7 +128,7 @@
         transition: border-bottom-color .4s ease-in-out;
 
         &:hover {
-            border-bottom-color: fade(@black, 50%);
+            border-bottom-color: fade(black, 50%);
         }
 
         @media (min-width: @size-s) {
@@ -138,13 +137,13 @@
     }
 
     &__speakers {
-        color: @grey;
+        color: grey;
     }
 
     &__favorite {
         background: transparent;
         border: 0;
-        color: @grey;
+        color: grey;
         cursor: pointer;
         font-size: 1.5rem;
         font-weight: 600;
@@ -164,7 +163,7 @@
         }
 
         &--checked {
-            color: @green--dark;
+            color: green;
             opacity: 1;
             text-shadow: none;
         }
