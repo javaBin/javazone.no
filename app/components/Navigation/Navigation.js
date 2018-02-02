@@ -5,11 +5,13 @@ import Link from '../Link/Link';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Button from '../../components/Button/Button';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
 import { Menu } from 'react-feather'; 
 import JavazoneLogo from '../../assets/2018/pixelOslo_logo_no_text_white_border_l4.svg';
 import './Navigation.less';
 
 type NavigationProps = {
+    page: string
 }
 
 type LogoProps = {
@@ -18,7 +20,8 @@ type LogoProps = {
 
 type NavItemProps = {
     children: React.Node,
-    link: string
+    link: string,
+    active: bool
 }
 
 type MenuButtonProps = {
@@ -46,7 +49,6 @@ function Logo(props: LogoProps) {
         </Link>
     )
 }
-
 function MenuButton(props: MenuButtonProps) {
 
     let menuButtonClass = classnames({
@@ -66,7 +68,15 @@ function MenuButton(props: MenuButtonProps) {
 }
 
 function NavItem(props: NavItemProps) {
-    return <Link href={props.link} className="nav-item draw meet">{props.children}</Link>
+
+    let navItemClass = classnames({
+        'nav-item': true,
+        'draw': !props.active,
+        'meet': !props.active,
+        'active-nav-item': props.active
+    })
+
+    return <Link href={props.link} className={navItemClass}>{props.children}</Link>
 }
 
 class Navigation extends React.Component<NavigationProps, NavigationState> {
@@ -76,6 +86,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     setMenuButtonVisible: Function
     renderNavItems: Function
     renderMenuButton: Function
+    isActiveNavItem: Function
 
     constructor(props: NavigationProps) {
         super(props);
@@ -84,6 +95,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
         this.setMenuButtonVisible = this.setMenuButtonVisible.bind(this);
         this.renderNavItems = this.renderNavItems.bind(this);
         this.renderMenuButton = this.renderMenuButton.bind(this);
+        this.isActiveNavItem = this.isActiveNavItem.bind(this);
     }
 
     state = {
@@ -120,15 +132,19 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
         });
     }
 
+    isActiveNavItem(linkUrl): bool {
+        return linkUrl === this.props.page;
+    }
+
     renderNavItems() {
         return (
             <Col>
                 <Row middle="xs" center="lg">
-                    <NavItem link="/info">INFO</NavItem>
-                    <NavItem link="/tickets">TICKETS</NavItem>
-                    <NavItem link="/speakers">SPEAKERS</NavItem>
-                    <NavItem link="/partners">PARTNERS</NavItem>
-                    <NavItem link="/academy">ACADEMY</NavItem>
+                    <NavItem active={this.isActiveNavItem("/info")} link="/info">INFO</NavItem>
+                    <NavItem active={this.isActiveNavItem("/tickets")} link="/tickets">TICKETS</NavItem>
+                    <NavItem active={this.isActiveNavItem("/speakers")} link="/speakers">SPEAKERS</NavItem>
+                    <NavItem active={this.isActiveNavItem("/partners")} link="/partners">PARTNERS</NavItem>
+                    <NavItem active={this.isActiveNavItem("/academy")} link="/academy">ACADEMY</NavItem>
                 </Row>
             </Col>
         )
@@ -145,7 +161,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     }
 
     render() {
-
+        console.log(this.props.page);
         let navClass = classnames({
             'navigation': true,
             'sticky': this.state.hasScrolledPassedTop,
@@ -174,4 +190,10 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     }
 }
 
-export default Navigation;
+function mapStateToProps(store: Object) {
+    return {
+        page: store.routes.page
+    }
+}
+
+export default connect(mapStateToProps)(Navigation);
