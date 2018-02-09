@@ -8,17 +8,13 @@ type HeaderProps = {
     align?: string
 }
 
-type SubHeaderProps = {
-
-}
-
 function Header(props: HeaderProps) {
 
     let headerClass = classnames({
         'header': true,
-        'left': props.align === 'left',
-        'center': props.align === 'center',
-        'right': props.align === 'right'
+        'header-left': props.align === 'left',
+        'header-center': props.align === 'center',
+        'header-right': props.align === 'right'
     })
 
     return (
@@ -28,9 +24,19 @@ function Header(props: HeaderProps) {
     )
 }
 
-function SubHeader(props: SubHeaderProps) {
+function SubHeader(props: HeaderProps) {
+
+    let subHeaderClass = classnames({
+        'sub-header': true,
+        'header-left': props.align === 'left',
+        'header-center': props.align === 'center',
+        'header-right': props.align === 'right'
+    })
+
     return (
-        <div></div>
+        <div className={subHeaderClass}>
+            <h1>{props.children}</h1>
+        </div>
     )
 }
 

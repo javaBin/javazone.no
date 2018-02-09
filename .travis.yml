@@ -6,12 +6,12 @@ cache:
   - node_modules
 notifications:
   email: false
-#script:
-#- npm run build
-#after_success:
-#- bash ./tasks/deploy.sh
-#after_failure:
-#- bash ./tasks/failed.sh
+script:
+- npm run build
+after_success:
+- bash ./tasks/deploy.sh
+after_failure:
+- bash ./tasks/failed.sh
 env:
   global:
   - GH_USER: javaBin

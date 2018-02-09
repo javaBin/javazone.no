@@ -6,7 +6,7 @@ import './Banner.less';
 // SVGs
 import background from '../../assets/2018/pixelOslo_background_l1.svg';
 import fogLayer from '../../assets/2018/pixelOslo_fog_l2.svg';
-import cityLayer from '../../assets/2018/pixelOslo_city_l3.svg';
+import cityLayer from '../../assets/2018/pixelOslo_new_city-02.svg';
 import logo from '../../assets/2018/pixelOslo_logo_no_text_l4.svg';
 import cloud1 from '../../assets/2018/cloud_1.svg';
 import cloud2 from '../../assets/2018/cloud_2.svg';

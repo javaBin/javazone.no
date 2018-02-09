@@ -21,12 +21,11 @@ function Index(props: IndexProps) {
             <Container fullWidth>
                 <Banner />
             </Container>
-            <Section pixel fullWidth>
-                <Stats>
-                </Stats>
+            <Section pixel alternate fullWidth>
+                <Stats />
             </Section>
             <Section>
-                <Header>This year's event...</Header>
+                <Header align="center">This year's event...</Header>
                 <Block header="JAVAZONE 101 THE WHO, WHAT AND WHERE">
                     <p>
                     JavaZone – the biggest European community-driven conference for modern developers is 2^4 years old this year! Don’t miss out on two days of birthday celebrations full of inspiring tech talks, hands on sessions, mingling, and a great party!
