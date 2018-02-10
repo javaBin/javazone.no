@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./dist && mkdir dist",
-    "build": "npm run flow && npm run clean && cross-env NODE_ENV=production webpack --env=prod -p --progress --colors",
+    "build": "yarn run flow && yarn run clean && cross-env NODE_ENV=production webpack --env=prod -p --progress --colors",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --env=dev --inline --host 0.0.0.0",
-    "start": "npm run watch",
+    "start": "yarn run watch",
     "flow": "flow"
   },
   "devDependencies": {
