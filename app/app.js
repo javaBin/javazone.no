@@ -1,4 +1,3 @@
-//import flexboxgrid from 'flexboxgrid';
 import reactFlexboxGrid from 'react-flexbox-grid';
 import styles from './styles/App.less';
 import 'whatwg-fetch';
