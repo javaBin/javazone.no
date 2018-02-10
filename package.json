@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./dist && mkdir dist",
-    "build": "yarn run flow && yarn run clean && cross-env NODE_ENV=production webpack --env=prod -p --progress --colors",
+    "clean": "rm -rf ./dist && rm -rf node_modules/ && mkdir dist",
+    "build": "yarn run flow && cross-env NODE_ENV=production webpack --env=prod -p --progress --colors",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --env=dev --inline --host 0.0.0.0",
     "start": "yarn run watch",
     "flow": "flow"
