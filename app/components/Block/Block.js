@@ -1,6 +1,7 @@
 //@flow
 import * as React from 'react';
-import ImageBlock from './ImageBlock';
+import Section from '../Section/Section';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import './Block.less';
 
 type BlockProps = {
@@ -8,7 +9,28 @@ type BlockProps = {
     children: React.Node
 }
 
+type ImageBlockProps = {
+    image: string,
+    alt: string
+}
+
 function Block(props: BlockProps) {
+
+    return (
+        <Grid>
+            <Row between="xs">
+                <Col>
+                    {props.header}
+                </Col>
+                <Col>
+                    {props.children}
+                </Col>
+            </Row>
+        </Grid>
+
+    )
+
+    /*
     return (
         <div className="block row">
             <div className="col-xs col-sm col-md col-lg-4">
@@ -20,6 +42,17 @@ function Block(props: BlockProps) {
                 <div className="box block-text">
                      {props.children}
                 </div>
+            </div>
+        </div>
+    )
+    */
+}
+
+function ImageBlock(props: ImageBlockProps) {
+    return (
+        <div>
+            <div className="image-block">
+                <img src={props.image} alt={props.alt} />
             </div>
         </div>
     )

@@ -21,7 +21,7 @@ function Index(props: IndexProps) {
             <Container fullWidth>
                 <Banner />
             </Container>
-            <Section pixel alternate fullWidth>
+            <Section pixel alternate>
                 <Stats />
             </Section>
             <Section>
@@ -41,7 +41,7 @@ function Index(props: IndexProps) {
                     </p>
                 </Block>
             </Section>
-            <Section fullWidth>
+            <Section fluid>
                 <ImageBlock image={Javazone1} alt="JavaZone Expo" />
             </Section>
         </Page> 
