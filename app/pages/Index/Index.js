@@ -4,7 +4,7 @@ import Container from '../../components/Container/Container';
 import { Section } from '../../components/Section/Section';
 import Banner from '../../components/Banner/Banner';
 import Stats from '../../components/Stats/Stats';
-import { Block, ImageBlock } from '../../components/Block/Block';
+import { LeftBlock, CenterBlock, RightBlock, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
 import Page from '../../components/Page/Page.js';
 import Javazone1 from '../../assets/header_expo.jpg';
@@ -26,7 +26,7 @@ function Index(props: IndexProps) {
             </Section>
             <Section>
                 <Header align="center">This year's event...</Header>
-                <Block header="JAVAZONE 101 THE WHO, WHAT AND WHERE">
+                <LeftBlock header="JAVAZONE 101 THE WHO, WHAT AND WHERE">
                     <p>
                     JavaZone – the biggest European community-driven conference for modern developers is 2^4 years old this year! Don’t miss out on two days of birthday celebrations full of inspiring tech talks, hands on sessions, mingling, and a great party!
                     </p>
@@ -39,7 +39,7 @@ function Index(props: IndexProps) {
                     <p>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years. Don’t procrastinate! Join 3000 fellow developers at JavaZone on 13th-14th September, 2017! 
                     </p>
-                </Block>
+                </LeftBlock>
             </Section>
             <Section fluid>
                 <ImageBlock image={Javazone1} alt="JavaZone Expo" />
