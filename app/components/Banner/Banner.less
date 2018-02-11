@@ -22,7 +22,7 @@
     width: 100vw;
     position: inherit;
     @media only screen and (max-width: @screen-sm) {
-        width: 150%; 
+        width: 150vw;
         left: -25%;
     }
 }
@@ -32,7 +32,7 @@
     top: 0;
     left: 0;
     @media only screen and (max-width: @screen-sm) {
-        width: 150%;
+        width: 150vw;
         left: -25%; 
         top: 2rem;
     }
@@ -44,7 +44,7 @@
     z-index: 12;
     left: 0;
     @media only screen and (max-width: @screen-sm) {
-        width: 150%;
+        width: 150vw;
         left: -25%; 
         top: 4rem;
     }
@@ -55,7 +55,7 @@
     top: -7rem;
     left: 0;
     @media only screen and (max-width: @screen-sm) {
-        width: 150%;
+        width: 150vw;
         left: -25%; 
         top: 6rem;
     }
@@ -68,6 +68,7 @@
     margin-left: -10rem;
     z-index: 19;
     animation: floating 3s infinite ease-in-out;
+    -webkit-animation: floating 3s infinite ease-in-out;
     @media only screen and (max-width: @screen-lg) {
         top: 5rem;
         width: 15rem;
@@ -98,7 +99,7 @@
 .logo-text {
     position: absolute;
     top: 20rem;
-    width: 100%;
+    width: 100vw;
     z-index: 19;
     h1 {
         font-family: @upheaval;
@@ -148,6 +149,7 @@
     width: @cloud-width;
     top: @cloud1-top;
     left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
     animation: slide 25s infinite linear;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width - @cloud-adjust-lg);
@@ -169,6 +171,8 @@
     width: @cloud-width;
     top: @cloud2-top;
     left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 12s;
     animation: slide 25s infinite linear;
     animation-delay: 12s;
     @media only screen and (max-width: @screen-lg) {
@@ -192,6 +196,8 @@
     width: @cloud-width;
     top: @cloud3-top;
     left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 13s;
     animation: slide 25s infinite linear;
     animation-delay: 13s;
     @media only screen and (max-width: @screen-lg) {
@@ -215,6 +221,8 @@
     width: @cloud-width;
     top: @cloud4-top;
     left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 9s;
     animation: slide 25s infinite linear;
     animation-delay: 9s;
     z-index: 20;
@@ -239,6 +247,8 @@
     width: @cloud-width;
     top: @cloud5-top;
     left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 18s;
     animation: slide 25s infinite linear;
     animation-delay: 18s;
     @media only screen and (max-width: @screen-lg) {
@@ -262,6 +272,9 @@
     width: @cloud-width-lg;
     top: @cloud6-top;
     left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 20s;
     transform: rotate(180deg);
     animation: slide 25s infinite linear;
     animation-delay: 20s;
@@ -285,8 +298,11 @@
 .cloud7-layer {
     width: @cloud-width-lg;
     top: @cloud7-top;
-    transform: rotate(180deg);
     left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 3s;
+    transform: rotate(180deg);
     animation: slide 25s infinite linear;
     animation-delay: 3s;
     @media only screen and (max-width: @screen-lg) {
@@ -310,6 +326,9 @@
     width: @cloud-width-lg;
     top: @cloud8-top;
     left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 7.5s;
     transform: rotate(180deg);
     animation: slide 25s infinite linear;
     animation-delay: 7.5s;
@@ -333,6 +352,7 @@
 
 .banner {
     position: relative;
+    overflow-x: hidden;
     [class$="-layer"] {
         position: absolute;
     }

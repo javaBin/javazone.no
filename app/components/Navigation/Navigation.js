@@ -156,7 +156,6 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     }
 
     render() {
-        console.log(this.props.page);
         let navClass = classnames({
             'navigation': true,
             'sticky': this.state.hasScrolledPassedTop,
