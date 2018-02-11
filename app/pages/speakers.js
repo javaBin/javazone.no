@@ -59,7 +59,7 @@ const Speakers = () => (
                         Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
                     </P>
                     <P>
-                        JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent. We'd love to have you join us in 2018!
+                        JavaZone hosts both internationals and home-grown Norwegian talent as speakers. We'd love to have you join us in 2018!
                     </P>
                 </CContent>
             </CBlock>
@@ -86,7 +86,7 @@ const Speakers = () => (
                         We can brag as much as we want, but JavaZone would be nothing without all the great speakers! That's why we need your help to make sure that JavaZone 2018 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop at the latest on April 8th 2018.
                     </P>
                     <P>
-                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups traditionally under-represented in tech.
+                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups that are under-represented in tech.
                     </P>
                 </CContent>
             </CBlock>
@@ -122,21 +122,11 @@ const Speakers = () => (
                 <Header><span className='pink'>Audience and Topics</span></Header>
                 <Content>
                     <P>
-                        JavaZone is a conference for developers and technical architects, with an emphasis on technical talks. However, we are open to talks about other areas, including methodology, project management, and other topics related to programming.
+                        JavaZone is a conference for developers and technical architects with an emphasis on technical talks. However, we are open to talks about other areas, including methodology, project management, current trends in programming and experience reports.
                     </P>
                     <P>
-                        Talks do not have to be about JVM technology. We will consider all talks based on their relevance to developers and technical architects.
+                        Despite our conference's name, we do not limit our content to Java technology. We will consider all talks based on their relevance to developers and technical architects. We do however set a focus on technology surrounding the JVM when selecting talks.
                     </P>
-                    <P>
-                        We are always interested in Java technology and its applications, current trends in programming, and experience reports. Topics we would like to hear more about this year include:
-                    </P>
-                    <ul className='speakers__list'>
-                        <li>Front-end patterns and architectures.</li>
-                        <li>Practical functional programming.</li>
-                        <li>Machine learning, AI, deep learning, data science.</li>
-                        <li>Hacking, security, cryptography, blockchains.</li>
-                        <li>...and, of course, your killer topic.</li>
-                    </ul>
                 </Content>
             </Block>
 
@@ -145,7 +135,7 @@ const Speakers = () => (
                 <Content>
                     <dl className='speakers__inspiration'>
                         <dt className='speakers__inspiration-title'>Speakers workshop</dt>
-                        <dd className='speakers__inspiration-description'>In March we will be hosting a workshop for all those considering submitting a talk to JavaZone.</dd>
+                        <dd className='speakers__inspiration-description'>On the 6th of March we will be <a href='https://www.meetup.com/javaBin/events/247318304/'>hosting a workshop for all those considering submitting</a> a talk to JavaZone.</dd>
                         <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
                         <dd className='speakers__inspiration-description'>JavaZone has a strong tradition of nurturing local speaker talent. To help with this we arrange a presentation skills workshop in August. This workshop is held in Oslo and is free for all accepted speakers. This workshop will be held in Norwegian.</dd>
                     </dl>
@@ -156,7 +146,7 @@ const Speakers = () => (
                 <Header><span className='green'>Ongoing Evaluation of Talks</span></Header>
                 <Content>
                     <P>
-                        Each year we receive hundreds of submissions. We evaluate each submission as it arrives.
+                        Each year we receive hundreds of submissions and we consider each submission as it arrives. Due to the big amount of submission we can however not guarantee that you hear from us immediately. We do however answer all submissions and try to do so no later than in July.
                     </P>
                     <P>
                         Our advice to you is simple. <strong>Submit early!</strong> The earlier you submit, the more likely you are to be noticed. Avoid drowning in the end-of-Call for Speakers tsunami!
