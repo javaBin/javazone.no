@@ -7,6 +7,7 @@ import './Block.less';
 
 type BlockProps = {
     header?: string,
+    alternate?: bool,
     children: React.Node
 }
 
@@ -43,9 +44,15 @@ function CenterBlock(props: CenterBlockProps) {
 }
 
 function LeftBlock(props: BlockProps) {
+
+    let leftBlockClass = classnames({
+        'block': true,
+        'block-alternate': props.alternate
+    })
+
     return (
         <Grid>
-            <Row className="block" center="xs">
+            <Row className={leftBlockClass} center="xs">
                 <Col xs={12} sm={12} md={12} lg={12}>
                     <Row center="xs">
                         <Col xs={12} sm={12} md={4} lg={4}>

@@ -1,6 +1,7 @@
 //@flow
 import * as React from 'react';
 import classnames from 'classnames';
+import Link from '../Link/Link';
 import './Button.less';
 
 type ButtonProps = {
@@ -30,9 +31,7 @@ class Button extends React.Component<ButtonProps, ButtonState> {
 
         return (
             <div className={buttonClass}>
-                <a href={this.props.link} target={this.props.target ? '_blank' : '_self' }>
-                    {this.props.children}
-                </a>
+                <Link href={this.props.link}>{this.props.children}</Link>
             </div>
         )
     }
