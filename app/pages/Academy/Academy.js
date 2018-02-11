@@ -1,11 +1,14 @@
 //@flow
 import * as React from 'react';
 import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
-import { Block, Header, Content, SubHeader, P} from '../../components/block';
+import { Block, Content, SubHeader, P} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { Link } from '../../components/link';
 import { Section } from '../../components/Section/Section';
-import { CenterBlock } from '../../components/Block/Block';
+import { CenterBlock, LeftBlock } from '../../components/Block/Block';
+import { Header } from '../../components/Header/Header';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import teknologihuset from '../../assets/academy/teknologihuset.jpg';
@@ -13,12 +16,15 @@ import kvarteret from '../../assets/academy/kvarteret.jpg';
 import uit from '../../assets/academy/tromso.jpg';
 import acando from '../../assets/partners-18/acando.svg';
 import accenture from '../../assets/partners-18/accenture.svg';
-import capgemini from '../../assets/partners-18/capgemini.svg';
+import capra from '../../assets/partners-18/capra.svg';
 import finn from '../../assets/partners-18/finn.svg';
 import kantega from '../../assets/partners-18/kantega.svg';
+import miles from '../../assets/partners-18/miles.svg';
+import tripletex from '../../assets/partners-18/tripletex.svg';
+import ambita from '../../assets/partners-18/ambita.svg';
 import './Academy.less';
 
-const sponsors = [acando, accenture, capgemini, finn, kantega];
+const sponsors = [acando, accenture, ambita, finn, capra, kantega, miles, tripletex];
 
 const oslo = {
     image: teknologihuset,
@@ -28,9 +34,10 @@ const oslo = {
     location_link: 'http://www.teknologihuset.no',
     pax: 100,
     program: 'academy-oslo',
-    registration: [
-        {text: 'Register for Academy Oslo', link: 'https://docs.google.com/forms/d/e/1FAIpQLSeFEhvSathx259fwJKGTevlUPIWv7BpkLuQZPiR8DWBcgR-GQ/viewform?c=0&w=1'}
-    ]
+    registration: {
+        text: 'Register for Academy Oslo', 
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSeFEhvSathx259fwJKGTevlUPIWv7BpkLuQZPiR8DWBcgR-GQ/viewform?c=0&w=1'
+    }
 };
 
 const bergen = {
@@ -41,63 +48,76 @@ const bergen = {
     location_link: 'http://kvarteret.no/',
     pax: 80,
     program: 'academy-bergen',
-    registration: [
-        {text: 'Register for Academy Bergen', link: 'https://docs.google.com/forms/d/e/1FAIpQLSdJLNRKU9aP_rqSf0qYfs6zEyvMqRvulU1P2PbdRf4sLyzo5A/viewform?c=0&w=1'},
-    ]
+    registration: {
+        text: 'Register for Academy Bergen', 
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSdJLNRKU9aP_rqSf0qYfs6zEyvMqRvulU1P2PbdRf4sLyzo5A/viewform?c=0&w=1'
+    }
 };
 
 const tromso = {
     image: uit,
     city: 'Tromsø',
     date: 'February 6th',
-    location: 'TBA',
+    location: 'Universitetet i Tromsø',
     location_link: 'https://www.uit.no',
     pax: 60,
     program: 'academy-tromso',
-    registration: [
-        {text: 'Register for Academy Tromsø', link: 'https://docs.google.com/forms/d/e/1FAIpQLSc4UVInVgFIiPDExRfYCr0p3BwT7h9Hhhk5546Tp6sxiYcVfA/viewform?c=0&w=1'},
-    ]
+    registration: {
+        text: 'Register for Academy Tromsø', 
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSc4UVInVgFIiPDExRfYCr0p3BwT7h9Hhhk5546Tp6sxiYcVfA/viewform?c=0&w=1'
+    }
 };
 
-type AcademyProps = {
-}
+const Location = ({location}) => (
+    <div className='location'>
+        <div className='location__image' style={{backgroundImage: `url('${location.image}')`}}>
+            <h3 className='location__title'>{location.city}</h3>
+        </div>
+        <p className='location__date'>
+            <strong>{location.date}</strong>
+        </p>
+        <p className='location__location'>
+            <a href={location.location_link}>
+                {location.location}
+            </a>
+        </p>
+        <p className='location__pax'>
+            {location.pax} students
+        </p>
+        {location.registration.map((reg, key) => (
+            <p key={key}>
+                <a className='button button--transparent' href={reg.link}>
+                    {reg.text}
+                </a>
+            </p>
+        ))}
+    </div>
+);
 
-type LocationProps = {
+type AcademyItemProps = {
     location: Object
 }
 
-function Location(props: LocationProps) {
+function AcademyItem(props: AcademyItemProps) {
     return (
-        <div className='location'>
-            <div className='location__image' style={{backgroundImage: `url('${props.location.image}')`}}>
-                <h3 className='location__title'>{props.location.city}</h3>
-            </div>
-            <p className='location__date'>
-                <strong>{props.location.date}</strong>
-            </p>
-            <p className='location__location'>
-                <a href={props.location.location_link}>
-                    {props.location.location}
-                </a>
-            </p>
-            <p className='location__pax'>
+        <Col xs={12} sm={12} md={12} lg={4}>
+            <Row center="xs"> 
+                <div className='academy-item-image' style={{backgroundImage: `url('${props.location.image}')`}}>
+                    <h3 className='academy-item-title'>{props.location.city}</h3>
+                </div>
+            </Row>
+            <Row center="xs">
+                <h1>{props.location.date}</h1>
+            </Row>
+            <Row className="academy-item-location" center="xs">
+                <a href={props.location.location_link}>{props.location.location}</a>
+            </Row>
+            <Row className="academy-item-students" center="xs">
                 {props.location.pax} students
-            </p>
-            {props.location.registration.map((reg, key) => (
-                <p key={key}>
-                    <a className='button button--transparent' href={reg.link}>
-                        {reg.text}
-                    </a>
-                </p>
-            ))}
-        </div>
-    )
-}
-
-function AcademyItem() {
-    return (
-        <Col xs={12} sm={6} md={3} lg={3}>
-            <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
+            </Row>
+            <Row center="xs">
+                <Button target alternate link={props.location.registration.link}>{props.location.registration.text}</Button>
+            </Row>
         </Col>
     )
 }
@@ -124,74 +144,57 @@ function Academy(props: AcademyProps) {
                 </CenterBlock>
             </Section>
             <Section alternate>
-                <Grid className="stats">
-                    <Row center="xs">
-                        <Col xs={12} sm={12} md={12} lg={12}>
-                            <Row>
-                                <Col xs={12} sm={6} md={3} lg={3}>
-                                    <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
-                                </Col>
-                                <Col xs={12} sm={6} md={3} lg={3}>
-                                    <StatItem image={calendar}>September 12th-13th</StatItem>
-                                </Col>
-                                <Col xs={12} sm={6} md={3} lg={3}>
-                                    <StatItem image={mic}>24 Speakers</StatItem>
-                                </Col>
-                                <Col xs={12} sm={6} md={3} lg={3}>
-                                    <StatItem image={partners}>36 Stands</StatItem>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Grid>
-                <ul className='academy__locations'>
-                    <Location location={bergen} />
-                    <Location location={tromso} />
-                    <Location location={oslo} />
-                </ul>
-            </Section>
-            {/*
-            <Container>
-                <CBlock>
-                    <CHeader>Program and Speakers</CHeader>
-                </CBlock>
-                <div className='academy__program-links'>
-                    <ul className='list'>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/oslo' className='button button--transparent'>Academy Oslo</Link>
-                        </li>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/tromso' className='button button--transparent'>Academy Tromsø</Link>
-                        </li>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/bergen' className='button button--transparent'>Academy Bergen</Link>
-                        </li>
-                    </ul>
+                <div className="academy-item-container">
+                    <Grid>
+                        <Row center="xs">
+                            <Col xs={12} sm={12} md={12} lg={12}>
+                                <Row center="xs">
+                                    <AcademyItem location={bergen}></AcademyItem>
+                                    <AcademyItem location={tromso}></AcademyItem>
+                                    <AcademyItem location={oslo}></AcademyItem>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Grid>
                 </div>
-                <Block>
-                    <Header>How do I register?</Header>
-                    <Content>
-                        <P>
-                            Use the signup links above to sign up for your prefered town.
-                            We’ll contact you as soon as possible with information about
-                            whether you got a spot.
-                            The events are usually quite popular, so make sure to registrer as soon as possible.
-                        </P>
-                    </Content>
-                </Block>
-            </Container>
-
-            <ul className='academy__sponsors'>
-                {sponsors.map((sponsor, key) => (
-                    <li key={key} className='academy__sponsor'>
-                        <img className='academy__sponsor-image' src={sponsor} />
-                    </li>
-                ))}
-            </ul>
-            */
-            }
+            </Section>
+            <Section>
+                <CenterBlock header="Program and speakers">
+                    <Grid className="academy-block-air">
+                        <Row center="xs">
+                            <Col xs={12} sm={12} md={9} lg={9}>
+                                <Row center="xs">
+                                    <Col xs={12} sm={12} md={3} lg={3}>
+                                        <Button link='/academy/oslo'>Academy Oslo</Button>
+                                    </Col>
+                                    <Col xs={12} sm={12} md={3} lg={3}>
+                                        <Button link='/academy/bergen'>Academy Bergen</Button>
+                                    </Col>
+                                    <Col xs={12} sm={12} md={3} lg={3}>
+                                        <Button link='/academy/tromso'>Academy Tromsø</Button>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </CenterBlock>
+                <LeftBlock header="How do I register?">
+                    <p>
+                        Use the signup links above to sign up for your prefered town. We’ll contact you as soon as possible with information about whether you got a spot. The events are usually quite popular, so make sure to registrer as soon as possible.
+                    </p>
+                </LeftBlock>
+                <CenterBlock>
+                    <ul className='academy__sponsors academy__sponsors--small'>
+                        {sponsors.map((sponsor, key) => (
+                            <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
+                                <img className='academy__sponsor-image' src={sponsor} />
+                            </li>
+                        ))}
+                    </ul>
+                </CenterBlock>
+            </Section>
         </Page>
-    )
+    );
 }
 
 export default Academy;

@@ -1,7 +1,11 @@
 import React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
+import { LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
 import { Block, Header, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
+import Page from '../components/Page/Page';
+import { Section } from '../components/Section/Section';
+import { CenterBlock } from '../components/Block/Block';
+import PageHeader from '../components/PageHeader/PageHeader';
 import teknologihuset from '../assets/academy/teknologihuset.jpg';
 import kvarteret from '../assets/academy/kvarteret.jpg';
 import uit from '../assets/academy/tromso.jpg';
@@ -31,30 +35,24 @@ const Slot = ({time, title, speaker}, key) => (
         <div className='program__hours'>{time}</div>
         <div className='program__info'>
             <div className='program__title'>{title}</div>
-            {speaker ? <div className='program__speaker'>{speaker}</div> : <div></div>}
+            {speaker ? <div className='academy-program-table-speaker'>{speaker}</div> : <div></div>}
         </div>
     </li>
 );
 
 const Location = ({title, date, sponsors, program}) => () => (
     <Page name='academy-program'>
-        <Heading>
-            <LargeHeading>Hello, {title}</LargeHeading>
-            <SmallHeading>JavaZone Academy</SmallHeading>
-        </Heading>
-
-        <Container>
-            <CBlock>
-                <CHeader>Welcome to JavaZone Academy {title}</CHeader>
-                <CContent>
-                    <P>
-                        JavaZone Academy will be a day packed full of greate talks,
-                        food and mingling. See the final program below, and start
-                        getting excited!
-                    </P>
-                </CContent>
-            </CBlock>
-
+        <PageHeader subHeader="JavaZone Academy">Hello, {title}</PageHeader>
+        <Section>
+            <CenterBlock header="Welcome to JavaZone Academy">
+                <p>
+                    JavaZone Academy will be a day packed full of greate talks,
+                    food and mingling. See the final program below, and start
+                    getting excited!
+                </p>
+            </CenterBlock>
+        </Section>
+        <Section>
             <ul className='academy__sponsors academy__sponsors--small'>
                 {sponsors.map((sponsor, key) => (
                     <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
@@ -62,11 +60,12 @@ const Location = ({title, date, sponsors, program}) => () => (
                     </li>
                 ))}
             </ul>
-
-            <ul className='program'>
+        </Section>
+        <Section dark>
+            <ul className='academy-program-table'>
                 {program.map((slot, key) => Slot(slot, key))}
             </ul>
-        </Container>
+        </Section>
     </Page>
 );
 

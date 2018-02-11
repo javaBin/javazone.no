@@ -34,22 +34,27 @@ function CenterBlock(props: CenterBlockProps) {
         <Grid>
             <div className={centerBlockClass}>
                 {headerRow}
-                {props.children}
+                <div className="block-text-center">
+                    {props.children}
+                </div>
             </div>
         </Grid>
     )
 }
 
 function LeftBlock(props: BlockProps) {
-
     return (
         <Grid>
-            <Row className="block">
-                <Col xs={4}>
-                    <h1 className="block-header block-header-margin-right">{props.header}</h1>
-                </Col>
-                <Col className="block-text" xs={8}>
-                    {props.children}
+            <Row className="block" center="xs">
+                <Col xs={12} sm={12} md={12} lg={12}>
+                    <Row center="xs">
+                        <Col xs={12} sm={12} md={4} lg={4}>
+                            <h1 className="block-header block-header-margin-right">{props.header}</h1>
+                        </Col>
+                        <Col className="block-text" xs={12} sm={12} md={8} lg={8}>
+                            {props.children}
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Grid>
@@ -60,12 +65,16 @@ function LeftBlock(props: BlockProps) {
 function RightBlock(props: BlockProps) {
     return (
         <Grid>
-            <Row className="block">
-                <Col className="block-text" xs={8}>
-                    {props.children}
-                </Col>
-                <Col xs={4}>
-                    <h1 className="block-header block-header-margin-left">{props.header}</h1>
+            <Row className="block" center="xs">
+                <Col xs={12} sm={12} md={12} lg={12}>
+                    <Row center="xs">
+                        <Col className="block-text" xs={12} sm={12} md={8} lg={8}>
+                            {props.children}
+                        </Col>
+                        <Col xs={12} sm={12} md={4} lg={4}>
+                            <h1 className="block-header block-header-margin-left">{props.header}</h1>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Grid>

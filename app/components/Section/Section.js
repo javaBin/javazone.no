@@ -58,18 +58,6 @@ function Section(props: SectionProps) {
             </Row> : null}
         </div>
     )
-
-    /*
-    return (
-        <Container fullWidth={props.fullWidth}>
-            {props.pixel ? <div className="border"></div> : null}
-            <div className={sectionClass}>
-                {props.children}
-            </div>
-            {props.pixel ? <div className="border-bottom"></div> : null}
-        </Container>
-    )
-    */
 }
 
 export { Section, PixelBorder };
