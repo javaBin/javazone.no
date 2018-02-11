@@ -35,7 +35,8 @@ const oslo = {
     pax: 100,
     program: 'academy-oslo',
     registration: {
-        text: 'Register for Academy Oslo', 
+        //text: 'is closed for Academy Oslo', 
+        text: 'Registration for Academy Oslo is closed', 
         link: 'https://docs.google.com/forms/d/e/1FAIpQLSeFEhvSathx259fwJKGTevlUPIWv7BpkLuQZPiR8DWBcgR-GQ/viewform?c=0&w=1'
     }
 };
@@ -49,7 +50,8 @@ const bergen = {
     pax: 80,
     program: 'academy-bergen',
     registration: {
-        text: 'Register for Academy Bergen', 
+        //text: 'Register for Academy Bergen', 
+        text: 'Registration for Academy Bergen is closed', 
         link: 'https://docs.google.com/forms/d/e/1FAIpQLSdJLNRKU9aP_rqSf0qYfs6zEyvMqRvulU1P2PbdRf4sLyzo5A/viewform?c=0&w=1'
     }
 };
@@ -63,7 +65,8 @@ const tromso = {
     pax: 60,
     program: 'academy-tromso',
     registration: {
-        text: 'Register for Academy Tromsø', 
+        //text: 'Register for Academy Tromsø', 
+        text: 'Registration for Academy Tromsø is closed', 
         link: 'https://docs.google.com/forms/d/e/1FAIpQLSc4UVInVgFIiPDExRfYCr0p3BwT7h9Hhhk5546Tp6sxiYcVfA/viewform?c=0&w=1'
     }
 };
