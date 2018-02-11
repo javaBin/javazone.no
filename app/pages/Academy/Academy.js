@@ -4,6 +4,8 @@ import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../com
 import { Block, Header, Content, SubHeader, P} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { Link } from '../../components/link';
+import { Section } from '../../components/Section/Section';
+import { CenterBlock } from '../../components/Block/Block';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import teknologihuset from '../../assets/academy/teknologihuset.jpg';
@@ -92,36 +94,62 @@ function Location(props: LocationProps) {
     )
 }
 
+function AcademyItem() {
+    return (
+        <Col xs={12} sm={6} md={3} lg={3}>
+            <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
+        </Col>
+    )
+}
+
 function Academy(props: AcademyProps) {
     return (
         <Page name='academy'>
             <PageHeader subHeader="Come join us in February 2018">JavaZone Academy</PageHeader>
-            <Container>
-                <CBlock>
-                    <CContent>
-                        <P>
-                            Are you a student? Interested in IT? Come join us for JavaZone Academy.
-                            JavaZone Academy is a free event for students in Norway, where we invite you
-                            to take part in the JavaZone experience.
-                        </P>
-                        <P>
-                            We will bring great talks, food, mingling and great partners
-                            to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
-                            Join us for a great evening!
-                        </P>
-                        <P>
-                            A detailed program and more information will be soon posted here. Watch this space!
-                        </P>
-                    </CContent>
-                </CBlock>
-            </Container>
-
-            <ul className='academy__locations'>
-                <Location location={bergen} />
-                <Location location={tromso} />
-                <Location location={oslo} />
-            </ul>
-
+            <Section>
+                <CenterBlock>
+                    <p>
+                        Are you a student? Interested in IT? Come join us for JavaZone Academy.
+                        JavaZone Academy is a free event for students in Norway, where we invite you
+                        to take part in the JavaZone experience.
+                    </p>
+                    <p>
+                        We will bring great talks, food, mingling and great partners
+                        to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
+                        Join us for a great evening!
+                    </p>
+                    <p>
+                        A detailed program and more information will be soon posted here. Watch this space!
+                    </p>
+                </CenterBlock>
+            </Section>
+            <Section alternate>
+                <Grid className="stats">
+                    <Row center="xs">
+                        <Col xs={12} sm={12} md={12} lg={12}>
+                            <Row>
+                                <Col xs={12} sm={6} md={3} lg={3}>
+                                    <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
+                                </Col>
+                                <Col xs={12} sm={6} md={3} lg={3}>
+                                    <StatItem image={calendar}>September 12th-13th</StatItem>
+                                </Col>
+                                <Col xs={12} sm={6} md={3} lg={3}>
+                                    <StatItem image={mic}>24 Speakers</StatItem>
+                                </Col>
+                                <Col xs={12} sm={6} md={3} lg={3}>
+                                    <StatItem image={partners}>36 Stands</StatItem>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Grid>
+                <ul className='academy__locations'>
+                    <Location location={bergen} />
+                    <Location location={tromso} />
+                    <Location location={oslo} />
+                </ul>
+            </Section>
             {/*
             <Container>
                 <CBlock>

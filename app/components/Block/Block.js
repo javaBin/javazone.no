@@ -24,18 +24,18 @@ type CenterBlockProps = {
 function CenterBlock(props: CenterBlockProps) {
 
     let centerBlockClass = classnames({
-        'center-block': true,
-        'center-block-text-left': props.textAlign === 'left',
-        'center-block-text-center': props.textAlign === 'center',
-        'center-block-text-right': props.textAlign === 'right',
+        'block': true,
+        'center-block-text-center': true 
     })
 
-    let headerRow = props.header ? <Row className={centerBlockClass}>{props.header}</Row> : null;
+    let headerRow = props.header ? <Row center="xs"><h1 className="block-header">{props.header}</h1></Row> : null;
 
     return (
         <Grid>
-            {headerRow}
-            {props.children}
+            <div className={centerBlockClass}>
+                {headerRow}
+                {props.children}
+            </div>
         </Grid>
     )
 }
