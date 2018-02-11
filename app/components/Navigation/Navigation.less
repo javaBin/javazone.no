@@ -1,0 +1,177 @@
+@import '../../styles/Variables';
+
+.navigation {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: @navigation-height; 
+    transition: all 0.25s;
+    &.mobile-nav {
+        transition: all 0.25s;
+        background: @logo-red;
+        overflow-x: hidden;
+        height: 100vh; 
+    }
+}
+
+.mobile-menu {
+    font-family: @source-sans-pro;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 100%;
+    div {
+        flex-flow: column;
+    }
+}
+
+.navigation .row {
+    height: @navigation-height; 
+}
+
+.nav-item {
+    margin: 0 0.3rem 0 0.3rem;
+    font-family: @source-sans-pro;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem; 
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.active-nav-item {
+    border: 2px solid white;
+}
+
+.draw {
+    transition: color 0.25s;
+    &::before,
+    &::after {
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+    &:hover {
+        color: white;
+    }
+    &:hover::before,
+    &:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover::before {
+        border-top-color: white; // Make borders visible
+        border-right-color: white;
+        transition:
+        width 0.125s ease-out, // Width expands first
+        height 0.125s ease-out 0.125s; // And then height
+    }
+    &:hover::after {
+        border-bottom-color: white; // Make borders visible
+        border-left-color: white;
+        transition:
+        border-color 0s ease-out 0.25s, // Wait for ::before to finish before showing border
+        width 0.125s ease-out 0.375s, // And then exanding width
+        height 0.125s ease-out 0.5s; // And finally height
+    }
+}
+
+.meet {
+    &:hover {
+        color: white;
+    }
+    &::after {
+    top: 0;
+    left: 0;
+    }
+    &:hover::before {
+    border-top-color: white;
+    border-right-color: white;
+    }
+    &:hover::after {
+    border-bottom-color: white;
+    border-left-color: white;
+    transition: // Animate height first, then width
+        height 0.125s ease-out,
+        width 0.125s ease-out 0.125s;
+    }
+}
+
+.sticky {
+    background: @logo-red;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+    .nav-item, .draw, .meet {
+        color: white;        
+        &:hover {
+            color: white;        
+        }
+        &:hover::before {
+            border-top-color: white;
+            border-right-color: white;
+        }
+        &:hover::after {
+            border-bottom-color: white;
+            border-left-color: white;
+        }
+    }
+}
+
+.logo-nav {
+    display: flex;
+    font-family: @upheaval;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    flex-direction: row;
+    margin-right: 1rem;
+
+    h2 {
+        margin: 0rem;
+        color: white;
+    }
+
+    img {
+        margin-right: 0.6rem;
+        width: 2.7rem;
+    }
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    font-size: inherit;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    font-family: @source-sans-pro;
+    cursor: pointer;
+}
+
+.menu-button-text {
+    svg {
+        margin-right: 0.5rem;
+    }
+}
+

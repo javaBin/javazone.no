@@ -1,5 +1,4 @@
-@import '../colors';
-@import '../variables';
+@import '../Variables';
 
 .sessions {
     list-style: none;
@@ -11,7 +10,7 @@
     }
 
     &__day {
-        background: @white;
+        background: white;
         margin: 0;
         padding: 0 20px;
 
@@ -22,7 +21,7 @@
     }
 
     &__format-title {
-        color: @black;
+        color: black;
         display: inline-block;
         font-size: 1.5rem;
         font-weight: bold;
@@ -30,13 +29,13 @@
         padding: 30px 0 10px;
 
         &--thursday {
-            border-bottom: 7px solid fade(@green--light, 50%);
-            color: fade(@green--light, 50%);
+            border-bottom: 7px solid fade(green, 50%);
+            color: fade(green, 50%);
         }
 
         &--wednesday {
-            border-bottom: 7px solid fade(@burgundy, 50%);
-            color: fade(@burgundy, 50%);
+            border-bottom: 7px solid fade(blue, 50%);
+            color: fade(blue, 50%);
         }
 
         @media (min-width: @size-s) {
