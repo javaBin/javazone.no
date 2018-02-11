@@ -21,7 +21,7 @@ const routes = compile({
     '/partnermote-desember': partnermoteDesember,
     '/academy': academy,
     '/academy/oslo': academyLocation(academyData.oslo),
-    '/academy/trondheim': academyLocation(academyData.trondheim),
+    '/academy/tromso': academyLocation(academyData.tromso),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers,
     '/tickets': tickets,
