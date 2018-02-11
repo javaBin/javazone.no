@@ -4,7 +4,7 @@ import { Container, Heading, LargeHeading, SmallHeading } from '../../components
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import { Section } from '../../components/Section/Section';
-import { Block, ImageBlock } from '../../components/Block/Block';
+import { LeftBlock, ImageBlock } from '../../components/Block/Block';
 import { Content, Header, P, Pc } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
@@ -18,7 +18,7 @@ type InfoProps = {
 function AboutSection() {
     return (
         <Section>
-            <Block header="JavaZone 101 the who, what and where"> 
+            <LeftBlock header="JavaZone 101 the who, what and where"> 
                 <P>
                     JavaZone – the biggest European community-driven conference for modern developers will be 17
                     years old in 2018! Don’t miss out on two days of inspiring tech talks,
@@ -39,7 +39,7 @@ function AboutSection() {
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
                     Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -47,12 +47,12 @@ function AboutSection() {
 function TicketSection() {
     return (
         <Section>
-            <Block header="First thing first: your ticket!">
+            <LeftBlock header="First thing first: your ticket!">
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
                     JavaZone experience, including workshops. The ticket sales will be opening in February 2018.
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -60,36 +60,36 @@ function TicketSection() {
 function BetterExplorerSection() {
     return (
         <Section>
-            <Block header="Two conference days">
+            <LeftBlock header="Two conference days">
                 <P>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
                     and categories. You don‘t want to miss our amazing lineup. The program will be made available online around summer 2018.
                 </P>
-            </Block>
-            <Block header="An after party to remember">
+            </LeftBlock>
+            <LeftBlock header="An after party to remember">
                 <P>
                     After a long day of unique learning experiences, it feels good to chill out with some good food and drink.
                     JavaZone parties are legendary - and we can promise something amazing for our afterparty this year as well!
                 </P>
-            </Block>
-            <Block header="8 restaurants, all day long">
+            </LeftBlock>
+            <LeftBlock header="8 restaurants, all day long">
                 <P>
                     Have we mentioned our great selection of food? And that it is continuously delivered?
                     Our chefs will take you on a culinary trip around the globe. With food served all day we promise that you will not leave the event hungry!
                 </P>
-            </Block>
-            <Block header="Hands-on workshops">
+            </LeftBlock>
+            <LeftBlock header="Hands-on workshops">
                 <P>
                     Do you prefer practical tasks more than theory? Take part in one of our great workshops and
                     boost your knowledge and skills. The workshops are included in your ticket, but we have a limited number of seats.
                     More information, along with registration details will be made available in August.
                 </P>
-            </Block>
-            <Block header="... and a whole lotta love">
+            </LeftBlock>
+            <LeftBlock header="... and a whole lotta love">
                 <P>
                     You will meet lots of interesting people at JavaZone! Grab your coffee and mingle away!
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -117,29 +117,29 @@ function FaqSection() {
 function ProgramSection() {
     return (
         <Section>
-            <Block header="The JavaZone program">
+            <LeftBlock header="The JavaZone program">
                 <P>
                     The full program will be made available online around summertime 2018.
                 </P>
-            </Block>
-            <Block header="Lightning talks">
+            </LeftBlock>
+            <LeftBlock header="Lightning talks">
                 <P>
                     Lightning talks are either 10 or 20 minutes long and often gives a quick introduction to a concept.
                     This is a great way to get a sneak peek at something new.
                 </P>
-            </Block>
-            <Block header="Presentations">
+            </LeftBlock>
+            <LeftBlock header="Presentations">
                 <P>
                     Presentations at JavaZone have a length of 45 or 60 minutes, and will give you a deeper
                     understanding of a concept than lightning talks.
                 </P>
-            </Block>
-            <Block header="Workshops">
+            </LeftBlock>
+            <LeftBlock header="Workshops">
                 <P>
                     Full blown learning session. This is where you get down and dirty with code. We’ll have full
                     day workshops in addition to shorter 2-hour and 4-hour workshops.
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -147,7 +147,7 @@ function ProgramSection() {
 function AweZoneSection() {
     return (
         <Section>
-            <Block header="AweZone: Celebrating the community">
+            <LeftBlock header="AweZone: Celebrating the community">
                 <P>
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
                     evening.
@@ -157,7 +157,7 @@ function AweZoneSection() {
                     <br /><br />
                     More details will be posted later.
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -165,7 +165,7 @@ function AweZoneSection() {
 function ImportantPrinciplesSection() {
     return (
         <Section>
-            <Block header="A few very important principles">
+            <LeftBlock header="A few very important principles">
                 <P>
                     JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
                     program is chosen by our independent program committee, and they operate under the principle that no-one
@@ -188,7 +188,7 @@ function ImportantPrinciplesSection() {
                     <br />
                     Ask at the info stand, and we‘ll be in touch. Contact information will also be available at the info stand.
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
@@ -196,7 +196,7 @@ function ImportantPrinciplesSection() {
 function QuestionSection() {
     return (
         <Section>
-            <Block header="Questions?">
+            <LeftBlock header="Questions?">
                 <P>
                     Do not hesitate to contact us if you have any questions.
                     Contact us at <a href='mailto:javazone@java.no'>javazone@java.no</a> and we’ll try our best to give you an answer.
@@ -204,7 +204,7 @@ function QuestionSection() {
                 <P>
                     We are looking forwards to seeing you at JavaZone 2018!
                 </P>
-            </Block>
+            </LeftBlock>
         </Section>
     )
 }
