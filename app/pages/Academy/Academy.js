@@ -9,11 +9,11 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import teknologihuset from '../../assets/academy/teknologihuset.jpg';
 import kvarteret from '../../assets/academy/kvarteret.jpg';
 import uit from '../../assets/academy/tromso.jpg';
-import acando from '../../assets/partners-17/acando.svg';
-import accenture from '../../assets/partners-17/accenture.svg';
-import capgemini from '../../assets/partners-17/capgemini.svg';
-import finn from '../../assets/partners-17/finn.svg';
-import kantega from '../../assets/partners-17/kantega.svg';
+import acando from '../../assets/partners-18/acando.svg';
+import accenture from '../../assets/partners-18/accenture.svg';
+import capgemini from '../../assets/partners-18/capgemini.svg';
+import finn from '../../assets/partners-18/finn.svg';
+import kantega from '../../assets/partners-18/kantega.svg';
 import './Academy.less';
 
 const sponsors = [acando, accenture, capgemini, finn, kantega];
