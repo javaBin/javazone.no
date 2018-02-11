@@ -11,12 +11,15 @@ import kvarteret from '../../assets/academy/kvarteret.jpg';
 import uit from '../../assets/academy/tromso.jpg';
 import acando from '../../assets/partners-18/acando.svg';
 import accenture from '../../assets/partners-18/accenture.svg';
-import capgemini from '../../assets/partners-18/capgemini.svg';
+import capra from '../../assets/partners-18/capra.svg';
 import finn from '../../assets/partners-18/finn.svg';
 import kantega from '../../assets/partners-18/kantega.svg';
+import miles from '../../assets/partners-18/miles.svg';
+import tripletex from '../../assets/partners-18/tripletex.svg';
+import ambita from '../../assets/partners-18/ambita.svg';
 import './Academy.less';
 
-const sponsors = [acando, accenture, capgemini, finn, kantega];
+const sponsors = [acando, accenture, ambita, finn, capra, kantega, miles, tripletex];
 
 const oslo = {
     image: teknologihuset,
@@ -48,7 +51,7 @@ const tromso = {
     image: uit,
     city: 'Tromsø',
     date: 'February 6th',
-    location: 'TBA',
+    location: 'Universitetet i Tromsø',
     location_link: 'https://www.uit.no',
     pax: 60,
     program: 'academy-tromso',
@@ -57,113 +60,100 @@ const tromso = {
     ]
 };
 
-type AcademyProps = {
-}
-
-type LocationProps = {
-    location: Object
-}
-
-function Location(props: LocationProps) {
-    return (
-        <div className='location'>
-            <div className='location__image' style={{backgroundImage: `url('${props.location.image}')`}}>
-                <h3 className='location__title'>{props.location.city}</h3>
-            </div>
-            <p className='location__date'>
-                <strong>{props.location.date}</strong>
-            </p>
-            <p className='location__location'>
-                <a href={props.location.location_link}>
-                    {props.location.location}
+const Location = ({location}) => (
+    <div className='location'>
+        <div className='location__image' style={{backgroundImage: `url('${location.image}')`}}>
+            <h3 className='location__title'>{location.city}</h3>
+        </div>
+        <p className='location__date'>
+            <strong>{location.date}</strong>
+        </p>
+        <p className='location__location'>
+            <a href={location.location_link}>
+                {location.location}
+            </a>
+        </p>
+        <p className='location__pax'>
+            {location.pax} students
+        </p>
+        {location.registration.map((reg, key) => (
+            <p key={key}>
+                <a className='button button--transparent' href={reg.link}>
+                    {reg.text}
                 </a>
             </p>
-            <p className='location__pax'>
-                {props.location.pax} students
-            </p>
-            {props.location.registration.map((reg, key) => (
-                <p key={key}>
-                    <a className='button button--transparent' href={reg.link}>
-                        {reg.text}
-                    </a>
-                </p>
-            ))}
-        </div>
-    )
-}
+        ))}
+    </div>
+);
 
-function Academy(props: AcademyProps) {
-    return (
-        <Page name='academy'>
-            <PageHeader subHeader="Come join us in February 2018">JavaZone Academy</PageHeader>
-            <Container>
-                <CBlock>
-                    <CContent>
-                        <P>
-                            Are you a student? Interested in IT? Come join us for JavaZone Academy.
-                            JavaZone Academy is a free event for students in Norway, where we invite you
-                            to take part in the JavaZone experience.
-                        </P>
-                        <P>
-                            We will bring great talks, food, mingling and great partners
-                            to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
-                            Join us for a great evening!
-                        </P>
-                        <P>
-                            A detailed program and more information will be soon posted here. Watch this space!
-                        </P>
-                    </CContent>
-                </CBlock>
-            </Container>
+const Academy = () => (
+    <Page name='academy'>
+        <Heading>
+            <LargeHeading>JavaZone Academy</LargeHeading>
+            <SmallHeading>Come join us in February 2018</SmallHeading>
+        </Heading>
 
-            <ul className='academy__locations'>
-                <Location location={bergen} />
-                <Location location={tromso} />
-                <Location location={oslo} />
-            </ul>
+        <Container>
+            <CBlock>
+                <CContent>
+                    <P>
+                        Are you a student? Interested in IT? Come join us for JavaZone Academy.
+                        JavaZone Academy is a free event for students in Norway, where we invite you
+                        to take part in the JavaZone experience.
+                    </P>
+                    <P>
+                        We will bring great talks, food, mingling and great partners
+                        to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
+                        Join us for a great evening!
+                    </P>
+                </CContent>
+            </CBlock>
+        </Container>
 
-            {/*
-            <Container>
-                <CBlock>
-                    <CHeader>Program and Speakers</CHeader>
-                </CBlock>
-                <div className='academy__program-links'>
-                    <ul className='list'>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/oslo' className='button button--transparent'>Academy Oslo</Link>
-                        </li>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/tromso' className='button button--transparent'>Academy Tromsø</Link>
-                        </li>
-                        <li className='list__item academy__program-link'>
-                            <Link href='/academy/bergen' className='button button--transparent'>Academy Bergen</Link>
-                        </li>
-                    </ul>
-                </div>
-                <Block>
-                    <Header>How do I register?</Header>
-                    <Content>
-                        <P>
-                            Use the signup links above to sign up for your prefered town.
-                            We’ll contact you as soon as possible with information about
-                            whether you got a spot.
-                            The events are usually quite popular, so make sure to registrer as soon as possible.
-                        </P>
-                    </Content>
-                </Block>
-            </Container>
+        <ul className='academy__locations'>
+            <Location location={bergen} />
+            <Location location={tromso} />
+            <Location location={oslo} />
+        </ul>
 
-            <ul className='academy__sponsors'>
+        <Container>
+            <CBlock>
+                <CHeader>Program and Speakers</CHeader>
+            </CBlock>
+            <div className='academy__program-links'>
+                <ul className='list'>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/oslo' className='button button--transparent'>Academy Oslo</Link>
+                    </li>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/tromso' className='button button--transparent'>Academy Tromsø</Link>
+                    </li>
+                    <li className='list__item academy__program-link'>
+                        <Link href='/academy/bergen' className='button button--transparent'>Academy Bergen</Link>
+                    </li>
+                </ul>
+            </div>
+            <Block>
+                <Header>How do I register?</Header>
+                <Content>
+                    <P>
+                        Use the signup links above to sign up for your prefered town.
+                        We’ll contact you as soon as possible with information about
+                        whether you got a spot.
+                        The events are usually quite popular, so make sure to registrer as soon as possible.
+                    </P>
+                </Content>
+            </Block>
+            <ul className='academy__sponsors academy__sponsors--small'>
                 {sponsors.map((sponsor, key) => (
-                    <li key={key} className='academy__sponsor'>
+                    <li key={key} className={`academy__sponsor academy__sponsor--${sponsors.length}`}>
                         <img className='academy__sponsor-image' src={sponsor} />
                     </li>
                 ))}
             </ul>
-            */
-            }
-        </Page>
-    )
-}
+        </Container>
+
+    </Page>
+);
 
 export default Academy;
