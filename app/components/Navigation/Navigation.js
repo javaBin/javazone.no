@@ -7,15 +7,11 @@ import Button from '../../components/Button/Button';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { Menu } from 'react-feather'; 
-import JavazoneLogo from '../../assets/2018/pixelOslo_logo_no_text_white_border_l4.svg';
+import JavazoneLogo from '../../assets/2018/logoSmall_jz2018.svg';
 import './Navigation.less';
 
 type NavigationProps = {
     page: string
-}
-
-type LogoProps = {
-    text?: string
 }
 
 type NavItemProps = {
@@ -36,7 +32,7 @@ type NavigationState = {
     showMenu: bool
 }
 
-function Logo(props: LogoProps) {
+function Logo() {
 
     let logoClass = classnames({
         'logo-nav': true
@@ -45,7 +41,6 @@ function Logo(props: LogoProps) {
     return (
         <Link href="/" className={logoClass}>
             <img src={JavazoneLogo} alt="Logo" />
-            <h2>JZ2018</h2>
         </Link>
     )
 }

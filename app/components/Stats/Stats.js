@@ -30,57 +30,26 @@ function Stats(props: StatsProps) {
 
     return (
         <Grid className="stats">
-            <Row around="xs">
-                <Col xs={3}>
-                    <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
-                </Col>
-                <Col xs={3}>
-                    <StatItem image={calendar}>September 12th-13th</StatItem>
-                </Col>
-                <Col xs={3}>
-                    <StatItem image={mic}>24 Speakers</StatItem>
-                </Col>
-                <Col xs={3}>
-                    <StatItem image={partners}>36 Stands</StatItem>
+            <Row center="xs">
+                <Col xs={12} sm={12} md={12} lg={12}>
+                    <Row>
+                        <Col xs={12} sm={6} md={3} lg={3}>
+                            <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
+                        </Col>
+                        <Col xs={12} sm={6} md={3} lg={3}>
+                            <StatItem image={calendar}>September 12th-13th</StatItem>
+                        </Col>
+                        <Col xs={12} sm={6} md={3} lg={3}>
+                            <StatItem image={mic}>24 Speakers</StatItem>
+                        </Col>
+                        <Col xs={12} sm={6} md={3} lg={3}>
+                            <StatItem image={partners}>36 Stands</StatItem>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Grid>
     )
-
-    /*
-    return (
-        <Container>
-            <div className="stats">
-                <div className="row center-lg">
-                    <div className="col-xs col-sm col-md col-lg-3">
-                        <div className="box">
-                            <img className="icon" src={location} alt="Location" />
-                            <h2>Oslo Spektrum, Norway</h2>
-                        </div>
-                    </div>
-                    <div className="col-xs col-sm col-md col-lg-3">
-                        <div className="box">
-                            <img className="icon" src={calendar} alt="Calendar" />
-                            <h2>September 12th-13th</h2>
-                        </div>
-                    </div>
-                    <div className="col-xs col-sm col-md col-lg-3">
-                        <div className="box">
-                            <img className="icon" src={mic} alt="Mic" />
-                            <h2>24 Speakers</h2>
-                        </div>
-                    </div>
-                    <div className="col-xs col-sm col-md col-lg-3">
-                        <div className="box">
-                            <img className="icon" src={partners} alt="Partners" />
-                            <h2>36 Stands</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Container>
-    )
-    */
 }
 
 export default Stats;
