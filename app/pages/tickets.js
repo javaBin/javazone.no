@@ -88,7 +88,7 @@ const Tickets = () => (
             <img className='partners__image' src={tickets1} />
 
             <CBlock>
-                <CHeader><span className='tickets__news green'>New this year:</span>The javaBin membership included in the ticket</CHeader>
+                <CHeader><span className='tickets__news green'></span>The javaBin membership included in the ticket</CHeader>
                 <CContent>
                     <P>
                         <br />

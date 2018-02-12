@@ -74,7 +74,7 @@ function Tickets(props: TicketsProps) {
 
             	<ImageBlock image={tickets1} alt="Tickets page separator image" />
 
-	            <LeftBlock header="New this year: The javaBin membership included in the ticket">
+	            <LeftBlock header="The javaBin membership included in the ticket">
                     <P>
                         <br />
                         JavaZone is organized for and by the community. Your ticket includes a membership to javaBin, giving you access to all the javaBin community events and voting rights for a full year after buying the ticket.

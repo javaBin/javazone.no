@@ -34,16 +34,16 @@ function Stats(props: StatsProps) {
                 <Col xs={12} sm={12} md={12} lg={12}>
                     <Row>
                         <Col xs={12} sm={6} md={3} lg={3}>
-                            <StatItem image={location}>Oslo Sepktrum, Norway</StatItem>
+                            <StatItem image={location}>Oslo Spektrum, Norway</StatItem>
                         </Col>
                         <Col xs={12} sm={6} md={3} lg={3}>
                             <StatItem image={calendar}>September 12th-13th</StatItem>
                         </Col>
                         <Col xs={12} sm={6} md={3} lg={3}>
-                            <StatItem image={mic}>24 Speakers</StatItem>
+                            <StatItem image={mic}>200 Speakers</StatItem>
                         </Col>
                         <Col xs={12} sm={6} md={3} lg={3}>
-                            <StatItem image={partners}>36 Stands</StatItem>
+                            <StatItem image={partners}>46 Stands</StatItem>
                         </Col>
                     </Row>
                 </Col>
