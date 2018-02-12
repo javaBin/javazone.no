@@ -77,7 +77,7 @@ const Speakers = () => (
                         Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
                     </P>
                     <P>
-                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of lightning talks and presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 sessions. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
+                        JavaZone hosts both internationals and home-grown Norwegian talent as speakers. We'd love to have you join us in 2018!
                     </P>
                 </CContent>
             </CBlock>
@@ -107,7 +107,7 @@ const Speakers = () => (
                         We can brag as much as we want, but JavaZone would be nothing without all the great speakers! That's why we need your help to make sure that JavaZone 2017 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop by April 24th 2017.
                     </P>
                     <P>
-                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups traditionally under-represented in tech.
+                        JavaZone is committed to diversity, and we are especially interested in quality submissions from groups that are under-represented in tech.
                     </P>
                 </CContent>
             </CBlock>
@@ -143,21 +143,11 @@ const Speakers = () => (
                 <Header><span className='pink'>Audience and Topics</span></Header>
                 <Content>
                     <P>
-                        JavaZone is a conference for developers and technical architects, with an emphasis on technical talks. However, we are open to talks about other areas, including methodology, project management, and other topics related to programming.
+                        JavaZone is a conference for developers and technical architects with an emphasis on technical talks. However, we are open to talks about other areas, including methodology, project management, current trends in programming and experience reports.
                     </P>
                     <P>
-                        Talks do not have to be about JVM technology. We will consider all talks based on their relevance to developers and technical architects.
+                        Despite our conference's name, we do not limit our content to Java technology. We will consider all talks based on their relevance to developers and technical architects. We do however set a focus on technology surrounding the JVM when selecting talks.
                     </P>
-                    <P>
-                        We are always interested in Java technology and its applications, current trends in programming, and experience reports. Topics we would like to hear more about this year include:
-                    </P>
-                    <ul className='speakers__list'>
-                        <li>Front-end patterns and architectures.</li>
-                        <li>Practical functional programming.</li>
-                        <li>Machine learning, AI, deep learning.</li>
-                        <li>Hacking, security, cryptography, blockchains.</li>
-                        <li>...and, of course, your killer topic.</li>
-                    </ul>
                 </Content>
             </Block>
 
@@ -166,7 +156,7 @@ const Speakers = () => (
                 <Content>
                     <dl className='speakers__inspiration'>
                         <dt className='speakers__inspiration-title'>Speakers workshop</dt>
-                        <dd className='speakers__inspiration-description'>On the 7th of March we are hosting <a href="https://www.meetup.com/javaBin/events/237342945/">a workshop</a> for all those who are considering submitting a talk to JavaZone.</dd>
+                        <dd className='speakers__inspiration-description'>On the 6th of March we will be <a href='https://www.meetup.com/javaBin/events/247318304/'>hosting a workshop for all those considering submitting</a> a talk to JavaZone.</dd>
                         <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
                         <dd className='speakers__inspiration-description'>JavaZone has a strong tradition of nurturing local speaker talent. To help with this we arrange <a href="https://www.meetup.com/javaBin/events/237343752/">a presentation skills workshop</a> August 22nd. This workshop is held in Oslo and is free for all accepted speakers. This workshop will be held in Norwegian.</dd>
                     </dl>
@@ -177,7 +167,7 @@ const Speakers = () => (
                 <Header><span className='green'>Get Feedback on your proposal</span></Header>
                 <Content>
                     <P>
-                        This year, we are itching to try out a new feature in our submission system: Interactive feedback in the Call for Speakers phase. In short, early submissions may be considered as they arrive, and potentially receive feedback from the program committee. This includes feedback on points we find interesting, suggestions for changes and additions etc.
+                        Each year we receive hundreds of submissions and we consider each submission as it arrives. Due to the big amount of submission we can however not guarantee that you hear from us immediately. We do however answer all submissions and try to do so no later than in July.
                     </P>
                     <P>
                         We also have a selfish motive. At JavaZone, we receive a huge number of submissions every year, and the workload faced by the program committee at the end of the Call for Speakers phase can be overwhelming. By encouraging early submissions, we hope to get ahead of the game this year.  This will also give us more time to consider each and every one of your submissions!
