@@ -149,9 +149,9 @@ function Speakers(props: SpeakerProps) {
                 </LeftBlock>
                 <CenterBlock>
                     <p>
-                        <Link href='/speakers/tips' className='button button--transparent'>
+                        <Button link='/speakers/tips'>
                             Some tips and tricks about your submission
-                        </Link>
+                        </Button>
                     </p>
 	            </CenterBlock>
 
