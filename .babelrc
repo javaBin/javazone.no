@@ -1,4 +1,4 @@
 {
-    "presets": ["env", "react", "es2015", "stage-1"],
-    "plugins": ["transform-react-require", "transform-object-assign", "transform-decorators-legacy"]
+    "presets": ["env", "react", "es2015", "flow", "react-app", "stage-1"],
+    "plugins": ["transform-react-require", "transform-object-assign"]
 }

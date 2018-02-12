@@ -70,8 +70,11 @@ const Speakers = () => (
                 <CHeader><span className='green'>About JavaZone</span></CHeader>
                 <CContent>
                     <P>
-                        <br />
-                        JavaZone takes place in Oslo, Norway, on September 13th-14th 2017. The conference offers a combination of hands on workshops and talks in an informal atmosphere.
+                        <br/>
+                        JavaZone 2018 will be the 17th consecutive JavaZone conference, and will consist of a day of pre-conference workshops on September 11th, followed by two days of lightning talks and presentations on September 12th and 13th.
+                    </P>
+                    <P>
+                        Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
                     </P>
                     <P>
                         JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of lightning talks and presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 sessions. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
@@ -118,6 +121,7 @@ const Speakers = () => (
                 <CHeader>Formats and Durations</CHeader>
                 <CContent>
                     <P>
+                        <br/>
                         You should think about which format your talk will work
                         best in. Are you presenting a new idea, or do you require
                         more time to elaborate on your subject? How hands-on do

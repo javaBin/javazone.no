@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-- '6'
+- '8'
 cache:
-  directories:
-  - node_modules
+- yarn
 notifications:
   email: false
 script:
-- npm run build
+- yarn clean
+- yarn install
+- yarn build
 after_success:
 - bash ./tasks/deploy.sh
 after_failure:
