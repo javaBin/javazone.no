@@ -176,12 +176,12 @@ function Partners(props: PartnersProps) {
                     <p>
                         <em>Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.</em>
                     </p>
-                    <P>
+                    <p>
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some add ons, as well as tickets for your employees, priced below.<br />
                         <em className="partner-prices-emph">After March 1st, the base price increases to NOK 84.000,-</em><br />
-                        <span className="partner-prices-vat">all prices ex VAT</span>
-                    </P>
+                        <span className="partners__vat">prices ex VAT</span>
+                    </p>
                 </CenterBlock>
                 <LeftBlock alternate header="Partnership Stand">
                     <p>

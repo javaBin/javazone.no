@@ -27,7 +27,7 @@ function Tickets(props: TicketsProps) {
 	        <PageHeader subHeader="Come join us in Oslo, September 12-13th">Tickets to JavaZone 2018</PageHeader>  
 	        <Section>
 	            <CenterBlock header="Get your tickets for JavaZone 2018">
-	                    <div className="partners__mainprice">NOK 5,990</div>
+	                    <div className="partner-prices-main">NOK 5.990,-</div>
 	                    <P>
 	                        The JavaZone Ticket includes full access to the conference <br />
 	                        and entry to workshops on Tuesday (limited seating: first come, first served).<br />
@@ -60,7 +60,6 @@ function Tickets(props: TicketsProps) {
                         <br />
                         <span className='strikethrough'>Request your invoice here: <a href="https://goo.gl/forms/mXtFNeaO9d73Mxwq1">Invoice request form</a></span>.
                         <br />
-                        Tickets are sold out...
                     </P>
 	            </LeftBlock>
 
