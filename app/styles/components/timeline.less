@@ -1,14 +1,12 @@
-@import '../colors';
-@import '../variables';
+@import '../Variables';
 
-@border-color: lighten(@green--light, 7%);
-@color: @blue;
+@border-color: lighten(green, 7%);
 
 .timeline {
     position: relative;
 
     &__now {
-        background: @burgundy;
+        background: @primary-color;
         border-radius: 100%;
         display: block;
         height: 8px;
@@ -25,25 +23,25 @@
     }
 
     &__month {
-        border: 1px solid @color;
+        border: 1px solid @primary-color;
         border-bottom: 0;
-        color: @green--dark;
+        color: green;
         margin: 0 auto;
         padding: 40px 7px;
         position: relative;
         width: 30px;
 
         &:last-child {
-            border-bottom: 1px solid @color;
+            border-bottom: 1px solid @primary-color;
         }
 
         &:nth-child(odd) {
-            background: @color;
-            color: @black;
+            background: @primary-color;
+            color: black;
         }
 
         &:nth-child(even) {
-            color: @color;
+            color: @primary-color;
         }
     }
 
@@ -57,13 +55,13 @@
     }
 
     &__event {
-        border-bottom: 1px solid @color;
+        border-bottom: 1px solid @primary-color;
         position: absolute;
         padding-bottom: 5px;
         width: 130px;
 
         &:after {
-            background: @color;
+            background: @primary-color;
             border-radius: 100%;
             display: block;
             content: '';
@@ -100,7 +98,7 @@
         }
 
         &-title {
-            color: @white;
+            color: white;
             font-size: .8rem;
             font-weight: 400;
             text-transform: uppercase;
@@ -111,7 +109,7 @@
         }
 
         &-date {
-            color: @blue;
+            color: @primary-color;
             font-size: .8rem;
 
             @media (min-width: @size-s) {

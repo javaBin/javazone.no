@@ -1,20 +1,27 @@
-import React from 'react';
-import { Page, Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
-import { Block, Header, Content, SubHeader, P} from '../components/block';
+import * as React from 'react';
+import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../components/page';
+import { Block, Content, SubHeader, P} from '../components/block';
 import { CBlock, CHeader, CContent } from '../components/centeredblock';
+import { Link } from '../components/link';
+import { Section } from '../components/Section/Section';
+import { CenterBlock, LeftBlock, ImageBlock } from '../components/Block/Block';
+import { Header } from '../components/Header/Header';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Button from '../components/Button/Button';
+import Page from '../components/Page/Page';
+import PageHeader from '../components/PageHeader/PageHeader';
 import {Dl, Dt, Dd} from '../components/definition-list';
 
-const TipsAndTricks = () => (
-    <Page name='monetary-policy'>
-        <Heading>
-            <LargeHeading>Tips & Tricks</LargeHeading>
-            <SmallHeading>Make that abstract shine</SmallHeading>
-        </Heading>
+type TipsAndTricksProps = {
+}
 
-        <Container>
-            <Block>
-                <Header><span className="green">Increase the chance of your talk being accepted</span></Header>
-                <Content>
+function TipsAndTricks(props: TipsAndTricksProps) {
+    return (
+        <Page name='monetary-policy'>
+            <PageHeader subHeader="Make that abstract shine">Tips & Tricks</PageHeader>
+
+            <Section>
+                <LeftBlock header="Increase the chance of your talk being accepted">
                     <P>
                         There is generally a very high correlation between how much
                         work one puts in to the creation of a proposal and the
@@ -25,12 +32,9 @@ const TipsAndTricks = () => (
                         when writing a JavaZone proposal, and a few reasons why
                         proposals may be rejected.
                     </P>
-                </Content>
-            </Block>
+                </LeftBlock>
 
-            <Block>
-                <Header><span className="blue">Things to think about when writing your abstract</span></Header>
-                <Content>
+                <LeftBlock header="Things to think about when writing your abstract">
                     <Dl>
                         <Dt>Create a good title</Dt>
                         <Dd>
@@ -112,86 +116,83 @@ const TipsAndTricks = () => (
                             a positive way.
                         </Dd>
                     </Dl>
-                </Content>
-            </Block>
+                </LeftBlock>
 
-            <Block>
-                <Header><span className="pink">Why was my talk rejected?</span></Header>
-                <Content>
-                    <P>
-                        Even though we are rooting for your talk to be accepted, the fact is that some talks must be rejected.
-                        Read through these tips to understand why this might happen. Even better, if you are reading this before the Call for Speakers deadline,
-                        you can go through your proposal and make sure you do your best to awoid these common pitfalls.
-                    </P>
-                    <Dl>
-                        <Dt>Not Enough information</Dt>
-                        <Dd>
-                            The program committee was not sure what you're going
-                            to present, or there was not enough information
-                            about the technology / things you want to talk about
-                            to decide how awesome the presentation will be.
-                        </Dd>
-                        <Dt>The proposal is too thin</Dt>
-                        <Dd>
-                            The abstract doesn't convey the feeling that you have
-                            put a lot of work into it, or that you have thought
-                            through your presentation.
-                        </Dd>
-                        <Dt>You want to talk about more than we think you'll have time to cover</Dt>
-                        <Dd>
-                            10-minute lightning talk proposals that appear to
-                            require double that time will be discounted. The
-                            same applies for proposals that try to cover
-                            everything possible instead of focusing on a specific
-                            area. If you want to cover a breadth of material
-                            then be sure to convey to us that you have thought
-                            through the timeline for your talk. We must feel
-                            that you believe that it will work, something that
-                            can be achieved with a clear and detailed outline.
-                        </Dd>
-                        <Dt>The abstract was not catchy enough</Dt>
-                        <Dd>
-                            If the committee ends up with 600 or so proposals
-                            to go through, time becomes a factor. This is
-                            especially true in the first pass, and in the
-                            early stages. If your abstract catches the fancy
-                            of just one or more of the committee members, your
-                            proposal is likely to be thumbs-upped to the next
-                            phase. If not, it tends to drop out of the race
-                            early. It will help your chances to describe accurately
-                            and concisely what you want to talk about, and why
-                            people should come and listen to you.
-                        </Dd>
-                        <Dt>The theme did not fit in with what we want to include in the program this year</Dt>
-                        <Dd>
-                            Even though JavaZone has place for many
-                            themes, there are some proposals that don't
-                            fit. Some proposals are rejected because we feel
-                            the presentation would be better served at a
-                            different conference.
-                        </Dd>
-                        <Dt>Your co-presenter had a different proposal accepted</Dt>
-                        <Dd>
-                            If you intend to present with a co-presenter, and
-                            she happens to have had a separate proposal already
-                            accepted then we may have to reject your joint
-                            proposal.
-                        </Dd>
-                        <Dt>You were unlucky</Dt>
-                        <Dd>
-                            We often receive multiple good proposals covering
-                            exactly the same theme. The program committee then
-                            has to decide between these multiple excellent submissions.
-                            In 2016 we received many great proposals covering
-                            "how we do devops in the cloud". Limited space in the
-                            program meant that many of these ended up being
-                            rejected.
-                        </Dd>
-                    </Dl>
-                </Content>
-            </Block>
-        </Container>
-    </Page>
-);
+                <LeftBlock header="Why was my talk rejected?">
+                        <P>
+                            Even though we are rooting for your talk to be accepted, the fact is that some talks must be rejected.
+                            Read through these tips to understand why this might happen. Even better, if you are reading this before the Call for Speakers deadline,
+                            you can go through your proposal and make sure you do your best to awoid these common pitfalls.
+                        </P>
+                        <Dl>
+                            <Dt>Not Enough information</Dt>
+                            <Dd>
+                                The program committee was not sure what you're going
+                                to present, or there was not enough information
+                                about the technology / things you want to talk about
+                                to decide how awesome the presentation will be.
+                            </Dd>
+                            <Dt>The proposal is too thin</Dt>
+                            <Dd>
+                                The abstract doesn't convey the feeling that you have
+                                put a lot of work into it, or that you have thought
+                                through your presentation.
+                            </Dd>
+                            <Dt>You want to talk about more than we think you'll have time to cover</Dt>
+                            <Dd>
+                                10-minute lightning talk proposals that appear to
+                                require double that time will be discounted. The
+                                same applies for proposals that try to cover
+                                everything possible instead of focusing on a specific
+                                area. If you want to cover a breadth of material
+                                then be sure to convey to us that you have thought
+                                through the timeline for your talk. We must feel
+                                that you believe that it will work, something that
+                                can be achieved with a clear and detailed outline.
+                            </Dd>
+                            <Dt>The abstract was not catchy enough</Dt>
+                            <Dd>
+                                If the committee ends up with 600 or so proposals
+                                to go through, time becomes a factor. This is
+                                especially true in the first pass, and in the
+                                early stages. If your abstract catches the fancy
+                                of just one or more of the committee members, your
+                                proposal is likely to be thumbs-upped to the next
+                                phase. If not, it tends to drop out of the race
+                                early. It will help your chances to describe accurately
+                                and concisely what you want to talk about, and why
+                                people should come and listen to you.
+                            </Dd>
+                            <Dt>The theme did not fit in with what we want to include in the program this year</Dt>
+                            <Dd>
+                                Even though JavaZone has place for many
+                                themes, there are some proposals that don't
+                                fit. Some proposals are rejected because we feel
+                                the presentation would be better served at a
+                                different conference.
+                            </Dd>
+                            <Dt>Your co-presenter had a different proposal accepted</Dt>
+                            <Dd>
+                                If you intend to present with a co-presenter, and
+                                she happens to have had a separate proposal already
+                                accepted then we may have to reject your joint
+                                proposal.
+                            </Dd>
+                            <Dt>You were unlucky</Dt>
+                            <Dd>
+                                We often receive multiple good proposals covering
+                                exactly the same theme. The program committee then
+                                has to decide between these multiple excellent submissions.
+                                In 2016 we received many great proposals covering
+                                "how we do devops in the cloud". Limited space in the
+                                program meant that many of these ended up being
+                                rejected.
+                            </Dd>
+                        </Dl>
+                </LeftBlock>
+            </Section>
+        </Page>
+    )
+}
 
 export default TipsAndTricks;

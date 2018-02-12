@@ -1,0 +1,26 @@
+@import '../../styles/Variables';
+
+.page-header-wrapper-margin {
+    margin-top: calc(@navigation-height + 2rem);
+}
+
+.page-header {
+    font-family: @upheaval;
+    letter-spacing: 0.4rem;
+    font-size: 4rem;
+    color: white;
+    margin: 3rem 0 0.5rem 0;
+    @media only screen and (max-width: @screen-xs) {
+        font-size: 2.5rem;
+    }
+}
+
+.page-subheader {
+    margin: 0.5rem 0 3rem 0;
+    font-family: @source-sans-pro;
+    color: @primary-color;
+    font-size: 2.5rem;
+    @media only screen and (max-width: @screen-xs) {
+        font-size: 1.8rem;
+    }
+}

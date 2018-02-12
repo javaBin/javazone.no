@@ -1,0 +1,363 @@
+@import '../../styles/Animations.less';
+@import '../../styles/Variables.less';
+
+@cloud-width: 10rem;
+@cloud-width-lg: 14rem;
+@cloud1-top: 13rem;
+@cloud2-top: 9rem;
+@cloud3-top: 16rem;
+@cloud4-top: 14rem;
+@cloud5-top: 12rem;
+@cloud6-top: 9rem;
+@cloud7-top: 16rem;
+@cloud8-top: 11rem;
+
+@cloud-adjust-lg: 3rem;
+@cloud-adjust-md: 4rem;
+@cloud-adjust-sm: 1rem;
+@cloud-adjust-xs: 3rem;
+@cloud-adjust-xxs: 3rem;
+
+.background {
+    width: 100vw;
+    position: inherit;
+    @media only screen and (max-width: @screen-sm) {
+        width: 150vw;
+        left: -25%;
+    }
+}
+
+.fog-layer {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    @media only screen and (max-width: @screen-sm) {
+        width: 150vw;
+        left: -25%; 
+        top: 2rem;
+    }
+}
+
+.city-layer {
+    width: 100vw;
+    top: 0;
+    z-index: 12;
+    left: 0;
+    @media only screen and (max-width: @screen-sm) {
+        width: 150vw;
+        left: -25%; 
+        top: 4rem;
+    }
+}
+
+.cloud-layer {
+    width: 100vw;
+    top: -7rem;
+    left: 0;
+    @media only screen and (max-width: @screen-sm) {
+        width: 150vw;
+        left: -25%; 
+        top: 6rem;
+    }
+}
+
+.logo-layer {
+    width: 20rem;
+    top: 6rem;
+    left: 50%;
+    margin-left: -10rem;
+    z-index: 19;
+    animation: floating 3s infinite ease-in-out;
+    -webkit-animation: floating 3s infinite ease-in-out;
+    @media only screen and (max-width: @screen-lg) {
+        top: 5rem;
+        width: 15rem;
+        margin-left: -7.5rem;
+    }
+    @media only screen and (max-width: @screen-md) {
+        top: 4.5rem;
+        width: 11rem;
+        margin-left: -5.5rem;
+    }
+    @media only screen and (max-width: @screen-sm) {
+        top: 5rem;
+        width: 10rem;
+        margin-left: -5rem;
+    }
+    @media only screen and (max-width: @screen-xs) {
+        top: 5rem;
+        width: 8rem;
+        margin-left: -4rem;
+    }
+    @media only screen and (max-width: @screen-xs) {
+        top: 4.5rem;
+        width: 6.5rem;
+        margin-left: -3.25rem;
+    }
+}
+
+.logo-text {
+    position: absolute;
+    top: 20rem;
+    width: 100vw;
+    z-index: 19;
+    h1 {
+        font-family: @upheaval;
+        font-size: 7rem;
+        letter-spacing: 0.5rem;
+        text-shadow: -0.4rem 0 black, 0 0.4rem black, 0.4rem 0 black, 0 -0.4rem black;
+        @media only screen and (max-width: @screen-lg) {
+            font-size: 5rem;
+            text-shadow: -0.3rem 0 black, 0 0.3rem black, 0.3rem 0 black, 0 -0.3rem black;
+        }
+        @media only screen and (max-width: @screen-md) {
+            font-size: 4.5rem;
+            text-shadow: -0.25rem 0 black, 0 0.25rem black, 0.25rem 0 black, 0 -0.25rem black;
+        }
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 6rem;
+            text-shadow: -0.3rem 0 black, 0 0.3rem black, 0.3rem 0 black, 0 -0.3rem black;
+        }
+        @media only screen and (max-width: @screen-xs) {
+            font-size: 4rem;
+            text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
+        }
+        @media only screen and (max-width: @screen-xxs) {
+            font-size: 3rem;
+            text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
+        }
+
+    }
+    @media only screen and (max-width: @screen-lg) {
+        top: 15rem;
+    }
+    @media only screen and (max-width: @screen-md) {
+        top: 12rem;
+    }
+    @media only screen and (max-width: @screen-sm) {
+        top: 10rem;
+    }
+    @media only screen and (max-width: @screen-xs) {
+        top: 12rem;
+    }
+    @media only screen and (max-width: @screen-xs) {
+        top: 8.5rem;
+    }
+}
+
+.cloud1-layer {
+    width: @cloud-width;
+    top: @cloud1-top;
+    left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    animation: slide 25s infinite linear;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud1-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud1-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud1-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+.cloud2-layer {
+    width: @cloud-width;
+    top: @cloud2-top;
+    left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 12s;
+    animation: slide 25s infinite linear;
+    animation-delay: 12s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud2-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud2-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud2-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud3-layer {
+    width: @cloud-width;
+    top: @cloud3-top;
+    left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 13s;
+    animation: slide 25s infinite linear;
+    animation-delay: 13s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud3-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud3-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud3-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud4-layer {
+    width: @cloud-width;
+    top: @cloud4-top;
+    left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 9s;
+    animation: slide 25s infinite linear;
+    animation-delay: 9s;
+    z-index: 20;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud4-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud4-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud4-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud5-layer {
+    width: @cloud-width;
+    top: @cloud5-top;
+    left: -(@cloud-width);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 18s;
+    animation: slide 25s infinite linear;
+    animation-delay: 18s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width - @cloud-adjust-lg);
+        top: calc(@cloud5-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud5-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud5-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud6-layer {
+    width: @cloud-width-lg;
+    top: @cloud6-top;
+    left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 20s;
+    transform: rotate(180deg);
+    animation: slide 25s infinite linear;
+    animation-delay: 20s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud6-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud6-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud6-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud7-layer {
+    width: @cloud-width-lg;
+    top: @cloud7-top;
+    left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 3s;
+    transform: rotate(180deg);
+    animation: slide 25s infinite linear;
+    animation-delay: 3s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud7-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud7-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud7-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+.cloud8-layer {
+    width: @cloud-width-lg;
+    top: @cloud8-top;
+    left: -(@cloud-width-lg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation-delay: 7.5s;
+    transform: rotate(180deg);
+    animation: slide 25s infinite linear;
+    animation-delay: 7.5s;
+    @media only screen and (max-width: @screen-lg) {
+        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        top: calc(@cloud8-top - @cloud-adjust-lg);
+        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+    }
+    @media only screen and (max-width: @screen-md) {
+        width: calc(@cloud-width - @cloud-adjust-md);
+        top: calc(@cloud8-top - @cloud-adjust-md);
+        left: calc(-(@cloud-width) + @cloud-adjust-md);
+    }
+    @media only screen and (max-width: @screen-sm) {
+        width: calc(@cloud-width - @cloud-adjust-sm);
+        top: calc(@cloud8-top - @cloud-adjust-sm);
+        left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+}
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    [class$="-layer"] {
+        position: absolute;
+    }
+    @media only screen and (max-width: @screen-sm) {
+        padding-top: 3rem;
+        background-color: @banner-bg;
+    }
+}
