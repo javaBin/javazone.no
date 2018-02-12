@@ -35,18 +35,36 @@ const presentations = {
 const workshops = {
     icon: 'icon-screen-desktop',
     title: 'Workshops',
-    length: '2 hours, 4 hours, 8 hours',
-    description: 'We will continue the popular workshop concept with a range of sessions on Tuesday September 11th. The format for the workshops is in-depth, hands-on and interactive.'
+    length: '2 hours, half a day, whole day',
+    description: 'We will continue the popular workshop concept with a range of sessions on Tuesday September 12th. The format for the workshops is in-depth, hands-on and interactive.'
 };
 
 const Speakers = () => (
     <Page name='speakers'>
         <Heading>
             <LargeHeading>Call for Speakers</LargeHeading>
-            <SmallHeading>Speak at JavaZone 2018!</SmallHeading>
+            <SmallHeading>Speak at JavaZone 2017</SmallHeading>
         </Heading>
+        <Container>
+            <Youtube id='YsAQs9Yf4Mg'></Youtube>
+        </Container>
 
         <Container>
+
+            <CBlock>
+                <CHeader><span className='blue'>Presenting at JavaZone 2017?</span></CHeader>
+                <CContent>
+                    <P>
+                        <br />
+                        Are you presenting at JavaZone 2017? Cool! We have some more info for you here.
+                    </P>
+                    <P>
+                        <a href='/speakers/info' className='button button--transparent'>
+                            <span className='button__icon'></span> See all the info for speakers
+                        </a>
+                    </P>
+                </CContent>
+            </CBlock>
 
             <CBlock>
                 <CHeader><span className='green'>About JavaZone</span></CHeader>
@@ -59,7 +77,7 @@ const Speakers = () => (
                         Last year's event was completely sold out, with more than 3000 attendees enjoying 141 sessions.
                     </P>
                     <P>
-                        JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent. We'd love to have you join us in 2018!
+                        JavaZone 2017 will be the 2^4th consecutive JavaZone conference, and will consist of a day of workshops followed by two days of lightning talks and presentations. Last year's event was completely sold out, with more than 3000 attendees enjoying 173 sessions. JavaZone speakers include both internationally renowned speakers and home-grown Norwegian talent.
                     </P>
                 </CContent>
             </CBlock>
@@ -67,8 +85,11 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <a href='http://submit.javazone.no' className='button button--transparent'>
-                            <span className='button__icon icon-check'></span> Submit a session!
+                            <span className='button__icon'></span> Manage your submissions
                         </a>
+                    </P>
+                    <P>
+                        <span className='speakers__lastdate pink'>Our Call for Speakers closed for new talks April 24th 2017</span>
                     </P>
                 </CContent>
             </CBlock>
@@ -80,10 +101,10 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <br />
-                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – 1174 videos from previous years talks are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the <a href='https://2016.javazone.no/program'>full program from JavaZone 2017</a> is also available.
+                        Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – more than 1000 videos from previous years talks are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the full program from JavaZone 2016 can be found on <a href='https://2016.javazone.no/program'>last year’s web pages</a>.
                     </P>
                     <P>
-                        We can brag as much as we want, but JavaZone would be nothing without all the great speakers! That's why we need your help to make sure that JavaZone 2018 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop at the latest on April 8th 2018.
+                        We can brag as much as we want, but JavaZone would be nothing without all the great speakers! That's why we need your help to make sure that JavaZone 2017 will be at least as awesome as the earlier events. If you think you have something interesting to share, please submit your talk or workshop by April 24th 2017.
                     </P>
                     <P>
                         JavaZone is committed to diversity, and we are especially interested in quality submissions from groups traditionally under-represented in tech.
@@ -133,7 +154,7 @@ const Speakers = () => (
                     <ul className='speakers__list'>
                         <li>Front-end patterns and architectures.</li>
                         <li>Practical functional programming.</li>
-                        <li>Machine learning, AI, deep learning, data science.</li>
+                        <li>Machine learning, AI, deep learning.</li>
                         <li>Hacking, security, cryptography, blockchains.</li>
                         <li>...and, of course, your killer topic.</li>
                     </ul>
@@ -145,21 +166,24 @@ const Speakers = () => (
                 <Content>
                     <dl className='speakers__inspiration'>
                         <dt className='speakers__inspiration-title'>Speakers workshop</dt>
-                        <dd className='speakers__inspiration-description'>In March we will be hosting a workshop for all those considering submitting a talk to JavaZone.</dd>
+                        <dd className='speakers__inspiration-description'>On the 7th of March we are hosting <a href="https://www.meetup.com/javaBin/events/237342945/">a workshop</a> for all those who are considering submitting a talk to JavaZone.</dd>
                         <dt className='speakers__inspiration-title'>Presentation skills workshop</dt>
-                        <dd className='speakers__inspiration-description'>JavaZone has a strong tradition of nurturing local speaker talent. To help with this we arrange a presentation skills workshop in August. This workshop is held in Oslo and is free for all accepted speakers. This workshop will be held in Norwegian.</dd>
+                        <dd className='speakers__inspiration-description'>JavaZone has a strong tradition of nurturing local speaker talent. To help with this we arrange <a href="https://www.meetup.com/javaBin/events/237343752/">a presentation skills workshop</a> August 22nd. This workshop is held in Oslo and is free for all accepted speakers. This workshop will be held in Norwegian.</dd>
                     </dl>
                 </Content>
             </Block>
 
             <Block>
-                <Header><span className='green'>Ongoing Evaluation of Talks</span></Header>
+                <Header><span className='green'>Get Feedback on your proposal</span></Header>
                 <Content>
                     <P>
-                        Each year we receive hundreds of submissions. We evaluate each submission as it arrives.
+                        This year, we are itching to try out a new feature in our submission system: Interactive feedback in the Call for Speakers phase. In short, early submissions may be considered as they arrive, and potentially receive feedback from the program committee. This includes feedback on points we find interesting, suggestions for changes and additions etc.
                     </P>
                     <P>
-                        Our advice to you is simple. <strong>Submit early!</strong> The earlier you submit, the more likely you are to be noticed. Avoid drowning in the end-of-Call for Speakers tsunami!
+                        We also have a selfish motive. At JavaZone, we receive a huge number of submissions every year, and the workload faced by the program committee at the end of the Call for Speakers phase can be overwhelming. By encouraging early submissions, we hope to get ahead of the game this year.  This will also give us more time to consider each and every one of your submissions!
+                    </P>
+                    <P>
+                        Bottom line: The earlier you submit, the more likely you are to be noticed, and to receive considered and helpful feedback. Avoid drowning in the end-of-Call for Speakers tsunami! In addition, submissions received by March 27 will be in the draw for a special treat!
                     </P>
                     <P>
                         <Link href='/speakers/tips' className='button button--transparent'>
@@ -172,7 +196,7 @@ const Speakers = () => (
             <img className='partners__image' src={speakers3} />
 
             <CBlock>
-                <CHeader>Dates & Deadlines for JavaZone 2018</CHeader>
+                <CHeader>Dates & Deadlines for JavaZone 2017</CHeader>
                 <P>
                 </P>
                 <CContent>
@@ -185,11 +209,11 @@ const Speakers = () => (
                 <Content>
                     <dl className='speakers__accepted'>
                         <dt className='speakers__accepted-title'>Accepted presentations and workshops</dt>
-                        <dd className='speakers__accepted-description'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 11th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
+                        <dd className='speakers__accepted-description'>You get free admission to the conference. Additionally you are also invited to the speakers' dinner, held on September 12th. Finally, you have first priority on the limited number of slots for JourneyZone, our annual speaker adventure.</dd>
                         <dt className='speakers__accepted-title'>Accepted lightning talks</dt>
-                        <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 11th, and will also be invited to apply for a place at JourneyZone. Note that you have to provide your own ticket to JavaZone.</dd>
+                        <dd className='speakers__accepted-description'>You are invited to the speakers' dinner, held on September 12th, and will also be invited to JourneyZone. You have to provide your own ticket to JavaZone.</dd>
                         <dt className='speakers__accepted-title'>Coverage of Expenses</dt>
-                        <dd className='speakers__accepted-description'>Please see our <Link href='/speakers/monetary-policy'>reimbursement policy</Link> if you have any questions regarding coverage of other expenses.</dd>
+                        <dd className='speakers__accepted-description'>Please see our <Link href='/speakers/monetary-policy'>monetary policy</Link> if you have any questions regarding coverage of other expenses.</dd>
                     </dl>
                 </Content>
             </Block>
@@ -215,15 +239,17 @@ const Speakers = () => (
                 <CContent>
                     <P>
                         <a href='http://submit.javazone.no' className='button button--transparent'>
-                            <span className='button__icon icon-check'></span> Submit a session!
+                            <span className='button__icon icon-check'></span> Manage your submissions
                         </a>
                     </P>
-
+                    <P>
+                        <span className='speakers__lastdate pink'>Our Call for Speakers closed for new talks April 24th 2017</span>
+                    </P>
                 </CContent>
             </CBlock>
 
             <CBlock>
-                <CHeader>We hope to see you at JavaZone 2018 – please feel free to spread the word to your local community!</CHeader>
+                <CHeader>We hope to see you at JavaZone 2017 – please feel free to spread the word to your local community!</CHeader>
                 <CContent>
                     <P className='speakers__regards'>
                         <br />
