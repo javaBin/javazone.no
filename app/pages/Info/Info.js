@@ -58,7 +58,7 @@ function TicketSection() {
             <CenterBlock>
                 <P>
                     <br />
-                    <a className='button button--transparent' href="https://2018.javazone.no/tickets">Buy Your JavaZone 2018 Ticket Now</a>
+                    <a className='button button--transparent' href="/tickets">Buy Your JavaZone 2018 Ticket Now</a>
                 </P>
             </CenterBlock>
         </Section>

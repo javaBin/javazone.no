@@ -71,9 +71,11 @@ function Speakers(props: SpeakerProps) {
 	                    <a className='button button--transparent' href="http://submit.javazone.no">Submit a session!</a>
 	                </p>
 	            </CenterBlock>
+	        </Section>
 
-	            <ImageBlock image={speakers1} alt="Speakers page separator image" />
+            <ImageBlock image={speakers1} alt="Speakers page separator image" />
 
+	        <Section>
 		        <LeftBlock header="What is it like speaking at JavaZone?">
                     <p>
                         Over the last decade JavaZone has grown to become one of the most important Java events in Europe! You can see for yourself – 1174 videos from previous years talks are available for free at <a href='https://vimeo.com/javazone'>Vimeo</a>, and the <a href='https://2017.javazone.no/program'>full program from JavaZone 2017</a> is also available.
@@ -85,9 +87,11 @@ function Speakers(props: SpeakerProps) {
                         JavaZone is committed to diversity, and we are especially interested in quality submissions from groups that are under-represented in tech.
                     </p>
 	            </LeftBlock>
+	        </Section>
 
-	            <ImageBlock image={speakers2} alt="Speakers page separator image" />
+            <ImageBlock image={speakers2} alt="Speakers page separator image" />
 
+	        <Section>
 	            <CenterBlock>
 		            <div className='speakers__formats'>
 	                    <span className='icon-clock'></span>
@@ -144,9 +148,11 @@ function Speakers(props: SpeakerProps) {
                         </Button>
                     </p>
 	            </CenterBlock>
+	        </Section>
 
-	            <ImageBlock image={speakers3} alt="Speakers page separator image" />
+            <ImageBlock image={speakers3} alt="Speakers page separator image" />
 
+            <Section>
 	            <CenterBlock header="Dates & Deadlines for JavaZone 2018">
 	                <p>
 	                </p>

@@ -38,8 +38,9 @@ function Tickets(props: TicketsProps) {
 	                        <a className='button button--transparent' href="https://www.eventbrite.com/e/javazone-2018-tickets-43071469926">Get Your Tickets Now!</a>
 	                    </P>
 	            </CenterBlock>	            
-	            <ImageBlock image={tickets3} alt="Tickets page separator image" />
 	        </Section>
+
+            <ImageBlock image={tickets3} alt="Tickets page separator image" />
 
 	        <Section>
 	        	<LeftBlock header="Working for one of our partners?">
@@ -71,9 +72,11 @@ function Tickets(props: TicketsProps) {
                         For tickets bought in bulk (applies to both partner tickets and large regular orders), a maximum of 5 tickets can be refunded under this policy.
                     </P>
 	            </LeftBlock>
+            </Section>
 
-            	<ImageBlock image={tickets1} alt="Tickets page separator image" />
+        	<ImageBlock image={tickets1} alt="Tickets page separator image" />
 
+        	<Section>
 	            <LeftBlock header="The javaBin membership included in the ticket">
                     <P>
                         <br />
@@ -83,9 +86,11 @@ function Tickets(props: TicketsProps) {
                         Previously we used to sell tickets and memberships separately, but you saved a total of 500 NOK by buying both. It seemed silly to force you through two separate web shops to collect this discount, so we combined the two and thereby made the tickets cheaper for everyone. If you still would like to pay extra as before, let us know! ;-)
                     </P>
 	            </LeftBlock>
+	        </Section>
 
-            	<ImageBlock image={tickets2} alt="Tickets page separator image" />
+            <ImageBlock image={tickets2} alt="Tickets page separator image" />
 
+ 			<Section>
 	            <CenterBlock header="Need more info about JavaZone?">
                     <P>
                         <br />
