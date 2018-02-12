@@ -4,7 +4,7 @@ import { Container, Heading, LargeHeading, SmallHeading } from '../../components
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import { Section } from '../../components/Section/Section';
-import { LeftBlock, ImageBlock } from '../../components/Block/Block';
+import { LeftBlock, CenterBlock, ImageBlock } from '../../components/Block/Block';
 import { Content, Header, P, Pc } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
@@ -50,9 +50,17 @@ function TicketSection() {
             <LeftBlock header="First thing first: your ticket!">
                 <P>
                     To attend JavaZone you will need a ticket. The ticket grants you access to the full
-                    JavaZone experience, including workshops. The ticket sales will be opening in February 2018.
+                    JavaZone experience, including workshops. The ticket sales ticket sales are now open.  
+                    The number of tickets are limited and distributed on a first-come first-served basis, 
+                    so it pays to be quick.
                 </P>
             </LeftBlock>
+            <CenterBlock>
+                <P>
+                    <br />
+                    <a className='button button--transparent' href="https://2018.javazone.no/tickets">Buy Your JavaZone 2018 Ticket Now</a>
+                </P>
+            </CenterBlock>
         </Section>
     )
 }
