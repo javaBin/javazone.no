@@ -31,7 +31,7 @@ function AboutSection() {
                 </P>
                 <P>
                     We have been organizing JavaZone since 2001 and have been excited to watch the event grow bigger
-                    and better every year. In 2017 we hosted almost 200 speakers across 7 parallel tracks over
+                    and better every year. In 2017 we hosted over 3100 participants and 200 speakers across 7 parallel tracks over
                     the course of two days. In addition, we also offered a selection of 9 workshops held on the day before the
                     conference started.
                 </P>
