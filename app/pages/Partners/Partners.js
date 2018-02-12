@@ -75,6 +75,8 @@ function Partners(props: PartnersProps) {
                         We want JavaZone‘s Expo Area to be an attractive space where our Partners and participants can hang out and spend time together.
                         In previous years our Partners have done a great job to help us achieve this goal, and we look forward to seeing what they bring to JavaZone 2018!
                         JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
+                    </p>
+                    <p>
                         As a Partner you are not just supporting our conference economically – you participate in the event and help create a unique atmosphere.
                         We work closely with our Partners to help them realize their ideas and make the most out of their stands.
                         Have you got a great concept for your JavaZone stand and need help to realize it? Don’t be shy - just ask us. Almost anything is possible!
@@ -85,6 +87,8 @@ function Partners(props: PartnersProps) {
                         We want JavaZone‘s Expo Area to be an attractive space where our Partners and participants can hang out and spend time together.
                         In previous years our Partners have done a great job to help us achieve this goal, and we look forward to seeing what they bring to JavaZone 2018!
                         JavaZone’s Expo Area is a vibrant, busy space full of life and activity.
+                    </p>
+                    <p>
                         As a Partner you are not just supporting our conference economically – you participate in the event and help create a unique atmosphere.
                         We work closely with our Partners to help them realize their ideas and make the most out of their stands.
                         Have you got a great concept for your JavaZone stand and need help to realize it? Don’t be shy - just ask us. Almost anything is possible!
