@@ -23,9 +23,8 @@ type TicketsProps = {
 
 function Tickets(props: TicketsProps) {
     return (
-            <Page name='tickets'>
-	        <PageHeader subHeader="Come join us in Oslo, September 12-13th">Tickets to JavaZone 2018</PageHeader>
-	        
+        <Page name='tickets'>
+	        <PageHeader subHeader="Come join us in Oslo, September 12-13th">Tickets to JavaZone 2018</PageHeader>  
 	        <Section>
 	            <CenterBlock header="Get your tickets for JavaZone 2018">
 	                    <div className="partners__mainprice">NOK 5,990</div>

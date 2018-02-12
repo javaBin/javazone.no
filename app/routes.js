@@ -10,6 +10,8 @@ import academySeptember from './pages/academy-september.js';
 import academyLocation from './pages/academy-program.js';
 import speakers from './pages/Speakers/Speakers.js';
 import speakerinfo from './pages/speakerinfo';
+import monetaryPolicy from './pages/monetary-policy';
+import tipsAndTricks from './pages/tips-and-tricks';
 import tickets from './pages/Tickets/Tickets.js';
 import { store } from './store';
 import pageview from './analytics';
@@ -24,6 +26,8 @@ const routes = compile({
     '/academy/tromso': academyLocation(academyData.tromso),
     '/academy/bergen': academyLocation(academyData.bergen),
     '/speakers': speakers,
+    '/speakers/monetary-policy': monetaryPolicy,
+    '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,
     '/info': info,
     '/': index
