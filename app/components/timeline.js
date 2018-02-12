@@ -16,7 +16,7 @@ const data = [
         month: 'Mar',
         events: [{
             title: 'Speakers workshop',
-            date: 'TBD',
+            date: 'March 6th',
             location: '-40px',
             align: 'left'
         },]
