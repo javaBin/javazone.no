@@ -141,9 +141,6 @@ function Academy(props: AcademyProps) {
                         to <strong>Oslo</strong>, <strong> Bergen</strong> and <strong>Tromsø</strong>.
                         Join us for a great evening!
                     </p>
-                    <p>
-                        A detailed program and more information will be soon posted here. Watch this space!
-                    </p>
                 </CenterBlock>
             </Section>
             <Section alternate>
