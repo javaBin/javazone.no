@@ -16,7 +16,7 @@
 @cloud-adjust-md: 4rem;
 @cloud-adjust-sm: 1rem;
 @cloud-adjust-xs: 3rem;
-@cloud-adjust-xxs: 3rem;
+@cloud-adjust-xxs: 4.5rem;
 
 .background {
     width: 100vw;
@@ -166,6 +166,21 @@
         top: calc(@cloud1-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud1-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        width: 6rem;
+        top: 6rem;
+        left: -6rem;
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud1-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+    }
 }
 .cloud2-layer {
     width: @cloud-width;
@@ -189,6 +204,21 @@
         width: calc(@cloud-width - @cloud-adjust-sm);
         top: calc(@cloud2-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud2-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud2-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 6rem;
+        top: 6rem;
+        left: -6rem;
     }
 }
 
@@ -214,6 +244,21 @@
         width: calc(@cloud-width - @cloud-adjust-sm);
         top: calc(@cloud3-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud3-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud3-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 6rem;
+        top: 8rem;
+        left: -6rem;
     }
 }
 
@@ -241,6 +286,21 @@
         top: calc(@cloud4-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud4-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud4-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 6rem;
+        top: 5.5rem;
+        left: -6rem;
+    }
 }
 
 .cloud5-layer {
@@ -265,6 +325,21 @@
         width: calc(@cloud-width - @cloud-adjust-sm);
         top: calc(@cloud5-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud5-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud5-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 7rem;
+        top: 8rem;
+        left: -7rem;
     }
 }
 
@@ -293,6 +368,21 @@
         top: calc(@cloud6-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud6-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud6-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 5.5rem;
+        top: 4.5rem;
+        left: -5.5rem;
+    }
 }
 
 .cloud7-layer {
@@ -320,6 +410,21 @@
         top: calc(@cloud7-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
     }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud7-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud7-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 5.5rem;
+        top: 6.5rem;
+        left: -5.5rem;
+    }
 }
 
 .cloud8-layer {
@@ -346,6 +451,21 @@
         width: calc(@cloud-width - @cloud-adjust-sm);
         top: calc(@cloud8-top - @cloud-adjust-sm);
         left: calc(-(@cloud-width) + @cloud-adjust-sm);
+    }
+    @media only screen and (max-width: @screen-xs) {
+        width: calc(@cloud-width - @cloud-adjust-xs);
+        top: calc(@cloud8-top - @cloud-adjust-xs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xs);
+    }
+    @media only screen and (max-width: @screen-xxs) {
+        /*
+        width: calc(@cloud-width - @cloud-adjust-xxs);
+        top: calc(@cloud8-top - @cloud-adjust-xxs);
+        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
+        */
+        width: 6rem;
+        top: 4rem;
+        left: -6rem;
     }
 }
 
