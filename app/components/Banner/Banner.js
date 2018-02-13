@@ -35,6 +35,8 @@ class Banner extends React.Component<BannerProps, BannerState> {
                 <img className="fog-layer" src={fogLayer} />
                 <img className="city-layer" src={cityLayer} />
                 <img className="city-layer" src={cityFrontLayer} />
+                {/*
+                */}
                 <img className="cloud1-layer" src={cloud1} />
                 <img className="cloud2-layer" src={cloud2} />
                 <img className="cloud3-layer" src={cloud3} />
@@ -43,6 +45,8 @@ class Banner extends React.Component<BannerProps, BannerState> {
                 <img className="cloud6-layer" src={cloud4} />
                 <img className="cloud7-layer" src={cloud3} />
                 <img className="cloud8-layer" src={cloud2} />
+                {/*
+                */}
                 <img className="logo-layer" src={logo} />
                 <div className="logo-text">
                     <h1>JAVAZONE 2018</h1>
