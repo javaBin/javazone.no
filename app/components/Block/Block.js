@@ -35,9 +35,11 @@ function CenterBlock(props: CenterBlockProps) {
         <Grid>
             <div className={centerBlockClass}>
                 {headerRow}
-                <div className="block-text-center">
-                    {props.children}
-                </div>
+                <Row center="xs" around="xs">
+                    <Col className="block-text-center">
+                        {props.children}
+                    </Col>
+                </Row>
             </div>
         </Grid>
     )

@@ -244,10 +244,12 @@ function Partners(props: PartnersProps) {
                     <p>
                         You can contact us about partnership details at <a href='mailto:partner@java.no'>partner@java.no</a>.
                     </p>
+                </CenterBlock>
+                <CenterBlock>
                     <p>
                         <Button link='/partnermote-desember'>Slides from last partner meeting (in Norwegian)</Button>
                     </p>
-                </CenterBlock>
+	            </CenterBlock>
             </Section>
         </Page>
     )
