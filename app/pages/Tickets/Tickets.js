@@ -79,7 +79,6 @@ function Tickets(props: TicketsProps) {
         	<Section>
 	            <LeftBlock header="The javaBin membership included in the ticket">
                     <P>
-                        <br />
                         JavaZone is organized for and by the community. Your ticket includes a membership to javaBin, giving you access to all the javaBin community events and voting rights for a full year after buying the ticket.
                     </P>
                     <P>
