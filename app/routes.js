@@ -7,6 +7,7 @@ import partnermoteApril from './pages/partnermote-april.js';
 import partnermoteJuni from './pages/partnermote-juni.js';
 import academy from './pages/Academy/Academy.js';
 import academySeptember from './pages/academy-september.js';
+import kids from './pages/Kids/Kids.js';
 import academyLocation from './pages/academy-program.js';
 import speakers from './pages/Speakers/Speakers.js';
 import speakerinfo from './pages/speakerinfo';
@@ -25,6 +26,7 @@ const routes = compile({
     '/academy/oslo': academyLocation(academyData.oslo),
     '/academy/tromso': academyLocation(academyData.tromso),
     '/academy/bergen': academyLocation(academyData.bergen),
+    '/kids': kids,
     '/speakers': speakers,
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,

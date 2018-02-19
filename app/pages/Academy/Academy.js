@@ -119,7 +119,7 @@ function AcademyItem(props: AcademyItemProps) {
                 {props.location.pax} students
             </Row>
             <Row center="xs">
-                <Button target alternate link={props.location.registration.link}>{props.location.registration.text}</Button>
+                <Button margin target alternate link={props.location.registration.link}>{props.location.registration.text}</Button>
             </Row>
         </Col>
     )
@@ -148,7 +148,7 @@ function Academy(props: AcademyProps) {
                     <Grid>
                         <Row center="xs">
                             <Col xs={12} sm={12} md={12} lg={12}>
-                                <Row center="xs">
+                                <Row around="xs">
                                     <AcademyItem location={bergen}></AcademyItem>
                                     <AcademyItem location={tromso}></AcademyItem>
                                     <AcademyItem location={oslo}></AcademyItem>
@@ -161,17 +161,17 @@ function Academy(props: AcademyProps) {
             <Section>
                 <CenterBlock header="Program and speakers">
                     <Grid className="academy-block-air">
-                        <Row center="xs">
+                        <Row around="xs">
                             <Col xs={12} sm={12} md={9} lg={9}>
-                                <Row center="xs">
+                                <Row cennter="xs" around="xs">
                                     <Col xs={12} sm={12} md={3} lg={3}>
-                                        <Button link='/academy/oslo'>Academy Oslo</Button>
+                                        <Button margin link='/academy/oslo'>Academy Oslo</Button>
                                     </Col>
                                     <Col xs={12} sm={12} md={3} lg={3}>
-                                        <Button link='/academy/bergen'>Academy Bergen</Button>
+                                        <Button margin link='/academy/bergen'>Academy Bergen</Button>
                                     </Col>
                                     <Col xs={12} sm={12} md={3} lg={3}>
-                                        <Button link='/academy/tromso'>Academy Tromsø</Button>
+                                        <Button margin link='/academy/tromso'>Academy Tromsø</Button>
                                     </Col>
                                 </Row>
                             </Col>

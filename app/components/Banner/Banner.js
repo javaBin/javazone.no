@@ -7,13 +7,16 @@ import './Banner.less';
 import background from '../../assets/2018/pixelOslo_background_l1.svg';
 import fogLayer from '../../assets/2018/pixelOslo_fog_l2.svg';
 import cityLayer from '../../assets/2018/pixelOslo_city_nobarcode_l3.svg';
-import cityFrontLayer from '../../assets/2018/pixelOslo_new_city-02.svg';
-import logo from '../../assets/2018/pixelOslo_logo_no_text_l4.svg';
-import cloud1 from '../../assets/2018/cloud_1.svg';
-import cloud2 from '../../assets/2018/cloud_2.svg';
-import cloud3 from '../../assets/2018/cloud_3.svg';
-import cloud4 from '../../assets/2018/cloud_4.svg';
-import cloud5 from '../../assets/2018/cloud_5.svg';
+import cityFrontLayer from '../../assets/2018/pixelOslo_new_city_noTrees.svg';
+import treesLayer from '../../assets/2018/trees.svg';
+import busLayer from '../../assets/2018/buss.svg';
+import planeLayer from '../../assets/2018/plane.svg';
+import logo from '../../assets/2018/logoBig_jz2018_vertical.svg';
+import cloud1 from '../../assets/2018/clouds/cloud1_new.svg';
+import cloud2 from '../../assets/2018/clouds/cloud2_new.svg';
+import cloud3 from '../../assets/2018/clouds/cloud3_new.svg';
+import cloud4 from '../../assets/2018/clouds/cloud4_new.svg';
+import cloud5 from '../../assets/2018/clouds/cloud5_new.svg';
 
 type BannerProps = {
 }
@@ -35,8 +38,9 @@ class Banner extends React.Component<BannerProps, BannerState> {
                 <img className="fog-layer" src={fogLayer} />
                 <img className="city-layer" src={cityLayer} />
                 <img className="city-layer" src={cityFrontLayer} />
-                {/*
-                */}
+                <img className="city-layer" src={treesLayer} />
+                {/* <img className="bus-layer" src={busLayer} /> */}
+                {/* <img className="plane-layer" src={planeLayer} /> */}
                 <img className="cloud1-layer" src={cloud1} />
                 <img className="cloud2-layer" src={cloud2} />
                 <img className="cloud3-layer" src={cloud3} />
@@ -45,8 +49,6 @@ class Banner extends React.Component<BannerProps, BannerState> {
                 <img className="cloud6-layer" src={cloud4} />
                 <img className="cloud7-layer" src={cloud3} />
                 <img className="cloud8-layer" src={cloud2} />
-                {/*
-                */}
                 <img className="logo-layer" src={logo} />
                 <div className="logo-text">
                     <h1>JAVAZONE 2018</h1>
