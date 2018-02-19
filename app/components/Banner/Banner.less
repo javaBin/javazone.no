@@ -1,6 +1,9 @@
 @import '../../styles/Animations.less';
 @import '../../styles/Variables.less';
 
+@animation-duration: 35s;
+@animation-duration-mob: 25s;
+
 @cloud-width: 10rem;
 @cloud-width-lg: 14rem;
 @cloud1-top: 13rem;
@@ -59,6 +62,16 @@
         left: -25%; 
         top: 6rem;
     }
+}
+
+.bus-layer {
+    width: 20rem;
+    left: 10rem;
+    z-index: 13;
+}
+
+.plane-layer {
+
 }
 
 .logo-layer {
@@ -149,8 +162,8 @@
     width: @cloud-width;
     top: @cloud1-top;
     left: -(@cloud-width);
-    -webkit-animation: slide 25s infinite linear;
-    animation: slide 25s infinite linear;
+    -webkit-animation: slide @animation-duration infinite linear;
+    animation: slide @animation-duration infinite linear;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width - @cloud-adjust-lg);
         top: calc(@cloud1-top - @cloud-adjust-lg);
@@ -175,20 +188,17 @@
         width: 6rem;
         top: 6rem;
         left: -6rem;
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud1-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
     }
 }
 .cloud2-layer {
     width: @cloud-width;
     top: @cloud2-top;
     left: -(@cloud-width);
-    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 12s;
-    animation: slide 25s infinite linear;
+    animation: slide @animation-duration infinite linear;
     animation-delay: 12s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width - @cloud-adjust-lg);
@@ -211,14 +221,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud2-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 6rem;
         top: 6rem;
         left: -6rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 12s;
+        animation-delay: 12s;
     }
 }
 
@@ -226,9 +235,9 @@
     width: @cloud-width;
     top: @cloud3-top;
     left: -(@cloud-width);
-    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 13s;
-    animation: slide 25s infinite linear;
+    animation: slide @animation-duration infinite linear;
     animation-delay: 13s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width - @cloud-adjust-lg);
@@ -251,14 +260,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud3-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 6rem;
         top: 8rem;
         left: -6rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 13s;
+        animation-delay: 13s;
     }
 }
 
@@ -266,9 +274,9 @@
     width: @cloud-width;
     top: @cloud4-top;
     left: -(@cloud-width);
-    -webkit-animation: slide 25s infinite linear;
+    -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 9s;
-    animation: slide 25s infinite linear;
+    animation: slide @animation-duration infinite linear;
     animation-delay: 9s;
     z-index: 20;
     @media only screen and (max-width: @screen-lg) {
@@ -292,14 +300,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud4-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 6rem;
         top: 5.5rem;
         left: -6rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 9s;
+        animation-delay: 9s;
     }
 }
 
@@ -307,10 +314,10 @@
     width: @cloud-width;
     top: @cloud5-top;
     left: -(@cloud-width);
-    -webkit-animation: slide 25s infinite linear;
-    -webkit-animation-delay: 18s;
-    animation: slide 25s infinite linear;
-    animation-delay: 18s;
+    -webkit-animation: slide @animation-duration infinite linear;
+    -webkit-animation-delay: 27s;
+    animation: slide @animation-duration infinite linear;
+    animation-delay: 27s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width - @cloud-adjust-lg);
         top: calc(@cloud5-top - @cloud-adjust-lg);
@@ -332,14 +339,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud5-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 7rem;
         top: 8rem;
         left: -7rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 27s;
+        animation-delay: 27s;
     }
 }
 
@@ -348,11 +354,11 @@
     top: @cloud6-top;
     left: -(@cloud-width-lg);
     -webkit-transform: rotate(180deg);
-    -webkit-animation: slide 25s infinite linear;
-    -webkit-animation-delay: 20s;
+    -webkit-animation: slide @animation-duration infinite linear;
+    -webkit-animation-delay: 23s;
     transform: rotate(180deg);
-    animation: slide 25s infinite linear;
-    animation-delay: 20s;
+    animation: slide @animation-duration infinite linear;
+    animation-delay: 23s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width-lg - @cloud-adjust-lg);
         top: calc(@cloud6-top - @cloud-adjust-lg);
@@ -374,14 +380,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud6-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 5.5rem;
         top: 4.5rem;
         left: -5.5rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 23s;
+        animation-delay: 23s;
     }
 }
 
@@ -390,11 +395,11 @@
     top: @cloud7-top;
     left: -(@cloud-width-lg);
     -webkit-transform: rotate(180deg);
-    -webkit-animation: slide 25s infinite linear;
-    -webkit-animation-delay: 3s;
+    -webkit-animation: slide @animation-duration infinite linear;
+    -webkit-animation-delay: 4s;
     transform: rotate(180deg);
-    animation: slide 25s infinite linear;
-    animation-delay: 3s;
+    animation: slide @animation-duration infinite linear;
+    animation-delay: 4s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width-lg - @cloud-adjust-lg);
         top: calc(@cloud7-top - @cloud-adjust-lg);
@@ -416,14 +421,13 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud7-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 5.5rem;
         top: 6.5rem;
         left: -5.5rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
     }
 }
 
@@ -432,11 +436,11 @@
     top: @cloud8-top;
     left: -(@cloud-width-lg);
     -webkit-transform: rotate(180deg);
-    -webkit-animation: slide 25s infinite linear;
-    -webkit-animation-delay: 7.5s;
+    -webkit-animation: slide @animation-duration infinite linear;
+    -webkit-animation-delay: 19s;
     transform: rotate(180deg);
-    animation: slide 25s infinite linear;
-    animation-delay: 7.5s;
+    animation: slide @animation-duration infinite linear;
+    animation-delay: 19s;
     @media only screen and (max-width: @screen-lg) {
         width: calc(@cloud-width-lg - @cloud-adjust-lg);
         top: calc(@cloud8-top - @cloud-adjust-lg);
@@ -458,14 +462,11 @@
         left: calc(-(@cloud-width) + @cloud-adjust-xs);
     }
     @media only screen and (max-width: @screen-xxs) {
-        /*
-        width: calc(@cloud-width - @cloud-adjust-xxs);
-        top: calc(@cloud8-top - @cloud-adjust-xxs);
-        left: calc(-(@cloud-width) + @cloud-adjust-xxs);
-        */
         width: 6rem;
         top: 4rem;
         left: -6rem;
+        -webkit-animation: slide-mob @animation-duration-mob infinite linear;
+        animation: slide-mob @animation-duration-mob infinite linear;
     }
 }
 

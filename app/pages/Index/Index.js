@@ -21,9 +21,6 @@ function Index(props: IndexProps) {
             <Container fullWidth>
                 <Banner />
             </Container>
-            <Section pixel alternate>
-                <Stats />
-            </Section>
             <Section>
                 <Header align="center">This year's event...</Header>
                 <LeftBlock header="JavaZone 101 the who, what and where"> 
@@ -42,6 +39,9 @@ function Index(props: IndexProps) {
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years. Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
                 </p>
             </LeftBlock>
+            </Section>
+            <Section pixel alternate>
+                <Stats />
             </Section>
             <Section fluid>
                 <ImageBlock image={Javazone1} alt="JavaZone Expo" />

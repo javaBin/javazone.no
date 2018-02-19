@@ -82,7 +82,6 @@ function Session(props: SessionProps) {
         </div>
     );
 
-    console.log("hallo");
 
     return (
         <div className={ `kids__event ${!extra.odd ? 'kids__event--reverse' : ''}` }>
