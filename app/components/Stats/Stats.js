@@ -2,12 +2,11 @@
 import * as React from 'react';
 import Button from '../Button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Container from '../Container/Container';
 import './Stats.less';
-import location from '../../assets/2018/icons_combined_Location.svg';
-import calendar from '../../assets/2018/icons_combined_Calendar.svg';
-import mic from '../../assets/2018/icons_combined_Mic.svg';
-import partners from '../../assets/2018/icons_combined_Partners.svg';
+import location from '../../assets/2018/icons/location.svg';
+import calendar from '../../assets/2018/icons/calendar.svg';
+import mic from '../../assets/2018/icons/mic.svg';
+import partners from '../../assets/2018/icons/partners.svg';
 
 type StatsProps = {
 }

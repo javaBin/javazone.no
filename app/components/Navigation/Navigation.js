@@ -7,7 +7,7 @@ import Button from '../../components/Button/Button';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { Menu } from 'react-feather'; 
-import JavazoneLogo from '../../assets/2018/logoSmall_jz2018.svg';
+import JavazoneLogo from '../../assets/2018/javazone2018_logo_small.svg';
 import './Navigation.less';
 
 type NavigationProps = {
