@@ -83,8 +83,6 @@
     left: -20vw;
     -webkit-animation: bus-left-right 20s infinite ease-in-out;
     animation: bus-left-right 20s infinite ease-in-out;
-    animation-delay: 5s;
-    -webkit-animation-delay: 5s;
     @media only screen and (max-width: @screen-sm) {
         width: 150vw;
         left: -25vw;
@@ -98,16 +96,16 @@
     width: 4vw;
     top: 8rem;
     right: -5vw;
-    -webkit-animation: plane-right-left 25s infinite linear;
-    animation: plane-right-left 25s infinite linear;
-    animation-delay: 5s;
-    -webkit-animation-delay: 5s;
+    -webkit-animation: plane-right-left 40s infinite linear;
+    animation: plane-right-left 40s infinite linear;
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
     @media only screen and (max-width: @screen-sm) {
         width: 10vw;
         right: -15vw;       
         top: 5rem;
-        -webkit-animation: plane-right-left-mob 25s infinite linear;
-        animation: plane-right-left-mob 25s infinite linear;
+        -webkit-animation: plane-right-left-mob 35s infinite linear;
+        animation: plane-right-left-mob 35s infinite linear;
     }
 }
 
@@ -150,7 +148,7 @@
     position: absolute;
     top: 20rem;
     width: 100vw;
-    z-index: 19;
+    z-index: 30;
     h1 {
         font-family: @upheaval;
         font-size: 7rem;
@@ -391,20 +389,18 @@
 }
 
 .cloud6-layer {
-    width: @cloud-width-lg;
+    width: @cloud-width;
     top: @cloud6-top;
-    left: -(@cloud-width-lg);
-    -webkit-transform: rotate(180deg);
+    left: -(@cloud-width);
     -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 23s;
-    transform: rotate(180deg);
     animation: slide @animation-duration infinite linear;
     animation-delay: 23s;
     z-index: 1;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        width: calc(@cloud-width - @cloud-adjust-lg);
         top: calc(@cloud6-top - @cloud-adjust-lg);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
     }
     @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
@@ -433,20 +429,18 @@
 }
 
 .cloud7-layer {
-    width: @cloud-width-lg;
+    width: @cloud-width;
     top: @cloud7-top;
-    left: -(@cloud-width-lg);
-    -webkit-transform: rotate(180deg);
+    left: -(@cloud-width);
     -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 4s;
-    transform: rotate(180deg);
     animation: slide @animation-duration infinite linear;
     animation-delay: 4s;
     z-index: 1;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        width: calc(@cloud-width - @cloud-adjust-lg);
         top: calc(@cloud7-top - @cloud-adjust-lg);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
     }
     @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
@@ -475,20 +469,18 @@
 }
 
 .cloud8-layer {
-    width: @cloud-width-lg;
+    width: @cloud-width;
     top: @cloud8-top;
-    left: -(@cloud-width-lg);
-    -webkit-transform: rotate(180deg);
+    left: -(@cloud-width);
     -webkit-animation: slide @animation-duration infinite linear;
     -webkit-animation-delay: 19s;
-    transform: rotate(180deg);
     animation: slide @animation-duration infinite linear;
     animation-delay: 19s;
     z-index: 1;
     @media only screen and (max-width: @screen-lg) {
-        width: calc(@cloud-width-lg - @cloud-adjust-lg);
+        width: calc(@cloud-width - @cloud-adjust-lg);
         top: calc(@cloud8-top - @cloud-adjust-lg);
-        left: calc(-(@cloud-width-lg) + @cloud-adjust-lg);
+        left: calc(-(@cloud-width) + @cloud-adjust-lg);
     }
     @media only screen and (max-width: @screen-md) {
         width: calc(@cloud-width - @cloud-adjust-md);
