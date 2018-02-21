@@ -8,7 +8,6 @@ import { LeftBlock, CenterBlock, RightBlock, ImageBlock } from '../../components
 import { Header } from '../../components/Header/Header';
 import Page from '../../components/Page/Page.js';
 import Javazone1 from '../../assets/header_expo.jpg';
-import JavazoneLogo from '../../assets/2018/logo_2018_concept_pixel_white.svg';
 import { Link } from '../../components/link';
 import './Index.less';
 

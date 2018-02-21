@@ -18,7 +18,7 @@ type TipsAndTricksProps = {
 function TipsAndTricks(props: TipsAndTricksProps) {
     return (
         <Page name='monetary-policy'>
-            <PageHeader subHeader="Make that abstract shine">Tips & Tricks</PageHeader>
+            <PageHeader subHeader="Make that abstract shine">Tips And Tricks</PageHeader>
 
             <Section>
                 <LeftBlock header="Increase the chance of your talk being accepted">
