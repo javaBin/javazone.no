@@ -12,31 +12,31 @@ import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import sonicpi from '../../assets/kids/sonicpi.png';
+import george from '../../assets/kids/george.png';
 import scratch from '../../assets/kids/scratch.jpg';
 import { find } from 'lodash/fp';
-import appinventor from '../../assets/kids/appinventor.png';
+import minecraft from '../../assets/kids/minecraft.jpg';
 import kidsimage from '../../assets/kids/kids_header.jpg';
 import './Kids.less';
 
 
 const kidsInfo = {
-    'kids_sonicpi': {
-        background: sonicpi,
+    'kids_george': {
+        background: george,
         age: '13+ år',
         title: 'Compose with code',
         odd: true
     },
     'kids_scratch': {
         background: scratch,
-        age: '10+ år',
+        age: '8+ år',
         title: 'Scratch',
         odd: false
     },
-    'kids_appinventor': {
-        background: appinventor,
+    'kids_minecraft': {
+        background: minecraft,
         age: '11+ år',
-        title: 'Komme igang med App Inventor',
+        title: 'ComputerCraft i Minecraft',
         odd: true
     }
 };
@@ -99,9 +99,9 @@ class Kids extends React.Component<KidsProps, KidsState> {
 
     render() {
         
-        const wsonicpi = find({id: 'kids_sonicpi'}, this.props.workshops);
+        const wgeorge = find({id: 'kids_george'}, this.props.workshops);
         const wscratch = find({id: 'kids_scratch'}, this.props.workshops);
-        const wappinventor = find({id: 'kids_appinventor'}, this.props.workshops);
+        const wminecraft = find({id: 'kids_minecraft'}, this.props.workshops);
 
         return (
             <Page name='javazone-kids'>
@@ -112,7 +112,7 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             <br />
                             JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
-                            søndag 10. september for å gi dem en smakebit på
+                            søndag 18. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 3 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
                             barna og de største ungdommene.
@@ -133,7 +133,7 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             <SubHeader>Tid & Sted</SubHeader>
                             <P>
                                 Arrangementet finner sted på Teknologihuset
-                                søndag 10. september fra klokken 12.00 til
+                                søndag 18. mars fra klokken 12.00 til
                                 15.00. Vi serverer enkel mat underveis. Det
                                 er viktig at du som forelder også setter av
                                 tid til å være til stede hele perioden. Vi
@@ -143,7 +143,7 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             <P>
                                 Vi har et begrenset antall plasser, derfor er det viktig at
                                 du melder dine barn på arrangementet.
-                                Påmeldingen åpner mandag 21. august kl. 12.00.
+                                Påmeldingen åpner onsdag 28. februar kl. 12.00.
                             </P>
                             <SubHeader>Forberedelser</SubHeader>
                             <P>
@@ -164,19 +164,20 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner mandag 21. august kl. 12.00.
+                            Påmeldingen åpner onsdag 28. februar kl. 12.00.
                         </P>
                     </LeftBlock>
 
                     <div className="kids__separator"></div>
 
-                    <Session session={wsonicpi}>
+                    <Session session={wgeorge}>
                         <P>
-                        Lær å kode ved å komponere musikk! Sonic Pi er en open-source programmeringverktoy utviklet av Dr Sam Aaron,
-                        designet for å utforske og undervise programmeringskonsepter gjennom prosessen med å skape nye lyder.
+                        Med Turtle Tom og Clojure programmeringsspråk, vil du være kreativ ved hjelp av George programmeringsplattform.
+                        Ingen forkunnskaper kreves.                        
                         </P>
                         <P>
-                        Merk: Dette vil bli presentert på engelsk! Sonic Pi programvære finnes på <a href="http://sonic-pi.net/">sonic-pi.net</a>.
+                        Turtle Geometry presents an innovative program of mathematical discovery that demonstrates
+                        how the effective use of personal computers can profoundly change the nature of a student's contact with mathematics
                         </P>
                     </Session>
 
@@ -194,14 +195,12 @@ class Kids extends React.Component<KidsProps, KidsState> {
                         </P>
                     </Session>
 
-                    <Session session={wappinventor}>
+                    <Session session={wminecraft}>
                         <P>
-                            App Inventor er et programmeringsmiljø som brukes for å lage apps til Android-telefoner og nettbrett.
-                        </P>
-                        <P>
-                            For å lage apps med MIT App Inventor bygger man sammen klosser på samme måte som i Scratch.
-                            Det er derfor en fordel med litt erfaring fra Scratch før du begynner med dette.
-                            Skjekk ut MIT App Inventor pa <a href='http://appinventor.mit.edu'>appinventor.mit.edu</a>.
+                            ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og roboter inne i spillet.
+                            Disse datamaskinene og robotene kan programmeres til å kontrollere dører, grave huler, bygge hus og så videre.
+                            ComputerCraft bruker programmeringsspråket Lua, som er et enkelt og fleksibelt tekstbasert programmeringsspråk.
+                            For å delta på dette kurset må deltagerne ha en Minecraft-konto. Oppskrift for hvordan du installerer ComputerCraft.
                         </P>
                     </Session>
 
