@@ -168,41 +168,21 @@ class Kids extends React.Component<KidsProps, KidsState> {
                         </P>
                     </LeftBlock>
 
-                    <div className="kids__separator"></div>
-
-                    <Session session={wgeorge}>
-                        <P>
-                        Med Turtle Tom og Clojure programmeringsspråk, vil du være kreativ ved hjelp av George programmeringsplattform.
-                        Ingen forkunnskaper kreves.                        
-                        </P>
-                        <P>
-                        Turtle Geometry presents an innovative program of mathematical discovery that demonstrates
-                        how the effective use of personal computers can profoundly change the nature of a student's contact with mathematics
-                        </P>
-                    </Session>
-
-                    <Session session={wscratch}>
-                        <P>
-                            Scratch er et visuelt programmeringsspråk som er laget for at barn
-                            og unge skal lære seg grunnleggende programmering. Språket er
-                            oversatt til norsk, og en programmerer ved å dra og sette sammen blokker med kode.
-                        </P>
-                        <P>
-                            Dette kurset tar for seg hvordan Scratch kan introduseres til nybegynnere;
-                            veiledninger, tips, gode oppgaver, utfordringer osv. Sjekk ut kodeklubbens
-                            læringsmateriell på <a href='https://kodeklubben.github.io/scratch'>kodeklubben.github.io/scratch</a>
-                            og Scratch på <a href='https://scratch.mit.edu'>scratch.mit.edu</a>
-                        </P>
-                    </Session>
-
-                    <Session session={wminecraft}>
-                        <P>
-                            ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og roboter inne i spillet.
-                            Disse datamaskinene og robotene kan programmeres til å kontrollere dører, grave huler, bygge hus og så videre.
-                            ComputerCraft bruker programmeringsspråket Lua, som er et enkelt og fleksibelt tekstbasert programmeringsspråk.
-                            For å delta på dette kurset må deltagerne ha en Minecraft-konto. Oppskrift for hvordan du installerer ComputerCraft.
-                        </P>
-                    </Session>
+                    <Section alternate>
+                        <div className="kids-item-container">
+                            <Grid>
+                                <Row center="xs">
+                                    <Col xs={12} sm={12} md={12} lg={12}>
+                                        <Row around="xs">
+                                            <P>Hi</P>
+                                            <P>Hi</P>
+                                            <P>Hi</P>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Grid>
+                        </div>
+                    </Section>
 
                     <CenterBlock header="Vi sees på Teknologihuset søndag 18. mars!">
                         <P>
