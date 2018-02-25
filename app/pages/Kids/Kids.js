@@ -45,7 +45,7 @@ function workshopUrl(workshop) {
     if (!workshop) {
         return '#';
     }
-    return `https://javazone.no/moosehead/#/register/${workshop.id}`;
+    return `https://moosehead.javazone.no/#/register/${workshop.id}`;
 }
 
 type KidsProps = {
