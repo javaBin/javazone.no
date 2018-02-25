@@ -23,8 +23,8 @@ import './Kids.less';
 const kidsInfo = {
     'kids_george': {
         background: george,
-        age: '13+ år',
-        title: 'Compose with code',
+        age: '8+ år',
+        title: 'George with Turtle Tom',
         odd: true
     },
     'kids_scratch': {
