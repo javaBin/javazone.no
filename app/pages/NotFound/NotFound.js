@@ -1,16 +1,11 @@
+//@flow
 import * as React from 'react';
-import Page from '../components/Page/Page';
-import PageHeader from '../components/PageHeader/PageHeader';
-import { CenterBlock, LeftBlock, ImageBlock } from '../components/Block/Block';
-import { Section } from '../components/Section/Section';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import { LeftBlock } from '../../components/Block/Block';
+import { Section } from '../../components/Section/Section';
 
-
-const header = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs';
-
-type Page404Props = {
-}
-
-function Page404(props: Page404Props) {
+function NotFound() {
     return (
         <Page name='404'>
             <PageHeader subHeader="Well, this is embarrassing...">Void 0</PageHeader>
@@ -37,4 +32,4 @@ function Page404(props: Page404Props) {
     )
 }
 
-export default Page404;
+export default NotFound;

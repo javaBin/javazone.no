@@ -1,16 +1,17 @@
 //@flow
 import * as React from 'react';
-import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Partner } from '../../Types';
 import { Section } from '../../components/Section/Section';
 import { LeftBlock, ImageBlock, CenterBlock } from '../../components/Block/Block';
-import { Block, Content, P, Pc} from '../../components/block';
 import Button from '../../components/Button/Button';
 import { SubHeader, Header } from '../../components/Header/Header';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import Youtube from '../../components/youtube';
 import { Link } from '../../components/link';
+import { find } from '../../util/array';
 import partners from '../../data/partners';
 import partners1 from '../../assets/partners_1.jpg';
 import partners2 from '../../assets/partners_2.jpg';
@@ -18,13 +19,12 @@ import partners3 from '../../assets/partners_3.jpg';
 import './Partners.less';
 
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
-/*
 function shuffle(o){
     for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
 
-const imagesContext = require.context('../assets/partners-17', false, /\.svg$/);
+const imagesContext = require.context('../../assets/partners-18', false, /\.svg$/);
 const images = imagesContext.keys().map(image => (
     {context: imagesContext(image), filename: image}
 ));
@@ -36,32 +36,38 @@ function getimage(images, image) {
 const signedPartners = shuffle(partners).map(partner => (
     {name: partner.name, logo: getimage(images, partner.logo), url: partner.url}
 ));
-*/
 
-type PartnersProps = {
-
+type PartnerListProps = {
+    partners: Array<Partner>
 }
 
-type PartnerProps = {
-    name: string,
-    logo: any,
-    url: string
-}
 
-function Partner(props: PartnerProps) {
+function PartnerList(props: PartnerListProps) {
     return (
-        <li className='partners__logo'>
-            <a className='partners__logo-link' href={props.url} target='_blank'>
-                <img src={props.logo.context} className='partners__logo-image' alt={props.name} />
-            </a>
-        </li>
-    )
+        <Grid fluid>
+            <Row>
+                {props.partners.map((partner) => {
+                    return (
+                        <Col key={partner.name}>
+                            <img className="partner-logo" src={getimage(images, partner.logo).context} alt={partner.name}/>
+                        </Col>
+                    )
+                })}
+            </Row>
+        </Grid>    
+    );
 }
 
-function Partners(props: PartnersProps) {
+function Partners() {
     return (
         <Page name='partners'>
             <PageHeader subHeader="Join us in 2018">Dear Javazone Partners</PageHeader>
+            {/*
+            <Section alternate pixel>
+                <Header align='center'>Partners</Header>
+                <PartnerList partners={partners} />
+            </Section>
+            */}
             <Section>
                 <LeftBlock header="JavaZone 2018: Bigger and better than ever">
                     <p>
@@ -184,56 +190,52 @@ function Partners(props: PartnersProps) {
                     </p>
                 </CenterBlock>
                 <LeftBlock alternate header="Partnership Stand">
-                    <p>
-                        <div className='partners-stand-prices'>
-                            <table className='table'>
-                                <tbody>
-                                    <tr className='table__row partners__stand-option partners__stand-option'>
-                                        <td className='table-data'>Extra Stand Space</td>
-                                        <td className='table-data'>NOK 38.000,-</td>
-                                    </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option'>
-                                        <td className='table-data'>Restaurant Stand</td>
-                                        <td className='table-data'>NOK 63.000,-</td>
-                                    </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option'>
-                                        <td className='table-data'>Restaurant Stand (Evening)</td>
-                                        <td className='table-data'>NOK 20.000,-</td>
-                                    </tr>
-                                    <tr className='table__row partners__stand-option partners__stand-option'>
-                                        <td className='table-data'>Concept Stand</td>
-                                        <td className='table-data'>NOK 55.000,-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </p>
+                    <div className='partners-stand-prices'>
+                        <table className='table'>
+                            <tbody>
+                                <tr className='table__row partners__stand-option partners__stand-option'>
+                                    <td className='table-data'>Extra Stand Space</td>
+                                    <td className='table-data'>NOK 38.000,-</td>
+                                </tr>
+                                <tr className='table__row partners__stand-option partners__stand-option'>
+                                    <td className='table-data'>Restaurant Stand</td>
+                                    <td className='table-data'>NOK 63.000,-</td>
+                                </tr>
+                                <tr className='table__row partners__stand-option partners__stand-option'>
+                                    <td className='table-data'>Restaurant Stand (Evening)</td>
+                                    <td className='table-data'>NOK 20.000,-</td>
+                                </tr>
+                                <tr className='table__row partners__stand-option partners__stand-option'>
+                                    <td className='table-data'>Concept Stand</td>
+                                    <td className='table-data'>NOK 55.000,-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </LeftBlock>
                 <LeftBlock alternate header="Partnership Ticket">
-                    <p>
-                        <div className='partners-ticket-prices'>
-                            <table className='table'>
-                                <tbody>
-                                    <tr className='table__row'>
-                                        <td className='table-data'>Tickets for employees (0 - 30)</td>
-                                        <td className='table-data'>NOK 5.590,-</td>
-                                    </tr>
-                                    <tr className='table__row'>
-                                        <td className='table-data'>Tickets for employees (31 - 50)</td>
-                                        <td className='table-data'>NOK 5.390,-</td>
-                                    </tr>
-                                    <tr className='table__row'>
-                                        <td className='table-data'>Tickets for employees (51 - ∞)</td>
-                                        <td className='table-data'>NOK 5.190,-</td>
-                                    </tr>
-                                    <tr className='table__row'>
-                                        <td className='table-data'>Tickets for employees (Late-Bird)</td>
-                                        <td className='table-data'>NOK 6.190,-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </p>
+                    <div className='partners-ticket-prices'>
+                        <table className='table'>
+                            <tbody>
+                                <tr className='table__row'>
+                                    <td className='table-data'>Tickets for employees (0 - 30)</td>
+                                    <td className='table-data'>NOK 5.590,-</td>
+                                </tr>
+                                <tr className='table__row'>
+                                    <td className='table-data'>Tickets for employees (31 - 50)</td>
+                                    <td className='table-data'>NOK 5.390,-</td>
+                                </tr>
+                                <tr className='table__row'>
+                                    <td className='table-data'>Tickets for employees (51 - ∞)</td>
+                                    <td className='table-data'>NOK 5.190,-</td>
+                                </tr>
+                                <tr className='table__row'>
+                                    <td className='table-data'>Tickets for employees (Late-Bird)</td>
+                                    <td className='table-data'>NOK 6.190,-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </LeftBlock>
             </Section>
             <Section fluid>
@@ -246,9 +248,7 @@ function Partners(props: PartnersProps) {
                     </p>
                 </CenterBlock>
                 <CenterBlock>
-                    <p>
-                        <Button link='/partnermote-desember'>Slides from last partner meeting (in Norwegian)</Button>
-                    </p>
+                    <Button link='/partnermote-desember'>Slides from last partner meeting (in Norwegian)</Button>
 	            </CenterBlock>
             </Section>
         </Page>

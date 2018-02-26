@@ -1,20 +1,16 @@
 //@flow
 import * as React from 'react';
-import Container from '../../components/Container/Container';
+import Container from '../../components/Container/Container'; // Should be removed at some point
 import { Section } from '../../components/Section/Section';
 import Banner from '../../components/Banner/Banner';
 import Stats from '../../components/Stats/Stats';
-import { LeftBlock, CenterBlock, RightBlock, ImageBlock } from '../../components/Block/Block';
+import { LeftBlock, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
 import Page from '../../components/Page/Page.js';
-import Javazone1 from '../../assets/header_expo.jpg';
-import { Link } from '../../components/link';
+import javazoneExpo from '../../assets/header_expo.jpg';
 import './Index.less';
 
-type IndexProps = {
-}
-
-function Index(props: IndexProps) {
+function Index() {
     return (
         <Page name='index'>
             <Container fullWidth>
@@ -43,7 +39,7 @@ function Index(props: IndexProps) {
                 <Stats />
             </Section>
             <Section fluid>
-                <ImageBlock image={Javazone1} alt="JavaZone Expo" />
+                <ImageBlock image={javazoneExpo} alt="JavaZone Expo" />
             </Section>
         </Page> 
     )

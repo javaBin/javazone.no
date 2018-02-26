@@ -41,13 +41,6 @@ const kidsInfo = {
     }
 };
 
-function workshopUrl(workshop) {
-    if (!workshop) {
-        return '#';
-    }
-    return `https://moosehead.javazone.no/#/register/${workshop.id}`;
-}
-
 type KidsProps = {
     workshops: object 
 }
@@ -57,7 +50,22 @@ type KidsState = {
 
 type SessionProps = {
     session: object,
-    children: React.Node
+}
+
+type SessionListProps = {
+    sessions: Array<object>
+}
+
+function SessionList(props: SessionListProps) {
+    return (
+        <Grid>
+            <Row center="xs" around="xs">
+                {props.sessions.map((session) => {
+                    return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+                })}
+            </Row>
+        </Grid>
+    )
 }
 
 function Session(props: SessionProps) {
@@ -65,30 +73,20 @@ function Session(props: SessionProps) {
         return null;
     }
 
-    const extra = kidsInfo[props.session.id];
-    const image = (
-        <div className='kids__image'>
-            <div className='background-image' style={{backgroundImage: `url(${extra.background})`}}></div>
-        </div>
-    );
-    const info = (
-        <div className={`kids__info kids__info--${extra.odd ? 'right' : 'left'}`}>
-            <div className='kids__event-title blue'>{extra.title}</div>
-            <div className='kids__age'>{extra.age}</div>
-            {props.children}
-            <a className={`button button--transparent kids_registrate`}
-               href={workshopUrl(props.session)}>
-            </a>
-        </div>
-    );
-
+    const extraInfo = kidsInfo[props.session.id];
 
     return (
-        <div className={ `kids__event ${!extra.odd ? 'kids__event--reverse' : ''}` }>
-            {extra.odd ? image : info }
-            {!extra.odd ? image : info}
-        </div>
-    );
+        <Col xs={12} sm={12} md={4} lg={4}>
+            <h1 className="kids-session-title">{props.session.title}</h1>
+            <img className="kids-session-image" src={extraInfo.background} alt={props.session.title} />
+            <p className="kids-session-desc">
+                {props.session.description}
+            </p>
+            <div className="kids-session-button">
+                <Button>Påmeldingsskjema</Button>
+            </div>
+        </Col>
+    )
 };
 
 class Kids extends React.Component<KidsProps, KidsState> {
@@ -98,11 +96,6 @@ class Kids extends React.Component<KidsProps, KidsState> {
     }
 
     render() {
-        
-        const wgeorge = find({id: 'kids_george'}, this.props.workshops);
-        const wscratch = find({id: 'kids_scratch'}, this.props.workshops);
-        const wminecraft = find({id: 'kids_minecraft'}, this.props.workshops);
-
         return (
             <Page name='javazone-kids'>
                 <PageHeader subHeader="Spring Edition – 18. mars">JavaZone Kids 2018</PageHeader>  
@@ -168,28 +161,15 @@ class Kids extends React.Component<KidsProps, KidsState> {
                         </P>
                     </LeftBlock>
 
-                    <Section alternate>
-                        <div className="kids-item-container">
-                            <Grid>
-                                <Row center="xs">
-                                    <Col xs={12} sm={12} md={12} lg={12}>
-                                        <Row around="xs">
-                                            <P>Hi</P>
-                                            <P>Hi</P>
-                                            <P>Hi</P>
-                                        </Row>
-                                    </Col>
-                                </Row>
-                            </Grid>
-                        </div>
-                    </Section>
-
                     <CenterBlock header="Vi sees på Teknologihuset søndag 18. mars!">
                         <P>
                             Vennlig hilsen,<br />
                             javaBin og Lær Kidsa Koding
                         </P>
                     </CenterBlock>
+                </Section>
+                <Section pixel alternate>
+                    <SessionList sessions={this.props.workshops} />
                 </Section>
             </Page>
         )

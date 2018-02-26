@@ -8,6 +8,7 @@ import './Block.less';
 type BlockProps = {
     header?: string,
     alternate?: bool,
+    image?: string,
     children: React.Node
 }
 
@@ -49,7 +50,8 @@ function LeftBlock(props: BlockProps) {
 
     let leftBlockClass = classnames({
         'block': true,
-        'block-alternate': props.alternate
+        'block-alternate': props.alternate,
+        'block-image': props.image
     })
 
     return (
