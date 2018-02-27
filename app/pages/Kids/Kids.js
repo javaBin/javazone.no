@@ -87,7 +87,7 @@ function Session(props: SessionProps) {
             </Row>
             <Row middle="xs" center="xs">
                 <div className="kids-session-button">
-                    <Button margin target alternate>Påmelding her</Button>
+                    <Button margin target alternate link={workshopUrl(props.session)}>Påmelding her</Button>
                 </div>
             </Row>
         </Col>
@@ -179,6 +179,13 @@ class Kids extends React.Component<KidsProps> {
             </Page>
         )
     }
+}
+
+function workshopUrl(workshop) {
+    if (!workshop) {
+        return '#';
+    }
+    return `https://moosehead.javazone.no/#/register/${workshop.id}`;
 }
 
 function mapStateToProps(state) {
