@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import george from '../../assets/kids/george.png';
+import george from '../../assets/kids/codestudio.jpg';
 import scratch from '../../assets/kids/scratch.jpg';
 import minecraft from '../../assets/kids/minecraft.jpg';
 import kidsimage from '../../assets/kids/kids_header.jpg';
