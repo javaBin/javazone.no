@@ -58,13 +58,19 @@ type SessionListProps = {
 
 function SessionList(props: SessionListProps) {
     return (
-        <Grid>
-            <Row center="xs" around="xs">
-                {props.sessions.map((session) => {
-                    return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
-                })}
-            </Row>
-        </Grid>
+        <div className="academy-item-container">
+            <Grid>
+                <Row center="xs">
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                        <Row around="xs">
+                            {props.sessions.map((session) => {
+                                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+                            })}
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>
     )
 }
 
@@ -75,6 +81,31 @@ function Session(props: SessionProps) {
 
     const extraInfo = kidsInfo[props.session.id];
 
+    return (
+        <Col xs={12} sm={12} md={12} lg={4}>
+            <Row center="xs">
+                <div className="kids-session-title">
+                    <h1>{props.session.title}</h1>
+                </div>
+            </Row>
+            <Row center="xs">
+                <div className='kids-session-image' style={{backgroundImage: `url('${extraInfo.background}')`}}>
+                </div>
+            </Row>
+            <Row className="academy-item-location" center="xs">
+                <p className="kids-session-desc">
+                    {props.session.description}
+                </p>
+            </Row>
+            <Row middle="xs" center="xs">
+                <div className="kids-session-button">
+                    <Button margin target alternate>Påmelding her</Button>
+                </div>
+            </Row>
+        </Col>
+    )
+
+    /*
     return (
         <Col xs={12} sm={12} md={4} lg={4}>
             <h1 className="kids-session-title">{props.session.title}</h1>
@@ -87,6 +118,7 @@ function Session(props: SessionProps) {
             </div>
         </Col>
     )
+    */
 };
 
 class Kids extends React.Component<KidsProps, KidsState> {
