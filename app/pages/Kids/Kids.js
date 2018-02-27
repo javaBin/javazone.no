@@ -108,7 +108,7 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             søndag 18. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 3 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
-                            barna og de største ungdommene.
+                            og de litt eldre barna.
                         </P>
                         <P>
                             Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
