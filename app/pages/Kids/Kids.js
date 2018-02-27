@@ -21,14 +21,29 @@ const kidsInfo = {
     'kids_george': {
         background: george,
         age: '8+ år',
+        description: 'Med Turtle Tom og Clojure programmeringsspråk,' +
+        ' vil du være kreativ ved hjelp av George programmeringsplattform.' +
+        ' Ingen forkunnskaper kreves.',
+        url: 'https://www.george.andante.no/',
     },
     'kids_scratch': {
         background: scratch,
         age: '8+ år',
+        description: 'Scratch er et visuelt programmeringsspråk som er laget for at barn ' +
+        'og unge skal lære seg grunnleggende programmering. Språket er oversatt til norsk, ' +
+        'og en programmerer ved å dra og sette sammen blokker med kode. Dette kurset tar for ' +
+        'seg hvordan Scratch kan introduseres til nybegynnere.',
+        url: 'https://scratch.mit.edu',
     },
     'kids_minecraft': {
         background: minecraft,
         age: '11+ år',
+        description: 'ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og ' +
+        'roboter inne i spillet. Disse datamaskinene og robotene kan programmeres til å kontrollere ' +
+        'dører, grave huler, bygge hus og så videre. ComputerCraft bruker programmeringsspråket Lua, ' +
+        'som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset ' +
+        'må deltagerne ha en Minecraft-konto.',
+        url: 'http://oppgaver.kidsakoder.no/computercraft/installasjon/installasjon.html',
     }
 };
 
@@ -46,7 +61,7 @@ type SessionListProps = {
 
 function SessionList(props: SessionListProps) {
     return (
-        <div className="academy-item-container">
+        <div className="kids-item-container">
             <Grid>
                 <Row center="xs">
                     <Col xs={12} sm={12} md={12} lg={12}>
@@ -80,9 +95,19 @@ function Session(props: SessionProps) {
                 <div className='kids-session-image' style={{backgroundImage: `url('${extraInfo.background}')`}}>
                 </div>
             </Row>
-            <Row className="academy-item-location" center="xs">
+            <Row className="kids-item-location" center="xs">
                 <p className="kids-session-desc">
-                    {props.session.description}
+                    {extraInfo.description}
+                </p>
+            </Row>
+            <Row className="kids-item-location" center="xs">
+                <p className="kids-session-desc">
+                    {extraInfo.age}
+                </p>
+            </Row>
+            <Row className="kids-item-location" center="xs">
+            <p className="kids-session-desc">
+                    <Button link={extraInfo.url}>Mer info</Button>
                 </p>
             </Row>
             <Row middle="xs" center="xs">
