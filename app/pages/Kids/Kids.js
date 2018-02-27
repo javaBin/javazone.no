@@ -1,9 +1,7 @@
 //@flow
 import * as React from 'react';
 import { getWorkshops } from '../../actions/workshops';
-import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
 import { Block, Content, SubHeader, P} from '../../components/block';
-import { Link } from '../../components/link';
 import { Section } from '../../components/Section/Section';
 import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
@@ -12,9 +10,8 @@ import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import george from '../../assets/kids/george.png';
+import george from '../../assets/kids/codestudio.jpg';
 import scratch from '../../assets/kids/scratch.jpg';
-import { find } from 'lodash/fp';
 import minecraft from '../../assets/kids/minecraft.jpg';
 import kidsimage from '../../assets/kids/kids_header.jpg';
 import './Kids.less';
@@ -24,28 +21,34 @@ const kidsInfo = {
     'kids_george': {
         background: george,
         age: '8+ år',
-        title: 'George with Turtle Tom',
-        odd: true
+        description: 'Med Turtle Tom og Clojure programmeringsspråk,' +
+        ' vil du være kreativ ved hjelp av George programmeringsplattform.' +
+        ' Ingen forkunnskaper kreves.',
+        url: 'https://www.george.andante.no/',
     },
     'kids_scratch': {
         background: scratch,
         age: '8+ år',
-        title: 'Scratch',
-        odd: false
+        description: 'Scratch er et visuelt programmeringsspråk som er laget for at barn ' +
+        'og unge skal lære seg grunnleggende programmering. Språket er oversatt til norsk, ' +
+        'og en programmerer ved å dra og sette sammen blokker med kode. Dette kurset tar for ' +
+        'seg hvordan Scratch kan introduseres til nybegynnere.',
+        url: 'https://scratch.mit.edu',
     },
     'kids_minecraft': {
         background: minecraft,
         age: '11+ år',
-        title: 'ComputerCraft i Minecraft',
-        odd: true
+        description: 'ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og ' +
+        'roboter inne i spillet. Disse datamaskinene og robotene kan programmeres til å kontrollere ' +
+        'dører, grave huler, bygge hus og så videre. ComputerCraft bruker programmeringsspråket Lua, ' +
+        'som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset ' +
+        'må deltagerne ha en Minecraft-konto.',
+        url: 'http://oppgaver.kidsakoder.no/computercraft/installasjon/installasjon.html',
     }
 };
 
 type KidsProps = {
     workshops: object 
-}
-
-type KidsState = {
 }
 
 type SessionProps = {
@@ -58,13 +61,19 @@ type SessionListProps = {
 
 function SessionList(props: SessionListProps) {
     return (
-        <Grid>
-            <Row center="xs" around="xs">
-                {props.sessions.map((session) => {
-                    return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
-                })}
-            </Row>
-        </Grid>
+        <div className="kids-item-container">
+            <Grid>
+                <Row center="xs">
+                    <Col xs={12} sm={12} md={12} lg={12}>
+                        <Row around="xs">
+                            {props.sessions.map((session) => {
+                                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+                            })}
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>
     )
 }
 
@@ -76,20 +85,41 @@ function Session(props: SessionProps) {
     const extraInfo = kidsInfo[props.session.id];
 
     return (
-        <Col xs={12} sm={12} md={4} lg={4}>
-            <h1 className="kids-session-title">{props.session.title}</h1>
-            <img className="kids-session-image" src={extraInfo.background} alt={props.session.title} />
+        <Col xs={12} sm={12} md={12} lg={4}>
+            <Row center="xs">
+                <div className="kids-session-title">
+                    <h1>{props.session.title}</h1>
+                </div>
+            </Row>
+            <Row center="xs">
+                <div className='kids-session-image' style={{backgroundImage: `url('${extraInfo.background}')`}}>
+                </div>
+            </Row>
+            <Row className="kids-item-location" center="xs">
+                <p className="kids-session-desc">
+                    {extraInfo.description}
+                </p>
+            </Row>
+            <Row className="kids-item-location" center="xs">
+                <p className="kids-session-desc">
+                    {extraInfo.age}
+                </p>
+            </Row>
+            <Row className="kids-item-location" center="xs">
             <p className="kids-session-desc">
-                {props.session.description}
-            </p>
-            <div className="kids-session-button">
-                <Button>Påmeldingsskjema</Button>
-            </div>
+                    <Button link={extraInfo.url}>Mer info</Button>
+                </p>
+            </Row>
+            <Row middle="xs" center="xs">
+                <div className="kids-session-button">
+                    <Button margin target alternate link={workshopUrl(props.session)}>Påmelding her</Button>
+                </div>
+            </Row>
         </Col>
     )
 };
 
-class Kids extends React.Component<KidsProps, KidsState> {
+class Kids extends React.Component<KidsProps> {
 
     constructor(props: KidsProps) {
         super(props);
@@ -108,7 +138,7 @@ class Kids extends React.Component<KidsProps, KidsState> {
                             søndag 18. mars for å gi dem en smakebit på
                             voksenlivet. Vi kjører 3 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
-                            barna og de største ungdommene.
+                            og de litt eldre barna.
                         </P>
                         <P>
                             Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
@@ -175,6 +205,13 @@ class Kids extends React.Component<KidsProps, KidsState> {
             </Page>
         )
     }
+}
+
+function workshopUrl(workshop) {
+    if (!workshop) {
+        return '#';
+    }
+    return `https://moosehead.javazone.no/#/register/${workshop.id}`;
 }
 
 function mapStateToProps(state) {
