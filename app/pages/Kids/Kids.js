@@ -1,9 +1,7 @@
 //@flow
 import * as React from 'react';
 import { getWorkshops } from '../../actions/workshops';
-import { Heading, LargeHeading, SmallHeading, Container, Pitch } from '../../components/page';
 import { Block, Content, SubHeader, P} from '../../components/block';
-import { Link } from '../../components/link';
 import { Section } from '../../components/Section/Section';
 import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block';
 import { Header } from '../../components/Header/Header';
@@ -14,7 +12,6 @@ import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import george from '../../assets/kids/george.png';
 import scratch from '../../assets/kids/scratch.jpg';
-import { find } from 'lodash/fp';
 import minecraft from '../../assets/kids/minecraft.jpg';
 import kidsimage from '../../assets/kids/kids_header.jpg';
 import './Kids.less';
@@ -24,28 +21,19 @@ const kidsInfo = {
     'kids_george': {
         background: george,
         age: '8+ år',
-        title: 'George with Turtle Tom',
-        odd: true
     },
     'kids_scratch': {
         background: scratch,
         age: '8+ år',
-        title: 'Scratch',
-        odd: false
     },
     'kids_minecraft': {
         background: minecraft,
         age: '11+ år',
-        title: 'ComputerCraft i Minecraft',
-        odd: true
     }
 };
 
 type KidsProps = {
     workshops: object 
-}
-
-type KidsState = {
 }
 
 type SessionProps = {
@@ -104,24 +92,9 @@ function Session(props: SessionProps) {
             </Row>
         </Col>
     )
-
-    /*
-    return (
-        <Col xs={12} sm={12} md={4} lg={4}>
-            <h1 className="kids-session-title">{props.session.title}</h1>
-            <img className="kids-session-image" src={extraInfo.background} alt={props.session.title} />
-            <p className="kids-session-desc">
-                {props.session.description}
-            </p>
-            <div className="kids-session-button">
-                <Button>Påmeldingsskjema</Button>
-            </div>
-        </Col>
-    )
-    */
 };
 
-class Kids extends React.Component<KidsProps, KidsState> {
+class Kids extends React.Component<KidsProps> {
 
     constructor(props: KidsProps) {
         super(props);
