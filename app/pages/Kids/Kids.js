@@ -196,16 +196,17 @@ class Kids extends React.Component<KidsProps> {
                             Påmeldingen åpner onsdag 28. februar kl. 12.00.
                         </P>
                     </LeftBlock>
-
+                </Section>
+                <Section pixel alternate>
+                    <SessionList sessions={this.props.workshops} />
+                </Section>
+                <Section>
                     <CenterBlock header="Vi sees på Teknologihuset søndag 18. mars!">
                         <P>
                             Vennlig hilsen,<br />
                             javaBin og Lær Kidsa Koding
                         </P>
                     </CenterBlock>
-                </Section>
-                <Section pixel alternate>
-                    <SessionList sessions={this.props.workshops} />
                 </Section>
             </Page>
         )
