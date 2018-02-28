@@ -67,18 +67,11 @@ type SessionListProps = {
 
 function SessionList(props: SessionListProps) {
     return (
-        <div className="kids-item-container">
-            <Grid>
-                <Row center="xs">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                        <Row around="xs">
-                            {props.sessions.map((session) => {
-                                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
-                            })}
-                        </Row>
-                    </Col>
-                </Row>
-            </Grid>
+        <div>
+            <Header align="center">Sesjoner</Header>
+            {props.sessions.map((session) => {
+                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+            })}
         </div>
     )
 }
@@ -91,37 +84,19 @@ function Session(props: SessionProps) {
     const extraInfo = kidsInfo[props.session.id];
 
     return (
-        <Col xs={12} sm={12} md={12} lg={4}>
-            <Row center="xs">
-                <div className="kids-session-title">
-                    <h1>{props.session.title}</h1>
+        <div className="kids-session-container">
+            <LeftBlock centerHeader image={extraInfo.background} alternate header={props.session.title}>
+                <div className="kids-session-content">
+                    <p>
+                        {extraInfo.description}
+                    </p>
                 </div>
-            </Row>
-            <Row center="xs">
-                <div className='kids-session-image' style={{backgroundImage: `url('${extraInfo.background}')`}}>
+                <div className="kids-session-buttons">
+                    <Button alternate link={extraInfo.url}>Mer info</Button>
+                    <Button alternate link={workshopUrl(props.session)}>Påmelding her</Button>
                 </div>
-            </Row>
-            <Row className="kids-item-location" center="xs">
-                <p className="kids-session-desc">
-                    {extraInfo.description}
-                </p>
-            </Row>
-            <Row className="kids-item-location" center="xs">
-                <p className="kids-session-desc">
-                    {extraInfo.age}
-                </p>
-            </Row>
-            <Row className="kids-item-location" center="xs">
-            <p className="kids-session-desc">
-                    <Button link={extraInfo.url}>Mer info</Button>
-                </p>
-            </Row>
-            <Row middle="xs" center="xs">
-                <div className="kids-session-button">
-                    <Button margin target alternate link={workshopUrl(props.session)}>Påmelding her</Button>
-                </div>
-            </Row>
-        </Col>
+            </LeftBlock>
+        </div>
     )
 };
 

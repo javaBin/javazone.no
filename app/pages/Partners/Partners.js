@@ -18,12 +18,6 @@ import partners2 from '../../assets/partners_2.jpg';
 import partners3 from '../../assets/partners_3.jpg';
 import './Partners.less';
 
-// https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript#6274381
-function shuffle(o){
-    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
-}
-
 const imagesContext = require.context('../../assets/partners-18', false, /\.svg$/);
 const images = imagesContext.keys().map(image => (
     {context: imagesContext(image), filename: image}
@@ -32,10 +26,6 @@ const images = imagesContext.keys().map(image => (
 function getimage(images, image) {
     return images.find(img => img.filename.indexOf(image) >= 0);
 }
-
-const signedPartners = shuffle(partners).map(partner => (
-    {name: partner.name, logo: getimage(images, partner.logo), url: partner.url}
-));
 
 type PartnerListProps = {
     partners: Array<Partner>
