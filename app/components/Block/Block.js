@@ -8,6 +8,8 @@ import './Block.less';
 type BlockProps = {
     header?: string,
     alternate?: bool,
+    image?: string,
+    centerHeader?: bool,
     children: React.Node
 }
 
@@ -52,13 +54,26 @@ function LeftBlock(props: BlockProps) {
         'block-alternate': props.alternate
     })
 
+    let leftBlockHeaderClass = classnames({
+        'block-header': true,
+        'block-header-margin-right': !props.centerHeader,
+    })
+
     return (
         <Grid>
             <Row className={leftBlockClass} center="xs">
                 <Col xs={12} sm={12} md={12} lg={12}>
                     <Row center="xs">
                         <Col xs={12} sm={12} md={4} lg={4}>
-                            <h1 className="block-header block-header-margin-right">{props.header}</h1>
+                            <h1 className={leftBlockHeaderClass}>{props.header}</h1>
+                            {props.image ? 
+                                <div className="block-image-wrapper">
+                                    <div className="block-image">
+                                        <img src={props.image} />
+                                    </div>
+                                </div>
+                                 : 
+                                 null}
                         </Col>
                         <Col className="block-text" xs={12} sm={12} md={8} lg={8}>
                             {props.children}

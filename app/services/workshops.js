@@ -1,3 +1,3 @@
 export function get() {
-    return fetch('https://javazone.no/moosehead/data/workshopList');
+    return fetch('https://moosehead.javazone.no/data/workshopList');
 }
