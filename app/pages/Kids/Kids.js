@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import george from '../../assets/kids/codestudio.jpg';
+import george from '../../assets/kids/george.png';
 import scratch from '../../assets/kids/scratch.jpg';
 import minecraft from '../../assets/kids/minecraft.jpg';
 import kidsimage from '../../assets/kids/kids_header.jpg';
@@ -21,9 +21,15 @@ const kidsInfo = {
     'kids_george': {
         background: george,
         age: '8+ år',
-        description: 'Med Turtle Tom og Clojure programmeringsspråk,' +
-        ' vil du være kreativ ved hjelp av George programmeringsplattform.' +
-        ' Ingen forkunnskaper kreves.',
+        description: 'Hils på Tom! Tom er en skilpadde. ' +
+        'Tom lærer raskt, og er god på å følge instrukser. ' +
+        'Han er dyktig med farger og bevegelse, og gjør stort sett alt du ber ham om. ' +
+        'I løpet av 2 timer lære vi først å kommandere Tom. Vi får ham til å bevege seg og tegne det vi vil. ' +
+        'Så lærer vi ham nye ord og kommandoer.  Og ja; han lærer gjerne ord på hvilket som helst språk. ' +
+        'Vi kommer også til å lære hvordan man styrer flere skilpadder samtidig. Og har vi tid, så bygger vi ' +
+        'til og med et spill. ' +
+        'Deretter tar du med deg det du har lært hjem - for å fortsette å utvikle dine kunnskaper og ferdigheter. ' +
+        'Og du må gjerne dele med venner og familie, på skolen, og online.',
         url: 'https://www.george.andante.no/',
     },
     'kids_scratch': {
