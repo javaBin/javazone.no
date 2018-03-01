@@ -90,10 +90,13 @@ function Session(props: SessionProps) {
                     <p>
                         {extraInfo.description}
                     </p>
+                    <p className="kids-session-age">
+                        {extraInfo.age}
+                    </p>
                 </div>
                 <div className="kids-session-buttons">
                     <Button alternate link={extraInfo.url}>Mer info</Button>
-                    <Button alternate link={workshopUrl(props.session)}>Påmelding her</Button>
+                    <Button alternate link={workshopUrl(props.session)}>Påmelding</Button>
                 </div>
             </LeftBlock>
         </div>
