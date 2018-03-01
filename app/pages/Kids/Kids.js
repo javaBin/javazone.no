@@ -150,7 +150,7 @@ class Kids extends React.Component<KidsProps> {
                             <P>
                                 Vi har et begrenset antall plasser, derfor er det viktig at
                                 du melder dine barn på arrangementet.
-                                Påmeldingen åpner onsdag 28. februar kl. 12.00.
+                                Påmelding er åpen fra torsdag 1. mars.
                             </P>
                             <SubHeader>Forberedelser</SubHeader>
                             <P>
@@ -171,7 +171,7 @@ class Kids extends React.Component<KidsProps> {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmeldingen åpner onsdag 28. februar kl. 12.00.
+                            Påmelding er åpen fra torsdag 1. mars.
                         </P>
                     </LeftBlock>
                 </Section>
