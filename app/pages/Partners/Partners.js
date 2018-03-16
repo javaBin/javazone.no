@@ -167,8 +167,9 @@ function Partners() {
             </Section>
             <Section alternate pixel>
                 <Header align="center">Partnership Prices</Header>
+                <SubHeader align="center">(And we're sold out!)</SubHeader>
                 <CenterBlock>
-                    <div className="partner-prices-main">NOK 69.000,-</div>
+                    <div className="partner-prices-main sold-out-text">NOK 69.000,-</div>
                     <p>
                         <em>Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.</em>
                     </p>
@@ -176,52 +177,52 @@ function Partners() {
                         All partnerships have a base price for entry which gives you everything described above.<br />
                         We also have some add ons, as well as tickets for your employees, priced below.<br />
                         <em className="partner-prices-emph">After March 1st, the base price increases to NOK 84.000,-</em><br />
-                        <span className="partners__vat">prices ex VAT</span>
+                        <span className="partner-prices-vat">(prices ex VAT)</span>
                     </p>
                 </CenterBlock>
                 <LeftBlock alternate header="Partnership Stand">
-                    <div className='partners-stand-prices'>
-                        <table className='table'>
+                    <div className='partners-table-section'>
+                        <table className='table sold-out-text-table'>
                             <tbody>
-                                <tr className='table__row partners__stand-option partners__stand-option'>
-                                    <td className='table-data'>Extra Stand Space</td>
-                                    <td className='table-data'>NOK 38.000,-</td>
+                                <tr className='table-row'>
+                                    <td className='partners-desc-column'>Extra Stand Space</td>
+                                    <td className='partners-price-column'>NOK 38.000,-</td>
                                 </tr>
-                                <tr className='table__row partners__stand-option partners__stand-option'>
-                                    <td className='table-data'>Restaurant Stand</td>
-                                    <td className='table-data'>NOK 63.000,-</td>
+                                <tr className='table-row'>
+                                    <td className='partners-desc-column'>Restaurant Stand</td>
+                                    <td className='partners-price-column'>NOK 63.000,-</td>
                                 </tr>
-                                <tr className='table__row partners__stand-option partners__stand-option'>
-                                    <td className='table-data'>Restaurant Stand (Evening)</td>
-                                    <td className='table-data'>NOK 20.000,-</td>
+                                <tr className='table-row'>
+                                    <td className='partners-desc-column'>Restaurant Stand (Evening)</td>
+                                    <td className='partners-price-column'>NOK 20.000,-</td>
                                 </tr>
-                                <tr className='table__row partners__stand-option partners__stand-option'>
-                                    <td className='table-data'>Concept Stand</td>
-                                    <td className='table-data'>NOK 55.000,-</td>
+                                <tr className='table-row'>
+                                    <td className='partners-desc-column'>Concept Stand</td>
+                                    <td className='partners-price-column'>NOK 55.000,-</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </LeftBlock>
                 <LeftBlock alternate header="Partnership Ticket">
-                    <div className='partners-ticket-prices'>
-                        <table className='table'>
+                    <div className='partners-table-section'>
+                        <table className='table sold-out-text-table'>
                             <tbody>
-                                <tr className='table__row'>
-                                    <td className='table-data'>Tickets for employees (0 - 30)</td>
-                                    <td className='table-data'>NOK 5.590,-</td>
+                                <tr className=''>
+                                    <td className='partners-desc-column'>Tickets for employees (0 - 30)</td>
+                                    <td className='partners-price-column'>NOK 5.590,-</td>
                                 </tr>
                                 <tr className='table__row'>
-                                    <td className='table-data'>Tickets for employees (31 - 50)</td>
-                                    <td className='table-data'>NOK 5.390,-</td>
+                                    <td className='partners-desc-column'>Tickets for employees (31 - 50)</td>
+                                    <td className='partners-price-column'>NOK 5.390,-</td>
                                 </tr>
                                 <tr className='table__row'>
-                                    <td className='table-data'>Tickets for employees (51 - ∞)</td>
-                                    <td className='table-data'>NOK 5.190,-</td>
+                                    <td className='partners-desc-column'>Tickets for employees (51 - ∞)</td>
+                                    <td className='partners-price-column'>NOK 5.190,-</td>
                                 </tr>
                                 <tr className='table__row'>
-                                    <td className='table-data'>Tickets for employees (Late-Bird)</td>
-                                    <td className='table-data'>NOK 6.190,-</td>
+                                    <td className='partners-desc-column'>Tickets for employees (Late-Bird)</td>
+                                    <td className='partners-price-column'>NOK 6.190,-</td>
                                 </tr>
                             </tbody>
                         </table>
