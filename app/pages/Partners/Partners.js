@@ -167,11 +167,18 @@ function Partners() {
             </Section>
             <Section alternate pixel>
                 <Header align="center">Partnership Prices</Header>
-                <SubHeader align="center">(And we're sold out!)</SubHeader>
+                <SubHeader align="center">[And we're sold out!]</SubHeader>
                 <CenterBlock>
                     <div className="partner-prices-main sold-out-text">NOK 69.000,-</div>
                     <p>
-                        <em>Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.</em>
+                        <em>
+                            Note that all 50 partnerships for JavaZone 2017 were sold out long before the conference.
+                        </em>
+                        <br />
+                        <em>
+                            The same happened this year – we are sold out. Again. Please, feel free to contact us
+                            if you would like to be put on the waiting list or the contact list for the next year.
+                        </em>
                     </p>
                     <p>
                         All partnerships have a base price for entry which gives you everything described above.<br />
