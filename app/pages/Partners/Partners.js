@@ -119,7 +119,8 @@ function Partners() {
                     <p>
                         Even though all Partners are considered equal, there are
                         a few options to choose from. There is a base package that
-                        everyone gets, and then there are a few available expansions. Notice that these expansions have a limited availability.
+                        everyone gets, and then there are a few available expansions. 
+                        Notice that these expansions have a limited availability.
                     </p>
                     <SubHeader>Included in all partnerships</SubHeader>
                     <ul className='list'>
@@ -176,8 +177,16 @@ function Partners() {
                         </em>
                         <br />
                         <em>
-                            The same happened this year – we are sold out. Again. Please, feel free to contact us
+                            The same happened this year – we are sold out. Again. 
+                        </em>
+                        <br />
+                        <em>
+                            Please, feel free to contact us
                             if you would like to be put on the waiting list or the contact list for the next year.
+                        </em>
+                        <br />
+                        <em>
+                            All existing partners are still able to get the conference tickets for a special, reduced price.
                         </em>
                     </p>
                     <p>
@@ -213,7 +222,7 @@ function Partners() {
                 </LeftBlock>
                 <LeftBlock alternate header="Partnership Ticket">
                     <div className='partners-table-section'>
-                        <table className='table sold-out-text-table'>
+                        <table className='table'>
                             <tbody>
                                 <tr className=''>
                                     <td className='partners-desc-column'>Tickets for employees (0 - 30)</td>
