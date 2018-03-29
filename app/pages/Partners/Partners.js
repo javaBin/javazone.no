@@ -225,8 +225,8 @@ function Partners() {
                         <table className='table'>
                             <tbody>
                                 <tr className=''>
-                                    <td className='ptable-data'>Tickets for employees (0 - 30)</td>
-                                    <td className='table-data'>NOK 5.590,-</td>
+                                    <td className='partners-desc-column'>Tickets for employees (0 - 30)</td>
+                                    <td className='partners-price-column'>NOK 5.590,-</td>
                                 </tr>
                                 <tr className='table__row'>
                                     <td className='partners-desc-column'>Tickets for employees (31 - 50)</td>
