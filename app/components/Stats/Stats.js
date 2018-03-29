@@ -42,7 +42,7 @@ function Stats(props: StatsProps) {
                             <StatItem image={mic}>200 Speakers</StatItem>
                         </Col>
                         <Col xs={12} sm={6} md={3} lg={3}>
-                            <StatItem image={partners}>46 Stands</StatItem>
+                            <StatItem image={partners}>51 Stands</StatItem>
                         </Col>
                     </Row>
                 </Col>
