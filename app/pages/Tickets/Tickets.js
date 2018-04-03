@@ -27,7 +27,7 @@ function Tickets(props: TicketsProps) {
 	        <PageHeader subHeader="Come join us in Oslo, September 12-13th">Tickets to JavaZone 2018</PageHeader>  
 	        <Section>
 	            <CenterBlock header="Get your tickets for JavaZone 2018">
-	                    <div className="partner-prices-main">NOK 5.990,-</div>
+	                    <div className="partner-prices-main">NOK 6.590,-</div>
 	                    <P>
 	                        The JavaZone Ticket includes full access to the conference <br />
 	                        and entry to workshops on Tuesday (limited seating: first come, first served).<br />
