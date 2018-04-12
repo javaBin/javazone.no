@@ -67,8 +67,12 @@ function Speakers(props: SpeakerProps) {
                         JavaZone hosts both internationals and home-grown Norwegian talent as speakers. We'd love to have you join us in 2018!
                     </p>
                     <p>
+                        <br />
+                        Our call for speakers is now closed, but you can still see (and edit) the talks you have submitted.
+                    </p>
+                    <p>
                     	<br />
-	                    <a className='button button--transparent' href="http://submit.javazone.no">Submit a session!</a>
+	                    <a className='button button--transparent' href="http://submit.javazone.no">See your submitted sessions</a>
 	                </p>
 	            </CenterBlock>
 	        </Section>
