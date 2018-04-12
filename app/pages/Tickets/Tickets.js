@@ -96,7 +96,7 @@ function Tickets(props: TicketsProps) {
                         We'll release more information about the conference before the summer, and the detailed program with information about all the talks will be ready in July. Until then, have a look at the video on top and <a href="http://2017.javazone.no">the 2017 website</a> to get a feel for how awesome JavaZone is!
                     </P>
                     <P>
-                        Don't wait too long buying your ticket though – last year we all of the 3,100 spots were gone, and we had long waiting lists. We expect a decent amout of interest this year as well.
+                        Don't wait too long buying your ticket though – last year all of the 3,100 spots were gone, and we had long waiting lists. We expect a decent amout of interest this year as well.
                     </P>
 	            </CenterBlock>
 	        </Section>
