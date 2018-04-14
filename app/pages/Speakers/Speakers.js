@@ -189,11 +189,14 @@ function Speakers(props: SpeakerProps) {
 	            </LeftBlock>
 
 	            <CenterBlock>
-	                    <p>
-	                        <a href='http://submit.javazone.no' className='button button--transparent'>
-	                            <span className='button__icon icon-check'></span> Submit a session!
-	                        </a>
-	                    </p>
+                        <p>
+                            <br />
+                            Our call for speakers is now closed, but you can still see (and edit) the talks you have submitted.
+                        </p>
+                        <p>
+                            <br />
+                            <a className='button button--transparent' href="http://submit.javazone.no">See your submitted sessions</a>
+                        </p>
 	            </CenterBlock>
 
 	            <CenterBlock header="We hope to see you at JavaZone 2018 – please feel free to spread the word to your local community!">
