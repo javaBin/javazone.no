@@ -172,19 +172,20 @@ function ImportantPrinciplesSection() {
                     JavaZone is a 100% community-organized conference created by <a href="https://java.no">javaBin</a>. The
                     program is chosen by our independent program committee, and they operate under the principle that no-one
                     is paid to hold a presentation, and likewise, that no-one can pay us to get their presentation accepted.
-                    See our monetary policy for details.
                     <br/><br/>
                     We as organizers strive to create the best possible learning experience for all our speakers and
                     participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that
                     you treat your fellow conference participants with respect. We reserve the right to take any action
-                    necessary to make sure this principle is upheld.
+                    necessary to make sure this principle is upheld. For more details, see 
+                    our <a href="https://java.no/principles.html">Code of Conduct</a> that applies to all events organised javaBin.
                     <br /><br />
-                    Should any unwanted event occur, we‘re here to help:
+                    <strong>Should any unwanted event occur, we‘re here to help:</strong>
                     <br/><br/>
                     <strong>Before the conference</strong>
                     <br />
                     You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
-                    group of people, the core organizers og JavaZone)
+                    group of people, the core organizers og JavaZone), or <a href='mailto:styret@java.no'>styret@java.no</a> (this 
+                    goes to the javaBin board).
                     <br/><br/>
                     <strong>During the conference</strong>
                     <br />
