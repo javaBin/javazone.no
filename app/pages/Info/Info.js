@@ -184,7 +184,7 @@ function ImportantPrinciplesSection() {
                     <strong>Before the conference</strong>
                     <br />
                     You can contact us by email: <a href='mailto:javazone@java.no'>javazone@java.no</a> (this goes to a small
-                    group of people, the core organizers og JavaZone), or <a href='mailto:styret@java.no'>styret@java.no</a> (this 
+                    group of people, the core organizers of JavaZone), or <a href='mailto:styret@java.no'>styret@java.no</a> (this 
                     goes to the javaBin board).
                     <br/><br/>
                     <strong>During the conference</strong>
