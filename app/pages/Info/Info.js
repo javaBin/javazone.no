@@ -177,7 +177,7 @@ function ImportantPrinciplesSection() {
                     participants, and we expect you to do the same. Everyone is welcome at JavaZone, but we do require that
                     you treat your fellow conference participants with respect. We reserve the right to take any action
                     necessary to make sure this principle is upheld. For more details, see 
-                    our <a href="https://java.no/principles.html">Code of Conduct</a> that applies to all events organised javaBin.
+                    our <a href="https://java.no/principles.html">Code of Conduct</a> that applies to all events organised by javaBin.
                     <br /><br />
                     <strong>Should any unwanted event occur, we‘re here to help:</strong>
                     <br/><br/>
