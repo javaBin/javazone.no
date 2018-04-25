@@ -13,7 +13,9 @@ type FooterProps = {
     facebookUrl?: string,
     twitterUrl?: string,
     mailUrl?: string,
-    githubUrl?: string
+    githubUrl?: string,
+    codeOfConduct?: string,
+    cookies?: string
 }
 
 Footer.defaultProps = {
@@ -21,7 +23,8 @@ Footer.defaultProps = {
     facebookUrl: "https://www.facebook.com/JavaZoneConference",
     twitterUrl: "https://twitter.com/javazone",
     mailUrl: "mailto:javazone@java.no",
-    githubUrl: "https://github.com/javaBin"
+    githubUrl: "https://github.com/javaBin",
+    codeOfConduct: "https://java.no/principles.html#"
 }
 
 function Footer(props: FooterProps): React.Node {
@@ -49,35 +52,18 @@ function Footer(props: FooterProps): React.Node {
                     <Row center="xs">
                         <Link href={props.javabinUrl} className="javabin nav-item draw meet">Made by javaBin</Link>
                     </Row>
+                    <Row center="xs" className="info-spacer">
+                        <Col>
+                            <Link href={props.codeOfConduct} className="javabin nav-item draw meet">Code of Coduct</Link>
+                        </Col>
+                        {/* <Col>
+                            <Link href={props.cookies} className="javabin nav-item draw meet">Cookies</Link>
+                        </Col> */}
+                    </Row>
                 </Col>
             </Row>
         </Grid>
     )
-    /*
-    return (
-        <Container fullWidth>
-            <div className="border">
-            </div>
-            <div className="row footer">
-                <div className="col-xs col-sm col-md col-lg">
-                    <div className="box">
-                        <Container>
-                            <a href={props.facebook}><Facebook className="social-icon" size="32" /></a>
-                            <a href={props.twitter}><Twitter className="social-icon" size="32" /></a>
-                            <a href={props.mail}><Mail className="social-icon" size="32" /></a>
-                            <a href={props.github}><Github className="social-icon" size="32" /></a>
-                        </Container>
-                    </div>
-                    <div className="box">
-                        <Container>
-                            <Link href={props.javabin} className="javabin nav-item draw meet">Made by javaBin</Link>
-                        </Container>
-                    </div>
-                </div>
-            </div>
-        </Container>
-    )
-    */
 }
 
 export default Footer;

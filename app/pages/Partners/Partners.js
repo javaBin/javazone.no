@@ -35,11 +35,13 @@ type PartnerListProps = {
 function PartnerList(props: PartnerListProps) {
     return (
         <Grid fluid>
-            <Row>
+            <Row className="partners-list-container">
                 {props.partners.map((partner) => {
                     return (
                         <Col key={partner.name}>
-                            <img className="partner-logo" src={getimage(images, partner.logo).context} alt={partner.name}/>
+                            <Link href={partner.url} className="partners-list-item">
+                                <img className="partner-logo" src={getimage(images, partner.logo).context} alt={partner.name}/>
+                            </Link>
                         </Col>
                     )
                 })}
@@ -52,12 +54,7 @@ function Partners() {
     return (
         <Page name='partners'>
             <PageHeader subHeader="Join us in 2018">Dear Javazone Partners</PageHeader>
-            {/*
-            <Section alternate pixel>
-                <Header align='center'>Partners</Header>
-                <PartnerList partners={partners} />
-            </Section>
-            */}
+
             <Section>
                 <LeftBlock header="JavaZone 2018: Bigger and better than ever">
                     <p>
@@ -90,6 +87,10 @@ function Partners() {
                         Have you got a great concept for your JavaZone stand and need help to realize it? Don’t be shy - just ask us. Almost anything is possible!
                     </p>
                 </LeftBlock>
+            </Section>
+            <Section alternate pixel>
+                <Header align='center'>Partners</Header>
+                <PartnerList partners={partners} />
             </Section>
             <Section fluid>
                 <ImageBlock image={partners2} alt="JavaZone Expo" />
