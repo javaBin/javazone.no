@@ -2,7 +2,7 @@ import React from 'react';
 import index from './pages/Index/Index.js';
 import partners from './pages/Partners/Partners.js';
 import notFound from './pages/NotFound/NotFound.js';
-import partnermoteDesember from './pages/partnermote-desember';
+import partnermoteDesember from './pages/partnermote-desember.js';
 import partnermoteApril from './pages/partnermote-april.js';
 import partnermoteJuni from './pages/partnermote-juni.js';
 import academy from './pages/Academy/Academy.js';
@@ -22,6 +22,7 @@ import info from './pages/Info/Info.js';
 const routes = compile({
     '/partners': partners,
     '/partnermote-desember': partnermoteDesember,
+    '/partnermote-april': partnermoteApril,
     '/academy': academy,
     '/academy/oslo': academyLocation(academyData.oslo),
     '/academy/tromso': academyLocation(academyData.tromso),

@@ -256,7 +256,7 @@ function Partners() {
                     </p>
                 </CenterBlock>
                 <CenterBlock>
-                    <Button link='/partnermote-desember'>Slides from last partner meeting (in Norwegian)</Button>
+                    <Button link='/partnermote-april'>Slides from last partner meeting (in Norwegian)</Button>
 	            </CenterBlock>
             </Section>
         </Page>
