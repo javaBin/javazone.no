@@ -16,7 +16,7 @@ const CenteredButton = ({children}) => (
 );
 
 export default () => (
-    <Page name='journeyzone'>
+    <Page name='frivillig'>
         <Heading>
             <LargeHeading>Bli frivillig på JavaZone</LargeHeading>
             <SmallHeading>Meld deg på i dag</SmallHeading>
@@ -31,7 +31,7 @@ export default () => (
                     Hvert år strømmer nesten 3000 utviklere til Oslo for å delta på JavaZone. I tillegg kommer nærmere 200 foredragsholdere fra hele verden, pluss mennesker fra 50 ulike partnere.
                     </p>
                     <p>
-                    Har du lyst til å bidra til at disse menneskene skal få en fantastisk opplevelse, og også få ta del i dette selv? Er du student høsten 2017? Perfekt! Du er akkurat den vi leter etter! Søk som frivillig på JavaZone 2017, og bli med å hjelpe oss å lage tidenes beste JavaZone!
+                    Har du lyst til å bidra til at disse menneskene skal få en fantastisk opplevelse, og også få ta del i dette selv? Er du student høsten 2018? Perfekt! Du er akkurat den vi leter etter! Søk som frivillig på JavaZone 2018, og bli med å hjelpe oss å lage tidenes beste JavaZone!
                     </p>
                 </Content>
             </Block>
