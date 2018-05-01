@@ -18,6 +18,11 @@ import partners2 from '../../assets/partners_2.jpg';
 import partners3 from '../../assets/partners_3.jpg';
 import './Partners.less';
 
+function shuffle(o){
+    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
 const imagesContext = require.context('../../assets/partners-18', false, /\.svg$/);
 const images = imagesContext.keys().map(image => (
     {context: imagesContext(image), filename: image}
@@ -31,12 +36,12 @@ type PartnerListProps = {
     partners: Array<Partner>
 }
 
-
 function PartnerList(props: PartnerListProps) {
+    const shuffled = shuffle(props.partners);
     return (
         <Grid fluid>
             <Row className="partners-list-container">
-                {props.partners.map((partner) => {
+                {shuffled.map((partner) => {
                     return (
                         <Col key={partner.name}>
                             <Link href={partner.url} className="partners-list-item">

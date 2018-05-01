@@ -8,10 +8,7 @@ import Button from '../../components/Button/Button';
 //import header_img from '../assets/frivillig.jpg';
 import './Frivillig.less';
 
-type FrivilligProps = {
-}
-
-function Frivillig(props: FrivilligProps) {
+function Frivillig() {
     return (
         <Page name='frivillig'>
             <PageHeader subHeader="Meld deg på i dag!">Bli frivillig på JavaZone</PageHeader>
@@ -70,7 +67,7 @@ function Frivillig(props: FrivilligProps) {
                 </CenterBlock>
             </Section>
         </Page>
-    )
+    );
 }
 
 export default Frivillig;
