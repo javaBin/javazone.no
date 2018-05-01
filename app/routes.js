@@ -18,6 +18,7 @@ import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
 import info from './pages/Info/Info.js';
+import frivillig from './pages/Frivillig/Frivillig.js';
 
 const routes = compile({
     '/partners': partners,
@@ -33,6 +34,7 @@ const routes = compile({
     '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,
     '/info': info,
+    '/frivillig': frivillig,
     '/': index
 });
 

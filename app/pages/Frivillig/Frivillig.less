@@ -1,0 +1,67 @@
+@import '../../styles/Variables';
+
+.frivillig {
+    &__frist {
+        font-size: .9rem;
+        margin-top: 0;
+    }
+
+    &__questions {
+        list-style: none;
+        margin: 5rem 0 0 0;
+        padding: 0;
+
+        @media (min-width: @screen-sm) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__question {
+        @media (min-width: @screen-sm) {
+            width: 50%;
+
+            &:nth-child(odd) {
+                padding-right: 20px;
+            }
+
+            &:nth-child(even) {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    &__header {
+        font-family: @source-sans-pro;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: @primary-color; 
+        text-transform: uppercase;
+    }
+
+    &__answer {
+        font-family: @source-sans-pro;
+        font-size: 1.2rem;
+        margin: 0 0 2rem 0;
+    }
+}
+
+.frivillig__questions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: @screen-sm) {
+        display: flex;
+    }
+
+    &__format {
+        flex-grow: 1;
+
+
+        @media (min-width: @screen-sm) {
+            width: 100/3%;
+        }
+    }
+}

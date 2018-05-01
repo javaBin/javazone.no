@@ -54,7 +54,7 @@ function Footer(props: FooterProps): React.Node {
                     </Row>
                     <Row center="xs" className="info-spacer">
                         <Col>
-                            <Link href={props.codeOfConduct} className="javabin nav-item draw meet">Code of Coduct</Link>
+                            <Link href={props.codeOfConduct} className="javabin nav-item draw meet">Code of Conduct</Link>
                         </Col>
                         {/* <Col>
                             <Link href={props.cookies} className="javabin nav-item draw meet">Cookies</Link>
