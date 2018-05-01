@@ -18,7 +18,7 @@ import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
 import info from './pages/Info/Info.js';
-import frivillig from './pages/frivillig.js';
+import frivillig from './pages/Frivillig/frivillig.js';
 
 const routes = compile({
     '/partners': partners,
