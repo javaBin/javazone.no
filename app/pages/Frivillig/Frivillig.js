@@ -43,7 +43,7 @@ function Frivillig() {
                     </li>
                     <li className='frivillig__question'>
                         <div className='frivillig__header'>Får jeg med meg noe faglig som frivillig?</div>
-                        <div className='frivillig__answer'>Å være frivillig på JavaZone er litt som å være frivillig på en musikkfestival, bare mer nerdete! Du får ca 50% fri, og kan da gå på foredrag, spise god mat og snakke med kule folk.</div>
+                        <div className='frivillig__answer'>Å være frivillig på JavaZone er litt som å være frivillig på en musikkfestival, bare mer nerdete! Du får ca. 50% fri, og kan da gå på foredrag, spise god mat og snakke med kule folk.</div>
                     </li>
                     <li className='frivillig__question'>
                         <div className='frivillig__header'>Hva med reise hvis jeg ikke bor i Oslo?</div>
@@ -51,10 +51,10 @@ function Frivillig() {
                     </li>
                     <li className='frivillig__question'>
                         <div className='frivillig__header'>Får jeg bli med på AweZone?</div>
-                        <div className='frivillig__answer'>Selvsagt får du det! JavaZone er ikke det samme uten! Her får du se de kuleste bandene og snakke med de beste folka i IT-bransjen! Ingen jobbing på kvelden – bare fest og morro =)</div></li>
+                        <div className='frivillig__answer'>Selvsagt får du det! JavaZone er ikke det samme uten! Her får du se de kuleste bandene og snakke med de beste folka i IT-bransjen! Ingen jobbing på kvelden – bare fest og moro =)</div></li>
                     <li className='frivillig__question'>
                         <div className='frivillig__header'>I don’t speak Norwegian… What about me?</div>
-                        <div className='frivillig__answer'>Beeing a volunteer at JavaZone requires you to be fluent in both Norwegian and English. This is because you are one of the main goto-people for 3100 guests.</div>
+                        <div className='frivillig__answer'>Being a volunteer at JavaZone requires you to be fluent in both Norwegian and English. This is because you are one of the main goto-people for 3100 guests.</div>
                     </li>
                 </ul>
             </Section>
