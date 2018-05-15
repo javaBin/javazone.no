@@ -16,7 +16,6 @@ type ButtonState = {
 
 }
 
-
 class Button extends React.Component<ButtonProps, ButtonState> {
 
     static defaultProps = {
