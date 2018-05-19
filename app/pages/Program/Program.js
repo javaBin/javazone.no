@@ -6,6 +6,7 @@ import { getSessions } from '../../actions/sessions';
 import { Section } from '../../components/Section/Section.js';
 import PageHeader from '../../components/PageHeader/PageHeader.js';
 import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block';
+import { Clock, Globe, User, Users } from 'react-feather';
 import Page from '../../components/Page/Page';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import * as React from 'react';
@@ -226,37 +227,80 @@ const EmptyMyProgram = () => (
     </div>
 );
 
-function Filter(sessions, state, toggleFavorite, setAll, setNorwegian, setEnglish, setMyProgram) {
+type SimpleSessionListProps = {
+    sessions: [];
+    type: string;
+}
+
+function SimpleSessionList(props: SimpleSessionListProps) {
+    const filteredList = (props.type !== 'all') ? props.sessions.filter(session => {
+        return session.format === props.type;
+    }) : props.sessions;
+    return (
+        filteredList.map((session, idx) => {
+            return <div key={session.id} className="program-simple-session-item">
+                <a className="program-simple-session-title">{session.title}</a>
+                <Row>
+                    <Col>
+                        <Row middle="xs">
+                            <Globe size="24" />
+                            {session.language === 'en' ? 'English' : 'Norwegian'}
+                        </Row>
+                    </Col>
+{/*                     <Col>
+                        <Clock size="24" />
+                        {session.duration}
+                    </Col> */}
+                    <Col>
+                        <Row middle="xs">
+                            {session.speakers.length > 1 ? <Users size="24" /> : <User size="24" />}
+                        </Row>
+                    </Col>
+                </Row>
+            </div>
+        })
+    );
+};
+
+function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop) {
     return (
         <div>
-            <Section className='program-filter' pixel alternate>
+             <Section className='program-filter' pixel alternate>
                 <Row className='program-filter'>
+                    {/*
                     <Col lg>
                         <div>
-                            <div className='program-filter-header'>Days</div>
+                            <div className='program-filter-header'>Type</div>
                             <div className='program-filter-day'>
-                                <a className='program-filter-day-padding' href='#Wednesday'>Wednesday</a>
-                                <a href='#Thursday'>Thursday</a>
+                                <a className='program-filter-day-padding' href='#Presentation'>Presentations</a>
+                                <a className='program-filter-day-padding' href='#LightningTalk'>Lightning Talks</a>
+                                <a href='#Workshop'>Workshops</a>
                             </div>
                         </div>
                     </Col>
+                    */}
                     <Col lg>
                         <div>
-                            <div className='program-filter-header'>Filters</div>
+                            <div className='program-filter-header'>Format</div>
                             <div>
-                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
+                                {/* <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
                                 <button className={`program-filter-button ${state.show === 'no' ? 'enabled' : ''}`} onClick={setNorwegian}>Norwegian</button>
                                 <button className={`program-filter-button ${state.show === 'en' ? 'enabled' : ''}`} onClick={setEnglish}>English</button>
-                                <button className={`program-filter-button ${state.show === 'my' ? 'enabled' : ''}`} onClick={setMyProgram}>My Program</button>
+                                <button className={`program-filter-button ${state.show === 'my' ? 'enabled' : ''}`} onClick={setMyProgram}>My Program</button> */}
+                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
+                                <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations</button>
+                                <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks</button>
+                                <button className={`program-filter-button ${state.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops</button>
                             </div>
                         </div>
                     </Col>
                 </Row>
             </Section>
-            <Section dark>
-                <Row className='sessions'>
+            <Section>
+{/*                 <Row className='sessions'>
                     {showEmptyMyProgram(state) ? EmptyMyProgram() : sessions.map((session, id) => Day(session, id, state, toggleFavorite))}
-                </Row>
+                </Row> */}
+                <SimpleSessionList type={state.show} sessions={sessions} />
             </Section>
         </div>
     );
@@ -270,7 +314,8 @@ type ProgramProps = {
 };
 
 type ProgramState = {
-
+    myProgram: [];
+    show: string;
 }
 
 function Fetching() {
@@ -284,15 +329,25 @@ function Fetching() {
 class Program extends React.Component<ProgramProps, ProgramState> {
 
     setAll: Function;
+    setPresentation: Function;
+    setLightningTalk: Function;
+    setWorkshop: Function;
     setNorwegian: Function;
     setEnglish: Function;
     setMyProgram: Function;
     toggleFavorite: Function;
 
+    state = {
+        myProgram: [],
+        show: 'all',
+    };
+
     constructor(props: ProgramProps) {
         super(props);
-        this.state = getDefaultSettings();
         this.setAll = this.setAll.bind(this);
+        this.setPresentation = this.setPresentation.bind(this);
+        this.setLightningTalk = this.setLightningTalk.bind(this);
+        this.setWorkshop = this.setWorkshop.bind(this);
         this.setNorwegian = this.setNorwegian.bind(this);
         this.setEnglish = this.setEnglish.bind(this);
         this.setMyProgram = this.setMyProgram.bind(this);
@@ -307,6 +362,18 @@ class Program extends React.Component<ProgramProps, ProgramState> {
 
     setAll() {
         this.setState({show: 'all'});
+    }
+
+    setPresentation() {
+        this.setState({show: 'presentation'});
+    }
+
+    setLightningTalk() {
+        this.setState({show: 'lightning-talk'});
+    }
+
+    setWorkshop() {
+        this.setState({show: 'workshop'});
     }
 
     setNorwegian() {
@@ -336,9 +403,12 @@ class Program extends React.Component<ProgramProps, ProgramState> {
             ? <Failure />
             : this.props.isFetching
                 ? <Fetching /> 
-                : Filter(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                //: Filter(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                : Filter(this.props.sessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop);
 
         saveSettings(this.state);
+
+        console.log('sessions', this.props.sessions);
 
         return (
             <Page name='program'>
