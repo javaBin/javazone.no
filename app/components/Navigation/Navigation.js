@@ -29,7 +29,8 @@ type MenuButtonProps = {
 type NavigationState = {
     hasScrolledPassedTop: bool,
     showMenuButton: bool,
-    showMenu: bool
+    showMenu: bool,
+    showOnlyIcon: bool
 }
 
 function Logo() {

@@ -1,26 +1,23 @@
-//@flow
 import * as React from 'react';
-import Page from '../../components/Page/Page';
-import PageHeader from '../../components/PageHeader/PageHeader';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Partner } from '../../Types';
-import { Section } from '../../components/Section/Section';
-import { LeftBlock, ImageBlock, CenterBlock } from '../../components/Block/Block';
-import Button from '../../components/Button/Button';
-import { SubHeader, Header } from '../../components/Header/Header';
-import { CBlock, CHeader, CContent } from '../../components/centeredblock';
-import Youtube from '../../components/youtube';
-import { Link } from '../../components/link';
-import { find } from '../../util/array';
-import partners from '../../data/partners';
+import { Col, Grid, Row } from 'react-flexbox-grid';
 import partners1 from '../../assets/partners_1.jpg';
 import partners2 from '../../assets/partners_2.jpg';
 import partners3 from '../../assets/partners_3.jpg';
+import { CenterBlock, ImageBlock, LeftBlock } from '../../components/Block/Block';
+import Button from '../../components/Button/Button';
+import { Header, SubHeader } from '../../components/Header/Header';
+import Page from '../../components/Page/Page';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import { Section } from '../../components/Section/Section';
+import { Link } from '../../components/link';
+import Youtube from '../../components/youtube';
+import partners from '../../data/partners';
 import './Partners.less';
 
 function shuffle(o){
-    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
+    const shuffled = [];
+    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = shuffled[--i], shuffled[i] = o[j], shuffled[j] = x);
+    return shuffled;
 }
 
 const imagesContext = require.context('../../assets/partners-18', false, /\.svg$/);
@@ -33,7 +30,7 @@ function getimage(images, image) {
 }
 
 type PartnerListProps = {
-    partners: Array<Partner>
+    partners: []
 }
 
 function PartnerList(props: PartnerListProps) {

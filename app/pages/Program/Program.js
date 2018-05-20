@@ -1,11 +1,10 @@
-//@flow
 import { connect } from 'react-redux';
 import { Link } from '../../components/link';
 import { store } from '../../store';
 import { getSessions } from '../../actions/sessions';
 import { Section } from '../../components/Section/Section.js';
 import PageHeader from '../../components/PageHeader/PageHeader.js';
-import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block';
+import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block.js';
 import { Clock, Globe, User, Users } from 'react-feather';
 import Page from '../../components/Page/Page';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -69,7 +68,7 @@ const createSlots = reduce((acc, session) => {
 const dummyGroupBySlot = map(({day, slots}) => {
     return {day: day, slots: [{sessions: {'presentation': slots, 'lightning-talk': []}}]};
 });
-
+/*
 const getTransformedSessions = (r) => compose(
     groupBySlot,
     orderBy(['dayIndex'], ['asc']),
@@ -77,6 +76,7 @@ const getTransformedSessions = (r) => compose(
     orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
     removeWorkshops
 );
+*/
 
 function getDefaultSettings() {
     try {
@@ -243,7 +243,7 @@ function SimpleSessionList(props: SimpleSessionListProps) {
                 <Row>
                     <Col>
                         <Row middle="xs">
-                            <Globe size="24" />
+                            <Globe className="program-simple-session-" size="24" />
                             {session.language === 'en' ? 'English' : 'Norwegian'}
                         </Row>
                     </Col>
@@ -390,11 +390,11 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     }
 
     toggleFavorite(id) {
-        if (includes(id, this.state.myprogram)) {
-            this.setState({myprogram: without([id], this.state.myprogram)});
+        if (includes(id, this.state.myProgram)) {
+            this.setState({myProgram: without([id], this.state.myProgram)});
         } else {
-            const prev = this.state.myprogram || [];
-            this.setState({myprogram: prev.concat(id)});
+            const prev = this.state.myProgram || [];
+            this.setState({myProgram: prev.concat(id)});
         }
     }
 

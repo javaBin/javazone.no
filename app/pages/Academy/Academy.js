@@ -5,7 +5,7 @@ import { Block, Content, SubHeader, P} from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { Link } from '../../components/link';
 import { Section } from '../../components/Section/Section';
-import { CenterBlock, LeftBlock } from '../../components/Block/Block';
+import { CenterBlock, LeftBlock } from '../../components/Block/Block.js';
 import { Header } from '../../components/Header/Header';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Button from '../../components/Button/Button';
@@ -125,7 +125,7 @@ function AcademyItem(props: AcademyItemProps) {
     )
 }
 
-function Academy(props: AcademyProps) {
+function Academy() {
     return (
         <Page name='academy'>
             <PageHeader subHeader="Come join us in February 2018">JavaZone Academy</PageHeader>
