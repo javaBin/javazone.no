@@ -227,6 +227,12 @@ const EmptyMyProgram = () => (
     </div>
 );
 
+function generateSpeakersString(speakers: []): string {
+    let speakersCombined = '';
+    speakers.forEach((speaker, idx) => (idx < speakers.length-1) ? speakersCombined += `${speaker.name}, ` : speakersCombined += speaker.name);
+    return speakersCombined;
+}
+
 type SimpleSessionListProps = {
     sessions: [];
     type: string;
@@ -239,22 +245,18 @@ function SimpleSessionList(props: SimpleSessionListProps) {
     return (
         filteredList.map((session, idx) => {
             return <div key={session.id} className="program-simple-session-item">
-                <a className="program-simple-session-title">{session.title}</a>
+                <Row className="program-simple-session-title">
+                    <a>{session.title}</a>
+                </Row>
                 <Row>
-                    <Col>
-                        <Row middle="xs">
-                            <Globe className="program-simple-session-" size="24" />
-                            {session.language === 'en' ? 'English' : 'Norwegian'}
-                        </Row>
+                    <Col className="program-margin-right">
+                        {session.language === 'en' ? 'English' : 'Norwegian'}
                     </Col>
-{/*                     <Col>
-                        <Clock size="24" />
-                        {session.duration}
-                    </Col> */}
+                    <Col className="program-margin-right">
+                        {`${session.duration} Minutes`}
+                    </Col>
                     <Col>
-                        <Row middle="xs">
-                            {session.speakers.length > 1 ? <Users size="24" /> : <User size="24" />}
-                        </Row>
+                        {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
                     </Col>
                 </Row>
             </div>
