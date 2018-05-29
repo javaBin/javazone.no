@@ -15,6 +15,7 @@ import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
 import tickets from './pages/Tickets/Tickets.js';
 import program from './pages/Program/Program.js';
+import programDetails from './pages/Program/ProgramDetails.js';
 import { store } from './store';
 import pageview from './analytics';
 import academyData from './data/academy';
@@ -37,6 +38,7 @@ const routes = compile({
     '/info': info,
     '/frivillig': frivillig,
     '/program': program,
+    '/program/([a-zA-Z0-9_-]+)': programDetails,
     '/': index
 });
 

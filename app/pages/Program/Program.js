@@ -13,6 +13,7 @@ import { Container, Heading, LargeHeading, SmallHeading } from '../../components
 import { Block, Header, Content, P } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find, groupBy } from 'lodash/fp';
+import Loader from '../../components/Loader/Loader.js';
 import './Program.less';
 
 const SETTINGS_KEY = 'programsettings_v2';
@@ -244,16 +245,16 @@ function SimpleSessionList(props: SimpleSessionListProps) {
     }) : props.sessions;
     return (
         filteredList.map((session, idx) => {
-            return <div key={session.id} className="program-simple-session-item">
+            return <div key={session.sessionId} className="program-simple-session-item">
                 <Row className="program-simple-session-title">
-                    <a>{session.title}</a>
+                    <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
                 </Row>
                 <Row>
                     <Col className="program-margin-right">
                         {session.language === 'en' ? 'English' : 'Norwegian'}
                     </Col>
                     <Col className="program-margin-right">
-                        {`${session.duration} Minutes`}
+                        {`${session.length} Minutes`}
                     </Col>
                     <Col>
                         {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
@@ -318,14 +319,6 @@ type ProgramProps = {
 type ProgramState = {
     myProgram: [];
     show: string;
-}
-
-function Fetching() {
-    return (
-        <div className='program__loading'>
-            Hold on! I’m trying to get hold of the program right as we speak. Shouldn’t take too long!
-        </div>
-    );
 }
 
 class Program extends React.Component<ProgramProps, ProgramState> {
@@ -404,7 +397,7 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         const content = this.props.failure
             ? <Failure />
             : this.props.isFetching
-                ? <Fetching /> 
+                ? <Section class="program-loader" dark><Loader /></Section>
                 //: Filter(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
                 : Filter(this.props.sessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop);
 
