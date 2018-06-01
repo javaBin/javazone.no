@@ -15,9 +15,8 @@ import partners from '../../data/partners';
 import './Partners.less';
 
 function shuffle(o){
-    const shuffled = [];
-    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = shuffled[--i], shuffled[i] = o[j], shuffled[j] = x);
-    return shuffled;
+    for(let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
 }
 
 const imagesContext = require.context('../../assets/partners-18', false, /\.svg$/);

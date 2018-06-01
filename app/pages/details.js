@@ -159,7 +159,6 @@ const Details = id => props => {
         return <Page>{ Loading() }</Page>;
     } else {
         const session = find({id: id})(props.sessions);
-        console.log(session.speakernoteUrl);
         if (session) {
             return <Page>{ Session(session) }</Page>;
         } else {

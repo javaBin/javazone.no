@@ -372,7 +372,6 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     }
 
     setNorwegian() {
-        console.log(this.state);
         this.setState({show: 'no'});
     }
 
@@ -402,8 +401,6 @@ class Program extends React.Component<ProgramProps, ProgramState> {
                 : Filter(this.props.sessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop);
 
         saveSettings(this.state);
-
-        console.log('sessions', this.props.sessions);
 
         return (
             <Page name='program'>

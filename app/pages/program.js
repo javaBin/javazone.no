@@ -277,7 +277,6 @@ class Program extends React.Component {
     }
 
     setNorwegian() {
-        console.log(this.state);
         this.setState({show: 'no'});
     }
 

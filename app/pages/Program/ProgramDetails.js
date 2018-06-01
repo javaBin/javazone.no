@@ -15,6 +15,10 @@ import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { get, find, compose, constant } from 'lodash/fp';
 import { getSession } from '../../actions/session';
 
+const tooSmallHack = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;
+
 type ProgramDetailsProps = {
     sessions: [];
     id: string;
@@ -102,12 +106,12 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Language">
-                            <p>
+                            <p class="too-small">
                                 {language === 'en' ? 'English' : 'Norwegian'}
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Format">
-                            <p>
+                            <p class="too-small">
                                 {format}
                             </p>
                         </LeftBlock>
