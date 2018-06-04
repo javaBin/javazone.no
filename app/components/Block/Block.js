@@ -1,6 +1,6 @@
 //@flow
 import * as React from 'react';
-import Section from '../Section/Section';
+import { Section } from '../Section/Section.js';
 import classnames from 'classnames';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './Block.less';
@@ -20,7 +20,7 @@ type ImageBlockProps = {
 
 type CenterBlockProps = {
     header?: string,
-    textAlign: string,
+    textAlign?: string,
     children: React.Node
 }
 

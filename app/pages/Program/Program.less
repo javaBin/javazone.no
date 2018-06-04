@@ -1,0 +1,110 @@
+@import '../../styles/Variables';
+
+.program-filter {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.program-filter-header {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-family: @upheaval;
+    margin-bottom: 1.5rem;
+}
+
+.program-filter-day a {
+    font-weight: bold;
+    font-size: 2rem;
+    color: @secondary-color;
+    font-family: @source-sans-pro;
+    &:hover {
+        border-bottom: 2px solid @secondary-color;
+    }
+}
+
+.program-margin-right {
+    margin-right: 1.2rem;
+}
+
+.program-filter-button {
+    background: transparent;
+    border: 2px solid @secondary-color; /* Green border */
+    color:  @secondary-color; /* White text */
+    font-family: @source-sans-pro;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 18px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    margin-top: 0.5rem;
+    &:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+    &:hover {
+        background: @secondary-color;
+        color: @primary-color;
+    }
+    &.enabled {
+        background: @secondary-color;
+        color: @primary-color;
+    }
+}
+
+.program-day-header {
+    font-family: @upheaval;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.program-day {
+    width: 100%;
+}
+
+.program-day-slots {
+    width: 100%;
+    list-style-type: none;
+}
+
+.program-slot {
+    width: 100%;
+}
+
+.program-slot-start {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: @primary-color;
+    font-family: @source-sans-pro;
+}
+
+.program-simple-session-item {
+    width: 100%;
+    background: @primary-color;
+    font-family: @source-sans-pro;
+    color: @secondary-color;
+    height: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.program-simple-session-title {
+    margin-bottom: 1rem;
+    & a {
+        font-family: @source-sans-pro;
+        color: @secondary-color;
+        font-size: 1.5rem;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+.program-simple-session-header {
+    font-family: @upheaval;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.too-small {
+    width: 100vw;
+}

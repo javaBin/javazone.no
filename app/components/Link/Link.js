@@ -1,4 +1,3 @@
-//@flow
 import * as React from 'react';
 import { connect } from 'react-redux';
 
@@ -50,5 +49,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-
-export default connect((state) => state, mapDispatchToProps)(Link);
+export default connect(state => state, mapDispatchToProps)(Link);

@@ -54,15 +54,15 @@ const kidsInfo = {
 };
 
 type KidsProps = {
-    workshops: object 
+    workshops: any
 }
 
 type SessionProps = {
-    session: object,
+    session: any,
 }
 
 type SessionListProps = {
-    sessions: Array<object>
+    sessions: []
 }
 
 function SessionList(props: SessionListProps) {

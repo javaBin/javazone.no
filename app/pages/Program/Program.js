@@ -1,11 +1,20 @@
 import { connect } from 'react-redux';
-import { Link } from '../components/link';
-import { store } from '../store';
-import { getSessions } from '../actions/sessions';
-import { Page, PageHeading, Container, Heading, LargeHeading, SmallHeading } from '../components/page';
-import { Block, Header, Content, P } from '../components/block';
-import { CBlock, CHeader, CContent } from '../components/centeredblock';
+import { Link } from '../../components/link';
+import { store } from '../../store';
+import { getSessions } from '../../actions/sessions';
+import { Section } from '../../components/Section/Section.js';
+import PageHeader from '../../components/PageHeader/PageHeader.js';
+import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block.js';
+import { Clock, Globe, User, Users } from 'react-feather';
+import Page from '../../components/Page/Page';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import * as React from 'react';
+import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
+import { Block, Header, Content, P } from '../../components/block';
+import { CBlock, CHeader, CContent } from '../../components/centeredblock';
 import { without, includes, get, filter, compose, join, map, reduce, orderBy, last, find, groupBy } from 'lodash/fp';
+import Loader from '../../components/Loader/Loader.js';
+import './Program.less';
 
 const SETTINGS_KEY = 'programsettings_v2';
 
@@ -60,7 +69,7 @@ const createSlots = reduce((acc, session) => {
 const dummyGroupBySlot = map(({day, slots}) => {
     return {day: day, slots: [{sessions: {'presentation': slots, 'lightning-talk': []}}]};
 });
-
+/*
 const getTransformedSessions = (r) => compose(
     groupBySlot,
     orderBy(['dayIndex'], ['asc']),
@@ -68,6 +77,7 @@ const getTransformedSessions = (r) => compose(
     orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
     removeWorkshops
 );
+*/
 
 function getDefaultSettings() {
     try {
@@ -88,14 +98,6 @@ function saveSettings(settings) {
     } catch (e) {
         console.warn('Could not save program filters', e);
     }
-}
-
-function mapStateToProps(state) {
-    return {
-        isFetching: state.sessions.isFetching,
-        sessions: state.sessions.sessions,
-        failure: state.sessions.failure
-    };
 }
 
 function showSession(session, state) {
@@ -184,27 +186,25 @@ function Slot({sessions, timestamp, start}, key, state, toggleFavorite) {
     const filteredLightning = orderBy(['room'], ['asc'])(sessions['lightning-talk'].filter(session => showLightning(session, timestamp, state)));
     const empty = !filteredPresentations.length && !filteredLightning.length;
     return (
-        <li className='sessions__slot slot' key={key}>
-            <div className='slot__start'>{start}</div>
-            {empty ? NoSessions() : Sessions(filteredPresentations, filteredLightning, timestamp, state, toggleFavorite)}
-        </li>
+        <Row className='program-slot' key={key}>
+            <div className='program-slot-start'>{start}</div>
+            {/* {empty ? NoSessions() : Sessions(filteredPresentations, filteredLightning, timestamp, state, toggleFavorite)} */}
+        </Row>
     );
 };
 
-const Day = ({slots, day}, key, state, toggleFavorite) => (
-    <li className='sessions__day' key={key} id={day}>
-        <div className={`sessions__format-title sessions__format-title--${day.toLowerCase()}`}>{day}</div>
-        <ul className='sessions__slots'>
-            {slots.map((slot, id) => Slot(slot, id, state, toggleFavorite))}
-        </ul>
-    </li>
-);
-
-const Loading = () => (
-    <div className='program__loading'>
-        Hold on! I’m trying to get hold of the program right as we speak. Shouldn’t take too long!
-    </div>
-);
+function Day({slots, day}, key, state, toggleFavorite) {
+    return (
+        <div className="program-day" key={key} id={day}>
+            <Row>
+                <h1 className="program-day-header">{day}</h1>
+            </Row>
+            <Row className="program-day-slots">
+                {slots.map((slot, id) => Slot(slot, id, state, toggleFavorite))}
+            </Row>
+        </div>
+    );
+};
 
 const Failure = () => (
     <div className='program__loading'>
@@ -228,38 +228,121 @@ const EmptyMyProgram = () => (
     </div>
 );
 
-const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEnglish, setMyProgram) => (
-    <div>
-        <div className='days'>
-            <div className='days__header'>Days</div>
-            <div className='days__days'>
-                <a href='#Wednesday' className='days__day'>Wednesday</a>
-                <a href='#Thursday' className='days__day'>Thursday</a>
+function generateSpeakersString(speakers: []): string {
+    let speakersCombined = '';
+    speakers.forEach((speaker, idx) => (idx < speakers.length-1) ? speakersCombined += `${speaker.name}, ` : speakersCombined += speaker.name);
+    return speakersCombined;
+}
+
+type SimpleSessionListProps = {
+    sessions: [];
+    type: string;
+}
+
+function SimpleSessionList(props: SimpleSessionListProps) {
+    const filteredList = (props.type !== 'all') ? props.sessions.filter(session => {
+        return session.format === props.type;
+    }) : props.sessions;
+    return (
+        filteredList.map((session, idx) => {
+            return <div key={session.sessionId} className="program-simple-session-item">
+                <Row className="program-simple-session-title">
+                    <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
+                </Row>
+                <Row>
+                    <Col className="program-margin-right">
+                        {session.language === 'en' ? 'English' : 'Norwegian'}
+                    </Col>
+                    <Col className="program-margin-right">
+                        {`${session.length} Minutes`}
+                    </Col>
+                    <Col>
+                        {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
+                    </Col>
+                </Row>
             </div>
+        })
+    );
+};
+
+function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop) {
+    return (
+        <div>
+             <Section className='program-filter' pixel alternate>
+                <Row className='program-filter'>
+                    {/*
+                    <Col lg>
+                        <div>
+                            <div className='program-filter-header'>Type</div>
+                            <div className='program-filter-day'>
+                                <a className='program-filter-day-padding' href='#Presentation'>Presentations</a>
+                                <a className='program-filter-day-padding' href='#LightningTalk'>Lightning Talks</a>
+                                <a href='#Workshop'>Workshops</a>
+                            </div>
+                        </div>
+                    </Col>
+                    */}
+                    <Col lg>
+                        <div>
+                            <div className='program-filter-header'>Format</div>
+                            <div>
+                                {/* <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
+                                <button className={`program-filter-button ${state.show === 'no' ? 'enabled' : ''}`} onClick={setNorwegian}>Norwegian</button>
+                                <button className={`program-filter-button ${state.show === 'en' ? 'enabled' : ''}`} onClick={setEnglish}>English</button>
+                                <button className={`program-filter-button ${state.show === 'my' ? 'enabled' : ''}`} onClick={setMyProgram}>My Program</button> */}
+                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
+                                <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations</button>
+                                <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks</button>
+                                <button className={`program-filter-button ${state.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops</button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Section>
+            <Section>
+{/*                 <Row className='sessions'>
+                    {showEmptyMyProgram(state) ? EmptyMyProgram() : sessions.map((session, id) => Day(session, id, state, toggleFavorite))}
+                </Row> */}
+                <SimpleSessionList type={state.show} sessions={sessions} />
+            </Section>
         </div>
+    );
+};
 
-        <div className='filters'>
-            <div className='filters__header'>Filters</div>
-            <div className='filters__filters'>
-                <button className={`filters__toggle filters__toggle--${state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={setAll}>All</button>
-                <button className={`filters__toggle filters__toggle--${state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={setNorwegian}>Norwegian</button>
-                <button className={`filters__toggle filters__toggle--${state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={setEnglish}>English</button>
-                <button className={`filters__toggle filters__toggle--${state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={setMyProgram}>My Program</button>
-            </div>
-        </div>
+type ProgramProps = {
+    sessions:  [],
+    isFetching: boolean,
+    failure: any,
+    getSessions: Function
+};
 
-        <ul className='sessions'>
-            {showEmptyMyProgram(state) ? EmptyMyProgram() : sessions.map((session, id) => Day(session, id, state, toggleFavorite))}
-        </ul>
-    </div>
-);
+type ProgramState = {
+    myProgram: [];
+    show: string;
+}
 
-class Program extends React.Component {
+class Program extends React.Component<ProgramProps, ProgramState> {
 
-    constructor(props) {
+    setAll: Function;
+    setPresentation: Function;
+    setLightningTalk: Function;
+    setWorkshop: Function;
+    setNorwegian: Function;
+    setEnglish: Function;
+    setMyProgram: Function;
+    toggleFavorite: Function;
+
+    state = {
+        myProgram: [],
+        show: 'all',
+    };
+
+    constructor(props: ProgramProps) {
         super(props);
-        this.state = getDefaultSettings();
         this.setAll = this.setAll.bind(this);
+        this.setPresentation = this.setPresentation.bind(this);
+        this.setLightningTalk = this.setLightningTalk.bind(this);
+        this.setWorkshop = this.setWorkshop.bind(this);
         this.setNorwegian = this.setNorwegian.bind(this);
         this.setEnglish = this.setEnglish.bind(this);
         this.setMyProgram = this.setMyProgram.bind(this);
@@ -276,6 +359,18 @@ class Program extends React.Component {
         this.setState({show: 'all'});
     }
 
+    setPresentation() {
+        this.setState({show: 'presentation'});
+    }
+
+    setLightningTalk() {
+        this.setState({show: 'lightning-talk'});
+    }
+
+    setWorkshop() {
+        this.setState({show: 'workshop'});
+    }
+
     setNorwegian() {
         this.setState({show: 'no'});
     }
@@ -289,11 +384,11 @@ class Program extends React.Component {
     }
 
     toggleFavorite(id) {
-        if (includes(id, this.state.myprogram)) {
-            this.setState({myprogram: without([id], this.state.myprogram)});
+        if (includes(id, this.state.myProgram)) {
+            this.setState({myProgram: without([id], this.state.myProgram)});
         } else {
-            const prev = this.state.myprogram || [];
-            this.setState({myprogram: prev.concat(id)});
+            const prev = this.state.myProgram || [];
+            this.setState({myProgram: prev.concat(id)});
         }
     }
 
@@ -301,19 +396,27 @@ class Program extends React.Component {
         const content = this.props.failure
             ? <Failure />
             : this.props.isFetching
-                ? Loading()
-                : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                ? <Section class="program-loader" dark><Loader /></Section>
+                //: Filter(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                : Filter(this.props.sessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop);
 
         saveSettings(this.state);
 
         return (
             <Page name='program'>
-                <Container>
-                    {content}
-                </Container>
+                <PageHeader subHeader="Mark your schedule">Javazone Program 2018</PageHeader>
+                {content}
             </Page>
         );
     }
 };
+
+function mapStateToProps(state) {
+    return {
+        isFetching: state.sessions.isFetching,
+        sessions: state.sessions.sessions,
+        failure: state.sessions.failure
+    };
+}
 
 export default connect(mapStateToProps, { getSessions })(Program);

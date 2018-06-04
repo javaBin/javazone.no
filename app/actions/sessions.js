@@ -31,7 +31,7 @@ export function getSessions() {
         return getAllSessions().then((res) => {
             return res.json();
         }).then((json) => {
-            dispatch(receiveSessions(getTransformedSessions(json.sessions)));
+            dispatch(receiveSessions(json.sessions));
         }).catch(() => {
             dispatch(receiveFailed());
         });
