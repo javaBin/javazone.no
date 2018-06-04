@@ -2,7 +2,7 @@ export default [
     {name: '7N', logo: '7N.svg', url: 'https://www.7n.com/'},
     {name: 'Acando', logo: 'acando.svg', url: 'https://www.acando.no/'},
     {name: 'Accenture', logo: 'accenture.svg', url: 'https://www.accenture.com/no-en/'},
-    {name: 'Atlassian', logo: 'atlassian.svg', url: 'https://www.atlassian.com/'},
+    //{name: 'Atlassian', logo: 'atlassian.svg', url: 'https://www.atlassian.com/'},
     {name: 'BEKK', logo: 'bekk.svg', url: 'https://www.bekk.no'},
     {name: 'Basefarm', logo: 'basefarm.svg', url: 'https://www.basefarm.com/no'},
     {name: 'Bouvet', logo: 'bouvet.svg', url: 'http://www.bouvet.no/'},
