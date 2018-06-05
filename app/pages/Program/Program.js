@@ -290,10 +290,10 @@ function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLig
                                 <button className={`program-filter-button ${state.show === 'no' ? 'enabled' : ''}`} onClick={setNorwegian}>Norwegian</button>
                                 <button className={`program-filter-button ${state.show === 'en' ? 'enabled' : ''}`} onClick={setEnglish}>English</button>
                                 <button className={`program-filter-button ${state.show === 'my' ? 'enabled' : ''}`} onClick={setMyProgram}>My Program</button> */}
-                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
-                                <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations</button>
-                                <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks</button>
-                                <button className={`program-filter-button ${state.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops</button>
+                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All ({sessions.length})</button>
+                                <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
+                                <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
+                                <button className={`program-filter-button ${state.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops ({sessions.filter(session => session.format === 'workshop').length})</button>
                             </div>
                         </div>
                     </Col>

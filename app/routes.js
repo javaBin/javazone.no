@@ -10,6 +10,7 @@ import academySeptember from './pages/academy-september.js';
 import kids from './pages/Kids/Kids.js';
 import academyLocation from './pages/academy-program.js';
 import speakers from './pages/Speakers/Speakers.js';
+import journeyzone from './pages/Journeyzone/Journeyzone.js';
 import speakerinfo from './pages/speakerinfo';
 import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
@@ -35,6 +36,7 @@ const routes = compile({
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,
+    '/journeyzone': journeyzone,
     '/info': info,
     '/frivillig': frivillig,
     '/program': program,
