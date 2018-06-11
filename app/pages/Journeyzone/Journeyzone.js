@@ -11,6 +11,7 @@ import fish1 from '../../assets/journeyzone/fish_1.jpg';
 import fish2 from '../../assets/journeyzone/fish_2.jpg';
 import fishAndMushroom from '../../assets/journeyzone/fish_and_mushroom.jpg';
 import tents from '../../assets/journeyzone/tents.jpg';
+import { Carousel } from 'react-responsive-carousel';
 
 const Image = ({ image, altText, classes }) =>
     (<img className={classnames('journeyzone__image', classes)} alt={altText} src={image} />);
@@ -66,7 +67,7 @@ class ImageCarousel extends React.Component<ImageCarouselProps, ImageCarouselSta
                 React.cloneElement(child, {
                     classes: classnames({
                         'journeyzone__image-carousel-img': true,
-                        'journeyzone__image-carousel-hidden': (index !== this.state.index)
+                        'journeyzone-carousel-hidden': (index !== this.state.index)
                     })
                 })
             ))}
@@ -117,13 +118,30 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
                     </CenterBlock>
                 </Section>
                 <Section>
-                    <ImageCarousel interval={4000}>
-                        <Image altText="fish" image={fish1} />
-                        <Image altText="fish" image={fish2} />
-                        <Image altText="cooking on campfire" image={cookingOnCampfire} />
-                        <Image altText="fish and mushroom" image={fishAndMushroom} />
-                        <Image altText="tents" image={tents} />
-                    </ImageCarousel>
+                    <Carousel 
+                        autoPlay 
+                        interval={4000}
+                        showArrows={false}
+                        showStatus={false}
+                        showThumbs={false}
+                        showIndicators={false}
+                        infiniteLoop>
+                        <div>
+                            <img src={fish1} />
+                        </div>
+                        <div>
+                            <img src={fish2} />
+                        </div>
+                        <div>
+                            <img src={cookingOnCampfire} />
+                        </div>
+                        <div>
+                            <img src={fishAndMushroom} />
+                        </div>
+                        <div>
+                            <img src={tents} />
+                        </div>
+                    </Carousel>
                 </Section>
                 <Section>
                     <CenterBlock header="Who can attend?">
