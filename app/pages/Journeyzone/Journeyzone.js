@@ -41,7 +41,7 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
                     </CenterBlock>
                     <CenterBlock header="When? Where?">
                         <p>
-                            We are leaving Oslo in the early evening of the last day of JavaZone on Thursday September 13th. We will be back in Oslo (at the airport OSL Gardermoen) on Sunday September 16th at 21:00. The entire trip is planned, so all you need to do is meet up. We will send a packing list closer to the event.
+                            We are leaving Oslo in the early evening of the last day of JavaZone on Thursday, September 13th. We will be back in Oslo (at the airport OSL Gardermoen) on Sunday, September 16th at 21:00. The entire trip is planned, so all you need to do is meet up. We will send a packing list closer to the event.
                         </p>
                     </CenterBlock>
                     <ImageBlock image={lofoten2} alt="JourneyZone Lofoten" />
@@ -50,18 +50,18 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
                             All speakers of JavaZone are invited, but we have a limited number of spots available for the journey. Those who hold full presentations and workshops are prioritized, but presenters of lightning talks are of course also welcome to apply!
                         </p>
                         <p>
-                            In order to attend, you must be in a physical condition that allows you to sail for three full days and sleep on a sail boat. If the weather is rough, we will be exposed to the ocean and you might get sea sick. No sailing experience is required and no extraordinary phyical activity is required by partipants.
+                            In order to attend, you must be in a physical condition that allows you to sail for three full days and sleep on a sailboat. If the weather is rough, we will be exposed to the ocean and you might get seasick. No sailing experience is required and no extraordinary physical activity is required by participants.
                         </p>
                     </CenterBlock>
                     <ImageBlock image={lofoten} alt="JourneyZone Lofoten" />
                     <CenterBlock header="Personal expenses">
                         <p>
-                            JavaZone will cover almost all your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accomodate as many as possible we require that all attendees pay NOK 2500. The trip will include one self-paid, volunary activity and you might need to pay for some supplies on the road.
+                            JavaZone will cover almost all your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accommdate as many as possible we require that all attendees pay NOK 2500. The trip will include one self-paid, voluntary activity and you might need to pay for some supplies on the road.
                         </p>
                     </CenterBlock>
                     <CenterBlock header="The program">
                         <p>
-                            The program is, as usual, tightly packed and full of interesting events. The main activity is sailing, but along the way, we offer many additional adventures! The details are not yet available and partly depend on the weather conditions. We will adapt to whatever comes our way and setup the program accordingly.
+                            The program is, as usual, tightly packed and full of interesting events. The main activity is sailing, but along the way, we offer many additional adventures! The details are not yet available and partly depend on the weather conditions. We will adapt to whatever comes our way and set up the program accordingly.
                         </p>
                     </CenterBlock>
                     <CenterBlock>
