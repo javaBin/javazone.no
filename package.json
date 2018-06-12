@@ -62,6 +62,7 @@
     "moment": "^2.19.1",
     "npm": "^5.8.0",
     "react-feather": "^1.0.8",
-    "react-flexbox-grid": "^2.0.0"
+    "react-flexbox-grid": "^2.0.0",
+    "react-responsive-carousel": "^3.1.39"
   }
 }
