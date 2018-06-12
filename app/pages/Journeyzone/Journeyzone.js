@@ -89,31 +89,25 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
     render() {
         return (
             <Page name="journeyzone">
-                <PageHeader subHeader="The most epic journey across the forests and lakes of the Nordmarka - ever!!">Journeyzone 2018</PageHeader>
+                <PageHeader subHeader="A sailing trip through Lofoten in Northern Norway!">Journeyzone 2018</PageHeader>
                 <Section fluid>
                     <ImageBlock image={canoe} alt="JourneyZone canoe" />
                     <CenterBlock header="What is this?">
                         <p>
-                            Each year we offer our speakers an unforgettable experience in the Norwegian nature, and 2017 is no different! This year we will attempt a journey that all Norwegians dream of doing, but few have undertaken : ‘Nordmarka på langs’.
+                            JourneyZone is our annual trip for speakers and conference organizers just after the JavaZone conference. This year, our destination is Lofoten in the Northern part of Norway.
                         </p>
                     </CenterBlock>
-                    <CenterBlock header="‘Nordmarka på langs’? What are you talking about?">
+                    <CenterBlock header="What is this Lofoten place?">
                         <p>
-                            The North of Oslo is bordered by forest, of which Nordmarka is one of the largest (430 square kilometers). Many Oslo citizens use the Nordmarka for recreational activities such as biking, skiing, kayaking, hiking and camping - but few ever venture as far into the woods as we will!
+                            To lazily quote Wikipedia: Lofoten (Norwegian pronunciation: [ˈluːfuːtn̩]) is an archipelago and a traditional district in the county of Nordland, Norway. Lofoten is known for a distinctive scenery with dramatic mountains and peaks, open sea and sheltered bays, beaches and untouched lands. Though lying within the Arctic Circle, the archipelago experiences one of the world's largest elevated temperature anomalies relative to its high latitude.
                         </p>
                         <p>
-                            ‘Nordmarka på langs’ refers to a trip across the entire length of the Nordmarka. This will take around two days, during which you will get up very close and personal with the Norwegian wilderness.
+                            Many Norwegians dream of going to this place and now is your chance to brag to them that you went!
                         </p>
                     </CenterBlock>
-                    <CenterBlock header="I’m intrigued - give me more details!">
+                    <CenterBlock header="When? Where?">
                         <p>
-                            The experience will begin Friday 15th September, the morning after JavaZone. We’ll meet up at 0700 and take a short train ride to Grua, around 40 kilometers north of Oslo.
-                        </p>
-                        <p>
-                            From here we’ll slowly make our way through the forest and across lakes back to the city. We can expect plenty of surprises and lots of great food along the way. Attendees will also be responsible for creating their own shelter (with a little help from some people we know).
-                        </p>
-                        <p>
-                            Finally we will end the journey back where we started on Sunday September 17th at 1800.
+                            We are leaving Oslo in the early evening of the last day of JavaZone on Thursday September 13th. We will be back in Oslo (at the airport OSL Gardermoen) on Sunday September 16th at 21:00. The entire trip is planned, so all you need to do is meet up. We will send a packing list closer to the event.
                         </p>
                     </CenterBlock>
                 </Section>
@@ -146,24 +140,26 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
                 <Section>
                     <CenterBlock header="Who can attend?">
                         <p>
-                            All JavaZone speakers are invited to apply for a place on JourneyZone, but please be aware that space is limited. Those holding workshops and presentations will be prioritised, but lighting talk speakers are also encouraged to apply!
+                            All speakers of JavaZone are invited, but we have a limited number of spots available for the journey. Those who hold full presentations and workshops are prioritized, but presenters of lightning talks are of course also welcome to apply!
                         </p>
                         <p>
-                            We’ll do everything to make this trip as comfortable as possible, but participants should be prepared to undertake a moderate amount of physical activity, and not be afraid of camping in the forest for two nights. We'll also arrange for the transport of bags and equipment, so you won't need to carry a huge backpack!
+                            In order to attend, you must be in a physical condition that allows you to sail for three full days and sleep on a sail boat. If the weather is rough, we will be exposed to the ocean and you might get sea sick. No sailing experience is required and no extraordinary phyical activity is required by partipants.
                         </p>
                     </CenterBlock>
                     <ImageBlock image={campfire} alt="JourneyZone canoe" />
-                    <CenterBlock header="Personal expenses and equipment list">
+                    <CenterBlock header="Personal expenses">
                         <p>
-                            JavaZone will cover almost all of your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accommodate as many as possible we require that all attendees pay NOK 1500.
+                            JavaZone will cover almost all your expenses which is considered your reward for holding your talk at the conference. To ensure that we stretch the budget to accomodate as many as possible we require that all attendees pay NOK 2500. The trip will include one self-paid, volunary activity and you might need to pay for some supplies on the road.
                         </p>
+                    </CenterBlock>
+                    <CenterBlock header="The program">
                         <p>
-                            We are currently putting together an equipment list for participants. This will be published soon.
+                            The program is, as usual, tightly packed and full of interesting events. The main activity is sailing, but along the way, we offer many additional adventures! The details are not yet available and partly depend on the weather conditions. We will adapt to whatever comes our way and setup the program accordingly.
                         </p>
                     </CenterBlock>
                     <CenterBlock>
                         <p>
-	                        <a className='button button--transparent' target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdV1cVPCqJ7q2-v9Q1WNQV9MiNUPeAwtVtbV-ctVUj7X2GS4w/viewform">Sign Up Now!</a>
+	                        <a className='button button--transparent' target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfhPn-qwPCza6xPtc6dtcTm4O-kF3oAb1S-uMuBBjTo6cTSEw/viewform">Sign Up Now!</a>
                         </p>
                     </CenterBlock>
                 </Section>
