@@ -23,7 +23,7 @@ class Journeyzone extends React.Component<JourneyzoneProps, {}> {
     render() {
         return (
             <Page name="journeyzone">
-                <PageHeader subHeader="A sailing trip through Lofoten in Northern Norway!">Journeyzone 2018</PageHeader>
+                <PageHeader subHeader="A sailing trip through Lofoten in Northern Norway">Journeyzone 2018</PageHeader>
                 <Section fluid>
                     <ImageBlock image={lofoten3} alt="JourneyZone sailing" />
                     <CenterBlock header="What is this?">
