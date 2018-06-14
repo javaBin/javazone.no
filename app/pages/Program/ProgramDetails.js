@@ -89,13 +89,13 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                     <PageHeader subHeader={speakerString}>{title}</PageHeader>
                     <Section>
                         <LeftBlock header="abstract">
-                            <p>
+                            <p class="text-wrap">
                                 {abstract}
                             </p>
                         </LeftBlock>
                         {speakers ? speakers.map(speaker => {
                             return <LeftBlock key={speaker.name} header={speaker.name}>
-                                        <p>
+                                        <p class="text-wrap">
                                             {speaker.bio}
                                         </p>
                                     </LeftBlock>
