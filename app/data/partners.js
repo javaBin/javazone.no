@@ -10,7 +10,7 @@ export default [
     {name: 'Camunda', logo: 'camunda.svg', url: 'http://camunda.com'},
     {name: 'Capgemini', logo: 'capgemini.svg', url: 'https://www.no.capgemini.com/'},
     {name: 'Capra', logo: 'capra.svg', url: 'http://www.capraconsulting.no'},
-    {name: 'Ciber', logo: 'ciber.svg', url: 'http://www.ciber.com/no'},
+    {name: 'Ciber', logo: 'ciber.svg', url: 'http://www.ciber.no'},
     {name: 'Computas', logo: 'computas.svg', url: 'http://www.computas.com/'},
     {name: 'DIPS', logo: 'dips.svg', url: 'https://www.dips.com/no'},
     {name: 'DNB', logo: 'dnb.svg', url: 'http://dnb.no'},
