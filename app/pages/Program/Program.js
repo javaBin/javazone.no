@@ -234,6 +234,66 @@ function generateSpeakersString(speakers: []): string {
     return speakersCombined;
 }
 
+type DayProps = {
+    sessions: [];
+}
+
+function Wedensday(props: DayProps) {
+    const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-12'));
+    return (
+        filteredList.length > 0 ?
+        <div>
+            <h1 className="program-day-header">Wedensday</h1>
+            {filteredList.map((session, idx) => {
+                return <div key={session.sessionId} className="program-simple-session-item">
+                    <Row className="program-simple-session-title">
+                        <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
+                    </Row>
+                    <Row>
+                        <Col className="program-margin-right">
+                            {session.language === 'en' ? 'English' : 'Norwegian'}
+                        </Col>
+                        <Col className="program-margin-right">
+                            {`${session.length} Minutes`}
+                        </Col>
+                        <Col>
+                            {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
+                        </Col>
+                    </Row>
+                </div>
+            })}
+        </div> : null
+    );
+}
+
+function Thursday(props: DayProps) {
+    const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-13'));
+    return (
+        filteredList.length > 0 ?
+        <div>
+            <h1 className="program-day-header">Thursday</h1>
+            {filteredList.map((session, idx) => {
+                return <div key={session.sessionId} className="program-simple-session-item">
+                    <Row className="program-simple-session-title">
+                        <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
+                    </Row>
+                    <Row>
+                        <Col className="program-margin-right">
+                            {session.language === 'en' ? 'English' : 'Norwegian'}
+                        </Col>
+                        <Col className="program-margin-right">
+                            {`${session.length} Minutes`}
+                        </Col>
+                        <Col>
+                            {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
+                        </Col>
+                    </Row>
+                </div>
+            })}
+        </div> : null
+    );
+}
+
 type SimpleSessionListProps = {
     sessions: [];
     type: string;
@@ -244,52 +304,36 @@ function SimpleSessionList(props: SimpleSessionListProps) {
         return session.format === props.type;
     }) : props.sessions;
     return (
-        filteredList.map((session, idx) => {
-            return <div key={session.sessionId} className="program-simple-session-item">
-                <Row className="program-simple-session-title">
-                    <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
-                </Row>
-                <Row>
-                    <Col className="program-margin-right">
-                        {session.language === 'en' ? 'English' : 'Norwegian'}
-                    </Col>
-                    <Col className="program-margin-right">
-                        {`${session.length} Minutes`}
-                    </Col>
-                    <Col>
-                        {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
-                    </Col>
-                </Row>
-            </div>
-        })
+        <div>
+            <Wedensday sessions={filteredList} />
+            <Thursday sessions={filteredList} />
+        </div>
     );
 };
 
-function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop) {
+function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
     return (
         <div>
              <Section className='program-filter' pixel alternate>
                 <Row className='program-filter'>
-                    {/*
                     <Col lg>
                         <div>
-                            <div className='program-filter-header'>Type</div>
-                            <div className='program-filter-day'>
-                                <a className='program-filter-day-padding' href='#Presentation'>Presentations</a>
-                                <a className='program-filter-day-padding' href='#LightningTalk'>Lightning Talks</a>
-                                <a href='#Workshop'>Workshops</a>
+                            <div className='program-filter-header'>Day</div>
+                            <div className='program-filter-button-group'>
+                                <button className={`program-filter-button ${state.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
+                                <button className={`program-filter-button ${state.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
                             </div>
                         </div>
-                    </Col>
-                    */}
-                    <Col lg>
+                        <div>
+                            <div className='program-filter-header'>Language</div>
+                            <div className='program-filter-button-group'>
+                                <button className={`program-filter-button ${state.language === 'no' ? 'enabled' : ''}`} onClick={toggleNorwegian}>Norwegian</button>
+                                <button className={`program-filter-button ${state.language === 'en' ? 'enabled' : ''}`} onClick={toggleEnglish}>English</button>
+                            </div>
+                        </div>
                         <div>
                             <div className='program-filter-header'>Format</div>
-                            <div>
-                                {/* <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All</button>
-                                <button className={`program-filter-button ${state.show === 'no' ? 'enabled' : ''}`} onClick={setNorwegian}>Norwegian</button>
-                                <button className={`program-filter-button ${state.show === 'en' ? 'enabled' : ''}`} onClick={setEnglish}>English</button>
-                                <button className={`program-filter-button ${state.show === 'my' ? 'enabled' : ''}`} onClick={setMyProgram}>My Program</button> */}
+                            <div className='program-filter-button-group'>
                                 <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All ({sessions.length})</button>
                                 <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
                                 <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
@@ -300,10 +344,7 @@ function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLig
                 </Row>
             </Section>
             <Section>
-{/*                 <Row className='sessions'>
-                    {showEmptyMyProgram(state) ? EmptyMyProgram() : sessions.map((session, id) => Day(session, id, state, toggleFavorite))}
-                </Row> */}
-                <SimpleSessionList type={state.show} sessions={sessions} />
+                <SimpleSessionList type={state.show} sessions={state.filteredSessions} />
             </Section>
         </div>
     );
@@ -318,7 +359,10 @@ type ProgramProps = {
 
 type ProgramState = {
     myProgram: [];
+    filteredSessions: [];
     show: string;
+    day: string;
+    language: string;
 }
 
 class Program extends React.Component<ProgramProps, ProgramState> {
@@ -327,14 +371,20 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     setPresentation: Function;
     setLightningTalk: Function;
     setWorkshop: Function;
-    setNorwegian: Function;
-    setEnglish: Function;
+    toggleNorwegian: Function;
+    toggleEnglish: Function;
     setMyProgram: Function;
     toggleFavorite: Function;
+    toggleWed: Function;
+    toggleThu: Function;
+    updateFilteredSessions: Function;
 
     state = {
         myProgram: [],
+        filteredSessions: [],
         show: 'all',
+        day: '',
+        language: ''
     };
 
     constructor(props: ProgramProps) {
@@ -343,16 +393,52 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         this.setPresentation = this.setPresentation.bind(this);
         this.setLightningTalk = this.setLightningTalk.bind(this);
         this.setWorkshop = this.setWorkshop.bind(this);
-        this.setNorwegian = this.setNorwegian.bind(this);
-        this.setEnglish = this.setEnglish.bind(this);
+        this.toggleNorwegian = this.toggleNorwegian.bind(this);
+        this.toggleEnglish = this.toggleEnglish.bind(this);
         this.setMyProgram = this.setMyProgram.bind(this);
         this.toggleFavorite = this.toggleFavorite.bind(this);
+        this.toggleWed = this.toggleWed.bind(this);
+        this.toggleThu = this.toggleThu.bind(this);
+        this.updateFilteredSessions = this.updateFilteredSessions.bind(this);
     }
 
     componentWillMount() {
         if (this.props.sessions.length === 0) {
             this.props.getSessions();
         }
+    }
+
+    componentWillReceiveProps(next, prev) {
+        if (next.sessions !== this.props.sessions) {
+            this.setState({
+                filteredSessions: next.sessions
+            });
+        }
+    }
+
+    updateFilteredSessions() {
+        let updatedFilter = [...this.props.sessions];
+        if (this.state.day !== '') {
+            if (this.state.day === 'wed') {
+                updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-12'));
+            } else {
+                updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-13'));
+            }
+        }
+        if (this.state.language !== '') {
+            updatedFilter = updatedFilter.filter(session => session.language === this.state.language);
+        }
+        this.setState({
+            filteredSessions: updatedFilter
+        });
+    }
+
+    toggleWed() {
+        this.setState({ day: this.state.day === 'wed' ? '' : 'wed'}, () => this.updateFilteredSessions());
+    }
+
+    toggleThu() {
+        this.setState({ day: this.state.day === 'thu' ? '' : 'thu'}, () => this.updateFilteredSessions());
     }
 
     setAll() {
@@ -371,12 +457,12 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         this.setState({show: 'workshop'});
     }
 
-    setNorwegian() {
-        this.setState({show: 'no'});
+    toggleNorwegian() {
+        this.setState({language: this.state.language === 'no' ? '' : 'no'}, () => this.updateFilteredSessions());
     }
 
-    setEnglish() {
-        this.setState({show: 'en'});
+    toggleEnglish() {
+        this.setState({language: this.state.language === 'en' ? '' : 'en'}, () => this.updateFilteredSessions());
     }
 
     setMyProgram() {
@@ -393,12 +479,12 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     }
 
     render() {
+
         const content = this.props.failure
             ? <Failure />
             : this.props.isFetching
                 ? <Section class="program-loader" dark><Loader /></Section>
-                //: Filter(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
-                : Filter(this.props.sessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop);
+                : Filter(this.state.filteredSessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop, this.toggleWed, this.toggleThu, this.toggleNorwegian, this.toggleEnglish);
 
         saveSettings(this.state);
 
