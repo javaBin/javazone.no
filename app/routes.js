@@ -12,6 +12,7 @@ import academyLocation from './pages/academy-program.js';
 import speakers from './pages/Speakers/Speakers.js';
 import journeyzone from './pages/Journeyzone/Journeyzone.js';
 import speakerinfo from './pages/speakerinfo';
+import workshops from './pages/Workshops/Workshops.js';
 import monetaryPolicy from './pages/monetary-policy';
 import tipsAndTricks from './pages/tips-and-tricks';
 import tickets from './pages/Tickets/Tickets.js';
@@ -33,6 +34,7 @@ const routes = compile({
     '/academy/bergen': academyLocation(academyData.bergen),
     '/kids': kids,
     '/speakers': speakers,
+    //'/workshops': workshops,
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
     '/tickets': tickets,

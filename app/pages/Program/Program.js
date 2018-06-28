@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { Link } from '../../components/link';
 import { store } from '../../store';
 import { getSessions } from '../../actions/sessions';
+import { setLanguage, setShow, setDay, setFilteredList } from '../../actions/filters';
 import { Section } from '../../components/Section/Section.js';
 import PageHeader from '../../components/PageHeader/PageHeader.js';
 import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block.js';
@@ -304,48 +305,49 @@ function SimpleSessionList(props: SimpleSessionListProps) {
         return session.format === props.type;
     }) : props.sessions;
     return (
-        <div>
+        <div className="program-list">
             <Wedensday sessions={filteredList} />
             <Thursday sessions={filteredList} />
         </div>
     );
 };
 
-function Filter(sessions, state, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
+function Filter(sessions, state, props, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
     return (
-        <div>
+        <div className="program-filter-container">
              <Section className='program-filter' pixel alternate>
                 <Row className='program-filter'>
                     <Col lg>
                         <div>
                             <div className='program-filter-header'>Day</div>
                             <div className='program-filter-button-group'>
-                                <button className={`program-filter-button ${state.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
-                                <button className={`program-filter-button ${state.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
+                                <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
+                                <button className={`program-filter-button ${props.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
                             </div>
                         </div>
                         <div>
                             <div className='program-filter-header'>Language</div>
                             <div className='program-filter-button-group'>
-                                <button className={`program-filter-button ${state.language === 'no' ? 'enabled' : ''}`} onClick={toggleNorwegian}>Norwegian</button>
-                                <button className={`program-filter-button ${state.language === 'en' ? 'enabled' : ''}`} onClick={toggleEnglish}>English</button>
+                                <button className={`program-filter-button ${props.language === 'no' ? 'enabled' : ''}`} onClick={toggleNorwegian}>Norwegian</button>
+                                <button className={`program-filter-button ${props.language === 'en' ? 'enabled' : ''}`} onClick={toggleEnglish}>English</button>
                             </div>
                         </div>
                         <div>
                             <div className='program-filter-header'>Format</div>
                             <div className='program-filter-button-group'>
-                                <button className={`program-filter-button ${state.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All ({sessions.length})</button>
-                                <button className={`program-filter-button ${state.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
-                                <button className={`program-filter-button ${state.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
-                                <button className={`program-filter-button ${state.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops ({sessions.filter(session => session.format === 'workshop').length})</button>
+                                <button className={`program-filter-button ${props.show === 'all' ? 'enabled' : ''}`} onClick={setAll}>All ({sessions.length})</button>
+                                <button className={`program-filter-button ${props.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
+                                <button className={`program-filter-button ${props.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
+                                <button className={`program-filter-button ${props.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops ({sessions.filter(session => session.format === 'workshop').length})</button>
                             </div>
                         </div>
                     </Col>
                 </Row>
             </Section>
-            <Section>
-                <SimpleSessionList type={state.show} sessions={state.filteredSessions} />
-            </Section>
+            {props.isFetching ? <Section class="program-loader" dark><Loader /></Section> :
+            <Section className='program-list'>
+                <SimpleSessionList type={props.show} sessions={sessions} />
+            </Section>}
         </div>
     );
 };
@@ -354,7 +356,15 @@ type ProgramProps = {
     sessions:  [],
     isFetching: boolean,
     failure: any,
-    getSessions: Function
+    getSessions: Function,
+    setLanguage: Function,
+    setShow: Function,
+    setDay: Function,
+    setFilteredList: Function,
+    language: string,
+    show: string,
+    day: string,
+    filteredList: []
 };
 
 type ProgramState = {
@@ -403,66 +413,63 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     }
 
     componentWillMount() {
-        if (this.props.sessions.length === 0) {
-            this.props.getSessions();
-        }
+        this.props.getSessions();
     }
 
-    componentWillReceiveProps(next, prev) {
-        if (next.sessions !== this.props.sessions) {
-            this.setState({
-                filteredSessions: next.sessions
-            });
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.sessions !== prevProps.sessions) {
+            this.updateFilteredSessions();
+        }
+        if (this.props.language !== prevProps.language || this.props.show !== prevProps.show || this.props.day !== prevProps.day) {
+            this.updateFilteredSessions();
         }
     }
 
     updateFilteredSessions() {
         let updatedFilter = [...this.props.sessions];
-        if (this.state.day !== '') {
-            if (this.state.day === 'wed') {
+        if (this.props.day !== '') {
+            if (this.props.day === 'wed') {
                 updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-12'));
             } else {
                 updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-13'));
             }
         }
-        if (this.state.language !== '') {
-            updatedFilter = updatedFilter.filter(session => session.language === this.state.language);
+        if (this.props.language !== '') {
+            updatedFilter = updatedFilter.filter(session => session.language === this.props.language);
         }
-        this.setState({
-            filteredSessions: updatedFilter
-        });
+        this.props.setFilteredList(updatedFilter);
     }
 
     toggleWed() {
-        this.setState({ day: this.state.day === 'wed' ? '' : 'wed'}, () => this.updateFilteredSessions());
+        this.props.setDay(this.props.day === 'wed' ? '' : 'wed');
     }
 
     toggleThu() {
-        this.setState({ day: this.state.day === 'thu' ? '' : 'thu'}, () => this.updateFilteredSessions());
+        this.props.setDay(this.props.day === 'thu' ? '' : 'thu');
     }
 
     setAll() {
-        this.setState({show: 'all'});
+        this.props.setShow('all');
     }
 
     setPresentation() {
-        this.setState({show: 'presentation'});
+        this.props.setShow('presentation');
     }
 
     setLightningTalk() {
-        this.setState({show: 'lightning-talk'});
+        this.props.setShow('lightning-talk');
     }
 
     setWorkshop() {
-        this.setState({show: 'workshop'});
+        this.props.setShow('workshop');
     }
 
     toggleNorwegian() {
-        this.setState({language: this.state.language === 'no' ? '' : 'no'}, () => this.updateFilteredSessions());
+        this.props.setLanguage(this.props.language === 'no' ? '' : 'no');
     }
 
     toggleEnglish() {
-        this.setState({language: this.state.language === 'en' ? '' : 'en'}, () => this.updateFilteredSessions());
+        this.props.setLanguage(this.props.language === 'en' ? '' : 'en');
     }
 
     setMyProgram() {
@@ -482,9 +489,7 @@ class Program extends React.Component<ProgramProps, ProgramState> {
 
         const content = this.props.failure
             ? <Failure />
-            : this.props.isFetching
-                ? <Section class="program-loader" dark><Loader /></Section>
-                : Filter(this.state.filteredSessions, this.state, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop, this.toggleWed, this.toggleThu, this.toggleNorwegian, this.toggleEnglish);
+            : Filter(this.props.filteredList, this.state, this.props, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop, this.toggleWed, this.toggleThu, this.toggleNorwegian, this.toggleEnglish);
 
         saveSettings(this.state);
 
@@ -501,8 +506,12 @@ function mapStateToProps(state) {
     return {
         isFetching: state.sessions.isFetching,
         sessions: state.sessions.sessions,
-        failure: state.sessions.failure
+        failure: state.sessions.failure,
+        language: state.filters.language,
+        show: state.filters.show,
+        day: state.filters.day,
+        filteredList: state.filters.filteredList
     };
 }
 
-export default connect(mapStateToProps, { getSessions })(Program);
+export default connect(mapStateToProps, { getSessions, setLanguage, setShow, setDay, setFilteredList })(Program);

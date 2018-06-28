@@ -42,7 +42,7 @@ function Section(props: SectionProps) {
     })
 
     return (
-        <div>
+        <div className="section-container">
             {props.pixel ? <Row>
                 <PixelBorder orientation="top" />
             </Row> : null}
