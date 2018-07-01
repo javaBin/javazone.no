@@ -9,7 +9,9 @@ import { CenterBlock, LeftBlock, ImageBlock } from '../../components/Block/Block
 import { Clock, Globe, User, Users } from 'react-feather';
 import Page from '../../components/Page/Page';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Circle, CheckCircle } from 'react-feather';
 import * as React from 'react';
+import Button from '../../components/Button/Button.js';
 import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
 import { Block, Header, Content, P } from '../../components/block';
 import { CBlock, CHeader, CContent } from '../../components/centeredblock';
@@ -19,66 +21,9 @@ import './Program.less';
 
 const SETTINGS_KEY = 'programsettings_v2';
 
-const formats = {
-    'lightning-talk' : 'Lightning Talks',
-    'workshop': 'Workshops',
-    'presentation': 'Presentations'
-};
-
 const defaultSettings = {
-    show: 'all',
-    myprogram: []
+    favorites: []
 };
-
-function getFormat(f) {
-    if (f === 'presentation') {
-        return 'icon-screen-desktop';
-    } else if (f === 'workshop') {
-        return 'icon-wrench';
-    } else {
-        return 'icon-energy';
-    }
-}
-
-const removeWorkshops = filter(session => session.format !== 'workshop');
-
-const groupByDay = (r) => reduce((acc, session) => {
-    let key = find({day: session.day}, acc);
-    if (!key) {
-        key = {
-            day: session.day,
-            dayIndex: session.dayIndex,
-            slots: []
-        };
-        acc.push(key);
-    }
-    key.slots.push(session);
-    return acc;
-})(r);
-
-const groupBySlot = map(({day, slots}) => ({day: day, slots: createSlots([])(slots)}));
-const createSlots = reduce((acc, session) => {
-    let slot = last(acc);
-    if ((!slot || slot.timestamp !== session.timestamp) && session.format === 'presentation') {
-        slot = {timestamp: session.timestamp, start: session.start, sessions: { 'presentation': [], 'lightning-talk': []}};
-        acc.push(slot);
-    }
-    slot.sessions[session.format].push(session);
-    return acc;
-});
-
-const dummyGroupBySlot = map(({day, slots}) => {
-    return {day: day, slots: [{sessions: {'presentation': slots, 'lightning-talk': []}}]};
-});
-/*
-const getTransformedSessions = (r) => compose(
-    groupBySlot,
-    orderBy(['dayIndex'], ['asc']),
-    groupByDay(r),
-    orderBy(['sortIndex', 'timestamp'], ['desc', 'asc']),
-    removeWorkshops
-);
-*/
 
 function getDefaultSettings() {
     try {
@@ -87,7 +32,8 @@ function getDefaultSettings() {
             return defaultSettings;
         }
 
-        return JSON.parse(settings);
+        const lol = JSON.parse(settings);
+        return lol;
     } catch (e) {
         return defaultSettings;
     }
@@ -100,112 +46,6 @@ function saveSettings(settings) {
         console.warn('Could not save program filters', e);
     }
 }
-
-function showSession(session, state) {
-    return state.show === 'all' || state.show === session.language || includes(session.id, state.myprogram);
-}
-
-function showLightning(session, timestamp, state) {
-    return state.show === 'all' || state.show === session.language || includes(session.room + timestamp, state.myprogram);
-}
-
-function isFavorite(id, state) {
-    return includes(id, state.myprogram);
-}
-
-function hasVideo(video) {
-    return typeof video !== 'undefined';
-}
-
-const Session = ({title, speakers, icon, room, language, duration, id, video, format}, key, state, toggleFavorite) => (
-    <li className='sessions__session session' key={key}>
-        <i className={`session__icon ${icon}`}></i>
-        {hasVideo(video) ?
-            <Link href={`/program/${id}`} className='session__video-title'><span className='session__video'><i className='icon-control-play'></i></span></Link> :
-            <span className='session__room'>{room}</span>}
-        <div className='session__title-wrapper'>
-            {hasVideo(video) ?
-                <Link href={`/program/${id}`} className='session__video-title'><span className='session__mobile-video'><i className='icon-control-play'></i></span></Link> :
-                <span className='session__mobile-room'>{room}</span>
-            }
-            <Link href={`/program/${id}`} className='session__title'>{title}</Link>
-        </div>
-        <button className={`session__favorite session__favorite--${isFavorite(id, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(id)}>
-            <i className={isFavorite(id, state) ? 'icon-check' : 'icon-plus'}></i>
-        </button>
-        <div className='session__speakers'>
-            <span className='session__mobile-lang'>{language}</span>
-            <span className='session__duration'>{duration} min</span>
-            {speakers.map(speaker => speaker.name).join(', ')}
-        </div>
-    </li>
-);
-
-const Lightning = ({title, duration, language, speakers, id, video}, key) => (
-    <div key={key} className='lightning__talk'>
-        {hasVideo(video) ?
-            <Link className='lightning__title' href={`/program/${id}`}><span className='session__video session__video--lightning'><i className='icon-control-play'></i></span></Link> :
-            <span></span>}
-        <Link className='lightning__title' href={`/program/${id}`}>{title}</Link>
-        <div>
-            <span className='lightning__language'>{language}</span>
-            <span className='lightning__duration'>{duration} min</span>
-            <span className='lightning__speakers'>{speakers.map(s => s.name).join(', ')}</span>
-        </div>
-    </div>
-);
-
-const Sessions = (sessions, lightning, timestamp, state, toggleFavorite) => {
-    const groupedLightning = groupBy('room')(lightning);
-    return (
-        <ul className='slot__sessions'>
-            {sessions.map((session, id) => Session(session, id, state, toggleFavorite))}
-            {Object.keys(groupedLightning).map((room, id) => (
-                <li className='sessions__lightning lightning' key={id}>
-                    <button className={`lightning__favorite lightning__favorite--${isFavorite(room + timestamp, state) ? 'checked' : 'unchecked'}`} onClick={() => toggleFavorite(room + timestamp)}>
-                        <i className={isFavorite(room + timestamp, state) ? 'icon-check' : 'icon-plus'}></i>
-                    </button>
-                    <span className='lightning__room'>{room}</span>
-                    <div className='lightning__header'>
-                        <span className='lightning__mobile-room'>{room}</span>Lightning Talks
-                    </div>
-                    {groupedLightning[room].map((session, id) => Lightning(session, id))}
-                </li>
-            ))}
-        </ul>
-    );
-};
-
-const NoSessions = () => (
-    <div className='slot__no-sessions'>
-        –
-    </div>
-);
-
-function Slot({sessions, timestamp, start}, key, state, toggleFavorite) {
-    const filteredPresentations = orderBy(['room'], ['asc'])(sessions.presentation.filter(session => showSession(session, state)));
-    const filteredLightning = orderBy(['room'], ['asc'])(sessions['lightning-talk'].filter(session => showLightning(session, timestamp, state)));
-    const empty = !filteredPresentations.length && !filteredLightning.length;
-    return (
-        <Row className='program-slot' key={key}>
-            <div className='program-slot-start'>{start}</div>
-            {/* {empty ? NoSessions() : Sessions(filteredPresentations, filteredLightning, timestamp, state, toggleFavorite)} */}
-        </Row>
-    );
-};
-
-function Day({slots, day}, key, state, toggleFavorite) {
-    return (
-        <div className="program-day" key={key} id={day}>
-            <Row>
-                <h1 className="program-day-header">{day}</h1>
-            </Row>
-            <Row className="program-day-slots">
-                {slots.map((slot, id) => Slot(slot, id, state, toggleFavorite))}
-            </Row>
-        </div>
-    );
-};
 
 const Failure = () => (
     <div className='program__loading'>
@@ -235,32 +75,77 @@ function generateSpeakersString(speakers: []): string {
     return speakersCombined;
 }
 
+
+type SessionItemProps = {
+    session: {};
+    favorites: [];
+    addToFav: (session) => {};
+}
+
+function SessionItem(props: SessionItemProps) {
+    const isFavorite = props.favorites.findIndex(fav => fav.sessionId === props.session.sessionId);
+    return (
+        <div key={props.session.sessionId} className={`${isFavorite >= 0 ? 'program-simple-session-item-fav' : 'program-simple-session-item'}`}>
+            <Row>
+                <Col lg={11}>
+                    <Row className="program-simple-session-title">
+                        <Link href={`/program/${props.session.sessionId}`}>{props.session.title}</Link>
+                    </Row>
+                    <Row>
+                        <Col className="program-margin-right">
+                            {props.session.language === 'en' ? 'English' : 'Norwegian'}
+                        </Col>
+                        <Col className="program-margin-right">
+                            {`${props.session.length} Minutes`}
+                        </Col>
+                        <Col>
+                            {props.session.speakers.length > 1 ? generateSpeakersString(props.session.speakers) : props.session.speakers[0].name}
+                        </Col>
+                    </Row>
+                </Col>
+                <Col lg={1}>
+                     <Row className="program-favorite-button" center="xs" middle="xs">
+                        <button onClick={() => {props.addToFav(props.session)}}>
+                            {isFavorite >= 0 ? <CheckCircle size={32} /> : <Circle size={32} />}
+                        </button>
+                    </Row>
+                </Col>
+            </Row>
+        </div>
+    );
+}
+
+
+function groupByTimeSlot(sessions) {
+    const sorted = sessions.sort(function(a, b) {
+        return a.startTime.substr(-5).replace(':', '') > b.startTime.substr(-5).replace(':', '')
+    });
+    const grouped = sessions.reduce(function(rv, x) {
+        (rv[x['startTime']] = rv[x['startTime']] || []).push(x);
+        return rv;
+    }, {});
+    return grouped;
+}
+
 type DayProps = {
     sessions: [];
+    favorites: [];
+    addToFav: (session) => {};
 }
 
 function Wedensday(props: DayProps) {
     const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-12'));
+    const timeSlots = groupByTimeSlot(filteredList);
     return (
         filteredList.length > 0 ?
         <div>
             <h1 className="program-day-header">Wedensday</h1>
-            {filteredList.map((session, idx) => {
-                return <div key={session.sessionId} className="program-simple-session-item">
-                    <Row className="program-simple-session-title">
-                        <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
-                    </Row>
-                    <Row>
-                        <Col className="program-margin-right">
-                            {session.language === 'en' ? 'English' : 'Norwegian'}
-                        </Col>
-                        <Col className="program-margin-right">
-                            {`${session.length} Minutes`}
-                        </Col>
-                        <Col>
-                            {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
-                        </Col>
-                    </Row>
+            {Object.keys(timeSlots).map((timeSlot, idx) => {
+                return <div>
+                    <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
+                    {timeSlots[timeSlot].map((session, idx) => {
+                        return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
+                    })}
                 </div>
             })}
         </div> : null
@@ -269,26 +154,36 @@ function Wedensday(props: DayProps) {
 
 function Thursday(props: DayProps) {
     const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-13'));
+    const timeSlots = groupByTimeSlot(filteredList);
     return (
         filteredList.length > 0 ?
         <div>
             <h1 className="program-day-header">Thursday</h1>
-            {filteredList.map((session, idx) => {
-                return <div key={session.sessionId} className="program-simple-session-item">
-                    <Row className="program-simple-session-title">
-                        <Link href={`/program/${session.sessionId}`}>{session.title}</Link>
-                    </Row>
-                    <Row>
-                        <Col className="program-margin-right">
-                            {session.language === 'en' ? 'English' : 'Norwegian'}
-                        </Col>
-                        <Col className="program-margin-right">
-                            {`${session.length} Minutes`}
-                        </Col>
-                        <Col>
-                            {session.speakers.length > 1 ? generateSpeakersString(session.speakers) : session.speakers[0].name}
-                        </Col>
-                    </Row>
+            {Object.keys(timeSlots).map((timeSlot, idx) => {
+                return <div>
+                    <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
+                    {timeSlots[timeSlot].map((session, idx) => {
+                        return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
+                    })}
+                </div>
+            })}
+        </div> : null
+    );
+}
+
+function Tuesday(props: DayProps) {
+    const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-11'));
+    const timeSlots = groupByTimeSlot(filteredList);
+    return (
+        filteredList.length > 0 ?
+        <div>
+            <h1 className="program-day-header">Tuesday</h1>
+            {Object.keys(timeSlots).map((timeSlot, idx) => {
+                return <div>
+                    <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
+                    {timeSlots[timeSlot].map((session, idx) => {
+                        return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
+                    })}
                 </div>
             })}
         </div> : null
@@ -297,7 +192,9 @@ function Thursday(props: DayProps) {
 
 type SimpleSessionListProps = {
     sessions: [];
+    favorites: [];
     type: string;
+    addToFav: (session) => {};
 }
 
 function SimpleSessionList(props: SimpleSessionListProps) {
@@ -306,13 +203,14 @@ function SimpleSessionList(props: SimpleSessionListProps) {
     }) : props.sessions;
     return (
         <div className="program-list">
-            <Wedensday sessions={filteredList} />
-            <Thursday sessions={filteredList} />
+            <Tuesday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
+            <Wedensday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
+            <Thursday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
         </div>
     );
 };
 
-function Filter(sessions, state, props, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
+function Filter(sessions, state, props, addToFav, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleTue, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
     return (
         <div className="program-filter-container">
              <Section className='program-filter' pixel alternate>
@@ -321,6 +219,7 @@ function Filter(sessions, state, props, toggleFavorite, setAll, setPresentation,
                         <div>
                             <div className='program-filter-header'>Day</div>
                             <div className='program-filter-button-group'>
+                                <button className={`program-filter-button ${props.day === 'tue' ? 'enabled' : ''}`} onClick={toggleTue}>Tuesday</button>
                                 <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
                                 <button className={`program-filter-button ${props.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
                             </div>
@@ -339,6 +238,7 @@ function Filter(sessions, state, props, toggleFavorite, setAll, setPresentation,
                                 <button className={`program-filter-button ${props.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
                                 <button className={`program-filter-button ${props.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
                                 <button className={`program-filter-button ${props.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops ({sessions.filter(session => session.format === 'workshop').length})</button>
+                                <button className={`program-filter-button ${props.show === 'favorite' ? 'enabled' : ''}`} onClick={toggleFavorite}>My Favorites ({state.favorites.length})</button>
                             </div>
                         </div>
                     </Col>
@@ -346,7 +246,7 @@ function Filter(sessions, state, props, toggleFavorite, setAll, setPresentation,
             </Section>
             {props.isFetching ? <Section class="program-loader" dark><Loader /></Section> :
             <Section className='program-list'>
-                <SimpleSessionList type={props.show} sessions={sessions} />
+                <SimpleSessionList favorites={state.favorites} addToFav={addToFav} type={props.show} sessions={sessions} />
             </Section>}
         </div>
     );
@@ -368,11 +268,8 @@ type ProgramProps = {
 };
 
 type ProgramState = {
-    myProgram: [];
     filteredSessions: [];
-    show: string;
-    day: string;
-    language: string;
+    favorites: [];
 }
 
 class Program extends React.Component<ProgramProps, ProgramState> {
@@ -385,17 +282,13 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     toggleEnglish: Function;
     setMyProgram: Function;
     toggleFavorite: Function;
+    toggleTue: Function;
     toggleWed: Function;
     toggleThu: Function;
     updateFilteredSessions: Function;
+    addToFav: Function;
 
-    state = {
-        myProgram: [],
-        filteredSessions: [],
-        show: 'all',
-        day: '',
-        language: ''
-    };
+    state = getDefaultSettings();
 
     constructor(props: ProgramProps) {
         super(props);
@@ -407,13 +300,17 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         this.toggleEnglish = this.toggleEnglish.bind(this);
         this.setMyProgram = this.setMyProgram.bind(this);
         this.toggleFavorite = this.toggleFavorite.bind(this);
+        this.toggleTue = this.toggleTue.bind(this);
         this.toggleWed = this.toggleWed.bind(this);
         this.toggleThu = this.toggleThu.bind(this);
         this.updateFilteredSessions = this.updateFilteredSessions.bind(this);
+        this.addToFav = this.addToFav.bind(this);
     }
 
     componentWillMount() {
-        this.props.getSessions();
+        if (this.props.sessions.length === 0) {
+            this.props.getSessions();
+        }
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -430,14 +327,37 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         if (this.props.day !== '') {
             if (this.props.day === 'wed') {
                 updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-12'));
-            } else {
+            } else if (this.props.day === 'thu') {
                 updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-13'));
+            } else {
+                updatedFilter = updatedFilter.filter(session => session.startTime.startsWith('2018-09-11'));
             }
         }
         if (this.props.language !== '') {
             updatedFilter = updatedFilter.filter(session => session.language === this.props.language);
         }
         this.props.setFilteredList(updatedFilter);
+    }
+
+    addToFav(favSession) {
+        const exists = this.state.favorites.findIndex(fav => fav.sessionId === favSession.sessionId);
+        if (exists >= 0) {
+            const removed = [...this.state.favorites];
+            removed.splice(exists, 1);
+            this.setState({
+                favorites: removed
+            });
+        } else {
+            const added = [...this.state.favorites];
+            added.push(favSession);
+            this.setState({
+                favorites: added
+            });
+        }
+    }
+
+    toggleTue() {
+        this.props.setDay(this.props.day === 'tue' ? '' : 'tue');
     }
 
     toggleWed() {
@@ -489,7 +409,21 @@ class Program extends React.Component<ProgramProps, ProgramState> {
 
         const content = this.props.failure
             ? <Failure />
-            : Filter(this.props.filteredList, this.state, this.props, this.toggleFavorite, this.setAll, this.setPresentation, this.setLightningTalk, this.setWorkshop, this.toggleWed, this.toggleThu, this.toggleNorwegian, this.toggleEnglish);
+            : Filter(
+                this.props.filteredList,
+                this.state,
+                this.props,
+                this.addToFav,
+                this.toggleFavorite,
+                this.setAll,
+                this.setPresentation,
+                this.setLightningTalk,
+                this.setWorkshop,
+                this.toggleTue,
+                this.toggleWed,
+                this.toggleThu,
+                this.toggleNorwegian,
+                this.toggleEnglish);
 
         saveSettings(this.state);
 
