@@ -19,7 +19,7 @@ import { without, includes, get, filter, compose, join, map, reduce, orderBy, la
 import Loader from '../../components/Loader/Loader.js';
 import './Program.less';
 
-const SETTINGS_KEY = 'programsettings_v2';
+const SETTINGS_KEY = 'programsettings_v3';
 
 const defaultSettings = {
     favorites: []
@@ -210,6 +210,7 @@ function SimpleSessionList(props: SimpleSessionListProps) {
 };
 
 function Filter(sessions, state, props, addToFav, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleTue, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
+    console.log('state', state);
     return (
         <div className="program-filter-container">
              <Section className='program-filter' pixel alternate>
