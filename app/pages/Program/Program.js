@@ -32,8 +32,7 @@ function getDefaultSettings() {
             return defaultSettings;
         }
 
-        const lol = JSON.parse(settings);
-        return lol;
+        return JSON.parse(settings);
     } catch (e) {
         return defaultSettings;
     }
@@ -268,7 +267,6 @@ type ProgramProps = {
 };
 
 type ProgramState = {
-    filteredSessions: [];
     favorites: [];
 }
 
@@ -280,7 +278,6 @@ class Program extends React.Component<ProgramProps, ProgramState> {
     setWorkshop: Function;
     toggleNorwegian: Function;
     toggleEnglish: Function;
-    setMyProgram: Function;
     toggleFavorite: Function;
     toggleTue: Function;
     toggleWed: Function;
@@ -298,7 +295,6 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         this.setWorkshop = this.setWorkshop.bind(this);
         this.toggleNorwegian = this.toggleNorwegian.bind(this);
         this.toggleEnglish = this.toggleEnglish.bind(this);
-        this.setMyProgram = this.setMyProgram.bind(this);
         this.toggleFavorite = this.toggleFavorite.bind(this);
         this.toggleTue = this.toggleTue.bind(this);
         this.toggleWed = this.toggleWed.bind(this);
@@ -390,10 +386,6 @@ class Program extends React.Component<ProgramProps, ProgramState> {
 
     toggleEnglish() {
         this.props.setLanguage(this.props.language === 'en' ? '' : 'en');
-    }
-
-    setMyProgram() {
-        this.setState({show: 'my'});
     }
 
     toggleFavorite(id) {
