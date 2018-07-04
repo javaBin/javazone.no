@@ -115,7 +115,6 @@ type SimpleSessionListProps = {
 }
 
 function SimpleSessionList(props: SimpleSessionListProps) {
-    console.log('workshops', props.workshops);
     return (
         props.workshops.map(workshop => {
             return <div key={workshop.sessionId} className="program-simple-session-item">
@@ -175,7 +174,6 @@ class Workshops extends React.Component<WorkshopsProps, WorkshopsState> {
 
     render() {
         const filteredWorkshops = this.props.sessions.filter(session => session.format === 'workshop');
-        console.log('sessions', this.props.sessions);
         const content = this.props.failure 
             ? <Section class="program-loader" dark><Loader /></Section>
             : <SimpleSessionList workshops={filteredWorkshops} />;
