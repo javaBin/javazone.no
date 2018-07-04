@@ -74,6 +74,12 @@ function generateSpeakersString(speakers: []): string {
     return speakersCombined;
 }
 
+const sessionFormat = (format) => {
+    if (format === 'presentation') return 'Presentation';
+    if (format === 'lightning-talk') return 'Lightning Talk';
+    return 'Workshop';
+}
+
 
 type SessionItemProps = {
     session: {};
@@ -91,6 +97,9 @@ function SessionItem(props: SessionItemProps) {
                         <Link href={`/program/${props.session.sessionId}`}>{props.session.title}</Link>
                     </Row>
                     <Row>
+                        <Col className="program-margin-right">
+                            <strong>{sessionFormat(props.session.format)}</strong>
+                        </Col>
                         <Col className="program-margin-right">
                             {props.session.language === 'en' ? 'English' : 'Norwegian'}
                         </Col>
@@ -117,9 +126,9 @@ function SessionItem(props: SessionItemProps) {
 
 function groupByTimeSlot(sessions) {
     const sorted = sessions.sort(function(a, b) {
-        return a.startTime.substr(-5).replace(':', '') > b.startTime.substr(-5).replace(':', '')
+        return new Date(a.startTime) - new Date(b.startTime);
     });
-    const grouped = sessions.reduce(function(rv, x) {
+    const grouped = sorted.reduce(function(rv, x) {
         (rv[x['startTime']] = rv[x['startTime']] || []).push(x);
         return rv;
     }, {});
@@ -140,7 +149,7 @@ function Wedensday(props: DayProps) {
         <div>
             <h1 className="program-day-header">Wedensday</h1>
             {Object.keys(timeSlots).map((timeSlot, idx) => {
-                return <div>
+                return <div key={timeSlot + idx}>
                     <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
                     {timeSlots[timeSlot].map((session, idx) => {
                         return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
@@ -159,7 +168,7 @@ function Thursday(props: DayProps) {
         <div>
             <h1 className="program-day-header">Thursday</h1>
             {Object.keys(timeSlots).map((timeSlot, idx) => {
-                return <div>
+                return <div key={timeSlot + idx}>
                     <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
                     {timeSlots[timeSlot].map((session, idx) => {
                         return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
@@ -178,7 +187,7 @@ function Tuesday(props: DayProps) {
         <div>
             <h1 className="program-day-header">Tuesday</h1>
             {Object.keys(timeSlots).map((timeSlot, idx) => {
-                return <div>
+                return <div key={timeSlot + idx}>
                     <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
                     {timeSlots[timeSlot].map((session, idx) => {
                         return <SessionItem favorites={props.favorites} addToFav={props.addToFav} key={session.sessionId} session={session} />
@@ -197,9 +206,12 @@ type SimpleSessionListProps = {
 }
 
 function SimpleSessionList(props: SimpleSessionListProps) {
-    const filteredList = (props.type !== 'all') ? props.sessions.filter(session => {
+    let filteredList = (props.type !== 'all' && props.type !== 'fav') ? props.sessions.filter(session => {
         return session.format === props.type;
     }) : props.sessions;
+    if (props.type === 'fav') {
+        filteredList = props.favorites;
+    }
     return (
         <div className="program-list">
             <Tuesday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
@@ -210,27 +222,32 @@ function SimpleSessionList(props: SimpleSessionListProps) {
 };
 
 function Filter(sessions, state, props, addToFav, toggleFavorite, setAll, setPresentation, setLightningTalk, setWorkshop, toggleTue, toggleWed, toggleThu, toggleNorwegian, toggleEnglish) {
-    console.log('state', state);
     return (
         <div className="program-filter-container">
              <Section className='program-filter' pixel alternate>
                 <Row className='program-filter'>
                     <Col lg>
-                        <div>
-                            <div className='program-filter-header'>Day</div>
-                            <div className='program-filter-button-group'>
-                                <button className={`program-filter-button ${props.day === 'tue' ? 'enabled' : ''}`} onClick={toggleTue}>Tuesday</button>
-                                <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
-                                <button className={`program-filter-button ${props.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='program-filter-header'>Language</div>
-                            <div className='program-filter-button-group'>
-                                <button className={`program-filter-button ${props.language === 'no' ? 'enabled' : ''}`} onClick={toggleNorwegian}>Norwegian</button>
-                                <button className={`program-filter-button ${props.language === 'en' ? 'enabled' : ''}`} onClick={toggleEnglish}>English</button>
-                            </div>
-                        </div>
+                        <Row>
+                            <Col>
+                                <div className="program-filter-spacing">
+                                    <div className='program-filter-header'>Day</div>
+                                    <div className='program-filter-button-group'>
+                                        <button className={`program-filter-button ${props.day === 'tue' ? 'enabled' : ''}`} onClick={toggleTue}>Tuesday</button>
+                                        <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
+                                        <button className={`program-filter-button ${props.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div>
+                                    <div className='program-filter-header'>Language</div>
+                                    <div className='program-filter-button-group'>
+                                        <button className={`program-filter-button ${props.language === 'no' ? 'enabled' : ''}`} onClick={toggleNorwegian}>Norwegian</button>
+                                        <button className={`program-filter-button ${props.language === 'en' ? 'enabled' : ''}`} onClick={toggleEnglish}>English</button>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
                         <div>
                             <div className='program-filter-header'>Format</div>
                             <div className='program-filter-button-group'>
@@ -238,7 +255,7 @@ function Filter(sessions, state, props, addToFav, toggleFavorite, setAll, setPre
                                 <button className={`program-filter-button ${props.show === 'presentation' ? 'enabled' : ''}`} onClick={setPresentation}>Presentations ({sessions.filter(session => session.format === 'presentation').length})</button>
                                 <button className={`program-filter-button ${props.show === 'lightning-talk' ? 'enabled' : ''}`} onClick={setLightningTalk}>Lightning Talks ({sessions.filter(session => session.format === 'lightning-talk').length})</button>
                                 <button className={`program-filter-button ${props.show === 'workshop' ? 'enabled' : ''}`} onClick={setWorkshop}>Workshops ({sessions.filter(session => session.format === 'workshop').length})</button>
-                                <button className={`program-filter-button ${props.show === 'favorite' ? 'enabled' : ''}`} onClick={toggleFavorite}>My Favorites ({state.favorites.length})</button>
+                                <button className={`program-filter-button ${props.show === 'fav' ? 'enabled' : ''}`} onClick={toggleFavorite}>My Favorites ({state.favorites.length})</button>
                             </div>
                         </div>
                     </Col>
@@ -389,13 +406,8 @@ class Program extends React.Component<ProgramProps, ProgramState> {
         this.props.setLanguage(this.props.language === 'en' ? '' : 'en');
     }
 
-    toggleFavorite(id) {
-        if (includes(id, this.state.myProgram)) {
-            this.setState({myProgram: without([id], this.state.myProgram)});
-        } else {
-            const prev = this.state.myProgram || [];
-            this.setState({myProgram: prev.concat(id)});
-        }
+    toggleFavorite() {
+        this.props.setShow('fav');
     }
 
     render() {
