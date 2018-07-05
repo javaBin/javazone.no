@@ -2,14 +2,24 @@
 
 .program-filter {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .program-filter-header {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 0.2rem;
     font-family: @upheaval;
-    margin-bottom: 1.5rem;
+}
+
+.program-filter-button-group {
+    margin-bottom: 1.2rem;
+    &>button {
+        outline: none;
+    }
+}
+
+.program-filter-container {
+    width: 100%;
 }
 
 .program-filter-day a {
@@ -20,6 +30,29 @@
     &:hover {
         border-bottom: 2px solid @secondary-color;
     }
+}
+
+.program-filter-spacing {
+    margin-right: 3rem;
+}
+
+.program-favorite-button {
+    height: 100%;
+    button {
+        border: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+    button:focus {
+        outline: 0;
+    }
+}
+
+.program-list {
+    margin-top: -3rem;
+    width: 100%;
 }
 
 .program-margin-right {
@@ -33,7 +66,7 @@
     font-family: @source-sans-pro;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 10px 18px; /* Some padding */
+    padding: 5px 9px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     margin-top: 0.5rem;
     &:not(:last-child) {
@@ -53,6 +86,7 @@
     font-family: @upheaval;
     font-size: 3rem;
     letter-spacing: 0.2rem;
+    margin: 1rem 0;
 }
 
 .program-day {
@@ -84,6 +118,28 @@
     height: auto;
     padding: 1rem 1rem 1rem 1rem;
     margin-bottom: 1rem;
+}
+
+.program-simple-session-item-fav {
+    width: 100%;
+    background: @logo-red;
+    font-family: @source-sans-pro;
+    color: white;
+    height: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    button {
+        color: white;
+    }
+    .program-simple-session-title > a {
+        color: white;
+    }
+}
+
+.program-day-timeslot {
+    font-family: @upheaval;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
 }
 
 .program-simple-session-title {

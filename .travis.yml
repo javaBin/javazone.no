@@ -8,7 +8,7 @@ notifications:
 script:
 - yarn clean
 - yarn install
-- yarn build
+- yarn build:prod
 after_success:
 - bash ./tasks/deploy.sh
 after_failure:

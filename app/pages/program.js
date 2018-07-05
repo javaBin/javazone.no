@@ -228,7 +228,7 @@ const EmptyMyProgram = () => (
     </div>
 );
 
-const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEnglish, setMyProgram) => (
+const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEnglish) => (
     <div>
         <div className='days'>
             <div className='days__header'>Days</div>
@@ -244,7 +244,7 @@ const HasProgram = (sessions, state, toggleFavorite, setAll, setNorwegian, setEn
                 <button className={`filters__toggle filters__toggle--${state.show === 'all' ? 'enabled' : 'disabled'}`} onClick={setAll}>All</button>
                 <button className={`filters__toggle filters__toggle--${state.show === 'no' ? 'enabled' : 'disabled'}`} onClick={setNorwegian}>Norwegian</button>
                 <button className={`filters__toggle filters__toggle--${state.show === 'en' ? 'enabled' : 'disabled'}`} onClick={setEnglish}>English</button>
-                <button className={`filters__toggle filters__toggle--${state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={setMyProgram}>My Program</button>
+                <button className={`filters__toggle filters__toggle--${state.show === 'my' ? 'enabled' : 'disabled'}`} onClick={}>My Program</button>
             </div>
         </div>
 
@@ -262,7 +262,6 @@ class Program extends React.Component {
         this.setAll = this.setAll.bind(this);
         this.setNorwegian = this.setNorwegian.bind(this);
         this.setEnglish = this.setEnglish.bind(this);
-        this.setMyProgram = this.setMyProgram.bind(this);
         this.toggleFavorite = this.toggleFavorite.bind(this);
     }
 
@@ -284,10 +283,6 @@ class Program extends React.Component {
         this.setState({show: 'en'});
     }
 
-    setMyProgram() {
-        this.setState({show: 'my'});
-    }
-
     toggleFavorite(id) {
         if (includes(id, this.state.myprogram)) {
             this.setState({myprogram: without([id], this.state.myprogram)});
@@ -302,7 +297,7 @@ class Program extends React.Component {
             ? <Failure />
             : this.props.isFetching
                 ? Loading()
-                : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish, this.setMyProgram);
+                : HasProgram(getTransformedSessions([])(this.props.sessions), this.state, this.toggleFavorite, this.setAll, this.setNorwegian, this.setEnglish);
 
         saveSettings(this.state);
 

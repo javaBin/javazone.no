@@ -226,21 +226,21 @@ function Partners() {
                     <div className='partners-table-section'>
                         <table className='table'>
                             <tbody>
-                                <tr className=''>
-                                    <td className='partners-desc-column'>Tickets for employees (0 - 30)</td>
-                                    <td className='partners-price-column'>NOK 5.590,-</td>
-                                </tr>
-                                <tr className='table__row'>
-                                    <td className='partners-desc-column'>Tickets for employees (31 - 50)</td>
-                                    <td className='partners-price-column'>NOK 5.390,-</td>
-                                </tr>
-                                <tr className='table__row'>
-                                    <td className='partners-desc-column'>Tickets for employees (51 - ∞)</td>
-                                    <td className='partners-price-column'>NOK 5.190,-</td>
-                                </tr>
                                 <tr className='table__row'>
                                     <td className='partners-desc-column'>Tickets for employees (Late-Bird)</td>
                                     <td className='partners-price-column'>NOK 6.190,-</td>
+                                </tr>
+                                <tr className='table__row sold-out-text-table'>
+                                    <td className='partners-desc-column'>Tickets for employees (0 - 30)</td>
+                                    <td className='partners-price-column'>NOK 5.590,-</td>
+                                </tr>
+                                <tr className='table__row sold-out-text-table'>
+                                    <td className='partners-desc-column'>Tickets for employees (31 - 50)</td>
+                                    <td className='partners-price-column'>NOK 5.390,-</td>
+                                </tr>
+                                <tr className='table__row sold-out-text-table'>
+                                    <td className='partners-desc-column'>Tickets for employees (51 - ∞)</td>
+                                    <td className='partners-price-column'>NOK 5.190,-</td>
                                 </tr>
                             </tbody>
                         </table>
