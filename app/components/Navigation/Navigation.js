@@ -6,7 +6,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Button from '../../components/Button/Button';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
-import { Menu } from 'react-feather'; 
+import { Menu } from 'react-feather';
 import JavazoneLogo from '../../assets/2018/javazone2018_logo_small.svg';
 import './Navigation.less';
 
@@ -140,6 +140,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
                     <NavItem active={this.isActiveNavItem("/tickets")} link="/tickets">TICKETS</NavItem>
                     <NavItem active={this.isActiveNavItem("/speakers")} link="/speakers">SPEAKERS</NavItem>
                     <NavItem active={this.isActiveNavItem("/program")} link="/program">PROGRAM</NavItem>
+                    <NavItem active={this.isActiveNavItem("/workshops")} link="/workshops">WORKSHOPS</NavItem>
                     <NavItem active={this.isActiveNavItem("/partners")} link="/partners">PARTNERS</NavItem>
                     <NavItem active={this.isActiveNavItem("/journeyzone")} link="/journeyzone">JOURNEYZONE</NavItem>
                     {/*

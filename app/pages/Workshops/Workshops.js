@@ -58,7 +58,7 @@ function workshopUrl(workshop) {
     if (!workshop) {
         return '#';
     }
-    return `https://javazone.no/moosehead/#/register/${workshop.id}`;
+    return `https://moosehead.javazone.no/#/register/${workshop.mooseheadId}`;
 }
 
 function workshopClass(workshop) {
@@ -67,39 +67,39 @@ function workshopClass(workshop) {
     }
 
     switch (workshop.status) {
-        case 'FREE_SPOTS': 
+        case 'FREE_SPOTS':
             return 'button--green';
-        case 'FEW_SPOTS': 
+        case 'FEW_SPOTS':
             return 'button--yellow';
-        case 'FULL': 
+        case 'FULL':
             return 'button--red';
-        case 'VERY_FULL': 
+        case 'VERY_FULL':
             return 'button--red';
-        case 'CLOSED': 
+        case 'CLOSED':
             return 'button--disabled';
-        default: 
+        default:
             return 'button--disabled';
     }
 }
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Opens at September 1st, 12.00';
+        return 'Opens at August 6th, 13:00';
     }
 
     switch (workshop.status) {
-        case 'FREE_SPOTS': 
+        case 'FREE_SPOTS':
             return 'Registration open';
-        case 'FEW_SPOTS': 
+        case 'FEW_SPOTS':
             return 'Few spots left';
-        case 'FULL': 
+        case 'FULL':
             return 'Waiting list';
-        case 'VERY_FULL': 
+        case 'VERY_FULL':
             return 'No more spots';
-        case 'CLOSED': 
+        case 'CLOSED':
             return 'Registration closed';
-        default: 
-            return 'Opens at September 1st, 12.00';
+        default:
+            return 'Opens at August 6th, 13:00';
     }
 }
 
@@ -135,14 +135,12 @@ function SimpleSessionList(props: SimpleSessionListProps) {
                             </Col>
                         </Row>
                         <Row>
-                            <span>Status: </span> {workshopStatus(workshop)}
+                        <p>&nbsp;</p>
                         </Row>
-                    </Col>
-                    {workshop.status === 'CLOSED'
-                        ? null
-                        :   <Col>
+                        <Row>
                                 <Button alternate link={workshopUrl(workshop)} >Register</Button>
-                            </Col>}
+                            </Row>
+                    </Col>
                 </Row>
             </div>
         })
@@ -167,14 +165,14 @@ class Workshops extends React.Component<WorkshopsProps, WorkshopsState> {
         super(props);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.getWorkshops();
         this.props.getSessions();
     }
 
     render() {
         const filteredWorkshops = this.props.sessions.filter(session => session.format === 'workshop');
-        const content = this.props.failure 
+        const content = this.props.failure
             ? <Section class="program-loader" dark><Loader /></Section>
             : <SimpleSessionList workshops={filteredWorkshops} />;
         return (
@@ -183,7 +181,7 @@ class Workshops extends React.Component<WorkshopsProps, WorkshopsState> {
                 <Section>
                     <CenterBlock>
                         <p>
-                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 1st of September, so put a reminder in your calendar!
+                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at 13:00 on Monday August 6th, so put a reminder in your calendar!
                         </p>
                     </CenterBlock>
                 </Section>
