@@ -8,6 +8,7 @@ import Page from '../../components/Page/Page.js';
 import Loader from '../../components/Loader/Loader.js';
 import { Section } from '../../components/Section/Section.js';
 import PageHeader from '../../components/PageHeader/PageHeader.js';
+import { Link } from '../../components/link';
 import { LeftBlock } from '../../components/Block/Block.js';
 import { PageHeading, Container } from '../../components/page';
 import { Block, Header, Content } from '../../components/block';
@@ -76,6 +77,7 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
         const audience = this.state.session.intendedAudience;
         const language = this.state.session.language;
         const format = this.transformFormat(this.state.session.format);
+        const registerLoc = this.state.session.registerLoc;
         if (this.state.session.title === undefined) {
             return (
                 <Page name='programDetails'>
@@ -105,6 +107,7 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                                 {audience}
                             </p>
                         </LeftBlock>
+
                         <LeftBlock header="Language">
                             <p class="too-small">
                                 {language === 'en' ? 'English' : 'Norwegian'}
@@ -115,6 +118,13 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                                 {format}
                             </p>
                         </LeftBlock>
+                        {registerLoc ?
+                          <LeftBlock header="Want to attend?">
+                              <p>
+                                  <Link href={registerLoc}>Register here</Link>
+                                  </p>
+                                  </LeftBlock> : null
+                        }
                     </Section>
                 </Page>
             )
