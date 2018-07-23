@@ -141,13 +141,13 @@ type DayProps = {
     addToFav: (session) => {};
 }
 
-function Wedensday(props: DayProps) {
+function Wednesday(props: DayProps) {
     const filteredList = props.sessions.filter(session => session.startTime.startsWith('2018-09-12'));
     const timeSlots = groupByTimeSlot(filteredList);
     return (
         filteredList.length > 0 ?
         <div>
-            <h1 className="program-day-header">Wedensday</h1>
+            <h1 className="program-day-header">Wednesday</h1>
             {Object.keys(timeSlots).map((timeSlot, idx) => {
                 return <div key={timeSlot + idx}>
                     <h1 className="program-day-timeslot">{timeSlot.substr(-5)}</h1>
@@ -215,7 +215,7 @@ function SimpleSessionList(props: SimpleSessionListProps) {
     return (
         <div className="program-list">
             <Tuesday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
-            <Wedensday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
+            <Wednesday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
             <Thursday favorites={props.favorites} addToFav={props.addToFav} sessions={filteredList} />
         </div>
     );
@@ -233,7 +233,7 @@ function Filter(sessions, state, props, addToFav, toggleFavorite, setAll, setPre
                                     <div className='program-filter-header'>Day</div>
                                     <div className='program-filter-button-group'>
                                         <button className={`program-filter-button ${props.day === 'tue' ? 'enabled' : ''}`} onClick={toggleTue}>Tuesday</button>
-                                        <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wedensday</button>
+                                        <button className={`program-filter-button ${props.day === 'wed' ? 'enabled' : ''}`} onClick={toggleWed}>Wednesday</button>
                                         <button className={`program-filter-button ${props.day === 'thu' ? 'enabled' : ''}`} onClick={toggleThu}>Thursday</button>
                                     </div>
                                 </div>
