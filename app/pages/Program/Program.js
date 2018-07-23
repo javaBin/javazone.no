@@ -92,7 +92,7 @@ function SessionItem(props: SessionItemProps) {
     return (
         <div key={props.session.sessionId} className={`${isFavorite >= 0 ? 'program-simple-session-item-fav' : 'program-simple-session-item'}`}>
             <Row>
-                <Col lg={11}>
+                <Col xs={12} sm={10} md={11} lg={11}>
                     <Row className="program-simple-session-title">
                         <Link href={`/program/${props.session.sessionId}`}>{props.session.title}</Link>
                     </Row>
@@ -111,7 +111,7 @@ function SessionItem(props: SessionItemProps) {
                         </Col>
                     </Row>
                 </Col>
-                <Col lg={1}>
+                <Col sm={2} md={1} lg={1}>
                      <Row className="program-favorite-button" center="xs" middle="xs">
                         <button onClick={() => {props.addToFav(props.session)}}>
                             {isFavorite >= 0 ? <CheckCircle size={32} /> : <Circle size={32} />}

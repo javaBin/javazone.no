@@ -41,6 +41,7 @@ function Banner() {
             <img className="logo-layer" src={javazone2018Logo} />
             <div className="logo-text">
                 <h1>JAVAZONE 2018</h1>
+                <h2>September 12th - 13th</h2>
             </div>
         </div>
     )

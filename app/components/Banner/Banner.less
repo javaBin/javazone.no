@@ -149,10 +149,38 @@
     top: 20rem;
     width: 100vw;
     z-index: 30;
+    h2 {
+        font-family: @source-sans-pro;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-top: 0;
+        text-shadow: 2px 2px 0.2rem black;
+        @media only screen and (max-width: @screen-lg) {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 0.2rem black;
+        }
+        @media only screen and (max-width: @screen-md) {
+            font-size: 2rem;
+            text-shadow: 2px 2px 0.2rem black;
+        }
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 2rem;
+            text-shadow: 2px 2px 0.2rem black;
+        }
+        @media only screen and (max-width: @screen-xs) {
+            font-size: 2rem;
+            text-shadow: 2px 2px 0.2rem black;
+        }
+        @media only screen and (max-width: @screen-xxs) {
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 0.2rem black;
+        }
+    }
     h1 {
         font-family: @upheaval;
         font-size: 7rem;
         letter-spacing: 0.5rem;
+        margin-bottom: 1rem;
         text-shadow: -0.4rem 0 black, 0 0.4rem black, 0.4rem 0 black, 0 -0.4rem black;
         @media only screen and (max-width: @screen-lg) {
             font-size: 5rem;
@@ -164,15 +192,18 @@
         }
         @media only screen and (max-width: @screen-sm) {
             font-size: 6rem;
+            margin-bottom: 0;
             text-shadow: -0.3rem 0 black, 0 0.3rem black, 0.3rem 0 black, 0 -0.3rem black;
         }
         @media only screen and (max-width: @screen-xs) {
             font-size: 4rem;
+            margin-bottom: 0;
             text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
         }
         @media only screen and (max-width: @screen-xxs) {
-            font-size: 3rem;
-            text-shadow: -0.2rem 0 black, 0 0.2rem black, 0.2rem 0 black, 0 -0.2rem black;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            text-shadow: -0.15rem 0 black, 0 0.15rem black, 0.15rem 0 black, 0 -0.15rem black;
         }
 
     }
