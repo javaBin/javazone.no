@@ -216,7 +216,7 @@ function QuestionSection() {
 function Info() {
     return (
         <Page name='info'>
-            <PageHeader subHeader="September 12 - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
+            <PageHeader subHeader="September 12th - 13th, 2018" subSubHeader="Oslo - Norway">Welcome to JavaZone 2018</PageHeader>
             <AboutSection />
             <TicketSection />
             <ImageBlock image={tickets2} alt="Tickets" />
