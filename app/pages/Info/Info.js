@@ -31,7 +31,7 @@ function AboutSection() {
                 </p>
                 <p>
                     We would not be what we are today without YOU! Thank you for your support and contributions over the years.
-                    Don’t procrastinate! Join your fellow Java developers at JavaZone on 12th-13th September 2018!
+                    Don’t procrastinate! Join your fellow Java developers at JavaZone on September 12th-13th, 2018!
                 </p>
             </LeftBlock>
         </Section>
@@ -216,7 +216,7 @@ function QuestionSection() {
 function Info() {
     return (
         <Page name='info'>
-            <PageHeader subHeader="September 12 - 13th 2018 - Oslo, Norway">Welcome to JavaZone 2018</PageHeader>
+            <PageHeader subHeader="September 12th - 13th, 2018" subSubHeader="Oslo - Norway">Welcome to JavaZone 2018</PageHeader>
             <AboutSection />
             <TicketSection />
             <ImageBlock image={tickets2} alt="Tickets" />
