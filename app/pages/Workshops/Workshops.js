@@ -11,55 +11,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Section } from '../../components/Section/Section.js';
 import Button from '../../components/Button/Button.js';
 import { CenterBlock } from '../../components/Block/Block.js';
-//import { assignInAll, join, map, filter, find, sortBy, includes, reduce, compose, get, curry } from 'lodash/fp';
-
-/*
-const workshops = [
-    'js-ws-001',
-    'js-ws-002',
-    'jz-ws-003',
-    'jz-ws-004',
-    'jz-ws-005',
-    'jz-ws-006',
-    'jz-ws-007',
-    'jz-ws-008'
-];
-
-const sortIndexes = {
-    'lightning-talk' : 2,
-    'presentation': 1,
-    'workshop': 0
-};
-
-function isWorkshop(session) {
-    return session.format === 'workshop';
-}
-
-const groupByFormat = reduce((acc, session) => {
-    let key = find({format: session.format}, acc);
-    if (!key) {
-        key = {
-            format: session.format,
-            sessions: [],
-            className: `sessions__format-title--${session.format}`,
-            sortIndex: get(session.format)(sortIndexes)
-        };
-        acc.push(key);
-    }
-
-    key.sessions.push(session);
-    return acc;
-}, []);
-
-const isJzWorkshop = workshopTitles => workshop => includes(workshop.title, workshopTitles);
-
-*/
-function workshopUrl(workshop) {
-    if (!workshop) {
-        return '#';
-    }
-    return `https://javazone.no/moosehead/#/register/${workshop.id}`;
-}
+import './Workshops.less';
 
 function workshopClass(workshop) {
     if (!workshop) {
@@ -84,11 +36,11 @@ function workshopClass(workshop) {
 
 function workshopStatus(workshop) {
     if (!workshop) {
-        return 'Opens at September 1st, 12.00';
+        return '';
     }
 
     switch (workshop.status) {
-        case 'FREE_SPOTS': 
+        case 'FREE_SPOTS':
             return 'Registration open';
         case 'FEW_SPOTS': 
             return 'Few spots left';
@@ -99,7 +51,7 @@ function workshopStatus(workshop) {
         case 'CLOSED': 
             return 'Registration closed';
         default: 
-            return 'Opens at September 1st, 12.00';
+            return 'Opens at August 6th, 13:00';
     }
 }
 
@@ -119,7 +71,7 @@ function SimpleSessionList(props: SimpleSessionListProps) {
         props.workshops.map(workshop => {
             return <div key={workshop.sessionId} className="program-simple-session-item">
                 <Row>
-                    <Col>
+                    <Col xs={12} sm={10} md={11} lg={11}>
                         <Row className="program-simple-session-title">
                             <Link href={`/program/${workshop.sessionId}`}>{workshop.title}</Link>
                         </Row>
@@ -134,15 +86,17 @@ function SimpleSessionList(props: SimpleSessionListProps) {
                                 {workshop.speakers.length > 1 ? generateSpeakersString(workshop.speakers) : workshop.speakers[0].name}
                             </Col>
                         </Row>
-                        <Row>
-                            <span>Status: </span> {workshopStatus(workshop)}
-                        </Row>
                     </Col>
-                    {workshop.status === 'CLOSED'
+                    <Col sm={2} md={1} lg={1}>
+                        {workshop.status === 'CLOSED'
                         ? null
-                        :   <Col>
-                                <Button alternate link={workshopUrl(workshop)} >Register</Button>
-                            </Col>}
+                        :   
+                            <Row className="workshop-register-button" center="xs" middle="xs">
+                                <Col>
+                                    <Button alternate link={workshop.registerLoc}>Register</Button>
+                                </Col>
+                            </Row>}
+                    </Col>
                 </Row>
             </div>
         })
@@ -177,13 +131,14 @@ class Workshops extends React.Component<WorkshopsProps, WorkshopsState> {
         const content = this.props.failure 
             ? <Section class="program-loader" dark><Loader /></Section>
             : <SimpleSessionList workshops={filteredWorkshops} />;
+        console.log('workshops', filteredWorkshops);
         return (
             <Page name='workshops'>
                 <PageHeader subHeader="Bring out the most of your ticket">Workshops</PageHeader>
                 <Section>
                     <CenterBlock>
                         <p>
-                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens at noon on Friday the 1st of September, so put a reminder in your calendar!
+                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration on Monday the 6th of August at 13:00, so put a reminder in your calendar!
                         </p>
                     </CenterBlock>
                 </Section>
