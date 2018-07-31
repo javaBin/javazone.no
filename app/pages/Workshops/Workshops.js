@@ -138,7 +138,7 @@ class Workshops extends React.Component<WorkshopsProps, WorkshopsState> {
                 <Section>
                     <CenterBlock>
                         <p>
-                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration on Monday the 6th of August at 13:00, so put a reminder in your calendar!
+                            For those of you who want to make the most of their JavaZone ticket we offer a selection of hands-on workshops that take place the day before JavaZone officially begins. To ensure a positive learning experience we’ve limited the spaces on each workshop, so you’ll have to register to secure your place. Registration opens on Monday, August 5 at 13:00, so put a reminder in your calendar!
                         </p>
                     </CenterBlock>
                 </Section>
