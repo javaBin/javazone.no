@@ -50,6 +50,16 @@ const kidsInfo = {
         'som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset ' +
         'må deltagerne ha en Minecraft-konto.',
         url: 'http://oppgaver.kidsakoder.no/computercraft/installasjon/installasjon.html',
+    },
+    'kids_processing': {
+        background: processing,
+        age: '12+ år',
+        description: 'Processing er en utvidelse av programmeringsspråket Java, som gjør det enkelt å komme i gang. ' +
+        'Her ønskes ungdommene velkommen til et minikurs hvor de kan lære seg å programmere. ' +
+        'Dette kurset er rettet mot nybegynnere og krever ingen forhåndskunnskaper. ' +
+        'Målet for kurset er å gå gjennom noen viktige begreper innenfor programmering og ' +
+        'at alle skal lære seg nok til å lage et lite interaktivt grafisk program.',
+        url: 'https://sardtok.github.io/Processing.html',
     }
 };
 
