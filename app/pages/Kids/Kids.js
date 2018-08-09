@@ -11,6 +11,7 @@ import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import george from '../../assets/kids/george.png';
+import processing from '../../assets/kids/processing.jpg';
 import scratch from '../../assets/kids/scratch2.png';
 import minecraft from '../../assets/kids/minecraft.png';
 import kidsimage from '../../assets/kids/kids_header.jpg';
