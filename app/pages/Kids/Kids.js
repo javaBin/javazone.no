@@ -58,17 +58,27 @@ type SessionListProps = {
 }
 
 function SessionList(props: SessionListProps) {
+
+    const tempSessions = [
+        { id: 'george' },
+        { id: 'processing' }
+    ];
+
+
     return (
         <div>
             <Header align="center">Sesjoner</Header>
-            {props.sessions.map((session) => {
-                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+            {tempSessions.map((session) => {
+                // Temporary disable these until the workshops are added back to the backend.
+                //return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+                return <Session key={session.id} session={session} />
             })}
         </div>
     )
 }
 
 function Session(props: SessionProps) {
+
     if(!props.session) {
         return null;
     }
@@ -88,7 +98,10 @@ function Session(props: SessionProps) {
                 </div>
                 <div className="kids-session-buttons">
                     <Button alternate link={extraInfo.url}>Mer info</Button>
-                    <Button alternate link={workshopUrl(props.session)}>Påmelding</Button>
+                    {/*
+                        // Add back in when registration is open
+                        <Button alternate link={workshopUrl(props.session)}>Påmelding</Button>
+                    */}
                 </div>
             </LeftBlock>
         </div>
