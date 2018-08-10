@@ -41,7 +41,7 @@ const kidsInfo = {
         'Dette kurset er rettet mot nybegynnere og krever ingen forhåndskunnskaper. ' +
         'Målet for kurset er å gå gjennom noen viktige begreper innenfor programmering og ' +
         'at alle skal lære seg nok til å lage et lite interaktivt grafisk program.',
-        url: 'https://sardtok.github.io/Processing.html',
+        url: 'https://sardtok.github.io/ProcessingIntro.html',
     }
 };
 
@@ -114,7 +114,7 @@ class Kids extends React.Component<KidsProps> {
     render() {
         return (
             <Page name='javazone-kids'>
-                <PageHeader subHeader="Spring Edition – 18. mars">JavaZone Kids 2018</PageHeader>  
+                <PageHeader subHeader="Autumn Edition – 9. september">JavaZone Kids 2018</PageHeader>  
                 <Section>
                     <CenterBlock header="En smakebit på JavaZone for framtidens utviklere">
                         <P>
@@ -168,7 +168,7 @@ class Kids extends React.Component<KidsProps> {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmelding er åpen fra torsdag 9. september.
+                            Påmelding er åpen fra torsdag 9. august.
                         </P>
                     </LeftBlock>
                 </Section>
