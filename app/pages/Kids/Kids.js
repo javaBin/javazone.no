@@ -117,7 +117,7 @@ class Kids extends React.Component<KidsProps> {
     render() {
         return (
             <Page name='javazone-kids'>
-                <PageHeader subHeader="Spring Edition – 18. mars">JavaZone Kids 2018</PageHeader>  
+                <PageHeader subHeader="Autumn Edition – 9. september">JavaZone Kids 2018</PageHeader>  
                 <Section>
                     <CenterBlock header="En smakebit på JavaZone for framtidens utviklere">
                         <P>
