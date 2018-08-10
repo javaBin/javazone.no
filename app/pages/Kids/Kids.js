@@ -41,7 +41,7 @@ const kidsInfo = {
         'Dette kurset er rettet mot nybegynnere og krever ingen forhåndskunnskaper. ' +
         'Målet for kurset er å gå gjennom noen viktige begreper innenfor programmering og ' +
         'at alle skal lære seg nok til å lage et lite interaktivt grafisk program.',
-        url: 'https://sardtok.github.io/Processing.html',
+        url: 'https://sardtok.github.io/ProcessingIntro.html',
     }
 };
 
@@ -171,7 +171,7 @@ class Kids extends React.Component<KidsProps> {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmelding er åpen fra torsdag 9. september.
+                            Påmelding er åpen fra torsdag 9. august.
                         </P>
                     </LeftBlock>
                 </Section>
