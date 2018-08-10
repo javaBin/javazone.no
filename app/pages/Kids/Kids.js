@@ -98,10 +98,7 @@ function Session(props: SessionProps) {
                 </div>
                 <div className="kids-session-buttons">
                     <Button alternate link={extraInfo.url}>Mer info</Button>
-                    {/*
-                        // Add back in when registration is open
-                        <Button alternate link={workshopUrl(props.session)}>Påmelding</Button>
-                    */}
+                    <Button alternate link={workshopUrl(props.session)}>Påmelding</Button>
                 </div>
             </LeftBlock>
         </div>
