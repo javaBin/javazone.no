@@ -11,6 +11,7 @@ import Button from '../../components/Button/Button';
 import Page from '../../components/Page/Page';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import george from '../../assets/kids/george.png';
+import processing from '../../assets/kids/processing.jpg';
 import scratch from '../../assets/kids/scratch2.png';
 import minecraft from '../../assets/kids/minecraft.png';
 import kidsimage from '../../assets/kids/kids_header.jpg';
@@ -18,7 +19,7 @@ import './Kids.less';
 
 
 const kidsInfo = {
-    'kids_george': {
+    'george': {
         background: george,
         age: '8+ år',
         description: 'Hils på Tom! Tom er en skilpadde. ' +
@@ -32,24 +33,15 @@ const kidsInfo = {
         'Og du må gjerne dele med venner og familie, på skolen, og online.',
         url: 'https://www.george.andante.no/',
     },
-    'kids_scratch': {
-        background: scratch,
-        age: '8+ år',
-        description: 'Scratch er et visuelt programmeringsspråk som er laget for at barn ' +
-        'og unge skal lære seg grunnleggende programmering. Språket er oversatt til norsk, ' +
-        'og en programmerer ved å dra og sette sammen blokker med kode. Dette kurset tar for ' +
-        'seg hvordan Scratch kan introduseres til nybegynnere.',
-        url: 'https://scratch.mit.edu',
-    },
-    'kids_minecraft': {
-        background: minecraft,
-        age: '11+ år',
-        description: 'ComputerCraft er en mod til Minecraft, som lar deg bygge datamaskiner og ' +
-        'roboter inne i spillet. Disse datamaskinene og robotene kan programmeres til å kontrollere ' +
-        'dører, grave huler, bygge hus og så videre. ComputerCraft bruker programmeringsspråket Lua, ' +
-        'som er et enkelt og fleksibelt tekstbasert programmeringsspråk. For å delta på dette kurset ' +
-        'må deltagerne ha en Minecraft-konto.',
-        url: 'http://oppgaver.kidsakoder.no/computercraft/installasjon/installasjon.html',
+    'processing': {
+        background: processing,
+        age: '12+ år',
+        description: 'Processing er en utvidelse av programmeringsspråket Java, som gjør det enkelt å komme i gang. ' +
+        'Her ønskes ungdommene velkommen til et minikurs hvor de kan lære seg å programmere. ' +
+        'Dette kurset er rettet mot nybegynnere og krever ingen forhåndskunnskaper. ' +
+        'Målet for kurset er å gå gjennom noen viktige begreper innenfor programmering og ' +
+        'at alle skal lære seg nok til å lage et lite interaktivt grafisk program.',
+        url: 'https://sardtok.github.io/ProcessingIntro.html',
     }
 };
 
@@ -66,17 +58,27 @@ type SessionListProps = {
 }
 
 function SessionList(props: SessionListProps) {
+
+    const tempSessions = [
+        { id: 'george' },
+        { id: 'processing' }
+    ];
+
+
     return (
         <div>
             <Header align="center">Sesjoner</Header>
-            {props.sessions.map((session) => {
-                return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+            {tempSessions.map((session) => {
+                // Temporary disable these until the workshops are added back to the backend.
+                //return session.id.includes('kids') ? <Session key={session.id} session={session} /> : null
+                return <Session key={session.id} session={session} />
             })}
         </div>
     )
 }
 
 function Session(props: SessionProps) {
+
     if(!props.session) {
         return null;
     }
@@ -112,22 +114,17 @@ class Kids extends React.Component<KidsProps> {
     render() {
         return (
             <Page name='javazone-kids'>
-                <PageHeader subHeader="Spring Edition – 18. mars">JavaZone Kids 2018</PageHeader>  
+                <PageHeader subHeader="Autumn Edition – 9. september">JavaZone Kids 2018</PageHeader>  
                 <Section>
                     <CenterBlock header="En smakebit på JavaZone for framtidens utviklere">
                         <P>
                             <br />
                             JavaZone inviterer alle, og spesielt deltakere på JavaZone,
                             til å ta med seg sine barn på Teknologihuset
-                            søndag 18. mars for å gi dem en smakebit på
-                            voksenlivet. Vi kjører 3 parallelle sesjoner,
+                            søndag 9. september for å gi dem en smakebit på
+                            voksenlivet. Vi kjører 2 parallelle sesjoner,
                             slik at vi har noe for både de aller minste
                             og de litt eldre barna.
-                        </P>
-                        <P>
-                            Opplegget arrangeres i samarbeid med <a href='http://www.kidsakoder.no/'>Lær Kidsa Koding</a> som
-                            har lang erfaring med å arrangere kodeklubber for de
-                            minste.
                         </P>
                     </CenterBlock>
                 </Section>
@@ -140,7 +137,7 @@ class Kids extends React.Component<KidsProps> {
                             <SubHeader>Tid & Sted</SubHeader>
                             <P>
                                 Arrangementet finner sted på Teknologihuset
-                                søndag 18. mars fra klokken 12.00 til
+                                søndag 9. september fra klokken 12.00 til
                                 15.00. Vi serverer enkel mat underveis. Det
                                 er viktig at du som forelder også setter av
                                 tid til å være til stede hele perioden. Vi
@@ -150,7 +147,7 @@ class Kids extends React.Component<KidsProps> {
                             <P>
                                 Vi har et begrenset antall plasser, derfor er det viktig at
                                 du melder dine barn på arrangementet.
-                                Påmelding er åpen fra torsdag 1. mars.
+                                Påmelding er åpen fra torsdag 9. august.
                             </P>
                             <SubHeader>Forberedelser</SubHeader>
                             <P>
@@ -161,9 +158,9 @@ class Kids extends React.Component<KidsProps> {
                         </Content>
                     </LeftBlock>
 
-                    <LeftBlock header="3 Parallelle Sesjoner">
+                    <LeftBlock header="2 Parallelle Sesjoner">
                         <P>
-                            Vi kjører 3 parallelle sesjoner. Du kan lese mer om
+                            Vi kjører 2 parallelle sesjoner. Du kan lese mer om
                             de ulike sesjonene under, og melde dere på den dere
                             ønsker å delta på. Har du flere barn i forskjellige
                             aldere som ønsker å være med på ulike sesjoner, så
@@ -171,7 +168,7 @@ class Kids extends React.Component<KidsProps> {
                             for å melde på riktig antall barn til hver sesjon.
                         </P>
                         <P>
-                            Påmelding er åpen fra torsdag 1. mars.
+                            Påmelding er åpen fra torsdag 9. august.
                         </P>
                     </LeftBlock>
                 </Section>
@@ -179,10 +176,10 @@ class Kids extends React.Component<KidsProps> {
                     <SessionList sessions={this.props.workshops} />
                 </Section>
                 <Section>
-                    <CenterBlock header="Vi sees på Teknologihuset søndag 18. mars!">
+                    <CenterBlock header="Vi sees på Teknologihuset søndag 9. september!">
                         <P>
                             Vennlig hilsen,<br />
-                            javaBin og Lær Kidsa Koding
+                            javaBin
                         </P>
                     </CenterBlock>
                 </Section>
