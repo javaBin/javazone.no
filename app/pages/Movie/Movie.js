@@ -2,7 +2,8 @@ import * as React from 'react';
 import Page from '../../components/Page/Page.js';
 import Countdown from 'react-countdown-now';
 import Youtube from '../../components/youtube';
-import moment from './time-zone-data.js'; 
+import moment from './time-zone-data.js';
+import teaser from '../../assets/2018/teaser_countdown.jpg';
 import './Movie.less';
 
 // Edit this deadline
@@ -17,17 +18,21 @@ class Movie extends React.Component<MovieProps, MovieState> {
         this.updateTime = this.updateTime.bind(this);
     }
 
-    updateTime({days, hours, minutes, seconds, completed}) {
-        const daysString = `${days} ${days === 1 ? 'day' : 'days'}`
+    updateTime({hours, minutes, seconds, completed}) {
         const hoursString = `${hours} ${hours === 1 ? 'hour' : 'hours'}`
         const minutesString = `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`
         const secondsString = `${seconds} ${seconds === 1 ? 'second' : 'seconds'}`
-        const time = `${hoursString} ${minutesString} ${secondsString}`;
+        let time = `${hoursString} ${minutesString} ${secondsString}`;
+        if (hours === 0) {
+            time = `${minutesString} ${secondsString}`;
+            if (minutes === 0) {
+                time = `${secondsString}`;
+            }
+        }
         return (
             <div className="movie-container">
                 {completed ? <Youtube id='dQw4w9WgXcQ'></Youtube>
                     : <div className="movie-counter">
-                        {days !== 0 ? <h1>{daysString}</h1> : null}
                         <h2>{time}</h2>
                     </div>}
             </div>
@@ -37,7 +42,7 @@ class Movie extends React.Component<MovieProps, MovieState> {
     render() {
         return (
             <Page name='movie'>
-                <Countdown date={moment.tz(END_DATE, "Europe/Oslo").toDate()} zeroPadLength={0} renderer={this.updateTime} />
+                <Countdown daysInHours date={moment.tz(END_DATE, "Europe/Oslo").toDate()} zeroPadLength={0} renderer={this.updateTime} />
             </Page>
         );
     }

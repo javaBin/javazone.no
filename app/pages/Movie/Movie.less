@@ -10,18 +10,37 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-image: url('../../assets/2018/teaser_countdown.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .movie-counter {
     color: white;
     font-family: @upheaval;
     letter-spacing: 0.3rem;
-    h1 {
-        font-size: 8rem;
-        margin: 0;
-    }
+    padding: 2rem;
+    margin-top: 10rem;
+    background: rgba(0, 0, 0, 0.5);
     h2 {
+        z-index: 5;
         font-size: 5rem;
         margin: 0;
+        @media only screen and (max-width: @screen-lg) {
+            font-size: 3.5rem;
+        }
+        @media only screen and (max-width: @screen-md) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 2.5rem;
+        }
+        @media only screen and (max-width: @screen-xs) {
+            font-size: 1.5rem;
+        }
+        @media only screen and (max-width: @screen-xxs) {
+            font-size: 1rem;
+        }
     }
 }
