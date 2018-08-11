@@ -1,13 +1,14 @@
 import * as React from 'react';
 import Page from '../../components/Page/Page.js';
 import Countdown from 'react-countdown-now';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import Youtube from '../../components/youtube';
 import moment from './time-zone-data.js';
 import teaser from '../../assets/2018/teaser_countdown.jpg';
 import './Movie.less';
 
 // Edit this deadline
-const END_DATE = '2018-08-13 10:00:00';
+const END_DATE = '2018-08-11 10:00:00';
 // Edit this id
 const YOUTUBE_ID = 'dQw4w9WgXcQ';
 
@@ -29,10 +30,6 @@ class Movie extends React.Component<MovieProps, MovieState> {
         );
     }
 
-    renderWrapper() {
-
-    }
-
     updateTime({hours, minutes, seconds, completed}) {
         if (!completed) {
             const hoursString = `${hours} ${hours === 1 ? 'hour' : 'hours'}`
@@ -48,7 +45,13 @@ class Movie extends React.Component<MovieProps, MovieState> {
             return (
                 <div className="movie-container">
                     <div className="movie-counter">
-                        <h2>{time}</h2>
+                        <Grid>
+                            <Row>
+                                <Col xs={12} md lg><h2>{hoursString}</h2></Col>
+                                <Col xs={12} md lg><h2>{minutesString}</h2></Col>
+                                <Col xs={12} md lg><h2>{secondsString}</h2></Col>
+                            </Row>
+                        </Grid>
                     </div>
                 </div>
             )
