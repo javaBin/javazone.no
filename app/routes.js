@@ -35,7 +35,7 @@ const routes = compile({
     '/academy/bergen': academyLocation(academyData.bergen),
     '/kids': kids,
     '/speakers': speakers,
-    '/movie': movie,
+    '/countdown': movie,
     '/workshops': workshops,
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
