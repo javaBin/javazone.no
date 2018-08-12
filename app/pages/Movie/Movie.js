@@ -8,7 +8,7 @@ import teaser from '../../assets/2018/teaser_countdown.jpg';
 import './Movie.less';
 
 // Edit this deadline
-const END_DATE = '2018-08-13 10:00:00';
+const END_DATE = '2018-08-15 10:00:00';
 // Edit this id
 const YOUTUBE_ID = 'dQw4w9WgXcQ';
 
