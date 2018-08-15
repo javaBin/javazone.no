@@ -36,6 +36,7 @@ const routes = compile({
     '/kids': kids,
     '/speakers': speakers,
     '/countdown': movie,
+    '/movie': movie,
     '/workshops': workshops,
     '/speakers/monetary-policy': monetaryPolicy,
     '/speakers/tips': tipsAndTricks,
@@ -77,6 +78,7 @@ function navigate(ev) {
         return true;
     }
 
+
     window.history.pushState(null, null, url);
     dispatchPage(url);
     ev.preventDefault();
@@ -84,9 +86,16 @@ function navigate(ev) {
 }
 
 export function getPage(requestedPage) {
+
+    if (requestedPage === '/countdown') {
+        history.pushState('', 'JavaZone 2018', '/movie');
+        requestedPage = '/movie';
+    }
+
     if (requestedPage[requestedPage.length - 1] === '/' && requestedPage.length > 1) {
         requestedPage = requestedPage.substring(0, requestedPage.length - 1);
     }
+
 
     const page = routes.find((routes) => {
         return routes.pattern.test(requestedPage);
@@ -95,6 +104,9 @@ export function getPage(requestedPage) {
     if (!page) {
         pageview('/404');
         return notFound;
+    } else if (page === '/countdown') {
+        pageview('/movie');
+        return movie;
     }
 
     pageview(requestedPage);
