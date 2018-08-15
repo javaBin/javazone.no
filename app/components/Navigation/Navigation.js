@@ -110,7 +110,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     setMenuButtonVisible(): void {
         let width = window.innerWidth;
         this.setState({
-            showMenuButton: width < 1225 ? true : false,
+            showMenuButton: width < 1320 ? true : false,
             showMenu: width >= 1120 ? false : this.state.showMenu,
             showOnlyIcon: width < 545 ? true : false
         })
@@ -142,6 +142,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
                     <NavItem active={this.isActiveNavItem("/program")} link="/program">PROGRAM</NavItem>
                     <NavItem active={this.isActiveNavItem("/workshops")} link="/workshops">WORKSHOPS</NavItem>
                     <NavItem active={this.isActiveNavItem("/partners")} link="/partners">PARTNERS</NavItem>
+                    <NavItem active={this.isActiveNavItem("/movie")} link="/movie">MOVIE</NavItem>
                     <NavItem active={this.isActiveNavItem("/kids")} link="/kids">KIDS</NavItem>
                     <NavItem active={this.isActiveNavItem("/journeyzone")} link="/journeyzone">JOURNEYZONE</NavItem>
                 </Row>
