@@ -62,6 +62,11 @@ function MonetaryPolicy(props: MonetaryPolicyProps) {
                             application. Speakers living in proximity to Oslo are
                             not eligible.
                         </p>
+                        <p>
+                            Reimbursements are processed and payed after the conference. We will
+                            reach out to speakers who applied for reimbursement and process
+                            the payments once payment details are provided.
+                        </p>
                 </LeftBlock>
             </Section>
         </Page>
