@@ -74,6 +74,7 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
         const abstract = this.state.session.abstract;
         const speakers = this.state.session.speakers;
         const audience = this.state.session.intendedAudience;
+        const room = this.state.session.room;
         const language = this.state.session.language;
         const format = this.transformFormat(this.state.session.format);
         if (this.state.session.title === undefined) {
@@ -103,6 +104,11 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                         <LeftBlock header="intended audience">
                             <p>
                                 {audience}
+                            </p>
+                        </LeftBlock>
+                        <LeftBlock header="Location">
+                            <p class="too-small">
+                                {room}
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Language">
