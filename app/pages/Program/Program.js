@@ -101,6 +101,9 @@ function SessionItem(props: SessionItemProps) {
                             <strong>{sessionFormat(props.session.format)}</strong>
                         </Col>
                         <Col className="program-margin-right">
+                            {props.session.room}
+                        </Col>
+                        <Col className="program-margin-right">
                             {props.session.language === 'en' ? 'English' : 'Norwegian'}
                         </Col>
                         <Col className="program-margin-right">
