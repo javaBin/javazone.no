@@ -64,7 +64,7 @@ function LeftBlock(props: BlockProps) {
             <Row className={leftBlockClass} center="xs">
                 <Col xs={12} sm={12} md={12} lg={12}>
                     <Row center="xs">
-                        <Col xs={12} sm={12} md={4} lg={4}>
+                        <Col xs={12} sm={12} md={6} lg={4}>
                             <h1 className={leftBlockHeaderClass}>{props.header}</h1>
                             {props.image ? 
                                 <div className="block-image-wrapper">
@@ -75,7 +75,7 @@ function LeftBlock(props: BlockProps) {
                                  : 
                                  null}
                         </Col>
-                        <Col className="block-text" xs={12} sm={12} md={8} lg={8}>
+                        <Col className="block-text" xs={12} sm={12} md={6} lg={8}>
                             {props.children}
                         </Col>
                     </Row>
