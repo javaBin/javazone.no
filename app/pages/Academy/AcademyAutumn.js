@@ -66,13 +66,13 @@ function AcademyAutumn() {
                     Are you a student? Interested in IT? Come join us for JavaZone Academy. JavaZone Academy is a free event for students in Norway which takes place during the second day of the conference. We invite you to take part in the JavaZone experience in Oslo Spektrum for a full day.
                     </p>
                     <p>
-                    You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday, September 14th. You will be able to attend <a href="/program">all the talks</a>, mingle in the expo area, talk to our <a href="/partners">partners</a>, taste our great food, and all in all have a great time learning new stuff.
+                    You will get a free ticket which gives you access to <a href="/info">the full conference experience</a> on Thursday, September 13th. You will be able to attend <a href="/program">all the talks</a>, mingle in the expo area, talk to our <a href="/partners">partners</a>, taste our great food, and all in all have a great time learning new stuff.
                     </p>
                 </LeftBlock>
             </Section>
             <Section>
                 <div className="registration-container">
-                    <a className='button button--transparent academy-register-button' target="_blank" href="">Register for JavaZone Academy!</a>
+                    <a className='button button--transparent academy-register-button' target="_blank" href="https://goo.gl/forms/CcAmiIRj0HlN9a7v1">Register for JavaZone Academy!</a>
                 </div>
             </Section>
             <Section dark>
