@@ -1,0 +1,33 @@
+@import '../../styles/Variables.less';
+
+.information-box {
+  padding-right: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  h2 {
+    color: @primary-color;
+  }
+  font-family: @source-sans-pro;
+}
+
+.academy-register-button {
+  font-size: 1.5rem;
+  font-family: @source-sans-pro;
+  transition: 0.3s;
+  &:hover {
+    font-size: 1.6rem;
+  }
+  @media only screen and (max-width: @screen-xs) {
+    font-size: 1.2rem;
+  }
+}
+
+.registration-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
