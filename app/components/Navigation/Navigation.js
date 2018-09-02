@@ -137,7 +137,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     renderNavItems() {
         return (
             <Col>
-                <Row className="menu-padding" middle="xs">
+                <Row middle="xs">
                     <NavItem active={this.isActiveNavItem("/info")} link="/info">INFO</NavItem>
                     <NavItem active={this.isActiveNavItem("/tickets")} link="/tickets">TICKETS</NavItem>
                     <NavItem active={this.isActiveNavItem("/speakers")} link="/speakers">SPEAKERS</NavItem>
