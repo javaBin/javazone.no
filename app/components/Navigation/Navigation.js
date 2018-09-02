@@ -75,6 +75,8 @@ function NavItem(props: NavItemProps) {
     return <Link href={props.link} className={navItemClass}>{props.children}</Link>
 }
 
+const MENU_WIDTH = 1395;
+
 class Navigation extends React.Component<NavigationProps, NavigationState> {
 
     setScrolledPassedTop: Function
@@ -110,7 +112,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     setMenuButtonVisible(): void {
         let width = window.innerWidth;
         this.setState({
-            showMenuButton: width < 1320 ? true : false,
+            showMenuButton: width < MENU_WIDTH ? true : false,
             showMenu: width >= 1120 ? false : this.state.showMenu,
             showOnlyIcon: width < 545 ? true : false
         })
@@ -135,7 +137,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
     renderNavItems() {
         return (
             <Col>
-                <Row middle="xs" center="lg">
+                <Row className="menu-padding" middle="xs">
                     <NavItem active={this.isActiveNavItem("/info")} link="/info">INFO</NavItem>
                     <NavItem active={this.isActiveNavItem("/tickets")} link="/tickets">TICKETS</NavItem>
                     <NavItem active={this.isActiveNavItem("/speakers")} link="/speakers">SPEAKERS</NavItem>
@@ -143,6 +145,7 @@ class Navigation extends React.Component<NavigationProps, NavigationState> {
                     <NavItem active={this.isActiveNavItem("/workshops")} link="/workshops">WORKSHOPS</NavItem>
                     <NavItem active={this.isActiveNavItem("/partners")} link="/partners">PARTNERS</NavItem>
                     <NavItem active={this.isActiveNavItem("/movie")} link="/movie">MOVIE</NavItem>
+                    <NavItem active={this.isActiveNavItem("/academy")} link="/academy">ACADEMY</NavItem>
                     <NavItem active={this.isActiveNavItem("/kids")} link="/kids">KIDS</NavItem>
                     <NavItem active={this.isActiveNavItem("/journeyzone")} link="/journeyzone">JOURNEYZONE</NavItem>
                 </Row>
