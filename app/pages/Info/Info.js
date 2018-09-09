@@ -161,8 +161,7 @@ function AweZoneSection() {
                     
                     On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving 
                     towards Youngstorget, and the best geeky super-party ever – AweZone! We will 
-                    be spending evening at <a href="http://www.himkok.no">Himkok</a> and 
-                    <a href="http://kulturhusetioslo.no">Kulturhuset</a>.
+                    be spending evening at <a href="http://www.himkok.no">Himkok</a> and <a href="http://kulturhusetioslo.no">Kulturhuset</a>.
                     <br /><br />
 
                     Our first venue, Himkok, has recently been rated as 
@@ -173,13 +172,12 @@ function AweZoneSection() {
                     the white coated bartenders work their magic!
                     <br /><br />
 
-                    The age limit at Himkok will be 20 years and up._
+                    The age limit at Himkok will be 20 years and up.
                     <br /><br />
-                    
+
                     At Kulturhuset, we have the pleasure of presenting you 
-                    <a href="https://www.facebook.com/showhawkduo/">The Showhawk Duo</a> 
-                    and <a href="http://www.highasakite.no/">Highasakite</a> at the stage on 
-                    the 1st (a.k.a. ground) floor.
+                    <a href="https://www.facebook.com/showhawkduo/">The Showhawk Duo</a> and <a href="http://www.highasakite.no/">Highasakite</a> at 
+                    the stage on the 1st (a.k.a. ground) floor.
                     <br /><br />
 
                     The age limit at Kulturhuset will be 18 years and up.
@@ -191,8 +189,8 @@ function AweZoneSection() {
                     <br /><br />
 
                     p.s. We will be serving good food in the evening as well. Some drinks are on us, 
-                    some will be on our partners! Bring yourself, your good mood, and don't forget 
-                    your ID (due to age limits).
+                    some will be on our partners! 
+                    Bring yourself, your good mood, and don't forget your ID (due to age limits).
                 </p>
             </LeftBlock>
         </Section>
