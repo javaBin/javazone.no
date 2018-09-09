@@ -65,7 +65,7 @@ function BetterExplorerSection() {
             <LeftBlock header="Two conference days">
                 <p>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
-                    and categories. You don‘t want to miss our <a ref="/program">amazing lineup</a>.
+                    and categories. You don‘t want to miss our <a href="/program">amazing lineup</a>.
                 </p>
             </LeftBlock>
             <LeftBlock header="An after party to remember">
