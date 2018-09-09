@@ -122,7 +122,7 @@ function ProgramSection() {
         <Section>
             <LeftBlock header="The JavaZone program">
                 <p>
-                    The full program will be made available online around summertime 2018.
+                    The full program is now <a href="/program">available online</a>.
                 </p>
             </LeftBlock>
             <LeftBlock header="Lightning talks">
@@ -139,8 +139,8 @@ function ProgramSection() {
             </LeftBlock>
             <LeftBlock header="Workshops">
                 <p>
-                    Full blown learning session. This is where you get down and dirty with code. We’ll have full
-                    day workshops in addition to shorter 2-hour and 4-hour workshops.
+                    Full blown learning sessions. This is where you get down and dirty with code. This year we’ll 
+                    be offering a wide variety of 2-hour and 4-hour workshops.
                 </p>
             </LeftBlock>
         </Section>
@@ -152,7 +152,7 @@ function AweZoneSection() {
         <Section>
             <LeftBlock header="AweZone: Celebrating the community">
                 <p>
-                    AweZone is JavaZone’s traditional party which takes place on the Wednesday
+                    AweZone is JavaZone's traditional party which takes place on the Wednesday
                     evening.
                     <br /><br />
 
@@ -167,7 +167,7 @@ function AweZoneSection() {
 
                     Our first venue, Himkok, has recently been rated as 
                     the <a href="https://www.visitoslo.com/en/product/?TLp=1256691">20th best bar in the world</a>. 
-                    Despite that, it is still one of Oslos best keep secrets! 
+                    Despite that, it is still one of Oslo's best keep secrets! 
                     This will be a special experience at a bar with it's own distillery. 
                     Here you can mingle and enjoy the good atmosphere, whilst watching 
                     the white coated bartenders work their magic!
