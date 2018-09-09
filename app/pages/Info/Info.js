@@ -154,10 +154,45 @@ function AweZoneSection() {
                     AweZone is JavaZone’s traditional party which takes place on the Wednesday
                     evening.
                     <br /><br />
+
                     The party offers a great chance to catch up with old friends, meet new ones,
                     and also experience a great line-up of entertainment!
                     <br /><br />
-                    More details will be posted later.
+                    
+                    On Wednesday, at 20:00, we will be leaving Oslo Spektrum together and moving 
+                    towards Youngstorget, and the best geeky super-party ever – AweZone! We will 
+                    be spending evening at <a href="http://www.himkok.no">Himkok</a> and 
+                    <a href="http://kulturhusetioslo.no">Kulturhuset</a>.
+                    <br /><br />
+
+                    Our first venue, Himkok, has recently been rated as 
+                    the <a href="https://www.visitoslo.com/en/product/?TLp=1256691">20th best bar in the world</a>. 
+                    Despite that, it is still one of Oslos best keep secrets! 
+                    This will be a special experience at a bar with it's own distillery. 
+                    Here you can mingle and enjoy the good atmosphere, whilst watching 
+                    the white coated bartenders work their magic!
+                    <br /><br />
+
+                    The age limit at Himkok will be 20 years and up._
+                    <br /><br />
+                    
+                    At Kulturhuset, we have the pleasure of presenting you 
+                    <a href="https://www.facebook.com/showhawkduo/">The Showhawk Duo</a> 
+                    and <a href="http://www.highasakite.no/">Highasakite</a> at the stage on 
+                    the 1st (a.k.a. ground) floor.
+                    <br /><br />
+
+                    The age limit at Kulturhuset will be 18 years and up.
+                    <br /><br />
+
+                    On the other floors, you will be able to enjoy the drinks, chill out areas, 
+                    activities like Shuffleboard, Ping Pong, or Foosball, as well as mingle with 
+                    the conference organizers, speakers, other participants, and our partners!
+                    <br /><br />
+
+                    p.s. We will be serving good food in the evening as well. Some drinks are on us, 
+                    some will be on our partners! Bring yourself, your good mood, and don't forget 
+                    your ID (due to age limits).
                 </p>
             </LeftBlock>
         </Section>
