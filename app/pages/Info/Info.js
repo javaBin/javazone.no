@@ -175,8 +175,8 @@ function AweZoneSection() {
                     The age limit at Himkok will be 20 years and up.
                     <br /><br />
 
-                    At Kulturhuset, we have the pleasure of presenting you 
-                    <a href="https://www.facebook.com/showhawkduo/">The Showhawk Duo</a> and <a href="http://www.highasakite.no/">Highasakite</a> at 
+                    At Kulturhuset, we have the pleasure of presenting 
+                    you <a href="https://www.facebook.com/showhawkduo/">The Showhawk Duo</a> and <a href="http://www.highasakite.no/">Highasakite</a> at 
                     the stage on the 1st (a.k.a. ground) floor.
                     <br /><br />
 
