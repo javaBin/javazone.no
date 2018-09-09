@@ -188,7 +188,7 @@ function AweZoneSection() {
                     the conference organizers, speakers, other participants, and our partners!
                     <br /><br />
 
-                    p.s. We will be serving good food in the evening as well. Some drinks are on us, 
+                    P.S. We will be serving good food in the evening as well. Some drinks are on us, 
                     some will be on our partners! 
                     Bring yourself, your good mood, and don't forget your ID (due to age limits).
                 </p>
