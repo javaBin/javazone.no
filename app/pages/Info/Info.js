@@ -72,6 +72,7 @@ function BetterExplorerSection() {
                 <p>
                     After a long day of unique learning experiences, it feels good to chill out with some good food and drink.
                     JavaZone parties are legendary - and we can promise something amazing for our afterparty this year as well!
+                    Scroll down for more information about AweZone!
                 </p>
             </LeftBlock>
             <LeftBlock header="8 restaurants, all day long">
