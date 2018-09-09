@@ -65,7 +65,7 @@ function BetterExplorerSection() {
             <LeftBlock header="Two conference days">
                 <p>
                     Two days full of talks from renowned Norwegian and international speakers, in varying formats
-                    and categories. You don‘t want to miss our amazing lineup. The program will be made available online around summer 2018.
+                    and categories. You don‘t want to miss our <a ref="/program">amazing lineup</a>.
                 </p>
             </LeftBlock>
             <LeftBlock header="An after party to remember">
@@ -188,7 +188,7 @@ function AweZoneSection() {
                     the conference organizers, speakers, other participants, and our partners!
                     <br /><br />
 
-                    P.S. We will be serving good food in the evening as well. Some drinks are on us, 
+                    Oh, and one more thing! We will be serving good food in the evening as well. Some drinks are on us, 
                     some will be on our partners! 
                     Bring yourself, your good mood, and don't forget your ID (due to age limits).
                 </p>
