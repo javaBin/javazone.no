@@ -167,7 +167,7 @@ function AweZoneSection() {
 
                     Our first venue, Himkok, has recently been rated as 
                     the <a href="https://www.visitoslo.com/en/product/?TLp=1256691">20th best bar in the world</a>. 
-                    Despite that, it is still one of Oslos best keep secrets! 
+                    Despite that, it is still one of Oslo's best keep secrets! 
                     This will be a special experience at a bar with it's own distillery. 
                     Here you can mingle and enjoy the good atmosphere, whilst watching 
                     the white coated bartenders work their magic!
