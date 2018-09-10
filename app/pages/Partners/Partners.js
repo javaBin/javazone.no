@@ -226,7 +226,7 @@ function Partners() {
                     <div className='partners-table-section'>
                         <table className='table'>
                             <tbody>
-                                <tr className='table__row'>
+                                <tr className='table__row sold-out-text-table'>
                                     <td className='partners-desc-column'>Tickets for employees (Late-Bird)</td>
                                     <td className='partners-price-column'>NOK 6.190,-</td>
                                 </tr>
