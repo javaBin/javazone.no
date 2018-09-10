@@ -11,6 +11,7 @@ import Page from '../../components/Page/Page';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Circle, CheckCircle } from 'react-feather';
 import * as React from 'react';
+import { PlayCircle } from 'react-feather';
 import Button from '../../components/Button/Button.js';
 import { Container, Heading, LargeHeading, SmallHeading } from '../../components/page';
 import { Block, Header, Content, P } from '../../components/block';
@@ -94,6 +95,7 @@ function SessionItem(props: SessionItemProps) {
             <Row>
                 <Col xs={12} sm={10} md={11} lg={11}>
                     <Row className="program-simple-session-title">
+                        {props.session.video ? <PlayCircle className="program-video-icon" size={32} /> : null}
                         <Link href={`/program/${props.session.sessionId}`}>{props.session.title}</Link>
                     </Row>
                     <Row>
