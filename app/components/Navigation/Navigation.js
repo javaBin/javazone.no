@@ -75,7 +75,7 @@ function NavItem(props: NavItemProps) {
     return <Link href={props.link} className={navItemClass}>{props.children}</Link>
 }
 
-const MENU_WIDTH = 1395;
+const MENU_WIDTH = 1420;
 
 class Navigation extends React.Component<NavigationProps, NavigationState> {
 
