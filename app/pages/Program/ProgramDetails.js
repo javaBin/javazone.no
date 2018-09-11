@@ -69,6 +69,7 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
     }
 
     render() {
+        console.log('state', this.state.session);
         const title = this.state.session.title;
         const speakerString = this.generateSpeakerString(this.state.session.speakers);
         const abstract = this.state.session.abstract;
@@ -76,27 +77,31 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
         const audience = this.state.session.intendedAudience;
         const room = this.state.session.room;
         const language = this.state.session.language;
+        const video = this.state.session.video;
         const format = this.transformFormat(this.state.session.format);
         if (this.state.session.title === undefined) {
             return (
                 <Page name='programDetails'>
                     <PageHeader subHeader=''>Program details</PageHeader>
-                    <Section class="program-loader" dark><Loader /></Section>
+                    <Section className="program-loader" dark><Loader /></Section>
                 </Page>
             )
         } else {
             return (
                 <Page name='programDetails'>
                     <PageHeader subHeader={speakerString}>{title}</PageHeader>
+                    {video ? <Section alternate pixel>
+                        <iframe className='program-details-video' src={`https://player.vimeo.com/video/${video}`} frameBorder="0" allowFullScreen></iframe>
+                    </Section> : null}
                     <Section>
                         <LeftBlock header="abstract">
-                            <p class="text-wrap">
+                            <p className="text-wrap">
                                 {abstract}
                             </p>
                         </LeftBlock>
                         {speakers ? speakers.map(speaker => {
                             return <LeftBlock key={speaker.name} header={speaker.name}>
-                                        <p class="text-wrap">
+                                        <p className="text-wrap">
                                             {speaker.bio}
                                         </p>
                                     </LeftBlock>
@@ -107,17 +112,17 @@ class ProgramDetails extends React.Component<ProgramDetailsProps, ProgramDetails
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Location">
-                            <p class="too-small">
+                            <p className="too-small">
                                 {room}
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Language">
-                            <p class="too-small">
+                            <p className="too-small">
                                 {language === 'en' ? 'English' : 'Norwegian'}
                             </p>
                         </LeftBlock>
                         <LeftBlock header="Format">
-                            <p class="too-small">
+                            <p className="too-small">
                                 {format}
                             </p>
                         </LeftBlock>
