@@ -42,6 +42,7 @@ function Banner() {
             <div className="logo-text">
                 <h1>JAVAZONE</h1>
                 <h2>September 12th - 13th, 2018</h2>
+                <h2>Thank you for attending! See you in 2019!</h2>
             </div>
         </div>
     )
